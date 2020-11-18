@@ -1,7 +1,9 @@
-title: "Remote theme example"
+title: "Neural Dynamics of Control Laboratory"
 remote_theme: pmarsceill/just-the-docs
 color_scheme: "light"
 search_enabled: false
+
+# Logo
 logo: "http://www.ndclab.com/wp-content/uploads/2020/05/NDCLabWebLogo.png"
 
 # Footer content
