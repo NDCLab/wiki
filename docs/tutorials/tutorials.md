@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Buttons
+title: Tutorials
 parent: tutorials
-nav_order: 1
+nav_order: 2
 ---
 
 # Buttons
