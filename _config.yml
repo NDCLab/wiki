@@ -5,5 +5,5 @@ search_enabled: false
 logo: "http://www.ndclab.com/wp-content/uploads/2020/05/NDCLabWebLogo.png"
 
 # Footer content
-footer_content: "Copyright"
+footer_content: "Copyright &copy; 2020 Neural Dynamics of Control Laboratory"
 git_edit_repository: "https://github.com/NDCLab/wiki"
