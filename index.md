@@ -18,7 +18,7 @@ This wiki is the main source of documentation for researchers and developers con
 [View on GitHub](https://github.com/NDCLab/wiki){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Return to Main](https://ndclab.github.io/){: .btn .fs-5 .mb-4 .mb-md-0 }
 
-## Current Contributors
+### Our Contributors
 <ul class="list-style-none">
 {% for contributor in site.github.contributors %}
   <li class="d-inline-block mr-1">
