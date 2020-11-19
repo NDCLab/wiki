@@ -3,6 +3,9 @@ remote_theme: pmarsceill/just-the-docs
 color_scheme: "light"
 search_enabled: false
 
+# Heading anchors
+heading_anchors: true
+
 # Logo
 logo: "http://www.ndclab.com/wp-content/uploads/2020/05/NDCLabWebLogo.png"
 
