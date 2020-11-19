@@ -17,3 +17,12 @@ This wiki is the main source of documentation for researchers and developers con
 <!-- [Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }  -->
 [View on GitHub](https://github.com/NDCLab/wiki){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Return to Main](https://ndclab.github.io/){: .btn .fs-5 .mb-4 .mb-md-0 }
+
+## Current Contributors
+<ul class="list-style-none">
+{% for contributor in site.github.contributors %}
+  <li class="d-inline-block mr-1">
+     <a href="{{ contributor.html_url }}"><img src="{{ contributor.avatar_url }}" width="32" height="32" alt="{{ contributor.login }}"/></a>
+  </li>
+{% endfor %}
+</ul>
