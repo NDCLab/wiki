@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+nav_order: 1
 ---
 
 # Neural Dynamics of Control (NDC) Lab Wiki
