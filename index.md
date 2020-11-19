@@ -16,7 +16,3 @@ This wiki is the main source of documentation for researchers and developers con
 <!-- [Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }  -->
 [View on GitHub](https://github.com/NDCLab/wiki){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Return to Main](https://ndclab.github.io/){: .btn .fs-5 .mb-4 .mb-md-0 }
-
-## Contributing
-To make a contribution, please create an Issue or reach out to one of the lab members via Discord before making a change.
-[Click to access the repo for this wiki](https://github.com/NDCLab/ndclab.github.io/tree/main).
