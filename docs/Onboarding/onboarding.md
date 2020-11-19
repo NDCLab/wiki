@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Customization
+title: Onboarding
 parent: Onboarding
 nav_order: 2
 ---
