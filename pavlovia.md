@@ -1,0 +1,388 @@
+---
+layout: default
+title: Pavlovia Documentation Draft
+nav_exclude: true
+search_exclude: true
+---
+
+## Installing Git
+
+Installing the Git command line tool:
+
+**Mac**
+
+- [Download](https://git-scm.com/download/mac)
+- Recommended methods for install: Binary or [Homebrew](https://brew.sh/)
+  - Download [dmg](https://sourceforge.net/projects/git-osx-installer/files/latest/download) file
+  - `brew install git`
+
+[How to](https://www.ofzenandcomputing.com/how-to-install-dmg-files-mac/) install a binary file on
+Mac OS.
+
+**Windows**
+
+- [Download](https://git-scm.com/download/win)
+- Recommended method: portable version or "thumbdrive edition"
+  - [64bit version](https://github.com/git-for-windows/git/releases/download/v2.29.2.windows.2/PortableGit-2.29.2.2-64-bit.7z.exe)
+
+## Opening a Shell
+
+**Mac**
+
+On Catalina and Mojave, the default shell provided is [Zsh](https://en.wikipedia.org/wiki/Z_shell)
+which is very similar to [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) because both are
+[POSIX](https://en.wikipedia.org/wiki/POSIX) compliant. This is good because shell scripts written
+in either scripting language will be usable on either Mac OS or Windows without tweaks.
+
+To access Zsh, [open up a normal terminal](https://www.wikihow.com/Open-a-Terminal-Window-in-Mac).
+
+**Windows**
+
+Navigate to the portable git folder and double click on `git-bash.exe` and that will launch a shell
+instance for Bash.
+
+There is a different option, `git-cmd.exe` which uses the [Command
+Prompt](https://en.wikipedia.org/wiki/Cmd.exe). Using the Command Prompt is not recommended since it
+uses a different tool set which is not covered in this guide.
+
+## Setting Up SSH Keys
+
+SSH keys are a form of authentication like username and passwords that simplify the process of
+working with git repositories.
+
+If you have ssh keys already please make sure to check the names before hand to avoid overriding
+them.
+
+To create an SSH key pair; a private key and a public key you will need to do the following steps:
+
+- Open up a Terminal with a Shell; Bash on Windows, Zsh on Mac
+- Copy-paste the following commands:
+
+```sh
+# The "comment" should either be an email "username@email.com" or user@hostname "username@mycomputer"
+ssh-keygen -t ed25519 -C "comment"
+```
+
+- At this point you will be prompted for two things:
+  - Where to save the private/public key, the default location is displayed
+  - A passphrase for the key
+
+\* Note on the key type: the current (as of 2020) recommendation is ED25519 over RSA.
+\* Note on the passphrase: The passphrase can be excluded but it is recommended that you use one for
+improved security.
+
+### Resources
+
+[Github
+Guide](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+[Gitlab Guide](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair)
+
+## Adding an SSH key to Pavlovia
+
+### Overview
+
+Now that you have an SSH key pair, the private and public key, you will need to add the public key
+to Pavlovia.
+
+### Steps
+
+Login into [Pavlovia](https://gitlab.pavlovia.org/users/sign_in) using your username and password.
+
+At the top-right hand corner click the drop down and select "Settings".
+
+On the left side you will see "User Settings" and a list of categories. Select "SSH Keys"
+
+With a text editor open up the ssh key file that ends with `.pub` and inside you will see a
+`ssh-ed25519` and a long alpha-numeric sequence and an email or username at the end. Copy the entire
+line.
+
+Paste it into the "Key" text box in the page that you are on.
+
+Give the key a "Title", this can be anything as it is a name to help you remember where the key is
+when you have multiple keys.
+
+Press "Add key"
+
+Refresh and you will see the new key in "Your SSH keys (1)"
+
+### Resources
+
+[Gitlab in-depth
+guide](https://docs.gitlab.com/ee/ssh/README.html#adding-an-ssh-key-to-your-gitlab-account)
+
+## Creating a Repository on Gitlab
+
+### Overview
+
+To create a repository you will need to create an empty repository on the NDC Lab organization or
+your personal Gitlab on the Pavlovia Gitlab instance. The NDC Lab organization or group will be
+where we put the PsychoPy and PsychoJS projects. Your personal projects can be used for things like
+experimenting with changes that you may not necessarily want to push to the main repository.
+
+Note: Group and Organization can be used interchangeably. And repository and project can be used
+interchangeably.
+
+### Accessing the NDC Lab group
+
+By default you will be able to see the NDC Lab projects when you are logged in on the main page when
+you access `https://gitlab.pavlovia.org`. If not these are different ways to access the projects:
+
+- Open the "Groups" drop-down at the top of the page
+- Select "Your groups"
+- Select NDCLab
+
+Or
+
+- click this [link](https://gitlab.pavlovia.org/ndclab)
+
+### Creating a Gitlab Project
+
+Once you are inside the group page:
+
+Press "New project"
+
+Name the project
+
+Make sure that "ndclab" is selected in the "Project URL"
+
+Write out a "Project Slug", substitute spaces with a hyphen "-"
+
+Set to "Public"
+
+Press "Create project"
+
+\* Note: A "[Slug](https://en.wikipedia.org/wiki/Clean_URL#Slug)" is generally the part of a URL
+that comes after the domain bits. It is a nicer way to link to something instead of a long
+alpha-numeric string or a long directory and file combo.
+
+### Resources
+
+[Gitlab In-depth guide](https://docs.gitlab.com/ee/gitlab-basics/create-project.html)
+
+## Shell Tips
+
+### Overview
+
+This section will cover some basic commands for moving around, and displaying the current location
+in a Terminal running a Bash or Zsh shell.
+
+Some of the terminology used:
+
+- directory: another name for a folder
+- option: an option that the program will allow you to change using special formatting, generally
+	denoted with a "--" in front of the option name. For example "--option value".
+- flag: an option that can be on or off, generally denoted with a "-" in front of the name. For
+	example "-t".
+
+### Important Commands
+
+#### ls
+
+`ls` or list directory contents will list the files and directories in the directory that you are
+in. This is useful to know what is in the current directory, but it can show any contents of any
+directory as long as you provide a valid path to that directory and you have permission to view that
+directory.
+
+Example:
+
+```sh
+# ls without options
+ls
+#> Download Desktop stories.txt ... etc
+# ls with the flag option l
+ls -l
+#> drwxr-xr-x    - username 31 May 10:35 Desktop
+#> drwxr-xr-x    - username  9 Oct 14:52 Downloads
+#> drwxr-xr-x    - username 25 Aug 17:00 stories.txt
+```
+
+#### cd
+
+`cd` or change directory is a shell command that allows you to move from one directory to another.
+This is useful to move around in the shell, like `ls` it will accept any valid path to any
+directory.
+
+There are two kinds of paths:
+
+Relative paths, which are paths relative to your current directory. This paths can start with either
+`.` for the "current directory or `..` for "the directory above this directory".
+
+And absolute paths or paths that start from the root of the file-system `/` in Mac OS or `c:/` in
+Windows.
+
+Example:
+
+```sh
+# Example with a relative path
+# Current directory: /home/user/proj_folder/
+cd ./some_folder/
+# Current directory: /home/user/proj_dir/some_folder/
+
+# Example with an absolute path
+# Current directory: /c/Users/username/Desktop/
+cd /c/Users/
+# Current directory: /c/Users
+```
+
+Since we will be using Bash on Windows, a small quirk that we will need to consider is the one that
+can be seen in the example above. Anytime you would write `c:\` you would need to replace it with
+`/c/`. And swap all `\` with `/`. Mac OS uses `/` like Linux so write paths as you would normally.
+
+### Resources
+
+Some cheat sheets, with useful commands. On Windows not all this commands will work due to the fact
+that some of the tools listed won't be installed. Similarly, on Mac some commands will work but some
+will not.
+
+[Linux Commands](https://www.guru99.com/linux-commands-cheat-sheet.html)
+
+[Linux Tutorials](https://ryanstutorials.net/linuxtutorial/cheatsheet.php)
+
+For more in-depth information you can read the manual page for all these commands.
+
+[Manual page](https://linux.die.net/man/)
+
+## Git Usage
+
+### Overview
+
+Git has several commands that will be necessary to properly work with the Pavlovia Gitlab
+repositories. Those are `status`, `add`, `commit`, and `push`.
+
+### Commands and their Usage
+
+#### `status`
+
+This command will list files and there state within git.
+
+Files can either be ignored, untracked, unstaged, and staged. Ignored means that the files satisfies
+a rule in the `.gitignore` file.  Untracked refers to files that git is not ignoring but have never
+been committed, this is normal for newly created files. Unstaged files are files that currently have
+changes and have been committed before but are not currently staged. Staged files are files that
+have been committed before and have been added to the staging area so they can be committed.
+
+#### `add`
+
+This command will add any file that you want whether it is tracked or not.
+
+Example:
+
+```sh
+git add some_file.txt
+```
+
+### `commit`
+
+This command will commit your changes to the repository. There are two important options for commit
+`-m` and `-a`. `-m` is for the commit message, and `-a` means that git will automatically add any
+tracked files that have not been added and add them to staging and committing those changes.
+
+Example:
+
+```sh
+# Staged files: s.txt
+# Unstaged files: u.txt
+# Untracked and unstaged files: uu.txt
+
+# first example
+git commit -m "Update s file"
+# Commits only changes for s.txt
+
+# Reset
+# Second example
+git commit -am "Update s and u file"
+# Adds u.txt to staging area
+# Commits changes for s.txt and u.txt
+```
+
+### `push`
+
+This command will push all changes that have been add to the Pavlovia Gitlab repository.
+
+Example:
+
+```sh
+# Local repository is ahead of Pavlovia Gitlab repository
+# TODO: finish section
+```
+
+## Setting Up the Local Repository
+
+### Overview
+
+Setting up a local repository in our case means that we will be cloning the Gitlab repository. The
+repository can be empty or have a lot of work already incorporated. The process for "setting it up
+locally" is exactly the same.
+
+### Steps
+
+- `git clone` the repository that was created. For example: 
+	`git clone git@gitlab.pavlovia.org:furcb/temp.git`
+- `cd repo-name` where repo-name is the name of the repository.
+
+At this point you will have a repository that is correctly configured, and you can start making
+changes.
+
+## Synchronizing Your Changes With Gitlab
+
+Once you have made your changes you will need to synchronize or `push` your changes to Gitlab. To do
+this you must `add` all your changes and then `commit` them. After that you can `push` those changes
+to Gitlab.
+
+### Steps
+
+- `git status` is a good first step
+- Add all the files with changes you want using `git add`
+- Commit those changes that have been staged using `git commit -m "message"`
+- Upload those changes using `git push`
+
+Example:
+
+```sh
+# The star is an expression that mean "all"
+# Useful when you want to add all the files that have changes and are being tracked by git
+git add *
+# Commit changes and provide a comment describing those changes
+# Please use imperative form and capitalize the first letter of the commit comment
+git commit -m "Add improvement to routine x"
+# Upload those changes to Gitlab
+git push
+```
+
+### Resources
+
+[Git Usage](#git-usage)
+
+## Pavlovia Specific Workflow
+
+### Overview
+
+Pavlovia allows us to add the html files to the root of the project directory or to create an html
+directory and add those files created on export there. We will be using the latter method since it
+is cleaner and more organized.
+
+### Steps
+
+With the builder open go to "File > Export HTML" and the PsychoPy builder will export the html
+files.
+
+Using your file manager of choice, Explorer on Windows and Navigator on Mac OS, copy those new files
+to `html/` in the project directory.
+
+Add any assets like pictures, csv's, and any other files needed for the project to run to `html/` as
+well. It is recommended to use `resources/` as the directory for those files. If you use a
+`resources/` directory in `html/` you must also use it in the root of the project.
+
+Example:
+
+```
+# Think of the html directory as a mini PsychoJS project
+
+└── psychopy_proj
+   ├── html
+   │  └── resources
+   └── resources
+```
+
+`TODO: Finish section`
