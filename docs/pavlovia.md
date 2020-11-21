@@ -89,7 +89,7 @@ to Pavlovia.
 
 Login into [Pavlovia](https://gitlab.pavlovia.org/users/sign_in) using your username and password.
 
-![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/ssh_signin.png)
+![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_signin.png)
 
 At the top-right hand corner click the drop down and select "Settings".
 
