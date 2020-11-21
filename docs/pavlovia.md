@@ -248,11 +248,11 @@ For more in-depth information you can read the manual page for all these command
 ### Overview
 
 Git has several commands that will be necessary to properly work with the Pavlovia Gitlab
-repositories. Those are `status`, `add`, `commit`, and `push`.
+repositories. Those are `status`, `add`, `commit`, `push`, `pull`, and `checkout`.
 
 ### Commands and their Usage
 
-#### `status`
+#### Status
 
 This command will list files and there state within git.
 
@@ -262,7 +262,7 @@ been committed, this is normal for newly created files. Unstaged files are files
 changes and have been committed before but are not currently staged. Staged files are files that
 have been committed before and have been added to the staging area so they can be committed.
 
-#### `add`
+#### Add
 
 This command will add any file that you want whether it is tracked or not.
 
@@ -272,7 +272,7 @@ Example:
 git add some_file.txt
 ```
 
-### `commit`
+### Commit
 
 This command will commit your changes to the repository. There are two important options for commit
 `-m` and `-a`. `-m` is for the commit message, and `-a` means that git will automatically add any
@@ -296,7 +296,7 @@ git commit -am "Update s and u file"
 # Commits changes for s.txt and u.txt
 ```
 
-### `push`
+#### Push
 
 This command will push all changes that have been add to the Pavlovia Gitlab repository.
 
@@ -304,7 +304,38 @@ Example:
 
 ```sh
 # Local repository is ahead of Pavlovia Gitlab repository
-# TODO: finish section
+git push
+# Changes are uploaded
+```
+
+#### Pull
+
+This command will "pull" changes from the remote repository, in this case the Pavlovia Gitlab
+repository you cloned. Pull will try to fetch any new changes and merge them. Generally, as long as
+you have not diverged from the remote repository this will work fine.
+
+Example:
+
+```sh
+# Local repository is behind of Pavlovia Gitlab repository but has not diverged
+git pull
+# Git will download new changes and merge them automatically
+```
+
+#### Checkout
+
+This command changes the contents of the local repository to match the branch that you "checkout".
+It will leave changed files untouched so that you can commit them to the branch you are checking
+out. This is useful when you accidentally made changes to "branch\_b" thinking you were on
+"branch\_a".
+
+Example:
+
+```sh
+# on branch_b
+git checkout branch_a
+# on branch_a
+# changes were brought over
 ```
 
 ## Setting Up the Local Repository
@@ -321,40 +352,78 @@ locally" is exactly the same.
 	`git clone git@gitlab.pavlovia.org:furcb/temp.git`
 - `cd repo-name` where repo-name is the name of the repository.
 
-At this point you will have a repository that is correctly configured, and you can start making
-changes.
+## Gitlab Work-Flow
 
-## Synchronizing Your Changes With Gitlab
+At this point you will have a repository that is correctly configured. To begin adding changes we
+must create a new branch. To create a new branch follow theses steps:
 
-Once you have made your changes you will need to synchronize or `push` your changes to Gitlab. To do
-this you must `add` all your changes and then `commit` them. After that you can `push` those changes
-to Gitlab.
+- `git checkout -b fix_a` to create a new branch with the name "fix\_a", change the name
+	to match the changes you will be making.
 
-### Steps
+Once the new branch is created open the PsychoPy project and start making changes to the project.
+After adding all the new changes, do the following:
 
-- `git status` is a good first step
-- Add all the files with changes you want using `git add`
-- Commit those changes that have been staged using `git commit -m "message"`
-- Upload those changes using `git push`
+- Add all the new changes using the `add` command
+- Commit those changes using the `commit` command
+- `git push origin fix_a` to push the new branch to the remote repository under the new branch
+	name
 
-Example:
+Once you have something you want to merge with the main branch, confirm with other team members by
+having them pull the new branch and testing the new changes. Once the branch with the changes has
+been reviewed, we can add the new branch to the main branch.
+
+- Checkout the main branch by using `git checkout main`
+
+> Any uncommitted changes will be transferred into the main branch, this might make the next steps
+> difficult in some cases. If you would like to PERMANENTLY discard/delete those changes use `git
+> reset --hard HEAD`
+
+If the main branch has not been changed since the point when the new branch was created follow these
+steps:
+
+- Merge the new branch by using `git merge fix_a`
+- Do `push` to push the updated main branch to the remote repository
+
+If the main branch has been changed since the point when the new branch was created, in this case
+fix\_a, follow these steps:
+
+- Use the `pull` command to pull the newest changes for the main branch
+- `git merge fix_a` to merge the changes from the new branch
+
+At this point if there where no conflicting changes, git will have completed the merge as if the
+main branch was not different from the point when you created the new branch. If there are
+conflicting changes, or changes that are in the same area as changes that were added to the main
+branch after creating the new branch, you will have to manually fix those conflicts.
+
+- Fix those conflicts
+- Use `add` to add those changes
+- Use `commit` to commit those changes
+- Use `push` to upload the new main branch to the remote repository
+
+A word of warning, most files will be simple to fix merge conflicts. The python project file for
+PsychoPy may be harder since it is auto-generated python code. Although as long as changes do not
+overlap i.e. merging changes for same components, merge conflicts should not happen and if they do
+they are easy to incorporate.
+
+Example merge conflict:
 
 ```sh
-# The star is an expression that mean "all"
-# Useful when you want to add all the files that have changes and are being tracked by git
-git add *
-# Commit changes and provide a comment describing those changes
-# Please use imperative form and capitalize the first letter of the commit comment
-git commit -m "Add improvement to routine x"
-# Upload those changes to Gitlab
-git push
+# Contents of "some_file.txt"
+<<<<<<< HEAD
+This was added after fix_a and conflicts with fix_a
+=======
+This is a change in fix_a
+>>>>>>> fix_a
 ```
 
-### Resources
+Example resolved merge conflict:
 
-[Git Usage](#git-usage)
+```sh
+# Contents of the fixed "some_file.txt"
+This is a change in fix_a
+```
 
-## Pavlovia Specific Workflow
+## PsychoJS Workflow
 
 ### Overview
 
@@ -362,12 +431,12 @@ Pavlovia allows us to add the html files to the root of the project directory or
 directory and add those files created on export there. We will be using the latter method since it
 is cleaner and more organized.
 
-### Steps
+### Export PsychoJS project
 
 With the builder open go to "File > Export HTML" and the PsychoPy builder will export the html
 files.
 
-Using your file manager of choice, Explorer on Windows and Navigator on Mac OS, copy those new files
+Using your file manager of choice, Explorer on Windows and Navigator on Mac OS, move those new files
 to `html/` in the project directory.
 
 Add any assets like pictures, csv's, and any other files needed for the project to run to `html/` as
@@ -384,5 +453,3 @@ Example:
    │  └── resources
    └── resources
 ```
-
-`TODO: Finish section`
