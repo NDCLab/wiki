@@ -89,9 +89,15 @@ to Pavlovia.
 
 Login into [Pavlovia](https://gitlab.pavlovia.org/users/sign_in) using your username and password.
 
+![](_assets/pavlovia_md/ssh_signin.png)
+
 At the top-right hand corner click the drop down and select "Settings".
 
+![](_assets/pavlovia_md/sshk_settings.png)
+
 On the left side you will see "User Settings" and a list of categories. Select "SSH Keys"
+
+![](_assets/pavlovia_md/sshk_settings_category.png)
 
 With a text editor open up the ssh key file that ends with `.pub` and inside you will see a
 `ssh-ed25519` and a long alpha-numeric sequence and an email or username at the end. Copy the entire
@@ -104,7 +110,11 @@ when you have multiple keys.
 
 Press "Add key"
 
+![](_assets/pavlovia_md/sshk_input.png)
+
 Refresh and you will see the new key in "Your SSH keys (1)"
+
+![](_assets/pavlovia_md/sshk_newkey.png)
 
 ### Resources
 
@@ -142,6 +152,8 @@ Once you are inside the group page:
 
 Press "New project"
 
+![](_assets/pavlovia_md/nproj_new.png)
+
 Name the project
 
 Make sure that "ndclab" is selected in the "Project URL"
@@ -151,6 +163,8 @@ Write out a "Project Slug", substitute spaces with a hyphen "-"
 Set to "Public"
 
 Press "Create project"
+
+![](_assets/pavlovia_md/nproj_create.png)
 
 \* Note: A "[Slug](https://en.wikipedia.org/wiki/Clean_URL#Slug)" is generally the part of a URL
 that comes after the domain bits. It is a nicer way to link to something instead of a long
