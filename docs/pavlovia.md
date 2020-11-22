@@ -7,10 +7,10 @@ search_exclude: true
 
 # Pavlovia + GitLab Tutorial
 
-## Insert Overview
+An overview on how to get started with Git, GitLab, and Pavlovia in order to run PsychoPy projects on the browser.
 
 #### TABLE OF CONTENTS
-1. [Istalling Git](https://ndclab.github.io/wiki/docs/pavlovia.html#installing-git)
+1. [Installing Git](https://ndclab.github.io/wiki/docs/pavlovia.html#installing-git)
 2. [Opening a Shell](https://ndclab.github.io/wiki/docs/pavlovia.html#opening-a-shell)
 3. [Setting up SSH Keys](https://ndclab.github.io/wiki/docs/pavlovia.html#setting-up-ssh-keys)
 4. [Adding an SSH Key to Pavlovia](https://ndclab.github.io/wiki/docs/pavlovia.html#adding-an-ssh-key-to-pavlovia)
@@ -66,21 +66,21 @@ uses a different tool set which is not covered in this guide.
 SSH keys are a form of authentication like username and passwords that simplify the process of
 working with git repositories.
 
-If you have ssh keys already please make sure to check the names before hand to avoid overriding
+If you have SSH keys already, please make sure to check the names before hand to avoid overriding
 them.
 
 To create an SSH key pair; a private key and a public key you will need to do the following steps:
 
 - Open up a Terminal with a Shell; Bash on Windows, Zsh on Mac
-- Copy-paste the following commands:
+- Copy and paste the following commands:
 
 ```sh
 # The "comment" should either be an email "username@email.com" or user@hostname "username@mycomputer"
 ssh-keygen -t ed25519 -C "comment"
 ```
 
-- At this point you will be prompted for two things:
-  - Where to save the private/public key, the default location is displayed
+- At this point, you will be prompted for two things:
+  - Where to save the private/public key (the default location is displayed)
   - A passphrase for the key
 
 \* Note on the key type: the current (as of 2020) recommendation is ED25519 over RSA.
@@ -98,7 +98,7 @@ Guide](https://docs.github.com/en/github-ae@latest/github/authenticating-to-gith
 
 ### Overview
 
-Now that you have an SSH key pair, the private and public key, you will need to add the public key
+Now that you have an SSH key pair (the private and public key), you will need to add the public key
 to Pavlovia.
 
 ### Steps
@@ -107,11 +107,11 @@ Login into [Pavlovia](https://gitlab.pavlovia.org/users/sign_in) using your user
 
 ![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_signin.png)
 
-At the top-right hand corner click the drop down and select "Settings".
+At the top-right hand corner, click the drop down and select **Settings**.
 
 ![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_settings.png)
 
-On the left side you will see "User Settings" and a list of categories. Select "SSH Keys"
+On the left side, you will see **User Settings** and a list of categories. Select **SSH Keys**
 
 ![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_settings_category.png)
 
@@ -119,16 +119,16 @@ With a text editor open up the ssh key file that ends with `.pub` and inside you
 `ssh-ed25519` and a long alpha-numeric sequence and an email or username at the end. Copy the entire
 line.
 
-Paste it into the "Key" text box in the page that you are on.
+Paste it into the **Key** text box in the page that you are on.
 
-Give the key a "Title", this can be anything as it is a name to help you remember where the key is
+Give the key a **Title**, this can be anything as it is a name to help you remember where the key is
 when you have multiple keys.
 
-Press "Add key"
+Press **Add key**.
 
 ![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_input.png)
 
-Refresh and you will see the new key in "Your SSH keys (1)"
+Refresh and you will see the new key in **Your SSH keys (1)**.
 
 ![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_newkey.png)
 
@@ -141,21 +141,21 @@ guide](https://docs.gitlab.com/ee/ssh/README.html#adding-an-ssh-key-to-your-gitl
 
 ### Overview
 
-To create a repository you will need to create an empty repository on the NDC Lab organization or
+To create a repository, you will need to create an empty repository on the NDC Lab organization or
 your personal Gitlab on the Pavlovia Gitlab instance. The NDC Lab organization or group will be
 where we put the PsychoPy and PsychoJS projects. Your personal projects can be used for things like
 experimenting with changes that you may not necessarily want to push to the main repository.
 
-Note: Group and Organization can be used interchangeably. And repository and project can be used
+**Note:** Group and Organization can be used interchangeably. And repository and project can be used
 interchangeably.
 
 ### Accessing the NDC Lab group
 
-By default you will be able to see the NDC Lab projects when you are logged in on the main page when
+By default, you will be able to see the NDC Lab projects when you are logged in on the main page when
 you access `https://gitlab.pavlovia.org`. If not these are different ways to access the projects:
 
-- Open the "Groups" drop-down at the top of the page
-- Select "Your groups"
+- Open the **Groups** drop-down at the top of the page
+- Select **Your groups**
 - Select NDCLab
 
 Or
@@ -166,19 +166,19 @@ Or
 
 Once you are inside the group page:
 
-Press "New project"
+Press **New project**.
 
 ![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/nproj_new.png)
 
-Name the project
+Name the project.
 
-Make sure that "ndclab" is selected in the "Project URL"
+Make sure that **ndclab** is selected in the **Project URL**.
 
-Write out a "Project Slug", substitute spaces with a hyphen "-"
+Write out a **Project Slug**, substitute spaces with a hyphen (-).
 
-Set to "Public"
+Set to **Public**.
 
-Press "Create project"
+Press **Create project**.
 
 ![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/nproj_create.png)
 
@@ -384,13 +384,13 @@ locally" is exactly the same.
 
 ## Gitlab Workflow
 
-At this point you will have a repository that is correctly configured. To begin adding changes we
+At this point, you will have a repository that is correctly configured. To begin adding changes, you
 must create a new branch. To create a new branch follow theses steps:
 
 - `git checkout -b fix_a` to create a new branch with the name "fix\_a", change the name
 	to match the changes you will be making.
 
-Once the new branch is created open the PsychoPy project and start making changes to the project.
+Once the new branch is created, open the PsychoPy project and start making changes to the project.
 After adding all the new changes, do the following:
 
 - Add all the new changes using the `add` command
@@ -430,7 +430,7 @@ branch after creating the new branch, you will have to manually fix those confli
 - Use `commit` to commit those changes
 - Use `push` to upload the new main branch to the remote repository
 
-A word of warning, most files will be simple to fix merge conflicts. The python project file for
+**A word of warning:** most files will be simple to fix merge conflicts. The python project file for
 PsychoPy may be harder since it is auto-generated python code. Although as long as changes do not
 overlap i.e. merging changes for same components, merge conflicts should not happen and if they do
 they are easy to incorporate.
@@ -454,11 +454,11 @@ This is a change in fix_a
 ```
 
 ## PsychoJS Workflow
-
+ 
 ### Overview
 
 Pavlovia allows us to add the html files to the root of the project directory or to create an html
-directory and add those files created on export there. We will be using the latter method since it
+directory and add those files created on export there. You will be using the latter method since it
 is cleaner and more organized.
 
 ### Export PsychoJS project
