@@ -19,6 +19,7 @@ search_exclude: true
 7. [Git Usage](https://ndclab.github.io/wiki/docs/pavlovia.html#git-usage)
 8. [Setting Up the Local Repository](https://ndclab.github.io/wiki/docs/pavlovia.html#setting-up-the-local-repository)
 9. [GitLab Workflow](https://ndclab.github.io/wiki/docs/pavlovia.html#gitlab-workflow)
+10. [PsychoJS Workflow](https://ndclab.github.io/wiki/docs/pavlovia.html#psychojs-workflow)
 
 ## Installing Git
 
