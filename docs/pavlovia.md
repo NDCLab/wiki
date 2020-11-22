@@ -89,10 +89,10 @@ improved security.
 
 ### Resources
 
-[Github
+[GitHub
 Guide](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-[Gitlab Guide](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair)
+[GitLab Guide](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair)
 
 ## Adding an SSH key to Pavlovia
 
@@ -188,7 +188,7 @@ alpha-numeric string or a long directory and file combo.
 
 ### Resources
 
-[Gitlab In-depth guide](https://docs.gitlab.com/ee/gitlab-basics/create-project.html)
+[GitLab In-depth guide](https://docs.gitlab.com/ee/gitlab-basics/create-project.html)
 
 ## Shell Tips
 
@@ -199,10 +199,10 @@ in a Terminal running a Bash or Zsh shell.
 
 Some of the terminology used:
 
-- directory: another name for a folder
-- option: an option that the program will allow you to change using special formatting, generally
+- **directory**: another name for a folder
+- **option**: an option that the program will allow you to change using special formatting, generally
 	denoted with a "--" in front of the option name. For example "--option value".
-- flag: an option that can be on or off, generally denoted with a "-" in front of the name. For
+- **flag**: an option that can be on or off, generally denoted with a "-" in front of the name. For
 	example "-t".
 
 ### Important Commands
@@ -458,7 +458,7 @@ This is a change in fix_a
 ### Overview
 
 Pavlovia allows us to add the html files to the root of the project directory or to create an html
-directory and add those files created on export there. You will be using the latter method since it
+directory and add those files created on export there. It is suggested to use the latter method since it
 is cleaner and more organized.
 
 ### Export PsychoJS project
