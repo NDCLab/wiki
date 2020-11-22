@@ -1,9 +1,24 @@
 ---
 layout: default
-title: Pavlovia Documentation Draft
+title: Pavlovia + GitLab Tutorial
 nav_exclude: true
 search_exclude: true
 ---
+
+# Pavlovia + GitLab Tutorial
+
+## Insert Overview
+
+#### TABLE OF CONTENTS
+1. [Istalling Git](https://ndclab.github.io/wiki/docs/pavlovia.html#installing-git)
+2. [Opening a Shell](https://ndclab.github.io/wiki/docs/pavlovia.html#opening-a-shell)
+3. [Setting up SSH Keys](https://ndclab.github.io/wiki/docs/pavlovia.html#setting-up-ssh-keys)
+4. [Adding an SSH Key to Pavlovia](https://ndclab.github.io/wiki/docs/pavlovia.html#adding-an-ssh-key-to-pavlovia)
+5. [Creating a Repository on GitLab](https://ndclab.github.io/wiki/docs/pavlovia.html#creating-a-repository-on-gitlab)
+6. [Shell Tips](https://ndclab.github.io/wiki/docs/pavlovia.html#shell-tips)
+7. [Git Usage](https://ndclab.github.io/wiki/docs/pavlovia.html#git-usage)
+8. [Setting Up the Local Repository](https://ndclab.github.io/wiki/docs/pavlovia.html#setting-up-the-local-repository)
+9. [GitLab Workflow](https://ndclab.github.io/wiki/docs/pavlovia.html#gitlab-workflow)
 
 ## Installing Git
 
@@ -366,7 +381,7 @@ locally" is exactly the same.
 	`git clone git@gitlab.pavlovia.org:furcb/temp.git`
 - `cd repo-name` where repo-name is the name of the repository.
 
-## Gitlab Work-Flow
+## Gitlab Workflow
 
 At this point you will have a repository that is correctly configured. To begin adding changes we
 must create a new branch. To create a new branch follow theses steps:
