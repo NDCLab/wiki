@@ -7,10 +7,10 @@ search_exclude: true
 
 # Pavlovia + GitLab Tutorial
 
-## Insert Overview
+An overview on how to get started with Git, GitLab, and Pavlovia in order to run PsychoPy projects on the browser.
 
 #### TABLE OF CONTENTS
-1. [Istalling Git](https://ndclab.github.io/wiki/docs/pavlovia.html#installing-git)
+1. [Installing Git](https://ndclab.github.io/wiki/docs/pavlovia.html#installing-git)
 2. [Opening a Shell](https://ndclab.github.io/wiki/docs/pavlovia.html#opening-a-shell)
 3. [Setting up SSH Keys](https://ndclab.github.io/wiki/docs/pavlovia.html#setting-up-ssh-keys)
 4. [Adding an SSH Key to Pavlovia](https://ndclab.github.io/wiki/docs/pavlovia.html#adding-an-ssh-key-to-pavlovia)
