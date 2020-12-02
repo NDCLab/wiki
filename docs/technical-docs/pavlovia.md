@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Pavlovia + GitLab Tutorial
-nav_exclude: true
-search_exclude: true
+title: HPC Documentation
+parent: Technical Documentation
+nav_order: 3
 ---
 
 # Pavlovia + GitLab Tutorial
