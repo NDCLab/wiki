@@ -1,6 +1,6 @@
 ---
 layout: default
-title: HPC Documentation
+title: Pavlovia + GitLab
 parent: Technical Documentation
 nav_order: 3
 ---
