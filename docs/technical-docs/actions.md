@@ -31,8 +31,8 @@ and a [pip](https://pip.pypa.io/en/stable/) dependency text file.
 
 The YAML configuration file will have the options to run the GitHub Action. The shell script
 `run_tests.sh` will be a [Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script that is
-called from the GitHub Action virtual machine to run the Python checks. The `requirements-dev.txt`
-file is a
+called from the GitHub Action [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) to
+run the Python checks. The `requirements-dev.txt` file is a
 [requirements](https://pip.pypa.io/en/stable/reference/pip_install/#example-requirements-file) file
 to install the Python dependencies needed using `pip` to run the checks.
 
