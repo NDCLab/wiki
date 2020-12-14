@@ -17,9 +17,10 @@ GitHub projects and is used to perform Continuous Integration (CI) tasks. Tasks 
 [linting](https://en.wikipedia.org/wiki/Lint_(software)) code and checking if the code complies with
 lab styling standards.
 
-For python, we will use [pylint](https://pylint.org/) which will test code for syntactic errors and
-[pycodestyle](https://github.com/pycqa/pycodestyle) for the style guide checks. These are the two
-checks that will be used on all projects that contain Python code.
+For python, we will use [pylint](https://pylint.org/) a linter which will test code for syntactic
+errors and [pycodestyle](https://github.com/pycqa/pycodestyle) or a style checker for compliance
+with the lab code style guide. These are the two checks that will be used on all projects that
+contain Python code.
 
 ## Using GitHub Actions on a Repository
 
