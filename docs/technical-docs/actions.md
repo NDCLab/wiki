@@ -69,6 +69,12 @@ output](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/gh_a
 
 ## Build Badge
 
+A build badge is a way to tell the users of your code in a simple way whether the code is
+functioning correctly. This allows the user to decide quickly whether is worth it to try to go
+through the install or not. Without the badge a user would have to risk downloading and installing
+the software only to find out it does not work. It also helps contributers and maintainers have an
+easy visual check of whether a branch is working or not.
+
 To add the `build` badge to the README or any other document go to the
 [shields.io](https://shields.io/category/build) site and search for "GitHub Workflow Status". The
 two options to look for are "GitHub Workflow Status" and "GitHub Workflow Status (branch):", select
