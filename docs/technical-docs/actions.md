@@ -25,13 +25,14 @@ contain Python code.
 ## Using GitHub Actions on a Repository
 
 To start a new Python project, create a new project and copy or download this
-[template](#python-ci-workflow). This will include a [YAML](https://en.wikipedia.org/wiki/YAML)
-configuration file, a shell script, and a [pip](https://pip.pypa.io/en/stable/) dependency text
-file.
+[template](https://github.com/NDCLab/templates/blob/main/project_bases/python_ci/.github/workflows/python_ci.yaml).
+This will include a [YAML](https://en.wikipedia.org/wiki/YAML) configuration file, a shell script,
+and a [pip](https://pip.pypa.io/en/stable/) dependency text file.
 
 The YAML configuration file will have the options to run the GitHub Action. The shell script
-`run_tests.sh` will be a Bash script that is called from the GitHub Action virtual machine to run
-the Python checks. The `requirements-dev.txt` file is a
+`run_tests.sh` will be a [Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script that is
+called from the GitHub Action virtual machine to run the Python checks. The `requirements-dev.txt`
+file is a
 [requirements](https://pip.pypa.io/en/stable/reference/pip_install/#example-requirements-file) file
 to install the Python dependencies needed using `pip` to run the checks.
 
