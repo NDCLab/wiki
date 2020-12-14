@@ -6,10 +6,14 @@ parent: Technical Documentation
 
 # Python CI Workflow
 
+Continuous Integration is the practice of automatically merging developer work that has been checked
+by tools into a main branch of work in a [Version Control
+System](https://en.wikipedia.org/wiki/Version_control).
+
 ## Overview
 
 [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions) is a tool available to
-GitHub projects and is used to perform Continuous Integration (CI) tasks. Tasks like
+GitHub projects and is used to perform Continuous Integration (CI) tasks. Tasks include
 [linting](https://en.wikipedia.org/wiki/Lint_(software)) code and checking if the code complies with
 lab styling standards.
 
