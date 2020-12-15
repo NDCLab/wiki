@@ -46,7 +46,7 @@ Once you upload changes you can access the GitHub Actions by going to the "Actio
 
 ![actions](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/gh_actions/actions.png)
 
-You will have workflows on the left, this are custom named CI workflows. By default all Python
+You will have workflows on the left, these are custom named CI workflows. By default all Python
 projects will have `Python-CI` which will have the lint check, code style check, and python tests
 check.
 
