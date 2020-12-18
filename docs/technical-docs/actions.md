@@ -89,12 +89,10 @@ repository and then click "Copy Badge URL".
 
 Code correctness and good style formatting. Testing code on every push to the repository, for
 example when submitting a bug fix, decreases the chances of re-introducing old bugs or introducing
-new ones. It also puts attention on bugs that may not be found until later in the development
-process when fixing small bugs that are tightly coupled with core features more difficult. Keeping
-code looking clean and well formatted using the lab style guide makes it so that anyone in the lab
-can look at someone else's code and be able to better understand it. This makes it easier for
-collaboration to occur across teams, and people that would like to contribute to projects in the
-lab.
+new ones Keeping code looking clean and well formatted using the lab style guide makes it so that 
+anyone in the lab can look at someone else's code and be able to better understand it. This makes 
+it easier for collaboration to occur across teams, and people that would like to contribute to 
+projects in the lab.
 
 ## Additional Resources
 
