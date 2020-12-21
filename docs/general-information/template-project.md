@@ -1,3 +1,9 @@
+---
+layout: default
+title: Project Template
+parent: General Information
+---
+
 # Project Template
 
 ## Overview
