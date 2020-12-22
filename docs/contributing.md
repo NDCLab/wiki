@@ -19,13 +19,14 @@ for correctness.
 ## Workflow for those with Push Access
 
 If you have push access to a project repository that means you can push changes to the repository
-but you should not push changes into the main or development branch without having those changes
-reviewed. To do this we will use branches and pull requests.
+(i.e., you can directly change the repository) but you should not push changes into the main or
+development branch without having those changes reviewed by another lab member (i.e., another team
+member on the project). To do this we will use branches and pull requests.
 
 Following these steps:
 
 - Clone the repository
-- Create a new branch following the labs naming conventions
+- Create a new branch following the labs naming conventions (see below)
 - Commit changes to that branch
 - Push the new branch to the repository
 - Create a new pull request and assign someone to review the pull request
@@ -37,7 +38,8 @@ Following these steps:
 
 - Once approved either the reviewer or the one who created the submission will close the pull
 	request
-  - To close an issue, a comment must be provided stating why the pull request was completed
+  - To close an issue, a comment must be provided stating why the pull request was completed. Issues
+  should never be closed without comment.
 
 ## Workflow for those without Push Access
 
@@ -49,14 +51,14 @@ Following these steps to submit changes:
 - Fork the repository on GitHub (this will require having an account)
   - [Signing up for Github](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/signing-up-for-a-new-github-account)
 - Clone the repository in your account
-- Follow the same steps as described above starting from "Creating a new branch..."
+- Follow the same steps as described above starting from "Create a new branch..."
 
 ## Naming Convention for Branches
 
-Branches will follow a naming convention so that everyone in the lab, and those contributing to lab
-projects can more easily understand how projects are being developed. Also to stay organized, for
-example knowing that although main may have the most current changes the `dev` branch is the one to
-pay attention to if you would like to contribute since that branch is the one with all the active
+Branches will follow a standard naming convention so that everyone in the lab, and those contributing
+to lab projects can more easily understand how projects are being developed. Also to stay organized, for
+example knowing that although 'main' may have the most current changes the `dev` branch is the one to
+pay attention to if you would like to, contribute since that branch is the one with all the active
 pull requests.
 
 Branches:
@@ -77,7 +79,7 @@ descriptive name; `<category>-<name>` or `feature-add-lights`.
 ## Edge Case: Working on a Feature that Depends on Another Feature
 
 If you are working on a feature or fix that depends on something that is still in the process of
-being reviewed the approach we will use is
+being reviewed, the approach we will use is
 [rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing).
 
 Rebasing is similar to merging in that it merges changes from the initial point that was used to
@@ -92,5 +94,5 @@ To do this, do the following:
 - Then just follow the steps as mentioned above
 
 This method can be used on any branch that is dependent on any other branch but tends to be more
-useful branches that have not been merge into main or dev. And can be useful if either the main or
+useful branches that have not been merged into main or dev. And can be useful if either the main or
 dev branch are moving quickly while developing the feature or fix.
