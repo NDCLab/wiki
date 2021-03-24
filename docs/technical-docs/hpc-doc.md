@@ -8,6 +8,7 @@ nav_order: 1
 ## Jupyter Notebook on the HPC
 
 1. Launch the Panther desktop from the [HPC desktop](https://wwww.hpcgui.fiu.edu):
+   (note: the HPC desktop cannot be accessed until you connect to the VPN)
 
 ![launching-panther-desktop](https://github.com/NDCLab/wiki/blob/cb92be615224b3ade40ea379426ca8c763ee90e5/docs/_assets/hpc/launching-panther-desktop.png)
 
@@ -15,10 +16,11 @@ nav_order: 1
 2. Once the desktop has launched, open the terminal. Load conda, then jupyter.
 
 ![terminal-actions-conda-jupyter](https://github.com/NDCLab/wiki/blob/cb92be615224b3ade40ea379426ca8c763ee90e5/docs/_assets/hpc/launching-panther-desktop.png)
-We use a [conda environment](http://ircc.fiu.edu/custom-environments-and-package-installation-r-and-python/) for our scripts for version control. (We do not use pip.)
+Note: we use a [conda environment](http://ircc.fiu.edu/custom-environments-and-package-installation-r-and-python/) for our scripts for version control. (We do not use pip.)
 
+## Accessing the private queue on the HPC
 
-3. Specify a slurm script.
+1. Specify a slurm script.
     * Note private cue at top.
     * Always specify 'medium' and select one of the medium machines.
 
