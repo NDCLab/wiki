@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Get with Git
+title: ZenHub
 parent: Onboarding
-nav_order: 7
+nav_order: 8
 ---
 
-# Get with Git
+# Setting up ZenHub
 (coming soon!)

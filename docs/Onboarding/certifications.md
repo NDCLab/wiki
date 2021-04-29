@@ -16,6 +16,7 @@ In addition, members of the lab who will be actively involved in handling partic
 ![hips](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/onboarding/hips.png)
 2. Social and Behavioral Responsible Conduct of Research Course (Stage 1 - RCR)
 ![rcr](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/onboarding/rcr.png)
+
 ### Non-CITI
 3. Health Insurance Portability and Accountability Act (HIPAA)
 
