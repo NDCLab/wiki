@@ -12,7 +12,7 @@ The various onboarding steps are outlined below. Some must be completed by the i
 
 
 ## CCF Access
-1. Intern application: The incoming lab member must complete Form (A) of the FIU Intern Application-Applicant Form or the FIU Volunteer Applications-Applicant Form, as appropriate. Send to **ndclab@fiu.edu** with a scan of your Panther ID.
+1. Intern application: The incoming lab member must complete Form (A) of the FIU Intern Application-Applicant Form or the FIU Volunteer Applications-Applicant Form, as appropriate. Send to **ndclab@fiu.edu** with a scan of their Panther ID.
 2. Person-of-interest (POI) request: The lab manager submits the intern application to the CCF, then completes a POI request. This triggers the CCF to initiate a background check for the incoming lab member.
 3. Background check: The incoming lab member should watch their inbox (and spam box) carefully for the authorization request. Details on the authorization request are available [here](link).
 4. CITI training: After completing the application, the incoming member should immediately begin working on the [required CITI training courses](link).
