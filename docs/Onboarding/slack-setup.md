@@ -22,12 +22,12 @@ You can either connect to the workspace in a browser, like Chrome, or download t
 
 ## Your User Profile
 You can edit your profile by following the instructions [here](https://slack.com/help/articles/204092246-Edit-your-profile).  Please include all of the following:<br/>
-**Profile Photo:** Please include either a picture or an avatar of your fabulous face!<br/>
-**Full Name:** This is your first and last name(s).<br/>
-**Display Name:** Please use the name you prefer people call you, plus your last name.<br/>
-**What I Do:** Share your role (Research Assistant, etc.)<br/>
-**Phone Number:** Include your number.  We don't make a lot of phone calls, but just in case we ever need to get in touch in a hurry.  Know that only active lab members have access to this information.<br/>
-**Time Zone:** Not everyone is in Miami, so input your time zone to let the team know where you are.
+    **Profile Photo:** Please include either a picture or an avatar of your fabulous face!<br/>
+    **Full Name:** This is your first and last name(s).<br/>
+    **Display Name:** Please use the name you prefer people call you, plus your last name.<br/>
+    **What I Do:** Share your role (Research Assistant, etc.)<br/>
+    **Phone Number:** Include your number.  We don't make a lot of phone calls, but just in case we ever need to get in touch in a hurry.  Know that only active lab members have access to this information.<br/>
+    **Time Zone:** Not everyone is in Miami, so input your time zone to let the team know where you are.
 
 ## Channels
 You have been automatically added to the following Slack channels:<br/>
