@@ -21,7 +21,7 @@ The various onboarding steps are outlined below. Some must be completed by the i
 7. **Data Services User Agreement:** After the incoming lab member completes the two actionable e-mails above, he/she receives a third e-mail from the CCF with a data services user agreement. Details are available [here](https://ndclab.github.io/wiki/docs/Onboarding/ccf-emails.html).
 
 ## Lab Access
-1. **Slack:** The lab manager will send the incoming member an invite to join the NDCLab Slack workspace.
+1. **Slack:** The lab manager will send the incoming member an invite to join the NDCLab Slack workspace and ensure that they are invited to the appropriate channels.
 2. **Lab meeting:** The lab manager will send the incoming member an invite to join the weekly lab meeting, held on Zoom.
 3. **Google Drive:** The lab manager will send the incoming member an invite to access the lab's Google Drive folder.
 4. **FIU HPC:** The lab manager will request HPC access for the incoming lab member. The incoming lab member should schedule a time to attend the [HPC Onboarding training](fiu.zoom.us/my/cassian), currently held every Tuesday from 11 am - 12 noon EST.
