@@ -6,7 +6,7 @@ nav_order: 7
 ---
 
 # Joining Slack
-The NDCLab Slack workspace is the primary communication platform in the lab.  Here is what you need to know to get set up and use the platform effectively.
+The NDCLab Slack workspace is the primary communication platform in the lab.  Here is what you need to know to get set up and use the platform effectively.  This wiki page covers how to:
 
 1. Join the workspace.
 2. Decide if you'll use the app or the browser.
@@ -22,16 +22,17 @@ You can either connect to the workspace in a browser, like Chrome, or download t
 
 ## Your User Profile
 You can edit your profile by following the instructions [here](https://slack.com/help/articles/204092246-Edit-your-profile).  Please include all of the following:
-**Profile Photo:** Please include either a picture or an avatar of your fabulous face!
-**Full Name:** This is your first and last name(s).
-**Display Name:** Please use the name you prefer people call you, plus your last name.
-**What I Do:** Share your role (Research Assistant, etc.)
-**Phone Number:** Include your number.  We don't make a lot of phone calls, but just in case we ever need to get in touch in a hurry.  Know that only active lab members have access to this information.
-**Time Zone:** Not everyone is in Miami, so input your time zone to let the team know where you are.
+    **Profile Photo:** Please include either a picture or an avatar of your fabulous face!
+    **Full Name:** This is your first and last name(s).
+    **Display Name:** Please use the name you prefer people call you, plus your last name.
+    **What I Do:** Share your role (Research Assistant, etc.)
+    **Phone Number:** Include your number.  We don't make a lot of phone calls, but just in case we ever need to get in touch in a hurry.  Know that only active lab members have access to this information.
+    **Time Zone:** Not everyone is in Miami, so input your time zone to let the team know where you are.
 
 ## Channels
 You have been automatically added to the following Slack channels:
 TBD
+
 In addition, if you will be assigned to an active project, the lab manager will add you to the appropriate project channel.
 
 The NDCLab is an open lab, so you have access to all channels that you wish to join.
