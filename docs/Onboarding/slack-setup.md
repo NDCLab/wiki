@@ -31,7 +31,9 @@ You can edit your profile by following the instructions [here](https://slack.com
 
 ## Channels
 You have been automatically added to the following Slack channels:<br/>
-TBD
+**#general**: this is our main "meeting place" for the lab at large
+**#from-george**: this is where George communicates important messages to the whole lab
+**#tech**: this is where tech solutions happen, post your problems and help your labmates with theirs
 
 In addition, if you will be assigned to an active project, the lab manager will add you to the appropriate project channel.
 
