@@ -10,7 +10,6 @@ Following a successful interview, a new lab member will be invited to join the N
 
 The various onboarding steps are outlined below. Some must be completed by the incoming lab member while others are completed by the lab manager or PI. The incoming lab member should, however, be proactive wherever possible and should not hesitate to follow up with the lab manager if they have questions about their onboarding status.
 
-
 ## CCF Access
 CCF access if required all lab members who will be collecting or analyzing participant data.
 1. **Intern application:** The incoming lab member must complete Form(A) of the FIU Intern Application-Applicant Form or the FIU Volunteer Applications-Applicant Form, as appropriate and send to **ndclab@fiu.edu** with a scan of their Panther ID (or valid driver's license).
