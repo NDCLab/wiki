@@ -1,4 +1,22 @@
-title: "Remote theme example"
+title: "Neural Dynamics of Control Laboratory"
 remote_theme: pmarsceill/just-the-docs
 color_scheme: "light"
 search_enabled: false
+
+# Aux links for the upper right navigation
+aux_links:
+  "NDC Lab on GitHub":
+    - "//github.com/NDCLab/wiki"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: false
+
+# Heading anchors
+heading_anchors: true
+
+# Logo
+logo: "http://www.ndclab.com/wp-content/uploads/2020/05/NDCLabWebLogo.png"
+
+# Footer content
+footer_content: "Copyright &copy; 2020 Neural Dynamics of Control Laboratory"
+git_edit_repository: "https://github.com/NDCLab/wiki"
