@@ -1,5 +1,8 @@
 ---
+layout: default
 title: Git + GitHub
+parent: Technical Documentation
+nav_order: 1
 ---
 
 # Overview

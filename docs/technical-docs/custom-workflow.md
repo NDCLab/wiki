@@ -1,8 +1,10 @@
 ---
 layout: default
 title: Custom Workflows
-parent: General Issues Workflow
+parent: Technical Documentation
+nav_order: 6
 ---
+
 
 # Custom Workflows
 

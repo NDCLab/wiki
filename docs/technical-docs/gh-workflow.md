@@ -2,6 +2,7 @@
 layout: default
 title: General Issues Workflow
 parent: Technical Documentation
+nav_order: 5
 ---
 
 # General Overview

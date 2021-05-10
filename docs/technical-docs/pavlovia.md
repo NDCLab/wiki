@@ -2,7 +2,7 @@
 layout: default
 title: Pavlovia + GitLab
 parent: Technical Documentation
-nav_order: 3
+nav_order: 4
 ---
 
 # Pavlovia + GitLab Tutorial
