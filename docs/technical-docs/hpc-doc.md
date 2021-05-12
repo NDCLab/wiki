@@ -5,6 +5,9 @@ parent: Technical Documentation
 nav_order: 1
 ---
 
+![dt2-racks-from-front](https://user-images.githubusercontent.com/26397102/118044340-27148d00-b33c-11eb-8b2c-17a454f18c51.jpg)  
+*Not the FIU HPC cluster*
+
 ## Outline 
 
 * [Introduction](#Introduction)
