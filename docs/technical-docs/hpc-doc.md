@@ -8,8 +8,8 @@ nav_order: 1
 ## Outline 
 
 * [Introduction](#Introduction)
-* [Connecting to HPC](#Connecting-to-HPC)
-    * [VPN](#Establishing-VPN-connection)
+* [Connecting to the HPC](#Connecting)
+    * [Establishing VPN Connection](#VPN)
     * [Login Node](#Login-Node)
     * [Visual Node](#Visual-Node)
 * [HPC File Structure](#Structure)
@@ -22,7 +22,21 @@ The [FIU High-performance computing (HPC) cluster](http://ircc.fiu.edu/) is a gr
 
 While a personal computer with 6 cores could execute 6 programs in parallel, one of the 3000 compute nodes in the HPC cluster could execute 44 programs in parallel.
 
-The following doc details how to utilize this resource and points to other useful documentations.
+The following document details how to access and properly utilize this resource once an HPC account is granted. 
+
+## Connecting
+To use the HPC, a lab member must either use on-campus WiFi or utilize a VPN to access the [FIU intranet](https://en.wikipedia.org/wiki/Intranet). 
+
+Once a secure connection is established, both the login node and visual node can be accessed for file manipulation and job submission. 
+
+### VPN
+If a lab member is using on-campus WiFi, this step can be safely skipped. 
+
+However, if a lab member is accessing the HPC remotely, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/). Link to point to VPN access here. 
+
+### Login-Node
+
+### Visual-Node
 
 ## Jupyter
 
