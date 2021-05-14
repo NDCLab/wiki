@@ -5,99 +5,166 @@ parent: Technical Documentation
 nav_order: 1
 ---
 
-# Overview
-
-[Git](https://en.wikipedia.org/wiki/Git) is an [open
-source](https://opensource.com/resources/what-open-source) version control system. A Version Control
-System is a piece of software that allows you to track changes in text files over the development
-lifetime. [GitHub](https://en.wikipedia.org/wiki/GitHub) is an online service that allows people to
-host Git repositories (version controlled projects) online so that other team members and community
-members have easy access to those repositories. GitHub also offers several additional services like
-issue tracking, actions, and project boards which we will be using to manage lab projects. Since the
-lab is dedicated to [open science](https://opensource.com/resources/open-science) and all projects
-will be open source, GitHub provides these services for free.
-
-Git will be used as the main way to version control projects. Projects will have
-[branches](https://www.hostinger.com/tutorials/how-to-use-git-branches/) which are similar to
-sandboxes where a contributor to a project can make changes and ultimately upload those changes
-requesting them to be added to the main project. Git also provides utilities to display the changes
-that have been made to a specific branch, show files have been edited, output a log of all changes.
-Additionally all changes are tagged with the author and time to help contributors understand how and
-when feature (beneficial change) or fix (change that fixes part of the project) was added.
-
-GitHub is where we will store these repositories. There are several services like GitHub that
-provide similar features or features that GitHub does not have. The reason that GitHub was picked
-over other services like [GitLab](https://about.gitlab.com/) or [BitBucket](https://bitbucket.org/)
-was due to GitHub's its feature set, industry and community usage, and available resources.
-Primarily GitHub's usage of Git, its Issue workflow, and its first- and third-party project
-management utilities.
-
 ## Table of Contents
 {: .no_toc .text-delta}
 
 1. TOC
 {:toc}
 
-## Prerequisites
+# Overview
 
-[Using a terminal](#)
+[Git](https://en.wikipedia.org/wiki/Git) is an [open source](https://opensource.com/resources/what-open-source) version control system. A version control system is a piece of software that allows you to track changes in text files over the development lifetime. [GitHub](https://en.wikipedia.org/wiki/GitHub) is an online platform that allows people to host Git repositories (that is, version controlled projects) online so that other team members and community members have easy access to those repositories. GitHub also offers several additional services like issue tracking, actions, and project boards which we use to manage lab projects. Since the lab is dedicated to [open science](https://opensource.com/resources/open-science) and all projects are open source, GitHub provides these services for free.
 
-# Installing
+Git is used as the main way to version control projects within our lab. Projects have [branches](https://www.hostinger.com/tutorials/how-to-use-git-branches/), which are similar to sandboxes where a contributor to a project can safely make changes before requesting that their changes be reviewed by a colleague and ultimately added to the main project. Git also provides utilities to display the changes that have been made to a specific branch, show how files have been edited, and output a log of all changes. All changes are tagged with the author and time to help contributors understand how and when a feature (beneficial change) or a fix (change that fixes part of the project) was added.
 
-We will be installing the `git` [command-line
-interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. The reason we will not
-be covering the git [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) clients is because
-they can differ in looks and navigation across operating systems. The cli tool has the same
-interface across operating systems. The interface for the cli tool rarely changes unlike the GUI
-client which could change in looks from one version to another making images used in the
-documentation outdated or incorrect.
+GitHub is where we will store these repositories. There are several services like GitHub that provide similar features or features that GitHub does not have. The reason that we picked GitHub over its alternatives like [GitLab](https://about.gitlab.com/) or [BitBucket](https://bitbucket.org/) was due to GitHub's particular feature set, industry and community usage, and available resources, primarily: usage of Git, issues workflow, and first- and third-party project management utilities.
 
-In the following sections are the main ways to install `git`. These are not all the ways but are the
-recommended ways based on the operating system.
+# Opening a Shell
 
-## Windows
+Read the guide [here](https://ndclab.github.io/wiki/docs/technical-docs/shell.html).
 
-- [Download](https://git-scm.com/download/win)
-- Recommended method: portable version or "thumbdrive edition"
-  - [64bit version](https://github.com/git-for-windows/git/releases/download/v2.29.2.windows.2/PortableGit-2.29.2.2-64-bit.7z.exe)
+This tutorial focuses on using the [command-line
+interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We will not be covering the [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) clients because these clients can differ in looks and navigation across operating systems and may be frequently updated whereas the CLI tool has the same interface across operating systems and rarely changes in appearance. (Plus, it's very handy to know how to use the command line!)
 
-## Mac
+# Installing Git
 
-- [Download](https://git-scm.com/download/mac)
-- Recommended methods for install: Binary or [Homebrew](https://brew.sh/)
-  - Download [dmg](https://sourceforge.net/projects/git-osx-installer/files/latest/download) file
-  - `brew install git`
+**Mac**
 
-[How to](https://www.ofzenandcomputing.com/how-to-install-dmg-files-mac/) install a binary file on
-Mac OS.
+1. Open Terminal.
+2. Install Homebrew by following the [instructions on the Homebrew homepage](https://brew.sh/) to paste a specific command into your Terminal.
+3. Still inside your Terminal, type: `$ brew install git`
 
-## Linux
+If you encounter issues, check out the [main download page](https://git-scm.com/download/mac), direct from Git.
 
-Use the package manager that comes with your distribution and install `git`. For example on
-Debian/Ubuntu based distributions do `apt-get install git`.
+**Windows**
 
-# Basic Usage
+1. Determine whether your computer is 32-bit or 64-bit. This information is available in your system settings under "About." If you don't know where to find this, do some quick googling.
+2. [Download](https://git-scm.com/download/win) the "thumbdrive edition" for your computer's system type.
+3. Install as you would any other application.
 
-Basic usage will cover how to work with the `git` CLI tool. This section assumes you are inside a
-[terminal](https://www.computerhope.com/jargon/t/terminal.htm) that is running
-[Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29). Although Bash is the
-[shell](https://en.wikipedia.org/wiki/Shell_(computing)) we will be using, it does not mean that is
-the shell that you need to use if you are more comfortable with a different shell. Mac OS
-(depending on the version) will be using [Zsh](https://www.zsh.org/) which is very similar to Bash
-and most of the information is interchangeable.
+**Linux**
 
-> For a more detailed description please reference [Git Usage](#).
+Use the package manager that comes with your distribution and install `git`. See specific instructions [here](https://git-scm.com/download/linux).
 
-The general process for working with a repository is to instantiate or download one. Then create a
-new branch with a name similar to `feature-x` or `fix-y` depending on the intended change. Add those
-changes to the staging area, and commit them with a message that describes those changes in the
-present tense. And lastly push (upload) those changes to a remote branch.
+--------QUESTION (asked wiki #36, 5/12)
+# Setting Up SSH Keys
+
+SSH keys are a form of authentication like username and passwords that simplify the process of working with git repositories.
+
+If you have SSH keys already, please make sure to check the names beforehand to avoid overriding them.
+
+To create an SSH key pair (a private key and a public key), you will need to complete the following steps:
+
+1. Open up a shell.
+2. Copy and paste the following commands:
+
+```sh
+# The "comment" should either be an email "username@email.com" or user@hostname "username@mycomputer"
+ssh-keygen -t ed25519 -C "comment"
+```
+
+Note on the key type: the current (as of 2020) recommendation is ED25519 over RSA.
+
+3. At this point, you will be prompted for two things:
+  - Where to save the private/public key (the default location is displayed)
+  - A passphrase for the key (the passphrase can be excluded but it is recommended that you use one for improved security)
+
+Further resources: the [GitHub guide to SSH keys](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+--------QUESTION
+
+# Basic Commands
+
+Git has several common commands that will be necessary to properly work with the the lab's repositories. These are `status`, `add`, `commit`, `push`, `pull`, and `checkout`.
+
+### `status`
+
+This command will list files and their state within git.
+
+Files can either be ignored, untracked, unstaged, or staged. *Ignored* means that the file satisfies a rule in the `.gitignore` file and Git pretends it isn't there.  *Untracked* refers to files that Git is not ignoring but have never been committed; this is normal for newly created files. *Unstaged* files are tracked files that currently have changes but haven't been placed in the staging area for the next commit. *Staged* files are ready for the next commit.
+
+Example:
+
+```sh
+git status
+```
+
+### `add`
+
+This command will add any file (tracked or untracked) to the staging area for the next commit.
+
+Example:
+
+```sh
+git add some_file.txt
+```
+
+### `commit`
+
+This command will commit your changes to the repository. There are two important options for commit `-m` (required) and `-a` (optional).
+* `-m` is for adding the commit message, which you should always do
+* `-a` means that git will automatically add any tracked files to the staging are and include in your commit (even if you forgot to add them to the staging area yourself). If you don't always check `git status` before you commit, you may want to use `-a` to ensure you don't leave changes behind.
+
+Example:
+
+```sh
+# Staged files: s.txt
+# Unstaged files: u.txt
+# Untracked and unstaged files: uu.txt
+
+# first example
+git commit -m "Update s file"
+# Commits only changes for s.txt
+
+# Reset
+# Second example
+git commit -am "Update s and u file"
+# Adds u.txt to staging area
+# Commits changes for s.txt and u.txt
+```
+
+### `push`
+
+This command will push all committed changes from your local computer to the remote repository.
+
+Example:
+
+```sh
+# Your working branch is feature-joe
+git push origin feature-joe
+# Changes are uploaded
+```
+
+### `pull`
+
+This command will "pull" changes from the remote repository to your local. Pull will try to fetch any new changes and merge them. Generally, as long as you have not diverged from the remote repository this will work fine.
+
+Example:
+
+```sh
+# Local repository is behind of remote repository but has not diverged
+git pull
+# Git will download new changes and merge them automatically
+```
+
+### `checkout`
+
+This command changes the contents of the local repository to match the branch that you "checkout". It will leave changed files untouched so that you can commit them to the branch you are checking out. This is useful when you accidentally made changes to "branch\_b" thinking you were on "branch\_a".
+
+Example:
+
+```sh
+# on branch_b
+git checkout branch_a
+# on branch_a
+# changes were brought over
+```
+
+
+# More Basic Commands
 
 > Any value inside `<` `>` needs to be replaced with a correct value. For example if `<link>` is
 > specified, then it needs to be replaced with [URL](#) link like
 > `https://github.com/NDCLab/wiki.git` making sure to omit the `<` and `>`.
-
-Common commands:
 
 - `git init`, will instantiate a new repository in the current folder/directory.
 - `git clone <link>`, will download a remote repository specified in the link provided. In most cases
@@ -114,187 +181,3 @@ Common commands:
 - `git pull`, will attempt to download any new changes in the remote branch to the local branch.
 - `git push`, will attempt to upload any new changes from the local branch to the remote branch.
 
-# Workflows
-
-The method that contributors to projects will use to interact with lab projects. Having these
-methods standardized helps improve the projects correctness and reproducibility.
-
-## Git in General
-
-As mentioned earlier the main method we will use to interact with local or remote repositories will
-be via Git's command line interface. This way the documentation can be more platform and client
-independent.
-
-The first thing in any project is creating a repository, whether that is on the GitHub organization
-page, on a personal account, or locally. Although it may seem that creating a project is something
-that is rarely done. Git repositories are very lightweight, in other words consume very little space
-in a computer's storage and zero [CPU](https://en.wikipedia.org/wiki/Central_processing_unit)
-resources when not in active use. They can be useful for prototyping ideas before trying them on a
-full fledged project. 
-
-To create a new repository on GitHub for a user account or organization, do the following:
-
-- Make sure you are logged in.
-- Press the "+", and a drop down will come up.
-- Select "New repository".
-- Fill out the form.
-  - Select the "Owner", this can be a user or an organization.
-	- Write a name in the Repository name.
-	- Write a short description what the repository is in the "Description" field.
-	- Select "Public". \*
-- Ignore the other options.
-- Press "Create repository" to create the new repository.
-
-> \* Public means it will be available for others to view who are not part of the organization. This
-> is to make the project open and keep with the Lab's spirit of open science.
-
-To create a new repository locally on a computer, do the following:
-
-- Open up a terminal with Bash, or Zsh (Mac OS)
-- Change to the correct directory/folder where the repository will be stored
-
-`cd <path/to/folder>`
-
-- Initialize the repository
-
-`git init <name-of-repo>`
-
-After the repository has been created, it can start to be used and modified. For repositories that
-will use the project template, do the following:
-
-- Make sure to have a copy of the [project template](https://github.com/NDCLab/project-template) in
-	a different directory.
-- Using a [File manager](https://en.wikipedia.org/wiki/File_manager) copy and paste all the files in
-	the project template folder into the new repository.
-- Once all the files have been copied, follow the template project [instructions]() for how to
-	initialize a new project.
-- Once the new project is initialized, add all the new files to the staging area
-
-`git add -A`
-
-- Then commit all the changes in the staging area making sure to provide a useful commit message,
-	for example "Initialize new project from project template".
-
-`git commit -m "<commit message>"`
-
-For the more common case where the repository already exists we will want to clone the repository to
-the local computer from GitHub. Cloning refers to how git will copy the remote files on GitHub to
-the local computer. Although downloading may be more clear in this case, Git can clone from many
-different local and remote locations and in those situations it would not make sense to refer to it
-as downloading. This To do this, do the following:
-
-For the more common case where a repository for a project already exists, we will want to clone
-the repository to the local computer from GitHub.
-
-- Get the [URL](https://en.wikipedia.org/wiki/URL)\* from GitHub.
-  - Go to the project repository
-	- Select the drop down from the "Code" button
-	- Copy the preferred URL link
-- Inside a terminal running Bash or Zsh, clone the repository
-
-`git clone <url_link>`
-
-- Change the directory to the local repository
-
-`cd <directory_name>`
-
-With an local repository changes can be made. The lab uses the branching workflow which means we use
-topic branches which are discussed in more detail in the [Contributing](#contributing) section. Once
-the changes are made they can be added to the staging area and the committed to the feature branch.
-
-The Git Branching Workflow, is useful because it organizes changes into clear and concise groups
-that can be tested and reviewed by others without significant overhead. It also groups the changes
-into readable chunks in the git history. The Git history being a log of all the commits that have
-been made with comments describing those changes. This highlights the importance of clear and
-descriptive commit messages, especially when reviewing information that is several months or years
-old.
-
-To create branches and make commits do the following:
-
-- Check the status of the repository
-  - First see which branch the repository is on
-
-	`git branch`, this will show a list of all branches with the active branch having a \* next to its
-	name
-  
-	- Second check to see if there are any files that are not committed
-
-	`git status`
-
-- Make changes to the necessary files
-- Check the status of files
-
-`git status`
-
-- Add files to the staging area
-
-`git add -A` or `git add *`\*\* are applicable
-
-- Once all the files have been added to the staging area, commit the changes. Make sure to use
-	present tense, and be descriptive.
-
-`git commit -m <message>`
-
-With committed changes, now it possible to push those commits to the remote repository. This will
-mean pushing changes to either the lab repository or a personal repository depending on the level of
-access. To do this, do the following:
-
-`git push origin <branch_name>`
-
-At this point review the [Contributing](#contributing) and [Issues](#issues) section for more
-information.
-
-> \* The two types of links that are provided by GitHub are
-> [HTTPS](https://en.wikipedia.org/wiki/HTTPS) URLs which are the same as websites and sometimes
-> will as for a username and password for authentication when cloning. The other type of link that
-> GitHub offers is [SSH](https://en.wikipedia.org/wiki/SSH_(Secure_Shell)) which when correctly
-> setup offers better ease of use. This is covered in more detailed in [replace-me](#).
-
-> \*\* The \* star in Bash acts as a special character directing the Bash shell to replace it with
-> all the current files that are accessible. Accessibility can mean different things in a shell, but
-> generally it means all the files in the current working directory.
-
-## Contributing
-
-Contributing in this case refers to how contributors will submit contributions to a lab project that
-is hosted on GitHub. In an effort to make projects reproducible and correct submissions need to be
-reviewed so that they can be checked and tested with a mixture of automated tools and visual review.
-
-Contributions will come from two groups of individuals with different levels of push access. Push
-access being the ability write or edit to repositories. All projects will be open source so there is
-no differentiation for pull access or having the ability to read a repository.
-
-For contributors with push access, they will submit contributions in the form of topic branches that
-is reviewed and then merged into one of the main branches of the repository for a specific project.
-That will involve:
-
-- Cloning a repository, which will download a copy of the project repository from GitHub to the
-	local machine.
-- Creating a topic branch, for example "feature-a".
-- Adding and committing changes to that branch.
-- Pushing the local branch to the remote project repository.
-- Creating a pull request and adding it to the issue it is meant to resolve.
-- Pushing any new changes to requested during the review process.
-- Closing the issue with a comment stating why the issue is being closed.
-
-For contributors without push access, they will have a similar process. They will first fork the
-repository which means making a copy of the repository on their own account. Then following the same
-steps as above but using the forked copy. When submitting the pull request specifying the forked
-repository's topic branch instead. In other words:
-
-- Fork the project repository.
-- Follow the steps describe above substituting the project repository with the forked version.
-
-> Note: A topic branch is a branch that is meant to be a branch with a small focus for example one
-> feature or one fix. Topic branches will have only a small amount of changes in comparison to the
-> main or dev branches which usually hold the entire history of the repository.
-
-## Issues
-
-## Actions
-
-# External Resources
-
-[Access Permissions on
-GitHub](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/access-permissions-on-github)
-[Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
