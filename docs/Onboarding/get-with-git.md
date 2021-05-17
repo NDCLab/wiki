@@ -23,11 +23,17 @@ nav_order: 8
 
 6. Start with [this video](https://www.youtube.com/watch?v=DVRQoVRzMIY) by Tech With Tim, which offers a broad overview of Git and GitHub while showing you both the command line interface and the GitHub interface. Do not worry about digesting *everything* that he shows in this video, but rather focus on learning the big picture lessons: key terminology, core concepts, and the commands he uses most frequently.
 
-7. Take the quiz
+7. Take the [quiz](https://forms.gle/Lw5uQAvGC5XQGUum6).
 
 8. Work through [this hands-on tutorial](https://lab.github.com/lmachens/git-and-github-first-timers) inside GitHub.
 
-9. Update your entry on the wiki's who's-who page.
-git clone
+9. Watch this video where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
+
+9. Time to put it all together! Update your entry on the wiki's who's-who page using:
+git clone <link>
 git branch whos-who-[yourname]
 git checkout whos-who-[yourname]
+git add whos-who.md
+git status
+git commit -m "Added [yourname] to who's-who"
+git push origin whos-who-[yourname]
