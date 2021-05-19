@@ -5,6 +5,16 @@ parent: Technical Documentation
 nav_order: 2
 ---
 
+### Contents
+1. [Overview](#overview)
+2. [Opening a Shell](#opening-a-shell)
+3. [Shell Tips](#shell-tips)
+   1. [Key Terms](#key-terms)
+   2. [Important Commands](#important-commands)
+   3. [Additional Resources](#additional-resources)
+
+# Overview
+
 It's very useful to know how to use a [command-line interface (CLI)](https://en.wikipedia.org/wiki/Command-line_interface) inside a [shell](https://en.wikipedia.org/wiki/Shell_(computing)).  At the NDCLab, you will need this knowledge to work with [GitHub](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html) and the [FIU HPC](https://ndclab.github.io/wiki/docs/technical-docs/hpc-doc.html), among other applications.
 
 # Opening a Shell
@@ -28,12 +38,11 @@ There are many ways to open a shell on Linux. One example: right-click your desk
 
 # Shell Tips
 
-## Overview
+## Key Terms
 
-This section will cover some basic commands for moving around, and displaying the current location in a Terminal running a Bash or Zsh shell.
+Here is some of the key terminology used in working with a shell:
 
-Some of the terminology used:
-
+- **command**: an instruction from you (the user) to your computer.
 - **directory**: another name for a folder. When you navigate around your files using the shell, you're always "sitting" in a directory (called your "current directory").
 - **option**: an option that the program will allow you to change using special formatting, generally	denoted with a "--" in front of the option name. For example "--option value".
 - **flag**: an option that can be on or off, generally denoted with a "-" in front of the name. For example "-t".
@@ -42,16 +51,16 @@ Some of the terminology used:
 
 ### ls
 
-`ls` or list directory contents will list the files and directories that live within the directory that you are currently "in." This is useful to know what is in the current directory, but it can show any contents of any directory as long as you provide a valid path to that directory and you have permission to view that directory.
+`ls` will list the files and directories that live within the directory that you are currently "in." This is useful to see what is in your current directory, but it can also show you the contents of any directory as long as you provide a valid path to that directory and you have permission to view that directory.
 
 Example:
 
 ```sh
-# ls without options (results on one line)
+# ls without options (outputs results on one line)
 ls
 #> Downloads Desktop stories.txt ...
 
-# ls with the flag option -l (results one per line)
+# ls with the flag option -l (outputs one result per line)
 ls -l
 #> drwxr-xr-x    - username 31 May 10:35 Desktop
 #> drwxr-xr-x    - username  9 Oct 14:52 Downloads
@@ -60,7 +69,7 @@ ls -l
 
 ### cd
 
-`cd` or change directory is a shell command that allows you to move from one directory to another. This is useful to move around in the shell and, like `ls`, it will accept any valid path to any directory.
+`cd` (change directory) is a shell command that allows you to move from one directory to another. This is useful to move around in the shell and, like `ls`, it will accept any valid path to any directory.
 
 There are two kinds of paths:
 
@@ -95,9 +104,9 @@ cd ~
 Since we will be using Bash on Windows, a small quirk that we will need to consider is the one that can be seen in the example above. Anytime you would write `c:\` you would need to replace it with `/c/`. And swap all `\` with `/`. Mac OS uses `/` like Linux so write paths as you would normally.
 --------QUESTION
 
-## Resources
+## Additional Resources
 
 Here are several Linux cheat sheets with useful commands. Not all of these commands will work on Windows and macOS, but most of the core commands are the same with Linux and will therefore work.
 
-[Linux Commands](https://www.guru99.com/linux-commands-cheat-sheet.html)
+[Linux Commands](https://www.guru99.com/linux-commands-cheat-sheet.html)</br>
 [Linux Tutorials](https://ryanstutorials.net/linuxtutorial/cheatsheet.php)

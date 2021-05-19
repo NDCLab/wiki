@@ -5,26 +5,29 @@ parent: Technical Documentation
 nav_order: 1
 ---
 
-## Table of Contents
-{: .no_toc .text-delta}
-
-1. TOC
-{:toc}
+### Contents
+1. [Overview](#overview)
+2. [Opening a Shell](#opening-a-shell)
+3. [Installing Git](#installing-git)
+4. [Setting Up SSH Keys](#setting-up-ssh-keys)
+5. [Basic Commands](#basic-commands)
+6. [Markdown](#markdown)
+7. [Additional Resources](#additional-resources)
 
 # Overview
 
 [Git](https://en.wikipedia.org/wiki/Git) is an [open source](https://opensource.com/resources/what-open-source) version control system. A version control system is a piece of software that allows you to track changes in text files over the development lifetime. [GitHub](https://en.wikipedia.org/wiki/GitHub) is an online platform that allows people to host Git repositories (that is, version controlled projects) online so that other team members and community members have easy access to those repositories. GitHub also offers several additional services like issue tracking, actions, and project boards which we use to manage lab projects. Since the lab is dedicated to [open science](https://opensource.com/resources/open-science) and all projects are open source, GitHub provides these services for free.
 
-Git is used as the main way to version control projects within our lab. Projects have [branches](https://www.hostinger.com/tutorials/how-to-use-git-branches/), which are similar to sandboxes where a contributor to a project can safely make changes before requesting that their changes be reviewed by a colleague and ultimately added to the main project. Git also provides utilities to display the changes that have been made to a specific branch, show how files have been edited, and output a log of all changes. All changes are tagged with the author and time to help contributors understand how and when a feature (beneficial change) or a fix (change that fixes part of the project) was added.
+Git is used as the main way to version control projects within our lab. Projects have [branches](https://www.hostinger.com/tutorials/how-to-use-git-branches/), which are similar to sandboxes where a contributor to a project can safely make changes before requesting that their changes be reviewed by a colleague and ultimately added to the main project. Git also provides utilities to display the changes that have been made to a specific branch, show how files have been edited, and output a log of all changes. All changes are tagged with the author and time to help contributors understand how and when a feature (beneficial change) or a fix (change that corrects a problem) was added.
 
-GitHub is where we will store these repositories. There are several services like GitHub that provide similar features or features that GitHub does not have. The reason that we picked GitHub over its alternatives like [GitLab](https://about.gitlab.com/) or [BitBucket](https://bitbucket.org/) was due to GitHub's particular feature set, industry and community usage, and available resources, primarily: usage of Git, issues workflow, and first- and third-party project management utilities.
+GitHub is where we will store these repositories. There are several alternatives that provide similar features or features that GitHub does not have. The reason that we picked GitHub over its alternatives (like [GitLab](https://about.gitlab.com/) or [BitBucket](https://bitbucket.org/)) was due to GitHub's particular feature set, industry and community usage, and available resources, primarily: usage of Git, issues workflow, and first- and third-party project management utilities.
 
 # Opening a Shell
 
 Read the guide [here](https://ndclab.github.io/wiki/docs/technical-docs/shell.html).
 
-This tutorial focuses on using the [command-line
-interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We will not be covering the [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) clients because these clients can differ in looks and navigation across operating systems and may be frequently updated whereas the CLI tool has the same interface across operating systems and rarely changes in appearance. (Plus, it's very handy to know how to use the command line!)
+This Git tutorial focuses on using the [command-line
+interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We will not be covering any [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) clients because these clients can differ in looks and navigation across operating systems and may be frequently updated whereas the CLI tool has the same interface across operating systems and rarely changes in appearance. (Plus, it's very handy to know how to use the command line!)
 
 # Installing Git
 
@@ -33,8 +36,7 @@ interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We 
 1. Open Terminal.
 2. Install Homebrew by following the [instructions on the Homebrew homepage](https://brew.sh/) to paste a specific command into your Terminal.
 3. Still inside your Terminal, type: `$ brew install git`
-
-If you encounter issues, check out the [main download page](https://git-scm.com/download/mac), direct from Git.
+4. If you encounter issues, check out the [main download page](https://git-scm.com/download/mac), direct from Git.
 
 **Windows**
 
@@ -78,7 +80,7 @@ Git has several common commands that will be necessary to properly work with the
 
 ### `status`
 
-This command will list files and their state within git.
+This command is your best friend. It will list files and their state within git. Use it often!
 
 Files can either be ignored, untracked, unstaged, or staged. *Ignored* means that the file satisfies a rule in the `.gitignore` file and Git pretends it isn't there.  *Untracked* refers to files that Git is not ignoring but have never been committed; this is normal for newly created files. *Unstaged* files are tracked files that currently have changes but haven't been placed in the staging area for the next commit. *Staged* files are ready for the next commit.
 
@@ -97,6 +99,32 @@ Example:
 ```sh
 git add some_file.txt
 ```
+
+### `clone`
+
+This command creates a clone of the remote repository on your local machine so that you can make changes (which you will ultimately upload back to the remote repository to share with collaborators).
+
+Example:
+
+```sh
+# in local folder into which you want the copy the GitHub contents
+git clone <link to remote repository to be cloned>
+# new folder is added to your local folder
+```
+
+### `checkout`
+
+This command changes the contents of the local repository to match the branch that you "checkout". It will leave changed files untouched so that you can commit them to the branch you are checking out. This is useful when you accidentally made changes to "branch\_b" thinking you were on "branch\_a".
+
+Example:
+
+```sh
+# on branch_b
+git checkout branch_a
+# on branch_a
+# changes were brought over
+```
+
 
 ### `commit`
 
@@ -131,7 +159,7 @@ Example:
 ```sh
 # Your working branch is feature-joe
 git push origin feature-joe
-# Changes are uploaded
+# Changes are uploaded from your local to the remote
 ```
 
 ### `pull`
@@ -141,43 +169,16 @@ This command will "pull" changes from the remote repository to your local. Pull 
 Example:
 
 ```sh
-# Local repository is behind of remote repository but has not diverged
+# Local repository is behind remote repository but has not diverged
 git pull
 # Git will download new changes and merge them automatically
 ```
 
-### `checkout`
+# Markdown
 
-This command changes the contents of the local repository to match the branch that you "checkout". It will leave changed files untouched so that you can commit them to the branch you are checking out. This is useful when you accidentally made changes to "branch\_b" thinking you were on "branch\_a".
+GitHub supports [markdown](https://en.wikipedia.org/wiki/Markdown), which allows you format text in text-based .md files so that GitHub renders them beautifully online. The [Get with Git training](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html) includes a module on markdown. Here are some other helpful guides:
+[GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+[GitHub Markdown Cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-Example:
-
-```sh
-# on branch_b
-git checkout branch_a
-# on branch_a
-# changes were brought over
-```
-
-
-# More Basic Commands
-
-> Any value inside `<` `>` needs to be replaced with a correct value. For example if `<link>` is
-> specified, then it needs to be replaced with [URL](#) link like
-> `https://github.com/NDCLab/wiki.git` making sure to omit the `<` and `>`.
-
-- `git init`, will instantiate a new repository in the current folder/directory.
-- `git clone <link>`, will download a remote repository specified in the link provided. In most cases
-	this will be the link that GitHub offers under the green "Code" button.
-- `git add <file>`, will add to git's staging area which is can be committed to the VCS later.
-- `git commit -m "<commit message>"`, will commit any changes in the staging area with the specified
-	`<commit message>`.
-- `git branch -m <branch-name>`, will change the name of the current branch to `<branch-name>`.
-- `git checkout <branch-name>`, will change to an existing branch. It will bring over unstaged
-	changes which can be committed in `<branch-name>`.
-- `git checkout -b <branch-name>`, will create a new branch with the name specified and switch over
-	to it.
-- `git branch`, will list all available branches.
-- `git pull`, will attempt to download any new changes in the remote branch to the local branch.
-- `git push`, will attempt to upload any new changes from the local branch to the remote branch.
-
+# Additional Resources
+There are hundreds of Git resources available online. If you get stuck, do some targeted Googling. If you still can't find what you're looking for, ask your labmates in #tech.
