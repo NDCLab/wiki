@@ -59,3 +59,5 @@ Don't forget to:
 * Nest your entry under your lab title, alphabetically by last name.
 * Push all your changes back to the remote.
 * Create a pull request and tag the lab manager (you can find the lab manager's GitHub handle on the page you just updated!) to review your changes and merge them into the live wiki!
+
+10. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement that you think would help a future lab member. Create a new branch off the main branch (name it "dev-[improvement]-[yourname]"). Implement your suggestion and submit a pull request to the lab manager!

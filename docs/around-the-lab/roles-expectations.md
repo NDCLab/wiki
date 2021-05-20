@@ -1,42 +1,47 @@
 ---
 layout: default
-title: Code of Conduct
+title: Roles & Expectations
 parent: around-the-lab
 nav_order: 2
 ---
 
-### What is Expected from All Lab Members
-You are now a lifelong member of the NDCLab and future lab alumni. The success of each member of the lab or team of lab members is the success of the NDCLab as a whole. When one person or group publishes a great paper, it shows anyone else in the lab can do the same. If one lab member is accepted into a top-tier PhD program or lands a dream industry job, it shows that others can come through the NDCLab and do the same. With each individual success of the lab, the more the lab gains prestige and this increases the value of your membership because letters of recommendation from the Lab Director will carry more weight.
+## Overview
+The NDCLab community relies upon each member to be open, accountable, and respectful. This means that there are certain expectations incumbent upon each member. In addition, the roles of lab director, lab manager, and lab technician have special, ancillary responsibilities to fulfill so that all lab members may count on them to serve the best interests of the lab.
 
-* Learn from and with each other.
-* Mentor and help one another.
-* Support and lift each other up.
-* Do your part to create a culture of open communication.
-* Open with your own strengths and weaknesses.
-* Pre-empt potential conflicts through open dialogue.
-* Be accountable for the tasks you say you will accomplish, and complete them when you say you will.
-* Be honest and open about roadblocks or challenges that may cause delays.
-* Respond to labmates in a timely manner.
+## What is Expected from All Lab Members
+You are now a lifelong member of the NDCLab and a future lab alumnus/a. The success of each member of the lab (or team of lab members) means the success of the NDCLab as a whole. When one person or group publishes a great paper, it shows anyone else in the lab can do the same. If one lab member is accepted into a top-tier PhD program or lands a dream job in industry, it shows that others can come through the NDCLab and achieve their own lofty goals. With each individual success of the lab, the lab gains prestige and this increases the value of your membership because letters of recommendation from the lab director will carry more weight.
 
-### What to Expect from the Lab Director
-**Lab Level**
-* Ensure that the NDC Lab remains a positive, inclusive and supportive environment where we can:
-  * “Do great science that is fascinating at a basic level, but has enormous applied value to society as well”.
-  * “Improve and develop our own skills and knowledge”.
-* Set the larger research agenda and priorities for the lab.
-* Ensure the lab has the people and resources it needs to run smoothly and achieve our goals.
-* Foster collaboration, communication, and celebrate differences.
-* Communicate the larger context of any given task.
-* Remove roadblocks to execute tasks in line with your/lab’s priorities.
-* Operate honestly and transparently.
+Therefore, membership in the NDCLab is a team effort and all members are expected to fulfill [our community standards](https://ndclab.github.io/wiki/docs/around-the-lab/code-of-conduct.html) by:
+* Learning from and with each other.
+* Mentoring and helping one another.
+* Supporting and lifting each other up.
+* Doing our part to create a culture of open communication.
+* Acting professionally.
+* Being respectful.
+* Being open about our own strengths and weaknesses.
+* Pre-empting potential conflicts through constructive dialogue.
+* Being accountable for the tasks we say we will accomplish, and completing them when we say we will.
+* Being honest and forthcoming about roadblocks or challenges that may cause delays.
+* Demonstrating respect by responding to labmates, participants, and university administrators in a timely manner.
 
-**Individual Level**
-* For those that remain committed to the lab, you can expect the lab director to remain committed to you for life.
+## What to Expect from the Lab Director
+**Lab Level**</br>
+The lab director commits to:
+* Ensuring that the NDCLab remains a positive, inclusive and supportive environment where we can achieve the [dual objectives of the lab](https://ndclab.github.io/wiki/docs/welcome/lab-culture.html).
+* Setting the larger research agenda and priorities for the lab.
+* Ensuring the lab has the people and resources it needs to run smoothly and achieve our goals.
+* Fostering collaboration and communication, and celebrating differences.
+* Communicating the larger context of any given task.
+* Removing roadblocks to execute tasks in line with agreed priorities.
+* Operating honestly and transparently.
+
+**Individual Level**</br>
+For members who remain committed to the lab, you can expect the lab director to remain committed to *you* for life. He will strive to:
 * Match your strengths and skills to impactful roles and experiences.
 * Recognize your contributions (did someone say “authorship?”).
 * Provide mentorship/connections to help you navigate academia or a non-academic career.
-* Provide direct, one-on-one theoretical, technical, and practical training where appropriate. (*But also*: point you in the right direction to facilitate your “learning how to learn” where appropriate.)
-* Motivate you when you lose sight of the bigger picture. (*But also*: have frank conversations about the diversity of academic/career paths possible.)
+* Provide direct, one-on-one, theoretical, technical, and practical training where appropriate. (*But also*: point you in the right direction to facilitate your “learning how to learn.”)
+* Motivate you when you lose sight of the bigger picture. (*But also*: have frank conversations about the diversity of possible career paths, within and outside academia.)
 
-### What to Expect from the Lab Manager and Lab Tech
-As support staff for the lab, the Lab Manager and Lab Technician should ensure that the lab is organized, operating smoothly, and a positive place to work.
+## What to Expect from the Lab Manager and Lab Tech
+As support staff for the lab, the lab manager and lab technician are expected, in addition to fulfilling the expectations established for all lab members, to ensure that the lab is well-organized, operating smoothly, and a positive place to do science.
