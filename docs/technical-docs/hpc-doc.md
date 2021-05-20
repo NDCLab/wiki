@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 ![dt2-racks-from-front](https://user-images.githubusercontent.com/26397102/118044340-27148d00-b33c-11eb-8b2c-17a454f18c51.jpg)  
-*Not the FIU HPC cluster*
+*Not the FIU cluster*
 
 ## Outline 
 
@@ -35,11 +35,22 @@ Once a secure connection is established, both the login node and visual node can
 ### VPN
 If a lab member is using on-campus WiFi, this step can be safely skipped. 
 
-However, if a lab member is accessing the HPC remotely, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/). Link to point to VPN access here. 
+However, if a lab member is accessing the HPC remotely, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/).
 
 ### Login-Node
 
+
 ### Visual-Node
+
+
+## Structure
+
+
+## Singularity
+
+
+## Slurm
+
 
 ## Jupyter
 
