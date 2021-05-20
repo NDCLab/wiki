@@ -5,16 +5,17 @@ parent: Technical Documentation
 nav_order: 1
 ---
 
-### Contents
+#### Contents
 1. [Overview](#overview)
 2. [Opening a Shell](#opening-a-shell)
 3. [Installing Git](#installing-git)
 4. [Setting Up SSH Keys](#setting-up-ssh-keys)
 5. [Basic Commands](#basic-commands)
 6. [Markdown](#markdown)
-7. [Additional Resources](#additional-resources)
+7. [SCM Best Practices](#scm-best-practices)
+8. [Additional Resources](#additional-resources)
 
-# Overview
+## Overview
 
 [Git](https://en.wikipedia.org/wiki/Git) is an [open source](https://opensource.com/resources/what-open-source) version control system. A version control system is a piece of software that allows you to track changes in text files over the development lifetime. [GitHub](https://en.wikipedia.org/wiki/GitHub) is an online platform that allows people to host Git repositories (that is, version controlled projects) online so that other team members and community members have easy access to those repositories. GitHub also offers several additional services like issue tracking, actions, and project boards which we use to manage lab projects. Since the lab is dedicated to [open science](https://opensource.com/resources/open-science) and all projects are open source, GitHub provides these services for free.
 
@@ -22,14 +23,14 @@ Git is used as the main way to version control projects within our lab. Projects
 
 GitHub is where we will store these repositories. There are several alternatives that provide similar features or features that GitHub does not have. The reason that we picked GitHub over its alternatives (like [GitLab](https://about.gitlab.com/) or [BitBucket](https://bitbucket.org/)) was due to GitHub's particular feature set, industry and community usage, and available resources, primarily: usage of Git, issues workflow, and first- and third-party project management utilities.
 
-# Opening a Shell
+## Opening a Shell
 
 Read the guide [here](https://ndclab.github.io/wiki/docs/technical-docs/shell.html).
 
 This Git tutorial focuses on using the [command-line
 interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We will not be covering any [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) clients because these clients can differ in looks and navigation across operating systems and may be frequently updated whereas the CLI tool has the same interface across operating systems and rarely changes in appearance. (Plus, it's very handy to know how to use the command line!)
 
-# Installing Git
+## Installing Git
 
 **Mac**
 
@@ -49,7 +50,7 @@ interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We 
 Use the package manager that comes with your distribution and install `git`. See specific instructions [here](https://git-scm.com/download/linux).
 
 --------QUESTION (asked wiki #36, 5/12)
-# Setting Up SSH Keys
+## Setting Up SSH Keys
 
 SSH keys are a form of authentication like username and passwords that simplify the process of working with git repositories.
 
@@ -74,7 +75,7 @@ Note on the key type: the current (as of 2020) recommendation is ED25519 over RS
 Further resources: the [GitHub guide to SSH keys](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 --------QUESTION
 
-# Basic Commands
+## Basic Commands
 
 Git has several common commands that will be necessary to properly work with the the lab's repositories. These are `status`, `add`, `commit`, `push`, `pull`, and `checkout`.
 
@@ -174,11 +175,36 @@ git pull
 # Git will download new changes and merge them automatically
 ```
 
-# Markdown
+## Markdown
 
 GitHub supports [markdown](https://en.wikipedia.org/wiki/Markdown), which allows you format text in text-based .md files so that GitHub renders them beautifully online. The [Get with Git training](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html) includes a module on markdown. Here are some other helpful guides:
 [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 [GitHub Markdown Cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-# Additional Resources
+## SCM Best Practices
+
+When working with Git and GitHub for the lab, remember these best practices for source code management (SCM):
+
+#### Commit often.
+Don’t make too many changes without commits, since it can be destructive if one change within the commit is bad. Commit often and leave a detailed comment about what part of the code was changed.
+
+#### Check your version.
+Make sure you are working on the latest version. Use the latest version to avoid accidentally changing an old version and causing confusion.
+
+#### Be obsessive about note-taking.
+Make detailed notes/comments about everything you do. This should be 2-3 sentences that thoroughly describe the changes made (what was changed, why it was changed, etc.).
+>Example:
+>Added indentation on Line 13 for readability.
+>Corrected error, changed dog.jpg to dog.jpg on Line 27. 
+
+#### Review changes before committing.
+Be 100% sure you want to commit the changes made before doing so!
+
+#### Use branches.
+Work independently but communicate what you are working on by creating a new branch and naming it according to the lab's nomenclature.
+
+#### Agree on a team workflow.
+Decide with your team who is editing code, what they are editing, and why they are editing. Communicate frequently to stay on track.
+
+## Additional Resources
 There are hundreds of Git resources available online. If you get stuck, do some targeted Googling. If you still can't find what you're looking for, ask your labmates in #tech.
