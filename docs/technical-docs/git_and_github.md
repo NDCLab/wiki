@@ -7,13 +7,12 @@ nav_order: 1
 
 #### Contents
 1. [Overview](#overview)
-2. [Opening a Shell](#opening-a-shell)
-3. [Installing Git](#installing-git)
-4. [Setting Up SSH Keys](#setting-up-ssh-keys)
-5. [Basic Commands](#basic-commands)
-6. [Markdown](#markdown)
-7. [SCM Best Practices](#scm-best-practices)
-8. [Additional Resources](#additional-resources)
+2. [Installing Git](#installing-git)
+3. [Setting Up SSH Keys](#setting-up-ssh-keys)
+4. [Basic Commands](#basic-commands)
+5. [Markdown](#markdown)
+6. [SCM Best Practices](#scm-best-practices)
+7. [Additional Resources](#additional-resources)
 
 ## Overview
 
@@ -23,10 +22,6 @@ Git is used as the main way to version control projects within our lab. Projects
 
 GitHub is where we will store these repositories. There are several alternatives that provide similar features or features that GitHub does not have. The reason that we picked GitHub over its alternatives (like [GitLab](https://about.gitlab.com/) or [BitBucket](https://bitbucket.org/)) was due to GitHub's particular feature set, industry and community usage, and available resources, primarily: usage of Git, issues workflow, and first- and third-party project management utilities.
 
-## Opening a Shell
-
-Read the guide [here](https://ndclab.github.io/wiki/docs/technical-docs/shell.html).
-
 This Git tutorial focuses on using the [command-line
 interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We will not be covering any [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) clients because these clients can differ in looks and navigation across operating systems and may be frequently updated whereas the CLI tool has the same interface across operating systems and rarely changes in appearance. (Plus, it's very handy to know how to use the command line!)
 
@@ -34,7 +29,7 @@ interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We 
 
 **Mac**
 
-1. Open Terminal.
+1. Open Terminal, which is your built-in shell. If you haven't don't this before, start [here](https://ndclab.github.io/wiki/docs/technical-docs/shell.html).
 2. Install Homebrew by following the [instructions on the Homebrew homepage](https://brew.sh/) to paste a specific command into your Terminal.
 3. Still inside your Terminal, type: `$ brew install git`
 4. If you encounter issues, check out the [main download page](https://git-scm.com/download/mac), direct from Git.

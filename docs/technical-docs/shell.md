@@ -27,9 +27,13 @@ To access Zsh, open up a normal terminal simply by clicking on the Terminal appl
 
 **Windows**
 
-Navigate to the portable git folder and double click on `git-bash.exe` and that will launch a shell instance for Bash.
+Install Git first. Check out [these instructions](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html).
 
-(There is a different option, `git-cmd.exe` which uses the [Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe). Using the Command Prompt is not recommended since it uses a different tool set which is not covered in this guide.)
+Navigate to any location on your machine (although one suggests selecting a location where you will do all your NDCLab work), right-click, and select "Git Bash Here" from the menu. This opens a Bash shell where you can input shell and git commands.
+
+![git-bash](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/git-bash.png)
+
+(There is a different option that uses the [Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe). Using the Command Prompt is not recommended since it uses a different tool set which is not covered in this guide.)
 
 **Linux**
 
@@ -100,9 +104,6 @@ cd ..
 cd ~
 # Current directory: /home/
 ```
---------QUESTION
-Since we will be using Bash on Windows, a small quirk that we will need to consider is the one that can be seen in the example above. Anytime you would write `c:\` you would need to replace it with `/c/`. And swap all `\` with `/`. Mac OS uses `/` like Linux so write paths as you would normally.
---------QUESTION
 
 ## Additional Resources
 
