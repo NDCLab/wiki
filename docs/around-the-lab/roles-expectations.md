@@ -17,12 +17,15 @@ Therefore, membership in the NDCLab is a team effort and all members are expecte
 * Supporting and lifting each other up.
 * Doing our part to create a culture of open communication.
 * Acting professionally.
+* Acting with care and being attentive to detail.
 * Being respectful.
-* Being open about our own strengths and weaknesses.
+* Being open about our strengths and weaknesses.
+* Owning our own mistakes.
 * Pre-empting potential conflicts through constructive dialogue.
 * Being accountable for the tasks we say we will accomplish, and completing them when we say we will.
 * Being honest and forthcoming about roadblocks or challenges that may cause delays.
-* Demonstrating respect by responding to labmates, participants, and university administrators in a timely manner.
+* Communicating quickly, openly, and honestly.
+* Being unafraid to make suggestions and question things we don't understand.
 
 ## What to Expect from the Lab Director
 **Lab Level**</br>
