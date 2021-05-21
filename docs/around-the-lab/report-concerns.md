@@ -5,10 +5,18 @@ parent: around-the-lab
 nav_order: 3
 ---
 
-# Overview
+### Contents
+1. [Overview](#overview)
+2. [Types of Concerns](#types-of-concerns)
+3. [How to Report Concerns](#how-to-report-concerns)
+4. [Protocol for Dealing with Alleged Violations of Trust](#protocol-for-dealing-with-alleged-violations-of-trust)
+5. [Title IX](#title-ix)
+6. [Other Resources](#other-resources)
+
+## Overview
 The NDCLab is founded upon [standards of openness, respect, and accountability](https://ndclab.github.io/wiki/docs/around-the-lab/code-of-conduct.html). When lab members have concerns, these should be addressed in the shortest possible timeframe in order to ensure that the lab remains an inclusive, positive place to achieve [our shared goals](https://ndclab.github.io/wiki/docs/welcome/lab-culture.html).
 
-# Types of Concerns
+## Types of Concerns
 In a collaborative environment, many different types of concerns may arise, such as:
 
 * concerns over general professionalism
@@ -18,7 +26,7 @@ In a collaborative environment, many different types of concerns may arise, such
     * concerns over potential ethics violations
     * concerns over non-compliance with rules and regulations
 
-# How to Report Concerns
+## How to Report Concerns
 First, please consider if you can discuss your concern directly with the individual involved. Often, concerns arise from simple misunderstandings and an open discussion can resolve them most efficiently, providing both parties with an opportunity to understand the perspective of the other.
 
 If you have a concern to report that cannot be discussed directly with the individual, or such a discussion has failed to lead to satisfactory resolution, you must decide if you are comfortable reporting your concern directly to the lab director (or lab manager) or if you are only comfortable making the report anonymously. Wherever possible, direct reporting of concerns is preferred as this aligns with the lab's culture of openness, honesty, and accountability.
@@ -27,7 +35,7 @@ To make a direct report, simply reach out to the lab director (or lab manager) t
 
 To make an anonymous report, use [this anonymous box](http://freesuggestionbox.com/pub/pwsobxg). Only the lab director and lab manager can see the contents of this box, which includes your comments, along with the date and time you sent them. They cannot see any information about you as the sender.
 
-# Protocol for Dealing With Alleged Violations of Trust
+## Protocol for Dealing with Alleged Violations of Trust
 Alleged violations of trust are a special category of concern; they are dealt with as follows: 
 
 1. Alleged violations of trust should be discussed privately with the accused first to resolve potential misunderstanding on the assumption that the violation of trust was a mistake and not the result of bad intentions.
@@ -37,6 +45,9 @@ Alleged violations of trust are a special category of concern; they are dealt wi
 5. This determination will be recorded in a public-facing ledger and announced to the individuals affected (this may require a small announcement to a specific  project, a lab-wide announcement, or a wider public announcement).
 6. As part of this public facing ledger, any bans will be listed and/or whether the individual is listed as an “untrusted source”.
 
-# Other Resources
+## Title IX
+The NDCLab does not tolerate any form of discrimination or harassment by its members. Furthermore, all lab members should be aware that the lab director and all members of lab staff are legally required to and will report any violation of federal [Title IX](https://en.wikipedia.org/wiki/Title_IX) of which they become aware.
+
+## Other Resources
 We believe that most, if not all, concerns can be resolved by means of the above protocols. If, however, your concern is of such a nature that you are not comfortable raising it with the lab director or lab manager, FIU does provide a hotline where you can make a confidential report:
 [https://compliance.fiu.edu/hotline/](https://compliance.fiu.edu/hotline/)
