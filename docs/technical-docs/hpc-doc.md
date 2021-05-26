@@ -16,6 +16,7 @@ nav_order: 1
     * [Login Node](#Login-Node)
     * [Visual Node](#Visual-Node)
 * [HPC File Structure](#Structure)
+* [Git](#Git)
 * [Singularity](#Singularity)
 * [Slurm](#Slurm)
 * [Jupyter](#Jupyter)  
@@ -25,25 +26,45 @@ The [FIU High-performance computing (HPC) cluster](http://ircc.fiu.edu/) is a gr
 
 While a personal computer with 6 cores could execute 6 programs in parallel, one of the 3000 compute nodes in the HPC cluster could execute 44 programs in parallel.
 
-The following document details how to access and properly utilize this resource once an HPC account is granted. 
+The following document details how to access and properly utilize this resource, **assuming an HPC account is granted**. Lab members must reach out to the [IRCC](http://ircc.fiu.edu/) to request an account otherwise.
 
 ## Connecting
 To use the HPC, a lab member must either use on-campus WiFi or utilize a VPN to access the [FIU intranet](https://en.wikipedia.org/wiki/Intranet). 
 
-Once a secure connection is established, both the login node and visual node can be accessed for file manipulation and job submission. 
+Once a secure connection is established, both the login node and visual nodes can be accessed for job submission and file manipulation respectively.
 
 ### VPN
 If a lab member is using on-campus WiFi, this step can be safely skipped. 
 
-However, if a lab member is accessing the HPC remotely, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/).
+However, if a lab member is accessing the HPC off-campus, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/) to acess the FIU intranet. 
 
-### Login-Node
+### Login-Node 
+The login node, also known as the head node, is the primary HPC entry point for submitting jobs and transferring small amounts of data.
 
+The preferred (and easiest) method for accessing the HPC login node is through secure shell (SSH). This comes installed on Windows 10 and MacOS. Previous windows versions can install [OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
+
+Verify your ssh installation by typing in the command prompt/terminal. 
+> ssh -v localhost 
+
+1. Once verified, ssh into the login node:
+> ssh userName@hpclogin01
+Where `userName` is the lab member's FIU username 
+
+2. Enter the password when prompted:
+> userName@hpclogin01 password:
+
+3. A prompt will indicate a successful login:
+> #######################################################################
+> Welcome to the FIU Instructional & Research Computing Center (IRCC)
+> #######################################################################
 
 ### Visual-Node
 
 
 ## Structure
+
+
+## Git
 
 
 ## Singularity
