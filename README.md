@@ -67,11 +67,14 @@ wiki
 Jekyll theme detailed in original [developer repo](https://github.com/pmarsceill/just-the-docs)
 
 ### Building site on local:
-To view what the site would look like with the applied formatting and styles as seen on the live site, follow the listed steps:
+To view what the site would look like with the applied formatting and styles as seen on the live site, follow the listed steps. 
+
+All commands listed in a quote-block are terminal commands:
+> ls 
 
 1. Install ruby using the following [documentation](https://www.ruby-lang.org/en/documentation/installation/)
 
-2. Install bundler and jekyll using
+2. Install bundler and jekyll by running:
 > gem install jekyll bundler
 
 3. Init the wiki using
