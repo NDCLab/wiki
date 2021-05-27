@@ -66,6 +66,35 @@ wiki
 
 Jekyll theme detailed in original [developer repo](https://github.com/pmarsceill/just-the-docs)
 
+### Building site on local:
+To view what the site would look like with the applied formatting and styles as seen on the live site, follow the listed steps:
+
+1. Install ruby using the following [documentation](https://www.ruby-lang.org/en/documentation/installation/)
+
+2. Install bundler and jekyll using
+> gem install jekyll bundler
+
+3. Init the wiki using
+> bundle init 
+
+4. This will create a Gemfile. Add the following to this newly created file: 
+> gem "just-the-docs"
+> gem "jekyll-remote-theme"
+
+5. Inside of the config file add in:
+```yml
+plugins:
+  - jekyll-remote-theme
+```
+
+6. Install the newly listed gems using: 
+> bundle install
+
+7. Run the following command to build the website on your local machine. 
+> bundle exec jekyll serve
+
+After completing the listed steps, only `bundle exec jekyll serve` is the only command needed to build the local site, unless the gem-files are updated. 
+
 
 ### Page Creation 
 
