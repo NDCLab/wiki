@@ -10,16 +10,16 @@ nav_order: 1
 
 ## Outline 
 
-* [Introduction](#Introduction)
-* [Connecting to the HPC](#Connecting)
-    * [Establishing VPN Connection](#VPN)
-    * [Login Node](#Login-Node)
-    * [Visual Node](#Visual-Node)
+* [Introduction](#introduction)
+* [Connecting to the HPC](#connecting)
+    * [Establishing VPN Connection](#vpn)
+    * [Login Node](#login-node)
+    * [Visual Node](#visual-node)
 * [HPC File Structure](#Structure)
-* [Git](#Git)
-* [Singularity](#Singularity)
-* [Slurm](#Slurm)
-* [Jupyter](#Jupyter)  
+* [Git](#git)
+* [Singularity](#singularity)
+* [Slurm](#slurm)
+* [Jupyter](#jupyter)  
 
 ## Introduction
 The [FIU High-performance computing (HPC) cluster](http://ircc.fiu.edu/) is a group of interconnected computers designed to perform computationally "expensive" tasks. This includes processing large quantities of data and executing programs in parallel. 
@@ -27,6 +27,8 @@ The [FIU High-performance computing (HPC) cluster](http://ircc.fiu.edu/) is a gr
 While a personal computer with 6 cores could execute 6 programs in parallel, one of the 3000 compute nodes in the HPC cluster could execute 44 programs in parallel.
 
 The following document details how to access and properly utilize this resource, **assuming an HPC account is granted**. Lab members must reach out to the [IRCC](http://ircc.fiu.edu/) to request an account otherwise.
+
+
 
 ## Connecting
 To use the HPC, a lab member must either use on-campus WiFi or utilize a VPN to access the [FIU intranet](https://en.wikipedia.org/wiki/Intranet). 
@@ -39,39 +41,110 @@ If a lab member is using on-campus WiFi, this step can be safely skipped.
 However, if a lab member is accessing the HPC off-campus, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/) to acess the FIU intranet. 
 
 ### Login-Node 
-The login node, also known as the head node, is the primary HPC entry point for submitting jobs and transferring small amounts of data.
+The login node, also known as the head node, is the primary HPC entry point for submitting jobs and transferring small amounts of data. Note: a user must login to the login-node **before** logging into the hpcgui to initialize their home directory. 
 
 The preferred (and easiest) method for accessing the HPC login node is through secure shell (SSH). This comes installed on Windows 10 and MacOS. Previous windows versions can install [OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
 
 Verify your ssh installation by typing in the command prompt/terminal. 
-> ssh -v localhost 
+```
+ssh -v localhost 
+```
 
-1. Once verified, ssh into the login node:
-> ssh userName@hpclogin01
-Where `userName` is the lab member's FIU username 
+1. Once verified, ssh into the login node, Where `userName` is the lab member's FIU username:
+```
+ssh userName@hpclogin01
+```
 
 2. Enter the password when prompted:
-> userName@hpclogin01 password:
+```
+userName@hpclogin01 password:
+```
+
 
 3. A prompt will indicate a successful login:
-> #######################################################################
-> Welcome to the FIU Instructional & Research Computing Center (IRCC)
-> #######################################################################
+```
+#######################################################################
+Welcome to the FIU Instructional & Research Computing Center (IRCC)
+#######################################################################
+```
 
 ### Visual-Node
+The visualization node is used for directly editing files on the cluster and for GUI manipulation. To access the visual node, simply click [hpcgui.fiu.edu](hpcgui.fiu.edu).
 
+<img width="957" alt="fiuHPCgui" src="https://user-images.githubusercontent.com/26397102/119862076-c067a580-bedd-11eb-9481-b1d6ca42b554.png">
+
+The red boxes detail the following:
+
+* Files: represent a graphical representation of the file structure on the cluster
+* Clusters: provide shell access to the cluster
+* Interactive Apps: GUI applications available for HPC account-holders 
 
 ## Structure
-
+To be determined.  
 
 ## Git
+By default, Git comes installed on the HPC cluster. However, without properly configuring an email address and user name, and linking a GitHub account users have read-only priveledges when it comes to cloning or forking from Github. 
 
+To link a GitHub account to the HPC, follow the steps outlined the FIU Neuro Onboarding [link](https://github.com/fiuneuro/Onboarding#setting-up-git-on-the-hpc). 
 
 ## Singularity
+Singularity is the preferred container to use on the FIU HPC cluster, as an improperly secured Dockerfile can grant root access to a system they are running on.
 
+However, Dockerfiles can be used with Singularity on the HPC, and making the jump between the two is trivial.
+
+## Using Dockerfile with Singularity
+
+If the singularity file has not already been created on the cluster, then try the following: 
+
+1. After building the intended image to use with Singularity, run the following command to view the Image ID. 
+```
+docker images
+```
+
+2. Then, save the image as a tar file by running where <IMAGEID> is the id of the docker file (this may take a while!).
+```
+docker save <IMAGEID> -o <myImage>.tar 
+```
+
+3. Unless running on a linux machine or vm, singularity will not be available to your local. Instead transfer the tar file to the HPC cluster.
+```
+scp <myImage>.tar <YourID>@hpclogin01:images
+```
+
+4. SSH into the FIU cluster and move the file to the appropriate path (wherever the project itself is on the cluster)
+```
+ssh <YourID>@hpclogin01
+cd images
+mv <myImage>.tar <path/to/project>
+```
+
+5. And lastly, build the singularity image
+```
+singularity build <myImage>.sif docker-archive://<myImage>.tar
+```
 
 ## Slurm
+For anything that goes beyond running basic lines of code, a job must be submitted so that the compute nodes can properly handle tasks.
 
+To create a job, a [slurm](https://slurm.schedmd.com/documentation.html) file must be created. The file below represents a sample Slurm script where a conda base environment is being activated: 
+
+```yml
+#!/bin/bash
+#SBATCH --job-name=myjob         # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-user=<YourID>@fiu.edu
+
+. $MODULESHOME/../global/profile.modules
+module load miniconda3-4.5.11-gcc-8.2.0-oqs2mbg
+conda activate
+
+python sample.py
+```
+
+Insert link to Slurm how-to here (in future branch).
 
 ## Jupyter
 
