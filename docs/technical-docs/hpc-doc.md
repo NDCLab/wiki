@@ -88,7 +88,7 @@ By default, Git comes installed on the HPC cluster. However, without properly co
 To link a GitHub account to the HPC, follow the steps outlined the FIU Neuro Onboarding [link](https://github.com/fiuneuro/Onboarding#setting-up-git-on-the-hpc). 
 
 ## Singularity
-Singularity is the preferred container to use on the FIU HPC cluster, as an improperly secured Dockerfile can grant root access to a system they are running on.
+Singularity is the preferred container to use on the FIU HPC cluster, as an improperly secured Dockerfile can grant root access to a system it is running on.
 
 However, Dockerfiles can be used with Singularity on the HPC, and making the jump between the two is trivial.
 
