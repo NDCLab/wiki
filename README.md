@@ -81,8 +81,10 @@ All commands listed in a quote-block are terminal commands:
 > bundle init 
 
 4. This will create a Gemfile. Add the following to this newly created file: 
-> gem "just-the-docs"
-> gem "jekyll-remote-theme"
+```ruby
+gem "just-the-docs"
+gem "jekyll-remote-theme"
+```
 
 5. Inside of the config file add in:
 ```yml
