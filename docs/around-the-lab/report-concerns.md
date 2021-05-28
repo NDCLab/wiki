@@ -21,10 +21,10 @@ In a collaborative environment, many different types of concerns may arise, such
 
 * Concerns over general professionalism
 * Concerns over potential data security risks
-* Concerns over violations of trust, including:
-    * Concerns over discriminatory, offensive, or harassing behavior
-    * Concerns over potential ethics violations
-    * Concerns over non-compliance with rules and regulations
+* Concerns over violations of trust
+* Concerns over discriminatory, offensive, or harassing behavior
+* Concerns over potential ethics violations
+* Concerns over non-compliance with rules and regulations
 
 ## How to Report Concerns
 First, please consider if you can discuss your concern directly with the individual involved. Often, concerns arise from simple misunderstandings and an open discussion can resolve them most efficiently, providing both parties with an opportunity to understand the perspective of the other.
