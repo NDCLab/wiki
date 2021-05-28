@@ -20,8 +20,9 @@ The NDCLab is founded upon [standards of openness, respect, and accountability](
 In a collaborative environment, many different types of concerns may arise, such as:
 
 * Concerns over general professionalism
-* Concerns over potential data security risks
-* Concerns over violations of trust
+* Concerns over potential data security risks (committing, or through negligence allowing, unauthorized breach of participant confidentiality)
+* Concerns over interpersonal violations of trust (lying, intentionally witholding infromation, etc.)
+* Concerns over scientific violations of trust (plagarism, falsifying data, etc.)
 * Concerns over discriminatory, offensive, or harassing behavior
 * Concerns over potential ethics violations
 * Concerns over non-compliance with rules and regulations
@@ -35,13 +36,13 @@ To make a direct report, simply reach out to either the lab director or the lab 
 
 If you are only comfortable making an anonymous report, use [this anonymous box](http://freesuggestionbox.com/pub/pwsobxg). Only the lab director and lab manager can see the contents of this box, which includes your comments, along with the date and time you sent them. They cannot see any information about you as the sender.
 
-## Protocol for Dealing with Alleged Violations of Trust
-Alleged violations of trust are a special category of concern; they are dealt with as follows: 
+## Protocol for Dealing with Alleged Violations of Scientific Trust
+Alleged violations of scientific trust are a special category of concern; they are dealt with as follows: 
 
 1. Alleged violations of the lab's trust should be discussed privately with the accused first to resolve potential misunderstanding on the assumption that the violation of trust was a mistake and not the result of bad intentions.
 2. If the direct discussion above does not lead to satisfactory resolution, the lab director should be informed privately.
 3. Once informed, the lab director will investigate the alleged violation of trust as privately as reasonably possible. It must be noted, however, that anyone accused of violating the lab's trust has the right to be aware of the accusation and respond to it accordingly.
-4. The lab director must make a determination of whether a violation of trust occurred and also whether it was likely intentional, unintentional, intent cannot be determined, or a statement of intent is not being made (often, for our purposes, it does not matter and it is not worth bothering over).
+4. The lab director must make a determination of whether a violation of trust occurred and also whether it was likely intentional, unintentional, intent cannot be determined, or a statement of intent is not being made (often, for our purposes, intent does not matter).
 5. This determination will be recorded in a public-facing ledger and announced to the individuals affected (this may require a small announcement to a specific  project, a lab-wide announcement, or a wider public announcement).
 6. As part of this public facing ledger, any bans will be listed and/or whether the individual is listed as an “untrusted source”.
 
