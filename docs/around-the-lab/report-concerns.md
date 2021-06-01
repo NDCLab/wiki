@@ -9,12 +9,12 @@ nav_order: 3
 1. [Overview](#overview)
 2. [Types of Concerns](#types-of-concerns)
 3. [How to Report Concerns](#how-to-report-concerns)
-4. [Protocol for Dealing with Alleged Violations of Trust](#protocol-for-dealing-with-alleged-violations-of-trust)
+4. [Protocol for Dealing with Alleged Violations of Scientific Trust](#protocol-for-dealing-with-alleged-violations-of-scientific-trust)
 5. [Title IX](#title-ix)
 6. [Other Resources](#other-resources)
 
 ## Overview
-The NDCLab is founded upon [standards of openness, respect, and accountability](https://ndclab.github.io/wiki/docs/around-the-lab/code-of-conduct.html). When lab members have concerns, these should be addressed in the shortest possible timeframe in order to ensure that the lab remains an inclusive, positive place to achieve [our shared goals](https://ndclab.github.io/wiki/docs/welcome/lab-culture.html).
+The NDCLab is founded upon [standards of openness, respect, and accountability](https://ndclab.github.io/wiki/docs/around-the-lab/community-standards.html). When lab members have concerns, these should be addressed in the shortest possible timeframe in order to ensure that the lab remains an inclusive, positive place to achieve [our shared goals](https://ndclab.github.io/wiki/docs/welcome/lab-culture.html).
 
 ## Types of Concerns
 In a collaborative environment, many different types of concerns may arise, such as:
