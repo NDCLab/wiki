@@ -26,7 +26,7 @@ The [FIU High-performance computing (HPC) cluster](http://ircc.fiu.edu/) is a gr
 
 While a personal computer with 6 cores could execute 6 programs in parallel, one of the 3000 compute nodes in the HPC cluster could execute 44 programs in parallel.
 
-The following document details how to access and properly utilize this resource, **assuming an HPC account is granted**. Lab members must reach out to the [IRCC](http://ircc.fiu.edu/) to request an account otherwise.
+The following document details how to access and properly utilize this resource, **assuming an HPC account is granted**. Lab members must be [onboarded to the HPC](https://ndclab.github.io/wiki/docs/Onboarding/accessing-hpc.html) by the lab manager.
 
 
 
@@ -38,7 +38,7 @@ Once a secure connection is established, both the login node and visual nodes ca
 ### VPN
 If a lab member is using on-campus WiFi, this step can be safely skipped. 
 
-However, if a lab member is accessing the HPC off-campus, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/) to acess the FIU intranet. 
+However, if a lab member is accessing the HPC off-campus, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/) to access the FIU intranet. 
 
 ### Login-Node 
 The login node, also known as the head node, is the primary HPC entry point for submitting jobs and transferring small amounts of data. Note: a user must login to the login-node **before** logging into the hpcgui to initialize their home directory. 
@@ -76,14 +76,14 @@ The visualization node is used for directly editing files on the cluster and for
 The red boxes detail the following:
 
 * Files: represent a graphical representation of the file structure on the cluster
-* Clusters: provide shell access to the cluster
+* Clusters: provide [shell](https://ndclab.github.io/wiki/docs/shell) access to the cluster
 * Interactive Apps: GUI applications available for HPC account-holders 
 
 ## Structure
 To be determined.  
 
 ## Git
-By default, Git comes installed on the HPC cluster. However, without properly configuring an email address and user name, and linking a GitHub account users have read-only priveledges when it comes to cloning or forking from Github. 
+By default, [Git]((https://ndclab.github.io/wiki/docs/git-and-github) comes installed on the HPC cluster. However, without properly configuring an email address and user name, and linking a GitHub account, users have read-only privileges when it comes to cloning or forking from Github. 
 
 To link a GitHub account to the HPC, follow the steps outlined the FIU Neuro Onboarding [link](https://github.com/fiuneuro/Onboarding#setting-up-git-on-the-hpc). 
 
@@ -101,24 +101,24 @@ If the singularity file has not already been created on the cluster, then try th
 docker images
 ```
 
-2. Then, save the image as a tar file by running where <IMAGEID> is the id of the docker file (this may take a while!).
+2. Next, save the image as a .tar file by running where <IMAGEID> is the id of the docker file (this may take a while!).
 ```
 docker save <IMAGEID> -o <myImage>.tar 
 ```
 
-3. Unless running on a linux machine or vm, singularity will not be available to your local. Instead transfer the tar file to the HPC cluster.
+3. Unless running on a linux machine or vm, singularity will not be available to your local. Instead transfer the .tar file to the HPC cluster.
 ```
 scp <myImage>.tar <YourID>@hpclogin01:images
 ```
 
-4. SSH into the FIU cluster and move the file to the appropriate path (wherever the project itself is on the cluster)
+4. SSH into the FIU cluster and move the file to the appropriate path (wherever the project itself is on the cluster).
 ```
 ssh <YourID>@hpclogin01
 cd images
 mv <myImage>.tar <path/to/project>
 ```
 
-5. And lastly, build the singularity image
+5. And lastly, build the singularity image.
 ```
 singularity build <myImage>.sif docker-archive://<myImage>.tar
 ```
@@ -148,7 +148,7 @@ Insert link to Slurm how-to here (in future branch).
 
 ## Jupyter
 
-1. Connect to the VPN. Launch the Panther desktop from the [HPC desktop](https://wwww.hpcgui.fiu.edu):
+1. Launch the Panther desktop from the [HPC desktop](https://wwww.hpcgui.fiu.edu):
 
 ![launching-panther-desktop](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/hpc/launching-panther-desktop.png)
 
