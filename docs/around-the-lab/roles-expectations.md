@@ -16,7 +16,7 @@ Therefore, membership in the NDCLab is a team effort and all members are expecte
 * Mentoring and helping one another.
 * Supporting and lifting each other up.
 * Doing our part to create a culture of open communication.
-* Acting professionally.
+* Acting professionally and with integrity.
 * Acting with care and being attentive to detail.
 * Being respectful.
 * Being open about our strengths and weaknesses.
@@ -48,3 +48,18 @@ For members who remain committed to the lab, you can expect the lab director to 
 
 ## What to Expect from the Lab Manager and Lab Tech
 As support staff for the lab, the lab manager and lab technician are expected, in addition to fulfilling the expectations established for all lab members, to ensure that the lab is well-organized, operating smoothly, and a positive place to do science.
+
+## What is Expected from Senior Research Assistants
+[need George input] Senior RAs serve as knowledgeable members of the lab community and often take on the role of project lead for specific research initiatives. In addition to the expectations established for all lab members, senior RAs should demonstrate leadership.
+
+## What is Expected from Junior Research Assistants
+[need George input] Junior RAs have a very important role in the lab's research. They assist with many aspects of data collection and analysis, such as helping recruit study participants, set-up and run experiments, and code data.
+
+## What is Expected from Senior Research Technicians
+[need George input] 
+
+## What is Expected from Junior Research Technicians
+[need George input] 
+
+## What is Expected from Other Collaborators
+[need George input] 
