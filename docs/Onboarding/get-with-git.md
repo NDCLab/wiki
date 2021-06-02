@@ -27,9 +27,7 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 `$ git config --global user.email johndoe@example.com` </br>
 (Obviously, replace John Doe and johndoe@example.com with your actual name and your actual e-mail. If you're not sure whether you've done this before, check with the command `git config --list`.)
 
---------QUESTION (asked wiki #36, 5/12)
-5. Authenticate yourself to GitHub (ASKED ON GH)
---------QUESTION
+5. Authenticate yourself to GitHub by setting up a [personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). (Be aware that other authentication methods are possible; personal access tokens are recommended because they are the simplest to set up for GitHub.)
 
 6. Start with [this video](https://www.youtube.com/watch?v=DVRQoVRzMIY) by Tech With Tim, which offers a broad overview of Git and GitHub while showing you both the command line interface and the GitHub interface. Do not worry about digesting *everything* that he shows in this video, but rather focus on learning the big picture lessons: key terminology, core concepts, and the commands he uses most frequently.
 
@@ -61,3 +59,6 @@ Don't forget to:
 * Create a pull request and tag the lab manager (you can find the lab manager's GitHub handle on the page you just updated!) to review your changes and merge them into the live wiki!
 
 10. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement that you think would help a future lab member. Create a new branch off the main branch (name it "dev-[improvement]-[yourname]"). Implement your suggestion and submit a pull request to the lab manager!
+
+11. Some final thoughts to maximize your use of GitHub:
+* DO be careful in customizing your notifications. You want to see every time someone @mentions you or assigns an issue to you, and you don't want those messages to be lost in a see of other, less important notifications.

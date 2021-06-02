@@ -8,7 +8,7 @@ nav_order: 1
 #### Contents
 1. [Overview](#overview)
 2. [Installing Git](#installing-git)
-3. [Setting Up SSH Keys](#setting-up-ssh-keys)
+3. [Authenticating to GitHub](#authenticating-to-github)
 4. [Basic Commands](#basic-commands)
 5. [Markdown](#markdown)
 6. [SCM Best Practices](#scm-best-practices)
@@ -44,31 +44,15 @@ interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We 
 
 Use the package manager that comes with your distribution and install `git`. See specific instructions [here](https://git-scm.com/download/linux).
 
---------QUESTION (asked wiki #36, 5/12)
-## Setting Up SSH Keys
 
-SSH keys are a form of authentication like username and passwords that simplify the process of working with git repositories.
+## Authenticating to GitHub
 
-If you have SSH keys already, please make sure to check the names beforehand to avoid overriding them.
+When working in the shell and pushing your work to GitHub, GitHub needs to know who you are. This means you must "authenticate" yourself to the platform. You can do this one of three ways:
+* inputting your username and password every time (very onerous and therefore not recommended!)
+* using SSH keys (preferred for the [hpc](https://ndclab.github.io/wiki/docs/technical-docs/hpc-doc.html))
+* creating a personal access token (easiest option for GitHub)
 
-To create an SSH key pair (a private key and a public key), you will need to complete the following steps:
-
-1. Open up a shell.
-2. Copy and paste the following commands:
-
-```sh
-# The "comment" should either be an email "username@email.com" or user@hostname "username@mycomputer"
-ssh-keygen -t ed25519 -C "comment"
-```
-
-Note on the key type: the current (as of 2020) recommendation is ED25519 over RSA.
-
-3. At this point, you will be prompted for two things:
-  - Where to save the private/public key (the default location is displayed)
-  - A passphrase for the key (the passphrase can be excluded but it is recommended that you use one for improved security)
-
-Further resources: the [GitHub guide to SSH keys](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
---------QUESTION
+For simplicity, the personal access token is recommended.  Authenticate by following [these simple instructions](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token), directly from GitHub.
 
 ## Basic Commands
 
