@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Who's Who
-parent: welcome
+parent: Welcome
 nav_order: 2
 ---
 

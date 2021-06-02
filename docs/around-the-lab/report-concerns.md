@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Reporting Concerns
-parent: around-the-lab
+parent: Around the Lab
 nav_order: 3
 ---
 

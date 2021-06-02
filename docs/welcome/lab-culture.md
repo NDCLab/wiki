@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lab Culture
-parent: welcome
+parent: Welcome
 nav_order: 1
 ---
 

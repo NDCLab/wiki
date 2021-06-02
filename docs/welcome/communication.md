@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Communication
-parent: welcome
+parent: Welcome
 nav_order: 4
 ---
 

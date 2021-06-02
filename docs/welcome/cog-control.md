@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cognitive Control
-parent: welcome
+parent: Welcome
 nav_order: 3
 ---
 
