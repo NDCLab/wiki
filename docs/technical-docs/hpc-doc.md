@@ -2,7 +2,7 @@
 layout: default
 title: HPC Documentation
 parent: Technical Documentation
-nav_order: 1
+nav_order: 3
 ---
 
 ![dt2-racks-from-front](https://user-images.githubusercontent.com/26397102/118044340-27148d00-b33c-11eb-8b2c-17a454f18c51.jpg)  
@@ -41,7 +41,9 @@ If a lab member is using on-campus WiFi, this step can be safely skipped.
 However, if a lab member is accessing the HPC off-campus, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/) to access the FIU intranet. 
 
 ### Login-Node 
-The login node, also known as the head node, is the primary HPC entry point for submitting jobs and transferring small amounts of data. Note: a user must login to the login-node **before** logging into the hpcgui to initialize their home directory. 
+The login node, also known as the head node, is the primary HPC entry point for submitting jobs and transferring small amounts of data.
+
+Note: a user must login to the login-node **before** logging into the hpcgui to initialize their home directory. 
 
 The preferred (and easiest) method for accessing the HPC login node is through secure shell (SSH). This comes installed on Windows 10 and MacOS. Previous windows versions can install [OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
 
@@ -83,7 +85,7 @@ The red boxes detail the following:
 To be determined.  
 
 ## Git
-By default, [Git]((https://ndclab.github.io/wiki/docs/git-and-github) comes installed on the HPC cluster. However, without properly configuring an email address and user name, and linking a GitHub account, users have read-only privileges when it comes to cloning or forking from Github. 
+By default, [Git](https://ndclab.github.io/wiki/docs/git-and-github) comes installed on the HPC cluster. However, without properly configuring an email address and user name, and linking a GitHub account, users have read-only privileges when it comes to cloning or forking from Github. 
 
 To link a GitHub account to the HPC, follow the steps outlined the FIU Neuro Onboarding [link](https://github.com/fiuneuro/Onboarding#setting-up-git-on-the-hpc). 
 
@@ -150,12 +152,13 @@ Insert link to Slurm how-to here (in future branch).
 
 1. Launch the Panther desktop from the [HPC desktop](https://wwww.hpcgui.fiu.edu):
 
-![launching-panther-desktop](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/hpc/launching-panther-desktop.png)
+<img src="https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/hpc/launching-panther-desktop.png" width="800" height="600">
 
 
 2. Once the desktop has launched, open the terminal. Load conda, then jupyter.
 
-![terminal-actions-conda-jupyter](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/hpc/terminal-actions-conda-jupyter.png)
+<img src="https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/hpc/terminal-actions-conda-jupyter.png" width="800" height="600">
+
 Note: we use a [conda environment](http://ircc.fiu.edu/custom-environments-and-package-installation-r-and-python/) for our scripts for version control. (We do not use pip.)
 
 ## Accessing the Private Queue on the HPC
