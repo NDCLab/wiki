@@ -58,7 +58,9 @@ Don't forget to:
 * Push all your changes back to the remote.
 * Create a pull request and tag the lab manager (you can find the lab manager's GitHub handle on the page you just updated!) to review your changes and merge them into the live wiki!
 
-10. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement that you think would help a future lab member. Create a new branch off the main branch (name it "dev-[improvement]-[yourname]"). Implement your suggestion and submit a pull request to the lab manager!
+10. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement that you think would help a future lab member. Create a new branch off the main branch (name it "feature-[improvement]-[yourname]"). Implement your suggestion and submit a pull request to the lab manager!
 
 11. Some final thoughts to maximize your use of GitHub:
-* DO be careful in customizing your notifications. You want to see every time someone @mentions you or assigns an issue to you, and you don't want those messages to be lost in a see of other, less important notifications.
+* **DO** be careful in customizing your notifications. You want to see every time someone @mentions you or assigns an issue to you, and you don't want those messages to be lost in a see of other, less important notifications. Think of GitHub as being another inbox to monitor or, alternately, treat the automatic GitHub notifications that hit your e-mail inbox as actionable messages.
+* **DON'T** worry about breaking something. You can always clone a repository, make suggested changes, and tag someone on a pull request. The worst that can happen is that they disagree!
+* **DO** think about who should review your work before it is integrated into the main branch. Feel free to start a conversation with a pull request, even if you aren't ready for a final merge.
