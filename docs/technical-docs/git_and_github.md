@@ -54,6 +54,8 @@ When working in the shell and pushing your work to GitHub, GitHub needs to know 
 
 For simplicity, the personal access token is recommended.  Authenticate by following [these simple instructions](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token), directly from GitHub.
 
+For details on other authentication options, check out [this resource page](https://docs.github.com/en/github/authenticating-to-github).
+
 ## Basic Commands
 
 Git has several common commands that will be necessary to properly work with the the lab's repositories. These are `status`, `add`, `commit`, `push`, `pull`, and `checkout`.
