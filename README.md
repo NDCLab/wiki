@@ -17,7 +17,7 @@ Folder/branch organization should follow this convention:
 - Ongoing development and testing of feature to be pull requested into `main` 
 - *no direct commits*
 
-`-->main--[featureName]-[yourName]`
+`-->main-[featureName]-[yourName]`
 - *only* branch available for personal development, must be branched off of `main-feature-[featureName]` branch
 - Merged into `-->main-[featureName]-[featureName]` after a pull-request (code review)
 
@@ -71,31 +71,76 @@ To view what the site would look like with the applied formatting and styles as 
 
 All commands listed in a quote-block are terminal commands. 
 
-1. Install ruby using the following [documentation](https://www.ruby-lang.org/en/documentation/installation/)
+After completing the listed steps, only `bundle exec jekyll serve` is the only command needed to build the local site, unless the gem-files are updated. 
+
+#### Windows/Linux 
+
+1. Navigate to your system's root folder and install Ruby using the following [documentation](https://www.ruby-lang.org/en/documentation/installation/).
 
 2. Install bundler and jekyll by running:
-    * Windows/Unix:
     > gem install jekyll bundler
 
-    * MacOS
-    > gem install jekyll bundler --user-install
-
 3. Init the wiki using
-> bundle init 
+    > bundle init 
 
 4. This will create a gemfile called `Gemfile`. Add the following to this newly created file: 
-```ruby
-gem "just-the-docs"
-gem "jekyll-remote-theme"
-```
+    ```ruby
+    gem "just-the-docs"
+    gem "jekyll-remote-theme"
+    ```
 
 5. Install the newly listed gems using: 
-> bundle install
+    > bundle install
 
-6. Run the following command to build the website on your local machine. 
-> bundle exec jekyll serve
+6. Add the following block anywhere in the `_config.yml` file
+    ```yml
+    plugins:
+        - jekyll-remote-theme
+    ```
 
-After completing the listed steps, only `bundle exec jekyll serve` is the only command needed to build the local site, unless the gem-files are updated. 
+7. Run the following command to build the website on your local machine. 
+    > bundle exec jekyll serve
+
+#### MacOS
+MacOS comes with a default system installation for Ruby. However, it's advisable to use a seperate version of Ruby installed using "homebrew" to avoid permission errors.
+
+1. Navigate to your system's root folder and install command-line-tools 
+    > xcode-select --install
+
+    > export SDKROOT=$(xcrun --show-sdk-path)
+
+2. Install homebrew
+    > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+3. Install Ruby using homebrew
+    > brew install ruby
+
+    > echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.bash_profile
+
+5. Install bundler and jekyll by running:
+    > gem install --user-install bundler jekyll
+
+6. Navigate to your local `wiki` repository and initialize the repo.
+    > cd wiki
+    > bundle init 
+
+7. This will create a gemfile called `Gemfile`. Add the following to this newly created file: 
+    ```ruby
+    gem "just-the-docs"
+    gem "jekyll-remote-theme"
+    ```
+
+8. Install the newly listed gems using: 
+    > bundle install
+
+9. Add the following block anywhere in the `_config.yml` file
+    ```yml
+    plugins:
+        - jekyll-remote-theme
+    ```
+
+10. Run the following command to build the website on your local machine. 
+    > bundle exec jekyll serve
 
 ### Page Creation 
 
