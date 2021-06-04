@@ -29,15 +29,17 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 
 5. Authenticate yourself to GitHub by setting up a [personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). (Be aware that other authentication methods are possible; personal access tokens are recommended because they are the simplest to set up for GitHub.)
 
-6. Start with [this video](https://www.youtube.com/watch?v=DVRQoVRzMIY) by Tech With Tim, which offers a broad overview of Git and GitHub while showing you both the command line interface and the GitHub interface. Do not worry about digesting *everything* that he shows in this video, but rather focus on learning the big picture lessons: key terminology, core concepts, and the commands he uses most frequently.
+6. Notify the lab manager so that you are now ready to be added to the NDCLab organization on GitHub. Continue with the next step while you wait.
 
-7. Take the [quiz](https://forms.gle/Lw5uQAvGC5XQGUum6).
+7. Start with [this video](https://www.youtube.com/watch?v=DVRQoVRzMIY) by Tech With Tim, which offers a broad overview of Git and GitHub while showing you both the command line interface and the GitHub interface. Do not worry about digesting *everything* that he shows in this video, but rather focus on learning the big picture lessons: key terminology, core concepts, and the commands he uses most frequently.
 
-8. Work through [this hands-on tutorial](https://lab.github.com/lmachens/git-and-github-first-timers) inside GitHub. Once you are signed into GitHub and connected, click "Start free course."
+8. Take the [quiz](https://forms.gle/Lw5uQAvGC5XQGUum6).
 
-9. Watch this video (link to come!) where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
+9. Work through [this hands-on tutorial](https://lab.github.com/lmachens/git-and-github-first-timers) inside GitHub. Once you are signed into GitHub and connected, click "Start free course."
 
-9. Time to put it all together! Update your entry on the wiki's who's-who page using the new commands you've just learned:<br/>
+10. Watch this video (link to come!) where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
+
+11. Time to put it all together! Update your entry on the wiki's who's-who page using the new commands you've just learned:<br/>
 `git clone <link>`  <br/>
 `git branch whos-who-[yourname]`  <br/>
 `git checkout whos-who-[yourname]`  <br/>
@@ -57,9 +59,9 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
     * Push all your changes back to the remote.
     * Create a pull request and tag the lab manager (you can find the lab manager's GitHub handle on the page you just updated!) to review your changes and merge them into the live wiki!
 
-10. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement that you think would help a future lab member. Create a new branch off the main branch (name it "feature-[improvement]-[yourname]"). Implement your suggestion and submit a pull request to the lab manager!
+12. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement that you think would help a future lab member. Create a new branch off the main branch (name it "feature-[improvement]-[yourname]"). Implement your suggestion and submit a pull request to the lab manager!
 
-11. Some final thoughts to maximize your use of GitHub:
+13. Some final thoughts to maximize your use of GitHub:
 * **DO** be careful in customizing your notifications. You want to see every time someone @mentions you or assigns an issue to you, and you don't want those messages to be lost in a sea of other, less important notifications. Think of GitHub as being another inbox to monitor or, alternately, treat the automatic GitHub notifications that hit your e-mail inbox as actionable messages.
 * **DON'T** worry about breaking something. You can always clone a repository, make suggested changes, and tag someone on a pull request. The worst that can happen is that they disagree!
 * But **DON'T** forget to create and checkout to a *new* branch. Never make your changes directly on main.
