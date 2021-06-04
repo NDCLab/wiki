@@ -7,7 +7,7 @@ nav_order: 2
 
 ### Lab Director
 
-| ![buzzell](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/buzzell.jpg) | Dr. George Buzzell |
+| ![buzzell](https://raw.githubusercontent.com/NDCLab/wiki/gh-howto-jess/docs/_assets/whos-who/buzzell.jpg) | Dr. George Buzzell |
 | ---  | ---  |
 | pronouns | he/him/his |
 | location | Miami, FL |
