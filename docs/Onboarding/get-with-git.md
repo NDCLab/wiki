@@ -22,9 +22,9 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 
 3. [Sign up](https://github.com) for a free GitHub account.
 
-4. Set up your identity by typing two commands into your shell: </br>
-`$ git config --global user.name "John Doe"` </br>
-`$ git config --global user.email johndoe@example.com` </br>
+4. Set up your identity by typing two commands into your shell: <br/>
+`$ git config --global user.name "John Doe"` <br/>
+`$ git config --global user.email johndoe@example.com` <br/>
 (Obviously, replace John Doe and johndoe@example.com with your actual name and your actual e-mail. If you're not sure whether you've done this before, check with the command `git config --list`.)
 
 5. Authenticate yourself to GitHub by setting up a [personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). (Be aware that other authentication methods are possible; personal access tokens are recommended because they are the simplest to set up for GitHub.)
@@ -35,24 +35,22 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 
 8. Work through [this hands-on tutorial](https://lab.github.com/lmachens/git-and-github-first-timers) inside GitHub. Once you are signed into GitHub and connected, click "Start free course."
 
---------STILL TO DO
-9. Watch this video where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
---------STILL TO DO
+9. Watch this video (link to come!) where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
 
-9. Time to put it all together! Update your entry on the wiki's who's-who page using the new commands you've just learned:</br>
-`git clone <link>`  </br>
-`git branch whos-who-[yourname]`  </br>
-`git checkout whos-who-[yourname]`  </br>
-`git add whos-who.md` </br>
-`git status`  </br>
-`git commit -m "Added [yourname] to who's-who"`  </br>
+9. Time to put it all together! Update your entry on the wiki's who's-who page using the new commands you've just learned:<br/>
+`git clone <link>`  <br/>
+`git branch whos-who-[yourname]`  <br/>
+`git checkout whos-who-[yourname]`  <br/>
+`git add whos-who.md` <br/>
+`git status`  <br/>
+`git commit -m "Added [yourname] to who's-who"`  <br/>
 `git push origin whos-who-[yourname]`
 
 Don't forget to:
 * Create your own branch, off the main branch, entitled "whos-who-[yourname]" (without the brackets).
 * Switch to your branch before you start making any changes!
 * Resize your photo to 100 x 100 pixels and copy it into the "whos-who" folder within "_assets".
-* Name your photo simply as your last name. This way, you can reference it with</br>
+* Name your photo simply as your last name. This way, you can reference it with<br/>
 `![name](https://raw.githubusercontent.com/NDCLab/wiki/docs/_assets/whos-who/name.jpg)`
 * Nest your entry under your lab title, alphabetically by last name.
 * Push all your changes back to the remote.
