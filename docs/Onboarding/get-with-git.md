@@ -18,7 +18,7 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 
 1. Find your [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html).
 
-2. Install git on your local machine. [This page](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html) includes instructions for macOS, Windows, and Linux/Unix installations. Work through the instructions until you have completed setting up your SSH keys. Read the rest of the page to get an idea of what it contains; you won't understand it all now, but it will be a helpful resource for you in the future!
+2. Install Git on your local machine. [This page](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html) includes instructions for macOS, Windows, and Linux/Unix installations, as well as a lot of other useful information about working with Git and GitHub. Even though you won't understand it all now, read through the full page so you know that you have this helpful resource for the future.
 
 3. [Sign up](https://github.com) for a free GitHub account.
 
@@ -43,10 +43,11 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 `git checkout whos-who-[yourname]`  <br/>
 `git add whos-who.md` <br/>
 `git status`  <br/>
-`git commit -m "Added [yourname] to who's-who"`  <br/>
+`git commit -m "Add [yourname] to who's-who"`  <br/>
 `git push origin whos-who-[yourname]`
 
     Don't forget to:
+
         * Create your own branch, off the main branch, entitled "whos-who-[yourname]" (without the brackets).
         * Switch to your branch before you start making any changes!
         * Resize your photo to 100 x 100 pixels and copy it into the "whos-who" folder within "_assets".
@@ -59,6 +60,7 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 10. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement that you think would help a future lab member. Create a new branch off the main branch (name it "feature-[improvement]-[yourname]"). Implement your suggestion and submit a pull request to the lab manager!
 
 11. Some final thoughts to maximize your use of GitHub:
-* **DO** be careful in customizing your notifications. You want to see every time someone @mentions you or assigns an issue to you, and you don't want those messages to be lost in a see of other, less important notifications. Think of GitHub as being another inbox to monitor or, alternately, treat the automatic GitHub notifications that hit your e-mail inbox as actionable messages.
+* **DO** be careful in customizing your notifications. You want to see every time someone @mentions you or assigns an issue to you, and you don't want those messages to be lost in a sea of other, less important notifications. Think of GitHub as being another inbox to monitor or, alternately, treat the automatic GitHub notifications that hit your e-mail inbox as actionable messages.
 * **DON'T** worry about breaking something. You can always clone a repository, make suggested changes, and tag someone on a pull request. The worst that can happen is that they disagree!
+* But **DON'T** forgot to create and checkout to a new branch. Never make your changes directly on main.
 * **DO** think about who should review your work before it is integrated into the main branch. Feel free to start a conversation with a pull request, even if you aren't ready for a final merge.
