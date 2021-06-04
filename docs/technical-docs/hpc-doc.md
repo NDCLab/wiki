@@ -1,8 +1,8 @@
 ---
 layout: default
-title: HPC Documentation
+title: HPC
 parent: Technical Documentation
-nav_order: 1
+nav_order: 3
 ---
 
 ## Opening a Jupyter Notebook on the HPC

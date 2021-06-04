@@ -27,7 +27,7 @@ All lab members are given access to the following:
 2. **Lab meeting:** The lab manager will send the incoming member an invite to join the weekly lab meeting, held on Zoom.
 3. **Google Drive:** The lab manager will send the incoming member an invite to access the lab's Google Drive folder.
 4. **FIU HPC:** The lab manager will request HPC access for the incoming lab member. The incoming lab member should schedule a time to attend the [HPC Onboarding training](https://ndclab.github.io/wiki/docs/Onboarding/accessing-hpc.html), currently held every Tuesday from 11 am - 12 noon EST.
-5. **GitHub:** (info coming soon)
+5. **GitHub:** New lab members should work through the ["Get with Git" mini-training program](https://ndclab.github.io/wiki/docs/Onboarding/accessing-hpc.html) so that they are comfortable working with the lab's GitHub repositories. This is self-paced and can be started at any time.
 6. **ZenHub:** After working through the activities on the "Get with Git" page above, the incoming lab member should integrate [ZenHub](https://ndclab.github.io/wiki/docs/Onboarding/zenhub.html).
 
 
