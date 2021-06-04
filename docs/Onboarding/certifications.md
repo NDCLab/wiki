@@ -13,9 +13,9 @@ In addition, members of the lab who will be actively involved in handling partic
 ## Required for Members Handling Participant Data
 ### CITI
 1. CITI Health Information Privacy and Security (HIPS) for Clinical Investigators (Stage 1 - HIPS)
-![hips](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/onboarding/hips.png)
+![hips](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/hips.png)
 2. Social and Behavioral Responsible Conduct of Research Course (Stage 1 - RCR)
-![rcr](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/onboarding/rcr.png)
+![rcr](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/rcr.png)
 
 ### Non-CITI
 3. Health Insurance Portability and Accountability Act (HIPAA)
@@ -25,7 +25,7 @@ This course is on develop.fiu.edu. A [link is provided by the CCF](https://ndcla
 ## Required for Study Personnel Interacting with Participants
 ### CITI
 4. Social/Behavioral Human Research Course (Stage 1 - Basic Course)
-![basic-course](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/onboarding/basic-course.png)
+![basic-course](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/basic-course.png)
 
 
 ## How to complete required certifications

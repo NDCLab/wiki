@@ -31,7 +31,7 @@ Install Git first. Check out [these instructions](https://ndclab.github.io/wiki/
 
 Navigate to any location on your machine (although one suggests selecting a location where you will do all your NDCLab work), right-click, and select "Git Bash Here" from the menu. This opens a Bash shell where you can input shell and git commands.
 
-![git-bash](https://raw.githubusercontent.com/NDCLab/wiki/gh-howto-jess/docs/_assets/technical/git-bash.png)
+![git-bash](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/git-bash.png)
 
 (There is a different option that uses the [Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe). Using the Command Prompt is not recommended since it uses a different tool set which is not covered in this guide.)
 

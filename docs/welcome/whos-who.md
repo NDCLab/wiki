@@ -7,12 +7,12 @@ nav_order: 2
 
 ### Lab Director
 
-| ![buzzell](https://raw.githubusercontent.com/NDCLab/wiki/gh-howto-jess/docs/_assets/whos-who/buzzell.jpg) | Dr. George Buzzell |
+| ![buzzell](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/buzzell.jpg) | Dr. George Buzzell |
 | ---  | ---  |
 | pronouns | he/him/his |
 | location | Miami, FL |
 | GitHub | georgebuzzell |
-| research interests | lorem ipsum |
+| research interests | George is interested in cognitive control, particularly as it relates to social anxiety. His work focuses on EEG methods. |
 | hobbies | eating avocados |
 
 

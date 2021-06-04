@@ -33,15 +33,15 @@ Now that you have an SSH key pair (the private and public key), you will need to
 
 Login into [Pavlovia](https://gitlab.pavlovia.org/users/sign_in) using your username and password.
 
-![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_signin.png)
+![](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/sshk_signin.png)
 
 At the top-right hand corner, click the drop down and select **Settings**.
 
-![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_settings.png)
+![](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/sshk_settings.png)
 
 On the left side, you will see **User Settings** and a list of categories. Select **SSH Keys**
 
-![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_settings_category.png)
+![](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/sshk_settings_category.png)
 
 With a text editor open up the ssh key file that ends with `.pub` and inside you will see a `ssh-ed25519` and a long alpha-numeric sequence and an email or username at the end. Copy the entire line.
 
@@ -51,11 +51,11 @@ Give the key a **Title**, this can be anything as it is a name to help you remem
 
 Press **Add key**.
 
-![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_input.png)
+![](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/sshk_input.png)
 
 Refresh and you will see the new key in **Your SSH keys (1)**.
 
-![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/sshk_newkey.png)
+![](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/sshk_newkey.png)
 
 ### Resources
 
@@ -87,7 +87,7 @@ Once you are inside the group page:
 
 Press **New project**.
 
-![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/nproj_new.png)
+![](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/nproj_new.png)
 
 Name the project.
 
@@ -99,7 +99,7 @@ Set to **Public**.
 
 Press **Create project**.
 
-![](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/pavlovia_md/nproj_create.png)
+![](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/nproj_create.png)
 
 \* Note: A "[Slug](https://en.wikipedia.org/wiki/Clean_URL#Slug)" is generally the part of a URL that comes after the domain bits. It is a nicer way to link to something instead of a long alpha-numeric string or a long directory and file combo.
 
