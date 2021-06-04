@@ -166,25 +166,25 @@ GitHub supports [markdown](https://en.wikipedia.org/wiki/Markdown), which allows
 
 When working with Git and GitHub for the lab, remember these best practices for source code management (SCM):
 
-#### Commit often.
+### Commit often.
 Don’t make too many changes without commits, since it can be destructive if one change within the commit is bad. Commit often and leave a detailed comment about what part of the code was changed.
 
-#### Check your version.
+### Check your version.
 Make sure you are working on the latest version. Use the latest version to avoid accidentally changing an old version and causing confusion.
 
-#### Be obsessive about note-taking.
+### Be obsessive about note-taking.
 Make detailed notes/comments about everything you do. This should be 2-3 sentences that thoroughly describe the changes made (what was changed, why it was changed, etc.).
 >Example:
 >Added indentation on Line 13 for readability.
 >Corrected error, changed dog.jpg to dog.jpg on Line 27. 
 
-#### Review changes before committing.
+### Review changes before committing.
 Be 100% sure you want to commit the changes made before doing so!
 
-#### Use branches.
+### Use branches.
 Work independently but communicate what you are working on by creating a new branch and naming it according to the lab's nomenclature.
 
-#### Agree on a team workflow.
+### Agree on a team workflow.
 Decide with your team who is editing code, what they are editing, and why they are editing. Communicate frequently to stay on track.
 
 ## Additional Resources
