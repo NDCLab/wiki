@@ -109,5 +109,5 @@ cd ~
 
 Here are several Linux cheat sheets with useful commands. Not all of these commands will work on Windows and macOS, but most of the core commands are the same with Linux and will therefore work.
 
-[Linux Commands](https://www.guru99.com/linux-commands-cheat-sheet.html)</br>
+[Linux Commands](https://www.guru99.com/linux-commands-cheat-sheet.html)<br/>
 [Linux Tutorials](https://ryanstutorials.net/linuxtutorial/cheatsheet.php)

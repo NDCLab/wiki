@@ -28,7 +28,7 @@ Therefore, membership in the NDCLab is a team effort and all members are expecte
 * Being unafraid to make suggestions and question things we don't understand.
 
 ## What to Expect from the Lab Director
-**Lab Level**</br>
+**Lab Level**<br/>
 The lab director commits to:
 * Ensuring that the NDCLab remains a positive, inclusive and supportive environment where we can achieve the [dual objectives of the lab](https://ndclab.github.io/wiki/docs/welcome/lab-culture.html).
 * Setting the larger research agenda and priorities for the lab.
@@ -38,7 +38,7 @@ The lab director commits to:
 * Removing roadblocks to execute tasks in line with agreed priorities.
 * Operating honestly and transparently.
 
-**Individual Level**</br>
+**Individual Level**<br/>
 For members who remain committed to the lab, you can expect the lab director to remain committed to *you* for life. He will strive to:
 * Match your strengths and skills to impactful roles and experiences.
 * Recognize your contributions (did someone say “authorship?”).
