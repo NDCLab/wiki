@@ -1,24 +1,25 @@
 # wiki
 
-Comprehensive NDC documentation https://ndclab.github.io/wiki/
+Comprehensive NDC Lab documentation https://ndclab.github.io/wiki/
 
 ## Git Workflow 
 
-![ndcworkflow](https://user-images.githubusercontent.com/26397102/115577429-0b145300-a28a-11eb-9487-423750fd981a.png)
+![ndcworkflowmain](https://user-images.githubusercontent.com/26397102/119031107-521c6380-b970-11eb-8f8f-59c0dae17333.png)
+
 
 Folder/branch organization should follow this convention:
 
-`->gh-pages`
+`->main`
 - Up to date and live production branch with properly reviewed changes
 - *no direct commits*
 
-`->gh-pages-feature-[featureName]`
-- Ongoing development and testing of feature to be pull requested into `gh-pages` 
+`->main-feature-[featureName]`
+- Ongoing development and testing of feature to be pull requested into `main` 
 - *no direct commits*
 
-`-->gh-pages--[featureName]-[yourName]`
-- *only* branch available for personal development, must be branched off of `gh-pages-feature-[featureName]` branch
-- Merged into `-->dev-feature-[featureName]` after a pull-request (code review)
+`-->main--[featureName]-[yourName]`
+- *only* branch available for personal development, must be branched off of `main-feature-[featureName]` branch
+- Merged into `-->main-[featureName]-[featureName]` after a pull-request (code review)
 
 ## Directory/Navbar Structure 
 

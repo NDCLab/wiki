@@ -34,7 +34,7 @@ All lab members are given access to the following:
 ## Project Access
 Once the incoming lab member has been onboarded to the CCF and the lab at large, the lab manager will introduce the newest member to their assigned project lead, who will coordinate access to:
 1. Sona
-2. RedCap
+2. REDCap
 3. Study-specific e-mail accounts and calendars
 
 
@@ -56,5 +56,5 @@ Once the incoming lab member has been onboarded to the CCF and the lab at large,
 - [ ] Volunteer Contact Form
 - [ ] FIU HIPAA certificate
 - [ ] Data Services Agreement signed
-- [ ] RedCap access
+- [ ] REDCap access
 - [ ] Handoff to project lead
