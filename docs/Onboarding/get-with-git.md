@@ -46,15 +46,15 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 `git commit -m "Added [yourname] to who's-who"`  <br/>
 `git push origin whos-who-[yourname]`
 
-Don't forget to:
-* Create your own branch, off the main branch, entitled "whos-who-[yourname]" (without the brackets).
-* Switch to your branch before you start making any changes!
-* Resize your photo to 100 x 100 pixels and copy it into the "whos-who" folder within "_assets".
-* Name your photo simply as your last name. This way, you can reference it with<br/>
-`![name](https://raw.githubusercontent.com/NDCLab/wiki/docs/_assets/whos-who/name.jpg)`
-* Nest your entry under your lab title, alphabetically by last name.
-* Push all your changes back to the remote.
-* Create a pull request and tag the lab manager (you can find the lab manager's GitHub handle on the page you just updated!) to review your changes and merge them into the live wiki!
+    Don't forget to:
+        * Create your own branch, off the main branch, entitled "whos-who-[yourname]" (without the brackets).
+        * Switch to your branch before you start making any changes!
+        * Resize your photo to 100 x 100 pixels and copy it into the "whos-who" folder within "_assets".
+        * Name your photo simply as your last name. This way, you can reference it with<br/>
+        `![name](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/name.jpg)`
+        * Nest your entry under your lab title, alphabetically by last name.
+        * Push all your changes back to the remote.
+        * Create a pull request and tag the lab manager (you can find the lab manager's GitHub handle on the page you just updated!) to review your changes and merge them into the live wiki!
 
 10. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement that you think would help a future lab member. Create a new branch off the main branch (name it "feature-[improvement]-[yourname]"). Implement your suggestion and submit a pull request to the lab manager!
 
