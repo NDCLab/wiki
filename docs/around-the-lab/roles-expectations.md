@@ -49,17 +49,11 @@ For members who remain committed to the lab, you can expect the lab director to 
 ## What to Expect from the Lab Manager and Lab Tech
 As support staff for the lab, the lab manager and lab technician are expected, in addition to fulfilling the expectations established for all lab members, to ensure that the lab is well-organized, operating smoothly, and a positive place to do science.
 
-## What is Expected from Senior Research Assistants
-[need George input] Senior RAs serve as knowledgeable members of the lab community and often take on the role of project lead for specific research initiatives. In addition to the expectations established for all lab members, senior RAs should demonstrate leadership.
+## What is Expected from Research Assistants
+Research assistants play a pivotal role in the lab's research. They assist with many aspects of data collection and analysis, such as helping recruit study participants, set-up and run experiments, and code data. All research assistants are expected to be actively interested in the theory behind the lab's research and therefore to treat their time with the lab as an opportunity to learn about the research process. Senior RAs serve as knowledgeable members of the lab community and often take on the role of project lead for specific research initiatives; this role entails an expectation of leadership and a deeper commitment from the lab director in terms of long-term career support.
 
-## What is Expected from Junior Research Assistants
-[need George input] Junior RAs have a very important role in the lab's research. They assist with many aspects of data collection and analysis, such as helping recruit study participants, set-up and run experiments, and code data.
+## What is Expected from Research Technicians
+Research technicians play a vital role in the lab's research by developing the tools that enable the collection and analysis of high-quality data. All research technicians are expected to be actively interested in the methods used by the lab and to contribute their technical knowledge to the accomplishment of the lab's objectives.
 
-## What is Expected from Senior Research Technicians
-[need George input] 
-
-## What is Expected from Junior Research Technicians
-[need George input] 
-
-## What is Expected from Other Collaborators
-[need George input] 
+## What is Expected from Other Associates
+Other associates, such as graduate student affiliates or high school interns, are expected to contribute to the lab in either an assistantship or technician capacity.
