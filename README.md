@@ -109,8 +109,7 @@ MacOS comes with a default system installation for Ruby. However, it's advisable
 
     > export SDKROOT=$(xcrun --show-sdk-path)
 
-2. Install homebrew
-    > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2. Install Homebrew by following the instructions on the [Homebrew homepage](https://brew.sh/) to paste a specific command into your Terminal.
 
 3. Install Ruby using homebrew
     > brew install ruby
