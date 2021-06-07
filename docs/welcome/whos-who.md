@@ -18,6 +18,15 @@ nav_order: 2
 
 ### Lab Manager
 
+| ![alexander](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/alexander.jpg) | Jess Alexander |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Austin, TX |
+| GitHub | jessb0t |
+| research interests | Jess is interested in the neural, cognitive, and behavioral underpinnings of emotion and language. |
+| hobbies | I'm an avid runner, I love to travel, and I play the piano. |
+
+
 
 ### Lab Technician
 
