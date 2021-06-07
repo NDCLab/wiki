@@ -16,7 +16,7 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 
 ## How to Get with Git
 
-1. Find your [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html).
+1. Find your [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html). The shell enables you to interact quickly and easily with GitHub.
 
 2. Install Git on your local machine. [This page](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html) includes instructions for macOS, Windows, and Linux/Unix installations, as well as a lot of other useful information about working with Git and GitHub. Even though you won't understand it all now, read through the full page so you know that you have this helpful resource for the future.
 
@@ -27,7 +27,7 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 `$ git config --global user.email johndoe@example.com` <br/>
 (Obviously, replace John Doe and johndoe@example.com with your actual name and your actual e-mail. If you're not sure whether you've done this before, check with the command `git config --list`.)
 
-5. Authenticate yourself to GitHub by setting up a [personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). (Be aware that other authentication methods are possible; personal access tokens are recommended because they are the simplest to set up for GitHub.)
+5. Authenticate yourself to GitHub by setting up a [personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). (Be aware that other authentication methods are possible; personal access tokens are recommended because they are the simplest to set up for GitHub.) A personal access token is an alternative to using a login and password each time you connect to GitHub.  Once you set up the token, GitHub will recognize your computer and know that you are YOU each time you connect to it from the shell.
 
 6. Notify the lab manager so that you are now ready to be added to the NDCLab organization on GitHub. Continue with the next step while you wait.
 
@@ -37,7 +37,7 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 
 9. Work through [this hands-on tutorial](https://lab.github.com/lmachens/git-and-github-first-timers) inside GitHub. Once you are signed into GitHub and connected, click "Start free course."
 
-10. Watch this video (link to come!) where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
+10. Watch [this video](https://fiu.zoom.us/rec/share/M7XPxtyiThR3uG-_JILSMbyalUmX7mXxAcsUMtvFRITPT2fiIJ_8sKsbw-zXtrZ9.DDm5pZIz6UTbtM6M?startTime=1623099912000) where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
 
 11. Time to put it all together! Update your entry on the wiki's who's-who page using the new commands you've just learned:<br/>
 `git clone <link>`  <br/>
