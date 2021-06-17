@@ -64,15 +64,7 @@ Almost all projects will involve more than one release. This is to provide psych
 * warrant a novel conference submission (in the case of a research project) or
 * encourage users to download the new release (in the case of tool development).
 
-All release goals for a project should be explicitly stated in the `readme` file on the project's GitHub repository. Each planned release should be established as a time-blocked "epic" within ZenHub.
-
-------------------QUESTION
-Should project/release goals be on the MAIN readme even before anything else is posted to MAIN?
-------------------QUESTION
-
-------------------QUESTION
-What parameters should be in place for PR review and merge with main?
-------------------QUESTION
+All release goals for a project should be explicitly stated in the `readme` file on the project's GitHub repository. Each planned release should be established as a time-blocked "Epic" within ZenHub.
 
 A release is considered complete when the improvement (be that a new version of a tool or a publication of some type) is pushed to the `main` branch of the project repository on GitHub.
 
@@ -156,22 +148,37 @@ Pending the venue, project status, and other particulars, this may be a very inf
 ## Opening a New Project
 
 1. Start with [brainBox](https://github.com/NDCLab/brainBox)
-This is where all great ideas get incubated. After your idea completes the brainBox journey, you will get the green-light from the PI to launch your project. If you believe that the brainBox process is not appropriate for your idea, talk to the lab manager before creating any new repository on GitHub.
+This is where all great ideas get incubated. If you believe that the brainBox process is not appropriate for your idea, talk to the lab manager before creating any new repository on GitHub.
+2. When you get the green-light from the PI, create a new repo using the [appropriate template repository](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html#github) on GitHub and the associated [ZenHub workspace](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html#zenhub).
+3. Plan all project releases and create the corresponding ZenHub Epics.
+4. Plan all project issues (which may be large and abstract at this stage) and assign them to the appropriate Epic.
+5. Organize the Project Backlog pipeline in ZenHub by putting the earliest Epic at the top, followed by its associated issues in priority order. This is followed by the next earliest Epic with its issues, and so on.
+6. Launch the first Epic by moving the "Epic" issue and its associated issues to the Release Backlog in ZenHub.
+7. Draft the [readme](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html#readme-file) that provides a roadmap to guide the development of your project. This is posted on the `main` branch.
+8. Plan your first sprint meeting with your team! 
 
-2. Create a new repo
-------------------ADD LINKS
-Use template-tool or template-project
-------------------ADD LINKS
 
+## Working on `dev`
+
+All work should occur on the `dev` branch. The `main` branch is reserved for "published" information, such as pre-registrations, posters, publications, and official releases of validated software tools.
+
+Since all work is happening on `dev`, all new branches should be created off `dev`. More information is available on the [naming conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html).
+
+
+## Publishing a Release
+
+At certain stages of each project, information will be ready for public consumption. Since the NDCLab is an open lab, all of our work-in-progress is publicly available. However, we make a clear distinction to show visitors from outside our lab what we consider "done" by pushing this content to the `main` branch.
+
+To "publish" a release on GitHub:
+1. Update the `readme` file on the `main` branch.
 ------------------QUESTION
-At the start of any new project, after the project lead forks the appropriate [project template](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html)
+How do we maintain separate readmes for main and dev?
 ------------------QUESTION
 
-3. Create ZenHub workspace.
-4. Plan all project releases and create ZenHub Epics.
-5. Plan all project issues (which may be large and abstract at this stage), assigning to the appropriate Epic.
-6. Launch the first Epic by moving the "Epic" issue and all associated issues to the Release Backlog in ZenHub.
-7. Plan your first sprint meeting with your team!
+2. Initiate a pull request
+------------------QUESTION
+What parameters should be in place for PR review and merge with main?
+------------------QUESTION
 
 ## Communication
 
@@ -183,4 +190,3 @@ A sprint meeting occurs at the beginning of each sprint and involves reviewing w
 
 
 
-- Every repository should have a succinct `readme.md` file that guides development and points to relevant data.
