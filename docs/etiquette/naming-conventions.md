@@ -9,10 +9,11 @@ nav_order: 1
 1. [Overarching Philosophy](#overarching-philosophy)
 2. [General Naming Guidance](#general-naming-guidance)
 3. [Code](#code)
-4. [REDCap](#redcap)
-5. [Helpful Resources](#helpful-resources)
+4. [GitHub](#github)
+5. [REDCap](#redcap)
+6. [Helpful Resources](#helpful-resources)
 
-# Overarching Philosophy
+## Overarching Philosophy
 
 All naming conventions for the NDCLab are designed to be:
 * human-friendly (that is, they are descriptive and help us navigate all our projects)
@@ -31,9 +32,9 @@ Don't confuse the machines. Recognize how computers order things by default (num
 :x: accented characters (ñöé, etc.)<br/>
 :x: special characters (?!:*+, etc.)<br/>
 
-# General Naming Guidance
+## General Naming Guidance
 
-## Project Names
+### Project Names
 
 Project names should be informative but concise. Words are separated by hyphens. All project names begin with a lowercase letter. Examples:
 
@@ -55,7 +56,7 @@ In the latter two examples, informativeness has been sacrificed for length. RWE 
 
 Project names are used as top-level folder names on GitHub and Google Drive.
 
-## Folder Names
+### Folder Names
 
 The re-use of top-level folder names across projects and platforms is encouraged to simplify navigation. For instance, on the HPC, all active projects have a "collecting" folder used for the storage of incoming data from study participants.
 
@@ -76,7 +77,7 @@ Three main paradigms are employed in establishing folder naming conventions for 
 
 If using logical ordering, left pad your numbers with zeros, as in the examples above. Since many computer programs order items starting with the first character, this left-padding ensures that "10" actually comes after "09."
 
-## File Names
+### File Names
 
 No two files should share an identical name. Ever.
 
@@ -95,18 +96,18 @@ Alternately, if all files are stored within a space specific to the social-conte
 > 02_anxiety_analysis<br/>
 > 03_anxiety_results
 
-## Dates (YYYY-MM-DD)
+### Dates (YYYY-MM-DD)
 
 Whenever dates are used, the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) convention is used to avoid any ambiguity.  Examples:
 
 >1905-09-27 ([This paper](https://www.astro.puc.cl/~rparra/tools/PAPERS/e_mc2.pdf) was published on this date.)<br/>
 >2020-03-11 (The WHO made an [important statement](https://www.who.int/director-general/speeches/detail/who-director-general-s-opening-remarks-at-the-media-briefing-on-covid-19---11-march-2020) on this date.)
 
-# Code
+## Code
 
 In general, all lab code should align with the conventions used in [PEP 8](https://www.python.org/dev/peps/pep-0008/#naming-conventions) and [BIDS](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#file-name-structure). Always use descriptive names that will help others understand your code.
 
-## Function and Method Names
+### Function and Method Names
 
 Wherever possible, functions and methods should be re-used across programs when referring to the same thing. For naming them, `lowercase_with_underscores` is used. Example:
 > def round_sum (num_1, num_2):<br/>
@@ -114,22 +115,40 @@ Wherever possible, functions and methods should be re-used across programs when 
 
 In special circumstances where names are too long, `camelCase` can be used.
 
-## Class Names
+### Class Names
 
 `UpperCamelCase` is used for class names. Example:
 >class ImageSprite
 
-## Constants
+### Constants
 
 `CAPITALIZED_WITH_UNDERSCORES` is used for constants. Example:
 >MAX_PARTICIPANTS = 10
 
-## Variable Names
+### Variable Names
 
 For naming variables, `lowercase_with_underscores` is also used. Example:
 > subject_name = "bob"
 
-# REDCap
+## GitHub
+
+### Repository Names
+Repositories should be named identically to the associated project. For example:
+
+> social-context-alpha
+
+### Branch Names
+By default, repositories have a `main` branch and a `dev` branch. New branches are created from the `dev` branch and are named:
+
+> `dev-[feature]-[yourname]`
+
+For example, if Bob creates a new branch to create stimuli for an experiment, he would call it:
+
+> `dev-stimuli-bob`
+
+(Note that the wiki is an exception. It does not have a `dev` branch and new branches are created directly off `main` according to the convention `[feature]-[yourname]`.)
+
+## REDCap
 
 ### Instrument Names
 Each element within REDCap is an "instrument." These should be named:
@@ -176,6 +195,6 @@ In relatively rare but important cases, such as instruments that gather demograp
 > demo_exercise_s1_r1_e1<br/>
 > demo_caffeine_s1_r1_e1
 
-# Helpful Resources
+## Helpful Resources
 * Awesome [slidedeck](https://speakerdeck.com/jennybc/how-to-name-files) from [Jenny Bryan](https://jennybryan.org/).<br/>
 * Another awesome [slidedeck](https://slides.djnavarro.net/project-structure/#1) from [Danielle Navarro](https://djnavarro.net/).
