@@ -27,7 +27,7 @@ A key purpose of using this agile methodology, including the tools and processes
 All lab projects live on [GitHub](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html) and make use of native features of the platform, such as issues and pull requests. If you haven't already, [get yourself onboarded](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html). 
 
 ### ZenHub
-ZenHub (link coming soon!) is a plug-in to GitHub. Issues within a GitHub repository connect automatically to the ZenHub Kanban board of associated workspaces. In general, each repository is connected to one workspace, but it is possible to connect multiple repositories in special circumstances where this would be beneficial to project management.
+[ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html) is a plug-in to GitHub. Issues within a GitHub repository connect automatically to the ZenHub Kanban board of associated workspaces. In general, each repository is connected to one workspace, but it is possible to connect multiple repositories in special circumstances where this would be beneficial to project management.
 
 ## Terminology
 
