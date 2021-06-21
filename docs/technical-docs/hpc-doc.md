@@ -87,23 +87,23 @@ Within the cluster, the NDCLab will have the following file structure:
 
 ![NDCLab Privilges](https://user-images.githubusercontent.com/26397102/122823863-dfbfdb80-d2ad-11eb-94b8-daf9a585f890.png)
 
-The left and right diagrams represent the varying read & execute priveleges and the write priveleges respectively. Each color corresponds to the following group:
+The left and right diagrams represent the varying read & execute privileges and the write privileges respectively. Each color corresponds to the following group:
 
 ![colorcode](https://user-images.githubusercontent.com/26397102/122824230-607ed780-d2ae-11eb-81bc-93011d4569c4.png)
 
-All lab members are part of the NDCLab, but only a select few members are part of specific project. This results in specific priveleges given to select members to ensure data compliance. For example, a lab member has read & execute priveleges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of the `data/project-A/`. 
+All lab members are part of the NDCLab, but only a select few members are part of specific project. This results in specific privileges given to select members to ensure data compliance. For example, a lab member has read & execute privileges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of the `data/project-A/`. 
 
-The main directories ,`data` `scripts` & `analyses`, are described below
+The main directories -- `data`, `scripts`, and `analyses` -- are described below.
 
 ### data
 Each project will have a directory in this folder to house de-identified and encrypted data.
 
-Project leads, approved project members, and lab-staff will have sole read and write access to the entire directory, while external lab members will be able to only view publicly-available data. 
+Project leads, approved project members, and lab staff will have sole read and write access to the entire directory, while external lab members will be able to only view publicly-available data. 
 
 ### scripts
 Similarily, each project will also have a directory in `scripts` that contains pertinent code cloned in from GitHub. This code is updated weekly. 
 
-The additional `devOps` folder contains scripts used for internal organization. 
+The additional `devOps` folder contains scripts used for lab-wide organization. 
 ### analyses
 Finally, each ongoing project will have a folder in the `analyses` directory, which will contain cleaned datasets, plots, and various statistics.
 
