@@ -27,6 +27,10 @@ Therefore, membership in the NDCLab is a team effort and all members are expecte
 * Communicating quickly, openly, and honestly.
 * Being unafraid to make suggestions and question things we don't understand.
 
+**Dress Code**<br/>
+Members of the NDCLab interact not only with one another, but also with members of the greater FIU community and with the adolescents and families supported by the Center for Children and Families. Business casual attire is expected when representing the lab, whether in-person or via remote teleconferencing. In practice, this means dressing as you would to a job interview, avoiding the exposure of too much bare skin, offensive logos, etc. If you are uncertain as to what constitutes appropriate attire, reach out to the lab manager for additional guidance.
+
+
 ## What to Expect from the Lab Director
 **Lab Level**<br/>
 The lab director commits to:
