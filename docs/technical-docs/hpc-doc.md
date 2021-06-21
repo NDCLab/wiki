@@ -2,7 +2,7 @@
 layout: default
 title: HPC Documentation
 parent: Technical Documentation
-nav_order: 3
+nav_order: 4
 ---
 
 ![dt2-racks-from-front](https://user-images.githubusercontent.com/26397102/118044340-27148d00-b33c-11eb-8b2c-17a454f18c51.jpg)  
@@ -82,7 +82,30 @@ The red boxes detail the following:
 * Interactive Apps: GUI applications available for HPC account-holders 
 
 ## Structure
-To be determined.  
+
+Within the cluster, the NDCLab will have the following file structure:
+
+![NDCLab Privilges](https://user-images.githubusercontent.com/26397102/122823863-dfbfdb80-d2ad-11eb-94b8-daf9a585f890.png)
+
+The left and right diagrams represent the varying read & execute priveleges and the write priveleges respectively. Each color corresponds to the following group:
+
+![colorcode](https://user-images.githubusercontent.com/26397102/122824230-607ed780-d2ae-11eb-81bc-93011d4569c4.png)
+
+All lab members are part of the NDCLab, but only a select few members are part of specific project. This results in specific priveleges given to select members to ensure data compliance. For example, a lab member has read & execute priveleges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of the `data/project-A/`. 
+
+The main directories ,`data` `scripts` & `analyses`, are described below
+
+### data
+Each project will have a directory in this folder to house de-identified and encrypted data.
+
+Project leads, approved project members, and lab-staff will have sole read and write access to the entire directory, while external lab members will be able to only view publicly-available data. 
+
+### scripts
+Similarily, each project will also have a directory in `scripts` that contains pertinent code cloned in from GitHub. This code is updated weekly. 
+
+The additional `devOps` folder contains scripts used for internal organization. 
+### analyses
+Finally, each ongoing project will have a folder in the `analyses` directory, which will contain cleaned datasets, plots, and various statistics.
 
 ## Git
 By default, [Git](https://ndclab.github.io/wiki/docs/git-and-github) comes installed on the HPC cluster. However, without properly configuring an email address and user name, and linking a GitHub account, users have read-only privileges when it comes to cloning or forking from Github. 
@@ -146,18 +169,16 @@ conda activate
 python sample.py
 ```
 
-Insert link to Slurm how-to here (in future branch).
-
 ## Jupyter
 
 1. Launch the Panther desktop from the [HPC desktop](https://wwww.hpcgui.fiu.edu):
 
-<img src="https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/hpc/launching-panther-desktop.png" width="800" height="600">
+<img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/launching-panther-desktop.png" width="800" height="600">
 
 
 2. Once the desktop has launched, open the terminal. Load conda, then jupyter.
 
-<img src="https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/hpc/terminal-actions-conda-jupyter.png" width="800" height="600">
+<img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/terminal-actions-conda-jupyter.png" width="800" height="600">
 
 Note: we use a [conda environment](http://ircc.fiu.edu/custom-environments-and-package-installation-r-and-python/) for our scripts for version control. (We do not use pip.)
 
@@ -167,4 +188,4 @@ Note: we use a [conda environment](http://ircc.fiu.edu/custom-environments-and-p
     * Note private cue at top.
     * Always specify 'medium' and select one of the medium machines.
 
-![jupyter-bash-specs](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/hpc/jupyter-bash-specs.png)
+![jupyter-bash-specs](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/jupyter-bash-specs.png)
