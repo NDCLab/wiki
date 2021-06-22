@@ -155,7 +155,7 @@ This is where all great ideas get incubated. If you believe that the brainBox pr
 5. Organize the Project Backlog pipeline in ZenHub by putting the earliest Epic at the top, followed by its associated issues in priority order. This is followed by the next earliest Epic with its issues, and so on.
 6. Launch the first Epic by moving the "Epic" issue and its associated issues to the Release Backlog in ZenHub.
 7. Draft the [readme](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html#readme-file) that provides a roadmap to guide the development of your project. This is posted on the `main` branch.
-8. Plan your first sprint meeting with your team! 
+8. Set up your sprints inside ZenHub and plan your first sprint meeting with your team! 
 
 
 ## Working on `dev`
@@ -182,11 +182,9 @@ What parameters should be in place for PR review and merge with main?
 
 ## Communication
 
-respond to your notifications when someone @mentions you or asks you to review a pull request
-when assigning someone to an issue, include an explanatory comment (with @mention) to explain why you think the person is a good fit for the task -- don't just randomly assign people issues without dialogue
-
-
-A sprint meeting occurs at the beginning of each sprint and involves reviewing work from the prior sprint, reflecting on what did/did not work, and planning what issues and subtasks will be completed during the upcoming sprint. 
+* Watch your notifications so that you respond in a timely manner when someone e@mentions you or asks you to review a pull request.
+* When assigning someone to an issue, include an explanatory comment (with @mention) to explain why you think the person is a good fit for the task -- don't just randomly assign people issues without dialogue.
+* Use the "question" and "help wanted" labels to communicate to the broader team that you are stuck and need assistance.
 
 
 
