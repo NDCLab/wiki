@@ -35,7 +35,7 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 
 8. Take the [quiz](https://forms.gle/Lw5uQAvGC5XQGUum6).
 
-9. Work through [this hands-on tutorial](https://lab.github.com/lmachens/git-and-github-first-timers) inside GitHub. Once you are signed into GitHub and connected, click "Start free course."
+9. Work through [this hands-on tutorial](https://lab.github.com/lmachens/git-and-github-first-timers) inside GitHub. Once you are signed into GitHub and connected, click "Start free course." Complete the activities through #6 ("Communicating Using Markdown"), then head back over here and continue to #10 below. (The remaining activities on the GitHub tutorial are not necessary to complete the Get with Git program.)
 
 10. Watch [this video](https://fiu.zoom.us/rec/share/M7XPxtyiThR3uG-_JILSMbyalUmX7mXxAcsUMtvFRITPT2fiIJ_8sKsbw-zXtrZ9.DDm5pZIz6UTbtM6M?startTime=1623099912000) where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
 
