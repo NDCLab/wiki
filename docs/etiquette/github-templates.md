@@ -40,6 +40,9 @@ Settings: update to delete head branches
 
 ## ZenHub
 
-(add instructions for setting up a workspace)
+(add instructions for setting up a workspace, including customizing pipelines)
+create new workspace, following naming conventions, connect repository
+customize pipelines based on zenhub.md table
 
 (add instructions for connecting a new repo to an existing workspace)
+
