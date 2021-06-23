@@ -7,10 +7,11 @@ nav_order: 4
 
 ### Contents
 
-##
-
-###
-
+1. [Overview](#overview)
+2. [Setting Up a New Project](#setting-up-a-new-project)
+    1. [GitHub](#github)
+    2. [ZenHub](#zenhub)
+    3. [Off to the Races](#off-to-the-races)
 
 ## Overview
 
@@ -27,7 +28,9 @@ This is where all great ideas get incubated. If you believe that the brainBox pr
 2. When you get the green-light from the PI, create a new repo using the appropriate template repository:
 
 **research projects:** https://github.com/NDCLab/template-tool
-**tool development:** https://github.com/NDCLab/template-project
+**tool development:** https://github.com/NDCLab/template-research
+
+Be sure to name your new repository in accordance with the [project naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html).
 
 _______________________FARUKH ADD INSTRUCTIONS
 To use a template repository, simply select
@@ -39,44 +42,41 @@ To use a template repository, simply select
 5. Update settings to delete head branches
 _______________________FARUKH ADD INSTRUCTIONS
 
-6. Draft the readme file that provides a roadmap to guide the development of your project.
-- Every repository should have a succinct `readme.md` file that guides development and points to relevant data.
-even when nothing else posted to main, a general roadmap should be available in the readme that redirects visitors over to dev to see the magic in progress
+6. Within the `dev` branch, draft the readme file that guides the development of your project.
 
-MAIN/DEV readme
-what is the project
-who is on the project
-blurb to check out dev for work-in-progress
-details for what is actually in main
-roadmap for the project
-refer to the contributing doc
+Every repository should have a succinct `readme.md` file that serves as a roadmap for the project. This is the first thing you will commit to your new repository. The readme should include:
+
+* a description of the project goal
+* a roadmap for all the planned project releases
+* major contributors to the project
+* the standard NDCLab blurb to help visitors navigate:
+> This `main` branch contains completed releases for this project. For all work-in-progress, please switch over to the `dev` branches. If you are interested in contributing, please read our `CONTRIBUTING.md` file.
+
+As the project progresses, the readme will be updated to include information for any content included on the `main` branch, such as pre-registrations, conference posters, or working software releases. At this initial setup stage, however, the `main` branch will be empty except for this readme file.
+
+7. Initiate a pull request, tagging the lab director, who will approve your planned roadmap by merging the readme file into the `dev` branch.
 
 ### ZenHub
 
+While you wait for approval of your planned roadmap, you can set up ZenHub.
 
-3. Plan all project releases and create the corresponding ZenHub Epics.
+1. Click the ZenHub tab within your new repository. This automatically opens a page so you can set up a new ZenHub workspace. Input your project name as the workspace name and a short descriptor. ZenHub automatically connects to the GitHub repository where you started. Click "Create Workspace."
+
+![zh_new-workspace](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_new-workspace.png)
+
+2. Unfortunately, ZenHub does not automatically use the NDCLab's default pipelines when creating a new workspace, so you will need to customize your new workspace immediately. Adjust pipeline names and descriptors to match the table [here](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#tour-of-the-pipelines). You can change the names and descriptors by clicking the three vertical dots at the top of each pipeline. This same menu lets you delete any unnecessary pipelines. Additional pipelines can be added at the far right of the screen, then dragged-and-dropped into the appropriate position.
+
+3. Create a [ZenHub Epic](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#defining-epics) for each planned project release, as outlined in your readme roadmap.
+
 4. Plan all project issues (which may be large and abstract at this stage) and assign them to the appropriate Epic.
+
 5. Organize the Project Backlog pipeline in ZenHub by putting the earliest Epic at the top, followed by its associated issues in priority order. This is followed by the next earliest Epic with its issues, and so on.
+
 6. Launch the first Epic by moving the "Epic" issue and its associated issues to the Release Backlog in ZenHub.
 
-8. Set up your sprints inside ZenHub and plan your first sprint meeting with your team! 
+### Off to the Races
 
+Once the lab director has approved your planned roadmap and merged it into `dev`, and you have set up the project in ZenHub, initiate a pull request, tagging the lab technician (for tool projects) or the lab manager (for research projects), who will verify that all the technical details of your project are properly set up. Once confirmed, he/she will merge your readme file into the main branch.
 
-
-
-Settings: update to delete head branches
-
-
-## ZenHub
-
-(add instructions for setting up a workspace, including customizing pipelines)
-create new workspace, following naming conventions, connect repository
-customize pipelines based on zenhub.md table
-
-(add instructions for connecting a new repo to an existing workspace)
-
-create zenhub workspace
-establish epics and add to zenhub
-fill project backlog with issues (everything we ever hope to accomplish with this project)
-move issues that will be completed for first release into the Release Backlog
+Set up your [sprints inside ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#planning-sprints) and plan your first sprint meeting with your team! 
 

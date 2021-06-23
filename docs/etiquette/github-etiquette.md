@@ -6,12 +6,12 @@ nav_order: 3
 ---
 
 ### Contents
-1. Overview
-2. Tools
-3. Terminology
-4. Project Lifecycle
-5. Opening a New Project
-6. Communication
+1. [Overview](#overview)
+2. [Tools](#tools)
+3. [Terminology](#terminology)
+4. [Project Lifecycle](#project-lifecycle)
+5. [Opening a New Project](#opening-a-new-project)
+6. [Communication](#communication)
 
 ## Overview
 
@@ -162,10 +162,9 @@ Since all work is happening on `dev`, all new branches should be created off `de
 At certain stages of each project, information will be ready for public consumption. Since the NDCLab is an open lab, all of our work-in-progress is publicly available. However, we make a clear distinction to show visitors from outside our lab what we consider "done" by pushing this content to the `main` branch.
 
 To "publish" a release on GitHub:
-1. Update the `readme` file on the `main` branch.
-------------------QUESTION
-How do we maintain separate readmes for main and dev?
-------------------QUESTION
+1. Update the `readme` file on the `dev` branch.
+
+2. Merge the relevant branch with `dev` that contains the public-ready content. This will typically be a stand-alone folder.
 
 2. Initiate a pull request
 ------------------QUESTION
