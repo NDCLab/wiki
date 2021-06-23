@@ -147,15 +147,7 @@ Pending the venue, project status, and other particulars, this may be a very inf
 
 ## Opening a New Project
 
-1. Start with [brainBox](https://github.com/NDCLab/brainBox)
-This is where all great ideas get incubated. If you believe that the brainBox process is not appropriate for your idea, talk to the lab manager before creating any new repository on GitHub.
-2. When you get the green-light from the PI, create a new repo using the [appropriate template repository](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html#github) on GitHub and the associated [ZenHub workspace](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html#zenhub).
-3. Plan all project releases and create the corresponding ZenHub Epics.
-4. Plan all project issues (which may be large and abstract at this stage) and assign them to the appropriate Epic.
-5. Organize the Project Backlog pipeline in ZenHub by putting the earliest Epic at the top, followed by its associated issues in priority order. This is followed by the next earliest Epic with its issues, and so on.
-6. Launch the first Epic by moving the "Epic" issue and its associated issues to the Release Backlog in ZenHub.
-7. Draft the [readme](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html#readme-file) that provides a roadmap to guide the development of your project. This is posted on the `main` branch.
-8. Set up your sprints inside ZenHub and plan your first sprint meeting with your team! 
+New projects should be based on the NDCLab templates. Visit [this page](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html) for details.
 
 
 ## Working on `dev`
