@@ -52,7 +52,7 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 
     * Create your own branch, off the main branch, entitled "whos-who-[yourname]" (without the brackets).
     * Switch to your branch before you start making any changes!
-    * Resize your photo to 100 x 100 pixels and copy it into the "whos-who" folder within "_assets".
+    * Resize your photo to 100 x 100 pixels and copy it into the "whos-who" folder within "_assets". (If you cannot find your Home folder on Mac, type cmd+shift+H inside Finder.)
     * Name your photo simply as your last name. This way, you can reference it with<br/>
     `![name](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/name.jpg)`
     * Nest your entry under your lab title, alphabetically by last name.
