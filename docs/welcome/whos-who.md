@@ -37,13 +37,14 @@ nav_order: 2
 ### Graduate Student Affiliates
 
 
-### High School Interns
-
-
 ### Senior Research Assistants
+|---  | ---  |
+| Role of sRA: Senior RAs serve as knowledgeable members of the lab community and often take on the role of project lead for specific research initiatives; this role entails an expectation of leadership and a deeper commitment from the lab director in terms of long-term career support.|
+|---  | ---  |
+|---  | ---  |
 
 | ![polyanskaya](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/polyanskaya.jpg) | Arina Polyanskaya |
-| ---  | ---  |
+| 
 | pronouns | she/her/hers |
 | location | Miami, FL |
 | GitHub | apoly1 |
@@ -51,9 +52,23 @@ nav_order: 2
 | hobbies | Traveling, hiking, camping, dancing, cooking/eating food, and anything else I would be introduced to. |
 
 ### Senior Research Technicians
-
+|---  | ---  |
+|Role of sRT: Research technicians play a vital role in the lab’s research by developing the tools that enable the collection and analysis of high-quality data.|
+|---  | ---  |
+|---  | ---  |
 
 ### Junior Research Assistants
+|---  | ---  |
+|Role of jRA: Research assistants play a pivotal role in the lab’s research. They assist with many aspects of data collection and analysis, such as helping recruit study participants, set-up and run experiments, and code data.|
+|---  | ---  |
+|---  | ---  |
+
 
 
 ### Junior Research Technicians
+|---  | ---  |
+|Role of jRA: Research technicians play a vital role in the lab’s research by developing the tools that enable the collection and analysis of high-quality data.|
+|---  | ---  |
+|---  | ---  |
+
+### High School Interns
