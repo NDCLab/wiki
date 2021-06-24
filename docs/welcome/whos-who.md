@@ -42,6 +42,13 @@ nav_order: 2
 
 ### Senior Research Assistants
 
+| ![polyanskaya](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/polyanskaya.jpg) | Arina Polyanskaya |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | apoly1 |
+| research interests | Investigating the possible link between social anxiety and cognitive control performance. |
+| hobbies | Traveling, hiking, camping, dancing, cooking/eating food, and anything else I would be introduced to. |
 
 ### Senior Research Technicians
 
