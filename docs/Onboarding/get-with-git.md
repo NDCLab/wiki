@@ -52,14 +52,14 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 
     * Create your own branch, off the main branch, entitled "whos-who-[yourname]" (without the brackets).
     * Switch to your branch before you start making any changes!
-    * Resize your photo to 100 x 100 pixels and copy it into the "whos-who" folder within "_assets".
+    * Resize your photo to 100 x 100 pixels and copy it into the "whos-who" folder within "_assets". (If you cannot find your Home folder on Mac, type cmd+shift+H inside Finder.)
     * Name your photo simply as your last name. This way, you can reference it with<br/>
     `![name](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/name.jpg)`
     * Nest your entry under your lab title, alphabetically by last name.
     * Push all your changes back to the remote.
     * Create a pull request and tag the lab manager (you can find the lab manager's GitHub handle on the page you just updated!) to review your changes and merge them into the live wiki!
 
-12. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement that you think would help a future lab member. Create a new branch off the main branch (name it "feature-[improvement]-[yourname]"). Implement your suggestion and submit a pull request to the lab manager!
+12. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement, in a different section of the wiki, that you think would help a future lab member. **Create a new branch off the main branch** (name it "feature-[improvement]-[yourname]"). Implement your suggestion and submit a new pull request to the lab manager!
 
 13. Some final thoughts to maximize your use of GitHub:
 * **DO** be careful in customizing your notifications. You want to see every time someone @mentions you or assigns an issue to you, and you don't want those messages to be lost in a sea of other, less important notifications. Think of GitHub as being another inbox to monitor or, alternately, treat the automatic GitHub notifications that hit your e-mail inbox as actionable messages.
