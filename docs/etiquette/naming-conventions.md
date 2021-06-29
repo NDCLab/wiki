@@ -148,6 +148,18 @@ For example, if Bob creates a new branch to create stimuli for an experiment, he
 
 (Note that the wiki is an exception. It does not have a `dev` branch and new branches are created directly off `main` according to the convention `[feature]-[yourname]`.)
 
+### Commit Messages
+Git commit messages (specifically, the commit subject line) should be concise, informative, and in the imperative tense. There is no final period.<br/>
+
+:white_check_mark: Correct typo<br/>
+:white_check_mark: Add counterbalancing content<br/>
+:white_check_mark: Optimize function X<br/>
+:x: Fix<br/>
+:x: Re-wrote the entire script so now it works right<br/>
+:x: Added a feature.
+
+The seven great rules of commit messages make for easy reading [here](https://chris.beams.io/posts/git-commit/).
+
 ## REDCap
 
 ### Instrument Names
