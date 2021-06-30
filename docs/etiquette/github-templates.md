@@ -35,26 +35,34 @@ Be sure to name your new repository in accordance with the [project naming conve
 _______________________FARUKH ADD INSTRUCTIONS
 To use a template repository, simply select
 
-3. Create dev branch
-
-4. Add branch protection rules
-
-5. Update settings to delete head branches
+Update settings to delete head branches
 _______________________FARUKH ADD INSTRUCTIONS
 
-6. Within the `dev` branch, draft the readme file that guides the development of your project.
+6. Within the `main` branch, draft the readme file that guides the development of your project.
 
 Every repository should have a succinct `readme.md` file that serves as a roadmap for the project. This is the first thing you will commit to your new repository. The readme should include:
 
 * a description of the project goal
 * a roadmap for all the planned project releases
 * major contributors to the project
-* the standard NDCLab blurb to help visitors navigate:
-> This `main` branch contains completed releases for this project. For all work-in-progress, please switch over to the `dev` branches. If you are interested in contributing, please read our `CONTRIBUTING.md` file.
 
-As the project progresses, the readme will be updated to include information for any content included on the `main` branch, such as pre-registrations, conference posters, or working software releases. At this initial setup stage, however, the `main` branch will be empty except for this readme file.
+The template repository that you have used contains a template readme.md file that will guide you through the initial process of drafting the readme.
 
-7. Initiate a pull request, tagging the lab director, who will approve your planned roadmap by merging the readme file into the `dev` branch.
+As the project progresses, the readme will be updated to include information for any content included on the `main` branch, such as pre-registrations, conference posters, or working software releases
+
+7. Within the `main` branch, draft the contributing.md file that informs visitors of how to contribute. The template repository that you have used contains a template contributing.md file that will guide you through the initial process of drafting.
+
+At this initial setup stage, the `main` branch will be empty except for the readme.md and contributing.md files.
+
+_______________________FARUKH ADD INSTRUCTIONS
+
+3. Create sub-branches off main:
+    tool: dev
+    research: project-specific
+
+4. Add branch protection rules to main, dev, and any other branches that must require a review before content is merged
+
+_______________________FARUKH ADD INSTRUCTIONS
 
 ### ZenHub
 
