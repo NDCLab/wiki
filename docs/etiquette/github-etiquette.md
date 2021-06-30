@@ -132,9 +132,8 @@ When an individual completes an issue, they move it into the Review/QA pipeline 
 
 Following review and approval, issues are closed. This automatically moves them to the Closed pipeline on ZenHub.
 
-------------------QUESTION
-What parameters do we want to specify for pull requests to merge with dev?
-------------------QUESTION
+In many cases, the process of reviewing and approving work on issues will involve the preparation of content to be merged with an upstream branch. For projects focused on tool development, this would be the `dev` branch. For research projects, this might be a branch dedicated to the release of a particular conference poster, for example. Such merges are routed through a pull request and an independent review is required. One of the project leads must be tagged so they may review the suggested content prior to merging it with the upstream branch.
+
 
 ### Presentation and Feedback
 
@@ -152,9 +151,9 @@ New projects should be based on the NDCLab templates. Visit [this page](https://
 
 ## Working on `dev`
 
-All work should occur on the `dev` branch. The `main` branch is reserved for "published" information, such as pre-registrations, posters, publications, and official releases of validated software tools.
+All work should occur on the `dev` branch. The `main` branch is reserved for "published" information, such as pre-registrations, posters, publications, and official releases of validated software tools. For research projects, there is no single branch named `dev`; instead, multiple branches serve the `dev` function as a holding space for specific project releases (such as a conference poster) prior to a release to `main`.
 
-Since all work is happening on `dev`, all new branches should be created off `dev`. More information is available on the [naming conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html).
+Since all work is happening on `dev` or a `dev`-like branch, all new branches should be created off `dev`. More information is available on the [naming conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html).
 
 
 ## Publishing a Release
