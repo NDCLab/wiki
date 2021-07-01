@@ -6,7 +6,7 @@ nav_order: 4
 ---
 
 ## Antivirus
-Data security is of utmost importance. All members of the NDCLab are expected to install, and maintain up-to-date, an appropriate antivirus program on their computer prior to connecting the the FIU HPC.
+Data security is of utmost importance. All members of the NDCLab are expected to install, and maintain up-to-date, an appropriate antivirus program on their computer prior to connecting the the FIU HPC. If you are unsure of which antivirus program to install, please visit https://www.cnet.com/ and choose a FREE antivirus program that has recieved favorable reviews.
 
 ## Gaining Access
 All members of the NDCLab receive access to the lab folder on the FIU HPC. The lab manager, who is responsible for coordinating your access request, will need your FIU e-mail and Panther ID.
