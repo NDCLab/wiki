@@ -57,9 +57,11 @@ A link at the bottom of this e-mail allows you to:
 
 ## Step 5: Data Services
 
-The creation of the incoming lab member's AD account triggers an actionable e-mail from the CCF that includes completing a separate HIPAA training course. This message is sent to the e-mail associated with the new AD account. Note that if you already had an FIU AD account from a prior internship or employment, then the CCF may not properly trigger an actionable e-mail from the CCF, and, the lab manager will need to follow-up with the CCF to move the onboarding process forward. If you have a prior FIU email adress with no numbers in it (from a previous volunteer or paid postion at FIU) it is important that you communicate this to the lab manager.
+The creation of the incoming lab member's AD account triggers an actionable e-mail from the CCF that includes completing a separate HIPAA training course. This message is sent to the e-mail associated with the new AD account.
 
-It is important that you complete this training under the new login that you have been assigned (your AD account), not your student login. Once complete, click the link in the e-mail from the CCF to upload your certificate.
+(Note: if you already had an FIU AD account from a prior internship or employment, then the CCF may not properly trigger an actionable e-mail and the lab manager will need to follow-up with the CCF directly in order to move the onboarding process forward. If you previously had an FIU e-mail address with no numbers in it, it is important that you communicate this to the lab manager.)
+
+The HIPAA training course must be completed under your AD account (that is, the new login that you have just been assigned or, if you previously had an FIU internship/employment, your re-activated login). Do not complete the HIPAA training under your student login. Once complete, click the link in the e-mail from the CCF to upload your certificate.
 
 ![hipaa-requirement](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/hipaa-requirement.png)
 
