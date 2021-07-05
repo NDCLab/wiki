@@ -140,11 +140,21 @@ Repositories should be named identically to the associated project. For example:
 ### Branch Names
 By default, repositories have a `main` branch and a `dev` branch. New branches are created from the `dev` branch and are named:
 
-> `dev-[feature]-[yourname]`
+> `dev-[feature]`
 
 For example, if Bob creates a new branch to create stimuli for an experiment, he would call it:
 
-> `dev-stimuli-bob`
+> `dev-stimuli`
+
+If only a single individual is working on development of a given feature, then a single feature branch, as named above, will suffice. However, if multiple indivdiuals are working on the same feature branch, then each individuals work should occur within sub-branches that are created from the feature branch and named:
+
+For example, if Alice wants to help Bob with the `dev-stimuli` branch, she would create a new branch from `dev-stimuli` and call it:
+
+> `dev-stimuli-Alice`
+
+Additionally, Bob should also create a branch off of `dev-stimuli` and call it:
+
+> `dev-stimuli-Bob`
 
 (Note that the wiki is an exception. It does not have a `dev` branch and new branches are created directly off `main` according to the convention `[feature]-[yourname]`.)
 
@@ -168,8 +178,8 @@ Each element within REDCap is an "instrument." These should be named:
 
 Where:
 * `instrument` is the name of the instrument/survey/questionnaire, limited to 10 characters
-* `sX` is the **session** number to distinguish across different time points of a longitudinal study
-* `rX` is the **run** number to distinguish logical groupings of data collection within a particular session
+* `sX` is the **session** number to distinguish across different time points of a longitudinal study. Sessions typically occur several weeks to years apart.
+* `rX` is the **run** number to distinguish logical groupings of data collection within a particular session. Runs can occur on the same day or can occur several days apart.
 * `eX` is the **event** number to distinguish repeated use of the instrument before and after an experimental manipulation within a given run
 
 In the above, "X" is replaced by a numerical value (1, 2, 3) to indicate the ordering of data collection.  For instance, in a longitudinal study, a pre-task questionnaire to establish the "initial state" of a participant is employed. Each instrument employed is numbered distinctly:
