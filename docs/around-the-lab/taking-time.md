@@ -2,7 +2,7 @@
 layout: default
 title: Taking Time Away
 parent: Around the Lab
-nav_order: 4
+nav_order: 5
 ---
 
 
