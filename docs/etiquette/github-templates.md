@@ -11,7 +11,8 @@ nav_order: 4
 2. [Setting Up a New Project](#setting-up-a-new-project)
     1. [GitHub](#github)
     2. [ZenHub](#zenhub)
-    3. [Off to the Races](#off-to-the-races)
+    3. [HPC](#hpc)
+    4. [Off to the Races](#off-to-the-races)
 
 ## Overview
 
@@ -21,24 +22,43 @@ There are two template repositories available in GitHub for the launching of new
 
 ### GitHub
 
-1. Start with [brainBox](https://github.com/NDCLab/brainBox)
+#### Start with [brainBox](https://github.com/NDCLab/brainBox).
 
 This is where all great ideas get incubated. If you believe that the brainBox process is not appropriate for your idea, talk to the lab manager before creating any new repository on GitHub.
 
-2. When you get the green-light from the PI, create a new repo using the appropriate template repository:
+#### Create a new repo.
 
-**research projects:** https://github.com/NDCLab/template-tool
-**tool development:** https://github.com/NDCLab/template-research
+When you get the green-light from the lab director, ask the lab manager to create a new repo using the appropriate template repository:
 
-Be sure to name your new repository in accordance with the [project naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html).
+**research projects:** https://github.com/NDCLab/template-tool<br/>
+**tool development:** https://github.com/NDCLab/template-research<br/>
 
-_______________________FARUKH ADD INSTRUCTIONS
-To use a template repository, simply select
+Be sure to tell the lab manager the appropriate name for your new repository, which meets the requirements for [project naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html).
 
-Update settings to delete head branches
-_______________________FARUKH ADD INSTRUCTIONS
+Also, tell the lab manager who will be leading the project and who will be part of the initial project team so that everyone gets the correct access level on the new repository.
 
-6. Within the `main` branch, draft the readme file that guides the development of your project.
+#### Prepare your new repo for use.
+
+Before you begin using your new repository, there are several settings that need to be implemented:
+
+##### Create `dev` branch.
+Create a new branch named `dev` off the basis of the `main` branch. This is identical to how you created your own branch for updating the wiki who's-who page with your own information when you were [onboarded to GitHub](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html).
+
+##### Add branch protection rules to `main` and `dev` branches.
+
+Inside your repository on GitHub, click the 'Settings' button and select 'Branches' from the left-hand menu. You will need to "Add rule" twice, once for `dev` and once for `main`. In both cases, select "Require pull request reviews before merging" and set the number of required approving reviews at "1." Once complete, your branch protection rules should look like this:
+
+![gh_branch-protection](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_branch-protection.png)
+
+These branch protection rules ensure that content must undergo a review before any branch is merged into `dev` or `main`.
+
+##### Automatically delete head branches
+
+You will want to [check this option in your repository settings](https://docs.github.com/en/github/administering-a-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches) so that, when you review and merge the work of team members into `dev`, GitHub automatically deletes the branch they were working on (which has now been merged). This keeps your branch tree tidy. Don't worry: the branch protection rules you set up above prevent `dev` from being automatically deleted when it gets merged to `main`.
+
+#### Draft the `readme` file.
+
+Within the `dev` branch, draft the `readme.md` file that guides the development of your project.
 
 Every repository should have a succinct `readme.md` file that serves as a roadmap for the project. This is the first thing you will commit to your new repository. The readme should include:
 
@@ -46,23 +66,21 @@ Every repository should have a succinct `readme.md` file that serves as a roadma
 * a roadmap for all the planned project releases
 * major contributors to the project
 
-The template repository that you have used contains a template readme.md file that will guide you through the initial process of drafting the readme.
+The template repository that you have used contains a template `readme.md` file that will guide you through the initial process of drafting the readme.
 
-As the project progresses, the readme will be updated to include information for any content included on the `main` branch, such as pre-registrations, conference posters, or working software releases
+As the project progresses, the readme will be updated to include information for any content included on the `main` branch, such as pre-registrations, conference posters, or working software releases.
 
-7. Within the `main` branch, draft the contributing.md file that informs visitors of how to contribute. The template repository that you have used contains a template contributing.md file that will guide you through the initial process of drafting.
+#### Draft the `contributing` file.
 
-At this initial setup stage, the `main` branch will be empty except for the readme.md and contributing.md files.
+Within the `dev` branch, draft the `contributing.md` file that informs visitors of how to contribute. The template repository that you have used contains a template `contributing.md` file that will guide you through the initial process of drafting.
 
-_______________________FARUKH ADD INSTRUCTIONS
+At this initial setup stage, the `main` branch will be empty (except for the files that came with the default template, such as the license). The `dev` branch, however, will now contain your `readme.md` and `contributing.md` files.
 
-3. Create sub-branches off main:
-    tool: dev
-    research: project-specific
+#### Request the launch review.
 
-4. Add branch protection rules to main, dev, and any other branches that must require a review before content is merged
-
-_______________________FARUKH ADD INSTRUCTIONS
+Once you are satisfied with the `readme` and `contributing` files, initiate a pull request. Tag both the lab director and the lab manager.
+* The lab director will perform a [level 2 review](https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html#terminology) (or delegate such a review to another appropriate lab member) to approve your planned roadmap and merge `readme.md` and `contributing.md` to `main`.
+* The lab manager will confirm that your repository is set up with all the correct settings to ensure a smooth project launch.
 
 ### ZenHub
 
@@ -76,15 +94,16 @@ While you wait for approval of your planned roadmap, you can set up ZenHub.
 
 3. Create a [ZenHub Epic](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#defining-epics) for each planned project release, as outlined in your readme roadmap.
 
-4. Plan all project issues (which may be large and abstract at this stage) and assign them to the appropriate Epic.
+4. Plan project issues (which may be large and abstract at this stage) and assign them to the appropriate Epic.
 
 5. Organize the Project Backlog pipeline in ZenHub by putting the earliest Epic at the top, followed by its associated issues in priority order. This is followed by the next earliest Epic with its issues, and so on.
 
 6. Launch the first Epic by moving the "Epic" issue and its associated issues to the Release Backlog in ZenHub.
 
+### HPC
+xxx
+
 ### Off to the Races
 
-Once the lab director has approved your planned roadmap and merged it into `dev`, and you have set up the project in ZenHub, initiate a pull request, tagging the lab technician (for tool projects) or the lab manager (for research projects), who will verify that all the technical details of your project are properly set up. Once confirmed, he/she will merge your readme file into the main branch.
-
-Set up your [sprints inside ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#planning-sprints) and plan your first sprint meeting with your team! 
+Once the lab director has approved your planned roadmap and merged it into `main`, you have set up the project's ZenHub workspace, and your project has been added to the HPC, you are ready to launch. Set up your [sprints inside ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#planning-sprints) and plan your first sprint meeting with your team! 
 
