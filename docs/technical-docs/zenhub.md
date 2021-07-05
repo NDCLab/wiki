@@ -41,6 +41,7 @@ When a new workspace is created, it uses the ZenHub defaults. These are customiz
 | Sprint Backlog | Issues ready to be worked on in the sprint, prioritized top-to-bottom. | The Sprint Backlog is filled during a [sprint meeting](https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html#sprints). Completing all the items in the Sprint Backlog complete the sprint. |
 | In Progress | Issues currently being worked on by the team. | During the sprint, team members pull issues into the In Progress pipeline to communicate to one another that they have begun work on the issue. |
 | Review/QA | Issues open to the team for review and testing. Complete, pending feedback. | During the sprint, team members move issues into the Review/QA pipeline when they have completed the issue and are awaiting the review and approval of team members before merging and closing the issue. |
+| Done | Completed issues, pending closure. | During the sprint meeting, team members close issues from the prior sprint. The Done pipeline is a temporary holding location to assist with the sprint review dialogue. |
 | Closed | (no descriptor) | Issues move automatically into the Closed pipeline when they are completed and closed. It is recommended that you collapse the Closed pipeline (by clicking the little arrow at the top) to remove unnecessary noise in your workspace. |
 
 
