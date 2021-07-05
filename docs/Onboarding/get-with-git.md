@@ -33,7 +33,7 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 
 7. Start with [this video](https://www.youtube.com/watch?v=DVRQoVRzMIY) by Tech With Tim, which offers a broad overview of Git and GitHub while showing you both the command line interface and the GitHub interface. Do not worry about digesting *everything* that he shows in this video, but rather focus on learning the big picture lessons: key terminology, core concepts, and the commands he uses most frequently.
 
-8. Take the [quiz](https://forms.gle/Lw5uQAvGC5XQGUum6).
+8. Take the [quiz](https://forms.gle/B83WY7q1wWkpZtKV6).
 
 9. Work through [this hands-on tutorial](https://lab.github.com/lmachens/git-and-github-first-timers) inside GitHub. Once you are signed into GitHub and connected, click "Start free course." Complete the activities through #6 ("Communicating Using Markdown"), then head back over here and continue to #10 below. (The remaining activities on the GitHub tutorial are not necessary to complete the Get with Git program.)
 
