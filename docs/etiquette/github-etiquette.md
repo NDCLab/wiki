@@ -11,7 +11,8 @@ nav_order: 3
 3. [Terminology](#terminology)
 4. [Project Lifecycle](#project-lifecycle)
 5. [Opening a New Project](#opening-a-new-project)
-6. [Communication](#communication)
+6. [Publishing a Release](#publishing-a-release)
+7. [Communication](#communication)
 
 ## Overview
 
@@ -19,7 +20,7 @@ Having an agreed-upon set of standards for how team members coordinate and colla
 
 The NDCLab uses a modified [agile methodology](https://en.wikipedia.org/wiki/Agile_software_development) to organize our workflows and maximize our productivity. The core idea is that we break larger projects into smaller, iterative pieces and set ourselves time limitations on completing each of the smaller pieces. You do not need to fully understand the tenets of agile beyond the information provided on this page. If you do decide to do extracurricular reading, please be aware that we have modified some of the typical agile terminology to better meet the needs of an academic research lab.
 
-A key purpose of using this agile methodology, including the tools and processes outlined below, is to reduce the amount of time needed for meetings while keeping all team members apprised of project's status. Initiative and self-assignment of tasks is highly encouraged, along with active collaboration to solve problems and share knowledge.
+A key purpose of using this agile methodology, including the tools and processes outlined below, is to reduce the amount of time needed for meetings while keeping all team members apprised of a project's status. Initiative and self-assignment of tasks is highly encouraged, along with active collaboration to solve problems and share knowledge.
 
 ## Tools
 
@@ -27,7 +28,7 @@ A key purpose of using this agile methodology, including the tools and processes
 All lab projects live on [GitHub](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html) and make use of native features of the platform, such as issues and pull requests. If you haven't already, [get yourself onboarded](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html). 
 
 ### ZenHub
-[ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html) is a plug-in to GitHub. Issues within a GitHub repository connect automatically to the ZenHub Kanban board of associated workspaces. In general, each repository is connected to one workspace, but it is possible to connect multiple repositories within a single workspace in special circumstances where this would be beneficial to project management.
+[ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html) is a plug-in to GitHub. Issues within a GitHub repository connect automatically to the ZenHub Kanban board associated with the GitHub repository. In general, each repository is connected to one workspace, but it is possible to connect multiple repositories to a single workspace in special circumstances where this would be beneficial to project management.
 
 ## Terminology
 
@@ -35,9 +36,12 @@ All lab projects live on [GitHub](https://ndclab.github.io/wiki/docs/technical-d
 [**Scrum**](https://en.wikipedia.org/wiki/Scrum_(software_development)): a framework for deploying an agile system for project management by breaking larger projects down into manageable chunks<br/>
 [**Kanban Board**](https://en.wikipedia.org/wiki/Kanban_board): a visual depiction of project priorities and progress<br/>
 **Project**: a big idea that may comprise multiple research publications or the distribution of cool, open-source software<br/>
-[**Epic/Release**](https://help.zenhub.com/support/solutions/articles/43000010341-an-intro-to-zenhub-epics): a large narrative that is smaller than the whole project but bigger than an individual task, for example, a specific poster presentation or the release of version .1 of a software tool<br/>
-[**Issue**](https://guides.github.com/features/issues/): a feature in GitHub that is a single, well-defined, cohesive task that is accomplished on the road to completing the current epic<br/>
+[**Epic/Release**](https://help.zenhub.com/support/solutions/articles/43000010341-an-intro-to-zenhub-epics): a large narrative that is smaller than the whole project but bigger than an individual task; for example, a specific poster presentation or the beta release of a software tool<br/>
+[**Issue**](https://guides.github.com/features/issues/): a feature in GitHub that is a single, well-defined, cohesive task that is accomplished on the road to completing the current epic/release<br/>
 [**Sprint**](https://en.wikipedia.org/wiki/Scrum_Sprint): a fixed, short period of time (~1-3 weeks) into which tasks are batched and completed
+**Level 1 Review**: a good-faith attempt to catch any errors when reviewing a pull request from a labmate; the reviewer is not equally responsible for the accuracy/quality of the content being merged
+**Level 2 Review**: a thorough review of accuracy/quality of the content being merged in a pull request; the reviewer is equally responsible with the individual initiating the pull request
+
 
 (There are many other terms used in agile project management. We are focusing here on those that best describe the process used here in the lab.)
 
@@ -64,19 +68,19 @@ Almost all projects will involve more than one epic/release. This is to provide 
 * warrant a novel conference submission (in the case of a research project) or
 * encourage users to download the new software release (in the case of tool development).
 
-At the start of a project, all planned epic/release goals for a project should be explicitly stated in the `readme` file on the project's GitHub repository. Each planned epic/release should be established as a time-blocked "Epic" within ZenHub. 
+At the start of a project, all planned epic/release goals for a project should be explicitly stated in the `readme` file on the project's GitHub repository. Each planned epic/release should be established as a time-blocked "Epic" within ZenHub.
 
 An epic/release is considered complete when the improvement (be that a new version of a tool or a publication of some type) is pushed to the `main` branch of the project repository on GitHub.
 
 ### Issues (1-3 weeks)
 
-On a day-to-day basis, these big-picture epics/releases are broken down into bite-sized chunks called "issues." Issues are the primary unit of work and can be broken down into a series of sub-tasks as needed.
+On a day-to-day basis, epics/releases are broken down into bite-sized chunks called "issues." Issues are the primary unit of work and can be broken down into a series of sub-tasks as needed.
 
-Issues are created as GitHub "issues" within the project’s GitHub repository. Sub-tasks, if helpful or required, can be listed as a simple list within the issue description.
+Issues are created within the project’s GitHub repository. Sub-tasks, if helpful or required, can be listed as a simple list within the issue description.
 
-At the start of any new project, an effort is made to identify and define a majority of the issues that need to be completed to achieve the first epic/release. The issues that comprise the first release are placed in the Release Backlog pipeline on ZenHub and assigned to the associated Epic. All other issues are placed in the Project Backlog pipeline on ZenHub (where they can optionally be assigned to an upcoming epic/release or be left unassigned).
+At the start of any new project, an effort is made to identify and define a majority of the issues that need to be completed to achieve the first epic/release. The issues that comprise the first release are placed in the Release Backlog pipeline on ZenHub and assigned to the associated ZenHub Epic. All other issues are placed in the Project Backlog pipeline on ZenHub (where they can optionally be assigned to an upcoming epic/release or be left unassigned).
 
-Issues inside the Project Backlog can be relatively large and abstract. However, these issues must be refined and/or broken down further prior to moving them into the Release Backlog of the current epic/release. Completing all the work inside the Release Backlog will achieve the epic/release goal.
+Issues inside the Project Backlog can be relatively large and abstract. However, these issues must be refined and/or broken down further prior to moving them into the Release Backlog. Completing all the work inside the Release Backlog will achieve the epic/release goal.
 
 ### Sprints
 
@@ -94,7 +98,7 @@ Before being assigned to the sprint backlog, issues must:
 
 * All work for the current sprint should be completed >1 day before the next sprint meeting (**not** within four hours of the next meeting).
 * Team members should review items in the Release Backlog and add "Add to sprint?" labels to promote discussion. Only well-defined issues are added to a sprint, so issues being proposed at the next sprint meeting should be updated with adequate definitions if those are lacking.
-* An "upcoming sprint" issue is created, which remains in the New pipeline on ZenHub. All team members add their comments (>1 day prior to the meeting) to this issue to promote discussion, including:
+* An "upcoming sprint" issue is created, which remains in the New pipeline on ZenHub and serves as the agenda for the sprint meeting. All team members add their comments (>1 day prior to the meeting) to this issue to promote discussion, including:
     * what we tried and worked really well
     * what we tried and really didn't work
     * what we didn't give a fair try to
@@ -106,53 +110,47 @@ Before being assigned to the sprint backlog, issues must:
 
 The sprint meeting is broken down into three parts:
 
-1. Retrospective (<15 min: reflect on processes that did or did not work
-
+1. **Retrospective** (<15 min: reflect on processes that did or did not work<br/>
 The retrospective is an opportunity to share tips and tricks so that all members of the team can learn from the experience of others.
 
-2. Sprint Review (15 min: review what was completed and what remains incomplete)
-
+2. **Sprint Review** (15 min: review what was completed and what remains incomplete)<br/>
 All items in the Done pipeline are move to the Closed pipeline in Zenhub and discussed as needed. There is no need to discuss everything that was completed, as this information is easily viewable to all team members on the ZenHub project workspace. However, particular issues may benefit from reporting on additional details. 
 
-3. Planning (60 min: plan work for the next sprint)
-
-The Sprint Backlog in ZenHub is stocked with the issues that will be accomplished during the sprint. By the end of the meeting, all issues should have a time estimate and 75% of the issues should be assigned to specific team members (the remaining 25% can be handled by self-assignment during the sprint). All high-priority items must be assigned; lower-priority items can be self-assigned during the sprint.
-
-As part of this planning process, the time estimates should be added together to ensure that a reasonable amount of work has been tagged for the sprint.
+3. **Planning** (60 min: plan work for the next sprint)<br/>
+The Sprint Backlog in ZenHub is stocked with the issues that will be accomplished during the next sprint. By the end of the meeting, all issues should have a time estimate and 75% of the issues should be assigned to specific team members (the remaining 25% can be handled by self-assignment during the sprint). All high-priority items must be assigned; lower-priority items can be self-assigned during the sprint. As part of the planning process, the time estimates should be added together to ensure that a reasonable amount of work has been tagged for the sprint.
 
 Once issues are added to the Sprint Backlog, remove the "Add to sprint?" label to remove unnecessary visual noise on ZenHub during the sprint.
 
 #### After the Sprint Meeting
 
-Team members tackle the issues to which they have been assigned, moving the issues into the In Progress pipeline on ZenHub. Ad hoc meetings, impromptu discussions, and the labeling of issues with "Help Wanted" labels are all highly encouraged to ensure team members don't get caught up in roadblocks that slows progress. It is normal to hit roadblocks and it is therefore important to communicate these openly so that more minds can be involved in finding an elegant solution.
+Team members tackle the issues to which they have been assigned, moving the issues into the In Progress pipeline on ZenHub. Ad hoc meetings, impromptu discussions, and the labeling of issues with "Help Wanted" labels are all highly encouraged to ensure team members don't get caught up in roadblocks that slow progress. It is normal to hit roadblocks and it is therefore important to communicate these openly so that more minds can be involved in finding an elegant solution.
 
-When an individual completes an issue, they move it into the Review/QA pipeline on ZenHub and request review. Once all of an individual's tasks for the sprint are completed, they are expected to check out the ZenHub workspace and:
-* self-assign any unassigned tasks in the current sprint
-* reach out to any teammates who have posted a "Help Wanted" label
+When an individual completes an issue, they move it into the Review/QA pipeline on ZenHub and request a review. In most cases, the process of reviewing and approving work on issues involves the preparation of content to be merged with an upstream branch (such as `dev` or `dev-[feature]`). Therefore, the individual who has completed work on the issue initiates a pull request for their working branch, tagging one of the project leads to review the suggested content prior to merging it with the upstream branch. A level 1 review is required; a level 2 review is encouraged whenever possible.
 
 Following review and approval, an issue should be moved to the Done pipeline on ZenHub (but not closed until the next sprint meeting).
 
-In many cases, the process of reviewing and approving work on issues will involve the preparation of content to be merged with an upstream branch. For projects focused on tool development, this would be the `dev` branch. For research projects, this might be a branch dedicated to the release of a particular conference poster, for example. Such merges are routed through a pull request and an independent review is required. One of the project leads must be tagged in the pull request so they may review the suggested content prior to merging it with the upstream branch.
+Once all of an individual's tasks for the sprint are completed, they are expected to review the ZenHub workspace and:
+* Self-assign any unassigned tasks in the current sprint.
+* Reach out to any teammates who have posted a "Help Wanted" label.
 
 ### Presentation and Feedback
 
-For each epic/release, plan on putting together a work-in-progress presentation, to be given at a lab meeting or similar event. These presentations serve as a way to organize thinking regarding the status of the release and larger project. This is also a chance to receive feedback on the release/project.
+For each epic/release, plan on putting together a work-in-progress presentation, to be given at a lab meeting or similar event. These presentations serve as a way to organize thinking regarding the status of the release and the larger project. This is also a chance to receive feedback.
 
-Typically, the presentation will occur in the second half of the epic/release, and most often, near the end (or just after completion) of an epic/release. 
+Typically, the presentation will occur in the second half of the epic/release, and most often, near the end (or just after completion) of the epic/release. 
 
-Pending the venue, project status, and other particulars, this may be a very informal presentation with minimal slides, or a formal presentation.
+Pending the venue, project status, and other particulars, this may be a very informal presentation with minimal slides or a formal presentation.
 
 
 ## Opening a New Project
 
 New projects should be based on the NDCLab templates. Visit [this page](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html) for details.
 
+The `main` branch is reserved for "published" information, such as pre-registrations, posters, publications, and official releases of validated software tools.
 
-## Working on `dev`
+The `dev` branch reflects the most up-to-date version of the current release.
 
-All work should occur on`dev` branches. The `main` branch is reserved for "published" information, such as pre-registrations, posters, publications, and official releases of validated software tools. For the development of software tools, there is only ever one 'dev' branch, which reflects the most up-to-date version of the current release. For research projects, there is no single branch named `dev`; instead, multiple branches serve the `dev` function as a holding space for specific project releases (such as a conference poster) prior to a release to `main`.
-
-Since all work is happening on `dev` or a `dev`-like branch, all new branches should be created by branching off of `dev`. More information is available on the [naming conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html).
+Since all work will eventually be merged onto `dev` (before an ultimate merge onto `main`), all new branches should be created by branching off `dev`. More information is available on the [naming conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#github).
 
 
 ## Publishing a Release
@@ -161,12 +159,12 @@ At certain stages of each project, information will be ready for public consumpt
 
 To "publish" a release on GitHub:
 
-1. Merge the relevant branch with `dev` that contains the public-ready content. This will typically be a stand-alone folder.
+1. The project lead(s) should ensure that the `dev` branch is fully ready to deploy. This means that all content that is being "published" is well-organized and independently verified. (It is ok that some parts of future releases may still be in-progress.)
 
-2. Initiate a pull request
-------------------QUESTION
-What parameters should be in place for PR review and merge with main?
-------------------QUESTION
+2. The project lead(s) initiate a pull request, tagging the lab director for a level 2 review. He may review personally or delegate the review.
+
+Once `dev` is merged to `main`, this completes the current epic/release. The ZenHub Release Backlog, Sprint Backlog, In Progress, Review/QA, and Done pipelines should all be empty. The next epic/release is initiated by moving the Epic tile for the next planned epic/release and its associated issues into the Release Backlog.
+
 
 ## Communication
 
