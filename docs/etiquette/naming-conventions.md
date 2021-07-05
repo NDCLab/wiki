@@ -146,15 +146,13 @@ For example, if Bob creates a new branch to create stimuli for an experiment, he
 
 > `dev-stimuli`
 
-If only a single individual is working on development of a given feature, then a single feature branch, as named above, will suffice. However, if multiple indivdiuals are working on the same feature branch, then each individuals work should occur within sub-branches that are created from the feature branch and named:
+If only a single individual is working on development of a given feature, then a single feature branch, as named above, will suffice. However, if multiple individuals are working on the same feature branch, then each individual's work should occur within sub-branches that are created from the `dev-[feature]` branch. For example, if Alice wants to help Bob with the `dev-stimuli` branch, she would create a new branch from `dev-stimuli` and call it:
 
-For example, if Alice wants to help Bob with the `dev-stimuli` branch, she would create a new branch from `dev-stimuli` and call it:
+> `dev-stimuli-alice`
 
-> `dev-stimuli-Alice`
+Additionally, when Alice creates her new branch off `dev-stimuli`, Bob should also create a branch off `dev-stimuli` and call it:
 
-Additionally, Bob should also create a branch off of `dev-stimuli` and call it:
-
-> `dev-stimuli-Bob`
+> `dev-stimuli-bob`
 
 (Note that the wiki is an exception. It does not have a `dev` branch and new branches are created directly off `main` according to the convention `[feature]-[yourname]`.)
 
@@ -177,10 +175,10 @@ Each element within REDCap is an "instrument." These should be named:
 >instrument_sX_rX_eX
 
 Where:
-* `instrument` is the name of the instrument/survey/questionnaire, limited to 10 characters
+* `instrument` is the name of the instrument/survey/questionnaire, limited to 10 characters.
 * `sX` is the **session** number to distinguish across different time points of a longitudinal study. Sessions typically occur several weeks to years apart.
 * `rX` is the **run** number to distinguish logical groupings of data collection within a particular session. Runs can occur on the same day or can occur several days apart.
-* `eX` is the **event** number to distinguish repeated use of the instrument before and after an experimental manipulation within a given run
+* `eX` is the **event** number to distinguish repeated use of the instrument before and after an experimental manipulation within a given run.
 
 In the above, "X" is replaced by a numerical value (1, 2, 3) to indicate the ordering of data collection.  For instance, in a longitudinal study, a pre-task questionnaire to establish the "initial state" of a participant is employed. Each instrument employed is numbered distinctly:
 
