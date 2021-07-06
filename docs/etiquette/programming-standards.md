@@ -22,19 +22,19 @@ Standardization of the way each lab-member writes code eases [cognitive load](ht
 For any recommendations on practices, please feel free to directly reach out to the lab tech. 
 
 ## Naming
-Naming conventions are discussed thoroughly in the (naming-conventions)[https://raw.githubusercontent.com/NDCLab/wiki/main/docs/etiquette/naming-conventions.md] page. 
+Naming conventions are discussed thoroughly in the [naming-conventions](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/etiquette/naming-conventions.html) page. 
 
 ## Python
 
 - Global variables should not be used
 
-- Leave out return types and parameter types in the function header.
-    Example: Do this,
+- Leave out return types and parameter types in the function header.<br/>
+    For example, do this:
     ```python
     def funcName(a, b):
         ...
     ```
-    Not this,
+    ...not this:
     ```python
     def funcName(a: int, b: int) -> int:
         ...
@@ -44,8 +44,8 @@ Naming conventions are discussed thoroughly in the (naming-conventions)[https://
 
 - Each function should have a **single** responsibility. Functions that do multiple complex things should be broken into multiple functions. 
 
-- If a function is running into >100 lines of code or contains some potentially reusable code, and is not inseparable, further decompose the function into helper functions. 
-    Example:
+- If a function is running into >100 lines of code or contains some potentially reusable code, and is not inseparable, further decompose the function into helper functions.<br/> 
+    For example:
     ```python
     def funcName(a, b):
         # remove extension and other characters for file 
@@ -57,8 +57,7 @@ Naming conventions are discussed thoroughly in the (naming-conventions)[https://
         file_name2 =  filename[:-4] 
     ```
 
-    can be decomposed into
-
+    ...can be decomposed into:
     ```python
     def file_standardize(fn):
         file_name =  fn.lower().replace("-", "").replace("_", "").replace(" ", "")
@@ -72,8 +71,8 @@ Naming conventions are discussed thoroughly in the (naming-conventions)[https://
 - Every main feature function should contain docstrings (following [PEP 257](https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings)) that follow the format of [MNE functions](https://github.com/mne-tools/mne-python/blob/maint/0.22/mne/io/egi/egi.py#L89-L154) and describe **at most** the following:
     - A brief description as to what the function does.
     - Parameters: which inputs will be provided to the function?
-    - Throws: which exceptions will the function throw (if any).
-    - Returns: which inputs will be returned, and what changes will be made to them.
+    - Throws: which exceptions will the function throw (if any)?
+    - Returns: which inputs will be returned, and what changes will be made to them?
   
     Example:
     ```python
@@ -99,7 +98,7 @@ Naming conventions are discussed thoroughly in the (naming-conventions)[https://
 
 - Follow function, variable, package, and file-naming standards listed in issue #25.
 
-- For [documenting classes](https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings): "docstring for a class should summarize its behavior and list the public methods and instance variables. 
+- For [documenting classes](https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings): "docstring for a class should summarize its behavior and list the public methods and instance variables."<br/>
     Example:
     ```python
     class Dog(Animal):
@@ -122,17 +121,17 @@ Naming conventions are discussed thoroughly in the (naming-conventions)[https://
         """
     ```
 
-- Avoid magic numbers
-    Example:Do this,
+- Avoid magic numbers.<br/>
+    For example, do this:
     ```python
     PI = 3.14159
     circumference = PI * Math.pow(radius, 2)
     ```
-    Not this,
+    ...not this:
     ```python
     circumference = 3.14159 * Math.pow(radius, 2)
     ```
 
 
 ## Containerization
-- Updates to container content should be discrete and announced events. This will prevent unexpected behavior (sudden unsupported packages, changes in kernel) in local environments. 
+- Updates to container content should be discrete and announced events. This will prevent unexpected behavior (sudden unsupported packages, changes in kernel, etc.) in local environments. 
