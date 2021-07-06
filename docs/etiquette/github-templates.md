@@ -101,7 +101,7 @@ While you wait for approval of your planned roadmap, you can set up ZenHub.
 6. Launch the first Epic by moving the "Epic" issue and its associated issues to the Release Backlog in ZenHub.
 
 ### HPC
-xxx
+When you request the new repo from the lab manager, a project-specific folder will also be created on the HPC using the standard NDCLab filing structure. Appropriate permissions will be granted to the project lead(s) and other project team members.
 
 ### Off to the Races
 
