@@ -18,7 +18,10 @@ The NDCLab welcomes all contributions; there are many ways to contribute.
 Contributing to a project can be divided into two categories. Contributing with push access and without push access. Since lab projects are open source anyone can view the source code but not everyone can push changes to the repository.
 
 ### With Push Access
-Lab members with push access to a project create new branches (similar to how a new branch is created to update the who's who page as part of the [Get with Git program](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html)). These branches are merged with `dev` or `main` in accordance with the lab's [GitHub workflow](https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html).
+
+![gh_push-workflow](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_push-workflow)
+
+Lab members with push access to a project create new branches (similar to how a new branch is created to update the who's who page as part of the [Get with Git program](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html)). These branches are merged with `dev` in accordance with the lab's [GitHub workflow](https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html).
 
 ### Without Push Access
 
@@ -34,7 +37,7 @@ The NDCLab prefers contributions via a fork and pull, but we recognize that cont
 Contributions to the lab wiki are **highly** encouraged, from the correction of typos to creation of new, useful pages.
 
 ### Slack
-Fully onboarded lab members can additionally contribute to the lab more holistically by sharing information on Slack, including answering teammate questions posted on #general and #tech.
+Fully onboarded lab members can additionally contribute to the lab more holistically by sharing information on [Slack](https://ndclab.github.io/wiki/docs/Onboarding/slack-setup.html), including answering teammate questions posted on #general and #tech.
 
 ### Lab Meeting
 Fully onboarded lab members are encouraged to contribute to the agenda for the [weekly lab meeting](https://ndclab.github.io/wiki/docs/around-the-lab/lab-meeting.html) with relevant topics.
