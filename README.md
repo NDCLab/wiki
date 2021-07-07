@@ -1,24 +1,25 @@
 # wiki
 
-Comprehensive NDC documentation https://ndclab.github.io/wiki/
+Comprehensive NDC Lab documentation https://ndclab.github.io/wiki/
 
 ## Git Workflow 
 
-![ndcworkflow](https://user-images.githubusercontent.com/26397102/115577429-0b145300-a28a-11eb-9487-423750fd981a.png)
+![ndcworkflowmain](https://user-images.githubusercontent.com/26397102/119031107-521c6380-b970-11eb-8f8f-59c0dae17333.png)
+
 
 Folder/branch organization should follow this convention:
 
-`->gh-pages`
+`->main`
 - Up to date and live production branch with properly reviewed changes
 - *no direct commits*
 
-`->gh-pages-feature-[featureName]`
-- Ongoing development and testing of feature to be pull requested into `gh-pages` 
+`->main-feature-[featureName]`
+- Ongoing development and testing of feature to be pull requested into `main` 
 - *no direct commits*
 
-`-->gh-pages--[featureName]-[yourName]`
-- *only* branch available for personal development, must be branched off of `gh-pages-feature-[featureName]` branch
-- Merged into `-->dev-feature-[featureName]` after a pull-request (code review)
+`-->main-[featureName]-[yourName]`
+- *only* branch available for personal development, must be branched off of `main-feature-[featureName]` branch
+- Merged into `-->main-[featureName]-[featureName]` after a pull-request (code review)
 
 ## Directory/Navbar Structure 
 
@@ -65,6 +66,80 @@ wiki
 
 Jekyll theme detailed in original [developer repo](https://github.com/pmarsceill/just-the-docs)
 
+### Building site on local
+To view what the site would look like with the applied formatting and styles as seen on the live site, build a local copy using the listed steps. 
+
+All commands listed in a quote-block are terminal commands. 
+
+After completing the listed steps, only `bundle exec jekyll serve` is the only command needed to build the local site, unless the gem-files are updated. 
+
+#### Windows/Linux 
+
+1. Navigate to your system's root folder and install Ruby using the following [documentation](https://www.ruby-lang.org/en/documentation/installation/).
+
+2. Install bundler and jekyll by running:
+    > gem install jekyll bundler
+
+3. Init the wiki using
+    > bundle init 
+
+4. This will create a gemfile called `Gemfile`. Add the following to this newly created file: 
+    ```ruby
+    gem "just-the-docs"
+    gem "jekyll-remote-theme"
+    ```
+
+5. Install the newly listed gems using: 
+    > bundle install
+
+6. Add the following block anywhere in the `_config.yml` file
+    ```yml
+    plugins:
+        - jekyll-remote-theme
+    ```
+
+7. Run the following command to build the website on your local machine. 
+    > bundle exec jekyll serve
+
+#### MacOS
+MacOS comes with a default system installation for Ruby. However, it's advisable to use a seperate version of Ruby installed using "homebrew" to avoid permission errors.
+
+1. Navigate to your system's root folder and install command-line-tools 
+    > xcode-select --install
+
+    > export SDKROOT=$(xcrun --show-sdk-path)
+
+2. Install Homebrew by following the instructions on the [Homebrew homepage](https://brew.sh/) to paste a specific command into your Terminal.
+
+3. Install Ruby using homebrew
+    > brew install ruby
+
+    > echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.bash_profile
+
+5. Install bundler and jekyll by running:
+    > gem install --user-install bundler jekyll
+
+6. Navigate to your local `wiki` repository and initialize the repo.
+    > cd wiki
+    > bundle init 
+
+7. This will create a gemfile called `Gemfile`. Add the following to this newly created file: 
+    ```ruby
+    gem "just-the-docs"
+    gem "jekyll-remote-theme"
+    ```
+
+8. Install the newly listed gems using: 
+    > bundle install
+
+9. Add the following block anywhere in the `_config.yml` file
+    ```yml
+    plugins:
+        - jekyll-remote-theme
+    ```
+
+10. Run the following command to build the website on your local machine. 
+    > bundle exec jekyll serve
 
 ### Page Creation 
 

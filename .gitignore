@@ -6,3 +6,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Gemfiles
+Gemfile
+Gemfile.lock

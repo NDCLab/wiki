@@ -2,6 +2,7 @@
 layout: default
 title: Python CI Workflow
 parent: Technical Documentation
+nav_order: 6
 ---
 
 # Python CI Workflow
@@ -44,28 +45,28 @@ to install the Python dependencies needed using `pip` to run the checks.
 
 Once you upload changes you can access the GitHub Actions by going to the "Actions" tab:
 
-![actions](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/gh_actions/actions.png)
+![actions](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/gh_actions/actions.png)
 
 You will have workflows on the left, these are custom named CI workflows. By default all Python
 projects will have `Python-CI` which will have the lint check, code style check, and python tests
 check.
 
-![workflows](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/gh_actions/workflows.png)
+![workflows](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/gh_actions/workflows.png)
 
 On the right, you will see "All workflows" which is a list of all results from running the actions.
 
 ![all
-workflows](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/gh_actions/all_workflows.png)
+workflows](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/gh_actions/all_workflows.png)
 
 To see a more detailed look click on the name in bold:
 
-![check](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/gh_actions/press_build.png)
+![check](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/gh_actions/press_build.png)
 
 Here you will see the information for the job that was run and the to see the output log for the job
 click on the floating build button:
 
 ![build log
-output](https://raw.githubusercontent.com/NDCLab/wiki/gh-pages/docs/_assets/gh_actions/log_output.png)
+output](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/gh_actions/log_output.png)
 
 > Note: Builds will run for the specific branch you have pushed, as long as the YAML configuration
 > files exists so make sure when creating a feature branch that the `.github/workflow/` directory
