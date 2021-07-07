@@ -15,14 +15,14 @@ nav_order: 2
 * [Containerization](#Containerization)
 
 ## Introduction
-The following documentation details programming standards used the by lab for various protocols, programming languages, and tools.
+The following documentation details programming standards used by the lab for various protocols, programming languages, and tools.
 
 Standardization of the way each lab-member writes code eases [cognitive load](https://en.wikipedia.org/wiki/Cognitive_load) which directly supports debugging, code legibility, and future development. 
 
 For any recommendations on practices, please feel free to directly reach out to the lab tech. 
 
 ## Naming
-Naming conventions are discussed thoroughly in the [naming-conventions](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/etiquette/naming-conventions.html) page. 
+Naming conventions for functions, variables, packages, and files are discussed thoroughly in the [naming-conventions](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/etiquette/naming-conventions.html) page. 
 
 ## Python
 
@@ -95,8 +95,6 @@ Naming conventions are discussed thoroughly in the [naming-conventions](https://
     This documentation should be as **non-restrictive** as possible. That is, minimize implicit preconditions (don't make assumptions on user input) and maximize implicit postconditions. This will ensure that features are resilient and break correctly and informatively when improper input is provided. 
 
     Note that if the documentation for any of these categories is empty, it is not required to list it.  For example, a function that returns nothing will likewise have no "returns" listed in the docstring. 
-
-- Follow function, variable, package, and file-naming standards listed in issue #25.
 
 - For [documenting classes](https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings): "docstring for a class should summarize its behavior and list the public methods and instance variables."<br/>
     Example:
