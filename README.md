@@ -4,11 +4,11 @@ Comprehensive NDC Lab documentation https://ndclab.github.io/wiki/
 
 ## Git Workflow 
 
-### Main 
+### main 
 The main branch reflects the content of the live site. Commits cannot be made directly to this branch, and all changes must be reviewed as a pull-request before merged. 
 
-### content-<name>
-Any new branch must be named <contentDescription>-<name>. This will reflect the new content being added and the original author. For example, "updateReadMe-farukh". 
+### content-name
+Any new branch must be named "contentDescription-name." This will reflect the new content being added and the original author. For example, "updateREADME-farukh". 
 
 This branch will be reviewed by a pull-request before being merged into `main`. 
 
