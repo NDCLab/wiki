@@ -5,34 +5,47 @@ parent: Etiquette
 nav_order: 2
 ---
 
-### Contents
+![random_number](https://user-images.githubusercontent.com/26397102/124515039-73b09d80-ddac-11eb-98b4-cf4d8905dfa3.png)
+
+## Outline 
+
+* [Introduction](#Introduction)
+* [Naming](#Naming)
+* [Python](#Python)
+* [Containerization](#Containerization)
+
+## Introduction
+The following documentation details programming standards used by the lab for various protocols, programming languages, and tools.
+
+Standardization of the way each lab-member writes code eases [cognitive load](https://en.wikipedia.org/wiki/Cognitive_load) which directly supports debugging, code legibility, and future development. 
+
+For any recommendations on practices, please feel free to directly reach out to the lab tech. 
+
+## Naming
+Naming conventions for functions, variables, packages, and files are discussed thoroughly in the [naming-conventions](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/etiquette/naming-conventions.html) page. 
 
 ## Python
 
 - Global variables should not be used
 
-- Leave out return types and parameter types in the function header.
-    Example: Do this,
+- Leave out return types and parameter types in the function header.<br/>
+    For example, do this:
     ```python
     def funcName(a, b):
         ...
     ```
-    Not this,
+    ...not this:
     ```python
     def funcName(a: int, b: int) -> int:
         ...
     ```
 
 - Compartmentalize features into modules. 
-    Example: 
-    ```python
-    import final-reject as fj
-    fj.final_reject(raw)
-    ```
 
-- Each function should have responsibility for a **single** part of its' module's functionality. Functions that do multiple things should be broken into multiple functions. This ensures reusability & relaxes cognitive load. 
-     - If a function is running into >100 lines of code or contains some potentially reusable code, and is not inseparable, further decompose the function into helper functions. 
-    Example:
+- Each function should have a **single** responsibility. Functions that do multiple complex things should be broken into multiple functions. 
+
+- If a function is running into >100 lines of code or contains some potentially reusable code, and is not inseparable, further decompose the function into helper functions.<br/> 
+    For example:
     ```python
     def funcName(a, b):
         # remove extension and other characters for file 
@@ -44,8 +57,7 @@ nav_order: 2
         file_name2 =  filename[:-4] 
     ```
 
-    can be decomposed into
-
+    ...can be decomposed into:
     ```python
     def file_standardize(fn):
         file_name =  fn.lower().replace("-", "").replace("_", "").replace(" ", "")
@@ -59,14 +71,10 @@ nav_order: 2
 - Every main feature function should contain docstrings (following [PEP 257](https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings)) that follow the format of [MNE functions](https://github.com/mne-tools/mne-python/blob/maint/0.22/mne/io/egi/egi.py#L89-L154) and describe **at most** the following:
     - A brief description as to what the function does.
     - Parameters: which inputs will be provided to the function?
-    - ~~Preconditions: what input preconditions should the user of the function abide by to ensure correct behavior.~~
-    - ~~Postconditions: what will the function guarantee in its output.~~
-    - Throws: which exceptions will the function throw (if any).
-    - ~~Modifies: which inputs will be modified (if any).~~
-    - Returns: which inputs will be returned, and what changes will be made to them.
-    - ~~A small example of how the function should work, if needed.~~
+    - Throws: which exceptions will the function throw (if any)?
+    - Returns: which inputs will be returned, and what changes will be made to them?
   
-        Example:
+    Example:
     ```python
     def add_up(a, b):
         """A function that returns the sum of two inputs 
@@ -76,10 +84,6 @@ nav_order: 2
             any integer
         b : in
             any integer
-
-        Postconditions
-        ----------
-        add_up(a, b) == a + b
 
         Returns 
         ----------
@@ -92,14 +96,7 @@ nav_order: 2
 
     Note that if the documentation for any of these categories is empty, it is not required to list it.  For example, a function that returns nothing will likewise have no "returns" listed in the docstring. 
 
-- Follow function, variable, package, and file-naming standards listed in issue #25.
----------------------FROM JESS, #25 IS NOW THE NAMING CONVENTIONS WIKI PAGE FOR YOUR CROSS-REFERENCING
-
-
-- Every repository should have a succinct `readme.md` that guides development and points to relevant data.
----------------------FROM JESS, THE ABOVE WILL BE INCORPORATED INTO GITHUB ETIQUETTE OR GITHUB TEMPLATES, YOU CAN DELETE HERE
-
-- for [documenting classes](https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings): "docstring for a class should summarize its behavior and list the public methods and instance variables. 
+- For [documenting classes](https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings): "docstring for a class should summarize its behavior and list the public methods and instance variables."<br/>
     Example:
     ```python
     class Dog(Animal):
@@ -122,29 +119,17 @@ nav_order: 2
         """
     ```
 
+- Avoid magic numbers.<br/>
+    For example, do this:
+    ```python
+    PI = 3.14159
+    circumference = PI * Math.pow(radius, 2)
+    ```
+    ...not this:
+    ```python
+    circumference = 3.14159 * Math.pow(radius, 2)
+    ```
+
+
 ## Containerization
-- Updates to container content should be discrete and announced events. This will prevent unexpected behavior (sudden unsupported packages, changes in kernel) in local environments. 
-
-
-
-
-
----------------------FROM YANBIN, TO ADD
-1. Jess incorporated this one into naming-conventions.md already.
-
-2. Something might be added into commenting besides your perfect example:
-Leave author info at the beginning of python files, including original author and authors who modified code (not only for credit, but also for the person that we can turn to), example:
-
-```
-# Authors: xxx <xxx@xxx.com> - original Author
-#          xxx <xxx@xxx.com> - fix the bug for xxx
-```
-
-for authors who modify code should also comment in the place where the modification happens. 
-```
-# fix the bug for xxx by who
-math.floor(a + b)
-```
-
-3. Avoid magic numbers.
----------------------FROM YANBIN, TO ADD
+- Updates to container content should be discrete and announced events. This will prevent unexpected behavior (sudden unsupported packages, changes in kernel, etc.) in local environments. 
