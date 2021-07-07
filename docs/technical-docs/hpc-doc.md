@@ -101,9 +101,9 @@ Each project will have a directory in this folder to house de-identified and enc
 Project leads, approved project members, and lab staff will have sole read and write access to the entire directory, while external lab members will be able to only view publicly-available data. 
 
 ### scripts
-Similarily, each project will also have a directory in `scripts` that contains pertinent code cloned in from GitHub. This code is updated weekly. 
+Similarily, each project will also have a directory in `scripts` that contains pertinent code cloned in from GitHub. This code is updated daily via [cron](https://en.wikipedia.org/wiki/Cron), but can be manually updated `git pull` if the need arises. 
 
-The additional `devOps` folder contains scripts used for lab-wide organization. 
+The additional `devOps` folder contains scripts used for lab-wide cluster organization. 
 ### analyses
 Finally, each ongoing project will have a folder in the `analyses` directory, which will contain cleaned datasets, plots, and various statistics.
 
@@ -119,7 +119,7 @@ However, Dockerfiles can be used with Singularity on the HPC, and making the jum
 
 ## Using Dockerfile with Singularity
 
-If the singularity file has not already been created on the cluster, then try the following: 
+If the singularity file has not already been created on the cluster, but a dockerfile image exists, then follow the steps outlined below: 
 
 1. After building the intended image to use with Singularity, run the following command to view the Image ID. 
 ```
@@ -149,12 +149,21 @@ singularity build <myImage>.sif docker-archive://<myImage>.tar
 ```
 
 ## Slurm
-For anything that goes beyond running basic lines of code, a job must be submitted so that the compute nodes can properly handle tasks.
+For anything that goes beyond running basic lines of code, a job must be submitted so that the compute nodes can properly handle tasks. Note, this is a **requirement** on the HPC, as login nodes are not the intended resource for computation.
+
+<span style="color:red">Constant improper utilization of login node resources can lead to a ban from the cluster.</span>
+
+![Napoleon_inexile](https://user-images.githubusercontent.com/26397102/124790916-94e2cc80-df19-11eb-89e6-7281c5980101.jpg)  
+*"if only I used slurm more often"*
 
 To create a job, a [slurm](https://slurm.schedmd.com/documentation.html) file must be created. The file below represents a sample Slurm script where a conda base environment is being activated: 
 
 ```yml
 #!/bin/bash
+#SBATCH --qos medium
+#SBATCH --account iacc_gbuzzell
+#SBATCH --partition 6g-per-core
+
 #SBATCH --job-name=myjob         # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
@@ -169,23 +178,17 @@ conda activate
 python sample.py
 ```
 
+The first 3 lines of the script specify the "private" queue used for the lab.  Always specify 'medium' and select one of the medium machines.
+
 ## Jupyter
 
 1. Launch the Panther desktop from the [HPC desktop](https://wwww.hpcgui.fiu.edu):
 
-<img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/launching-panther-desktop.png" width="800" height="600">
+<img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/launching-panther-desktop.png" width="800" height="400">
 
 
 2. Once the desktop has launched, open the terminal. Load conda, then jupyter.
 
-<img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/terminal-actions-conda-jupyter.png" width="800" height="600">
+<img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/terminal-actions-conda-jupyter.png" width="800" height="300">
 
 Note: we use a [conda environment](http://ircc.fiu.edu/custom-environments-and-package-installation-r-and-python/) for our scripts for version control. (We do not use pip.)
-
-## Accessing the Private Queue on the HPC
-
-1. Specify a slurm script.
-    * Note private cue at top.
-    * Always specify 'medium' and select one of the medium machines.
-
-![jupyter-bash-specs](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/jupyter-bash-specs.png)
