@@ -91,24 +91,24 @@ The left and right diagrams represent the varying read & execute privileges and 
 
 ![colorcode](https://user-images.githubusercontent.com/26397102/122824230-607ed780-d2ae-11eb-81bc-93011d4569c4.png)
 
-All lab members are part of the NDCLab, but only a select few members are part of specific project. This results in specific privileges given to select members to ensure data compliance. For example, a lab member has read & execute privileges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of the `data/project-A/`. 
+All lab members are part of the NDCLab, but only a select few members are part of a specific project. This results in specific privileges given to select members to ensure data compliance. For example, a lab member has read and execute privileges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of `data/project-A/`. 
 
 The main directories -- `data`, `scripts`, and `analyses` -- are described below.
 
 ### data
-Each project will have a directory in this folder to house de-identified and encrypted data.
+Each project has a directory in this folder to house de-identified and encrypted data.
 
 Project leads, approved project members, and lab staff will have sole read and write access to the entire directory, while external lab members will be able to only view publicly-available data. 
 
 ### scripts
-Similarily, each project will also have a directory in `scripts` that contains pertinent code cloned in from GitHub. This code is updated daily via [cron](https://en.wikipedia.org/wiki/Cron), but can be manually updated `git pull` if the need arises. 
+Similarily, each project has a directory in `scripts` that contains pertinent code cloned in from GitHub. This code is updated daily via [cron](https://en.wikipedia.org/wiki/Cron), but can be manually updated `git pull` if the need arises. 
 
 The additional `devOps` folder contains scripts used for lab-wide cluster organization. 
 ### analyses
-Finally, each ongoing project will have a folder in the `analyses` directory, which will contain cleaned datasets, plots, and various statistics.
+Finally, each ongoing project has a folder in the `analyses` directory, which contains cleaned datasets, plots, and various statistics.
 
 ## Git
-By default, [Git](https://ndclab.github.io/wiki/docs/git-and-github) comes installed on the HPC cluster. However, without properly configuring an email address and user name, and linking a GitHub account, users have read-only privileges when it comes to cloning or forking from Github. 
+By default, [Git](https://ndclab.github.io/wiki/docs/git-and-github) comes installed on the HPC cluster. However, without properly configuring an email address and user name, and linking a GitHub account, users have read-only privileges when it comes to cloning or forking from GitHub. 
 
 To link a GitHub account to the HPC, follow the steps outlined the FIU Neuro Onboarding [link](https://github.com/fiuneuro/Onboarding#setting-up-git-on-the-hpc). 
 
@@ -151,7 +151,7 @@ singularity build <myImage>.sif docker-archive://<myImage>.tar
 ## Slurm
 For anything that goes beyond running basic lines of code, a job must be submitted so that the compute nodes can properly handle tasks. Note, this is a **requirement** on the HPC, as login nodes are not the intended resource for computation.
 
-<span style="color:red">Constant improper utilization of login node resources can lead to a ban from the cluster.</span>
+<span style="color:red">Repeated improper utilization of login node resources can lead to a ban from the cluster.</span>
 
 ![Napoleon_inexile](https://user-images.githubusercontent.com/26397102/124790916-94e2cc80-df19-11eb-89e6-7281c5980101.jpg)  
 *"if only I used slurm more often"*
@@ -182,6 +182,8 @@ The first 3 lines of the script specify the "private" queue used for the lab.  A
 
 ## Jupyter
 
+To use a Jupyter Notebook on the HPC:
+   
 1. Launch the Panther desktop from the [HPC desktop](https://wwww.hpcgui.fiu.edu):
 
 <img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/launching-panther-desktop.png" width="800" height="400">
