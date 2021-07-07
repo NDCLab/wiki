@@ -4,22 +4,13 @@ Comprehensive NDC Lab documentation https://ndclab.github.io/wiki/
 
 ## Git Workflow 
 
-![ndcworkflowmain](https://user-images.githubusercontent.com/26397102/119031107-521c6380-b970-11eb-8f8f-59c0dae17333.png)
+### main 
+The main branch reflects the content of the live site. Commits cannot be made directly to this branch, and all changes must be reviewed as a pull-request before merged. 
 
+### content-name
+Any new branch must be named "contentDescription-name." This will reflect the new content being added and the original author. For example, "updateREADME-farukh". 
 
-Folder/branch organization should follow this convention:
-
-`->main`
-- Up to date and live production branch with properly reviewed changes
-- *no direct commits*
-
-`->main-feature-[featureName]`
-- Ongoing development and testing of feature to be pull requested into `main` 
-- *no direct commits*
-
-`-->main-[featureName]-[yourName]`
-- *only* branch available for personal development, must be branched off of `main-feature-[featureName]` branch
-- Merged into `-->main-[featureName]-[featureName]` after a pull-request (code review)
+This branch will be reviewed by a pull-request before being merged into `main`. 
 
 ## Directory/Navbar Structure 
 
