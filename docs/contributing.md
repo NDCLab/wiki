@@ -19,7 +19,7 @@ Contributing to a project can be divided into two categories. Contributing with 
 
 ### With Push Access
 
-![gh_push-workflow](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_push-workflow)
+![gh_push-workflow](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_push-workflow.png)
 
 Lab members with push access to a project create new branches (similar to how a new branch is created to update the who's who page as part of the [Get with Git program](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html)). These branches are merged with `dev` in accordance with the lab's [GitHub workflow](https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html).
 
