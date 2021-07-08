@@ -54,7 +54,7 @@ When future spin-offs of a project are envisaged, the original project is named 
 
 In the latter two examples, informativeness has been sacrificed for length. RWE is an acronym for real-world-errors, which was considered too long for default usage.
 
-Project names are used as top-level folder names on GitHub and Google Drive.
+Project names are used as top-level folder names on GitHub, the HPC, and Google Drive.
 
 ### Folder Names
 
@@ -105,7 +105,7 @@ Whenever dates are used, the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) 
 
 ## Code
 
-In general, all lab code should align with the conventions used in [PEP 8](https://www.python.org/dev/peps/pep-0008/#naming-conventions) and [BIDS](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#file-name-structure). Always use descriptive names that will help others understand your code.
+In general, all lab code should align with the conventions used in [PEP 8](https://www.python.org/dev/peps/pep-0008/#naming-conventions) and [BIDS](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#file-name-structure). Always use descriptive names that will help others understand your code. Additional information on programming standards is available on the [associated wiki page](https://ndclab.github.io/wiki/docs/etiquette/programming-standards.html).
 
 ### Function and Method Names
 

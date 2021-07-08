@@ -12,7 +12,8 @@ nav_order: 4
     1. [GitHub](#github)
     2. [ZenHub](#zenhub)
     3. [HPC](#hpc)
-    4. [Off to the Races](#off-to-the-races)
+    4. [Google Drive](#google-drive)
+    5. [Off to the Races](#off-to-the-races)
 
 ## Overview
 
@@ -30,8 +31,8 @@ This is where all great ideas get incubated. If you believe that the brainBox pr
 
 When you get the green-light from the lab director, ask the lab manager to create a new repo using the appropriate template repository:
 
-**research projects:** https://github.com/NDCLab/template-tool<br/>
-**tool development:** https://github.com/NDCLab/template-research<br/>
+* research projects: https://github.com/NDCLab/template-tool
+* tool development: https://github.com/NDCLab/template-research
 
 Be sure to tell the lab manager the appropriate name for your new repository, which meets the requirements for [project naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html).
 
@@ -41,10 +42,10 @@ Also, tell the lab manager who will be leading the project and who will be part 
 
 Before you begin using your new repository, there are several settings that need to be implemented:
 
-##### Create `dev` branch.
+##### 1. Create `dev` branch.
 Create a new branch named `dev` off the basis of the `main` branch. This is identical to how you created your own branch for updating the wiki who's-who page with your own information when you were [onboarded to GitHub](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html).
 
-##### Add branch protection rules to `main` and `dev` branches.
+##### 2. Add branch protection rules to `main` and `dev` branches.
 
 Inside your repository on GitHub, click the 'Settings' button and select 'Branches' from the left-hand menu. You will need to "Add rule" twice, once for `dev` and once for `main`. In both cases, select "Require pull request reviews before merging" and set the number of required approving reviews at "1." Once complete, your branch protection rules should look like this:
 
@@ -52,7 +53,7 @@ Inside your repository on GitHub, click the 'Settings' button and select 'Branch
 
 These branch protection rules ensure that content must undergo a review before any branch is merged into `dev` or `main`.
 
-##### Automatically delete head branches
+##### 3. Automatically delete head branches
 
 You will want to [check this option in your repository settings](https://docs.github.com/en/github/administering-a-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches) so that, when you review and merge the work of team members into `dev`, GitHub automatically deletes the branch they were working on (which has now been merged). This keeps your branch tree tidy. Don't worry: the branch protection rules you set up above prevent `dev` from being automatically deleted when it gets merged to `main`.
 
@@ -66,13 +67,13 @@ Every repository should have a succinct `readme.md` file that serves as a roadma
 * a roadmap for all the planned project releases
 * major contributors to the project
 
-The template repository that you have used contains a template `readme.md` file that will guide you through the initial process of drafting the readme.
+The template repository used to create your new project repo contains a template `readme.md` file that will guide you through the initial process of drafting the readme.
 
-As the project progresses, the readme will be updated to include information for any content included on the `main` branch, such as pre-registrations, conference posters, or working software releases.
+As the project progresses, the readme must be updated to include information for any content included on the `main` branch, such as pre-registrations, conference posters, or working software releases.
 
 #### Draft the `contributing` file.
 
-Within the `dev` branch, draft the `contributing.md` file that informs visitors of how to contribute. The template repository that you have used contains a template `contributing.md` file that will guide you through the initial process of drafting.
+Within the `dev` branch, draft the `contributing.md` file that informs visitors of how to contribute. The template repository used to create your new project repo contains a template `contributing.md` file that will guide you through the initial process of drafting.
 
 At this initial setup stage, the `main` branch will be empty (except for the files that came with the default template, such as the license). The `dev` branch, however, will now contain your `readme.md` and `contributing.md` files.
 
@@ -86,7 +87,7 @@ Once you are satisfied with the `readme` and `contributing` files, initiate a pu
 
 While you wait for approval of your planned roadmap, you can set up ZenHub.
 
-1. Click the ZenHub tab within your new repository. This automatically opens a page so you can set up a new ZenHub workspace. Input your project name as the workspace name and a short descriptor. ZenHub automatically connects to the GitHub repository where you started. Click "Create Workspace."
+1. Click the ZenHub tab within your new repository. This automatically opens a page so that you can set up a new ZenHub workspace. Input your project name as the workspace name and a short descriptor. ZenHub automatically connects to the GitHub repository where you started. Click "Create Workspace."
 
 ![zh_new-workspace](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_new-workspace.png)
 
@@ -98,10 +99,13 @@ While you wait for approval of your planned roadmap, you can set up ZenHub.
 
 5. Organize the Project Backlog pipeline in ZenHub by putting the earliest Epic at the top, followed by its associated issues in priority order. This is followed by the next earliest Epic with its issues, and so on.
 
-6. Launch the first Epic by moving the "Epic" issue and its associated issues to the Release Backlog in ZenHub.
+6. Launch the first Epic by moving the "Epic" issue and its associated issues to the *Release Backlog* in ZenHub.
 
 ### HPC
 When you request the new repo from the lab manager, a project-specific folder will also be created on the HPC using the standard NDCLab filing structure. Appropriate permissions will be granted to the project lead(s) and other project team members.
+
+### Google Drive
+When you request the new repo from the lab manager, a project-specific folder will also be created on the Google Drive. Appropriate permissions will be granted to the project lead(s) and other project team members.
 
 ### Off to the Races
 
