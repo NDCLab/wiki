@@ -2,7 +2,7 @@
 layout: default
 title: Slack Setup
 parent: Onboarding
-nav_order: 7
+nav_order: 5
 ---
 
 # Joining Slack
