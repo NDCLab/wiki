@@ -11,9 +11,10 @@ nav_order: 4
 2. [Setting Up a New Project](#setting-up-a-new-project)
     1. [GitHub](#github)
     2. [ZenHub](#zenhub)
-    3. [HPC](#hpc)
-    4. [Google Drive](#google-drive)
-    5. [Off to the Races](#off-to-the-races)
+    3. [Slack](#slack)
+    4. [HPC](#hpc)
+    5. [Google Drive](#google-drive)
+    6. [Off to the Races](#off-to-the-races)
 
 ## Overview
 
@@ -34,9 +35,10 @@ When you get the green-light from the lab director, ask the lab manager to creat
 * research projects: https://github.com/NDCLab/template-tool
 * tool development: https://github.com/NDCLab/template-research
 
-Be sure to tell the lab manager the appropriate name for your new repository, which meets the requirements for [project naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html).
-
-Also, tell the lab manager who will be leading the project and who will be part of the initial project team so that everyone gets the correct access level on the new repository.
+Be sure to tell the lab manager:
+* the appropriate name for your new repository (which meets the requirements for [project naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html))
+* a pithy description of the project that will appear on the main lab GitHub page
+* who will be leading the project and who will be part of the initial project team (so that everyone gets the correct access level on the new repository)
 
 #### Prepare your new repo for use.
 
@@ -87,7 +89,7 @@ Once you are satisfied with the `readme` and `contributing` files, initiate a pu
 
 While you wait for approval of your planned roadmap, you can set up ZenHub.
 
-1. Click the ZenHub tab within your new repository. This automatically opens a page so that you can set up a new ZenHub workspace. Input your project name as the workspace name and a short descriptor. ZenHub automatically connects to the GitHub repository where you started. Click "Create Workspace."
+1. Click the ZenHub tab within your new repository. This automatically opens a page so that you can set up a new ZenHub workspace. Input your project name as the workspace name and the short descriptor. ZenHub automatically connects to the GitHub repository where you started. Click "Create Workspace."
 
 ![zh_new-workspace](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_new-workspace.png)
 
@@ -100,6 +102,9 @@ While you wait for approval of your planned roadmap, you can set up ZenHub.
 5. Organize the Project Backlog pipeline in ZenHub by putting the earliest Epic at the top, followed by its associated issues in priority order. This is followed by the next earliest Epic with its issues, and so on.
 
 6. Launch the first Epic by moving the "Epic" issue and its associated issues to the *Release Backlog* in ZenHub.
+
+### Slack
+When you request the new repo from the lab manager, a new Slack channel will be created. Appropriate permissions will be granted to the project lead(s) and other project team members.
 
 ### HPC
 When you request the new repo from the lab manager, a project-specific folder will also be created on the HPC using the standard NDCLab filing structure. Appropriate permissions will be granted to the project lead(s) and other project team members.
