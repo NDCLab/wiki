@@ -57,7 +57,7 @@ A link at the bottom of this e-mail allows you to:
 
 ## Step 5: Data Services
 
-The creation of the incoming lab member's AD account triggers an actionable e-mail from the CCF that includes completing a separate HIPAA training course. This message is sent to the e-mail associated with the new AD account.
+The creation of the incoming lab member's AD account triggers an actionable e-mail from the CCF that includes completing a separate HIPAA training course. This message may be sent to either the e-mail associated with the new AD account or the student e-mail account.
 
 (Note: if you already had an FIU AD account from a prior internship or employment, then the CCF may not properly trigger an actionable e-mail and the lab manager will need to follow-up with the CCF directly in order to move the onboarding process forward. If you previously had an FIU e-mail address with no numbers in it, it is important that you communicate this to the lab manager.)
 
