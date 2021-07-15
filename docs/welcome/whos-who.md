@@ -55,5 +55,12 @@ nav_order: 2
 
 ### Junior Research Assistants
 
+| ![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | anaNDClab |
+| research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder|
+| hobbies | painting, drawing, and watching crime documentaries. |
 
 ### Junior Research Technicians
