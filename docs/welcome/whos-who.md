@@ -60,7 +60,7 @@ nav_order: 2
 | pronouns | she/her/hers |
 | location | Miami, FL |
 | GitHub | anaNDClab |
-| research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder.|
+| research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder|
 | hobbies | painting, drawing, and watching crime documentaries. |
 
 ### Junior Research Technicians
