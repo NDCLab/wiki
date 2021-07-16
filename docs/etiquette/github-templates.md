@@ -26,7 +26,7 @@ All new projects require the creation of a new Github repository by the lab mana
 
 #### Start with [brainBox](https://github.com/NDCLab/brainBox).
 
-This is where all great ideas get incubated. If you believe that the brainBox process is not appropriate for your idea, talk to the lab manager or PI about directly opening a new repository on Github without first going through the brainBox.
+This is where all great ideas get incubated. If you believe that the brainBox process is not appropriate for your idea, talk to the lab manager or PI.
 
 #### Create a new repo.
 
