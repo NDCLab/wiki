@@ -107,12 +107,12 @@ While you wait for approval of your planned roadmap, you can set up ZenHub.
 When you request the new repo from the lab manager, a new Slack channel will be created. Appropriate permissions will be granted to the project lead(s) and other project team members.
 
 ### HPC
-When you request the new repo from the lab manager, a project-specific folder will also be created on the HPC using the standard NDCLab filing structure. Appropriate permissions will be granted to the project lead(s) and other project team members.
+When you request the new repo from the lab manager, a project-specific folder(s) will also be created on the HPC using the standard NDCLab filing structure. Appropriate permissions will be granted to the project lead(s) and other project team members.
 
 ### Google Drive
-When you request the new repo from the lab manager, a project-specific folder will also be created on the Google Drive. Appropriate permissions will be granted to the project lead(s) and other project team members.
+When you request the new repo from the lab manager, a project-specific folder(s) will also be created on the Google Drive. Appropriate permissions will be granted to the project lead(s) and other project team members.
 
 ### Off to the Races
 
-Once the lab director has approved your planned roadmap and merged it into `main`, you have set up the project's ZenHub workspace, and your project has been added to the HPC, you are ready to launch. Set up your [sprints inside ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#planning-sprints) and plan your first sprint meeting with your team! 
+Once the lab director has approved your planned roadmap and merged it into `main`, you have set up the project's ZenHub workspace, and your project has been added to the HPC, Google Drive, and Slack, you are ready to launch. Set up your [sprints inside ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#planning-sprints) and plan your first sprint meeting with your team! 
 
