@@ -17,4 +17,4 @@ The research agenda of the NDCLab focuses on cognitive control, guided by three 
   3. How does cognitive control relate to social behavior and social anxiety?
 
 ### Open Lab Concept
-The NDCLab is open. This means that we perform our work openly, with all aspects of our research and project management viewable by the public (if they have GitHub, ZenHub, etc.). Openness is one of [our community values](https://ndclab.github.io/wiki/docs/around-the-lab/community-standards.html) and we believe that we can better work in the public interest if we do our science in the public eye. 
+The NDCLab is an open lab. This means that we perform our work openly, with all aspects of our research and project management viewable by the public (via GitHub, ZenHub, etc.). Openness is one of [our community values](https://ndclab.github.io/wiki/docs/around-the-lab/community-standards.html) and we believe that we can better work in the public interest if we do our science in the public eye. 
