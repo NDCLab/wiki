@@ -154,7 +154,7 @@ Additionally, when Alice creates her new branch off `dev-stimuli`, Bob should al
 
 > `dev-stimuli-bob`
 
-(Note that the wiki is an exception. It does not have a `dev` branch and new branches are created directly off `main` according to the convention `[feature]-[yourname]`.)
+(Note there are two exceptions to the above branching rules. The first is the wiki, which does not have a `dev` branch, and new branches are created directly off `main` according to the convention `[feature]-[yourname]`. The second exception applies to external collaborators (that do not have push access to a given NDCLab repo) and therefore must make all contributions following a "fork and pull" model. For such external collaborators, all the same, branch naming rules apply, with the exception being that it is never necessary to create additional branches with the user's name, as all branches will, by definition, occur within a personal repository of the external collaborator.)
 
 ### Commit Messages
 Git commit messages (specifically, the commit subject line) should be concise, informative, and in the imperative tense. There is no final period.<br/>
