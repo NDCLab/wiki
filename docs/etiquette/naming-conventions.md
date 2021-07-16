@@ -46,7 +46,7 @@ In some situations, space may be limited. In such cases, hyphens may be replaced
 >brainBox<br/>
 >baseEEG
 
-When future spin-offs of a project are envisaged, the original project is named the "-alpha" project and spin-offs should use an informative modifier. Examples:
+Given that future spin-offs of a project are common, yet sometimes hard to predict, the original project should always be named the "-alpha" project (even if no spin-off is initially planned/envisioned) and spin-offs should use an informative modifier. Examples:
 
 >social-context-alpha<br/>
 >rwe-alpha<br/>
