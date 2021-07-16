@@ -18,7 +18,7 @@ nav_order: 4
 
 ## Overview
 
-All new projects require the creation of a new Github repository by the lab manager or lab lab technician. New project repositories are typically initiated using one of the two template repositories available in GitHub (template-tool or template-research). Approval from the lab director is required prior to opening a new project repository. Each lab project requires time and resources, so the balance across the lab must be carefully maintained to ensure that each project is a success.
+All new projects require the creation of a new Github repository by the lab manager or lab technician. New project repositories are typically initiated using one of the two template repositories available in GitHub (template-tool or template-research). Approval from the lab director is required prior to opening a new project repository. Each lab project requires time and resources, so the balance across the lab must be carefully maintained to ensure that each project is a success.
 
 ## Setting Up a New Project
 
