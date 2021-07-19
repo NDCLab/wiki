@@ -18,6 +18,7 @@ nav_order: 1
 All naming conventions for the NDCLab are designed to be:
 * human-friendly (that is, they are descriptive and help us navigate all our projects)
 * machine-friendly (that is, they make it easy for us to use automated search methods to find what we want in the shortest time possible)
+* philosophically aligned with current conventions in the open science community
 
 ### Human-friendly
 We spend a lot of time looking at a computer screen. So we should use conventions that make things easier on our eyes. Here are some top guidelines to assist:<br/>
@@ -31,6 +32,9 @@ Don't confuse the machines. Recognize how computers order things by default (num
 :x: spaces<br/>
 :x: accented characters (ñöé, etc.)<br/>
 :x: special characters (?!:*+, etc.)<br/>
+
+### Open Science Conventions
+Our basic conventions are largely based on established standards in psychology and neuroscience, including [BIDS](https://bids.neuroimaging.io/) and [FAIR](https://www.go-fair.org/fair-principles/) principles. See the helpful resources at the bottom of this page for other useful links.
 
 ## General Naming Guidance
 
@@ -154,7 +158,7 @@ Additionally, when Alice creates her new branch off `dev-stimuli`, Bob should al
 
 > `dev-stimuli-bob`
 
-(Note there are two exceptions to the above branching rules. The first is the wiki, which does not have a `dev` branch, and new branches are created directly off `main` according to the convention `[feature]-[yourname]`. The second exception applies to external collaborators (that do not have push access to a given NDCLab repo) and therefore must make all contributions following a "fork and pull" model. For such external collaborators, all the same, branch naming rules apply, with the exception being that it is never necessary to create additional branches with the user's name, as all branches will, by definition, occur within a personal repository of the external collaborator.)
+(Note there are two exceptions to the above branch naming rules. The first is the wiki, which does not have a `dev` branch, and new branches are created directly off `main` according to the convention `[feature]-[yourname]`. The second exception applies to external collaborators, who do not have push access to a given NDCLab repo and therefore must make all contributions following a "fork and pull" model. For such external collaborators, branch naming rules still apply, with the exception that it is not necessary to append the external collaborator's name to the branch that lives, by definition, on the personal repository of the external collaborator.)
 
 ### Commit Messages
 Git commit messages (specifically, the commit subject line) should be concise, informative, and in the imperative tense. There is no final period.<br/>
@@ -218,4 +222,6 @@ In relatively rare but important cases, such as instruments that gather demograp
 ## Helpful Resources
 * Awesome [slidedeck](https://speakerdeck.com/jennybc/how-to-name-files) from [Jenny Bryan](https://jennybryan.org/).<br/>
 * Another awesome [slidedeck](https://slides.djnavarro.net/project-structure/#1) from [Danielle Navarro](https://djnavarro.net/).
+* [Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/) for organizing neuroimaging and behavioral data
+* [FAIR Guiding Principles](https://www.go-fair.org/fair-principles/) for scientific data management and stewardship
 * Psych-DS [technical specification](https://docs.google.com/document/d/1u8o5jnWk0Iqp_J06PTu5NjBfVsdoPbBhstht6W0fFp0/edit#) for psychological datasets (useful even though the project is not very active)
