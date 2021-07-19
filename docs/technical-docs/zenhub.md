@@ -29,7 +29,7 @@ ZenHub is a plug-in for your browser that connects to GitHub. It offers [Kanban]
 
 ## Tour of the Pipelines
 
-When a new workspace is created, it uses the ZenHub defaults. These are customized for each NDCLab workspace into the following pipelines.
+When a new workspace is created, it uses the NDCLab default pipelines. These are [customized](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html) for each NDCLab workspace into the following pipelines.
 
 ![zh_pipelines](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_pipelines.png)
 
