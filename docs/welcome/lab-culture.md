@@ -15,3 +15,6 @@ The research agenda of the NDCLab focuses on cognitive control, guided by three 
   1. What is cognitive control (across three levels of analysis)?
   2. How does cognitive control develop (across adolescence)?
   3. How does cognitive control relate to social behavior and social anxiety?
+
+### Open Lab Concept
+The NDCLab is an open lab. This means that we perform our work openly, with all aspects of our research and project management viewable by the public (via GitHub, ZenHub, etc.). Openness is one of [our community values](https://ndclab.github.io/wiki/docs/around-the-lab/community-standards.html) and we believe that we can better work in the public interest if we do our science in the public eye. 
