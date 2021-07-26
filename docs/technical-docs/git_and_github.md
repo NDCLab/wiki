@@ -30,7 +30,7 @@ interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We 
 **Mac**
 
 1. Open Terminal, which is your built-in shell. If you haven't don't this before, start [here](https://ndclab.github.io/wiki/docs/technical-docs/shell.html).
-2. Install Homebrew by following the [instructions on the Homebrew homepage](https://brew.sh/) to paste a specific command into your Terminal.
+2. Install Homebrew by following the [instructions on the Homebrew homepage](https://brew.sh/) to paste a specific command into your Terminal. (When it asks for your sudo password, input the login password for your Mac and hit `Enter`. It won't look like you are typing anything on the screen, but you are!)
 3. Still inside your Terminal, type: `$ brew install git`
 4. If you encounter issues, check out the [main download page](https://git-scm.com/download/mac), direct from Git.
 

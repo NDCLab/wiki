@@ -32,6 +32,13 @@ nav_order: 2
 
 ### Lab Technician
 
+| ![saidmuratov](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/saidmuratov.jpg) | Farukh Saidmuratov |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Troy, NY |
+| GitHub | F-said |
+| research interests | Farukh is interested in computational models of cognition. |
+| hobbies | baking, eating what I bake, [amateur data science](https://github.com/F-said/march-madness-predict), and gardening |
 
 ### Graduate Students
 
@@ -55,6 +62,13 @@ nav_order: 2
 
 ### Junior Research Assistants
 
+| ![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | anaNDClab |
+| research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder. |
+| hobbies | painting, drawing, and watching crime documentaries |
 
 ### Junior Research Technicians
 

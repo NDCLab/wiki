@@ -6,4 +6,4 @@ has_children: true
 permalink: /docs/around-the-lab
 ---
 
-# Around the lab
+# Around the Lab

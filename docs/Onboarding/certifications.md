@@ -19,7 +19,7 @@ In addition, members of the lab who will be actively involved in handling partic
 
 ### Non-CITI
 3. Health Insurance Portability and Accountability Act (HIPAA)
-This course is on develop.fiu.edu. A [link is provided by the CCF](https://ndclab.github.io/wiki/docs/onboarding/ccc-emails.html) during the onboarding process to fulfill the HIPAA Requirement.
+This course is on develop.fiu.edu. A [link is provided by the CCF](https://ndclab.github.io/wiki/docs/Onboarding/ccf-emails.html) during the onboarding process to fulfill the HIPAA Requirement.
 
 
 ## Required for Study Personnel Interacting with Participants
