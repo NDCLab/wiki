@@ -12,7 +12,7 @@ nav_order: 2
 | pronouns | he/him/his |
 | location | Miami, FL |
 | GitHub | georgebuzzell |
-| Email  |
+| Email  | gbuzzell@fiu.edu |
 | research interests | George is interested in cognitive control, particularly as it relates to social anxiety. His work focuses on EEG methods. |
 | hobbies | eating avocados |
 
@@ -24,7 +24,7 @@ nav_order: 2
 | pronouns | she/her/hers |
 | location | Austin, TX |
 | GitHub | jessb0t |
-| Email  |
+| Email  | jalexand@fiu.edu |
 | research interests | Jess is interested in the neural, cognitive, and behavioral underpinnings of emotion and language. |
 | hobbies | I'm an avid runner, I love to travel, and I play the piano. |
 
@@ -37,6 +37,7 @@ nav_order: 2
 | pronouns | he/him/his |
 | location | Troy, NY |
 | GitHub | F-said |
+| Email  | |
 | research interests | Farukh is interested in computational models of cognition. |
 | hobbies | baking, eating what I bake, [amateur data science](https://github.com/F-said/march-madness-predict), and gardening |
 
@@ -67,6 +68,7 @@ nav_order: 2
 | pronouns | she/her/hers |
 | location | Miami, FL |
 | GitHub | anaNDClab |
+| Email  | |
 | research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder. |
 | hobbies | painting, drawing, and watching crime documentaries |
 
