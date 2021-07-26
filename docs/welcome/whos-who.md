@@ -12,6 +12,7 @@ nav_order: 2
 | pronouns | he/him/his |
 | location | Miami, FL |
 | GitHub | georgebuzzell |
+| Email  |
 | research interests | George is interested in cognitive control, particularly as it relates to social anxiety. His work focuses on EEG methods. |
 | hobbies | eating avocados |
 
@@ -23,6 +24,7 @@ nav_order: 2
 | pronouns | she/her/hers |
 | location | Austin, TX |
 | GitHub | jessb0t |
+| Email  |
 | research interests | Jess is interested in the neural, cognitive, and behavioral underpinnings of emotion and language. |
 | hobbies | I'm an avid runner, I love to travel, and I play the piano. |
 
@@ -44,11 +46,16 @@ nav_order: 2
 ### Graduate Student Affiliates
 
 
-### High School Interns
-
-
 ### Senior Research Assistants
 
+| ![polyanskaya](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/polyanskaya.jpg) | Arina Polyanskaya |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | apoly1 |
+| Email  | apoly003@fiu.edu |
+| research interests | Investigating the possible link between social anxiety and cognitive control performance. |
+| hobbies | Traveling, hiking, camping, dancing, cooking/eating food, and anything else I would be introduced to. |
 
 ### Senior Research Technicians
 
@@ -64,3 +71,6 @@ nav_order: 2
 | hobbies | painting, drawing, and watching crime documentaries |
 
 ### Junior Research Technicians
+
+
+### High School Interns
