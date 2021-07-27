@@ -37,7 +37,7 @@ interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We 
 **Windows**
 
 1. Determine whether your computer is 32-bit or 64-bit. This information is available in your system settings under "About." If you don't know where to find this, do some quick googling.
-2. [Download](https://git-scm.com/download/win) the "thumbdrive edition" for your computer's system type.
+2. [Download](https://git-scm.com/download/win) the appropriate version for your computer's system type.
 3. Install as you would any other application.
 
 **Linux**
