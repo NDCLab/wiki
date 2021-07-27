@@ -176,7 +176,7 @@ When useful, a full explanation should be added after the subject line. Example:
 git commit -m "Add full commit message details" -m "Expanded guidance on commit messages to include full commit messages beyond the commit subject line."
 ```
 
-[image]
+![gh_full-commit](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_full-commit.png)
 
 The seven great rules of commit messages make for easy reading [here](https://chris.beams.io/posts/git-commit/).
 
