@@ -23,7 +23,7 @@ All members of the NDCLab are required to complete a background check as part of
 
 The first informs you that a DocuSign is being sent:
 
-![background-check-email](../_assets/onboarding/background-check-email.png)
+![background-check-email](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/background-check-email.png)
 
 The second is the DocuSign itself.
 
