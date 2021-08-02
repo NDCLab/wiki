@@ -74,5 +74,13 @@ nav_order: 2
 
 ### Junior Research Technicians
 
+| ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | SDOsmany |
+| Email  |osmany.pujolcs@gmail.com |
+| research interests | Interested in the understanding of conciousness and original thoughts  |
+| hobbies | Physics, programming, sitcoms, basketball and games |
 
 ### High School Interns
