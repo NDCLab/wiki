@@ -173,8 +173,9 @@ After completing the listed steps, `bundle exec jekyll serve` is the only comman
     gem install jekyll bundler
     ```
 
-3. Initialize the wiki using:
+3. Navigate to your local `wiki` repository and initialize the repo:
     ```
+    cd wiki
     bundle init
     ```
 
@@ -189,13 +190,7 @@ After completing the listed steps, `bundle exec jekyll serve` is the only comman
     bundle install
     ```
 
-6. Add the following block anywhere in the `_config.yml` file:
-    ```yml
-    plugins:
-        - jekyll-remote-theme
-    ```
-
-7. Run the following command to build the website on your local machine:
+6. Run the following command to build the website on your local machine:
     ```
     bundle exec jekyll serve
     ```
@@ -239,13 +234,7 @@ MacOS comes with a default system installation for Ruby. However, it's advisable
     bundle install
     ```
 
-9. Add the following block anywhere in the `_config.yml` file:
-    ```yml
-    plugins:
-        - jekyll-remote-theme
-    ```
-
-10. Run the following command to build the website on your local machine:
+9. Run the following command to build the website on your local machine:
     ```
     bundle exec jekyll serve
     ```
