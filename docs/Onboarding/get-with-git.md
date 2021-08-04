@@ -59,7 +59,14 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
     * Push all your changes back to the remote.
     * Create a pull request and tag the lab manager (you can find the lab manager's GitHub handle on the page you just updated!) to review your changes and merge them into the live wiki!
 
-12. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement, in a different section of the wiki, that you think would help a future lab member. **Create a new branch off the main branch** (name it "feature-[improvement]-[yourname]"). Implement your suggestion and submit a new pull request to the lab manager!
+12. After the lab manager has merged your changes, you have one more important mission. Review the wiki and identify (at least) one improvement, in a different section of the wiki, that you think would help a future lab member.
+
+* Within your wiki folder, switch back to the main branch: `git checkout main`
+* Update your main branch with any new changes from other lab members: `git pull`
+* Create a new branch off the main branch and name it in accordance with the lab's [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#github): `git branch feature-[improvement]-[yourname]`
+* Navigate within the wiki folders to open the file(s) where you will implement your suggestion.
+* Add your modified file(s) to your staging area: `git add [filename]`
+* Commit your changes, push to the remote, and submit a new pull request to the lab manager!
 
 13. Some final thoughts to maximize your use of GitHub:
 * **DO** be careful in customizing your notifications. You want to see every time someone @mentions you or assigns an issue to you, and you don't want those messages to be lost in a sea of other, less important notifications. Think of GitHub as being another inbox to monitor or, alternately, treat the automatic GitHub notifications that hit your e-mail inbox as actionable messages.
