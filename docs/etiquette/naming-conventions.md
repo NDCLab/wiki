@@ -168,7 +168,15 @@ Git commit messages (specifically, the commit subject line) should be concise, i
 :white_check_mark: Optimize function X<br/>
 :x: Fix<br/>
 :x: Re-wrote the entire script so now it works right<br/>
-:x: Added a feature.
+:x: added a feature.
+
+When useful, a full explanation should be added after the subject line. Example:
+
+```yml
+git commit -m "Add full commit message details" -m "Expanded guidance on commit messages to include full commit messages beyond the commit subject line."
+```
+
+![gh_full-commit](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_full-commit.png)
 
 The seven great rules of commit messages make for easy reading [here](https://chris.beams.io/posts/git-commit/).
 
