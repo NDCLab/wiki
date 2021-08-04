@@ -64,8 +64,9 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 * Within your wiki folder, switch back to the main branch: `git checkout main`
 * Update your main branch with any new changes from other lab members: `git pull`
 * Create a new branch off the main branch and name it in accordance with the lab's [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#github): `git branch feature-[improvement]-[yourname]`
-* Navigate within the wiki folders to open the file(s) where you will implement your suggestion.
-* Add your modified file(s) to your staging area: `git add [filename]`
+* Switch to your new branch: `git checkout feature-[improvement]-[yourname]`
+* Navigate within the wiki folders, using `cd` and `ls`, to open the file(s) where you will implement your suggestion.
+* Add your modified file(s) to your staging area: `git add [filename]`.
 * Commit your changes, push to the remote, and submit a new pull request to the lab manager!
 
 13. Some final thoughts to maximize your use of GitHub:
