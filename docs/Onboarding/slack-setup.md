@@ -46,6 +46,7 @@ The NDCLab is an open lab, so you have access to all channels that you wish to j
 * **DON'T** worry about sending messages at weird hours. There is no "right" or "wrong" time to send a message on Slack. Our team spans the globe. So send whenever you want to. But never feel obligated to respond to Slack message during evening/weekend hours just because someone else was burning the midnight oil.
 * **DON'T** jump on your phone to respond to a Slack message at midnight, but **DO** check Slack regularly and respond within one weekday to any incoming message.
 * **DO** be intentional about which channel you choose to post a given message within and/or whether to use a DM. For example, project-related conversations (even if only between two people!) should always be posted within the relevant project channel.
+* **DO** feel free to update your [Slack status](https://slack.com/help/articles/201864558-Set-your-Slack-status-and-availability) to let your labmates know when you're available. For instance, you can update your status to "out sick" if you are feeling unwell and won't be responsive to messages. This lets your team know when you will be unavailable to respond. 
 
 ## Say Hi!
 Now that you're all set up, say "Hi!" to the team on #general! We can't wait to meet you!
