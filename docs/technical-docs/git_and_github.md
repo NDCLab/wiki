@@ -82,6 +82,16 @@ Example:
 git add some_file.txt
 ```
 
+### `cd`
+
+This command will change the directory you are working on.
+
+Example:
+
+```sh
+cd + [name of directory]
+```
+
 ### `clone`
 
 This command creates a clone of the remote repository on your local machine so that you can make changes (which you will ultimately upload back to the remote repository to share with collaborators).
@@ -130,6 +140,16 @@ git commit -m "Update s file"
 git commit -am "Update s and u file"
 # Adds u.txt to staging area
 # Commits changes for s.txt and u.txt
+```
+
+### `mkdir`
+
+This command will create a new directory (folder) on your local. 
+
+Example:
+
+```sh
+mkdir [name of the directory you want to create]
 ```
 
 ### `push`
