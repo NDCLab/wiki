@@ -49,6 +49,15 @@ nav_order: 2
 
 ### Senior Research Assistants
 
+| ![malykke](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/malykke.jpg) | Sarah Malykke |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | SarahMalykke |
+| Email  | smaly002@fiu.edu |
+| research interests | Sarah is interested in research on the phenomenon of choking under pressure and aims to understand what brain systems support excellent performance. |
+| hobbies | taekwondo, traveling, and of course napping |
+
 | ![polyanskaya](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/polyanskaya.jpg) | Arina Polyanskaya |
 | ---  | ---  |
 | pronouns | she/her/hers |
