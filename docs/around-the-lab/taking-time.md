@@ -13,7 +13,7 @@ Many members of the NDCLab give their time to the lab voluntarily; others are em
 It's important to work hard. But it's also important to take time away from work to focus on your health, your family and friends, and your personal endeavors. Balancing these things makes it possible to be productive and enjoy your work for the long-term. How precisely you balance them is a personal choice.
 
 Therefore, lab members are encouraged to regularly take time off for themselves, provided that:
-* their absence will not negatively impact the people and projects that depend on them, and
+* their absence will not negatively impact the people and projects that depend on them.
 * their plans are communicated to the team with adequate, advance notice.
 
 In addition, part-time and full-time staff members must comply with FIU policies regarding time off.
