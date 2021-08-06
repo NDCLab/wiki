@@ -1,11 +1,11 @@
 ---
 layout: default
-title: social-context-alpha
+title: rwe-alpha
 parent: Current Projects
-nav_order: 1
+nav_order: 3
 ---
 
-# social-context-alpha
+# real-world-errors-alpha
 
 <insert the main question that the research attempts to answer (one sentence)>
 

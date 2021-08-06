@@ -1,11 +1,11 @@
 ---
 layout: default
-title: social-context-alpha
+title: missing-link-alpha
 parent: Current Projects
-nav_order: 1
+nav_order: 2
 ---
 
-# social-context-alpha
+# missing-link-alpha
 
 <insert the main question that the research attempts to answer (one sentence)>
 
