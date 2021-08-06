@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Project-Specific Documentation
+title: Current Projects
 nav_order: 6
 has_children: true
-permalink: /docs/project-specific-docs
+permalink: /docs/current-projects
 ---
 
 # Project-Specific Documentation
