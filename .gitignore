@@ -7,6 +7,5 @@
 ehthumbs.db
 Thumbs.db
 
-# Gemfiles
-Gemfile
+# Gemfile metadata
 Gemfile.lock

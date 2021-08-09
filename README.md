@@ -173,24 +173,13 @@ After completing the listed steps, `bundle exec jekyll serve` is the only comman
     gem install jekyll bundler
     ```
 
-3. Navigate to your local `wiki` repository and initialize the repo:
+3. Navigate to the wiki repo and install the newly listed gems using: 
     ```
     cd wiki
-    bundle init
-    ```
-
-4. This will create a gemfile called `Gemfile`. Add the following to this newly created file: 
-    ```ruby
-    gem "just-the-docs"
-    gem "jekyll-remote-theme"
-    ```
-
-5. Install the newly listed gems using: 
-    ```
     bundle install
     ```
 
-6. Run the following command to build the website on your local machine:
+4. Run the following command to build the website on your local machine:
     ```
     bundle exec jekyll serve
     ```
@@ -212,29 +201,18 @@ MacOS comes with a default system installation for Ruby. However, it's advisable
     echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.bash_profile
     ```
 
-5. Install bundler and jekyll by running:
+4. Install bundler and jekyll by running:
     ```
     gem install --user-install bundler jekyll
     ```
 
-6. Navigate to your local `wiki` repository and initialize the repo:
+5. Navigate to the wiki repo and install the listed gems using:
     ```
     cd wiki
-    bundle init
-    ```
-
-7. This will create a gemfile called `Gemfile`. Add the following to this newly created file: 
-    ```ruby
-    gem "just-the-docs"
-    gem "jekyll-remote-theme"
-    ```
-
-8. Install the newly listed gems using:
-    ```
     bundle install
     ```
 
-9. Run the following command to build the website on your local machine:
+6. Run the following command to build the website on your local machine:
     ```
     bundle exec jekyll serve
     ```

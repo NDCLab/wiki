@@ -24,6 +24,4 @@ git_edit_repository: "https://github.com/NDCLab/wiki"
 # Emoji
 plugins:
   - jemoji
-
-plugins:
   - jekyll-remote-theme
