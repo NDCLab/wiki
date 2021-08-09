@@ -206,7 +206,7 @@ MacOS comes with a default system installation for Ruby. However, it's advisable
     gem install --user-install bundler jekyll
     ```
 
-5. Navigate to the wiki repo and nstall the listed gems using:
+5. Navigate to the wiki repo and install the listed gems using:
     ```
     cd wiki
     bundle install
