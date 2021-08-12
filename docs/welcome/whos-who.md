@@ -67,6 +67,15 @@ nav_order: 2
 | research interests | Investigating the possible link between social anxiety and cognitive control performance. |
 | hobbies | Traveling, hiking, camping, dancing, cooking/eating food, and anything else I would be introduced to. |
 
+| ![machado](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/machado.jpg) | Emily Machado |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | emach039 |
+| Email  | emach039@fiu.edu |
+| research interests | Emily is interested in understanding the effect mental health has on cognitive performance. |
+| hobbies | sleeping, drawing, skincare, fashion, video games |
+
 ### Senior Research Technicians
 
 
