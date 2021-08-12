@@ -100,5 +100,3 @@ nav_order: 2
 | Email  |osmany.pujolcs@gmail.com |
 | research interests | Interested in the understanding of conciousness and original thoughts  |
 | hobbies | Physics, programming, sitcoms, basketball and games |
-
-### High School Interns
