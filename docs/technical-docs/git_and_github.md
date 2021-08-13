@@ -9,6 +9,7 @@ nav_order: 1
 1. [Overview](#overview)
 2. [Installing Git](#installing-git)
 3. [Authenticating to GitHub](#authenticating-to-github)
+4. [Notifications](#notifications)
 4. [Basic Commands](#basic-commands)
 5. [Markdown](#markdown)
 6. [SCM Best Practices](#scm-best-practices)
@@ -55,6 +56,10 @@ When working in the shell and pushing your work to GitHub, GitHub needs to know 
 For simplicity, the personal access token is recommended.  Authenticate by following [these simple instructions](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token), directly from GitHub.
 
 For details on other authentication options, check out [this resource page](https://docs.github.com/en/github/authenticating-to-github).
+
+## Notifications
+
+You can control whether GitHub sends you web notifications, e-mail notifications, or both when you are @mentioned inside GitHub. To ensure that you see these messages (especially when you are first learning GitHub), it is recommended that you select both "Email" and "Web and Mobile" under the Notifications tab of your Account Settings. In this way, when someone tags you on GitHub, you will receive an e-mail, and you will also be able to access the message from the :bell: icon in the top-right corner of the GitHub webpage.
 
 ## Basic Commands
 
