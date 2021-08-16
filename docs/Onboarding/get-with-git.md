@@ -15,6 +15,7 @@ A large portion of NDCLab collaboration happens on GitHub. If you've never used 
 * Putting your new skills to use to update your entry on the NDCLab wiki ["Who's Who" page](https://ndclab.github.io/wiki/docs/welcome/whos-who.html).
 
 ## How to Get with Git
+Follow the steps below to become a Git ninja! We will set up your computer so you can use the Git language and tools locally (offline). We will also set up your identity on GitHub. GitHub is a web platform that is a "hub" for "Git" activities. After we have Git installed and you have a GitHub account, you can make your computer and GitHub talk to one another!
 
 1. Find your [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html). The shell enables you to interact quickly and easily with GitHub.
 
