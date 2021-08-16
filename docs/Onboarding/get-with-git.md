@@ -24,8 +24,8 @@ Follow the steps below to become a Git ninja! We will set up your computer so yo
 3. [Sign up](https://github.com) for a free GitHub account.
 
 4. Set up your identity by typing two commands into your shell: <br/>
-`$ git config --global user.name "John Doe"` <br/>
-`$ git config --global user.email johndoe@example.com` <br/>
+`git config --global user.name "John Doe"` <br/>
+`git config --global user.email johndoe@example.com` <br/>
 (Obviously, replace John Doe and johndoe@example.com with your actual name and your actual e-mail. If you're not sure whether you've done this before, check with the command `git config --list`.)
 
 5. Authenticate yourself to GitHub by setting up a [personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). (Be aware that other authentication methods are possible; personal access tokens are recommended because they are the simplest to set up for GitHub.) A personal access token is an alternative to using a login and password each time you connect to GitHub.  Once you set up the token, GitHub will recognize your computer and know that you are YOU each time you connect to it from the shell.
