@@ -42,6 +42,15 @@ nav_order: 2
 | hobbies | baking, eating what I bake, [amateur data science](https://github.com/F-said/march-madness-predict), and gardening |
 
 ### Graduate Students
+| ![stibolt](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/stibolt.jpg) | Olivia Stibolt |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | ostibolt |
+| Email  | ostib001@fiu.edu |
+| research interests | Olivia is interested in using EEG to investigate the neural mechanisms of cognitive control and the influence of anxiety on post-error behavior. |
+| hobbies | Painting nails, DnD, and riding horses |
+
 
 
 ### Graduate Student Affiliates
