@@ -88,6 +88,16 @@ nav_order: 2
 
 ### Senior Research Technicians
 
+### Junior Research Technicians
+
+|![JPEG-Charest1](https://user-images.githubusercontent.com/88559737/129980850-26cba7a1-52b8-498e-8617-65e667748a42.png) | Sophia Charest |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | sophiacharest |
+| Email  | schar107@fiu.edu |
+| research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior.  |
+| hobbies | Clay sculpting, listening to music, watching basketball, and nails/fashion | 
 
 ### Junior Research Assistants
 
@@ -110,14 +120,3 @@ nav_order: 2
 | Email  |osmany.pujolcs@gmail.com |
 | research interests | Interested in the understanding of conciousness and original thoughts  |
 | hobbies | Physics, programming, sitcoms, basketball and games |
-
-### Junior Research Technicians
-
-| ![Charest] (![JPEG-Charest1](https://user-images.githubusercontent.com/88559737/129980850-26cba7a1-52b8-498e-8617-65e667748a42.png) | Sophia Charest |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | sophiacharest |
-| Email  | schar107@fiu.edu |
-| research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior.  |
-| hobbies | Clay sculpting, listening to music, watching basketball, and nails/fashion | 
