@@ -42,6 +42,7 @@ nav_order: 2
 | hobbies | baking, eating what I bake, [amateur data science](https://github.com/F-said/march-madness-predict), and gardening |
 
 ### Graduate Students
+
 | ![stibolt](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/stibolt.jpg) | Olivia Stibolt |
 | ---  | ---  |
 | pronouns | she/her/hers |
