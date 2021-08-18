@@ -52,7 +52,14 @@ nav_order: 2
 | research interests | Olivia is interested in using EEG to investigate the neural mechanisms of cognitive control and the influence of anxiety on post-error behavior. |
 | hobbies | Painting nails, DnD, and riding horses |
 
-
+| ![winters](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/winters.jpg) | Alycia Winters |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | AlyciaWinters |
+| Email  | awint016@fiu.edu |
+| research interests | Alycia is interested in the role of stress and trauma in shaping trajectories of cognitive control development and social behavior. |
+| hobbies | Drawing, DnD, video games, and learning about history |
 
 ### Graduate Student Affiliates
 
