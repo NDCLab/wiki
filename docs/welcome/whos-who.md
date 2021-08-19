@@ -43,6 +43,15 @@ nav_order: 2
 
 ### Graduate Students
 
+| ![Hosseini](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/Hosseini.jpg) | Kianoosh Hosseini |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | Kianooshhosseini |
+| Email  | khoss005@fiu.edu |
+| research interests | Kianoosh is interested in studying the underlying neural and cognitive processes involved in cognitive control and their development, using neuroimaging techniques (fMRI, EEG) with various computational and behavioral methods. |
+| hobbies | Playing strategic video games and riding bicycle |
+
 | ![stibolt](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/stibolt.jpg) | Olivia Stibolt |
 | ---  | ---  |
 | pronouns | she/her/hers |
