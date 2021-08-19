@@ -100,6 +100,15 @@ nav_order: 2
 | research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder. |
 | hobbies | painting, drawing, and watching crime documentaries |
 
+| ![fischer](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/fischer.jpg) | Aitana Fischer |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | AitanaFischer |
+| Email  | | 
+| research interests | Aitana is interested in the relationship between cognition and behavior, and its interrelation with mental illness.
+| hobbies | reading, singing, playing guitar |
+
 ### Junior Research Technicians
 
 | ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
