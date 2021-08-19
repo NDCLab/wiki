@@ -110,3 +110,12 @@ nav_order: 2
 | Email  |osmany.pujolcs@gmail.com |
 | research interests | Interested in the understanding of conciousness and original thoughts  |
 | hobbies | Physics, programming, sitcoms, basketball and games |
+
+
+| ![duncombe](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/duncombe.jpeg) | Anfernee Duncombe |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Freeport, The Bahamas|
+| GitHub | adunc018 |
+| research interests | Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning  |
+| hobbies | Writing, rewatching the same 5 shows, baking |
