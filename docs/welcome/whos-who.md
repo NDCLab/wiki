@@ -100,6 +100,14 @@ nav_order: 2
 | research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder. |
 | hobbies | painting, drawing, and watching crime documentaries |
 
+| ![duncombe](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/duncombe.jpeg) | Anfernee Duncombe |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Freeport, The Bahamas|
+| GitHub | adunc018 |
+| research interests | Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning  |
+| hobbies | Writing, rewatching the same 5 shows, baking |
+
 ### Junior Research Technicians
 
 | ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
@@ -112,10 +120,4 @@ nav_order: 2
 | hobbies | Physics, programming, sitcoms, basketball and games |
 
 
-| ![duncombe](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/duncombe.jpeg) | Anfernee Duncombe |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Freeport, The Bahamas|
-| GitHub | adunc018 |
-| research interests | Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning  |
-| hobbies | Writing, rewatching the same 5 shows, baking |
+
