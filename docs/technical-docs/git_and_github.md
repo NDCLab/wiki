@@ -59,7 +59,9 @@ For details on other authentication options, check out [this resource page](http
 
 ## Notifications
 
-You can control whether GitHub sends you web notifications, e-mail notifications, or both when you are @mentioned inside GitHub. To ensure that you see these messages (especially when you are first learning GitHub), it is recommended that you select both "Email" and "Web and Mobile" under the Notifications tab of your Account Settings. In this way, when someone tags you on GitHub, you will receive an e-mail, and you will also be able to access the message from the :bell: icon in the top-right corner of the GitHub webpage.
+You can control whether GitHub sends you web notifications, e-mail notifications, or both when you are @mentioned inside GitHub. In this way, when someone tags you on GitHub, you will receive an e-mail, and you will also be able to access the message from the 🔔 icon in the top-right corner of the GitHub webpage.
+
+To ensure that you see these messages (especially when you are first learning GitHub), it is recommended that you select both "Email" and "Web and Mobile" under the Notifications tab of your Account Settings.
 
 ## Basic Commands
 
