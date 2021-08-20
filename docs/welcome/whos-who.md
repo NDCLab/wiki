@@ -43,6 +43,15 @@ nav_order: 2
 
 ### Graduate Students
 
+| ![hosseini](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hosseini.jpg) | Kianoosh Hosseini |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | Kianooshhosseini |
+| Email  | khoss005@fiu.edu |
+| research interests | Kianoosh is interested in studying the underlying neural and cognitive processes involved in cognitive control and their development, using neuroimaging techniques (fMRI, EEG) with various computational and behavioral methods. |
+| hobbies | Playing strategic video games and bike-riding |
+
 | ![stibolt](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/stibolt.jpg) | Olivia Stibolt |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -52,7 +61,14 @@ nav_order: 2
 | research interests | Olivia is interested in using EEG to investigate the neural mechanisms of cognitive control and the influence of anxiety on post-error behavior. |
 | hobbies | Painting nails, DnD, and riding horses |
 
-
+| ![winters](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/winters.jpg) | Alycia Winters |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | AlyciaWinters |
+| Email  | awint016@fiu.edu |
+| research interests | Alycia is interested in the role of stress and trauma in shaping trajectories of cognitive control development and social behavior. |
+| hobbies | Drawing, DnD, video games, and learning about history |
 
 ### Graduate Student Affiliates
 
@@ -107,6 +123,15 @@ nav_order: 2
 | GitHub | adunc018 |
 | research interests | Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning  |
 | hobbies | Writing, rewatching the same 5 shows, baking |
+
+| ![cespedes](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/cespedes.jpg) | Ian Cespedes |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | GitIanDer |
+| Email  | icesp004@fiu.edu |
+| research interests | Ian is interested in behavioral methods in collaboration with EEG methods to study cognitive control. |
+| hobbies | Reading philosophy and Super Smash Bros |
 
 ### Junior Research Technicians
 
