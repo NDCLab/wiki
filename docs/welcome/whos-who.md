@@ -125,6 +125,18 @@ nav_order: 2
 | research interests | Ian is interested in behavioral methods in collaboration with EEG methods to study cognitive control. |
 | hobbies | Reading philosophy and Super Smash Bros |
 
+| ![roch-hernandez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/roch-hernandez.jpg) | Sebastian Roch-Hernandez |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | Seba-RH1 |
+| Email  | |sroch015@fiu.edu
+| research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. 
+
+AB|
+| hobbies | Playing guitar, reading, trying to learn random things |
+
+
 ### Junior Research Technicians
 
 | ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
