@@ -107,6 +107,16 @@ nav_order: 2
 
 ### Junior Research Assistants
 
+| ![charest](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/charest.jpg) | Sophia Charest |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | sophiacharest |
+| Email  | schar107@fiu.edu |
+| research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior. |
+| hobbies | Clay sculpting, listening to music, watching basketball, nails/fashion |
+
+
 | ![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
 | ---  | ---  |
 | pronouns | she/her/hers |
