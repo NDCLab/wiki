@@ -130,7 +130,7 @@ nav_order: 2
 | pronouns | he/him/his |
 | location | Miami, FL |
 | GitHub | SebaRoch-H1 |
-| Email  | |sroch015@fiu.edu
+| Email  | sroch015@fiu.edu |
 | research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
 | hobbies | Playing guitar, reading, trying to learn random things. |
 
