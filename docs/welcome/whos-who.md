@@ -152,6 +152,14 @@ nav_order: 2
 | research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
 | hobbies | Playing guitar, reading, trying to learn random things. |
 
+| ![papadaki](file:///C:/Users/ioann/Downloads/fb586d6f-7e60-46b3-9880-3169056d7a82.jfif)  | Ioanna Papadaki |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | IoannaPapadaki |
+| Email  | ipapa004@fiu.edu
+| research interests | Ioanna is interested in the cognitive and behavioral aspects of mental illnesses. |
+| hobbies | Dancing, reading, playing the piano, journaling |
 
 ### Junior Research Technicians
 
