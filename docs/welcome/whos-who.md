@@ -152,7 +152,7 @@ nav_order: 2
 | research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
 | hobbies | Playing guitar, reading, trying to learn random things. |
 
-| ![papadaki](file:///C:/Users/ioann/Downloads/fb586d6f-7e60-46b3-9880-3169056d7a82.jfif)  | Ioanna Papadaki |
+| ![papadaki](https://avatars.githubusercontent.com/u/89137804?v=4)  | Ioanna Papadaki |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Miami, FL |
