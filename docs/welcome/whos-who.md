@@ -43,6 +43,15 @@ nav_order: 2
 
 ### Graduate Students
 
+| ![hosseini](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hosseini.jpg) | Kianoosh Hosseini |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | Kianooshhosseini |
+| Email  | khoss005@fiu.edu |
+| research interests | Kianoosh is interested in studying the underlying neural and cognitive processes involved in cognitive control and their development, using neuroimaging techniques (fMRI, EEG) with various computational and behavioral methods. |
+| hobbies | Playing strategic video games and bike-riding |
+
 | ![stibolt](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/stibolt.jpg) | Olivia Stibolt |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -52,7 +61,14 @@ nav_order: 2
 | research interests | Olivia is interested in using EEG to investigate the neural mechanisms of cognitive control and the influence of anxiety on post-error behavior. |
 | hobbies | Painting nails, DnD, and riding horses |
 
-
+| ![winters](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/winters.jpg) | Alycia Winters |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | AlyciaWinters |
+| Email  | awint016@fiu.edu |
+| research interests | Alycia is interested in the role of stress and trauma in shaping trajectories of cognitive control development and social behavior. |
+| hobbies | Drawing, DnD, video games, and learning about history |
 
 ### Graduate Student Affiliates
 
@@ -91,6 +107,15 @@ nav_order: 2
 
 ### Junior Research Assistants
 
+| ![charest](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/charest.jpg) | Sophia Charest |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | sophiacharest |
+| Email  | schar107@fiu.edu |
+| research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior. |
+| hobbies | Clay sculpting, listening to music, watching basketball, nails/fashion |
+
 | ![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -109,6 +134,32 @@ nav_order: 2
 | research interests | Aitana is interested in the relationship between cognition and behavior, and its interrelation with mental illness.
 | hobbies | reading, singing, playing guitar |
 
+| ![duncombe](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/duncombe.jpeg) | Anfernee Duncombe |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Freeport, The Bahamas|
+| GitHub | adunc018 |
+| research interests | Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning  |
+| hobbies | Writing, rewatching the same 5 shows, baking |
+
+| ![cespedes](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/cespedes.jpg) | Ian Cespedes |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | GitIanDer |
+| Email  | icesp004@fiu.edu |
+| research interests | Ian is interested in behavioral methods in collaboration with EEG methods to study cognitive control. |
+| hobbies | Reading philosophy and Super Smash Bros |
+
+| ![roch-hernandez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/roch-hernandez.jpg) | Sebastian Roch-Hernandez |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | SebaRoch-H1 |
+| Email  | sroch015@fiu.edu |
+| research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
+| hobbies | Playing guitar, reading, trying to learn random things. |
+
 ### Junior Research Technicians
 
 | ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
@@ -119,3 +170,6 @@ nav_order: 2
 | Email  |osmany.pujolcs@gmail.com |
 | research interests | Interested in the understanding of conciousness and original thoughts  |
 | hobbies | Physics, programming, sitcoms, basketball and games |
+
+
+
