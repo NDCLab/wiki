@@ -116,7 +116,6 @@ nav_order: 2
 | research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior. |
 | hobbies | Clay sculpting, listening to music, watching basketball, nails/fashion |
 
-
 | ![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -125,6 +124,15 @@ nav_order: 2
 | Email  | |
 | research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder. |
 | hobbies | painting, drawing, and watching crime documentaries |
+
+| ![fischer](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/fischer.jpg) | Aitana Fischer |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | AitanaFischer |
+| Email  | afisc020@fiu.edu |
+| research interests | Aitana is interested in the relationship between cognition and behavior, and its interrelation with mental illness.
+| hobbies | reading, singing, playing guitar |
 
 | ![duncombe](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/duncombe.jpeg) | Anfernee Duncombe |
 | ---  | ---  |
@@ -151,7 +159,6 @@ nav_order: 2
 | Email  | sroch015@fiu.edu |
 | research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
 | hobbies | Playing guitar, reading, trying to learn random things. |
-
 
 ### Junior Research Technicians
 
