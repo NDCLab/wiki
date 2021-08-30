@@ -105,7 +105,7 @@ nav_order: 2
 | pronouns | she/her/hers |
 | location | Miami, FL |
 | GitHub | AitanaFischer |
-| Email  | | afisc020@fiu.edu
+| Email  | afisc020@fiu.edu |
 | research interests | Aitana is interested in the relationship between cognition and behavior, and its interrelation with mental illness.
 | hobbies | reading, singing, playing guitar |
 
