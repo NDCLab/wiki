@@ -104,6 +104,14 @@ nav_order: 2
 
 ### Senior Research Technicians
 
+| ![camacho](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/camacho.jpg) | Bryan Camacho |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | CamachoBry |
+| Email  | bcama007@fiu.edu |
+| research interests | Bryan is interested in complex adaptive systems, computational behavioral sciences and modeling/simulation. |
+| hobbies | Traveling, trying new foods, reading and music production |
 
 ### Junior Research Assistants
 
