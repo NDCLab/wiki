@@ -7,7 +7,7 @@ nav_order: 1
 
 ### Why are we here?
 Our lab has two primary goals:
-1. To do great science that is fascinating at a basic level, but has enormous applied value to society as well
+1. To do great science that is fascinating at a basic level, but has enormous applied value to society as well.
 2. To improve and develop our own skills and knowledge.
 
 ### Research Agenda
