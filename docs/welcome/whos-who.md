@@ -168,6 +168,15 @@ nav_order: 2
 | research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
 | hobbies | Playing guitar, reading, trying to learn random things. |
 
+| ![gallardo](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gallardo.jpg) | Laura Gallardo |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | laurag049 |
+| Email  | lgall049@fiu.edu|
+| research interests | Laura is interested in the effects of social anxiety on cognition. |
+| hobbies | Trying new foods, boxing, watching movies |
+
 ### Junior Research Technicians
 
 | ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
