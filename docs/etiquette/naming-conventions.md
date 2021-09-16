@@ -137,9 +137,21 @@ For naming variables, `lowercase_with_underscores` is also used. Example:
 ## GitHub
 
 ### Repository Names
-Repositories should be named identically to the associated project. For example:
+Tool repositories should be named identically to the associated project. For example:
+
+> pepper-pipeline
+
+Dataset repositories should include the project name and a "-dataset" marker. For example:
+
+> social-context-dataset
+
+Analysis repositories that rely upon an NDCLab dataset should reference the name of the associated dataset. For example:
 
 > social-context-alpha
+
+Analysis repositories that rely upon an external dataset can use a descriptive name. For example:
+
+> adult-pre-post-theta
 
 ### Branch Names
 By default, repositories have a `main` branch and a `dev` branch. New branches are created from the `dev` branch and are named:
