@@ -168,7 +168,7 @@ nav_order: 2
 | research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
 | hobbies | Playing guitar, reading, trying to learn random things. |
 
-| ![gallardo](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gallardo.jpg) | Laura Gallardo |
+| ![gallardo](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gallardo.JPG) | Laura Gallardo |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Miami, FL |
