@@ -116,6 +116,7 @@ Example:
 This example will create a directory named github on your local. You can name your directory anything that relates to the content within the directory. 
 
 
+
 ## Additional Resources
 
 Here are several Linux cheat sheets with useful commands. Not all of these commands will work on Windows and macOS, but most of the core commands are the same with Linux and will therefore work.
