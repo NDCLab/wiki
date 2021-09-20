@@ -105,7 +105,8 @@ cd ~
 # Current directory: /home/
 ```
 
-### mkdir
+
+### mkdir [name of the directory you want to create]
 
 `mkdir` (make directory) is a shell command that allows you to create a new directory. This is useful to create a folder on your local where you can store files.
 
@@ -114,6 +115,9 @@ Example:
 ```sh
 `mkdir github`
 This example will create a directory named github on your local. You can name your directory anything that relates to the content within the directory. 
+
+Make sure you are within your root or on your desktop when you create the directory. To check where you are currently at, use the `ls` command. 
+```
 
 
 
