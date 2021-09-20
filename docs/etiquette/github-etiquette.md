@@ -170,7 +170,7 @@ Once `dev` is merged to `main`, this completes the current epic/release. The Zen
 
 ## Correcting Data
 
-If an error is discovered in a dataset, the data will need to be corrected while maintaining traceability on the previous (uncorrected) version of the dataset. Detailed instructions are available in `sourcedata/` folder of the [template-dataset](https://github.com/NDCLab/template-dataset) repository.  Notify project leads for all analyses that are known to have used the dataset.
+If an error is discovered in a dataset, the data will need to be corrected while maintaining traceability on the previous (uncorrected) version of the dataset. Detailed instructions are available in the `sourcedata/` folder of the [template-dataset](https://github.com/NDCLab/template-dataset) repository.  Notify project leads for all analyses that are known to have used the dataset.
 
 If your analysis is potentially impacted by the error:
 * Ensure that you referenced a specific commit in your `input/` folder.
