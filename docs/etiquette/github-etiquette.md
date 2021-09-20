@@ -168,6 +168,15 @@ To "publish" a release on GitHub:
 Once `dev` is merged to `main`, this completes the current epic/release. The ZenHub *Release Backlog*, *Sprint Backlog*, *In Progress*, *Review/QA*, and *Done* pipelines should all be empty and all the issues that were tackled during the epic/release should be closed. The next epic/release is initiated by moving the Epic tile for the next planned epic/release and its associated issues into the Release Backlog.
 
 
+## Correcting Data
+
+If an error is discovered in a dataset, the data will need to be corrected while maintaining traceability on the previous (uncorrected) version of the dataset. Detailed instructions are available in the `sourcedata/` folder of the [template-dataset](https://github.com/NDCLab/template-dataset) repository.  Notify project leads for all analyses that are known to have used the dataset.
+
+If your analysis is potentially impacted by the error:
+* Ensure that you referenced a specific commit in your `input/` folder.
+* Re-run your code on the corrected dataset and check the results against your previous results.
+
+
 ## Communication
 
 * Watch your notifications so that you respond in a timely manner when someone @mentions you or asks you to review a pull request.

@@ -18,7 +18,7 @@ nav_order: 4
 
 ## Overview
 
-All new projects require the creation of a new Github repository by the lab manager or lab technician. New project repositories are typically initiated using one of the two template repositories available in GitHub (template-tool or template-research). Approval from the lab director is required prior to opening a new project repository. Each lab project requires time and resources, so the balance across the lab must be carefully maintained to ensure that each project is a success.
+All new projects require the creation of a new Github repository by the lab manager or lab technician. New project repositories are typically initiated using one of the template repositories available in GitHub (template-tool, template-dataset, or template-analysis). Approval from the lab director is required prior to opening a new project repository. Each lab project requires time and resources, so the balance across the lab must be carefully maintained to ensure that each project is a success.
 
 ## Setting Up a New Project
 
@@ -32,8 +32,9 @@ This is where all great ideas get incubated. If you believe that the brainBox pr
 
 When you get the green-light from the lab director, ask the lab manager to create a new repo using the appropriate template repository:
 
-* research projects: https://github.com/NDCLab/template-tool
-* tool development: https://github.com/NDCLab/template-research
+* data collection projects: https://github.com/NDCLab/template-dataset
+* data analysis projects: https://github.com/NDCLab/template-analysis
+* tool development: https://github.com/NDCLab/template-tool
 
 Be sure to tell the lab manager:
 * the appropriate name for your new repository (which meets the requirements for [project naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html))
@@ -112,7 +113,9 @@ When you request the new repo from the lab manager, project-specific folders wil
 ### Google Drive
 When you request the new repo from the lab manager, a project-specific folder will also be created on the Google Drive. Appropriate permissions will be granted to the project lead(s) and other project team members.
 
-### Off to the Races
+### Zotero
+When you request the new repo from the lab manager, a project-specific folder will also be created on the lab's Zotero group.
 
+### Off to the Races
 Once the lab director has approved your planned roadmap and merged it into `main`, you have set up the project's ZenHub workspace, and your project has been added to the HPC, Google Drive, and Slack, you are ready to launch. Set up your [sprints inside ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#planning-sprints) and plan your first sprint meeting with your team! 
 
