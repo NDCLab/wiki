@@ -116,7 +116,8 @@ Example:
 # This example will create a directory named github on your local machine:
 mkdir github
 
-# Make sure you are in the desired location when you create a new directory. To check where you are currently at (seeing the contents of your current directory), use:
+# Make sure you are in the desired location when you create a new directory.
+# To check where you are currently at (seeing the contents of your current directory), use:
 ls
 
 # To navigate to your root (on Mac), use:
