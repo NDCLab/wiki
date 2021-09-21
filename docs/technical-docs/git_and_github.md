@@ -89,6 +89,7 @@ Example:
 git add some_file.txt
 ```
 
+
 ### `clone`
 
 This command creates a clone of the remote repository on your local machine so that you can make changes (which you will ultimately upload back to the remote repository to share with collaborators).
@@ -138,6 +139,7 @@ git commit -am "Update s and u file"
 # Adds u.txt to staging area
 # Commits changes for s.txt and u.txt
 ```
+
 
 ### `push`
 
@@ -196,3 +198,5 @@ Decide with your team who is editing code, what they are editing, and why they a
 
 ## Additional Resources
 There are hundreds of Git resources available online. If you get stuck, do some targeted Googling. If you still can't find what you're looking for, ask your labmates in #tech.
+
+

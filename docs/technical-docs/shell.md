@@ -105,6 +105,26 @@ cd ~
 # Current directory: /home/
 ```
 
+
+### mkdir
+
+`mkdir` (make directory) is a shell command that allows you to create a new directory. This is useful to create a folder on your local where you can store files. You can name your directory anything that relates to the content within the directory.
+
+Example:
+
+```sh
+# This example will create a directory named github on your local machine:
+mkdir github
+
+# Make sure you are in the desired location when you create a new directory.
+# To check where you are currently at (seeing the contents of your current directory), use:
+ls
+
+# To navigate to your root (on Mac), use:
+cd ~
+```
+
+
 ## Additional Resources
 
 Here are several Linux cheat sheets with useful commands. Not all of these commands will work on Windows and macOS, but most of the core commands are the same with Linux and will therefore work.
