@@ -25,7 +25,6 @@ The development of the PEPPER-Pipeline is focused on optimizing an automated, fl
 
 Following the optimization of import and preprocessing tools, development will focus on building out a common core of EEG processing tools to handle ERP, time-frequency, and source-based analyses.
 
-
 ## Pipeline Overview
 
 ## Development Guidelines
