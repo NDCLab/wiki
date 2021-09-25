@@ -10,6 +10,7 @@ nav_order: 5
 An overview of what Zotero does, how to get started, and how to add to it.
 
 
+
 #### TABLE OF CONTENTS
 1. [What is Zotero?](https://ndclab.github.io/wiki/docs/zotero.html#what-is-zotero?)
 2. [Set-Up](https://ndclab.github.io/wiki/docs/zotero.html#set-up)
@@ -18,9 +19,12 @@ An overview of what Zotero does, how to get started, and how to add to it.
 5. [Creating and Navigating Tags](https://ndclab.github.io/wiki/docs/zotero.html#creating-and-navigating-tags)
 6. [Quick Tips](https://ndclab.github.io/wiki/docs/zotero.html#quick-tips)
 
+
+
 ## What is Zotero?
 
 Zotero is a reference manager that allows the lab to have a shared collection of papers and makes it easy for users to add properly formatted in-text citations and bibliographies. 
+
 
 
 ## Set-Up
@@ -44,12 +48,14 @@ Once the application is installed, it should automatically install a plugin for 
 To sync your account to the application, click on Zotero > Preferences > Sync. Click "Link account" and log in using your Zotero username and password. Zotero should automatically update the group library as others add papers to it. However, Zotero can be manually synced via the circular green arrow at the top right of the application window. 
 
 
+
 ## Saving Papers
 
 Before you save the pdf via the chrome extension or drag a reference in from another local folder, check the main NDC lab folder to see if it’s already there. 
     1.    If it doesn't already exist in the group library, save it to your project’s triage folder with a tag of your project name or acronym. Confirm that Zotero saved a pdf (not a snapshot) and that the metadata (authours' names, title, year published, etc.) that Zotero retrieved is correct.
     2.    If it does already exist, don’t save it again. Drag it from the main NDC_lab folder to your project folder’s triage.
     
+
 
 ## Folder Structure
 
@@ -76,6 +82,7 @@ This folder is for papers that need to be annotated or are actively in the proce
 This folder is for papers that have been fully read and annotated for a literature review. Papers in this folder should also have the relevant conceptual tags for the project. 
 
 
+
 ## Creating and Navigating Tags
 
 Papers can be assigned tags that sort papers by topic. A project might have tags that refer to theories, concepts, and methods. The tags should be developed by members of the project and listed in a Standalone Note to ensure that all project members are using the same tags. A project's Standalone Note will live in the project's folder.
@@ -83,6 +90,8 @@ Papers can be assigned tags that sort papers by topic. A project might have tags
 Certain tags might be utilized for multiple projects. In order to make sure tags stay standardized across the lab, there's a Standalone Note in the main NDC_Lab folder that contains the tags from all of the lab's projects called "NDCLab Conceptual Tags". Refer to this Note before adding new tags to your project.
 
 Papers in a subcollection or in the main NDC_Lab group library can be filtered by clicking tags on and off in the lower left-hand corner of the Zotero app. Clicking multiple tags will narrow your search further. Clicking on an already selected tag will remove it as a search parameter. 
+
+
 
 ## Quick Tips
 
