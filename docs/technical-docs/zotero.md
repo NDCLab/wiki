@@ -63,7 +63,7 @@ Before you save the pdf via the chrome extension or drag a reference in from ano
 
 The group library can be thought of as a collection of songs on an iPod (My Songs) and each subcollection/folder within it is a 'playlist' of certain papers. Papers that are removed from subcollections (playlists) are not removed from the group library (My Songs) or from other subcollections. 
 
-Please note that subcollections/project folders do not actually house the subfolders (Triage, In Process, and Annotated) and are entirely separate folders from the subfolders. Papers and tags found in the Triage folder are not searchable from the main project folder and vice versa. 
+Note that a collection (my-project-folder) does do not actually "house" its subcollections (Triage, In-Process, Annotated). Every collection and subcollection is an entirely separate folder and the nesting is only visual. As a result, papers and tags found in a subcollection (e.g. Triage) are not searchable from the main collection (my-project-folder), and vice versa. 
 
 ### Project folder:
 
@@ -75,7 +75,7 @@ This folder is a staging area for papers. A lab member confident in paper triage
 
 ### In Process:
 
-This folder is for papers that need to be annotated or are actively in the process of being annotated. Once they have been annotated, they are moved to the Annotated folder.
+This folder is for papers that need to be annotated or are actively in the process of being annotated. Once they have been annotated, they are removed from the In-Process folder and added to the Annotated folder.
 
 ### Annotated: 
 
@@ -85,7 +85,7 @@ This folder is for papers that have been fully read and annotated for a literatu
 
 ## Creating and Navigating Tags
 
-Papers can be assigned tags that sort papers by topic. A project might have tags that refer to theories, concepts, and methods. The tags should be developed by members of the project and listed in a Standalone Note to ensure that all project members are using the same tags. A project's Standalone Note will live in the project's folder.
+Papers can be assigned tags that sort papers by topic. A project might have tags that refer to theories, concepts, or methods. The tags should be developed by members of the project and listed in a Standalone Note to ensure that all project members are using the same tags. A project's Standalone Note lives in the main project folder.
 
 Certain tags might be utilized for multiple projects. In order to make sure tags stay standardized across the lab, there's a Standalone Note in the main NDC_Lab folder that contains the tags from all of the lab's projects called "NDCLab Conceptual Tags". Refer to this Note before adding new tags to your project.
 
@@ -96,7 +96,7 @@ Papers in a subcollection or in the main NDC_Lab group library can be filtered b
 ## Quick Tips
 
 1.	This website has an overview of all of Zotero’s features: https://www.zotero.org/support/quick_start_guide 
-2.	The Chrome extension might not work unless you have the Zotero app open and running on your computer.
+2.	The Zotero app must be open and running on your computer for the Chrome extension to work.
 3.	Once you save a pdf to a folder, it should automatically retrieve the metadata from the pdf so it's accessible for citation purposes and so it can be sorted by the author, date published, title, abstract, etc in the Zotero app. If it retrieve do it automatically, right click on a pdf in the app and click Retrieve Metadata. You may have to manually type in the info or correct the info it generates. 
 4.	Triage should have the project name on it so when using the Chrome extension, lab members can be sure they're saving to the correct folder. Project names are not added to the In Process and Annotated folders to reduce visual noise. 
 
