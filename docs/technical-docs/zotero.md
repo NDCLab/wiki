@@ -23,7 +23,7 @@ An overview of what Zotero does, how to get started, and how to use it.
 
 ## What is Zotero?
 
-Zotero is a reference manager that allows the lab to have a shared collection of papers and makes it easy for users to add properly formatted, in-text citations and bibliographies. 
+Zotero is a reference manager that allows the lab to have a shared collection of papers and makes it easy for users to add properly formatted in-text citations and bibliographies. 
 
 
 
