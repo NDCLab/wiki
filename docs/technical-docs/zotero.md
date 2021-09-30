@@ -31,21 +31,21 @@ Zotero is a reference manager that allows the lab to have a shared collection of
 ## Set-Up
 
 
-#### Create an account
+#### 1. Create an account
 
 Create an account at [this link.](https://www.zotero.org/user/register) 
 
-#### Get added to the NDC_Lab group library
+#### 2. Get added to the NDC_Lab group library
 
 Send a message to the lab manager with either your Zotero username or the email you used to create an account. They will send you an email invite via Zotero to join the group library.
 
-#### Install the application and Chrome extension
+#### 3. Install the application and Chrome extension
 
 While you wait to be added to the group library, download both the Zotero application and Chrome extension at [at this link.](https://www.zotero.org/download/) 
 
 Once the application is installed, it should automatically install a plugin for Word, at which point you will need to restart Word. If it doesn't auto-install, see [this documentation.](https://www.zotero.org/support/word_processor_plugin_manual_installation)
 
-#### Sync your account
+#### 4. Sync your account
 
 To sync your account to the application, click on Zotero > Preferences > Sync while in the application. Click "Link account" and log in using your Zotero username and password. Zotero should automatically update the group library as others add papers to it. However, Zotero can be manually synced via the circular green arrow at the top right of the application window. 
 
