@@ -24,12 +24,12 @@ nav_order: 8
 ## Introduction
 Welcome to the PEPPER-Pipeline project! To get immediately started on collaborating, view [development guidelines](#Development-Guidelines). We welcome contributors from **all** backgrounds! 
 
-The development of the PEPPER-Pipeline is focused on optimizing an automated, flexible, and easy-to-use preprocessing pipeline dedicated to EEG-preprocessing. 
+The development of the PEPPER-Pipeline is focused on optimizing an automated, flexible, and easy-to-use preprocessing pipeline dedicated to EEG preprocessing. 
 
 Following the optimization of import and preprocessing tools, development will focus on building out a common core of EEG processing tools to handle ERP, time-frequency, and source-based analyses. To find out more about this, view [pipeline overview](#pipeline-overview).
 
 ## Pipeline Overview
-The following section details the planning, motivation, and features behind the pepper pipeline. 
+The following section details the planning, motivation, and features behind the PEPPER pipeline. 
 
 ### RoadMap
 To be implemented!
@@ -59,11 +59,11 @@ The UML diagrams above detail the discrete pipeline steps of the default `user_p
 
 3. `write:output`
 
-   At the very last step of the pipeline, each respective output is passed to a `write` module which transforms the summed outputs into a comprehensive file. 
+   At the very last step of the pipeline, each respective output is passed to a `write` module that transforms the summed outputs into a comprehensive file. 
 
 Together, the contents of `user_params.json` and `output_preproc.json` define all details necessary to describe (such as in the methods and results section for a journal publication) the manipulations of the pre-processing pipeline and its outputs.
 
-The long term goal is to automate the writing of these journal article sections via a script that takes "user_params.json" and "output_preproc.json" as inputs. In contrast, the output.log file reflects a much more verbose record of what was run, what the outputs were, and the presence of any warning/errors, etc.
+A long-term goal is to automate the writing of these journal article sections via a script that takes "user_params.json" and "output_preproc.json" as inputs. In contrast, the output.log file reflects a much more verbose record of what was run, what the outputs were, and the presence of any warnings/errors, etc.
 
 ### Features
 
@@ -79,10 +79,10 @@ The long term goal is to automate the writing of these journal article sections 
 
 #### 3-Independent Component Analysis
 
-  Overview: ICA requires a decent amount of [stationarity](https://towardsdatascience.com/stationarity-in-time-series-analysis-90c94f27322#:~:text=In%20t%20he%20most%20intuitive,not%20itself%20change%20over%20time.) in the data. This is often violated by raw EEG. One way around this is to first make a copy of the EEG data using automated methods to detect noisy portions of data and removing these sections. ICA is then run on the copied data after cleaning. The ICA weights produced by the copied dataset are copied back into original recording. In this way, we do not have to “throw out” sections of noisy data, while, at the same time, we are able to derive an improved ICA decomposition.
+  Overview: ICA requires a decent amount of [stationarity](https://towardsdatascience.com/stationarity-in-time-series-analysis-90c94f27322#:~:text=In%20t%20he%20most%20intuitive,not%20itself%20change%20over%20time.) in the data. This is often violated by raw EEG. One way around this is to first make a copy of the EEG data using automated methods to detect noisy portions of data and then remove these sections. ICA is then run on the copied data after cleaning. The ICA weights produced by the copied dataset are copied back into original recording. In this way, we do not have to “throw out” sections of noisy data, but we are still able to derive an improved ICA decomposition.
 
 1. Prepica
-    - Make a copy of the EED recording
+    - Make a copy of the EEG recording
     - For the copied data: high-pass filter at 1 Hz
     - For the copied data: segment by epoch  to “cut” the continuous EEG recording into arbitrary 1-second epochs
     - For the copied data: use automated methods (voltage outlier detection and spectral outlier detection) to detect epochs that are excessively “noisy” for any channel
@@ -122,7 +122,7 @@ If you believe a new issue needs to be added to the [list of open issues](https:
 * Use the appropriate issue template
 
 ### Create Documentation
-If you believe documentation needs to be added for a feature, test, or anything else create an issue and use the "Documentation request" issue template. 
+If you believe documentation needs to be added (for example, for a feature, test, etc.), create an issue using the "Documentation request" template. 
 
 <img width="731" alt="Untitled" src="https://user-images.githubusercontent.com/26397102/135634174-4c0be5fa-88d2-4377-9e2e-4e3f8ff0e5da.png">
 
@@ -130,9 +130,9 @@ If you believe documentation needs to be added for a feature, test, or anything 
 ### Contribute to the Code
 If someone is already assigned to an issue that you intend to work on, post a comment to ask if you can help before assigning yourself.
 
-If you do not receive a response within **24 hours**, then you are free to start work on the issue, but be sure to loop them in on your development plans. 
+If you do not receive a response within **24 hours**, then you are free to start work on the issue, but be sure to loop the primary assignee in on your development plans. 
 
-To get started on coding, follow the listed steps below. Note that you must have a GitHub account to collaborate to this project. All quoted commands are executed in your shell.
+To get started on coding, follow the steps below. Note that you must have a GitHub account to collaborate on this project. All quoted commands are executed in your shell.
 
 1. Fork the repo to your GitHub account by clicking on the "Fork" button on the top right corner of the [PEPPER repository](https://github.com/NDCLab/pepper-pipeline):
 <img width="950" alt="Untitled" src="https://user-images.githubusercontent.com/26397102/135622318-46cd9a5a-06e6-47eb-9afc-0f0a56655b3e.png">
@@ -140,10 +140,10 @@ To get started on coding, follow the listed steps below. Note that you must have
 2. Clone the repository to your local machine, with `git clone` in your terminal. Be sure to replace `user` below with your own GitHub username.
   ```
   git clone https://github.com/[user]/pepper-pipeline.git
-  cd pepper-pipeline/
+  cd pepper-pipeline
   ```
 
-3. Build and activate a container using the OS relevant files (see `container/README.md`).
+3. Build and activate a container using the OS-relevant files (see `container/README.md`).
 
 4. Switch to the branch that you plan to contribute to. 
 
@@ -178,7 +178,7 @@ To get started on coding, follow the listed steps below. Note that you must have
     git push 
     ```
 
-8. Create a pull-request using the GitHub GUI. 
+8. Create a pull request using the GitHub GUI. 
 
 ## Containers
 Please use the dockerfile & singularity recipe located in `container/`. Directions on installation and usage are located in `container/README.md`. 
