@@ -177,6 +177,16 @@ nav_order: 2
 | research interests | Laura is interested in the effects of social anxiety on cognition. |
 | hobbies | Trying new foods, boxing, watching movies |
 
+
+| ![papadaki](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/papadaki.jpg) | Ioanna Papadaki |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | IoannaPapadaki |
+| Email  | ipapa004@fiu.edu |
+| research interests | Ioanna is interested in environmental and social experiences and the effect on behavior and mental illness. |
+| hobbies | Dancing, playing the piano, photography, learning anything I considered interesting. |
+
 ### Junior Research Technicians
 
 | ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
