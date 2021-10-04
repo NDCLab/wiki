@@ -177,6 +177,15 @@ nav_order: 2
 | research interests | Laura is interested in the effects of social anxiety on cognition. |
 | hobbies | Trying new foods, boxing, watching movies |
 
+| ![dickinson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/dickinson.jpg) | Renata Dickinson |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | renatadickinson |
+| Email  | rdick014@fiu.edu |
+| research interests | Renata's research interests are in developmental and behavioral psychology. |
+| hobbies | Snorkeling, learning new recipes, watching movies, dancing, fashion |
+
 ### Junior Research Technicians
 
 | ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
