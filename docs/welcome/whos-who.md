@@ -177,6 +177,15 @@ nav_order: 2
 | research interests | Laura is interested in the effects of social anxiety on cognition. |
 | hobbies | Trying new foods, boxing, watching movies |
 
+| ![rodriguez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguez.jpg) | Brittney Rodriguez |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Huntsville, AL |
+| GitHub | brod0512 |
+| Email  | britrodr@fiu.edu |
+| research interests | Brittney is interested in the effects of substances in child and adolescent cognition. |
+| hobbies | drinking coffee, traveling and working out |
+
 ### Junior Research Technicians
 
 | ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
