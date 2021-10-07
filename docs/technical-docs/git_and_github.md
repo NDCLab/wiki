@@ -199,4 +199,4 @@ Decide with your team who is editing code, what they are editing, and why they a
 ## Additional Resources
 There are hundreds of Git resources available online. If you get stuck, do some targeted Googling. If you still can't find what you're looking for, ask your labmates in #tech.
 
-
+This is a [test](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/adexi_other-report_en.pdf)!
