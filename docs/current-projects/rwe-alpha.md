@@ -7,7 +7,7 @@ nav_order: 3
 
 # real-world-errors-alpha
 
-[insert the main question that the research attempts to answer (one sentence)]
+The purpose of this study is to understand how individual differences in reading and speaking habits are related to specific cognitive skills, personality and social determinants, and mental health effects such as social anxiety.
 
 ### Background
 
