@@ -213,6 +213,11 @@ In the above, "X" is replaced by a numerical value (1, 2, 3) to indicate the ord
 | initState_s1_r2_e2 | gathered during the initial 2021 session with the participant and as part of the second part of the study, and **after** the experimental manipulation |
 | initState_s2_r1_e1 | gathered during a follow-up session in 2023 with the participant and as part of the first part of that follow-up study |
 
+_Note_: When using a zip file to import an existing instrument to REDCap, the instrument name is displayed as:
+>Instrument SX RX EX
+
+This is also an acceptable format as data exported from REDCap automatically converts this to `instrument_sX_rX_eX`.
+
 ### Variable Names
 
 #### Scored Instruments
