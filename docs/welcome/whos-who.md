@@ -113,7 +113,7 @@ nav_order: 2
 | research interests | Bryan is interested in complex adaptive systems, computational behavioral sciences and modeling/simulation. |
 | hobbies | Traveling, trying new foods, reading and music production |
 
-| ![yanbin](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/yanbin_100.jpeg) | Yanbin Niu |
+| ![yanbin](https://github.com/NDCLab/wiki/blob/c56a7582f0204ca1aa4a035635cf1d225a9829c4/docs/_assets/whos-who/yanbin_100.jpeg) | Yanbin Niu |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Xi'an, CHN |
