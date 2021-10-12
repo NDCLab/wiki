@@ -87,7 +87,7 @@ However, this method does have one major disadvantage of which users should be a
 
 ## Adding Pages
 
-To add a brand new page on the wiki, create a new markdown file inside of the appropriate directory. This markdown file should begin with the following content, which specifies its name and nav order in the wiki structure:
+To add a brand new page on the wiki, copy the `page-template.md` to create a new markdown file inside of the appropriate directory. This markdown file should begin with the following content, which specifies its name and nav order in the wiki structure:
 
 ```yml
 ---
