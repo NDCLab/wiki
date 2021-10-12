@@ -76,7 +76,7 @@ A long-term goal is to automate the writing of these journal article sections vi
 
 #### 3-Independent Component Analysis
 
-  Overview: ICA requires a decent amount of [stationarity](https://towardsdatascience.com/stationarity-in-time-series-analysis-90c94f27322#:~:text=In%20t%20he%20most%20intuitive,not%20itself%20change%20over%20time.) in the data. This is often violated by raw EEG. One way around this is to first make a copy of the EEG data using automated methods to detect noisy portions of data and then remove these sections. ICA is then run on the copied data after cleaning. The ICA weights produced by the copied dataset are copied back into original recording. In this way, we do not have to “throw out” sections of noisy data, but we are still able to derive an improved ICA decomposition.
+  Overview: ICA requires a decent amount of [stationarity](https://towardsdatascience.com/stationarity-in-time-series-analysis-90c94f27322#:~:text=In%20t%20he%20most%20intuitive,not%20itself%20change%20over%20time.) in the data. This is often violated by raw EEG. One way around this is to first make a copy of the EEG data using automated methods to detect noisy portions of data and then remove these sections. ICA is then run on the copied data after cleaning. The ICA weights produced by the copied dataset are copied back into the original recording. In this way, we do not have to “throw out” sections of noisy data, but we are still able to derive an improved ICA decomposition.
 
 1. Prepica
     - Make a copy of the EEG recording
@@ -98,7 +98,7 @@ A long-term goal is to automate the writing of these journal article sections vi
 - Write to output file (field "XXX") which markers were used for epoching purposes, how many of each epoch were created, and how many milliseconds were retained before/after the markers of interest
 
 #### 5-Final Reject Epochs
-- Loop through each channel. For a given channel, loop over all epochs for that channel and identify epochs for which that channel, for a given epoch, exceeds either the voltage threshold or spectral threshold. If it exceeds either threshold, reject the channel data for this channel/epoch.
+- Loop through each channel. For a given channel, loop over all epochs for that channel and identify epochs for which that channel, for a given epoch, exceeds either the voltage threshold or spectral threshold. If it exceeds either threshold, reject the channel data for this channel/epoch
 - Write to the output file ("field XXX") which channel/epoch intersections were rejected
 
 #### 6-Interpolate
@@ -126,9 +126,9 @@ A long-term goal is to automate the writing of these journal article sections vi
 
 #### Release 0.1
 	
-* Modules to allow running in parallel on local or remote (HPC) controlled by the same parameters in the input_params.json file (auto-generates Slurm scripts for hpc)
-* Preprint posted to Biorxiv
-* Initial Data quality assessment suite is stable
+* Modules to allow running in parallel on local or remote (HPC) controlled by the same parameters in the input_params.json file (auto-generates Slurm scripts for HPC)
+* Preprint posted to BioRxiv
+* Initial data quality assessment suite is stable
 * Pipeline meets/exceeds at least one commonly used and published pipeline on data quality metrics
 * Initial set of standard input parameters for child, adolescent and young adult data
 * Updated functions:
@@ -143,7 +143,7 @@ A long-term goal is to automate the writing of these journal article sections vi
 
 * Optimized for infant, child, adolescent, and young adult data
 * Standard input parameters available
-* Revised data output formats to bring in line with emerging BIDS-EEG-Derivatives 
+* Revised data output formats to bring in line with emerging BIDS-EEG derivatives 
 * Expanded data quality assessment suite
 * Functions relying on electrode locations updated to use 3-dimensional coordinates based on age-appropriate head model
 * Integrated with DataLad
@@ -156,7 +156,7 @@ A long-term goal is to automate the writing of these journal article sections vi
 * Module for downloading remote datasets
 * Integrated with DataLad
 * GUI for generating input_params.json file
-* Web-based gui and automated connection to computational resources
+* Web-based GUI and automated connection to computational resources
 * Expanded set of norms for standard EEG features
 
 
@@ -167,7 +167,7 @@ If you believe a new issue needs to be added to the [list of open issues](https:
 
 ![image](https://user-images.githubusercontent.com/26397102/137004811-54e0403d-8296-4e5d-92a6-aef5386ecbbe.png)
 
-Once an issue has been created, the original author can likewise immediatley assign themselves and start coding or documenting as described in [contribute to the code](#Contribute-to-the-Code). 
+Once an issue has been created, the original author can likewise immediatelyy assign themselves and start coding or documenting as described in [contribute to the code](#Contribute-to-the-Code). 
 
 
 ### Contribute to the Code
@@ -203,7 +203,7 @@ To get started on coding, follow the steps below. Note that you must have a GitH
 
     ```
     git add file1 file2
-    git commit -m "Attached flux capacitor" 
+    git commit -m "Attach flux capacitor" 
     ```
 
 6. After you complete all your intended commits, push changes to branch.
