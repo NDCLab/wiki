@@ -2,7 +2,7 @@
 layout: default
 title: PEPPER
 parent: Technical Documentation
-nav_order: 8
+nav_order: 9
 ---
 
 ![baseeegheader](https://user-images.githubusercontent.com/26397102/117209976-b958e600-adbc-11eb-8f23-d6015a28935e.png)
@@ -12,9 +12,9 @@ nav_order: 8
 
 1. [Introduction](#Introduction)
 2. [Pipeline Overview](#Pipeline-Overview)
-    1. [Roadmap](#Roadmap)
-    2. [Planning Documents](#Planning-Documents)
-    3. [Features](#Features)
+    1. [UML Diagrams](#UML-Diagrams)
+    2. [Features](#Features)
+    2. [Roadmap](#Roadmap)
 3. [Development Guidelines](#Development-Guidelines)
     1. [Submit an issue](#Submit-an-Issue)  
     2. [Create documentation](#Create-documentation)
@@ -31,10 +31,7 @@ Following the optimization of import and preprocessing tools, development will f
 ## Pipeline Overview
 The following section details the planning, motivation, and features behind the PEPPER pipeline. 
 
-### RoadMap
-To be implemented!
-
-### Planning Docs
+### UML Diagrams
 <img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/outerloop.png" alt="UML Diagram for Outer-loop" width="400"/>
 
 *UML diagram for run, which references to run:preprocess*
@@ -51,7 +48,7 @@ The UML diagrams above detail the discrete pipeline steps of the default `user_p
 
 2. `run:preprocess`
 
-    The main script calls a series of functions, each one executing a step of the pipeline. Some functions simply utilize an existing MNE function while others are more involved. All, however, follow the same standard format: each feature always receives an EEG object and unpacked variables from the `params` dictionary in the main script. 
+    The main script calls a series of functions, each one executing a step of the pipeline. All follow the same standard format: each feature always receives an EEG object and unpacked variables from the `params` dictionary in the main script. 
 
     Additionally, each pipeline step returns an EEG object and a dictionary describing the changes that occurred to that EEG object.
     
@@ -63,13 +60,13 @@ The UML diagrams above detail the discrete pipeline steps of the default `user_p
 
 Together, the contents of `user_params.json` and `output_preproc.json` define all details necessary to describe (such as in the methods and results section for a journal publication) the manipulations of the pre-processing pipeline and its outputs.
 
-A long-term goal is to automate the writing of these journal article sections via a script that takes "user_params.json" and "output_preproc.json" as inputs. In contrast, the output.log file reflects a much more verbose record of what was run, what the outputs were, and the presence of any warnings/errors, etc.
+A long-term goal is to automate the writing of these journal article sections via a script that takes `user_params.json` and `output_preproc.json` as inputs. In contrast, the output.log file reflects a much more verbose record of what was run, what the outputs were, and the presence of any warnings/errors, etc.
 
 ### Features
 
 #### 1-Filter
 
-- High-pass filter the data using MNE functions
+- High pass filter the data using MNE functions
 - Read in the "high pass" "low pass" fields from the `user_params.json` file to define filter parameters
 
 #### 2-Reject Bad Channels
@@ -83,7 +80,7 @@ A long-term goal is to automate the writing of these journal article sections vi
 
 1. Prepica
     - Make a copy of the EEG recording
-    - For the copied data: high-pass filter at 1 Hz
+    - For the copied data: high pass filter at 1 Hz
     - For the copied data: segment by epoch  to “cut” the continuous EEG recording into arbitrary 1-second epochs
     - For the copied data: use automated methods (voltage outlier detection and spectral outlier detection) to detect epochs that are excessively “noisy” for any channel
     - For the copied data: reject (remove) the noisy periods of data
@@ -101,7 +98,7 @@ A long-term goal is to automate the writing of these journal article sections vi
 - Write to output file (field "XXX") which markers were used for epoching purposes, how many of each epoch were created, and how many milliseconds were retained before/after the markers of interest
 
 #### 5-Final Reject Epochs
-- Loop through each channel. For a given channel, loop over all epochs for that channel and identify epochs for which that channel, for a given epoch, exceeds either the voltage threshold or spectral threshold. If it exceeds the threshold, reject the channel data for this channel/epoch.
+- Loop through each channel. For a given channel, loop over all epochs for that channel and identify epochs for which that channel, for a given epoch, exceeds either the voltage threshold or spectral threshold. If it exceeds either threshold, reject the channel data for this channel/epoch.
 - Write to the output file ("field XXX") which channel/epoch intersections were rejected
 
 #### 6-Interpolate
@@ -113,25 +110,67 @@ A long-term goal is to automate the writing of these journal article sections vi
 - Re-reference the data to the average of all electrodes (“average reference”) using the MNE function
 - Write to output file (field "XXX") which data were re-referenced to average
 
+### RoadMap
+
+#### Pre-release
+
+* Minimal, yet complete, pipeline implemented
+* Performs all standard preprocessing steps
+* Validated, but not optimized
+* Containers are stable
+* Testing suite is stable
+* Standards for community-driven contributions established
+* Contributor documentation
+* Initial governance structure and credit assignment standards established
+
+
+#### Release 0.1
+	
+* Modules to allow running in parallel on local or remote (HPC) controlled by the same parameters in the input_params.json file (auto-generates Slurm scripts for hpc)
+* Preprint posted to Biorxiv
+* Initial Data quality assessment suite is stable
+* Pipeline meets/exceeds at least one commonly used and published pipeline on data quality metrics
+* Initial set of standard input parameters for child, adolescent and young adult data
+* Updated functions:
+  * Filter
+  * ICA
+* Standalone import-feature-io template 
+* User-end documentation
+* Updated/refined governance structure and credit assignment standards
+	
+	
+#### Release 1.0 
+
+* Optimized for infant, child, adolescent, and young adult data
+* Standard input parameters available
+* Revised data output formats to bring in line with emerging BIDS-EEG-Derivatives 
+* Expanded data quality assessment suite
+* Functions relying on electrode locations updated to use 3-dimensional coordinates based on age-appropriate head model
+* Integrated with DataLad
+* Verbose .log output files
+
+
+#### Release 2.0 
+
+* Data quality optimization module
+* Module for downloading remote datasets
+* Integrated with DataLad
+* GUI for generating input_params.json file
+* Web-based gui and automated connection to computational resources
+* Expanded set of norms for standard EEG features
+
 
 ## Development Guidelines
 
-### Submit an Issue
-If you believe a new issue needs to be added to the [list of open issues](https://github.com/NDCLab/PEPPER-Pipeline/issues):
-* Verify that the suggestion does not already exist 
-* Use the appropriate issue template
+### Identify Issues or Enhancements
+If you believe a new issue needs to be added to the [list of open issues](https://github.com/NDCLab/PEPPER-Pipeline/issues), feel free to create a new issue and select the appropriate template that suits the indicated change.
 
-### Create Documentation
-If you believe documentation needs to be added (for example, for a feature, test, etc.), create an issue using the "Documentation request" template. 
+![image](https://user-images.githubusercontent.com/26397102/137004811-54e0403d-8296-4e5d-92a6-aef5386ecbbe.png)
 
-<img width="731" alt="Untitled" src="https://user-images.githubusercontent.com/26397102/135634174-4c0be5fa-88d2-4377-9e2e-4e3f8ff0e5da.png">
+Once an issue has been created, the original author can likewise immediatley assign themselves and start coding or documenting as described in [contribute to the code](#Contribute-to-the-Code). 
 
 
 ### Contribute to the Code
-If someone is already assigned to an issue that you intend to work on, post a comment to ask if you can help before assigning yourself.
-
-If you do not receive a response within **24 hours**, then you are free to start work on the issue, but be sure to loop the primary assignee in on your development plans. 
-
 To get started on coding, follow the steps below. Note that you must have a GitHub account to collaborate on this project. All quoted commands are executed in your shell.
 
 1. Fork the repo to your GitHub account by clicking on the "Fork" button on the top right corner of the [PEPPER repository](https://github.com/NDCLab/pepper-pipeline):
@@ -147,38 +186,33 @@ To get started on coding, follow the steps below. Note that you must have a GitH
 
 4. Switch to the branch that you plan to contribute to. 
 
-  * If work on this issue has already begun, then fetch and checkout the active branch.
+  * If work on this issue has already begun, then fetch and checkout the active branch and then create a sub-branch.
     ```
-    git fetch
     git checkout dev-feature-issue
+    git checkout -b dev-feature-issue-name
     ```
 
-  * If this issue has not begun development, then create a new branch.
+  * If this issue has not begun development, then create a new branch and then create a sub-branch.
 
     ```
-    git checkout -b dev-feature-issue 
+    git checkout -b dev-feature-issue
+    git checkout -b dev-feature-issue-name 
     ```
 
-5. Create a sub-branch using your name/identifier. 
-
-    ```
-    git checkout dev-feature-issue-name 
-    ```
-
-6. Implement changes (commit often!).
+5. Implement changes (commit often!).
 
     ```
     git add file1 file2
     git commit -m "Attached flux capacitor" 
     ```
 
-7. After you complete all your intended commits, push changes to branch.
+6. After you complete all your intended commits, push changes to branch.
 
     ```
-    git push 
+    git push origin dev-feature-issue-name 
     ```
 
-8. Create a pull request using the GitHub GUI. 
+7. Create a [pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) using the GitHub GUI. 
 
 ## Containers
 Please use the dockerfile & singularity recipe located in `container/`. Directions on installation and usage are located in `container/README.md`. 
