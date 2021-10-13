@@ -75,6 +75,15 @@ nav_order: 2
 
 ### Senior Research Assistants
 
+| ![machado](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/machado.jpg) | Emily Machado |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | emach039 |
+| Email  | emach039@fiu.edu |
+| research interests | Emily is interested in understanding the effect mental health has on cognitive performance. |
+| hobbies | sleeping, drawing, skincare, fashion, video games |
+
 | ![malykke](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/malykke.jpg) | Sarah Malykke |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -93,15 +102,6 @@ nav_order: 2
 | research interests | Investigating the possible link between social anxiety and cognitive control performance. |
 | hobbies | Traveling, hiking, camping, dancing, cooking/eating food, and anything else I would be introduced to. |
 
-| ![machado](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/machado.jpg) | Emily Machado |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | emach039 |
-| Email  | emach039@fiu.edu |
-| research interests | Emily is interested in understanding the effect mental health has on cognitive performance. |
-| hobbies | sleeping, drawing, skincare, fashion, video games |
-
 ### Senior Research Technicians
 
 | ![camacho](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/camacho.jpg) | Bryan Camacho |
@@ -113,42 +113,16 @@ nav_order: 2
 | research interests | Bryan is interested in complex adaptive systems, computational behavioral sciences and modeling/simulation. |
 | hobbies | Traveling, trying new foods, reading and music production |
 
+| ![niu](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/niu.jpg) | Yanbin Niu |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Xi'an, CHN |
+| GitHub | yanbin-niu |
+| Email  | yn2352@tc.columbia.edu |
+| research interests | Yanbin is interested in social and emotional development, as well as the underlying neurocognitive mechanisms. |
+| hobbies | LEGO and coffee |
+
 ### Junior Research Assistants
-
-| ![charest](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/charest.jpg) | Sophia Charest |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | sophiacharest |
-| Email  | schar107@fiu.edu |
-| research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior. |
-| hobbies | Clay sculpting, listening to music, watching basketball, nails/fashion |
-
-| ![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | anaNDClab |
-| Email  | |
-| research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder. |
-| hobbies | painting, drawing, and watching crime documentaries |
-
-| ![fischer](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/fischer.jpg) | Aitana Fischer |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | AitanaFischer |
-| Email  | afisc020@fiu.edu |
-| research interests | Aitana is interested in the relationship between cognition and behavior, and its interrelation with mental illness.
-| hobbies | reading, singing, playing guitar |
-
-| ![duncombe](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/duncombe.jpeg) | Anfernee Duncombe |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Freeport, The Bahamas|
-| GitHub | adunc018 |
-| research interests | Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning  |
-| hobbies | Writing, rewatching the same 5 shows, baking |
 
 | ![cespedes](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/cespedes.jpg) | Ian Cespedes |
 | ---  | ---  |
@@ -159,14 +133,40 @@ nav_order: 2
 | research interests | Ian is interested in behavioral methods in collaboration with EEG methods to study cognitive control. |
 | hobbies | Reading philosophy and Super Smash Bros |
 
-| ![roch-hernandez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/roch-hernandez.jpg) | Sebastian Roch-Hernandez |
+| ![charest](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/charest.jpg) | Sophia Charest |
 | ---  | ---  |
-| pronouns | he/him/his |
+| pronouns | she/her/hers |
 | location | Miami, FL |
-| GitHub | SebaRoch-H1 |
-| Email  | sroch015@fiu.edu |
-| research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
-| hobbies | Playing guitar, reading, trying to learn random things. |
+| GitHub | sophiacharest |
+| Email  | schar107@fiu.edu |
+| research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior. |
+| hobbies | Clay sculpting, listening to music, watching basketball, nails/fashion |
+
+| ![dickinson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/dickinson.jpg) | Renata Dickinson |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | renatadickinson |
+| Email  | rdick014@fiu.edu |
+| research interests | Renata's research interests are in developmental and behavioral psychology. |
+| hobbies | Snorkeling, learning new recipes, watching movies, dancing, fashion |
+
+| ![duncombe](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/duncombe.jpeg) | Anfernee Duncombe |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Freeport, The Bahamas|
+| GitHub | adunc018 |
+| research interests | Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning  |
+| hobbies | Writing, rewatching the same 5 shows, baking |
+
+| ![fischer](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/fischer.jpg) | Aitana Fischer |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | AitanaFischer |
+| Email  | afisc020@fiu.edu |
+| research interests | Aitana is interested in the relationship between cognition and behavior, and its interrelation with mental illness.
+| hobbies | reading, singing, playing guitar |
 
 | ![gallardo](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gallardo.JPG) | Laura Gallardo |
 | ---  | ---  |
@@ -177,14 +177,41 @@ nav_order: 2
 | research interests | Laura is interested in the effects of social anxiety on cognition. |
 | hobbies | Trying new foods, boxing, watching movies |
 
-| ![dickinson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/dickinson.jpg) | Renata Dickinson |
+| ![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Miami, FL |
-| GitHub | renatadickinson |
-| Email  | rdick014@fiu.edu |
-| research interests | Renata's research interests are in developmental and behavioral psychology. |
-| hobbies | Snorkeling, learning new recipes, watching movies, dancing, fashion |
+| GitHub | anaNDClab |
+| Email  | |
+| research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder. |
+| hobbies | painting, drawing, and watching crime documentaries |
+
+| ![papadaki](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/papadaki.jpg) | Ioanna Papadaki | 
+| ---  | ---  | 
+| pronouns | she/her/hers | 
+| location | Miami, FL | 
+| GitHub | IoannaPapadaki | 
+| Email  | ipapa004@fiu.edu | 
+| research interests | Ioanna is interested in environmental and social experiences and the effect on behavior and mental illness. | 
+| hobbies | Dancing, playing the piano, photography, learning anything I considered interesting. | 
+
+| ![roch-hernandez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/roch-hernandez.jpg) | Sebastian Roch-Hernandez |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | SebaRoch-H1 |
+| Email  | sroch015@fiu.edu |
+| research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
+| hobbies | Playing guitar, reading, trying to learn random things. |
+
+| ![rodriguez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguez.jpg) | Brittney Rodriguez |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Huntsville, AL |
+| GitHub | brod0512 |
+| Email  | britrodr@fiu.edu |
+| research interests | Brittney is interested in the effects of substances in child and adolescent cognition. |
+| hobbies | drinking coffee, traveling and working out |
 
 ### Junior Research Technicians
 
@@ -196,6 +223,3 @@ nav_order: 2
 | Email  |osmany.pujolcs@gmail.com |
 | research interests | Interested in the understanding of conciousness and original thoughts  |
 | hobbies | Physics, programming, sitcoms, basketball and games |
-
-
-
