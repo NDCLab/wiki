@@ -7,7 +7,7 @@ nav_order: 1
 
 # social-context-alpha
 
-[insert the main question that the research attempts to answer (one sentence)]
+This study aims to answer the question of is there an association between social anxiety and specific executive functions, and if there is does this relation depend on social context or an individual’s temperament?
 
 ### Background
 
