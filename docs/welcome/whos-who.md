@@ -102,6 +102,15 @@ nav_order: 2
 | research interests | Investigating the possible link between social anxiety and cognitive control performance. |
 | hobbies | Traveling, hiking, camping, dancing, cooking/eating food, and anything else I would be introduced to. |
 
+|![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | anaNDClab |
+| research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder.|
+| hobbies | painting, drawing, and watching crime documentaries. |
+
+
 ### Senior Research Technicians
 
 | ![camacho](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/camacho.jpg) | Bryan Camacho |
