@@ -7,7 +7,9 @@ nav_order: 1
 
 # social-context-alpha
 
-This study aims to answer the question of: is there an association between social anxiety and specific executive functions, and if there is does this relation depend on social context and/or an individual’s temperament?
+This study aims to answer two key questions:
+1. Is there an association between social anxiety and specific executive functions?
+2. If so, does this relation depend on social context and/or an individual’s temperament?
 
 ### Background
 
@@ -36,4 +38,6 @@ Sources for more information on topics related to this research:
 
 ### Major Goals
 
-To determine whether there is an association between social anxiety and specific executive functions (task switching, inhibitory control, and working memory). To determine whether relations between social anxiety and executive functions depend on social context or an individual’s temperament. To explore more generally how individual differences in cognitive abilities, personality, or social factors relate to mental health outcomes more generally.
+* To determine whether there is an association between social anxiety and specific executive functions (task switching, inhibitory control, and working memory).
+* To determine whether relations between social anxiety and executive function depend on social context or an individual’s temperament.
+* To explore more generally how individual differences in cognitive abilities, personality, or social factors relate to mental health outcomes.
