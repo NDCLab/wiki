@@ -25,7 +25,7 @@ You can edit your profile by following the instructions [here](https://slack.com
     **Profile Photo:** Please include either a picture or an avatar of your fabulous face!<br/>
     **Full Name:** This is your first and last name(s).<br/>
     **Display Name:** Please use the name you prefer people call you, plus your last name.<br/>
-    **What I Do:** Share your role (Research Assistant, etc.)<br/>
+    **What I Do:** Share your role (Junior Research Assistant, Senior Research Tech, etc.)<br/>
     **Phone Number:** Include your number.  We don't make a lot of phone calls, but just in case we ever need to get in touch in a hurry.  Know that only active lab members have access to this information.<br/>
     **Time Zone:** Not everyone is in Miami, so input your time zone to let the team know where you are.
 
@@ -50,4 +50,14 @@ The NDCLab is an open lab, so you have access to all channels that you wish to j
 
 ## Say Hi!
 Now that you're all set up, say "Hi!" to the team on #general! We can't wait to meet you!
+
+## Learn the Lingo
+We love emojis and reacjis here at the lab. But some of them are really special. Here is a helpful guide!
+
+| emoji | shortcode | origin |
+| :-- | :-- | :-- |
+| ![ham-comp]((https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-comp.png) | ham-comp | The lab's first in-person training included an overview of the HPC. Farukh, the lab tech, used this image of a hamster at a computer to denote interactive activities during the training. |
+| ![ham-cage]((https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-cage.jpg)  | ham-cage | As part of that same training, the caged hamster was used to denote restricted access on the HPC. |
+| ![ham-wild]((https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-wild.png)  | ham-wild | Likewise, the wild hamster was used to denote full access on the HPC. |
+| ![amblyrhynchus]((https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/amblyrhynchus.jpg)  | amblyrhynchus | The Real World Errors project involves reading aloud passage from Darwin's _Voyage of the Beagle_. One of the passages talks about the amblyrhynchus, which is a marine iguana from the Galapagos. Participants quite naturally have a hard time with that one... |
 
