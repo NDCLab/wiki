@@ -210,7 +210,7 @@ Decide with your team who is editing code, what they are editing, and why they a
 | `git commit -m "[MESSAGE]"` | Commits a change |
 | `git push origin [BRANCH NAME]` | Pushes branch to the remote |
 
-| General steps to make edits and push to Github |
+| General steps to make edits and push to GitHub |
 | --- |
 | 1. Clone the repository you wish to work on, and place it in a good location |
 | 2. Change your directory to where you wish to work |
@@ -218,10 +218,10 @@ Decide with your team who is editing code, what they are editing, and why they a
 | 4. `git checkout [BRANCH NAME]` |
 | 5. Start working on files you wish to edit |
 | 6. Use `git status` to check that the edits are being documented |
-| 7. `git add [PATH OF FILE(S) LOCATION]v in order to stage the changes |
+| 7. `git add [PATH OF FILE(S) LOCATION]` in order to stage the changes |
 | 8. `git commit -m "[MESSAGE ABOUT CHANGES]"` |
 | 9. `git push origin [BRANCHE NAME]` |
-| 10. Submit a pull request physically in Github |
+| 10. Submit a pull request physically in GitHub |
 
 For a downloadable version of this cheat sheet, navigate to this [link](https://gist.github.com/emach039/832589670796828c230d2fd0f477ca4f) 
 
