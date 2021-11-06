@@ -223,7 +223,7 @@ Decide with your team who is editing code, what they are editing, and why they a
 | 9. `git push origin [BRANCHE NAME]` |
 | 10. Submit a pull request physically in GitHub |
 
-For a downloadable version of this cheat sheet, navigate to this [link](https://gist.github.com/emach039/832589670796828c230d2fd0f477ca4f) 
+For a downloadable version of this cheat sheet, navigate to this [link](https://gist.github.com/emach039/832589670796828c230d2fd0f477ca4f). 
 
 ## Additional Resources
 There are hundreds of Git resources available online. If you get stuck, do some targeted Googling. If you still can't find what you're looking for, ask your labmates in #tech.
