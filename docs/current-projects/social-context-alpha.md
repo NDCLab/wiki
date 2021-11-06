@@ -19,15 +19,15 @@ The current study aims to not only close these gaps in the literature, but also 
 
 Sources for more information on topics related to this research:
 
-*[Observational Research](https://opentext.wsu.edu/carriecuttler/chapter/observational-research/)
+* [Observational Research](https://opentext.wsu.edu/carriecuttler/chapter/observational-research/)
 
-*[Executive Functioning](http://www.ldonline.org/article/29122/)
+* [Executive Functioning](http://www.ldonline.org/article/29122/)
 	
-*[Behavioral Inhibition](https://link.springer.com/referenceworkentry/10.1007%2F978-1-4419-1005-9_1093)
+* [Behavioral Inhibition](https://link.springer.com/referenceworkentry/10.1007%2F978-1-4419-1005-9_1093)
 	
-*[Social Anxiety](https://www.nimh.nih.gov/health/publications/social-anxiety-disorder-more-than-just-shyness)
+* [Social Anxiety](https://www.nimh.nih.gov/health/publications/social-anxiety-disorder-more-than-just-shyness)
 
-*[Behavioral Inhibition and its Relationship to Anxiety](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2724161/)
+* [Behavioral Inhibition and its Relationship to Anxiety](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2724161/)
 
 ### Major Goals
 
