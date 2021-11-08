@@ -8,20 +8,21 @@ nav_order: 4
 ![dt2-racks-from-front](https://user-images.githubusercontent.com/26397102/118044340-27148d00-b33c-11eb-8b2c-17a454f18c51.jpg)  
 *Not the FIU cluster*
 
-## Outline 
 
-* [Introduction](#introduction)
-* [Connecting to the HPC](#connecting)
-    * [Establishing VPN Connection](#vpn)
-    * [Login Node](#login-node)
-    * [Visual Node](#visual-node)
-* [HPC File Structure](#Structure)
-* [Git](#git)
-* [Singularity](#singularity)
-* [Slurm](#slurm)
-* [Jupyter](#jupyter)  
+### Contents
+1. [Introduction](#introduction)
+2. [Connecting to the HPC](#connecting)
+    1. [Establishing VPN Connection](#vpn)
+    2. [Login Node](#login-node)
+    3. [Visual Node](#visual-node)
+3. [HPC File Structure](#Structure)
+4. [Git](#git)
+5. [Singularity](#singularity)
+    1. [Using Dockerfile with Singularity](#using-dockerfile-with-singularity)
+6. [Slurm](#slurm)
+7. [Jupyter](#jupyter)  
 
-## Introduction
+# Introduction
 The [FIU High-performance computing (HPC) cluster](http://ircc.fiu.edu/) is a group of interconnected computers designed to perform computationally "expensive" tasks. This includes processing large quantities of data and executing programs in parallel. 
 
 While a personal computer with 6 cores could execute 6 programs in parallel, one of the 3000 compute nodes in the HPC cluster could execute 44 programs in parallel.
@@ -30,17 +31,17 @@ The following document details how to access and properly utilize this resource,
 
 
 
-## Connecting
+# Connecting
 To use the HPC, a lab member must either use on-campus WiFi or utilize a VPN to access the [FIU intranet](https://en.wikipedia.org/wiki/Intranet). 
 
 Once a secure connection is established, both the login node and visual nodes can be accessed for job submission and file manipulation respectively.
 
-### VPN
+## VPN
 If a lab member is using on-campus WiFi, this step can be safely skipped. 
 
 However, if a lab member is accessing the HPC off-campus, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/) to access the FIU intranet. 
 
-### Login-Node 
+## Login-Node
 The login node, also known as the head node, is the primary HPC entry point for submitting jobs and transferring small amounts of data.
 
 Note: a user must login to the login-node **before** logging into the hpcgui to initialize their home directory. 
@@ -70,7 +71,7 @@ Welcome to the FIU Instructional & Research Computing Center (IRCC)
 #######################################################################
 ```
 
-### Visual-Node
+## Visual-Node
 The visualization node is used for directly editing files on the cluster and for GUI manipulation. To access the visual node, simply click [hpcgui.fiu.edu](hpcgui.fiu.edu).
 
 <img width="957" alt="fiuHPCgui" src="https://user-images.githubusercontent.com/26397102/119862076-c067a580-bedd-11eb-9481-b1d6ca42b554.png">
@@ -81,7 +82,7 @@ The red boxes detail the following:
 * Clusters: provide [shell](https://ndclab.github.io/wiki/docs/shell) access to the cluster
 * Interactive Apps: GUI applications available for HPC account-holders 
 
-## Structure
+# Structure
 
 Within the cluster, the NDCLab will have the following file structure:
 
@@ -107,12 +108,12 @@ The additional `devOps` folder contains scripts used for lab-wide cluster organi
 ### analyses
 Finally, each ongoing project has a folder in the `analyses` directory, which contains cleaned datasets, plots, and various statistics.
 
-## Git
+# Git
 By default, [Git](https://ndclab.github.io/wiki/docs/git-and-github) comes installed on the HPC cluster. However, without properly configuring an email address and user name, and linking a GitHub account, users have read-only privileges when it comes to cloning or forking from GitHub. 
 
 To link a GitHub account to the HPC, follow the steps outlined the FIU Neuro Onboarding [link](https://github.com/fiuneuro/Onboarding#setting-up-git-on-the-hpc). 
 
-## Singularity
+# Singularity
 Singularity is the preferred container to use on the FIU HPC cluster, as an improperly secured Dockerfile can grant root access to a system it is running on.
 
 However, Dockerfiles can be used with Singularity on the HPC, and making the jump between the two is trivial.
@@ -148,7 +149,7 @@ mv <myImage>.tar <path/to/project>
 singularity build <myImage>.sif docker-archive://<myImage>.tar
 ```
 
-## Slurm
+# Slurm
 For anything that goes beyond running basic lines of code, a job must be submitted so that the compute nodes can properly handle tasks. Note, this is a **requirement** on the HPC, as login nodes are not the intended resource for computation.
 
 <span style="color:red">Repeated improper utilization of login node resources can lead to a ban from the cluster.</span>
@@ -180,7 +181,7 @@ python sample.py
 
 The first 3 lines of the script specify the "private" queue used for the lab.  Always specify 'medium' and select one of the medium machines.
 
-## Jupyter
+# Jupyter
 
 To use a Jupyter Notebook on the HPC:
    

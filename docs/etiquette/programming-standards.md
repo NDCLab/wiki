@@ -7,24 +7,24 @@ nav_order: 2
 
 ![random_number](https://user-images.githubusercontent.com/26397102/124515039-73b09d80-ddac-11eb-98b4-cf4d8905dfa3.png)
 
-## Outline 
+### Contents
 
-* [Introduction](#Introduction)
-* [Naming](#Naming)
-* [Python](#Python)
-* [Containerization](#Containerization)
+1. [Introduction](#Introduction)
+2. [Naming](#Naming)
+3. [Python](#Python)
+4. [Containerization](#Containerization)
 
-## Introduction
+# Introduction
 The following documentation details programming standards used by the lab for various protocols, programming languages, and tools.
 
 Standardization of the way each lab-member writes code eases [cognitive load](https://en.wikipedia.org/wiki/Cognitive_load) which directly supports debugging, code legibility, and future development. 
 
 For any recommendations on practices, please feel free to directly reach out to the lab tech. 
 
-## Naming
+# Naming
 Naming conventions for functions, variables, packages, and files are discussed thoroughly in the [naming-conventions](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/etiquette/naming-conventions.html) page. 
 
-## Python
+# Python
 
 - Global variables should not be used
 
@@ -131,5 +131,5 @@ Naming conventions for functions, variables, packages, and files are discussed t
     ```
 
 
-## Containerization
+# Containerization
 - Updates to container content should be discrete and announced events. This will prevent unexpected behavior (sudden unsupported packages, changes in kernel, etc.) in local environments. 

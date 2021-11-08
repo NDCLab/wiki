@@ -5,7 +5,7 @@ parent: Technical Documentation
 nav_order: 1
 ---
 
-#### Contents
+### Contents
 1. [Overview](#overview)
 2. [Installing Git](#installing-git)
 3. [Authenticating to GitHub](#authenticating-to-github)
@@ -13,9 +13,15 @@ nav_order: 1
 4. [Basic Commands](#basic-commands)
 5. [Markdown](#markdown)
 6. [SCM Best Practices](#scm-best-practices)
+   1. [Commit often](#commit-often)
+   2. [Check your version](#check-yout-version)
+   3. [Be obsessive about note-taking](#be-obsessive-about-note-taking)
+   4. [Review changes before committing](#review-changes-before-committing)
+   5. [Use branches](#use-branches)
+   6. [Agree on a team workflow](#agree-on-a-team-workflow)
 7. [Additional Resources](#additional-resources)
 
-## Overview
+# Overview
 
 [Git](https://en.wikipedia.org/wiki/Git) is an [open source](https://opensource.com/resources/what-open-source) version control system. A version control system is a piece of software that allows you to track changes in text files over the development lifetime. [GitHub](https://en.wikipedia.org/wiki/GitHub) is an online platform that allows people to host Git repositories (that is, version controlled projects) online so that other team members and community members have easy access to those repositories. GitHub also offers several additional services like issue tracking, actions, and project boards which we use to manage lab projects. Since the lab is dedicated to [open science](https://opensource.com/resources/open-science) and all projects are open source, GitHub provides these services for free.
 
@@ -26,7 +32,7 @@ GitHub is where we will store these repositories. There are several alternatives
 This Git tutorial focuses on using the [command-line
 interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We will not be covering any [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) clients because these clients can differ in looks and navigation across operating systems and may be frequently updated whereas the CLI tool has the same interface across operating systems and rarely changes in appearance. (Plus, it's very handy to know how to use the command line!)
 
-## Installing Git
+# Installing Git
 
 **Mac**
 
@@ -46,7 +52,7 @@ interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) tool. We 
 Use the package manager that comes with your distribution and install `git`. See specific instructions [here](https://git-scm.com/download/linux).
 
 
-## Authenticating to GitHub
+# Authenticating to GitHub
 
 When working in the shell and pushing your work to GitHub, GitHub needs to know who you are. This means you must "authenticate" yourself to the platform. You can do this one of three ways:
 * inputting your username and password every time (very onerous and therefore not recommended!)
@@ -57,13 +63,13 @@ For simplicity, the personal access token is recommended.  Authenticate by follo
 
 For details on other authentication options, check out [this resource page](https://docs.github.com/en/github/authenticating-to-github).
 
-## Notifications
+# Notifications
 
 You can control whether GitHub sends you web notifications, e-mail notifications, or both when you are @mentioned inside GitHub. In this way, when someone tags you on GitHub, you will receive an e-mail, and you will also be able to access the message from the 🔔 icon in the top-right corner of the GitHub webpage.
 
 To ensure that you see these messages (especially when you are first learning GitHub), it is recommended that you select both "Email" and "Web and Mobile" under the Notifications tab of your Account Settings.
 
-## Basic Commands
+# Basic Commands
 
 Git has several common commands that will be necessary to properly work with the the lab's repositories. These are `status`, `add`, `commit`, `push`, `pull`, and `checkout`.
 
@@ -165,36 +171,36 @@ git pull
 # Git will download new changes and merge them automatically
 ```
 
-## Markdown
+# Markdown
 
 GitHub supports [markdown](https://en.wikipedia.org/wiki/Markdown), which allows you format text in text-based .md files so that GitHub renders them beautifully online. The [Get with Git training](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html) includes a module on markdown. Here are some other helpful guides:
 [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 [GitHub Markdown Cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-## SCM Best Practices
+# SCM Best Practices
 
 When working with Git and GitHub for the lab, remember these best practices for source code management (SCM):
 
-### Commit often.
+## Commit Often.
 Don’t make too many changes without commits, since it can be destructive if one change within the commit is bad. Commit often and leave a detailed comment about what part of the code was changed.
 
-### Check your version.
+## Check your version.
 Make sure you are working on the latest version. Use the latest version to avoid accidentally changing an old version and causing confusion.
 
-### Be obsessive about note-taking.
+## Be obsessive about note-taking.
 Make detailed notes/comments about everything you do. This should be 2-3 sentences that thoroughly describe the changes made (what was changed, why it was changed, etc.).
 >Example:
 >Added indentation on Line 13 for readability.
 >Corrected error, changed dog.jpg to dog.jpg on Line 27. 
 
-### Review changes before committing.
+## Review changes before committing.
 Be 100% sure you want to commit the changes made before doing so!
 
-### Use branches.
+## Use branches.
 Work independently but communicate what you are working on by creating a new branch and naming it according to the lab's nomenclature.
 
-### Agree on a team workflow.
+## Agree on a team workflow.
 Decide with your team who is editing code, what they are editing, and why they are editing. Communicate frequently to stay on track.
 
-## Additional Resources
+# Additional Resources
 There are hundreds of Git resources available online. If you get stuck, do some targeted Googling. If you still can't find what you're looking for, ask your labmates in #tech.
