@@ -202,12 +202,12 @@ Decide with your team who is editing code, what they are editing, and why they a
 | Command | Description |
 | --- | --- |
 | `ls` | Checks your current path |
-| `cd` | Change your directory by going up or down |
+| `cd` | Change your directory |
 | `git branch [BRANCH NAME]` | Creates a new branch |
 | `git checkout [BRANCH NAME]` | To actually enter a branch |
 | `git status` | Checks what branch you're on. Also tells you if any changes were made to a file (i.e any unstaged changes, new commits) |
 | `git add [PATH OF FILE(S) LOCATION]` | Adds contents to the staging area |
-| `git commit -m "[MESSAGE]"` | Commits a change |
+| `git commit -m "[MESSAGE]"` | Commits a change (check out the lab's conventions for commit messages [here](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#github) |
 | `git push origin [BRANCH NAME]` | Pushes branch to the remote |
 
 | General steps to make edits and push to GitHub |
@@ -220,7 +220,7 @@ Decide with your team who is editing code, what they are editing, and why they a
 | 6. Use `git status` to check that the edits are being documented |
 | 7. `git add [PATH OF FILE(S) LOCATION]` in order to stage the changes |
 | 8. `git commit -m "[MESSAGE ABOUT CHANGES]"` |
-| 9. `git push origin [BRANCHE NAME]` |
+| 9. `git push origin [BRANCH NAME]` |
 | 10. Submit a pull request physically in GitHub |
 
 For a downloadable version of this cheat sheet, navigate to this [link](https://gist.github.com/emach039/832589670796828c230d2fd0f477ca4f). 
