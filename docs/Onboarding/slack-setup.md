@@ -56,8 +56,8 @@ We love emojis and reacjis here at the lab. But some of them are really special.
 
 | emoji | shortcode | origin |
 | :-- | :-- | :-- |
-| ![ham-comp]((https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-comp.png) | ham-comp | The lab's first in-person training included an overview of the HPC. Farukh, the lab tech, used this image of a hamster at a computer to denote interactive activities during the training. |
-| ![ham-cage]((https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-cage.jpg)  | ham-cage | As part of that same training, the caged hamster was used to denote restricted access on the HPC. |
-| ![ham-wild]((https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-wild.png)  | ham-wild | Likewise, the wild hamster was used to denote full access on the HPC. |
-| ![amblyrhynchus]((https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/amblyrhynchus.jpg)  | amblyrhynchus | The Real World Errors project involves reading aloud passage from Darwin's _Voyage of the Beagle_. One of the passages talks about the amblyrhynchus, which is a marine iguana from the Galapagos. Participants quite naturally have a hard time with that one... |
+| ![ham-comp](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-comp.png) | ham-comp | The lab's first in-person training included an overview of the HPC. Farukh, the lab tech, used this image of a hamster at a computer to denote interactive activities during the training. |
+| ![ham-cage](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-cage.jpg)  | ham-cage | As part of that same training, the caged hamster was used to denote restricted access on the HPC. |
+| ![ham-wild](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-wild.png)  | ham-wild | Likewise, the wild hamster was used to denote full access on the HPC. |
+| ![amblyrhynchus](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/amblyrhynchus.jpg)  | amblyrhynchus | The Real World Errors project involves reading aloud passage from Darwin's _Voyage of the Beagle_. One of the passages talks about the amblyrhynchus, which is a marine iguana from the Galapagos. Participants quite naturally have a hard time with that one... |
 
