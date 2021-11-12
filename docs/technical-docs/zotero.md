@@ -62,22 +62,22 @@ The group library can be thought of as a collection of songs. Each subcollection
 
 Note that a given collection (for example, "my-project-folder") does do not actually "house" its subcollections (Triage, In-Process, Annotated). Every collection and subcollection is an entirely separate folder and the nesting is only visual. As a result, papers and tags found in a subcollection (e.g. Triage) are not searchable from the main collection (my-project-folder), and vice versa.
 
-### Main project folder:
+### Main project folder
 
 No papers are saved in this folder. It only contains a [Standalone Note](https://www.zotero.org/support/notes) that lists the conceptual tags that are relevant for the project. 
 
-#### Triage: 
+#### Triage 
 
 This folder is a staging area for papers that may be relevant for the literature review. A lab member confident in paper triage will determine if the paper is relevant to the project and worth annotating.
 
 * If a paper passes triage, it gets added to the In-Process folder and removed from Triage.
 * If a paper fails triage, it gets removed from collection (NOT trashed from library as a whole), and the project tag is removed.
 
-#### In-Process:
+#### In-Process
 
 This folder is for papers that have been confirmed as relevant for the literature review and now need to be annotated (or are actively in the process of being annotated). Once they have been annotated, they are removed from the In-Process folder and added to the Annotated folder.
 
-#### Annotated: 
+#### Annotated 
 
 This folder is for papers that have been read and annotated for a literature review. Relevant conceptual tags are added to the paper when it is added to the Annotated folder.
 
