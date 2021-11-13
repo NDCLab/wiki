@@ -202,5 +202,5 @@ Work independently but communicate what you are working on by creating a new bra
 ### Agree on a team workflow.
 Decide with your team who is editing code, what they are editing, and why they are editing. Communicate frequently to stay on track.
 
-# Additional Resources
+## Additional Resources
 There are hundreds of Git resources available online. If you get stuck, do some targeted Googling. If you still can't find what you're looking for, ask your labmates in #tech.
