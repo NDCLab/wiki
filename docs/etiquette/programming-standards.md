@@ -7,14 +7,14 @@ nav_order: 2
 
 ![random_number](https://user-images.githubusercontent.com/26397102/124515039-73b09d80-ddac-11eb-98b4-cf4d8905dfa3.png)
 
-## Outline 
+### Contents
 
-* [Introduction](#Introduction)
-* [Naming](#Naming)
-* [Python](#Python)
-* [Containerization](#Containerization)
+1. [Overview](#Overview)
+2. [Naming](#Naming)
+3. [Python](#Python)
+4. [Containerization](#Containerization)
 
-## Introduction
+## Overview
 The following documentation details programming standards used by the lab for various protocols, programming languages, and tools.
 
 Standardization of the way each lab-member writes code eases [cognitive load](https://en.wikipedia.org/wiki/Cognitive_load) which directly supports debugging, code legibility, and future development. 

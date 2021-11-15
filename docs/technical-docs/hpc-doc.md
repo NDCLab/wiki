@@ -8,20 +8,17 @@ nav_order: 4
 ![dt2-racks-from-front](https://user-images.githubusercontent.com/26397102/118044340-27148d00-b33c-11eb-8b2c-17a454f18c51.jpg)  
 *Not the FIU cluster*
 
-## Outline 
 
-* [Introduction](#introduction)
-* [Connecting to the HPC](#connecting)
-    * [Establishing VPN Connection](#vpn)
-    * [Login Node](#login-node)
-    * [Visual Node](#visual-node)
-* [HPC File Structure](#Structure)
-* [Git](#git)
-* [Singularity](#singularity)
-* [Slurm](#slurm)
-* [Jupyter](#jupyter)  
+### Contents
+1. [Overview](#Overview)
+2. [Connecting to the HPC](#connecting)
+3. [HPC File Structure](#Structure)
+4. [Git](#git)
+5. [Singularity](#singularity)
+6. [Slurm](#slurm)
+7. [Jupyter](#jupyter)  
 
-## Introduction
+## Overview
 The [FIU High-performance computing (HPC) cluster](http://ircc.fiu.edu/) is a group of interconnected computers designed to perform computationally "expensive" tasks. This includes processing large quantities of data and executing programs in parallel. 
 
 While a personal computer with 6 cores could execute 6 programs in parallel, one of the 3000 compute nodes in the HPC cluster could execute 44 programs in parallel.
@@ -40,7 +37,7 @@ If a lab member is using on-campus WiFi, this step can be safely skipped.
 
 However, if a lab member is accessing the HPC off-campus, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/) to access the FIU intranet. 
 
-### Login-Node 
+### Login-Node
 The login node, also known as the head node, is the primary HPC entry point for submitting jobs and transferring small amounts of data.
 
 Note: a user must login to the login-node **before** logging into the hpcgui to initialize their home directory. 
@@ -117,7 +114,7 @@ Singularity is the preferred container to use on the FIU HPC cluster, as an impr
 
 However, Dockerfiles can be used with Singularity on the HPC, and making the jump between the two is trivial.
 
-## Using Dockerfile with Singularity
+### Using Dockerfile with Singularity
 
 If the singularity file has not already been created on the cluster, but a dockerfile image exists, then follow the steps outlined below: 
 

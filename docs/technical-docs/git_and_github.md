@@ -5,7 +5,7 @@ parent: Technical Documentation
 nav_order: 1
 ---
 
-#### Contents
+### Contents
 1. [Overview](#overview)
 2. [Installing Git](#installing-git)
 3. [Authenticating to GitHub](#authenticating-to-github)
