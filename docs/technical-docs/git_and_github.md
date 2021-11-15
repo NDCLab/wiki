@@ -13,12 +13,6 @@ nav_order: 1
 4. [Basic Commands](#basic-commands)
 5. [Markdown](#markdown)
 6. [SCM Best Practices](#scm-best-practices)
-   1. [Commit often](#commit-often)
-   2. [Check your version](#check-yout-version)
-   3. [Be obsessive about note-taking](#be-obsessive-about-note-taking)
-   4. [Review changes before committing](#review-changes-before-committing)
-   5. [Use branches](#use-branches)
-   6. [Agree on a team workflow](#agree-on-a-team-workflow)
 7. [Additional Resources](#additional-resources)
 
 ## Overview
@@ -181,7 +175,7 @@ GitHub supports [markdown](https://en.wikipedia.org/wiki/Markdown), which allows
 
 When working with Git and GitHub for the lab, remember these best practices for source code management (SCM):
 
-### Commit Often.
+### Commit often.
 Don’t make too many changes without commits, since it can be destructive if one change within the commit is bad. Commit often and leave a detailed comment about what part of the code was changed.
 
 ### Check your version.
