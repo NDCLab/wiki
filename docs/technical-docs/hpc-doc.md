@@ -12,13 +12,9 @@ nav_order: 4
 ### Contents
 1. [Overview](#Overview)
 2. [Connecting to the HPC](#connecting)
-    1. [Establishing VPN Connection](#vpn)
-    2. [Login Node](#login-node)
-    3. [Visual Node](#visual-node)
 3. [HPC File Structure](#Structure)
 4. [Git](#git)
 5. [Singularity](#singularity)
-    1. [Using Dockerfile with Singularity](#using-dockerfile-with-singularity)
 6. [Slurm](#slurm)
 7. [Jupyter](#jupyter)  
 
