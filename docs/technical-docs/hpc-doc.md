@@ -2,7 +2,7 @@
 layout: default
 title: HPC
 parent: Technical Documentation
-nav_order: 4
+nav_order: 3
 ---
 
 ![dt2-racks-from-front](https://user-images.githubusercontent.com/26397102/118044340-27148d00-b33c-11eb-8b2c-17a454f18c51.jpg)  
