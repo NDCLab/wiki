@@ -2,7 +2,7 @@
 layout: default
 title: Docker
 parent: Technical Documentation
-nav_order: 6
+nav_order: 1
 ---
 # Docker Usage
 

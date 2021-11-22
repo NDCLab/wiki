@@ -2,54 +2,42 @@
 layout: default
 title: Zotero
 parent: Technical Documentation
-nav_order: 5
+nav_order: 8
 ---
 
-# Zotero Tutorial
-
-An overview of what Zotero does, how to get started, and how to use it.
-
-
-
-#### TABLE OF CONTENTS
-1. [What is Zotero?](https://ndclab.github.io/wiki/docs/zotero.html#what-is-zotero?)
-2. [Set-Up](https://ndclab.github.io/wiki/docs/zotero.html#set-up)
-3. [Saving Papers](https://ndclab.github.io/wiki/docs/zotero.html#saving-papers)
-4. [Folder Structure](https://ndclab.github.io/wiki/docs/zotero.html#folder-structure)
-5. [Creating and Navigating Tags](https://ndclab.github.io/wiki/docs/zotero.html#creating-and-navigating-tags)
-6. [Quick Tips](https://ndclab.github.io/wiki/docs/zotero.html#quick-tips)
+### Contents
+1. [Overview](#overview)
+2. [Set-Up](#set-up)
+3. [Saving Papers](#saving-papers)
+4. [Folder Structure](#folder-structure)
+5. [Creating and Navigating Tags](#creating-and-navigating-tags)
+6. [Quick Tips](#quick-tips)
 
 
-
-## What is Zotero?
+## Overview
 
 Zotero is a reference manager that allows the lab to have a shared collection of papers and makes it easy for users to add properly formatted in-text citations and bibliographies. 
-
-
-
 
 ## Set-Up
 
 
-#### 1. Create an account
+### 1. Create an account
 
 Create an account at [this link.](https://www.zotero.org/user/register) 
 
-#### 2. Get added to the NDC_Lab group library
+### 2. Get added to the NDC_Lab group library
 
 Send a message to the lab manager with either your Zotero username or the email you used to create an account. They will send you an email invite to join the group library.
 
-#### 3. Install the application and Chrome extension
+### 3. Install the application and Chrome extension
 
 While you wait to be added to the group library, download both the Zotero application and Chrome extension at [at this link.](https://www.zotero.org/download/) 
 
 Once the application is installed, it should automatically install a plugin for Word, at which point you will need to restart Word. If it doesn't auto-install, see [this documentation.](https://www.zotero.org/support/word_processor_plugin_manual_installation)
 
-#### 4. Sync your account
+### 4. Sync your account
 
 To sync your online account with your local copy of the application, open the local application and navigate to: Zotero > Preferences > Sync. Click "Link account" and log in using your Zotero username and password. Zotero should now automatically update the group library as others add papers to it. However, Zotero can be manually synced via the circular green arrow at the top right of the application window. 
-
-
 
 
 ## Saving Papers
@@ -61,36 +49,33 @@ Before you save a pdf to Zotero, either via the Chrome extension or by dragging 
 2. If the paper **does** already exist in the group library, **do not** save it again. Instead, drag it from the main NDC_Lab folder to your project folder’s Triage subfolder to "add" it to your collection of papers for triage.
     
 
-
-
 ## Folder Structure
 
 
-#### NDC_Lab Group Library
+### NDC_Lab Group Library
 
 The group library can be thought of as a collection of songs. Each subcollection (folder) within it acts like a 'playlist' of certain papers. Papers that are removed from subcollections (playlists) are not removed from the group library (all songs) or from other subcollections. 
 
 Note that a given collection (for example, "my-project-folder") does do not actually "house" its subcollections (Triage, In-Process, Annotated). Every collection and subcollection is an entirely separate folder and the nesting is only visual. As a result, papers and tags found in a subcollection (e.g. Triage) are not searchable from the main collection (my-project-folder), and vice versa.
 
-#### Main project folder:
+### Main project folder
 
 No papers are saved in this folder. It only contains a [Standalone Note](https://www.zotero.org/support/notes) that lists the conceptual tags that are relevant for the project. 
 
-#### Triage: 
+#### Triage 
 
 This folder is a staging area for papers that may be relevant for the literature review. A lab member confident in paper triage will determine if the paper is relevant to the project and worth annotating.
 
 * If a paper passes triage, it gets added to the In-Process folder and removed from Triage.
 * If a paper fails triage, it gets removed from collection (NOT trashed from library as a whole), and the project tag is removed.
 
-#### In-Process:
+#### In-Process
 
 This folder is for papers that have been confirmed as relevant for the literature review and now need to be annotated (or are actively in the process of being annotated). Once they have been annotated, they are removed from the In-Process folder and added to the Annotated folder.
 
-#### Annotated: 
+#### Annotated 
 
 This folder is for papers that have been read and annotated for a literature review. Relevant conceptual tags are added to the paper when it is added to the Annotated folder.
-
 
 
 
@@ -109,7 +94,7 @@ Papers in a subcollection or in the main NDC_Lab group library can be filtered b
 ## Quick Tips
 
 
-1. This website has an overview of all of Zotero’s features: https://www.zotero.org/support/quick_start_guide 
+1. For an overview of all of Zotero’s features, click [here](https://www.zotero.org/support/quick_start_guide). 
 2. The Zotero app must be open and running on your computer for the Chrome extension to work.
 3. Once you save a pdf to a folder, it should automatically retrieve the metadata from the pdf so it's accessible for citation purposes and so it can be sorted by the author, date published, title, abstract, etc in the Zotero app. If it doesn't load it automatically, right click on a pdf in the app and click Retrieve Metadata. You may have to manually type in the info or correct the info it generates. 
 4. Triage folders should include the project name in the folder name. When using the Chrome extension, this makes it easy for lab members to be sure they are saving a paper to the correct folder. Project names are not added to the In-Process and Annotated folders to reduce visual noise within the library.

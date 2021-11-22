@@ -2,7 +2,7 @@
 layout: default
 title: Python CI Workflow
 parent: Technical Documentation
-nav_order: 8
+nav_order: 5
 ---
 
 # Python CI Workflow

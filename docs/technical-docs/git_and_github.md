@@ -2,7 +2,7 @@
 layout: default
 title: Git + GitHub
 parent: Technical Documentation
-nav_order: 1
+nav_order: 2
 ---
 
 ### Contents

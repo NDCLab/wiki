@@ -2,7 +2,7 @@
 layout: default
 title: Shell
 parent: Technical Documentation
-nav_order: 3
+nav_order: 6
 ---
 
 ### Contents
@@ -13,11 +13,11 @@ nav_order: 3
    2. [Important Commands](#important-commands)
    3. [Additional Resources](#additional-resources)
 
-# Overview
+## Overview
 
 It's very useful to know how to use a [command-line interface (CLI)](https://en.wikipedia.org/wiki/Command-line_interface) inside a [shell](https://en.wikipedia.org/wiki/Shell_(computing)).  At the NDCLab, you will need this knowledge to work with [GitHub](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html) and the [FIU HPC](https://ndclab.github.io/wiki/docs/technical-docs/hpc-doc.html), among other applications.
 
-# Opening a Shell
+## Opening a Shell
 
 **Mac**
 
@@ -40,9 +40,9 @@ Navigate to any location on your machine (although one suggests selecting a loca
 There are many ways to open a shell on Linux. One example: right-click your desktop and select "Open Terminal" from the menu.
 
 
-# Shell Tips
+## Shell Tips
 
-## Key Terms
+### Key Terms
 
 Here is some of the key terminology used in working with a shell:
 
@@ -51,9 +51,9 @@ Here is some of the key terminology used in working with a shell:
 - **option**: an option that the program will allow you to change using special formatting, generally	denoted with a "--" in front of the option name. For example "--option value".
 - **flag**: an option that can be on or off, generally denoted with a "-" in front of the name. For example "-t".
 
-## Important Commands
+### Important Commands
 
-### ls
+#### ls
 
 `ls` will list the files and directories that live within the directory that you are currently "in." This is useful to see what is in your current directory, but it can also show you the contents of any directory as long as you provide a valid path to that directory and you have permission to view that directory.
 
@@ -71,7 +71,7 @@ ls -l
 #> drwxr-xr-x    - username 25 Aug 17:00 stories.txt
 ```
 
-### cd
+#### cd
 
 `cd` (change directory) is a shell command that allows you to move from one directory to another. This is useful to move around in the shell and, like `ls`, it will accept any valid path to any directory.
 
@@ -106,7 +106,7 @@ cd ~
 ```
 
 
-### mkdir
+#### mkdir
 
 `mkdir` (make directory) is a shell command that allows you to create a new directory. This is useful to create a folder on your local where you can store files. You can name your directory anything that relates to the content within the directory.
 
