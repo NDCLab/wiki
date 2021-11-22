@@ -5,7 +5,7 @@ parent: Technical Documentation
 nav_order: 8
 ---
 
-### CONTENTS
+### Contents
 1. [Overview](#overview)
 2. [Set-Up](#set-up)
 3. [Saving Papers](#saving-papers)
@@ -15,10 +15,6 @@ nav_order: 8
 
 
 ## Overview
-
-An overview of what Zotero does, how to get started, and how to use it.
-
-## What is Zotero?
 
 Zotero is a reference manager that allows the lab to have a shared collection of papers and makes it easy for users to add properly formatted in-text citations and bibliographies. 
 
