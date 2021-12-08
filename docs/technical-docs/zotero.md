@@ -100,3 +100,13 @@ Papers in a subcollection or in the main NDC_Lab group library can be filtered b
 4. Triage folders should include the project name in the folder name. When using the Chrome extension, this makes it easy for lab members to be sure they are saving a paper to the correct folder. Project names are not added to the In-Process and Annotated folders to reduce visual noise within the library.
 5. After selecting a paper within the app, you can highlight all collections that contain this paper by holding down the “Option” key on Mac OS X, the “Control” key on Windows, or the “Alt” key on Linux.”
 
+
+## Caveats
+
+
+Avoid creating any modifications—like notes or highlights—to an article or journal under the Group Library entitled NDC_Lab folder on Zotero. Any modifications should be done so only after one has created an individual copy of the paper so that the changes aren’t reflected onto the lab’s archives. 
+
+To make an individual copy of a paper refer to the following steps: 
+1. Locate the file for the article of interest under “NDC_Lab” 
+2. Drag the original file of the article onto “My Library”
+3. Apply any modifications to the the article under this new file in “My library”
