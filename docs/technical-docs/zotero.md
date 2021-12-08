@@ -107,6 +107,6 @@ Papers in a subcollection or in the main NDC_Lab group library can be filtered b
 Avoid creating any modifications—like notes or highlights—to an article or journal under the Group Library entitled NDC_Lab folder on Zotero. Any modifications should be done so only after one has created an individual copy of the paper so that the changes aren’t reflected onto the lab’s archives. 
 
 To make an individual copy of a paper refer to the following steps: 
-1. Locate the file for the article of interest under “NDC_Lab” 
-2. Drag the original file of the article onto “My Library”
-3. Apply any modifications to the the article under this new file in “My library”
+1. Locate the file for the article of interest under “NDC_Lab.” 
+2. Drag the original file of the article onto “My Library.”
+3. Apply any modifications to the the article under this new file in “My Library.” (Tip for Mac users: Before adding notes or highlights to your own copy using Preview, go to File>Export as PDF, then swap out the Zotero file in "My Library" for this new export. This helps ensure stability in the modifications, which otherwise have a tendency to randomly disappear!)
