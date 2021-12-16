@@ -16,7 +16,7 @@ assignees: ''
 
 ## Checklist
 :point_right: Check below to confirm you have taken the following steps before submitting this PR:
-- [ ] All my proposed changes have been pushed to the remote.
+- [ ] All my proposed changes have been pushed to remote.
 - [ ] This pull request is showing as a merge into `main`.
 - [ ] I have assigned a specific reviewer for this pull request.
 - [ ] I have connected any associated issues to this pull request so they will be automatically closed when the PR is merged.
