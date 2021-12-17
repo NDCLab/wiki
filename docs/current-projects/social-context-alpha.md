@@ -17,12 +17,6 @@ Broadly, this study aims to clarify relations between particular cognitive abili
 
 The current study aims to not only close these gaps in the literature, but also provide a more broad investigation of how particular cognitive abilities, and personality or social factors, relate to mental health outcomes. Towards these ends, participants will perform a task battery that is designed to assess task switching, inhibitory control, and working memory, when responding to either social stimuli (faces) or neutral stimuli (scrambled faces). Additionally, the task battery will be performed twice, once while alone and once while being observed by the experimenter. Task development was based on the modification of existing paradigms and using a standardized set of face stimuli (Lundqvist et. al., 1998). Participants will also complete a more general battery of questionnaires and executive function tasks (flanker task, dimensional change card sort task, n-back task).
 
-Sources for more information on topics related to this research:
-* [Observational Research](https://opentext.wsu.edu/carriecuttler/chapter/observational-research/)
-* [Executive Functioning](http://www.ldonline.org/article/29122/)
-* [Behavioral Inhibition](https://link.springer.com/referenceworkentry/10.1007%2F978-1-4419-1005-9_1093)
-* [Social Anxiety](https://www.nimh.nih.gov/health/publications/social-anxiety-disorder-more-than-just-shyness)
-* [Behavioral Inhibition and its Relationship to Anxiety](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2724161/)
 
 ### Major Goals
 
