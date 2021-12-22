@@ -1,3 +1,4 @@
+CLICK ON PREVIEW TO VISUALIZE THE STRUCTURE OF THIS PR TEMPLATE
 
 :point_right: Read the instructions marked with this emoji to guide use of this template. Before submission, delete all the guidance text.
 
