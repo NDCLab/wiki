@@ -222,6 +222,15 @@ nav_order: 2
 | research interests | Brittney is interested in the effects of substances in child and adolescent cognition. |
 | hobbies | drinking coffee, traveling and working out |
 
+| ![weber](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/weber.jpg) | Lauren Weber |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | laurenweberr |
+| Email  | lwebe013@fiu.edu |
+| research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
+| hobbies | water sports, working out, traveling, tennis, and watching documentaries |
+
 ### Junior Research Technicians
 
 | ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
