@@ -11,7 +11,8 @@ nav_order: 1
 3. [Code](#code)
 4. [GitHub](#github)
 5. [REDCap](#redcap)
-6. [Helpful Resources](#helpful-resources)
+6. [PsychoPy and Pavlovia](#psychopy-and-pavlovia)
+7. [Helpful Resources](#helpful-resources)
 
 ## Overarching Philosophy
 
@@ -243,6 +244,22 @@ In relatively rare but important cases, such as instruments that gather demograp
 > demo_sleep_s1_r1_e1<br/>
 > demo_exercise_s1_r1_e1<br/>
 > demo_caffeine_s1_r1_e1
+
+## PsychoPy and Pavlovia
+
+### Folder and Experiment Names
+
+The folder and the name of the .psyexp file should be identical:
+> ft-flanker-o_s1_r1_e1
+> read-aloud-val-o_s1_r1_e1
+> multi-ef_s1_r1_e1
+
+The sX, rX, and eX information follows the logic indicated in the REDCap section above.
+
+The -o flag indicates that the experiment has been designed for online use, via Pavlovia.
+
+The ft- prefix is a special prefix for the three "FIU Toolbox" tasks (flanker, DCCS, and n-back).
+
 
 ## Helpful Resources
 * Awesome [slidedeck](https://speakerdeck.com/jennybc/how-to-name-files) from [Jenny Bryan](https://jennybryan.org/).<br/>
