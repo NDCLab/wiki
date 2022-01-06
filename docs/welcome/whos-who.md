@@ -222,7 +222,7 @@ nav_order: 2
 | research interests | Brittney is interested in the effects of substances in child and adolescent cognition. |
 | hobbies | drinking coffee, traveling and working out |
 
-|![khouly](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/name.jpg)| Isabel Khouly |
+|![khouly](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/khouly.jpg)| Isabel Khouly |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Miami, FL |
