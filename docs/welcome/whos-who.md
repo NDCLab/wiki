@@ -222,6 +222,16 @@ nav_order: 2
 | research interests | Brittney is interested in the effects of substances in child and adolescent cognition. |
 | hobbies | drinking coffee, traveling and working out |
 
+|![khouly](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/name.jpg)| Isabel Khouly |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | isabelkhouly |
+| Email  | ikhou001@fiu.edu |
+| research interests | Isabel is interested in the effects of exercise on human cognition and behavior |
+| hobbies | running, journaling, and cleaning |
+
+
 ### Junior Research Technicians
 
 | ![pujol](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pujol.jpg) | Osmany Pujol |
