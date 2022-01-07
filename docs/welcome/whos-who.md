@@ -186,6 +186,15 @@ nav_order: 2
 | research interests | Laura is interested in the effects of social anxiety on cognition. |
 | hobbies | Trying new foods, boxing, watching movies |
 
+|![khouly](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/khouly.jpg)| Isabel Khouly |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | isabelkhouly |
+| Email  | ikhou001@fiu.edu |
+| research interests | Isabel is interested in the effects of exercise on human cognition and behavior |
+| hobbies | running, journaling, and cleaning |
+
 | ![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -222,14 +231,14 @@ nav_order: 2
 | research interests | Brittney is interested in the effects of substances in child and adolescent cognition. |
 | hobbies | drinking coffee, traveling and working out |
 
-|![khouly](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/khouly.jpg)| Isabel Khouly |
+| ![weber](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/weber.jpg) | Lauren Weber |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Miami, FL |
-| GitHub | isabelkhouly |
-| Email  | ikhou001@fiu.edu |
-| research interests | Isabel is interested in the effects of exercise on human cognition and behavior |
-| hobbies | running, journaling, and cleaning |
+| GitHub | laurenweberr |
+| Email  | lwebe013@fiu.edu |
+| research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
+| hobbies | water sports, working out, traveling, tennis, and watching documentaries |
 
 
 ### Junior Research Technicians
