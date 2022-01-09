@@ -25,6 +25,3 @@ git_edit_repository: "https://github.com/NDCLab/wiki"
 plugins:
   - jemoji
   - jekyll-remote-theme
-
-# Post Date
-future: true
