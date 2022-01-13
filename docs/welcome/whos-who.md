@@ -133,6 +133,15 @@ nav_order: 2
 
 ### Junior Research Assistants
 
+| ![bailey](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/bailey.jpg) | Nicole Bailey |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | nbail021 |
+| Email  | nbail021@fiu.edu |
+| research interests | Nicole is interested in examining the relationship between cognitive function and social behavior using EEG methods. |
+| hobbies |Working out, traveling, playing with my dog. |
+
 | ![cespedes](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/cespedes.jpg) | Ian Cespedes |
 | ---  | ---  |
 | pronouns | he/him/his |
@@ -239,15 +248,6 @@ nav_order: 2
 | Email  | lwebe013@fiu.edu |
 | research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
-
-| ![bailey](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/bailey.jpg) | Nicole Bailey |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | nbail021 |
-| Email  | nbail021@fiu.edu |
-| research interests | Nicole is interested in examining the relationship between cognitive function and social behavior using EEG methods. |
-| hobbies |Working out, traveling, playing with my dog. |
 
 
 ### Junior Research Technicians
