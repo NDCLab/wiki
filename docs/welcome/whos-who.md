@@ -240,7 +240,7 @@ nav_order: 2
 | research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
 
-| ![Bailey](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/bailey.jpg) | Nicole Bailey |
+| ![bailey](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/bailey.jpg) | Nicole Bailey |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Miami, FL |
