@@ -251,7 +251,7 @@ nav_order: 2
 
 
 ### Junior Research Technicians
-| ![lopez](https://raw.githubusercontent.com/NDCLab/wiki/whos-who-brandon/docs/_assets/whos-who/lopez.jpg) | Brandon Lopez |
+| ![lopez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez.jpg) | Brandon Lopez |
 | ---  | ---  |
 | pronouns | he/him/his |
 | location | Homestead, FL |
