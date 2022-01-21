@@ -261,3 +261,13 @@ nav_order: 2
 | research interests | Brandon is interested in developing computational tools to assist researchers. |
 | hobbies | playing video games, playing basketball, and drawing |
 
+
+| ![chow](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/chow.jpg) | Ada Chow-Franjul |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Cutler Bay, FL |
+| GitHub | achow027 |
+| Email  | achow027@fiu.edu |
+| research interests | Ada is interested in the cognitive and psychological relationship with social anxiety in adolescence. |
+| hobbies | roller skating at the park, traveling, working out and watching the sunrise/sunset |
+
