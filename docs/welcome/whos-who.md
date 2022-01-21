@@ -248,7 +248,14 @@ nav_order: 2
 | Email  | lwebe013@fiu.edu |
 | research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
-
+| ![Padua](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/paduajimenez.jpg) | William Padua Jimenez |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | Wpadua |
+| Email  | wpadu001@fiu.edu |
+| research interests | William is intrested in Performance control within athletes, and stem cell research |
+| hobbies | working out, investing, learning, playing video games  |
 
 ### Junior Research Technicians
 
