@@ -213,6 +213,15 @@ nav_order: 2
 | research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder. |
 | hobbies | painting, drawing, and watching crime documentaries |
 
+| ![padua-jimenez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/paduajimenez.jpg) | William Padua Jimenez |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | Wpadua |
+| Email  | wpadu001@fiu.edu |
+| research interests | William is intrested in Performance control within athletes, and stem cell research |
+| hobbies | working out, investing, learning, playing video games  |
+
 | ![papadaki](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/papadaki.jpg) | Ioanna Papadaki | 
 | ---  | ---  | 
 | pronouns | she/her/hers | 
@@ -248,14 +257,6 @@ nav_order: 2
 | Email  | lwebe013@fiu.edu |
 | research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
-| ![padua-jimenez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/paduajimenez.jpg) | William Padua Jimenez |
-| ---  | ---  |
-| pronouns | he/him/his |
-| location | Miami, FL |
-| GitHub | Wpadua |
-| Email  | wpadu001@fiu.edu |
-| research interests | William is intrested in Performance control within athletes, and stem cell research |
-| hobbies | working out, investing, learning, playing video games  |
 
 
 ### Junior Research Technicians
