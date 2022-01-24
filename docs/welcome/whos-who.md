@@ -222,14 +222,14 @@ nav_order: 2
 | research interests | William is intrested in Performance control within athletes, and stem cell research |
 | hobbies | working out, investing, learning, playing video games  |
 
-| ![papadaki](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/papadaki.jpg) | Ioanna Papadaki | 
-| ---  | ---  | 
-| pronouns | she/her/hers | 
-| location | Miami, FL | 
-| GitHub | IoannaPapadaki | 
-| Email  | ipapa004@fiu.edu | 
-| research interests | Ioanna is interested in environmental and social experiences and the effect on behavior and mental illness. | 
-| hobbies | Dancing, playing the piano, photography, learning anything I considered interesting. | 
+| ![papadaki](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/papadaki.jpg) | Ioanna Papadaki |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | IoannaPapadaki |
+| Email  | ipapa004@fiu.edu |
+| research interests | Ioanna is interested in environmental and social experiences and the effect on behavior and mental illness. |
+| hobbies | Dancing, playing the piano, photography, learning anything I considered interesting. |
 
 | ![roch-hernandez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/roch-hernandez.jpg) | Sebastian Roch-Hernandez |
 | ---  | ---  |
@@ -248,6 +248,15 @@ nav_order: 2
 | Email  | britrodr@fiu.edu |
 | research interests | Brittney is interested in the effects of substances in child and adolescent cognition. |
 | hobbies | drinking coffee, traveling and working out |
+
+| ![rodriguez-delgado](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguezdelgado.jpg) | Carlos Rodriguez Delgado |
+| ---  | ---  |
+| pronouns | he/him|
+| location | Miami, FL |
+| GitHub | carlosndc |
+| Email  | crodr644@fiu.edu |
+| research interests | Carlos is interested in the use of psilocybin in clinical contexts to treat depression and anxiety as well as the dopamine pathways and how they contribute to discipline development. |
+| hobbies | weightlifting, cooking, fishing, and hiking. |
 
 | ![weber](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/weber.jpg) | Lauren Weber |
 | ---  | ---  |
@@ -269,4 +278,3 @@ nav_order: 2
 | Email  | blope118@fiu.edu |
 | research interests | Brandon is interested in developing computational tools to assist researchers. |
 | hobbies | playing video games, playing basketball, and drawing |
-
