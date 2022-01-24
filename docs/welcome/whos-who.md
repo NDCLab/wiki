@@ -213,15 +213,6 @@ nav_order: 2
 | research interests | Isabel is interested in the effects of exercise on human cognition and behavior |
 | hobbies | running, journaling, and cleaning |
 
-| ![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | anaNDClab |
-| Email  | |
-| research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder. |
-| hobbies | painting, drawing, and watching crime documentaries |
-
 | ![padua-jimenez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/paduajimenez.jpg) | William Padua Jimenez |
 | ---  | ---  |
 | pronouns | he/him/his |
