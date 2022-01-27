@@ -259,14 +259,14 @@ nav_order: 2
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
 
 
-| ![weber](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/guerra.jpg) | Karen Guerra |
+| ![guerra](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/guerra.jpg) | Karen Guerra |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Miami, FL |
 | GitHub | 1karenguerra |
 | Email  | kguer039@fiu.edu |
 | research interests | Karen is interested in how our lifestyles affect our genetic expression (epigenetics) and and how they influence our neural circuits|
-| hobbies | (attempting to) lift heavy things in the gym, traveling, reading, tiktok aficionado, baking and learning new languages.  |
+| hobbies | (attempting to) lift heavy things in the gym, reading, traveling, tiktok aficionado, baking and learning new languages. |
 
 
 ### Junior Research Technicians
