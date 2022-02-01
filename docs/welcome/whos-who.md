@@ -222,15 +222,6 @@ nav_order: 2
 | research interests | William is intrested in Performance control within athletes, and stem cell research |
 | hobbies | working out, investing, learning, playing video games  |
 
-| ![papadaki](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/papadaki.jpg) | Ioanna Papadaki |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | IoannaPapadaki |
-| Email  | ipapa004@fiu.edu |
-| research interests | Ioanna is interested in environmental and social experiences and the effect on behavior and mental illness. |
-| hobbies | Dancing, playing the piano, photography, learning anything I considered interesting. |
-
 | ![roch-hernandez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/roch-hernandez.jpg) | Sebastian Roch-Hernandez |
 | ---  | ---  |
 | pronouns | he/him/his |
