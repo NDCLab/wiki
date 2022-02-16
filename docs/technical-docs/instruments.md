@@ -1,6 +1,6 @@
 ---
 layout: default
-title: PEPPER
+title: Instruments
 parent: Technical Documentation
 nav_order: 4
 ---
