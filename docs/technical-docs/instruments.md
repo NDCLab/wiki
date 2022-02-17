@@ -31,10 +31,10 @@ While its primary use is realized on the HPC, we can also work with this reposit
 To use instruments locally, we simply have to clone the repository and start up the docker container:
 
 1. Clone the repository to your local machine, with `git clone` in your terminal. 
-  ```
-  git clone https://github.com/ndclab/instruments.git
-  cd instruments
-  ```
+    ```
+    git clone https://github.com/ndclab/instruments.git
+    cd instruments
+    ```
 
 2. Build and activate a container using the OS-relevant files (see `containers/README.md`).
 
@@ -43,13 +43,23 @@ To use instruments locally, we simply have to clone the repository and start up 
 To use instruments in the NDClab' HPC folder, we can simply interact with the existing repository.
 
 1. SSH into the computer cluster and navigate to the instruments repo located in the HPC.
-  ```
-  ssh userName@hpclogin01
-  cd /home/data/NDClab/tools/instruments
-  ```
+    ```
+    ssh userName@hpclogin01
+    cd /home/data/NDClab/tools/instruments
+    ```
 
-2. While instruments is set up to automatically run over data-files, we can use example scripts located in the `hpc/` folder.
+2. We can use the script `process.sub` located in the `hpc/` folder to analyze data. All we have to do is swap the string paths located in the `input_file` variable and the `output_file` variable to match our intended inputs and outputs. If you are in a terminal, you can edit files directly from the terminal by executing `nano hpc/process.sub`.
 
+    ```
+    # load singularity module
+    module load singularity-3.5.3
+
+    # edit variables here to change inputs and outputs
+    input_file="/home/data/NDClab/datasets/dataset1/sourcedata/raw/DATA.csv"
+    output_file="/home/data/NDClab/datasets/dataset1/derivatives/DATA.csv"
+    ```
+
+3. Lastly you can run this script by executing the command `sbatch hpc/process.sub`. Happy analyzing! 
 
 ## Development Guidelines 
 
