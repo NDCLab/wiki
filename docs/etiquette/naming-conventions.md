@@ -223,15 +223,15 @@ This is also an acceptable format as data exported from REDCap automatically con
 
 #### Scored Instruments
 
-Variable names are used in REDCap to identify the responses to specific questions asked of study participants. They are identical to their associated instrument name, except that `iX` is added to specify the item number. For example, the first three questions of the `initState` instrument would be named:<br/>
+Variable names are used in REDCap to identify the responses to specific questions asked of study participants. They are **identical to their associated instrument name**, except that `iX` is added to specify the item number. For example, the first three questions of the `initState` instrument would be named:<br/>
 > initState_i1\_s1_r1_e1<br/>
 > initState_i2_s1_r1_e1<br/>
 > initState_i3_s1_r1_e1
 
 By default, if a question within an instrument will require the output of subvariables, REDCap automatically appends `___X` to the end of the base variable name. For instance:<br/>
-> initState_i1\_s1_r1_e1___1<br/>
-> initState_i1_s1_r1_e1___2<br/>
-> initState_i1_s1_r1_e1__\_3
+> initState_i1\_s1\_r1\_e1\___1<br/>
+> initState_i1\_s1\_r1\_e1\___2<br/>
+> initState_i1\_s1\_r1\_e1\___3
 
 In other cases, however, an instrument may contain sub-items that REDCap cannot automate. For these questions, the sub-item must be built into the variable name manually:
 > initState_i1-sub1_s1_r1_e1<br/>
