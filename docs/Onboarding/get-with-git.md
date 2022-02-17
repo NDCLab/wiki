@@ -38,7 +38,7 @@ Follow the steps below to become a Git ninja! We will set up your computer so yo
 
 9. Work through [this hands-on tutorial](https://lab.github.com/lmachens/git-and-github-first-timers) inside GitHub. Once you are signed into GitHub and connected, click "Start free course." Complete the activities from #1 ("What is GitHub?") through #6 ("Communicating Using Markdown"), then head back over here and continue to #10 below. (The remaining activities on the GitHub tutorial are not necessary to complete the Get with Git program.)
 
-10. Watch [this video](https://fiu.zoom.us/rec/share/M7XPxtyiThR3uG-_JILSMbyalUmX7mXxAcsUMtvFRITPT2fiIJ_8sKsbw-zXtrZ9.DDm5pZIz6UTbtM6M?startTime=1623099912000) where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
+10. Watch [this video](https://youtu.be/4nEAxtKvrQE) where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
 
 11. Time to put it all together! Update your entry on the wiki's who's-who page using the new commands you've just learned:<br/>
 `git clone <link>`  <br/>
