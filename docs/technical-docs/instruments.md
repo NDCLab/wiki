@@ -5,7 +5,7 @@ parent: Technical Documentation
 nav_order: 4
 ---
 
-![robots in  a factory](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/automation-header.jpg)  
+![robots in a factory](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/inst_automation-header.jpg)  
 *Basically what instruments does, but without the robot or the factory or the chips.*
 
 Self-administered surveys are a popular method of research, and are used to measure certain metrics that pertain to participant emotional states or opinions. But their excessive utility is often matched by their excessive analytical tedium. Imagine you have 150 participants that filled multiple surveys on paper. This would involve scoring by hand, a hardly interesting endeavor to take on while conducting research.
@@ -34,6 +34,12 @@ _For the less comp sci savvy_: the instruments script will automatically code th
 4. Save REDCap data to the HPC in accordance with your data collection protocol.
 
 ### Preprocessing Data
+
+1. Log into the HPC [using the Visual Node](https://ndclab.github.io/wiki/docs/technical-docs/hpc-doc.html#connecting).  Launch Panther Shell Access:
+![inst_open-shell](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/inst_open-shell.jpg)
+
+2. You will be prompted to enter your password when the shell opens.  Type in your password and hit Enter.  The console will not show you that you are typing while inputting your password, but forge ahead!
+![inst_input-password](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/inst_input-password.jpg)
 
 1. Log into the FIU computer cluster using the `ssh` command. You can verify if you have this installed by typing in `ssh` in your console and then hitting "enter", which should output usage. Mac and Windows10 come with ssh by default.
     ```
