@@ -142,15 +142,6 @@ nav_order: 2
 | research interests | Nicole is interested in examining the relationship between cognitive function and social behavior using EEG methods. |
 | hobbies |Working out, traveling, playing with my dog. |
 
-| ![cespedes](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/cespedes.jpg) | Ian Cespedes |
-| ---  | ---  |
-| pronouns | he/him/his |
-| location | Miami, FL |
-| GitHub | GitIanDer |
-| Email  | icesp004@fiu.edu |
-| research interests | Ian is interested in behavioral methods in collaboration with EEG methods to study cognitive control. |
-| hobbies | Reading philosophy and Super Smash Bros |
-
 | ![charest](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/charest.jpg) | Sophia Charest |
 | ---  | ---  |
 | pronouns | she/her/hers |
