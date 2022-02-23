@@ -5,7 +5,7 @@ parent: Technical Documentation
 nav_order: 4
 ---
 
-![automation-header](https://user-images.githubusercontent.com/26397102/154751422-abacadda-f888-45f7-975a-bd41ad4c96b5.jpg)
+![robots in a factory](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/inst_automation-header.jpg)  
 *Basically what instruments does, but without the robot or the factory or the chips.*
 
 Self-administered surveys are a popular method of research, and are used to measure certain metrics that pertain to participant emotional states or opinions. But their excessive utility is often matched by their excessive analytical tedium. Imagine you have 150 participants that filled multiple surveys on paper. This would involve scoring by hand, a hardly interesting endeavor to take on while conducting research.
@@ -35,39 +35,12 @@ _For the less comp sci savvy_: the instruments script will automatically code th
 
 ### Preprocessing Data
 
-1. Log into the FIU computer cluster through the [FIU HPC GUI](https://hpcgui.fiu.edu/). Once accessed, enter the terminal by clicking on the **Clusters** tab and then **Panther Shell Access** in the dropdown menu.
+1. Log into the HPC [using the Visual Node](https://ndclab.github.io/wiki/docs/technical-docs/hpc-doc.html#connecting).  Launch Panther Shell Access:
+![inst_open-shell](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/inst_open-shell.jpg)
 
-&nbsp;&nbsp;<img width="800" alt="step1_shell" src="https://user-images.githubusercontent.com/26397102/155373543-f7cbfdfc-4db7-48cd-9cf5-0f80bc83e520.png">
+2. You will be prompted to enter your password when the shell opens.  Type in your password and hit Enter.  The console will not show you that you are typing while inputting your password, but forge ahead!
+![inst_input-password](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/inst_input-password.jpg)
 
-2. This will prompt you for your FIU password. Text will not appear on your terminal for privacy as you type in your password and you will have to hit the "enter" key to input your password. A screen containing this text should greet you if you have entered your password correctly:
-
-    ```
-    - Purge Policy - 
-    The shared file systems - /home and /scratch - should not be used for long term storage. 
-    Files in these locations are not backed up or guaranteed by IRCC. 
-    In the event of a file system crash or purge, these files cannot be recovered. 
-    It is the user's responsibility to back up all important data elsewhere.
-    Files located in the /scratch space are automatically removed after 30 days.
-    - Questions and Problem Reports -
-            --> UTS Helpdesk:       http://utshelp.fiu.edu
-            --> IRCC website:       http://ircc.fiu.edu
-            --> QuickStart Guide:   http://ircc.fiu.edu/download/user-guides/Panther_Cluster_QuickStart_Guide.pdf
-    -----------------------------------------------------------------------
-    Note: You may run the "myquota" command to check your "home" disk quota.
-    #######################################################################
-    *******************************************************************************
-    *                                                                             *
-    *              AUTHORIZED PERSONNEL ONLY                                      *
-    *                                                                             *
-    *  If you are not legitimately authorized to use this server,                 *
-    *  you must log out immediately and not reconnect. Please contact your        *
-    *  supervisor for proper authorization.                                       *
-    *                                                                             *
-    *           Unauthorized use will be prosecuted.                              *
-    *                                                                             *
-    *******************************************************************************
-    ```
-    
 3. Once you've logged into the HPC, navigate to the instruments repo located in the HPC by entering the following command:
     ```
     cd /home/data/NDClab/tools/instruments
