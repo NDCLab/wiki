@@ -46,13 +46,16 @@ _For the less comp sci savvy_: the instruments script will automatically code th
     cd /home/data/NDClab/tools/instruments
     ```
 
-4. We can use the script `process.sub` located in the `hpc/` folder to analyze data. All we have to do is swap the string paths located below the comment that says "edit variables here to change inputs and outputs." You can edit files directly from the terminal by executing `nano hpc/process.sub`.
+4. We can use the script `process.sub` located in the `hpc/` folder to analyze data. First, we need to swap the string paths located below the comment that says "edit variables here to change inputs and outputs." You can edit files directly from the terminal by executing `nano hpc/process.sub`.
 
-Example paths are in-place already. We have to replace the "project" variable to specify which project the data resides in, the "input_file" variable to specify which file we are preprocessing, and lastly the "output_file" to specify where the data is written.
+Example paths are in-place already. You will overwrite portions of each of the three lines:
+    1. Replace "this-is-some-dataset" in the `project` variable to specify which project folder the data resides in. Examples of project folders are "rwe-dataset" or "memory-for-error-dataset."
+    2. Replace "DATA" in the `input_file` variable to specify exactly which file should be processed.
+    3. Replace "DATA" in the `output-file` variable to specify the file name you want for the processed version of the .csv.
 
     ```
     # edit variables here to change inputs and outputs
-    project="readAloud-valence-dataset"
+    project="this-is-some-dataset"
     input_file="/home/data/NDClab/datasets/$project/sourcedata/raw/DATA.csv"
     output_file="/home/data/NDClab/datasets/$project/derivatives/DATA.csv"
     ```
