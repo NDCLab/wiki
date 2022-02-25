@@ -2,7 +2,7 @@
 layout: default
 title: Get with Git
 parent: Onboarding
-nav_order: 6
+nav_order: 7
 ---
 
 # Get with Git
