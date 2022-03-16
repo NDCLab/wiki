@@ -102,7 +102,7 @@ A long-term goal is to automate the writing of these journal article sections vi
 - Write to the output file ("field XXX") which channel/epoch intersections were rejected
 
 #### 6-Interpolate
-- Interpolate missing channels, at the channel/epoch level, using a spherical spline interpolation, as implemented in MNE
+- Interpolate missing channels, at the epoch level, using a spherical spline interpolation, as implemented in MNE
 - Interpolate missing channels, at the global level, using a spherical spline interpolation, as implemented in MNE
 - Write to output file (field "XXX") which channels were interpolated and using what method
 
@@ -127,7 +127,7 @@ A long-term goal is to automate the writing of these journal article sections vi
 #### Release 0.1
 	
 * Modules to allow running in parallel on local or remote (HPC) controlled by the same parameters in the input_params.json file (auto-generates Slurm scripts for HPC)
-* Preprint posted to BioRxiv
+* Preprint posted to bioRxiv
 * Initial data quality assessment suite is stable
 * Pipeline meets/exceeds at least one commonly used and published pipeline on data quality metrics
 * Initial set of standard input parameters for child, adolescent and young adult data
@@ -167,7 +167,7 @@ If you believe a new issue needs to be added to the [list of open issues](https:
 
 ![image](https://user-images.githubusercontent.com/26397102/137004811-54e0403d-8296-4e5d-92a6-aef5386ecbbe.png)
 
-Once an issue has been created, the original author can likewise immediatelyy assign themselves and start coding or documenting as described in [contribute to the code](#Contribute-to-the-Code). 
+Once an issue has been created, the original author can likewise immediately assign themselves and start coding or documenting as described in [contribute to the code](#Contribute-to-the-Code). 
 
 
 ### Contribute to the Code
