@@ -2,7 +2,7 @@
 layout: default
 title: PEPPER
 parent: Technical Documentation
-nav_order: 9
+nav_order: 6
 ---
 
 ![baseeegheader](https://user-images.githubusercontent.com/26397102/117209976-b958e600-adbc-11eb-8f23-d6015a28935e.png)
