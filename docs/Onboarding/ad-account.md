@@ -11,8 +11,9 @@ This is an alternative to your FIU student account, used for volunteers, interns
 
 ## How Do I Know if I Have an AD Account?
 Everyone receives an AD account once employed, so if you had an on-campus job before, you almost certainly have an AD account.  To check:
-1. Go to MYFIU, but don't log in.
-2. Click Manage Account.
+1. Go to account.fiu.edu.
+2. Log in.
+2. Scroll down until you find the "Email" section.
 3. Review all your FIU usernames.  If there is one without any numbers, that is your AD account.
 
 
