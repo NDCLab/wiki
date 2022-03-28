@@ -186,23 +186,23 @@ nav_order: 2
 | research interests | Laura is interested in the effects of social anxiety on cognition. |
 | hobbies | Trying new foods, boxing, watching movies |
 
-| ![buzzell](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/buzzell.jpg) | Dr. George Buzzell |
-| ---  | ---  |
-| pronouns | he/him/his |
-| location | Miami, FL |
-| GitHub | georgebuzzell |
-| Email  | gbuzzell@fiu.edu |
-| research interests | George is interested in cognitive control, particularly as it relates to social anxiety. His work focuses on EEG methods. |
-| hobbies | eating avocados |
-
 | ![garciamorazzani](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/garciamorazzani.jpg) | Ana Garcia Morazzani |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Miami, FL |
-| GitHub | anagabrielagm |
+| GitHub | Ana Garcia Morazzani |
 | Email  | agarc884@fiu.edu |
 | research interests | Ana is interested in psychopharmacology, sleep, and metacognition.|
 | hobbies | playing the guitar, dj mixing, drawing, being outdoors. |
+
+| ![guerra](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/guerra.jpg) | Karen Guerra |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | 1karenguerra |
+| Email  | kguer039@fiu.edu |
+| research interests | Karen is interested in how our lifestyles affect our genetic expression (epigenetics) and and how they influence our neural circuits |
+| hobbies | (attempting to) lift heavy things in the gym, traveling, reading, tiktok aficionado, baking and learning new languages. |
 
 |![khouly](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/khouly.jpg)| Isabel Khouly |
 | ---  | ---  |
