@@ -43,23 +43,31 @@ Our basic conventions are largely based on established standards in psychology a
 
 Project names should be informative but concise. Words are separated by hyphens. All project names begin with a lowercase letter. Examples:
 
->mind-reading<br/>
->social-context-alpha
+>social-flanker-eeg-dataset<br/>
+>social-flanker-eeg-alpha
 
 In some situations, space may be limited. In such cases, hyphens may be replaced with camelCase. Examples:
 
 >brainBox<br/>
 >baseEEG
 
-Given that future spin-offs of a project are common, yet sometimes hard to predict, the original project should always be named the "-alpha" project (even if no spin-off is initially planned/envisioned) and spin-offs should use an informative modifier. Examples:
+Dataset projects **always** end with "-dataset":
+>social-flanker-eeg-dataset<br/>
+>readAloud-valence-dataset
+>putt-putt-dataset
 
->social-context-alpha<br/>
->rwe-alpha<br/>
->rwe-valence<br/>
+Analysis projects associated with a given dataset share the first portion of their project name.  The very first analysis (that is, the main analysis planned at the time of data collection) is typically denoted "-alpha."  (Rare exceptions are made for the sake of playful language.)
+>social-flanker-eeg-alpha<br/>
+>readAloud-valence-alpha>br/>
+>putt-putt-miss
 
-In the latter two examples, informativeness has been sacrificed for length. RWE is an acronym for real-world-errors, which was considered too long for default usage.
+Spin-off analyses retain the first portion of the project name, but utilize an informative suffix:
+>social-flanker-eeg-multicultural<br/>
+>readAloud-valence-ddm>br/>
 
-Project names are used as top-level folder names on GitHub, the HPC, and Google Drive.
+Given that future data collection spin-offs of a project are common, yet hard to predict, there is no particular effort made to associate data collection efforts in their nomenclature. For example, readAloud-valence-dataset is, philosophically, a spin-off of rwe-dataset, but this is not reflected in the nomenclature.
+
+Project names are used as top-level folder names on GitHub, REDCap, the HPC, and Google Drive.
 
 ### Folder Names
 
