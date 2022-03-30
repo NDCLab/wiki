@@ -207,6 +207,14 @@ The seven great rules of commit messages make for easy reading [here](https://ch
 
 ## REDCap
 
+### Project Names
+REDCap houses participant questionnaires for a given study. Due to limitations on modifying REDCap projects once data has been collected, changes to the set of questionnaires (including corrections to any existing questionnaire, addition of a new questionnaire, or deletion of a questionnaire) are handled by creating a new REDCap project. Each REDCap project utilizes the NDCLab project name, but is front-ended by the version information. For example:
+
+> 202201v0_readAloud-valence-dataset<br/>
+> 202203v0_social-flanker-dataset
+
+The first six digits indicate the year and month when the REDCap project was setup. The number after the letter "v" indicates the specific release within that month. In most cases, projects with by "v0." However, in the event that a revision to REDCap is made twice within the same month, the first release is "v0" and the second is "v1."
+
 ### Instrument Names
 Each element within REDCap is an "instrument." These should be named:
 >instrument_sX_rX_eX
