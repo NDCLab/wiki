@@ -265,6 +265,24 @@ In relatively rare but important cases, such as instruments that gather demograp
 > demo_exercise_s1_r1_e1<br/>
 > demo_caffeine_s1_r1_e1
 
+### Updating Instruments
+
+Whenever an instrument is modified (including correction of errors and re-working of questionnaires based on the natural evolution of the lab's research program), a new instrument is created. This enables the lab to track exactly which version of a questionnaire was given to a specific participant.
+
+#### Scored Instruments
+
+Scored instruments are revised by appending "_b" (or "_c", "_d", etc.) to the instrument name and to all variables. This must be done very precisely to ensure that the automatic scoring script continues to function as expected. Example:
+
+> instrument name: adexi_s1_r1_e1 :point_right: adexi_b_s1_r1_e1
+> question 1: adexi_i1_s1_r1_e1 :point_right: adexi_b_i1_s1_r1_e1
+
+#### Unscored Instruments
+
+Unscored instrument may either use the revisioning system described above for scored instruments (i.e., "_b"). In some cases, such as the initState and postTask questionnaires, it was envisaged that the lab would build up a repertoire of different versions over time. For these instruments, the letter versioning is built directly into the name:
+
+> instrument name: postTaskA_s1_r1_e1 :point_right: postTaskB_s1_r1_e1
+> question 1: postTaskA_i1_s1_r1_e1 :point_right: postTaskB_i1_s1_r1_e1
+
 ## PsychoPy and Pavlovia
 
 ### Folder and Experiment Names
