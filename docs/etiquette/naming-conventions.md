@@ -71,13 +71,13 @@ Project names are used as top-level folder names on GitHub, REDCap, the HPC, and
 
 ### Folder Names
 
-The re-use of top-level folder names across projects and platforms is encouraged to simplify navigation. For instance, on the HPC, all active projects have a "collecting" folder used for the storage of incoming data from study participants.
+The re-use of top-level folder names across projects and platforms is encouraged to simplify navigation. For instance, on the HPC, all active projects have a "sourcedata/raw" folder used for the storage of incoming data from study participants.
 
 Three main paradigms are employed in establishing folder naming conventions for a particular context; the choice depends upon the particular context and use case:
 
 **simple name**
->collecting/<br/>
->analyses/
+>sourcedata/<br/>
+>code/
 
 **chronological ordering**
 >2021-08-13_nsf_buzzell_theta-development/<br/>
@@ -102,7 +102,7 @@ File names should be built in "chunks."  Examples of potential chunks:
 
 For example, here are some good file names:
 > 2021-06-01_social-context-alpha_prelim-analysis_anxiety<br/>
-> 2021_06-30_social-context-alpha_prelim-analysis_exec-function
+> 2021-06-30_social-context-alpha_prelim-analysis_exec-function
 
 Alternately, if all files are stored within a space specific to the social-context-alpha project and you don't need to track chronology, you could use:
 > 01_anxiety_methods<br/>
@@ -152,15 +152,19 @@ Tool repositories should be named identically to the associated project. For exa
 
 Dataset repositories should include the project name and a "-dataset" marker. For example:
 
-> social-context-dataset
+> social-context-dataset<br/>
+> putt-putt-dataset
 
 Analysis repositories that rely upon an NDCLab dataset should reference the name of the associated dataset. For example:
 
-> social-context-alpha
+> social-context-alpha<br/>
+> putt-putt-miss
 
 Analysis repositories that rely upon an external dataset can use a descriptive name. For example:
 
 > adult-pre-post-theta
+
+See detailed [notes above](#general-naming-guidance) about regarding project names.
 
 ### Branch Names
 By default, repositories have a `main` branch and a `dev` branch. New branches are created from the `dev` branch and are named:
