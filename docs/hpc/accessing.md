@@ -8,7 +8,6 @@ nav_order: 1
 ![cluster visualization](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/cluster.png)
 *Visualization by Yale Center for Research Computing*
 
-
 ### Contents
 1. [Connecting](#Connecting)
     1. [Login Node](#Login-Node)
