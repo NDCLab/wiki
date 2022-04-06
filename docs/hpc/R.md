@@ -29,4 +29,10 @@ sh /home/data/NDClab/tools/lab-devOps/rrun.sh <file_name>.R
 
 This will generate an sbatch script, submit it, and return an output to your folder location.
 
+After you initially run `rrun.sh`, you should subsequently run the sbatch file generated in your folder via:
+
+```
+sbatch <file_name>.sub
+```
+
 ## RStudio
