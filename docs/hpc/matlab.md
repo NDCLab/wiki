@@ -6,11 +6,11 @@ nav_order: 3
 ---
 
 ### Contents
-1. [Running R](#Running-Matlab)
+1. [Running Matlab](#Running-Matlab)
     1. [Running](#Running-Scripts)
 2. [Matlab GUI](#Matlab-GUI)
 
-## Running R
+## Running Matlab
 
 To run scripts in the Matlab programming language using the login node, follow the steps listed below:
 
@@ -32,4 +32,4 @@ After you initially run `rmat.sh`, you should subsequently run the sbatch file g
 sbatch <file_name>.sub
 ```
 
-## RStudio
+## Matlab-GUI
