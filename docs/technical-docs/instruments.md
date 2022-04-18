@@ -67,7 +67,22 @@ _For the less comp sci savvy_: the instruments script will automatically code th
 
 1. Follow the lab's [GitHub etiquette](https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html) to create a new branch off dev (`dev-NewInstrumentName`).
 2. Create a new directory with the instrument's short name.
-3. Add all of the following to the new directory: the published PDF, the REDCap PDF (shows exactly what participants see), and a REDCap import .zip that follows the lab's [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap). All REDCap import .zip files in the instruments repository should use `_s1_r1_e1`.
+3. Add all of the following to the new directory: the published PDF, the REDCap PDF (shows exactly what participants see), a REDCap import .zip that follows the lab's [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap), and a data dictionary CSV. All REDCap import .zip files in the instruments repository should use `_s1_r1_e1`.
 4. Add the (sub)score(s) for the instrument to the .json file with the appropriate parameters as described in subscore.py for subscale scoring.
 5. Add the instrument, alphabeticaly, into the list-of-instruments.md with a link to the appropriate citation.
 6. Push your branch to the remote, then open a PR and assign to the lab manager.
+
+## Updating Instruments
+
+Instruments should be updated when a new version of a questionnaire is created or when the discovery of an error means that a questionnaire must be corrected
+
+#### When the New Questionnaire Will Supersede the Old
+1. Create a new instrument based on the instructions above.  In so doing, use "_b" (or whichever is the next letter in the alphabet) within the instrument name and all variables.
+2. Separate the old questionnaire and the new one inside this repository into two subfolders (instrument_a and instrument_b).
+3. Make sure that your changes will not impact automatic scoring.  If you think they might (or you are not sure), ping the lab manager before proceeding.
+4. Update the readme for the instrument to indicate the changes made and that the prior version is now deprecated.
+
+#### When the Lab Will Use Multiple Variations on a Questionnaire
+1. Create a new instrument based on the instructions above.  The original instrument should already have an "A" in its name (e.g., postTaskA).  Replace this with "B" (or whichever is the next letter in the alphabet) within the instrument name and all variables.
+2. Separate the two questionnaires inside this repository into two subfolders.
+3. Update the readme for the instrument to indicate the changes made in the new version.
