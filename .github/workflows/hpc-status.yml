@@ -38,16 +38,16 @@ jobs:
       #with:
       #    ref: ${{ env.DELAYED_JOB_CHECKOUT_REF }}
       run: |
-      if (( $(echo "$percent < $cutoff" |bc -l) ))
-      then
-        echo "Less than cutoff, updating."
-        sed -i 's/HPC login node at normal usage./HPC login node idle CPU-time is less than 60%. Expect slowness./' docs/hpc/status.md
-        sed -i 's/green/red/' docs/hpc/status.md
-      else
-        echo "Normal usage, updating."
-        sed -i 's/HPC login node idle CPU-time is less than 60%. Expect slowness./HPC login node at normal usage./' docs/hpc/status.md
-        sed -i 's/red/green/' docs/hpc/status.md
-      fi
+        if (( $(echo "$percent < $cutoff" |bc -l) ))
+        then
+          echo "Less than cutoff, updating."
+          sed -i 's/HPC login node at normal usage./HPC login node idle CPU-time is less than 60%. Expect slowness./' docs/hpc/status.md
+          sed -i 's/green/red/' docs/hpc/status.md
+        else
+          echo "Normal usage, updating."
+          sed -i 's/HPC login naode idle CPU-time is less than 60%. Expect slowness./HPC login node at normal usage./' docs/hpc/status.md
+          sed -i 's/red/green/' docs/hpc/status.md
+        fi
     - name: Commit and push changes
         run: |
           git config --global user.name "F-said"
