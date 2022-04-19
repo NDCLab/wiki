@@ -1,6 +1,16 @@
 name: Check HPC Status
 on: [push, pull_request]
-
+  #schedule:
+  #  - cron:  '*/59 7 * * *'
+  #  - cron:  '*/59 8 * * *'
+  #  - cron:  '*/59 9 * * *'
+  #  - cron:  '*/59 10 * * *'
+  #  - cron:  '*/59 11 * * *'
+  #  - cron:  '*/59 12 * * *'
+  #  - cron:  '*/59 1 * * *'
+  #  - cron:  '*/59 2 * * *'
+  #  - cron:  '*/59 3 * * *'
+  #  - cron:  '*/59 4 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
