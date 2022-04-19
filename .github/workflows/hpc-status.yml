@@ -33,8 +33,8 @@ jobs:
         array=$(grep '^Average' cpu-usage.txt)
         split_arr=($array)
         percent=${split_arr[${#split_arr[@]}-1]}
+    - uses: actions/checkout@v2
     - name: Update markdown image based on HPC status 
-      uses: actions/checkout@v2
       #with:
       #    ref: ${{ env.DELAYED_JOB_CHECKOUT_REF }}
       run: |
