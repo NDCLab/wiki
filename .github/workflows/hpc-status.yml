@@ -49,13 +49,13 @@ jobs:
           sed -i 's/red/green/' docs/hpc/status.md
         fi
     - name: Commit and push changes
-        run: |
-          git config --global user.name "F-said"
-          git config --global user.email "f.saidmuratov@yahoo.com"
+      run: |
+        git config --global user.name "F-said"
+        git config --global user.email "f.saidmuratov@yahoo.com"
 
-          git add docs/hpc/status.md
-          git commit -m "Updated hpc status"
-          git push
+        git add docs/hpc/status.md
+        git commit -m "Updated hpc status"
+        git push
     #- name: Remove scheduled job
     #    uses: cardinalby/unschedule-job-action@v1
     #    with:
