@@ -1,6 +1,6 @@
 ---
 layout: default
-title:
+title: HPC Status
 parent: HPC
 nav_order: 7
 ---
