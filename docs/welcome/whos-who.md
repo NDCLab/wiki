@@ -133,15 +133,6 @@ nav_order: 2
 | research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior. |
 | hobbies | Clay sculpting, listening to music, watching basketball, nails/fashion |
 
-| ![chow](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/chow.jpg) | Ada Chow-Franjul |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Cutler Bay, FL |
-| GitHub | achow027 |
-| Email  | achow027@fiu.edu |
-| research interests | Ada is interested in the cognitive and psychological relationship with social anxiety in adolescence. |
-| hobbies | roller skating at the park, traveling, working out and watching the sunrise/sunset |
-
 | ![dickinson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/dickinson.jpg) | Renata Dickinson |
 | ---  | ---  |
 | pronouns | she/her/hers |
