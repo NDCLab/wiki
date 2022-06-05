@@ -19,6 +19,7 @@ nav_order: 2
 
 ### Lab Manager
 
+
 | ![alexander](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/alexander.jpg) | Jess Alexander |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -239,6 +240,16 @@ nav_order: 2
 | Email  | lwebe013@fiu.edu |
 | research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
+
+| ![pena](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pena.jpg) | Andy Pena |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | apena106 |
+| Email  | apena106@fiu.edu |
+| research interests | Andy is interested in cognitive functions, particularly as it relates to anxiety and legs psych. |
+| hobbies | gaming, outdoor activities, gym |
+
 
 
 ### Junior Research Technicians
