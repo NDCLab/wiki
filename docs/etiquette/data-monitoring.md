@@ -51,8 +51,7 @@ Review the output for errors requiring correction. After making any necessary co
 ## preprocess.sub
 
 ### Purpose
-Pre-processing scripts transform the data collected from participants (questionnaires, behavioral tasks) into aggregate numbers that can be used for data analysis. 
-(checked>derivatives/preprocessed)
+Pre-processing scripts transform the data collected from participants (questionnaires, behavioral tasks) into aggregate numbers that can be used for data analysis. These should draw upon data in the `sourcedata/checked` folder and output to `derivatives/preprocessed`.
 
 ### Instruments
 explanation of connection to instruments, pointer to wiki page
@@ -62,7 +61,15 @@ explanation of connection to instruments, pointer to wiki page
 important because you could burn all our time on hpc if you create an infinite loop, calculations by hand until the end of the month!
 
 ### Customize
-instructions on how to customize the .sub to combine preprocessing scripts on a per-project basis
+In addition to creating the preprocessing scripts that are specific to the study, two base scripts must be customized to interconnect the various resources available.
+
+##### inst-tracker.py
+This script enables the study's central tracker to be updated with the appropriate scored data from the instruments scoring script.
+1. In section XX, modify the file paths to the study's central tracker and data dictionary.
+2. In section XX, include all scored variables desired.
+
+##### preprocess.sub
+instructions on how to customize this on a per-project basis
 
 ### How to Run
 Pre-processing scripts should be created as early as possible in the data collection process (ideally to process even the first participant!), and then should be run by the project lead on a weekly basis to ensure that the incoming data appears to be in good order (for instance, we’re not seeing a trend of wild inaccuracy in simple computer tasks or strange numbers in questionnaire data). 
