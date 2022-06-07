@@ -52,7 +52,7 @@ Here is a guide to what these details in the .sub file mean and how they should 
 | nodes  | tells the HPC how many nodes should be utilized (nodes are individual computers in the cluster)  | how to customize  |
 | nodes  | tells the HPC how many tasks (that is, CPUs) should be utilized across nodes selected | how to customize  |
 | time  | limits the amoount of time the HPC should devote to running the script  | how to customize  |
-| mail-type  | XXXX  | how to customize  |
+| mail-type  | tells the HPC to send you an e-mail when the job is done  | If the job is very small and will run quickly, you can delete this line to avoid an unnecessary e-mail in your inbox. Otherwise, leave it unchanged.  |
 | module load miniconda3-4.5.11-gcc-8.2.0-oqs2mbg  | Loads a specific version of conda, R, etc.  | how to customize  |
 | conda exec -b base python sample.py  | the actual command to run the script specified  | how to customize  |
 
