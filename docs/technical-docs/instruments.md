@@ -46,7 +46,7 @@ _For the less comp sci savvy_: the instruments script will automatically code th
     cd /home/data/NDClab/tools/instruments
     ```
 
-4. We can use the script `process.sub` located in the `hpc/` folder to analyze data. First, we need to swap the string paths located below the comment that says "edit variables here to change inputs and outputs." You can edit files directly from the terminal by executing `nano hpc/process.sub`.
+4. We can use the script `process.sub` located in the `hpc/` folder to analyze data. First, we need to swap the string paths located below the comment that says "edit variables here to change inputs and outputs." You can edit files directly from the terminal by executing `nano hpc/process.sub`.  This opens the .sub file within your shell so that you can modify its contents.
 
     Example paths are in-place already. You will overwrite portions of each of the three lines:
 
@@ -61,7 +61,8 @@ _For the less comp sci savvy_: the instruments script will automatically code th
         output_file="/home/data/NDClab/datasets/$project/derivatives/DATA.csv"
         ```
 
-5. Lastly you can run this script by executing the command `sbatch hpc/process.sub`. This will output data to the `output_file` path that you've specified. Happy analyzing! 
+5. To save your changes to the .sub file, hold down the ctrl key and pressing the letter ‘o’. (Note: this is ctrl on both PC and Mac, not cmd.) You will be prompted to save the file, which you do by hitting enter/return. Then, to exit the nano view, hold down the ctrl key again and press the letter ‘x’.
+6. Lastly you can run this script by executing the command `sbatch hpc/process.sub`. This will output data to the `output_file` path that you've specified. Happy analyzing! 
 
 ## Adding New Instruments
 
