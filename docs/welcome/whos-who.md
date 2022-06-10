@@ -241,6 +241,15 @@ nav_order: 2
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
 
 
+| ![gagnon](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gagnon.JPEG) | Bergan Gagnon |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | bergang |
+| Email  | bgagn008@fiu.edu |
+| research interests | Bergan is interested in how neural imaging can be used to diagnose psychopathology and assess comorbidity. |
+| hobbies | watching horror movies, reading about true crime, working out, and playing guitar |
+
 ### Junior Research Technicians
 
 | ![lopez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez.jpg) | Brandon Lopez |
