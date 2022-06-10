@@ -159,6 +159,15 @@ nav_order: 2
 | research interests | Aitana is interested in the relationship between cognition and behavior, and its interrelation with mental illness.
 | hobbies | reading, singing, playing guitar |
 
+| ![gagnon](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gagnon.JPEG) | Bergan Gagnon |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | bergang |
+| Email  | bgagn008@fiu.edu |
+| research interests | Bergan is interested in how neural imaging can be used to diagnose psychopathology and assess comorbidity. |
+| hobbies | watching horror movies, reading about true crime, working out, and playing guitar |
+
 | ![gallardo](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gallardo.JPG) | Laura Gallardo |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -239,16 +248,6 @@ nav_order: 2
 | Email  | lwebe013@fiu.edu |
 | research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
-
-
-| ![gagnon](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gagnon.JPEG) | Bergan Gagnon |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | bergang |
-| Email  | bgagn008@fiu.edu |
-| research interests | Bergan is interested in how neural imaging can be used to diagnose psychopathology and assess comorbidity. |
-| hobbies | watching horror movies, reading about true crime, working out, and playing guitar |
 
 ### Junior Research Technicians
 
