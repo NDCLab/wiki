@@ -195,24 +195,6 @@ nav_order: 2
 | research interests | Karen is interested in how our lifestyles affect our genetic expression (epigenetics) and and how they influence our neural circuits |
 | hobbies | (attempting to) lift heavy things in the gym, traveling, reading, tiktok aficionado, baking and learning new languages. |
 
-|![khouly](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/khouly.jpg)| Isabel Khouly |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | isabelkhouly |
-| Email  | ikhou001@fiu.edu |
-| research interests | Isabel is interested in the effects of exercise on human cognition and behavior |
-| hobbies | running, journaling, and cleaning |
-
-| ![roch-hernandez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/roch-hernandez.jpg) | Sebastian Roch-Hernandez |
-| ---  | ---  |
-| pronouns | he/him/his |
-| location | Miami, FL |
-| GitHub | SebaRoch-H1 |
-| Email  | sroch015@fiu.edu |
-| research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
-| hobbies | Playing guitar, reading, trying to learn random things. |
-
 | ![rodriguez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguez.jpg) | Brittney Rodriguez |
 | ---  | ---  |
 | pronouns | she/her/hers |
