@@ -247,7 +247,7 @@ nav_order: 2
 | location | Miami, FL |
 | GitHub | apena106 |
 | Email  | apena106@fiu.edu |
-| research interests | Andy is interested in cognitive functions, particularly as it relates to anxiety and legs psych. |
+| research interests | Andy is interested in cognitive functions, particularly as it relates to anxiety and legal psych. |
 | hobbies | gaming, outdoor activities, gym |
 
 
