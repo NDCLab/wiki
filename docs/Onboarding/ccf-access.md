@@ -37,6 +37,8 @@ When completing this form, use the following:<br/>
 **Reason for clearance:** Conduct research with minors and/or vulnerable people<br/>
 **Department:** Center for Children and Families
 
+In addition to the background check, new interns/volunteers are required to complete fingerprinting in PC 234 on the MMC campus.
+
 Once the background check is complete, the CCF requests creation of an AD account. There can be a long delay (up to one month) at this part of the process.
 
 ## Step 3: CITI Training
