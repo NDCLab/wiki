@@ -58,13 +58,13 @@ The coding scripts interpret a .json file and construct a unique survey object, 
 
     1. Replace "this-is-some-dataset" in the `project` variable to specify which project folder the data resides in. Examples of project folders are "rwe-dataset" or "memory-for-error-dataset."
     2. Replace "DATA" in the `input_file` variable to specify exactly which file should be processed.
-    3. Check the output_file path. This should typically just be "../derivatives/preprocessed/".
+    3. Check the output_file path. This should typically remain unchanged ("../derivatives/preprocessed/").
 
         ```
         # edit variables here to change inputs and check output path
         project="this-is-some-dataset"
         input_file="/home/data/NDClab/datasets/$project/sourcedata/raw/DATA.csv"
-        output_file="/home/data/NDClab/datasets/$project/derivatives/preprocessed/
+        output_file="/home/data/NDClab/datasets/$project/derivatives/preprocessed/"
         ```
 
 5. To save your changes to the .sub file, hold down the ctrl key and pressing the letter ‘o’. (Note: this is ctrl on both PC and Mac, not cmd.) You will be prompted to save the file, which you do by hitting enter/return. Then, to exit the nano view, hold down the ctrl key again and press the letter ‘x’.
