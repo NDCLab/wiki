@@ -10,6 +10,9 @@ nav_order: 2
     1. [Packages](#Loading-Packages)
     2. [Adding Packages](#Modifying-Packages)
     3. [Running](#Running-Scripts)
+    4. [CPU Parallelization](#CPU-Parallels)
+    5. [Data Parallelization](#Data-Parallels)
+    6. [Combining The Two](#Combining)
 2. [RStudio](#RStudio)
 
 ## Running R
@@ -40,6 +43,14 @@ After you initially run `rrun.sh`, you should subsequently run the sbatch file g
 
 ```
 sbatch <file_name>.sub
+
 ```
+### CPU Parallels
+
+
+### Data Parallels
+
+
+### Combining
 
 ## RStudio
