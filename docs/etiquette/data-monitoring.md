@@ -45,7 +45,7 @@ The rows of the first column of the central tracker must be pre-populated with a
 
 
 ## Protocol
-Although the broad strokes of data monitoring are identical across NDCLab studies, each data collection process should establish its own data monitoring protoocl that connects these lab processes with study-specific details. This is also helpful to crystallize the data monitoring actions performed as the defaults within the lab-wide scripts might change over time.
+Although the broad strokes of data monitoring are identical across NDCLab studies, each data collection process should establish its own data monitoring protocol that connects these lab processes with study-specific details. This is also helpful to record the specific data monitoring actions performed because the lab-wide defaults might change over time.
 
 
 ## Setting Up
@@ -60,11 +60,11 @@ You will input a single command that indicates which dataset should be set up, w
 ```
 sh /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup-moniprep.sh YOUR-DATASET/ DATA-TYPES PSYCHOPY-TASK-NAME
 ```
-**YOUR-DATASET:** this is the name of your dataset
-**DATA-TYPES:** include each data type you have in your `sourcedata/raw` folder, separated by a comma (no space) (redcap, audio, eeg).
-**PSYCHOPY-TASK-NAME:** include each PsychoPy task name for which a CSV file will exist per participant
+* **YOUR-DATASET:** this is the name of your dataset
+* **DATA-TYPES:** include each data type you have in your `sourcedata/raw` folder, separated by a comma (no space) (redcap, audio, eeg).
+* **PSYCHOPY-TASK-NAME:** include each PsychoPy task name for which a CSV file will exist per participant
 
-Here is an example of the setup line for readAloud-valence-dataset. It includes three data types: pavlovia, redcap, and zoom. Within Pavlovia, one CSV per participant is expected: read-aloud-val-o_s1_r1_e1.
+Here is an example of the setup line for readAloud-valence-dataset. It includes three data types: pavlovia, redcap, and zoom. Within Pavlovia folders, one CSV per participant is expected: `read-aloud-val-o_s1_r1_e1`.
 ```
 sh /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup-moniprep.sh readAloud-valence-dataset/ pavlovia,redcap,zoom read-aloud-val-o
 ```
@@ -84,13 +84,13 @@ Details for each are available below.
 
 ### Purpose
 The hallMonitor script checks that raw data (`sourcedata/raw`) is in good order and, once confirmed, places a copy of the data in `sourcedata/checked`. This serves two key purposes:
-1. issues with the incoming data (e.g., improper file naming) are identified and corrected early
-2. downstream processes interact with the "checked" data and safeguard the integrity of the original "raw" data
+1. issues with the incoming data (e.g., improper file naming) are identified and corrected early.
+2. downstream processes interact with the "checked" data and safeguard the integrity of the original "raw" data.
 
 Specifically, hallMonitor performs the following checks:
 #### REDCap
 1. Identifies most recent REDCap CSV.
-2. Copies this file to `sourcedata/checked`.
+2. Copies this file to `sourcedata/checked/redcap`.
 3. Updates the redcapData column in the central tracker, as well as any columns named after a REDCap instrument (such as aq10_s1_r1_e1).
 
 #### Pavlovia/Psychopy
