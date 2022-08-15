@@ -2,33 +2,27 @@
 layout: default
 title: R
 parent: HPC
-nav_order: 2
+nav_order: 5
 ---
 
 ### Contents
-1. [Running R](#Running-R)
-    1. [Packages](#Loading-Packages)
-    2. [Adding Packages](#Modifying-Packages)
-    3. [Running](#Running-Scripts)
-2. [RStudio](#RStudio)
+1. Packages(#packages)
+2. Running an R Script(#running-an-r-script)
+3. [RStudio](#rstudio)
 
-## Running R
 
-To run scripts in the R programming language using the login node, follow the steps listed below:
+## Packages
+Located in `/home/data/NDClab/tools/containers/R-4.1.2/` is a default container that contains all environment variables and packages required to run any R script.
 
-### Packages
+You can access the recipe file named `R.recipe`. 
 
-Located in `/home/data/NDClab/tools/containers/R-4.1.2/` is a default container that contains all environment variables and packages requried to run any R script. Below we will explore how we can use this container to run your R script.
+On line 85 is a line instructing R to install a number of packages. If your script requires a package that is not listed here, you will need to create a new container.
 
-### Packages
 
-To add a package to this R container, you can access the recipe file named `R.recipe`. 
 
-On line 85 is a line instructing R to install a number of packages. If you do not see a package required for your code simply add your package name to this list and rebuild the container image in a Linux environment with root access.
+## Running an R Script
 
-### Running
-
-To run your R script, execute the following command in your terminal.
+To run scripts in the R programming language using the login node, execute the following command in your shell:
 
 ```
 sh /home/data/NDClab/tools/lab-devOps/scripts/R/rrun.sh <file_name>.R

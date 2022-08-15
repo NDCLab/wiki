@@ -2,20 +2,19 @@
 layout: default
 title: Matlab
 parent: HPC
-nav_order: 3
+nav_order: 6
 ---
 
 ### Contents
-1. [Running Matlab](#Running-Matlab)
-    1. [Running](#Running-Scripts)
-2. [Matlab GUI](#Matlab-GUI)
+1. Packages(#packages)
+2. Running a MATLAB Script(#running-a-matlab-script)
+3. [MATLAB GUI](#matlab-gui)
 
-## Running Matlab
 
-To run scripts in the Matlab programming language using the login node, follow the steps listed below:
+## Packages
 
-### Running
 
+## Running a MATLAB Script
 To run your matlab script, execute the following command in your terminal.
 
 ```
@@ -32,4 +31,4 @@ After you initially run `rmat.sh`, you should subsequently run the sbatch file g
 sbatch <file_name>.sub
 ```
 
-## Matlab-GUI
+## MATLAB GUI
