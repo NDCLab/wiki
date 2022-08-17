@@ -35,28 +35,34 @@ The file below represents a sample Slurm script where a conda base environment i
 ```yml
 #!/bin/bash
 
-#SBATCH --job-name=myjob         # job name
+#SBATCH --job-name=myjob         	# job name
 #SBATCH --nodes=1                	# node count
 #SBATCH --ntasks=1               	# total number of tasks across all nodes
-#SBATCH --time=00:24:00          	# total run time limit (HH:MM:SS)
+#SBATCH --time=00:10:00          	# total run time limit (HH:MM:SS)
 #SBATCH --mail-type=end          	# send email when job ends
 
-module load miniconda3-4.5.11-gcc-8.2.0-oqs2mbg
-
-conda exec -b base python sample.py
+singularity exec --bind /home/data/NDClab /home/data/NDClab/tools/containers/python-3.8/container.simg python3 filename.py
 ```
 
 Here is a guide to what these details in the .sub file mean and how they should be customized:
 | variable/text  | description  | how to customize  |
 | :--  | :--  | :--  |
 | #!/bin/bash  | tells the HPC to read what follows in the Bash language  | Do not modify.  |
-| job-name  | name for the job  | how to customize  |
-| nodes  | tells the HPC how many nodes should be utilized (nodes are individual computers in the cluster)  | how to customize  |
-| tasks  | tells the HPC how many tasks (that is, CPUs) should be utilized across the number of nodes selected | how to customize  |
-| time  | limits the amount of time the HPC should devote to running the script  | how to customize  |
+| job-name  | name for the job that displays in squeue  | Replace "myjob" with a short, informative name for the job you are running. You can then see this easily on the squeue.  |
+| nodes  | tells the HPC how many nodes should be utilized (nodes are individual computers in the cluster)  | Keep at "1" unless you are doing parallel processing.  |
+| tasks  | tells the HPC how many tasks (that is, CPUs) should be utilized across the number of nodes selected | Keep at "1" unless you are doing parallel processing.  |
+| time  | limits the amount of time the HPC should devote to running the script  | Ballpark the time your script will need to run and give yourself some buffer. For parallel processes, this will need to be set very high. But be careful not to burn through lab time on the HPC.  |
 | mail-type  | tells the HPC to send you an e-mail when the job is done  | If the job is very small and will run quickly, you can delete this line to avoid an unnecessary e-mail in your inbox. Otherwise, leave it unchanged.  |
-| module load miniconda3-4.5.11-gcc-8.2.0-oqs2mbg  | Loads a specific version of conda, R, etc.  | how to customize  |
-| conda exec -b base python sample.py  | the actual command to run the script specified  | how to customize  |
+| singularity exec --bind /home/data/NDClab  | binds data within the NDCLab folder to the singularity image  | Do not modify.  |
+| /home/data/NDClab/tools/containers/python-3.8/container.simg  | identity of the selected container  | Use the example for Python. For R, use `/home/data/NDClab/tools/containers/R-4.1.2/R-con.simg`  |
+| python3 filename.py  | the actual command to run the script specified  | Specify python3 for .py or Rscript for .R.  |
+
+MATLAB is a little special. To create a Slurm script for a .m file, replace the `singularity` line in the sample above with:
+```yml
+module load matlab-2018b
+matlab -nodisplay -nosplash -r filename
+```
+...where `filename` is the name of your MATLAB script, but without the final `.m`.
 
 
 ## Running a Slurm File
