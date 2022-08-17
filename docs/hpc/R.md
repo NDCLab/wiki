@@ -6,34 +6,35 @@ nav_order: 5
 ---
 
 ### Contents
-1. Packages(#packages)
-2. Running an R Script(#running-an-r-script)
+1. [Packages](#packages)
+2. [Running an R Script](#running-an-r-script)
 3. [RStudio](#rstudio)
 
 
 ## Packages
-Located in `/home/data/NDClab/tools/containers/R-4.1.2/` is a default container that contains all environment variables and packages required to run any R script.
+Located in `/home/data/NDClab/tools/` is the lab's current default singularity image for R; it contains all environment variables and packages required to run any R script.
 
-You can access the recipe file named `R.recipe`. 
+You can access the recipe file named `R.recipe`. Download this file and open it in a text editor on your local machine.
 
-On line 85 is a line instructing R to install a number of packages. If your script requires a package that is not listed here, you will need to create a new container.
+On line 85 is a line instructing R to install a number of packages:
+
+```yml
+R --no-echo -e 'install.packages(c("Rcpp", "DEoptim", "ggplot2", "data.table", "dplyr", "tidyr", "knitr", "readxl"))'
+```
+
+If your script requires a package that is not listed here, a [new container](https://ndclab.github.io/wiki/docs/hpc/containers.html) will need to be created.
 
 
 
 ## Running an R Script
-
-To run scripts in the R programming language using the login node, execute the following command in your shell:
-
-```
-sh /home/data/NDClab/tools/lab-devOps/scripts/R/rrun.sh <file_name>.R
-```
-
-This will generate an sbatch script, submit it, and return an output to your folder location.
-
-After you initially run `rrun.sh`, you should subsequently run the sbatch file generated in your folder via:
+To run a script in the R programming language using the login node, log in to the [Panther Shell Access](https://ndclab.github.io/wiki/docs/hpc/accessing.html#login-node). Use `cd` to navigate to the folder that contains your script. From that location, run the following command:
 
 ```
-sbatch <file_name>.sub
+sh /home/data/NDClab/tools/lab-devOps/scripts/R/rrun.sh <your-script-name>.R
 ```
+
+This will generate an Slurm script called ????.sub. Run this file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
+
 
 ## RStudio
+TBD.

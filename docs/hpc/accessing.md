@@ -11,8 +11,8 @@ nav_order: 2
 ### Contents
 1. [Connecting](#connecting)
 2. [Access Methods](#access-methods)
-    1. [Login Node](#login-Node)
-    2. [Visual Node](#lisual-Node)
+    1. [Login Node](#login-node)
+    2. [Visual Node](#visual-node)
 2. [Structure](#structure)
 3. [Relationship with GitHub](#relationship-with-github)
 
