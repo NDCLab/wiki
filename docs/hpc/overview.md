@@ -21,12 +21,14 @@ The [Instructional and Research Computing Center (IRCC) group](https://ircc.fiu.
 
 ## How to Use the HPC
 This section of the wiki contains separate pages detailing key aspects of HPC use. Click the links below to get more detail:
-- logging in and using nodes
-- structure of our folder
-- default container
-- how to add packages and rebuild a container
-- .sub files (how to run and how to create)
-- .r files (how to run)
-- .m files (how to run)
-- using RStudio (regular and in parallel)
-- using MATLAB (regular and in parallel)
+- [current HPC status](https://ndclab.github.io/wiki/docs/hpc/status.html)
+- [logging in and using nodes](https://ndclab.github.io/wiki/docs/hpc/accessing.html)
+- [structure of our folder](https://ndclab.github.io/wiki/docs/hpc/accessing.html)
+- [how to create and run Slurm files](https://ndclab.github.io/wiki/docs/hpc/jobs.html)
+- [details of our default containers](https://ndclab.github.io/wiki/docs/hpc/containers.html)
+- [how to add packages and rebuild a container](https://ndclab.github.io/wiki/docs/hpc/containers.html)
+- [how to run .R scripts](https://ndclab.github.io/wiki/docs/hpc/R.html)
+- [how to run .m scripts](https://ndclab.github.io/wiki/docs/hpc/matlab.html)
+- [how to run .py scripts](https://ndclab.github.io/wiki/docs/hpc/python.html)
+- [how to use RStudio on the HPC](https://ndclab.github.io/wiki/docs/hpc/R.html)
+- [how to use MATLAB on the HPC](https://ndclab.github.io/wiki/docs/hpc/matlab.html)
