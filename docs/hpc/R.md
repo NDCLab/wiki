@@ -14,9 +14,9 @@ nav_order: 5
 ## Packages
 Located in `/home/data/NDClab/tools/` is the lab's current default singularity image for R; it contains all environment variables and packages required to run any R script.
 
-You can access the recipe file named `R.recipe`. Download this file and open it in a text editor on your local machine.
+You can access the recipe file named `R.recipe`. [Log in](https://ndclab.github.io/wiki/docs/hpc/accessing.html#login-node), then download this file and open it in a text editor on your local machine.
 
-On line 85 is a line instructing R to install a number of packages:
+Near the bottom is a line instructing R to install a number of packages:
 
 ```yml
 R --no-echo -e 'install.packages(c("Rcpp", "DEoptim", "ggplot2", "data.table", "dplyr", "tidyr", "knitr", "readxl"))'
