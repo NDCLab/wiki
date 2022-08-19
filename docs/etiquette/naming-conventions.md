@@ -12,7 +12,9 @@ nav_order: 1
 4. [GitHub](#github)
 5. [REDCap](#redcap)
 6. [PsychoPy and Pavlovia](#psychopy-and-pavlovia)
-7. [Helpful Resources](#helpful-resources)
+7. [EEG](#eeg)
+8. [Audio and Video](#audio-and-video)
+9. [Helpful Resources](#helpful-resources)
 
 ## Overarching Philosophy
 
@@ -298,6 +300,25 @@ The -o flag indicates that the experiment has been designed for online use, via 
 
 The ft- prefix is a special prefix for the three "FIU Toolbox" tasks (flanker, DCCS, and n-back).
 
+## EEG
+
+When EEG data is collected, files should be named: `subject`_`experiment`_`session/run/event`. For example:
+> sub-210001_rwe-eeg_s1_r1_e1
+> sub-170044_memory-for-error_s1_r1_e1
+
+The sX, rX, and eX information follows the logic indicated in the REDCap section above.
+
+The experiment name should match exactly the associated PsychoPy (or other) task.
+
+## Audio and Video
+
+When audio or video data is collected (including Zoom, Audacity, and EEG digitization), files should be named: `subject`_`experiment`_`session/run/event`. For example:
+> sub-210001_rwe-eeg_s1_r1_e1
+> sub-170044_memory-for-error_s1_r1_e1
+
+The sX, rX, and eX information follows the logic indicated in the REDCap section above.
+
+The experiment name should match exactly the associated PsychoPy (or other) task.
 
 ## Helpful Resources
 * Awesome [slidedeck](https://speakerdeck.com/jennybc/how-to-name-files) from [Jenny Bryan](https://jennybryan.org/).<br/>
