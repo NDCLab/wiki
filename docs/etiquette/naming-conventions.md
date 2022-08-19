@@ -302,9 +302,9 @@ The ft- prefix is a special prefix for the three "FIU Toolbox" tasks (flanker, D
 
 ## EEG
 
-When EEG data is collected, files should be named: `subject`_`experiment`_`session/run/event`. For example:
-> sub-210001_rwe-eeg_s1_r1_e1
-> sub-170044_memory-for-error_s1_r1_e1
+When EEG data is collected, files should be named: `subject`_`experiment`_eeg_`session/run/event`. For example:
+> sub-210001_rwe-eeg_eeg_s1_r1_e1
+> sub-170044_memory-for-error_eeg_s1_r1_e1
 
 The sX, rX, and eX information follows the logic indicated in the REDCap section above.
 
@@ -312,13 +312,16 @@ The experiment name should match exactly the associated PsychoPy (or other) task
 
 ## Audio and Video
 
-When audio or video data is collected (including Zoom, Audacity, and EEG digitization), files should be named: `subject`_`experiment`_`session/run/event`. For example:
-> sub-210001_rwe-eeg_s1_r1_e1
-> sub-170044_memory-for-error_s1_r1_e1
+When audio or video data is collected (including Zoom, Audacity, and EEG digitization), files should be named: `subject`_`experiment`_`datatype`_`session/run/event`. For example:
+> sub-210001_rwe-eeg_audacity_s1_r1_e1
+> sub-170044_memory-for-error_zoom_s1_r1_e1
+> sub-150004_putt-putt_video_s1_r1_e1
 
 The sX, rX, and eX information follows the logic indicated in the REDCap section above.
 
 The experiment name should match exactly the associated PsychoPy (or other) task.
+
+The datatype should specify the method used to collect it, such as Zoom or Audacity, since multiple collection methods can yield .m4a or .mp4 files.
 
 ## Helpful Resources
 * Awesome [slidedeck](https://speakerdeck.com/jennybc/how-to-name-files) from [Jenny Bryan](https://jennybryan.org/).<br/>
