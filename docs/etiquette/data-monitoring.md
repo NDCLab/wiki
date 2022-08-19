@@ -39,6 +39,8 @@ Additionally, the central tracker must have one column for each data type collec
 - redcapData
 - pavloviaData or psychopyData
 - zoomData and/or audioData and/or videoData
+- eegData
+- digiData
 
 #### Subject IDs
 The rows of the first column of the central tracker must be pre-populated with anticipated subject IDs. That is, the data monitoring scripts should not need to "guess" which participants they are looking for. It is ok to pre-populate with many more IDs than you expect to collect, and then delete the extraneous IDs after the close of data collection.
@@ -56,13 +58,16 @@ From the [HPC shell](https://ndclab.github.io/wiki/docs/hpc/accessing.html), nav
 cd /home/data/NDClab/datasets
 ```
 
-You will input a single command that indicates which dataset should be set up, which data types are involved, and which PsychoPy/Pavlovia tasks are collected. Here is the core structure of the command:
+You will input a single command that indicates which dataset should be set up, which data types are involved, which PsychoPy/Pavlovia tasks are collected, and which EEG system (if any) is used. Here is the core structure of the command:
+
 ```
 sh /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup-moniprep.sh YOUR-DATASET/ DATA-TYPES PSYCHOPY-TASK-NAME
 ```
 * **YOUR-DATASET:** this is the name of your dataset
 * **DATA-TYPES:** include each data type you have in your `sourcedata/raw` folder, separated by a comma (no space) (redcap, audio, eeg).
 * **PSYCHOPY-TASK-NAME:** include each PsychoPy task name for which a CSV file will exist per participant
+:point_right: ADD 'BV' VERSUS 'EGI' VERSUS 'NO EEG (NONE)'
+:point_right: ADD SUBJECT NUMBERING CONVENTION
 
 Here is an example of the setup line for readAloud-valence-dataset. It includes three data types: pavlovia, redcap, and zoom. Within Pavlovia folders, one CSV per participant is expected: `read-aloud-val-o_s1_r1_e1`.
 ```
@@ -103,11 +108,17 @@ Specifically, hallMonitor performs the following checks:
 If any duplicate files or improper folder names are identified, hallMonitor outputs a red error message.
 
 
-#### Zoom/Audio/Video
-Audio and video files are managed manually by the study lead. Proper encryption should be verified (that is, decryption using the study password should be tested and confirmed), after which the participant's audio/video files should be manually copied to `sourcedata/checked`.  The hallMonitor script verifies the existence of a folder in `sourcedata/checked` and updates the zoomData, audioData, or videoData column of the central tracker accordingly.
+#### Zoom/Audio/Video/Digi
+Audio, video, and photo (such as EEG digitization) files are managed manually by the study lead. Proper encryption should be verified (that is, decryption using the study password should be tested and confirmed), after which the participant's audio/video/photo/photo files should be manually copied to `sourcedata/checked`.  The hallMonitor script verifies the existence of a folder in `sourcedata/checked` and updates the zoomData, audioData, videoData, and/or digiData columns of the central tracker accordingly.
 
 #### EEG
-(TBD)
+1. Checks for the existence of any new subject folders in `sourcedata/raw/eeg` and, if they are found, verifies the correct subject folder nomenclature (i.e., sub-XXXXXX).
+2. For correctly-named folders in `sourcedata/raw/eeg`:
+    1. Verifies that file names within the folder match the subject ID of the folder itself.
+    2. Verifies that there is only one of each file type, depending on the system used for data collection: BV (.eeg, .vhdr, .vmrk) or EGI (.mff).
+    3. Verifies that file names follow the appropriate conventions for study subjects and tasks.
+
+Any new folders, as well as new files within previously existing folders, that pass the above checks are copied to the existing subject folder in `sourcedata/checked/bidsish/sub-XXXXXX/eeg`.
 
 ### Customize
 Most customization required for the hallMonitor script is handled by the setup command above. However, if REDCap column names need to be re-mapped to match the expectations of the instruments script, this can be built directly into hallMonitor. There are two options available:
