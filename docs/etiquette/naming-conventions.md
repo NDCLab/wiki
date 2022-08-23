@@ -275,14 +275,14 @@ Whenever an instrument is modified (including correction of errors and re-workin
 
 Scored instruments are revised by appending "_b" (or "_c", "_d", etc.) to the instrument name and to all variables. This must be done very precisely to ensure that the automatic scoring script continues to function as expected. Example:
 
-> instrument name: adexi_s1_r1_e1 :point_right: adexi_b_s1_r1_e1
+> instrument name: adexi_s1_r1_e1 :point_right: adexi_b_s1_r1_e1<br/>
 > question 1: adexi_i1_s1_r1_e1 :point_right: adexi_b_i1_s1_r1_e1
 
 #### Unscored Instruments
 
 Unscored instrument may either use the revisioning system described above for scored instruments (i.e., "_b"). In some cases, such as the initState and postTask questionnaires, it was envisaged that the lab would build up a repertoire of different versions over time. For these instruments, the letter versioning is built directly into the name:
 
-> instrument name: postTaskA_s1_r1_e1 :point_right: postTaskB_s1_r1_e1
+> instrument name: postTaskA_s1_r1_e1 :point_right: postTaskB_s1_r1_e1<br/>
 > question 1: postTaskA_i1_s1_r1_e1 :point_right: postTaskB_i1_s1_r1_e1
 
 ## PsychoPy and Pavlovia
@@ -290,8 +290,8 @@ Unscored instrument may either use the revisioning system described above for sc
 ### Folder and Experiment Names
 
 The folder and the name of the .psyexp file should be identical:
-> ft-flanker-o_s1_r1_e1
-> read-aloud-val-o_s1_r1_e1
+> ft-flanker-o_s1_r1_e1<br/>
+> read-aloud-val-o_s1_r1_e1<br/>
 > multi-ef_s1_r1_e1
 
 The sX, rX, and eX information follows the logic indicated in the REDCap section above.
@@ -303,7 +303,7 @@ The ft- prefix is a special prefix for the three "FIU Toolbox" tasks (flanker, D
 ## EEG
 
 When EEG data is collected, files should be named: `subject`_`experiment`_eeg_`session/run/event`. For example:
-> sub-210001_rwe-eeg_eeg_s1_r1_e1
+> sub-210001_rwe-eeg_eeg_s1_r1_e1<br/>
 > sub-170044_memory-for-error_eeg_s1_r1_e1
 
 The sX, rX, and eX information follows the logic indicated in the REDCap section above.
@@ -311,14 +311,14 @@ The sX, rX, and eX information follows the logic indicated in the REDCap section
 The experiment name should match exactly the associated PsychoPy (or other) task.
 
 If digitization has also been performed, replace "eeg" with "digi-image" and "digi-model":
-> sub-210001_rwe-eeg_digi-image_s1_r1_e1
+> sub-210001_rwe-eeg_digi-image_s1_r1_e1<br/>
 > sub-170044_memory-for-error_digi-model_s1_r1_e1
 
 ## Audio and Video
 
 When audio or video data is collected (including Zoom, Audacity, and EEG digitization), files should be named: `subject`_`experiment`_`datatype`_`session/run/event`. For example:
-> sub-210001_rwe-eeg_audacity_s1_r1_e1
-> sub-170044_memory-for-error_zoom_s1_r1_e1
+> sub-210001_rwe-eeg_audacity_s1_r1_e1<br/>
+> sub-170044_memory-for-error_zoom_s1_r1_e1<br/>
 > sub-150004_putt-putt_video_s1_r1_e1
 
 The sX, rX, and eX information follows the logic indicated in the REDCap section above.
