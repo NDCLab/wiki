@@ -310,6 +310,10 @@ The sX, rX, and eX information follows the logic indicated in the REDCap section
 
 The experiment name should match exactly the associated PsychoPy (or other) task.
 
+If digitization has also been performed, replace "eeg" with "digi-image" and "digi-model":
+> sub-210001_rwe-eeg_digi-image_s1_r1_e1
+> sub-170044_memory-for-error_digi-model_s1_r1_e1
+
 ## Audio and Video
 
 When audio or video data is collected (including Zoom, Audacity, and EEG digitization), files should be named: `subject`_`experiment`_`datatype`_`session/run/event`. For example:
