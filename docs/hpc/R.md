@@ -33,7 +33,7 @@ To run a script in the R programming language using the login node, log in to th
 sh /home/data/NDClab/tools/lab-devOps/scripts/R/rrun.sh <your-script-name>.R
 ```
 
-This will generate an Slurm script called ????.sub. Run this file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
+This will generate an Slurm script named after your script: `your-script-name.sub`. Run this file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
 
 
 ## RStudio
