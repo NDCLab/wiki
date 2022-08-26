@@ -35,6 +35,5 @@ sh /home/data/NDClab/tools/lab-devOps/scripts/R/rrun.sh <your-script-name>.R
 
 This will generate an Slurm script named after your script: `your-script-name.sub`. Run this file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
 
-
 ## RStudio
 TBD
