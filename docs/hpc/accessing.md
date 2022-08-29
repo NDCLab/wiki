@@ -2,67 +2,55 @@
 layout: default
 title: Accessing the HPC
 parent: HPC
-nav_order: 1
+nav_order: 2
 ---
 
 ![cluster visualization](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/cluster.png)
 *Visualization by Yale Center for Research Computing*
 
 ### Contents
-1. [Connecting](#Connecting)
-    1. [Login Node](#Login-Node)
-    2. [Visual Node](#Visual-Node)
-2. [Structure](#Structure)
+1. [Connecting](#connecting)
+2. [Access Methods](#access-methods)
+    1. [Login Node](#login-node)
+    2. [Visual Node](#visual-node)
+2. [Structure](#structure)
+3. [Relationship with GitHub](#relationship-with-github)
 
 ## Connecting
-To use the HPC, a lab member must either use on-campus WiFi or utilize a VPN to access the [FIU intranet](https://en.wikipedia.org/wiki/Intranet). 
+To use the HPC, a lab member must either use:
+- on-campus WiFi
+- the [FIU VPN]((https://network.fiu.edu/vpn/) to access the [FIU intranet](https://en.wikipedia.org/wiki/Intranet). Instructions are available [here](https://fiu.service-now.com/sp?id=kb_article&sys_id=6c3c789ddb899780b16af969af96193d).
 
-Once a secure connection is established, both the login node and visual nodes can be accessed for job submission and file manipulation.
+Once connected to either on-campus WiFi or the VPN, use Google Chrome to access the site [hpcgui.fiu.edu](hpcgui.fiu.edu).
 
-### VPN (Off-Campus Only!)
-If a lab member is using on-campus WiFi, this step can be skipped. 
 
-However, if a lab member is accessing the HPC off-campus, they must connect to the [FIU VPN](https://network.fiu.edu/vpn/) to access the FIU intranet. 
-
-### Login-Node
+## Access Methods
+### Login Node
 The login node, also known as the head node, is the primary HPC entry point for submitting jobs and transferring small amounts of data.
 
-Note: a user must login to the login-node **before** logging into the hpcgui to initialize their home directory. 
+From the HPC GUI login page, select "Clusters," then "Panther Shell Access;"
+![shell-access](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/shell-access.png)
 
-The preferred (and easiest) method for accessing the HPC login node is through secure shell (SSH). This comes installed on Windows 10 and MacOS. Previous windows versions can install [OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
+When prompted, input your password. (It will no look like you are typing anything, but persevere and hit Enter!)
 
-Verify your ssh installation by typing in the command prompt/terminal. 
-```
-ssh -v localhost 
-```
-
-1. Once verified, ssh into the login node, Where `userName` is the lab member's FIU username:
-```
-ssh userName@hpclogin01
-```
-
-2. Enter the password when prompted:
-```
-userName@hpclogin01 password:
-```
-
-3. A prompt will indicate a successful login:
+A prompt will indicate a successful login:
 ```
 #######################################################################
 Welcome to the FIU Instructional & Research Computing Center (IRCC)
 #######################################################################
 ```
 
-### Visual-Node
-The visualization node is used for directly editing files on the cluster and for GUI manipulation. To access the visual node, simply click [hpcgui.fiu.edu](hpcgui.fiu.edu).
+From here, you can manipulate files as you would using any [shell](https://ndclab.github.io/wiki/docs/shell). You can also submit batch jobs to the compute-node.
 
-<img width="957" alt="fiuHPCgui" src="https://user-images.githubusercontent.com/26397102/119862076-c067a580-bedd-11eb-9481-b1d6ca42b554.png">
+### Visual Node
+The visualization node is used for directly editing files on the cluster and for GUI manipulation. There are two options:
+- the file navigator
+- an interactive desktop
 
-The red boxes detail the following:
+The file navigator is similar to a Windows Explorer or Mac Finder type interface. It is useful for viewing folder structure and contents from a high level.
 
-* Files: represent a graphical representation of the file structure on the cluster
-* Clusters: provide [shell](https://ndclab.github.io/wiki/docs/shell) access to the cluster
-* Interactive Apps: GUI applications available for HPC account-holders 
+If more interactive access is required, for instance downloading Pavlovia data and uploading to the HPC, this can be accomplished on the interactive desktop. The desktop is resource intensive, so it is best reserved for the kinds of operations that cannot be accomplished via the shell or file navigator.
+
 
 ## Structure
 
@@ -79,12 +67,20 @@ All lab members are part of the NDCLab, but only a select few members are part o
 The main directories -- `datasets`, `tools`, and `analyses` -- are described below.
 
 ### datasets
-Each project has a directory in this folder to house de-identified and encrypted data.
+Data collection projects have a directory in this folder to house de-identified and encrypted data. Project leads, approved project members, and lab staff have read and write access to the entire directory, while lab members who are not involved in the project are able to view publicly-available data.
 
-Project leads, approved project members, and lab staff will have sole read and write access to the entire directory, while external lab members will be able to only view publicly-available data. 
+In addition, publicly-available datasets may be replicated to their own directories for additional analyses to be performed by lab members.
 
 ### tools
-This folder contains various scripts and software utilized within the lab for organization, preprocessing, and compliance checking. 
+This folder contains various scripts and software utilized within the lab for organization, data monitoring, and compliance checking. 
 
 ### analyses
-Finally, each ongoing project has a folder in the `analyses` directory, which contains cleaned datasets, plots, and various statistics.
+Analysis projects have a directory in this folder to house analysis scripts and their derivatives, such as statistics, plots, and completed products.
+
+
+## Relationship with GitHub
+Wherever possible, the NDCLab endeavors to operate as a fully open lab, providing public access to our ongoing projects. For this reason, all dataset and analysis directories on the HPC are, in fact, mirrors of a GitHub repository.
+
+Information that is pushed to the `main` branch of the GitHub repository is mirrored to the associated HPC folder at 1 am EST nightly. This connection is **one-way**: that is, for the purposes of data security, data on the HPC is **not** mirrored back to GitHub. In addition, the `sourcedata` and `derivatives` folders of dataset directories/repositories are explicitly ignored by Git.
+
+If an immediate sync of an HPC directory to the GitHub remote is required, this can be achieved with a `git pull` from the HPC shell.
