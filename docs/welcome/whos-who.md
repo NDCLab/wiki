@@ -63,6 +63,14 @@ nav_order: 2
 | hobbies | Painting nails, DnD, and riding horses |
 
 ### Graduate Student Affiliates
+| ![sahar](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/sahar.jpg) | Luc Sahar |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | l-acs |
+| Email  | lsaha003@fiu.edu |
+| research interests | Syntax-prosody interface, mental representations of linguistic knowledge, language acquisition, sentence processing, computational linguistics, voice interfaces |
+| hobbies | Biking, being obsessed with my dog, programming, hiking, drinking coffee |
 
 
 ### Senior Research Assistants
