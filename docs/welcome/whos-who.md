@@ -63,6 +63,7 @@ nav_order: 2
 | hobbies | Painting nails, DnD, and riding horses |
 
 ### Graduate Student Affiliates
+
 | ![sahar](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/sahar.jpg) | Luc Sahar |
 | ---  | ---  |
 | pronouns | he/him/his |
