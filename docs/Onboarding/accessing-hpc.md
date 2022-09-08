@@ -15,7 +15,7 @@ All members of the NDCLab receive access to the lab folder on the FIU HPC. The l
 
 At any time during the onboarding process, you may attend the HPC Onboarding training:<br/>
 **When:** every Tuesday, 11 am - 12 noon EST<br/>
-**Where:** https://fiu.zoom.us/j/6887844649
+**Where:** https://fiu.zoom.us/my/jcasco
 
 You must attend the training session before you begin using the HPC.
 
