@@ -44,7 +44,8 @@ Follow the steps below to become a Git ninja! We will set up your computer so yo
 `git clone <link>`  <br/>
 `git branch whos-who-[yourname]`  <br/>
 `git checkout whos-who-[yourname]`  <br/>
-`git add whos-who.md` <br/>
+`git add docs/welcome/whos-who.md` <br/>
+`git add docs/_assets/whos-who/[yourname].jpg` <br/>
 `git status`  <br/>
 `git commit -m "Add [yourname] to who's-who"`  <br/>
 `git push origin whos-who-[yourname]`
