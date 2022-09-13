@@ -38,7 +38,7 @@ Follow the steps below to become a Git ninja! We will set up your computer so yo
 
 9. Work through two hands-on tutorials by following the instructions in the readmes:
     - [Introduction to GitHub](https://github.com/skills/introduction-to-github)
-    - [Communicate Using Markdown](https://github.com/skills/communicate-using-markdown)
+    - [Communicate Using Markdown](https://github.com/skills/communicate-using-markdown)<br/>
 Then head back over here and continue to #10 below.
 
 10. Watch [this video](https://youtu.be/4nEAxtKvrQE) where the lab manager gives you a tour of the NDCLab wiki and takes you through the steps to update your entry on the who's-who page.
