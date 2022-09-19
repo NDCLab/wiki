@@ -12,7 +12,7 @@ The lab maintains a shared Google calendar, to which lab members are granted acc
 
 ![ndclab-calendar](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/ndclab-calendar.png)
 
-## Bi-weekly Lab Meeting
+## Bi-Weekly Lab Meeting
 
 A 1-1.5 hour lab meeting is held every two weeks. All lab members are encouraged to attend, but attendance is not mandatory for junior members.
 
