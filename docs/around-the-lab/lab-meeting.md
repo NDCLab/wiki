@@ -12,13 +12,13 @@ The lab maintains a shared Google calendar, to which lab members are granted acc
 
 ![ndclab-calendar](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/ndclab-calendar.png)
 
-## Weekly Lab Meeting
+## Bi-weekly Lab Meeting
 
-A one-hour lab meeting is held weekly. All lab members are encouraged to attend, but attendance is not mandatory for junior members. All lab meetings are recorded so that they can be attended asynchronously.
+A 1-1.5 hour lab meeting is held every two weeks. All lab members are encouraged to attend, but attendance is not mandatory for junior members.
 
 * Agendas are posted the week prior on GitHub.
 * The lab manager messages on the Slack #general channel, starting with: `Lab Meeting | yyyy-mm-dd`; this post includes a link to the GitHub agenda.
-* Following the meeting, the lab manager adds meeting notes and a link to the meeting recording on the same thread.
+* Following the meeting, the lab manager adds meeting notes (and, if the meeting was recorded, a link to the recording) on the same thread.
 * The lab manager's posts for the most recent lab meeting and the next upcoming meeting are always pinned to the #general channel in Slack.
 * Older posts can be found by searching within Slack:
 ```
