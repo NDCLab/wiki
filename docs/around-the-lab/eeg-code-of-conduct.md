@@ -18,7 +18,7 @@ When we run participants, we are representing the lab, CCF, and the university. 
 
 ### Professionalism
 * Always keep language and discussion topics appropriate when working with participants or in the CCF
-* Wear clothes that adhere to the community standards outlined in the wiki when running participants
+* Wear clothes that adhere to the [community standards,](https://ndclab.github.io/wiki/docs/around-the-lab/community-standards.html) when running participants
 * Participant comfort is paramount- make sure the participant is not experiencing any discomfort and remember that the participant can leave at any time (be careful not to use coercive language to get them to stay)
 
 ### General Expectations
