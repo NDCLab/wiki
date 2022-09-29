@@ -1,5 +1,4 @@
---- 
-git ---
+--- git ---
 layout: default
 title: Who's Who
 parent: Welcome
