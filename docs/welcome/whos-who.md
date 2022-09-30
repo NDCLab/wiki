@@ -1,4 +1,4 @@
----
+--- 
 layout: default
 title: Who's Who
 parent: Welcome
@@ -213,6 +213,15 @@ nav_order: 2
 | Email  | kguer039@fiu.edu |
 | research interests | Karen is interested in how our lifestyles affect our genetic expression (epigenetics) and and how they influence our neural circuits |
 | hobbies | (attempting to) lift heavy things in the gym, traveling, reading, tiktok aficionado, baking and learning new languages. |
+
+| ![hung](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hung.jpg) | Shirley Hung |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | sjhung010 |
+| Email  | shung@fiu.edu |
+| research interests | Shirley is interested in child clinical psychology, cognition, and behavior. |
+| hobbies | cosmetology, art, reading books, meditation, and traveling |
 
 | ![rodriguez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguez.jpg) | Brittney Rodriguez |
 | ---  | ---  |
