@@ -259,6 +259,15 @@ nav_order: 2
 | research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
 
+| ![beadleson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/brandon.jpg) | Brandon Beadleson |
+| ---  | ---  |
+| pronouns | he/him |
+| location | Miami, FL |
+| GitHub | beadleson |
+| Email  | bbead001@fiu.edu |
+| research interests | Neuropsychological factors in behavior, illness, and personality |
+| hobbies |Traveling & Reading . |
+
 
 ### Junior Research Technicians
 
