@@ -76,14 +76,6 @@ nav_order: 2
 
 ### Senior Research Assistants
 
-|![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | anaNDClab |
-| research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder.|
-| hobbies | painting, drawing, and watching crime documentaries. |
-
 | ![machado](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/machado.jpg) | Emily Machado |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -204,15 +196,6 @@ nav_order: 2
 | Email  | agarc884@fiu.edu |
 | research interests | Ana is interested in psychopharmacology, sleep, and metacognition.|
 | hobbies | playing the guitar, dj mixing, drawing, being outdoors. |
-
-| ![guerra](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/guerra.jpg) | Karen Guerra |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | 1karenguerra |
-| Email  | kguer039@fiu.edu |
-| research interests | Karen is interested in how our lifestyles affect our genetic expression (epigenetics) and and how they influence our neural circuits |
-| hobbies | (attempting to) lift heavy things in the gym, traveling, reading, tiktok aficionado, baking and learning new languages. |
 
 | ![hung](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hung.jpg) | Shirley Hung |
 | ---  | ---  |
