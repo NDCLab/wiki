@@ -135,6 +135,15 @@ nav_order: 2
 | research interests | Nicole is interested in examining the relationship between cognitive function and social behavior using EEG methods. |
 | hobbies |Working out, traveling, playing with my dog. |
 
+| ![beadleson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/beadleson.jpg) | Brandon Beadleson |
+| ---  | ---  |
+| pronouns | he/him |
+| location | Miami, FL |
+| GitHub | beadleson |
+| Email  | bbead001@fiu.edu |
+| research interests | Neuropsychological factors in behavior, illness, and personality |
+| hobbies |Traveling & Reading . |
+
 | ![charest](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/charest.jpg) | Sophia Charest |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -241,15 +250,6 @@ nav_order: 2
 | Email  | lwebe013@fiu.edu |
 | research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
-
-| ![beadleson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/beadleson.jpg) | Brandon Beadleson |
-| ---  | ---  |
-| pronouns | he/him |
-| location | Miami, FL |
-| GitHub | beadleson |
-| Email  | bbead001@fiu.edu |
-| research interests | Neuropsychological factors in behavior, illness, and personality |
-| hobbies |Traveling & Reading . |
 
 
 ### Junior Research Technicians
