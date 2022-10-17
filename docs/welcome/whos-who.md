@@ -73,6 +73,14 @@ nav_order: 2
 | research interests | Syntax-prosody interface, mental representations of linguistic knowledge, language acquisition, sentence processing, computational linguistics, voice interfaces |
 | hobbies | Biking, being obsessed with my dog, programming, hiking, drinking coffee |
 
+| ![martin](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/martin.jpg) | Emily Martin |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | ylimerm3 |
+| Email  | emart459@fiu.edu |
+| research interests | Emily is interested in studying visual processing with computational modeling, specifically with face perception, and how factors like emotional expression and social anxiety influence perception (and errors) through EEG. |
+| hobbies | music/concerts, cooking, video games, playing with my leopard gecko Sigma |
 
 ### Senior Research Assistants
 
