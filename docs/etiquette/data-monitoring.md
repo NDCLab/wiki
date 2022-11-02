@@ -107,34 +107,35 @@ Specifically, hallMonitor performs the following checks:
 #### REDCap
 1. Identifies most recent REDCap CSV.
 2. Copies this file to `sourcedata/checked/redcap`.
+3. Updates all rows in the central tracker whose description begins "redcap_data:" by means of update-tracker.py.
 
 #### Pavlovia/Psychopy
 1. Checks for the existence of any new subject folders in `sourcedata/raw/pavlovia` or `sourcedata/raw/psychopy` and, if they are found, verifies the correct subject folder nomenclature (i.e., sub-XXXXXX).
 2. For correctly-named, new subject folders, the folder is copied over to `sourcedata/checked/pavlovia` or `sourcedata/checked/psychopy`.
-3. Checks folders in `sourcedata/raw/pavlovia` or `sourcedata/raw/psychopy`; if any new .csv files are found, these files are copied to the existing subject folder in `sourcedata/checked.`
+3. Checks folders in `sourcedata/raw/pavlovia` or `sourcedata/raw/psychopy`; if any new .csv files are found and these files match the task name as indicated in the central tracker data dictionary, the script checks that the subject ID within these files match the folder name, using check-id.py.  If successful, these files are copied to the existing subject folder in `sourcedata/checked.`
 4. Verifies that there is only a single .csv file for each tracked task (that is, there are no duplicate records for a single participant). (If you have a situation where you do have two separate files, zipping one of them will prevent hallMonitor from throwing an error every time you run it.)
-5. Updates the pavloviaData or psychopyData column in the central tracker.
+5. Updates all rows in the central tracker whose description begins "psychopy:" by means of update-tracker.py.
 
 If any duplicate files or improper folder names are identified, hallMonitor outputs a red error message.
 
 #### Zoom/Audio/Video/Digi
-Audio, video, and photo (such as EEG digitization, "digi") files are managed manually by the study lead. Proper encryption should be verified (that is, decryption using the study password should be tested and confirmed), after which the participant's audio/video/digi files should be manually copied to `sourcedata/checked`.  The hallMonitor script simply verifies the existence of a folder in `sourcedata/checked` and updates the zoomData, audioData, videoData, and/or digiData columns of the central tracker accordingly.
+Audio, video, and photo (such as EEG digitization, "digi") files are managed manually by the study lead. Proper encryption should be verified (that is, decryption using the study password should be tested and confirmed), after which the participant's audio/video/digi files should be manually copied to `sourcedata/checked`.  The hallMonitor script simply verifies the existence of a folder in `sourcedata/checked` and updates the zoomData, audioData, videoData, and/or digiData columns of the central tracker accordingly (using update-tracker.py).
 
-Within `sourcedata/checked`, folders should be organized as:
-checked/
-├── audio/
-    ├──sub-XXXXXX/
-    ├──sub-XXXXXX/
-├── video/
-    ├──sub-XXXXXX/
-    ├──sub-XXXXXX/
-├── bidsish/
-    ├──sub-XXXXXX/
-        ├──eeg/
-        ├──digi/
-    ├──sub-XXXXXX/
-        ├──eeg/
-        ├──digi/
+Within `sourcedata/checked`, folders should be organized as:<br/>
+/checked/<br/>
+├── audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+├── video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+├── bidsish/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──digi/<br/>
 
 #### EEG
 1. Checks for the existence of any new subject folders in `sourcedata/raw/eeg` and, if they are found, verifies the correct subject folder nomenclature (i.e., sub-XXXXXX).
@@ -143,7 +144,7 @@ checked/
     2. Verifies that there is only one of each file type, depending on the system used for data collection: BV (.eeg, .vhdr, .vmrk) or EGI (.mff).
     3. Verifies that file names follow the appropriate conventions for study subjects and tasks.
 
-Any new folders, as well as new files within previously existing folders, that pass the above checks are copied to the existing subject folder in `sourcedata/checked/bidsish/sub-XXXXXX/eeg`.
+Any new folders, as well as new files within previously existing folders, that pass the above checks are copied to the existing subject folder in `sourcedata/checked/bidsish/sub-XXXXXX/eeg`.  The bvData or egiData row in the central tracker is updated accordingly (via update-tracker.py).
 
 ### Customize
 Most customization required for the hallMonitor script is handled by the setup command above. However, if REDCap column names need to be re-mapped to match the expectations of the instruments script, this can be built directly into hallMonitor. There are two options available:
@@ -161,7 +162,7 @@ If both the instrument name and the item numbers require remapping, you will use
 To modify hallMonitor.sub:
 1. Navigate to the data-monitoring folder: `cd your-dataset/data-monitoring`.
 2. Open the .sub file: `nano hallMonitor.sub`.
-3. Arrow down to the last line (`./hallMonitor.sh`), add a space, then the flag (`-m` or `-r`) and the mapping or replacement details.
+3. Arrow down to the last line, add a space after `./hallMonitor.sh`, then the flag (`-m` or `-r`) and the mapping or replacement details.
 4. Save your changes by holding down the ctrl key and pressing the letter 'o'. (Note: this is ctrl on both PC and Mac, not cmd.) You will be prompted to save the file, which you do by hitting enter/return.
 5. To exit the nano view, hold down the ctrl key again and press the letter 'x'.
 
@@ -176,7 +177,7 @@ Review the output for errors requiring correction. After making any necessary co
 
 The hallMonitor script automatically updates the data-monitoring-log.md file in the dataset's data-monitoring folder.
 
-Once you have completed the hallMonitor process and everything is tidy, push your changes back to the GitHub remote ([`git add`, `git commit`, `git push`](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html)).
+Once you have completed the hallMonitor process and everything is tidy, push your changes back to the GitHub remote ([`git add`, `git commit`, `git push`](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html)).  This merely updates the data monitoring scripts, log, and central tracker on GitHub; it does not transfer any data from `sourcedata` nor `derivatives` (those only live on the HPC).
 
 
 ## preprocess.sub
@@ -185,17 +186,17 @@ Once you have completed the hallMonitor process and everything is tidy, push you
 Pre-processing scripts transform the data collected from participants (questionnaires, behavioral tasks) into aggregate numbers that can be used for data analysis. These should draw upon data in the `sourcedata/checked` folder and output to `derivatives/preprocessed`. The preprocess slurm script is a handy shortcut that binds together the automated scoring of REDCap data (via the instruments script) along with any other custom scripts that you tell it to run.
 
 ### Instruments
-The preprocess slurm script calls the instruments scoring mechanism, which will identify the most recent REDCap file in `sourcedata/checked/redcap`, score it automatically, and output it to `derivatives/preprocessed`, having renamed the "DATA" in the original filename to "SCRD."
+The preprocess slurm script calls the instruments scoring mechanism, which will identify the most recent REDCap file in `sourcedata/checked/redcap`, score it automatically, and output it to `derivatives/preprocessed`, having renamed the "DATA" in the original filename to "SCRD."  It also updates any rows in the central tracker whose description begins with "redcap_scrd:".
 
 ### R/MATLAB/Python Scripts
 You need to create and test these scripts first on local and individually on the HPC before binding them into preprocess.sub. This is very important because if you accidentally create an infinite loop on the HPC, you could burn through all of the lab's monthly time allottment on the HPC and you would be forced to do all your calculations by hand until the end of the month! :cold_sweat:
 
 The wiki includes instructions for running standalone [R](https://ndclab.github.io/wiki/docs/hpc/r.html), [MATLAB](https://ndclab.github.io/wiki/docs/hpc/matlab.html), and [Python](https://ndclab.github.io/wiki/docs/hpc/python.html) scripts.
 
-In addition to preprocessing your data, your R, MATLAB, or Python scripts must include the necessary code to update your study's central tracker when they run. Here is an example in R that can be modified for your script.  This example specifically updates the `readAloudDisfluencies_s1_r1_e1` variable in the central tracker:
+In addition to preprocessing your data, your R, MATLAB, or Python scripts must include the necessary code to update your study's central tracker when they run. Here is an example in R that can be modified for your script.  This example specifically updates the `readAloudDisfluencies_s1_r1_e1` variable in the central tracker if the subject ID has been included in the "disfluencySummaryDat" dataframe:
 ```
 #load central tracker
-track_path <- '/home/data/NDClab/datasets/readAloud-valence-dataset/data-monitoring/central-tracker_readAloud-valence.csv'
+track_path <- '/home/data/NDClab/datasets/readAloud-valence-dataset/data-monitoring/central-tracker_readAloud-valence-dataset.csv'
 trackerDat <- read.csv(track_path, header=TRUE, check.names=FALSE)
 
 #readAloudDisfluencies_s1_r1_e1
@@ -224,7 +225,7 @@ To run the script, follow the instructions [here](https://ndclab.github.io/wiki/
 
 The preprocess slurm script automatically updates the data-monitoring-log.md file in the dataset's data-monitoring folder.
 
-Once you have completed each run of preprocessing and everything is tidy, push your changes back to the GitHub remote ([`git add`, `git commit`, `git push`](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html)).
+Once you have completed each run of preprocessing and everything is tidy, push your changes back to the GitHub remote ([`git add`, `git commit`, `git push`](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html)). This merely updates the data monitoring scripts, log, and central tracker on GitHub; it does not transfer any data from `sourcedata` nor `derivatives` (those only live on the HPC).
 
 
 ## Final Considerations
