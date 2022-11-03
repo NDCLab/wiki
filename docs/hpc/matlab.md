@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Matlab
+title: MATLAB
 parent: HPC
 nav_order: 6
 ---
@@ -26,9 +26,9 @@ Installing MATLAB packages on the HPC does not involve the lab's [default contai
 
 5. Download the following plugins using their respective links, and upload each of them to this directory:
 
-* [ADJUST1.1.1[(https://www.nitrc.org/projects/adjust/)
-* [bids-matlab-tools](https://github.com/sccn/bids-matlab-tools)
-* [FASTER1.2.4](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php)
+    * [ADJUST1.1.1](https://www.nitrc.org/projects/adjust/)
+    * [bids-matlab-tools](https://github.com/sccn/bids-matlab-tools)
+    * [FASTER1.2.4](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php)
 
 
 ## Running a MATLAB Script
