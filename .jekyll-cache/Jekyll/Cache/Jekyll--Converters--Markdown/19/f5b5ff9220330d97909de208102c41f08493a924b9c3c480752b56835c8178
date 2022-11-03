@@ -1,0 +1,266 @@
+I"r7<p><img src="https://user-images.githubusercontent.com/26397102/117209976-b958e600-adbc-11eb-8f23-d6015a28935e.png" alt="baseeegheader" />
+<em>PEPPER in a nutshell</em></p>
+
+<h3 id="contents">Contents</h3>
+
+<ol>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Pipeline-Overview">Pipeline Overview</a>
+    <ol>
+      <li><a href="#UML-Diagrams">UML Diagrams</a></li>
+      <li><a href="#Features">Features</a></li>
+      <li><a href="#Roadmap">Roadmap</a></li>
+    </ol>
+  </li>
+  <li><a href="#Development-Guidelines">Development Guidelines</a>
+    <ol>
+      <li><a href="#Submit-an-Issue">Submit an issue</a></li>
+      <li><a href="#Create-documentation">Create documentation</a></li>
+      <li><a href="#Contribute-to-the-code">Contribute to the code</a></li>
+    </ol>
+  </li>
+  <li><a href="#Containers">Containers</a></li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+<p>Welcome to the PEPPER-Pipeline project! To get immediately started on collaborating, view <a href="#Development-Guidelines">development guidelines</a>. We welcome contributors from <strong>all</strong> backgrounds!</p>
+
+<p>The development of the PEPPER-Pipeline is focused on optimizing an automated, flexible, and easy-to-use preprocessing pipeline dedicated to EEG preprocessing.</p>
+
+<p>Following the optimization of import and preprocessing tools, development will focus on building out a common core of EEG processing tools to handle ERP, time-frequency, and source-based analyses. To find out more about this, view <a href="#pipeline-overview">pipeline overview</a>.</p>
+
+<h2 id="pipeline-overview">Pipeline Overview</h2>
+<p>The following section details the planning, motivation, and features behind the PEPPER pipeline.</p>
+
+<h3 id="uml-diagrams">UML Diagrams</h3>
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/outerloop.png" alt="UML Diagram for Outer-loop" width="400" /></p>
+
+<p><em>UML diagram for run, which references to run:preprocess</em></p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/preprocess.png" alt="UML Diagram for Preprocess" width="800" /></p>
+
+<p><em>UML diagram for run:preprocess</em></p>
+
+<p>The UML diagrams above detail the discrete pipeline steps of the default <code class="language-plaintext highlighter-rouge">input_config.json</code> file:</p>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">load:data</code> (pipeline input)</p>
+
+    <p>A subset of raw data described in <code class="language-plaintext highlighter-rouge">load_data</code> is extracted.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">run:preprocess</code></p>
+
+    <p>The main script calls a series of functions, each one executing a step of the pipeline. All follow the same standard format: each feature always receives an EEG object and unpacked variables from the <code class="language-plaintext highlighter-rouge">params</code> dictionary in the main script.</p>
+
+    <p>Additionally, each pipeline step returns an EEG object and a dictionary describing the changes that occurred to that EEG object.</p>
+
+    <p>Motivation behind each pipeline step is described in <a href="#Features">features</a>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">write:output</code></p>
+
+    <p>At the very last step of the pipeline, each respective output is passed to a <code class="language-plaintext highlighter-rouge">write</code> module that transforms the summed outputs into a comprehensive file.</p>
+  </li>
+</ol>
+
+<p>Together, the contents of <code class="language-plaintext highlighter-rouge">input_config.json</code> and <code class="language-plaintext highlighter-rouge">output_preproc_sub-A_ses-B_task-C_run-D_eeg.json</code> define all details necessary to describe (such as in the methods and results section for a journal publication) the manipulations of the pre-processing pipeline and its outputs.</p>
+
+<p>A long-term goal is to automate the writing of these journal article sections via a script that takes these two files as inputs.</p>
+
+<h3 id="features">Features</h3>
+
+<h4 id="1-filter">1-Filter</h4>
+
+<ul>
+  <li>High pass filter the data using MNE functions</li>
+  <li>Read in the “high pass” “low pass” fields from the <code class="language-plaintext highlighter-rouge">user_params.json</code> file to define filter parameters</li>
+</ul>
+
+<h4 id="2-reject-bad-channels">2-Reject Bad Channels</h4>
+
+<ul>
+  <li>Auto-detect and remove bad channels (those that are “noisy” for a majority of the recording)</li>
+  <li>Write to output file (field “globalBad_chans”) to indicate which channels were detected as bad</li>
+</ul>
+
+<h4 id="3-independent-component-analysis">3-Independent Component Analysis</h4>
+
+<p>Overview: ICA requires a decent amount of <a href="https://towardsdatascience.com/stationarity-in-time-series-analysis-90c94f27322#:~:text=In%20t%20he%20most%20intuitive,not%20itself%20change%20over%20time.">stationarity</a> in the data. This is often violated by raw EEG. One way around this is to first make a copy of the EEG data using automated methods to detect noisy portions of data and then remove these sections. ICA is then run on the copied data after cleaning. The ICA weights produced by the copied dataset are copied back into the original recording. In this way, we do not have to “throw out” sections of noisy data, but we are still able to derive an improved ICA decomposition.</p>
+
+<ol>
+  <li>Prepica
+    <ul>
+      <li>Make a copy of the EEG recording</li>
+      <li>For the copied data: high pass filter at 1 Hz</li>
+      <li>For the copied data: segment by epoch  to “cut” the continuous EEG recording into arbitrary 1-second epochs</li>
+      <li>For the copied data: use automated methods (voltage outlier detection and spectral outlier detection) to detect epochs that are excessively “noisy” for any channel</li>
+      <li>For the copied data: reject (remove) the noisy periods of data</li>
+      <li>Write to the output file which segments were rejected and based on what metrics</li>
+    </ul>
+  </li>
+  <li>ICA
+    <ul>
+      <li>Run ICA on the copied data</li>
+      <li>Copy the ICA weights from the copied data back to the pre-copy data</li>
+    </ul>
+  </li>
+  <li>Rejica
+    <ul>
+      <li>Use automated methods (TBD) to identify ICA components that reflect artifacts</li>
+      <li>Remove the data corresponding to the identified artifacts</li>
+      <li>Write to the output file (field “icArtifacts”) which ICA components were identified as artifacts</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="4-segment">4-Segment</h4>
+<ul>
+  <li>Segment by epoch to “cut” the continuous data into epochs of data such that the zero point for each epoch is a given marker of interest</li>
+  <li>Write to output file (field “XXX”) which markers were used for epoching purposes, how many of each epoch were created, and how many milliseconds were retained before/after the markers of interest</li>
+</ul>
+
+<h4 id="5-final-reject-epochs">5-Final Reject Epochs</h4>
+<ul>
+  <li>Loop through each channel. For a given channel, loop over all epochs for that channel and identify epochs for which that channel, for a given epoch, exceeds either the voltage threshold or spectral threshold. If it exceeds either threshold, reject the channel data for this channel/epoch</li>
+  <li>Write to the output file (“field XXX”) which channel/epoch intersections were rejected</li>
+</ul>
+
+<h4 id="6-interpolate">6-Interpolate</h4>
+<ul>
+  <li>Interpolate missing channels, at the epoch level, using a spherical spline interpolation, as implemented in MNE</li>
+  <li>Interpolate missing channels, at the global level, using a spherical spline interpolation, as implemented in MNE</li>
+  <li>Write to output file (field “XXX”) which channels were interpolated and using what method</li>
+</ul>
+
+<h4 id="7-re-reference">7-Re-reference</h4>
+<ul>
+  <li>Re-reference the data to the average of all electrodes (“average reference”) using the MNE function</li>
+  <li>Write to output file (field “XXX”) which data were re-referenced to average</li>
+</ul>
+
+<h3 id="roadmap">RoadMap</h3>
+
+<h4 id="pre-release">Pre-release</h4>
+
+<ul>
+  <li>Minimal, yet complete, pipeline implemented</li>
+  <li>Performs all standard preprocessing steps</li>
+  <li>Validated, but not optimized</li>
+  <li>Containers are stable</li>
+  <li>Testing suite is stable</li>
+  <li>Standards for community-driven contributions established</li>
+  <li>Contributor documentation</li>
+  <li>Initial governance structure and credit assignment standards established</li>
+</ul>
+
+<h4 id="release-01">Release 0.1</h4>
+
+<ul>
+  <li>Modules to allow running in parallel on local or remote (HPC) controlled by the same parameters in the input_params.json file (auto-generates Slurm scripts for HPC)</li>
+  <li>Preprint posted to bioRxiv</li>
+  <li>Initial data quality assessment suite is stable</li>
+  <li>Pipeline meets/exceeds at least one commonly used and published pipeline on data quality metrics</li>
+  <li>Initial set of standard input parameters for child, adolescent and young adult data</li>
+  <li>Updated functions:
+    <ul>
+      <li>Filter</li>
+      <li>ICA</li>
+    </ul>
+  </li>
+  <li>Standalone import-feature-io template</li>
+  <li>User-end documentation</li>
+  <li>Updated/refined governance structure and credit assignment standards</li>
+</ul>
+
+<h4 id="release-10">Release 1.0</h4>
+
+<ul>
+  <li>Optimized for infant, child, adolescent, and young adult data</li>
+  <li>Standard input parameters available</li>
+  <li>Revised data output formats to bring in line with emerging BIDS-EEG derivatives</li>
+  <li>Expanded data quality assessment suite</li>
+  <li>Functions relying on electrode locations updated to use 3-dimensional coordinates based on age-appropriate head model</li>
+  <li>Integrated with DataLad</li>
+  <li>Verbose .log output files</li>
+</ul>
+
+<h4 id="release-20">Release 2.0</h4>
+
+<ul>
+  <li>Data quality optimization module</li>
+  <li>Module for downloading remote datasets</li>
+  <li>Integrated with DataLad</li>
+  <li>GUI for generating input_params.json file</li>
+  <li>Web-based GUI and automated connection to computational resources</li>
+  <li>Expanded set of norms for standard EEG features</li>
+</ul>
+
+<h2 id="development-guidelines">Development Guidelines</h2>
+
+<h3 id="identify-issues-or-enhancements">Identify Issues or Enhancements</h3>
+<p>If you believe a new issue needs to be added to the <a href="https://github.com/NDCLab/PEPPER-Pipeline/issues">list of open issues</a>, feel free to create a new issue and select the appropriate template that suits the indicated change.</p>
+
+<p><img src="https://user-images.githubusercontent.com/26397102/137004811-54e0403d-8296-4e5d-92a6-aef5386ecbbe.png" alt="image" /></p>
+
+<p>Once an issue has been created, the original author can likewise immediately assign themselves and start coding or documenting as described in <a href="#Contribute-to-the-Code">contribute to the code</a>.</p>
+
+<h3 id="contribute-to-the-code">Contribute to the Code</h3>
+<p>To get started on coding, follow the steps below. Note that you must have a GitHub account to collaborate on this project. All quoted commands are executed in your shell.</p>
+
+<ol>
+  <li>
+    <p>Fork the repo to your GitHub account by clicking on the “Fork” button on the top right corner of the <a href="https://github.com/NDCLab/pepper-pipeline">PEPPER repository</a>:
+<img width="950" alt="Untitled" src="https://user-images.githubusercontent.com/26397102/135622318-46cd9a5a-06e6-47eb-9afc-0f0a56655b3e.png" /></p>
+  </li>
+  <li>Clone the repository to your local machine, with <code class="language-plaintext highlighter-rouge">git clone</code> in your terminal. Be sure to replace <code class="language-plaintext highlighter-rouge">user</code> below with your own GitHub username.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git clone https://github.com/[user]/pepper-pipeline.git
+  cd pepper-pipeline
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Build and activate a container using the OS-relevant files (see <code class="language-plaintext highlighter-rouge">containers/README.md</code>).</p>
+  </li>
+  <li>Switch to the branch that you plan to contribute to.</li>
+</ol>
+
+<ul>
+  <li>If work on this issue has already begun, then fetch and checkout the active branch and then create a sub-branch.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd pepper-pipeline
+git checkout dev-feature-issue
+git checkout -b dev-feature-issue-name
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If this issue has not begun development, then create a new branch and then create a sub-branch.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd pepper-pipeline
+git checkout -b dev-feature-issue
+git checkout -b dev-feature-issue-name 
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<ol>
+  <li>
+    <p>Implement changes (commit often!).</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git add file1 file2
+ git commit -m "Attached flux capacitor" 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>After you complete all your intended commits, push changes to branch.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git push origin dev-feature-issue-name 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create a <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork">pull request</a> using the GitHub GUI.</p>
+  </li>
+</ol>
+
+<h2 id="containers">Containers</h2>
+<p>Please use the dockerfile &amp; singularity recipe located in <code class="language-plaintext highlighter-rouge">containers/</code>. Directions on installation and usage are located in <code class="language-plaintext highlighter-rouge">container/README.md</code>.</p>
+:ET

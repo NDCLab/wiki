@@ -1,0 +1,139 @@
+I"�/<h3 id="contents">Contents</h3>
+<ol>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#installing">Installing</a></li>
+  <li><a href="#tour-of-the-pipelines">Tour of the Pipelines</a></li>
+  <li><a href="#defining-epics">Defining Epics</a></li>
+  <li><a href="#planning-sprints">Planning Sprints</a></li>
+  <li><a href="#monitoring-progress">Monitoring Progress</a></li>
+  <li><a href="#tips-and-tricks">Tips and Tricks</a></li>
+</ol>
+
+<h2 id="overview">Overview</h2>
+
+<p>ZenHub is a plug-in for your browser that connects to GitHub. It offers <a href="https://en.wikipedia.org/wiki/Kanban_board">Kanban</a>-style boards, called “workspaces,” which the NDCLab uses to visually manage projects.  When an issue is created inside GitHub, it automatically appears on the <em>New</em> pipeline on an associated ZenHub workspace. In general, each repository is connected to one workspace, but it is possible to connect multiple repositories in special circumstances where this would be beneficial to project management.</p>
+
+<h2 id="installing">Installing</h2>
+
+<ol>
+  <li>Before you install ZenHub, <a href="https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html">get yourself with git</a>. It is important that you are already a member of the NDCLab organization on GitHub before you install the ZenHub extension.</li>
+  <li>Download the ZenHub extension, which is currently available for Chrome and Firefox. You can do this directly from the browser extension store or using the <a href="https://help.zenhub.com/support/solutions/articles/43000507578-installing-the-zenhub-extension-for-cloud">link available from ZenHub</a>.</li>
+  <li>During this process, you will need to authorize ZenHub to see your personal and organization repositories.</li>
+  <li>After installing, you’ll probably find yourself within the ZenHub app. Some lab members prefer to operate in this interface, but you will want to hop back over to GitHub to get your bearings first. On the same browser where you installed ZenHub, re-navigate to the NDCLab GitHub page. If you click on any repository, you should now see the “ZenHub” tab within that repository.</li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_zenhub-tab.png" alt="gh_zenhub-tab" /></p>
+
+<h2 id="tour-of-the-pipelines">Tour of the Pipelines</h2>
+
+<p>When a new workspace is created, it uses the NDCLab default pipelines. These are <a href="https://ndclab.github.io/wiki/docs/etiquette/github-templates.html">customized</a> for each NDCLab workspace into the following pipelines.</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_pipelines.png" alt="zh_pipelines" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Pipeline Name</th>
+      <th style="text-align: left">Pipeline Descriptor</th>
+      <th style="text-align: left">Pipeline Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">New Issues</td>
+      <td style="text-align: left">Issues to be reviewed and estimated before being added to the Project Backlog.</td>
+      <td style="text-align: left">All new issues created in the connected repo(s) are automatically displayed in this pipeline. Issues should immediately be moved to the appropriate <em>Backlog</em> pipeline after creation. In general, <em>New Issues</em> should be empty.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Project Backlog</td>
+      <td style="text-align: left">List of all work to be completed during the project. Items here can be relatively large and abstract (e.g., release goals) or be specific tasks.</td>
+      <td style="text-align: left">The <em>Project Backlog</em> should begin with the tile for the Epic that will come after the current Epic in progress. For example, if the current Epic is “v1”, then the <em>Project Backlog</em> would start with the “v2” Epic tile. This is followed by all issues that will be included in the v2 Epic. Next is the “v3” Epic tile and its associated issues, and so on. Completing all issues within the <em>Project Backlog</em> will accomplish the project goal.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Release Backlog</td>
+      <td style="text-align: left">Upcoming work for current release (all assigned to same Epic). Items should be more refined and broken-down, prioritized top-to-bottom.</td>
+      <td style="text-align: left">The <em>Release Backlog</em> should begin with the tile for the current Epic (for instance, “v1”), followed by all incomplete issues for the v1 release. Better defined and higher priority issues should be at the top; lower priority issues and issues that are still rather abstract (requiring better definition/granularity before they are assigned to a sprint) should be at the bottom. In general, you will work through the <em>Release Backlog</em> from top to bottom. Completing all the issues in the <em>Release Backlog</em> means that the release will be ready for publication/distribution to the public. Note that there is never more than one Epic in the Release Backlog at a given point in time.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Sprint Backlog</td>
+      <td style="text-align: left">Issues ready to be worked on in the sprint, prioritized top-to-bottom.</td>
+      <td style="text-align: left">The <em>Sprint Backlog</em> is filled during a <a href="https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html#sprints">sprint meeting</a>. Completing all the items in the <em>Sprint Backlog</em> completes the sprint.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">In Progress</td>
+      <td style="text-align: left">Issues currently being worked on by the team.</td>
+      <td style="text-align: left">During the sprint, team members pull issues into the <em>In Progress</em> pipeline to communicate to one another that they have begun work on the issue.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Review/QA</td>
+      <td style="text-align: left">Issues open to the team for review and testing. Complete, pending feedback.</td>
+      <td style="text-align: left">During the sprint, team members move issues into the <em>Review/QA</em> pipeline when they have completed the issue and are awaiting the review and approval of team members before merging into an upstream branch.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Done</td>
+      <td style="text-align: left">Completed issues, pending closure.</td>
+      <td style="text-align: left">Issues that have passed the necessary review/QA are moved to <em>Done</em>. During the next sprint meeting, these issues will be formally closed. The <em>Done</em> pipeline is basically a temporary holding location to facilitate dialogue during the sprint review.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Closed</td>
+      <td style="text-align: left">(no descriptor)</td>
+      <td style="text-align: left">Issues move automatically into the <em>Closed</em> pipeline when they are completed and closed. It is recommended that you collapse the <em>Closed</em> pipeline (by clicking the little arrow at the top) to remove unnecessary noise in your workspace.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="defining-epics">Defining Epics</h2>
+
+<p>To view existing Epics, click on Roadmap from the left-hand navigation pane. If no epics have been defined, the page will look like this:</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_no-epics.png" alt="zh_no-epics" /></p>
+
+<p>However, if one or more Epics has previously been established, you will see a <a href="https://en.wikipedia.org/wiki/Gantt_chart">Gantt-style chart</a>, like this:</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_epic-example.png" alt="zh_epic-example" /></p>
+
+<p>In this example, a single Epic has been defined based on an end date. Epics can be named by date in this way, or they can be named with a descriptive name. In both cases, Epics should be given a beginning and an end date.</p>
+
+<p>You can define multiple Epics at the same time, either back-to-back or overlapping. To create a new Epic:</p>
+
+<ol>
+  <li>Click the green <code class="language-plaintext highlighter-rouge">+</code> button and select “New Epic.”</li>
+  <li>Input the name (end date or descriptor).</li>
+  <li>Hover your cursor to the right of the name and click the three vertical dots that appear. Select “Set start and end date” from the dropdown.</li>
+  <li>Input the dates of this Epic and click “Set Timeline.”</li>
+</ol>
+
+<p>All planned project releases should be defined as Epics in ZenHub at project launch in order to provide team members with a visual overview of where the project is going and what progress has already been made in achieving the project goals.</p>
+
+<p>The creation of an Epic also creates a GitHub issue for the Epic. This is really just a visual tile for the ZenHub board. Place the Epic associated with the next release at the top of the <em>Release Backlog</em> pipeline. Place all other Epics into the <em>Project Backlog</em> pipeline. Issues associated with each Epic should nest under the “Epic” tile within each pipeline.</p>
+
+<h2 id="planning-sprints">Planning Sprints</h2>
+
+<p>You can set up sprints within ZenHub so that you can easily assign each issue to the current or an upcoming sprints during your sprint planning meetings. To turn on sprints in ZenHub:</p>
+
+<ol>
+  <li>Click “Create on the left-hand navigation pane.</li>
+  <li>Select “Set up Sprints for your team” from the dropdown.</li>
+  <li>Leave the default selections on the left (“Move unfinished Issues to the next Sprint” should be turned on; “Automatically build new Sprints from the backlog” should be turned off).</li>
+  <li>Select the start and end date of the first sprint. This establishes the pattern that ZenHub will carry forward. For instance, if you select one week for the first sprint, ZenHub will create a weekly cycle. If you select two weeks for the first sprint, ZenHub will create a bi-weekly cycle.</li>
+  <li>Click “Create Sprints.”</li>
+  <li>Open each issue that has already been assigned to the current sprint in your planning and formally assign it to the current sprint by selecting the sprint.</li>
+</ol>
+
+<h2 id="monitoring-progress">Monitoring Progress</h2>
+
+<p>If you and your team are diligent in establishing time estimates for each issue that you create, you will be able to track your overall progress on the roadmap view. ZenHub calls these time estimates “story points,” but it is easier to just think of them as rough working hours. Here is an example where one Epic is 47% complete and the Epic that follows is not yet begun:</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_roadmap-example.png" alt="zh_roadmap-example" /></p>
+
+<p>This is useful for each project. Additionally, there is a lab-wide ZenHub workspace that enables the lab director to get a big-picture view of all lab projects and plan resources accordingly. The more diligent you are in estimating time and keeping your ZenHub board up-to-date, the more you facilitate smooth lab operations and time management.</p>
+
+<h2 id="tips-and-tricks">Tips and Tricks</h2>
+
+<ul>
+  <li>Issues created in GitHub automatically appear in ZenHub. Issues created in ZenHub automatically appear in GitHub. They are interconnected.</li>
+  <li>Follow the lab’s <a href="https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html">GitHub etiquette</a> by moving issues into the appropriate pipeline as you proceed through the project process.</li>
+  <li>Open ZenHub daily to check in: how are your team members faring with their tasks? Did you forget to move anything into an <em>In Progress</em> or <em>Review/QA</em> pipeline? What is next on the priority list?</li>
+  <li>You can toggle between workspaces by clicking the “Switch Workspace” button (two stacked arrows) next to the current workspace name. By starring your preferred workspaces, you can find them more easily.</li>
+</ul>
+:ET

@@ -2,15 +2,18 @@
 layout: default
 title: R
 parent: HPC
-nav_order: 2
+nav_order: 3
 ---
 
 ### Contents
-1. [Running R](#Running-R)
+1. [Running Python](#Running-R)
     1. [Packages](#Loading-Packages)
     2. [Adding Packages](#Modifying-Packages)
     3. [Running](#Running-Scripts)
-    4. [Data Parallelization](#Data-Parallels)
+    4. [CPU Parallelization](#CPU-Parallels)
+    5. [Data Parallelization](#Data-Parallels)
+    6. [Combining The Two](#Combining)
+2. [RStudio](#RStudio)
 
 ## Running R
 
@@ -42,24 +45,12 @@ After you initially run `rrun.sh`, you should subsequently run the sbatch file g
 sbatch <file_name>.sub
 
 ```
+### CPU Parallels
+
+
 ### Data Parallels
 
-Data parrallelization, at the current iteration of the HPC, is unsupported in R. Namely, the [mpi](https://hpc-wiki.info/hpc/MPI) library is not installed to this HPC. So, if we would like to run data in parallel we would have to engineer our own solution.
 
-As each dataset has its own parameters and contexts, a general script is not available for use.
+### Combining
 
-However, a template script is available in `/hpc/data/NDClab/tools/lab-devOps/R/data-par/parallel-nodes.sh`
-
-This script works by taking in 2 parameters: `nodes` and `data`. `nodes` describes how many nodes we would like to utilize for parallel-development & which `data` file we would like to parallelize. For example, this script:
-
-```s
-sh /hpc/data/NDClab/tools/lab-devOps/R/data-par/parallel_nodes.sh 8 filename.csv
-```
-
-would split `filename.csv` into 8 seperate files that will be run in parallel.
-
-Specifically, it executes the `do_node.sh` script on 8 equal sections of our data. To control which script is being run on each portion of data, we will need to modify the script located at `do_node.sh`:
-
-```
-Rscript <SCRIPTHERE> $data
-```
+## RStudio

@@ -1,0 +1,138 @@
+I"i-<h3 id="contents">Contents</h3>
+
+<ol>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#setting-up-a-new-project">Setting Up a New Project</a>
+    <ol>
+      <li><a href="#github">GitHub</a></li>
+      <li><a href="#zenhub">ZenHub</a></li>
+      <li><a href="#slack">Slack</a></li>
+      <li><a href="#hpc">HPC</a></li>
+      <li><a href="#google-drive">Google Drive</a></li>
+      <li><a href="#off-to-the-races">Off to the Races</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="overview">Overview</h2>
+
+<p>All new projects require the creation of a new Github repository by the lab manager or lab technician. New project repositories are typically initiated using one of the template repositories available in GitHub (template-tool, template-dataset, or template-analysis). Approval from the lab director is required prior to opening a new project repository. Each lab project requires time and resources, so the balance across the lab must be carefully maintained to ensure that each project is a success.</p>
+
+<h2 id="setting-up-a-new-project">Setting Up a New Project</h2>
+
+<h3 id="github">GitHub</h3>
+
+<h4 id="start-with-brainbox">Start with <a href="https://github.com/NDCLab/brainBox">brainBox</a>.</h4>
+
+<p>This is where all great ideas get incubated. If you believe that the brainBox process is not appropriate for your idea, talk to the lab manager or PI.</p>
+
+<h4 id="create-a-new-repo">Create a new repo.</h4>
+
+<p>When you get the green-light from the lab director, ask the lab manager to create a new repo using the appropriate template repository:</p>
+
+<ul>
+  <li>data collection projects: https://github.com/NDCLab/template-dataset</li>
+  <li>data analysis projects: https://github.com/NDCLab/template-analysis</li>
+  <li>tool development: https://github.com/NDCLab/template-tool</li>
+</ul>
+
+<p>Be sure to tell the lab manager:</p>
+<ul>
+  <li>the appropriate name for your new repository (which meets the requirements for <a href="https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html">project naming conventions</a>)</li>
+  <li>a pithy description of the project that will appear on the main lab GitHub page</li>
+  <li>who will be leading the project and who will be part of the initial project team (so that everyone gets the correct access level on the new repository)</li>
+</ul>
+
+<h4 id="prepare-your-new-repo-for-use">Prepare your new repo for use.</h4>
+
+<p>Before you begin using your new repository, there are several settings that need to be implemented:</p>
+
+<h5 id="1-create-dev-branch">1. Create <code class="language-plaintext highlighter-rouge">dev</code> branch.</h5>
+<p>Create a new branch named <code class="language-plaintext highlighter-rouge">dev</code> off the basis of the <code class="language-plaintext highlighter-rouge">main</code> branch. This is identical to how you created your own branch for updating the wiki who’s-who page with your own information when you were <a href="https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html">onboarded to GitHub</a>.</p>
+
+<h5 id="2-add-branch-protection-rules-to-main-and-dev-branches">2. Add branch protection rules to <code class="language-plaintext highlighter-rouge">main</code> and <code class="language-plaintext highlighter-rouge">dev</code> branches.</h5>
+
+<p>Inside your repository on GitHub, click the ‘Settings’ button and select ‘Branches’ from the left-hand menu. You will need to “Add rule” twice, once for <code class="language-plaintext highlighter-rouge">dev</code> and once for <code class="language-plaintext highlighter-rouge">main</code>. In both cases, select “Require pull request reviews before merging” and set the number of required approving reviews at “1.” Once complete, your branch protection rules should look like this:</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_branch-protection.png" alt="gh_branch-protection" /></p>
+
+<p>These branch protection rules ensure that content must undergo a review before any branch is merged into <code class="language-plaintext highlighter-rouge">dev</code> or <code class="language-plaintext highlighter-rouge">main</code>.</p>
+
+<h5 id="3-automatically-delete-head-branches">3. Automatically delete head branches</h5>
+
+<p>You will want to <a href="https://docs.github.com/en/github/administering-a-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches">check this option in your repository settings</a> so that, when you review and merge the work of team members into <code class="language-plaintext highlighter-rouge">dev</code>, GitHub automatically deletes the branch they were working on (which has now been merged). This keeps your branch tree tidy. Don’t worry: the branch protection rules you set up above prevent <code class="language-plaintext highlighter-rouge">dev</code> from being automatically deleted when it gets merged to <code class="language-plaintext highlighter-rouge">main</code>.</p>
+
+<h4 id="draft-the-readme-file">Draft the <code class="language-plaintext highlighter-rouge">readme</code> file.</h4>
+
+<p>Within the <code class="language-plaintext highlighter-rouge">dev</code> branch, draft the <code class="language-plaintext highlighter-rouge">readme.md</code> file that guides the development of your project.</p>
+
+<p>Every repository should have a succinct <code class="language-plaintext highlighter-rouge">readme.md</code> file that serves as a roadmap for the project. This is the first thing you will commit to your new repository. The readme should include:</p>
+
+<ul>
+  <li>a description of the project goal</li>
+  <li>a roadmap for all the planned project releases</li>
+  <li>major contributors to the project</li>
+</ul>
+
+<p>The template repository used to create your new project repo contains a template <code class="language-plaintext highlighter-rouge">readme.md</code> file that will guide you through the initial process of drafting the readme.</p>
+
+<p>As the project progresses, the readme must be updated to include information for any content included on the <code class="language-plaintext highlighter-rouge">main</code> branch, such as pre-registrations, conference posters, or working software releases.</p>
+
+<h4 id="draft-the-contributing-file">Draft the <code class="language-plaintext highlighter-rouge">contributing</code> file.</h4>
+
+<p>Within the <code class="language-plaintext highlighter-rouge">dev</code> branch, draft the <code class="language-plaintext highlighter-rouge">contributing.md</code> file that informs visitors of how to contribute. The template repository used to create your new project repo contains a template <code class="language-plaintext highlighter-rouge">contributing.md</code> file that will guide you through the initial process of drafting.</p>
+
+<p>At this initial setup stage, the <code class="language-plaintext highlighter-rouge">main</code> branch will be empty (except for the files that came with the default template, such as the license). The <code class="language-plaintext highlighter-rouge">dev</code> branch, however, will now contain your <code class="language-plaintext highlighter-rouge">readme.md</code> and <code class="language-plaintext highlighter-rouge">contributing.md</code> files.</p>
+
+<h4 id="request-the-launch-review">Request the launch review.</h4>
+
+<p>Once you are satisfied with the <code class="language-plaintext highlighter-rouge">readme</code> and <code class="language-plaintext highlighter-rouge">contributing</code> files, initiate a pull request. Tag both the lab director and the lab manager.</p>
+<ul>
+  <li>The lab director will perform a <a href="https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html#terminology">level 2 review</a> (or delegate such a review to another appropriate lab member) to approve your planned roadmap and merge <code class="language-plaintext highlighter-rouge">readme.md</code> and <code class="language-plaintext highlighter-rouge">contributing.md</code> to <code class="language-plaintext highlighter-rouge">main</code>.</li>
+  <li>The lab manager will confirm that your repository is set up with all the correct settings to ensure a smooth project launch.</li>
+</ul>
+
+<h3 id="zenhub">ZenHub</h3>
+
+<p>While you wait for approval of your planned roadmap, you can set up ZenHub.</p>
+
+<ol>
+  <li>Click the ZenHub tab within your new repository. This automatically opens a page so that you can set up a new ZenHub workspace. Input your project name as the workspace name and the short descriptor. ZenHub automatically connects to the GitHub repository where you started. Click “Create Workspace.”</li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_new-workspace.png" alt="zh_new-workspace" /></p>
+
+<ol>
+  <li>
+    <p>Unfortunately, ZenHub does not automatically use the NDCLab’s default pipelines when creating a new workspace, so you will need to customize your new workspace immediately. Adjust pipeline names and descriptors to match the table <a href="https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#tour-of-the-pipelines">here</a>. You can change the names and descriptors by clicking the three vertical dots at the top of each pipeline. This same menu lets you delete any unnecessary pipelines. Additional pipelines can be added at the far right of the screen, then dragged-and-dropped into the appropriate position.</p>
+  </li>
+  <li>
+    <p>Create a <a href="https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#defining-epics">ZenHub Epic</a> for each planned project release, as outlined in your readme roadmap.</p>
+  </li>
+  <li>
+    <p>Plan project issues (which may be large and abstract at this stage) and assign them to the appropriate Epic.</p>
+  </li>
+  <li>
+    <p>Organize the Project Backlog pipeline in ZenHub by putting the earliest Epic at the top, followed by its associated issues in priority order. This is followed by the next earliest Epic with its issues, and so on.</p>
+  </li>
+  <li>
+    <p>Launch the first Epic by moving the “Epic” issue and its associated issues to the <em>Release Backlog</em> in ZenHub.</p>
+  </li>
+</ol>
+
+<h3 id="slack">Slack</h3>
+<p>When you request the new repo from the lab manager, a new Slack channel will be created. Appropriate permissions will be granted to the project lead(s) and other project team members.</p>
+
+<h3 id="hpc">HPC</h3>
+<p>When you request the new repo from the lab manager, project-specific folders will also be created on the HPC using the standard NDCLab filing structure. Appropriate permissions will be granted to the project lead(s) and other project team members.</p>
+
+<h3 id="google-drive">Google Drive</h3>
+<p>When you request the new repo from the lab manager, a project-specific folder will also be created on the Google Drive. Appropriate permissions will be granted to the project lead(s) and other project team members.</p>
+
+<h3 id="zotero">Zotero</h3>
+<p>When you request the new repo from the lab manager, a project-specific folder will also be created on the lab’s Zotero group.</p>
+
+<h3 id="off-to-the-races">Off to the Races</h3>
+<p>Once the lab director has approved your planned roadmap and merged it into <code class="language-plaintext highlighter-rouge">main</code>, you have set up the project’s ZenHub workspace, and your project has been added to the HPC, Google Drive, and Slack, you are ready to launch. Set up your <a href="https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#planning-sprints">sprints inside ZenHub</a> and plan your first sprint meeting with your team!</p>
+
+:ET

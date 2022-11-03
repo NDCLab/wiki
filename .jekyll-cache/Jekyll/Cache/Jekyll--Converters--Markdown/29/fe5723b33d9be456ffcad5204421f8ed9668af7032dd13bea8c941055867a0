@@ -1,0 +1,132 @@
+I"=*<p><img src="https://user-images.githubusercontent.com/26397102/124515039-73b09d80-ddac-11eb-98b4-cf4d8905dfa3.png" alt="random_number" /></p>
+
+<h3 id="contents">Contents</h3>
+
+<ol>
+  <li><a href="#Overview">Overview</a></li>
+  <li><a href="#Naming">Naming</a></li>
+  <li><a href="#Python">Python</a></li>
+  <li><a href="#Containerization">Containerization</a></li>
+</ol>
+
+<h2 id="overview">Overview</h2>
+<p>The following documentation details programming standards used by the lab for various protocols, programming languages, and tools.</p>
+
+<p>Standardization of the way each lab-member writes code eases <a href="https://en.wikipedia.org/wiki/Cognitive_load">cognitive load</a> which directly supports debugging, code legibility, and future development.</p>
+
+<p>For any recommendations on practices, please feel free to directly reach out to the lab tech.</p>
+
+<h2 id="naming">Naming</h2>
+<p>Naming conventions for functions, variables, packages, and files are discussed thoroughly in the <a href="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/etiquette/naming-conventions.html">naming-conventions</a> page.</p>
+
+<h2 id="python">Python</h2>
+
+<ul>
+  <li>
+    <p>Global variables should not be used</p>
+  </li>
+  <li>Leave out return types and parameter types in the function header.<br />
+  For example, do this:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">funcName</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+      <span class="p">...</span>
+</code></pre></div>    </div>
+    <p>…not this:</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">funcName</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+      <span class="p">...</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Compartmentalize features into modules.</p>
+  </li>
+  <li>
+    <p>Each function should have a <strong>single</strong> responsibility. Functions that do multiple complex things should be broken into multiple functions.</p>
+  </li>
+  <li>If a function is running into &gt;100 lines of code or contains some potentially reusable code, and is not inseparable, further decompose the function into helper functions.<br /> 
+  For example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">funcName</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+      <span class="c1"># remove extension and other characters for file 
+</span>      <span class="n">file_name1</span> <span class="o">=</span>  <span class="s">"test_file.eeg"</span><span class="p">.</span><span class="n">lower</span><span class="p">().</span><span class="n">replace</span><span class="p">(</span><span class="s">"-"</span><span class="p">,</span> <span class="s">""</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">"_"</span><span class="p">,</span> <span class="s">""</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">" "</span><span class="p">,</span> <span class="s">""</span><span class="p">)</span>
+      <span class="n">file_name1</span> <span class="o">=</span>  <span class="n">filename</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> 
+
+      <span class="c1"># do same for other file
+</span>      <span class="n">file_name</span> <span class="mi">2</span><span class="o">=</span>  <span class="s">"test_file_EXTRA.eeg"</span><span class="p">.</span><span class="n">lower</span><span class="p">().</span><span class="n">replace</span><span class="p">(</span><span class="s">"-"</span><span class="p">,</span> <span class="s">""</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">"_"</span><span class="p">,</span> <span class="s">""</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">" "</span><span class="p">,</span> <span class="s">""</span><span class="p">)</span>
+      <span class="n">file_name2</span> <span class="o">=</span>  <span class="n">filename</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> 
+</code></pre></div>    </div>
+
+    <p>…can be decomposed into:</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">file_standardize</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+      <span class="n">file_name</span> <span class="o">=</span>  <span class="n">fn</span><span class="p">.</span><span class="n">lower</span><span class="p">().</span><span class="n">replace</span><span class="p">(</span><span class="s">"-"</span><span class="p">,</span> <span class="s">""</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">"_"</span><span class="p">,</span> <span class="s">""</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">" "</span><span class="p">,</span> <span class="s">""</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">filename</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> 
+
+  <span class="k">def</span> <span class="nf">funcName</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+      <span class="n">file_name1</span> <span class="o">=</span>  <span class="n">file_standardize</span><span class="p">(</span><span class="s">"test_file.eeg"</span><span class="p">)</span>
+      <span class="n">file_name2</span> <span class="o">=</span>  <span class="n">file_standardize</span><span class="p">(</span><span class="s">"test_file_EXTRA.eeg"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Every main feature function should contain docstrings (following <a href="https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings">PEP 257</a>) that follow the format of <a href="https://github.com/mne-tools/mne-python/blob/maint/0.22/mne/io/egi/egi.py#L89-L154">MNE functions</a> and describe <strong>at most</strong> the following:
+    <ul>
+      <li>A brief description as to what the function does.</li>
+      <li>Parameters: which inputs will be provided to the function?</li>
+      <li>Throws: which exceptions will the function throw (if any)?</li>
+      <li>Returns: which inputs will be returned, and what changes will be made to them?</li>
+    </ul>
+
+    <p>Example:</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">add_up</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+      <span class="s">"""A function that returns the sum of two inputs 
+      Parameters 
+      ----------
+      a : int
+          any integer
+      b : in
+          any integer
+
+      Returns 
+      ----------
+      a + b
+      """</span>
+      <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</code></pre></div>    </div>
+
+    <p>This documentation should be as <strong>non-restrictive</strong> as possible. That is, minimize implicit preconditions (don’t make assumptions on user input) and maximize implicit postconditions. This will ensure that features are resilient and break correctly and informatively when improper input is provided.</p>
+
+    <p>Note that if the documentation for any of these categories is empty, it is not required to list it.  For example, a function that returns nothing will likewise have no “returns” listed in the docstring.</p>
+  </li>
+  <li>For <a href="https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings">documenting classes</a>: “docstring for a class should summarize its behavior and list the public methods and instance variables.”<br />
+  Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+      <span class="s">"""Dog class that can learn and execute tricks 
+        
+      Instance Variables
+      ----------
+      name: str
+          the dog's name 
+      tricks: list
+          a list of strings that contain tricks in string form
+
+      Public Methods
+      ----------
+      learn_trick(trick)
+          method to take in "trick" and store it into tricks list
+        
+      do_trick()
+          method to randomly print out a trick to console
+      """</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Avoid magic numbers.<br />
+  For example, do this:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159</span>
+  <span class="n">circumference</span> <span class="o">=</span> <span class="n">PI</span> <span class="o">*</span> <span class="n">Math</span><span class="p">.</span><span class="nb">pow</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <p>…not this:</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">circumference</span> <span class="o">=</span> <span class="mf">3.14159</span> <span class="o">*</span> <span class="n">Math</span><span class="p">.</span><span class="nb">pow</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="containerization">Containerization</h2>
+<ul>
+  <li>Updates to container content should be discrete and announced events. This will prevent unexpected behavior (sudden unsupported packages, changes in kernel, etc.) in local environments.</li>
+</ul>
+:ET

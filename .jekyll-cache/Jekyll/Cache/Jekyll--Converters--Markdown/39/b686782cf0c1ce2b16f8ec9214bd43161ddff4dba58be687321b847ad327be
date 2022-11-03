@@ -1,0 +1,236 @@
+I"�4<h1 id="pavlovia--gitlab-tutorial">Pavlovia + GitLab Tutorial</h1>
+
+<p>An overview on how to get started with Git, GitLab, and Pavlovia in order to run PsychoPy projects on the browser.</p>
+
+<h4 id="table-of-contents">TABLE OF CONTENTS</h4>
+<ol>
+  <li><a href="https://ndclab.github.io/wiki/docs/pavlovia.html#setting-up-ssh-keys">Setting up SSH Keys</a></li>
+  <li><a href="https://ndclab.github.io/wiki/docs/pavlovia.html#adding-an-ssh-key-to-pavlovia">Adding an SSH Key to Pavlovia</a></li>
+  <li><a href="https://ndclab.github.io/wiki/docs/pavlovia.html#creating-a-repository-on-gitlab">Creating a Repository on GitLab</a></li>
+  <li><a href="https://ndclab.github.io/wiki/docs/pavlovia.html#setting-up-the-local-repository">Setting Up the Local Repository</a></li>
+  <li><a href="https://ndclab.github.io/wiki/docs/pavlovia.html#gitlab-workflow">GitLab Workflow</a></li>
+  <li><a href="https://ndclab.github.io/wiki/docs/pavlovia.html#psychojs-workflow">PsychoJS Workflow</a></li>
+</ol>
+
+<h2 id="opening-a-shell-and-installing-git">Opening a Shell and Installing Git</h2>
+<p>Please reference the setup instructions for Git <a href="https://ndclab.github.io/wiki/docs/technical-docs/git_and-github.html">here</a>.</p>
+
+<h2 id="adding-an-ssh-key-to-pavlovia">Adding an SSH key to Pavlovia</h2>
+
+<h3 id="overview">Overview</h3>
+
+<p>Now that you have an SSH key pair (the private and public key), you will need to add the public key to Pavlovia.</p>
+
+<p><a href="https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair">GitLab Guide</a></p>
+
+<h3 id="steps">Steps</h3>
+
+<p>Login into <a href="https://gitlab.pavlovia.org/users/sign_in">Pavlovia</a> using your username and password.</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/sshk_signin.png" alt="" /></p>
+
+<p>At the top-right hand corner, click the drop down and select <strong>Settings</strong>.</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/sshk_settings.png" alt="" /></p>
+
+<p>On the left side, you will see <strong>User Settings</strong> and a list of categories. Select <strong>SSH Keys</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/sshk_settings_category.png" alt="" /></p>
+
+<p>With a text editor open up the ssh key file that ends with <code class="language-plaintext highlighter-rouge">.pub</code> and inside you will see a <code class="language-plaintext highlighter-rouge">ssh-ed25519</code> and a long alpha-numeric sequence and an email or username at the end. Copy the entire line.</p>
+
+<p>Paste it into the <strong>Key</strong> text box in the page that you are on.</p>
+
+<p>Give the key a <strong>Title</strong>, this can be anything as it is a name to help you remember where the key is when you have multiple keys.</p>
+
+<p>Press <strong>Add key</strong>.</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/sshk_input.png" alt="" /></p>
+
+<p>Refresh and you will see the new key in <strong>Your SSH keys (1)</strong>.</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/sshk_newkey.png" alt="" /></p>
+
+<h3 id="resources">Resources</h3>
+
+<p><a href="https://docs.gitlab.com/ee/ssh/README.html#adding-an-ssh-key-to-your-gitlab-account">Gitlab in-depth guide</a></p>
+
+<h2 id="creating-a-repository-on-gitlab">Creating a Repository on Gitlab</h2>
+
+<h3 id="overview-1">Overview</h3>
+
+<p>To create a repository, you will need to create an empty repository on the NDC Lab organization or your personal Gitlab on the Pavlovia Gitlab instance. The NDC Lab organization or group will be where we put the PsychoPy and PsychoJS projects. Your personal projects can be used for things like experimenting with changes that you may not necessarily want to push to the main repository.</p>
+
+<p><strong>Note:</strong> Group and Organization can be used interchangeably. And repository and project can be used interchangeably.</p>
+
+<h3 id="accessing-the-ndc-lab-group">Accessing the NDC Lab group</h3>
+
+<p>By default, you will be able to see the NDC Lab projects when you are logged in on the main page when you access <code class="language-plaintext highlighter-rouge">https://gitlab.pavlovia.org</code>. If not these are different ways to access the projects:</p>
+
+<ul>
+  <li>Open the <strong>Groups</strong> drop-down at the top of the page</li>
+  <li>Select <strong>Your groups</strong></li>
+  <li>Select NDCLab</li>
+</ul>
+
+<p>Or</p>
+
+<ul>
+  <li>click this <a href="https://gitlab.pavlovia.org/ndclab">link</a></li>
+</ul>
+
+<h3 id="creating-a-gitlab-project">Creating a Gitlab Project</h3>
+
+<p>Once you are inside the group page:</p>
+
+<p>Press <strong>New project</strong>.</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/nproj_new.png" alt="" /></p>
+
+<p>Name the project.</p>
+
+<p>Make sure that <strong>ndclab</strong> is selected in the <strong>Project URL</strong>.</p>
+
+<p>Write out a <strong>Project Slug</strong>, substitute spaces with a hyphen (-).</p>
+
+<p>Set to <strong>Public</strong>.</p>
+
+<p>Press <strong>Create project</strong>.</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/pavlovia_md/nproj_create.png" alt="" /></p>
+
+<p>* Note: A “<a href="https://en.wikipedia.org/wiki/Clean_URL#Slug">Slug</a>” is generally the part of a URL that comes after the domain bits. It is a nicer way to link to something instead of a long alpha-numeric string or a long directory and file combo.</p>
+
+<h3 id="resources-1">Resources</h3>
+
+<p><a href="https://docs.gitlab.com/ee/gitlab-basics/create-project.html">GitLab In-depth guide</a></p>
+
+<h2 id="setting-up-the-local-repository">Setting Up the Local Repository</h2>
+
+<h3 id="overview-2">Overview</h3>
+
+<p>Setting up a local repository in our case means that we will be cloning the Gitlab repository. The repository can be empty or have a lot of work already incorporated. The process for “setting it up locally” is exactly the same.</p>
+
+<h3 id="steps-1">Steps</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git clone</code> the repository that was created. For example: 
+  <code class="language-plaintext highlighter-rouge">git clone git@gitlab.pavlovia.org:furcb/temp.git</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cd repo-name</code> where repo-name is the name of the repository.</li>
+</ul>
+
+<h2 id="gitlab-workflow">Gitlab Workflow</h2>
+
+<p>At this point, you will have a repository that is correctly configured. To begin adding changes, you must create a new branch. To create a new branch follow theses steps:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git checkout -b fix_a</code> to create a new branch with the name “fix_a”, change the name to match the changes you will be making.</li>
+</ul>
+
+<p>Once the new branch is created, open the PsychoPy project and start making changes to the project. After adding all the new changes, do the following:</p>
+
+<ul>
+  <li>Add all the new changes using the <code class="language-plaintext highlighter-rouge">add</code> command</li>
+  <li>Commit those changes using the <code class="language-plaintext highlighter-rouge">commit</code> command</li>
+  <li><code class="language-plaintext highlighter-rouge">git push origin fix_a</code> to push the new branch to the remote repository under the new branch name</li>
+</ul>
+
+<p>Once you have something you want to merge with the main branch, confirm with other team members by having them pull the new branch and testing the new changes. Once the branch with the changes has been reviewed, we can add the new branch to the main branch.</p>
+
+<ul>
+  <li>Checkout the main branch by using <code class="language-plaintext highlighter-rouge">git checkout main</code></li>
+</ul>
+
+<blockquote>
+  <p>Any uncommitted changes will be transferred into the main branch, this might make the next steps
+difficult in some cases. If you would like to PERMANENTLY discard/delete those changes use <code class="language-plaintext highlighter-rouge">git
+reset --hard HEAD</code></p>
+</blockquote>
+
+<p>If the main branch has not been changed since the point when the new branch was created follow these steps:</p>
+
+<ul>
+  <li>Merge the new branch by using <code class="language-plaintext highlighter-rouge">git merge fix_a</code></li>
+  <li>Do <code class="language-plaintext highlighter-rouge">push</code> to push the updated main branch to the remote repository</li>
+</ul>
+
+<p>If the main branch has been changed since the point when the new branch was created, in this case fix_a, follow these steps:</p>
+
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">pull</code> command to pull the newest changes for the main branch</li>
+  <li><code class="language-plaintext highlighter-rouge">git merge fix_a</code> to merge the changes from the new branch</li>
+</ul>
+
+<p>At this point if there where no conflicting changes, git will have completed the merge as if the main branch was not different from the point when you created the new branch. If there are conflicting changes, or changes that are in the same area as changes that were added to the main branch after creating the new branch, you will have to manually fix those conflicts.</p>
+
+<ul>
+  <li>Fix those conflicts</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">add</code> to add those changes</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">commit</code> to commit those changes</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">push</code> to upload the new main branch to the remote repository</li>
+</ul>
+
+<p><strong>A word of warning:</strong> most files will be simple to fix merge conflicts. The python project file for PsychoPy may be harder since it is auto-generated python code. Although as long as changes do not overlap i.e. merging changes for same components, merge conflicts should not happen and if they do they are easy to incorporate.</p>
+
+<p>Example merge conflict:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Contents of "some_file.txt"</span>
+<span class="o">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt; HEAD
+This was added after fix_a and conflicts with fix_a
+<span class="o">=======</span>
+This is a change <span class="k">in </span>fix_a
+<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> fix_a
+</code></pre></div></div>
+
+<p>Example resolved merge conflict:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Contents of the fixed "some_file.txt"</span>
+This is a change <span class="k">in </span>fix_a
+</code></pre></div></div>
+
+<h2 id="psychojs-workflow">PsychoJS Workflow</h2>
+
+<h3 id="overview-3">Overview</h3>
+
+<p>Pavlovia allows us to add the html files to the root of the project directory or to create an html directory and add those files created on export there. It is suggested to use the latter method since it is cleaner and more organized.</p>
+
+<h3 id="export-psychojs-project">Export PsychoJS project</h3>
+
+<p>With the builder open go to “File &gt; Export HTML” and the PsychoPy builder will export the html files.</p>
+
+<p>Using your file manager of choice, Explorer on Windows and Navigator on Mac OS, move those new files to <code class="language-plaintext highlighter-rouge">html/</code> in the project directory.</p>
+
+<p>Add any assets like pictures, csv’s, and any other files needed for the project to run to <code class="language-plaintext highlighter-rouge">html/</code> as well. It is recommended to use <code class="language-plaintext highlighter-rouge">resources/</code> as the directory for those files. If you use a <code class="language-plaintext highlighter-rouge">resources/</code> directory in <code class="language-plaintext highlighter-rouge">html/</code> you must also use it in the root of the project.</p>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Think of the html directory as a mini PsychoJS project
+
+└── psychopy_proj
+   ├── html
+   │  └── resources
+   └── resources
+</code></pre></div></div>
+
+<h3 id="push"><code class="language-plaintext highlighter-rouge">push</code></h3>
+
+<p>This command will push all changes that have been add to the Pavlovia Gitlab repository.</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Local repository is ahead of Pavlovia Gitlab repository</span>
+git push
+<span class="c"># Changes are uploaded</span>
+</code></pre></div></div>
+
+<h3 id="pull"><code class="language-plaintext highlighter-rouge">pull</code></h3>
+
+<p>This command will “pull” changes from the remote repository, in this case the Pavlovia Gitlab repository you cloned. Pull will try to fetch any new changes and merge them. Generally, as long as you have not diverged from the remote repository this will work fine.</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Local repository is behind of Pavlovia Gitlab repository but has not diverged</span>
+git pull
+<span class="c"># Git will download new changes and merge them automatically</span>
+</code></pre></div></div>
+:ET

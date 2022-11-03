@@ -1,0 +1,42 @@
+I"�<h4 id="contents">Contents</h4>
+<ol>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#github">GitHub</a></li>
+  <li><a href="#wiki">Wiki</a></li>
+  <li><a href="#slack">Slack</a></li>
+  <li><a href="#lab-meeting">Lab Meeting</a></li>
+</ol>
+
+<h2 id="overview">Overview</h2>
+<p>The NDCLab welcomes all contributions; there are many ways to contribute.</p>
+
+<h2 id="github">GitHub</h2>
+<p>Contributing to a project can be divided into two categories. Contributing with push access and without push access. Since lab projects are open source anyone can view the source code but not everyone can push changes to the repository.</p>
+
+<h3 id="with-push-access">With Push Access</h3>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_push-workflow.png" alt="gh_push-workflow" /></p>
+
+<p>Lab members with push access to a project create new branches (similar to how a new branch is created to update the who’s who page as part of the <a href="https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html">Get with Git program</a>). These branches are merged with <code class="language-plaintext highlighter-rouge">dev</code> in accordance with the lab’s <a href="https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html">GitHub workflow</a>.</p>
+
+<h3 id="without-push-access">Without Push Access</h3>
+
+<h5 id="fork-and-pull">Fork and Pull</h5>
+<p>If you do not have push access to a project, you will have to fork the repository first before submitting changes to the project team for review. Please follow the lab’s <a href="https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html">branch naming conventions</a> and submit an informative pull request. Thank you for your interest in our work!</p>
+
+<h5 id="issue-submission">Issue Submission</h5>
+<p>The NDCLab prefers contributions via a fork and pull, but we recognize that contributors may identify improvements without having the requisite knowledge to provide a working implementation. In such cases, please:</p>
+<ul>
+  <li>Verify that the problem/suggestion does not already have an issue logged in GitHub.</li>
+  <li>Use the appropriate issue template to submit the problem/suggestion to the project team for review.</li>
+</ul>
+
+<h2 id="wiki">Wiki</h2>
+<p>Contributions to the lab wiki are <strong>highly</strong> encouraged, from the correction of typos to creation of new, useful pages.</p>
+
+<h3 id="slack">Slack</h3>
+<p>Fully onboarded lab members can additionally contribute to the lab more holistically by sharing information on <a href="https://ndclab.github.io/wiki/docs/Onboarding/slack-setup.html">Slack</a>, including answering teammate questions posted on #general and #tech.</p>
+
+<h3 id="lab-meeting">Lab Meeting</h3>
+<p>Fully onboarded lab members are encouraged to contribute to the agenda for the <a href="https://ndclab.github.io/wiki/docs/around-the-lab/lab-meeting.html">weekly lab meeting</a> with relevant topics.</p>
+:ET

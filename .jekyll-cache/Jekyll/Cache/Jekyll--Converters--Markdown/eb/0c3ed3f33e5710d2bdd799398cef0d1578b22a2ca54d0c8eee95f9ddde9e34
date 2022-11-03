@@ -1,0 +1,79 @@
+I"Y<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/inst_automation-header.jpg" alt="robots in a factory" /><br />
+<em>Basically what instruments does, but without the robot or the factory or the chips.</em></p>
+
+<p>Self-administered surveys are a popular method of research, and are used to measure certain metrics that pertain to participant emotional states or opinions. But their excessive utility is often matched by their excessive analytical tedium. Imagine you have 150 participants that filled multiple surveys on paper. This would involve scoring by hand, a hardly interesting endeavor to take on while conducting research.</p>
+
+<p>A solution would be to collect data via the internet and then apply code to automatically generate metrics. The <code class="language-plaintext highlighter-rouge">instruments</code> repository aims to accomplish exactly that.</p>
+
+<h3 id="contents">Contents</h3>
+<ol>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#usage">Usage</a></li>
+  <li><a href="#adding-new-instruments">Adding New Instruments</a></li>
+</ol>
+
+<h2 id="overview">Overview</h2>
+
+<p>The instruments repository is a collection of coding scripts that interpret a .json file and construct a unique survey object, which is then used to automatically score any input, as provided by the command line.</p>
+
+<p><em>For the less comp sci savvy</em>: the instruments script will automatically code the questionnaires that you have participants complete into the standard total scores and subscores.</p>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="study-setup-using-an-existing-instrument">Study Setup: Using an Existing Instrument</h3>
+
+<ol>
+  <li>Clone the repository to your local machine.</li>
+  <li>Use the published PDF for submission to the FIU IRB.</li>
+  <li>Import the .zip to REDCap. Note that the .zip file uses <code class="language-plaintext highlighter-rouge">_s1_r1_e1</code>. These numerical values may need to be adjusted to meet the specific needs of your study’s protocol; this requires changing the numerical values in the instrument name (within REDCap) and also the numerical values <strong>in each variable</strong>. No other change should be made to the variable names: other changes will break the link with the automated scoring script. See further details on the lab’s <a href="https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap">naming conventions for REDCap surveys</a>.</li>
+  <li>Save REDCap data to the HPC in accordance with your data collection protocol.</li>
+</ol>
+
+<h3 id="preprocessing-data">Preprocessing Data</h3>
+
+<ol>
+  <li>
+    <p>Log into the HPC <a href="https://ndclab.github.io/wiki/docs/technical-docs/hpc-doc.html#connecting">using the Visual Node</a>.  Launch Panther Shell Access:
+<img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/inst_open-shell.png" alt="inst_open-shell" /></p>
+  </li>
+  <li>
+    <p>You will be prompted to enter your password when the shell opens.  Type in your password and hit Enter.  The console will not show you that you are typing while inputting your password, but forge ahead!
+<img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/inst_input-password.png" alt="inst_input-password" /></p>
+  </li>
+  <li>Once you’ve logged into the HPC, navigate to the instruments repo located in the HPC by entering the following command:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cd /home/data/NDClab/tools/instruments
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>We can use the script <code class="language-plaintext highlighter-rouge">process.sub</code> located in the <code class="language-plaintext highlighter-rouge">hpc/</code> folder to analyze data. First, we need to swap the string paths located below the comment that says “edit variables here to change inputs and outputs.” You can edit files directly from the terminal by executing <code class="language-plaintext highlighter-rouge">nano hpc/process.sub</code>.</p>
+
+    <p>Example paths are in-place already. You will overwrite portions of each of the three lines:</p>
+
+    <ol>
+      <li>Replace “this-is-some-dataset” in the <code class="language-plaintext highlighter-rouge">project</code> variable to specify which project folder the data resides in. Examples of project folders are “rwe-dataset” or “memory-for-error-dataset.”</li>
+      <li>Replace “DATA” in the <code class="language-plaintext highlighter-rouge">input_file</code> variable to specify exactly which file should be processed.</li>
+      <li>
+        <p>Replace “DATA” in the <code class="language-plaintext highlighter-rouge">output-file</code> variable to specify the file name you want for the processed version of the .csv.</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # edit variables here to change inputs and outputs
+ project="this-is-some-dataset"
+ input_file="/home/data/NDClab/datasets/$project/sourcedata/raw/DATA.csv"
+ output_file="/home/data/NDClab/datasets/$project/derivatives/DATA.csv"
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>Lastly you can run this script by executing the command <code class="language-plaintext highlighter-rouge">sbatch hpc/process.sub</code>. This will output data to the <code class="language-plaintext highlighter-rouge">output_file</code> path that you’ve specified. Happy analyzing!</li>
+</ol>
+
+<h2 id="adding-new-instruments">Adding New Instruments</h2>
+
+<ol>
+  <li>Follow the lab’s <a href="https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html">GitHub etiquette</a> to create a new branch off dev (<code class="language-plaintext highlighter-rouge">dev-NewInstrumentName</code>).</li>
+  <li>Create a new directory with the instrument’s short name.</li>
+  <li>Add all of the following to the new directory: the published PDF, the REDCap PDF (shows exactly what participants see), and a REDCap import .zip that follows the lab’s <a href="https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap">naming conventions</a>. All REDCap import .zip files in the instruments repository should use <code class="language-plaintext highlighter-rouge">_s1_r1_e1</code>.</li>
+  <li>Add the (sub)score(s) for the instrument to the .json file with the appropriate parameters as described in subscore.py for subscale scoring.</li>
+  <li>Add the instrument, alphabeticaly, into the list-of-instruments.md with a link to the appropriate citation.</li>
+  <li>Push your branch to the remote, then open a PR and assign to the lab manager.</li>
+</ol>
+:ET

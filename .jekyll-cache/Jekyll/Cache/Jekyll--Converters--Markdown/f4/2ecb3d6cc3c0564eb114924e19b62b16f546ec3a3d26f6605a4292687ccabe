@@ -1,0 +1,128 @@
+I"�<h3 id="contents">Contents</h3>
+<ol>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#opening-a-shell">Opening a Shell</a></li>
+  <li><a href="#shell-tips">Shell Tips</a>
+    <ol>
+      <li><a href="#key-terms">Key Terms</a></li>
+      <li><a href="#important-commands">Important Commands</a></li>
+      <li><a href="#additional-resources">Additional Resources</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="overview">Overview</h2>
+
+<p>It’s very useful to know how to use a <a href="https://en.wikipedia.org/wiki/Command-line_interface">command-line interface (CLI)</a> inside a <a href="https://en.wikipedia.org/wiki/Shell_(computing)">shell</a>.  At the NDCLab, you will need this knowledge to work with <a href="https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html">GitHub</a> and the <a href="https://ndclab.github.io/wiki/docs/technical-docs/hpc-doc.html">FIU HPC</a>, among other applications.</p>
+
+<h2 id="opening-a-shell">Opening a Shell</h2>
+
+<p><strong>Mac</strong></p>
+
+<p>On OS releases starting from Catalina, the default shell provided is <a href="https://en.wikipedia.org/wiki/Z_shell">Zsh</a> which is very similar to <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> because both are <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> compliant. This is good because shell scripts written in either scripting language will be usable on either macOS or Windows without tweaks.</p>
+
+<p>To access Zsh, open up a normal terminal simply by clicking on the Terminal application on your Mac.</p>
+
+<p><strong>Windows</strong></p>
+
+<p>Install Git first. Check out <a href="https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html">these instructions</a>.</p>
+
+<p>Navigate to any location on your machine (although one suggests selecting a location where you will do all your NDCLab work), right-click, and select “Git Bash Here” from the menu. This opens a Bash shell where you can input shell and git commands.</p>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/git-bash.png" alt="git-bash" /></p>
+
+<p>(There is a different option that uses the <a href="https://en.wikipedia.org/wiki/Cmd.exe">Command Prompt</a>. Using the Command Prompt is not recommended since it uses a different tool set which is not covered in this guide.)</p>
+
+<p><strong>Linux</strong></p>
+
+<p>There are many ways to open a shell on Linux. One example: right-click your desktop and select “Open Terminal” from the menu.</p>
+
+<h2 id="shell-tips">Shell Tips</h2>
+
+<h3 id="key-terms">Key Terms</h3>
+
+<p>Here is some of the key terminology used in working with a shell:</p>
+
+<ul>
+  <li><strong>command</strong>: an instruction from you (the user) to your computer.</li>
+  <li><strong>directory</strong>: another name for a folder. When you navigate around your files using the shell, you’re always “sitting” in a directory (called your “current directory”).</li>
+  <li><strong>option</strong>: an option that the program will allow you to change using special formatting, generally	denoted with a “–” in front of the option name. For example “–option value”.</li>
+  <li><strong>flag</strong>: an option that can be on or off, generally denoted with a “-“ in front of the name. For example “-t”.</li>
+</ul>
+
+<h3 id="important-commands">Important Commands</h3>
+
+<h4 id="ls">ls</h4>
+
+<p><code class="language-plaintext highlighter-rouge">ls</code> will list the files and directories that live within the directory that you are currently “in.” This is useful to see what is in your current directory, but it can also show you the contents of any directory as long as you provide a valid path to that directory and you have permission to view that directory.</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ls without options (outputs results on one line)</span>
+<span class="nb">ls</span>
+<span class="c">#&gt; Downloads Desktop stories.txt ...</span>
+
+<span class="c"># ls with the flag option -l (outputs one result per line)</span>
+<span class="nb">ls</span> <span class="nt">-l</span>
+<span class="c">#&gt; drwxr-xr-x    - username 31 May 10:35 Desktop</span>
+<span class="c">#&gt; drwxr-xr-x    - username  9 Oct 14:52 Downloads</span>
+<span class="c">#&gt; drwxr-xr-x    - username 25 Aug 17:00 stories.txt</span>
+</code></pre></div></div>
+
+<h4 id="cd">cd</h4>
+
+<p><code class="language-plaintext highlighter-rouge">cd</code> (change directory) is a shell command that allows you to move from one directory to another. This is useful to move around in the shell and, like <code class="language-plaintext highlighter-rouge">ls</code>, it will accept any valid path to any directory.</p>
+
+<p>There are two kinds of paths:</p>
+
+<p><strong>Relative paths</strong>, which are path names relative to your current directory. This path can start with either <code class="language-plaintext highlighter-rouge">.</code> for the “current directory or <code class="language-plaintext highlighter-rouge">..</code> for “the directory above this directory”.</p>
+
+<p><strong>Absolute paths</strong> are paths that start from the root of the file-system (<code class="language-plaintext highlighter-rouge">/</code> in macOS or <code class="language-plaintext highlighter-rouge">c:/</code> in Windows).</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example with a relative path</span>
+<span class="c"># Current directory: /home/user/proj_dir/</span>
+<span class="nb">cd</span> ./sub_folder/
+<span class="c"># Current directory: /home/user/proj_dir/sub_folder/</span>
+
+<span class="c"># Example with an absolute path</span>
+<span class="c"># Current directory: /c/Users/username/Desktop/</span>
+<span class="nb">cd</span> /c/Users/
+<span class="c"># Current directory: /c/Users</span>
+
+<span class="c"># Shortcut to go up one level</span>
+<span class="c"># Current directory: /home/user/proj_dir/sub_folder/</span>
+<span class="nb">cd</span> ..
+<span class="c"># Current directory: /home/user/proj_dir/</span>
+
+<span class="c"># Shortcut to return home</span>
+<span class="c"># Current directory: /home/user/proj_dir/sub_folder/</span>
+<span class="nb">cd</span> ~
+<span class="c"># Current directory: /home/</span>
+</code></pre></div></div>
+
+<h4 id="mkdir">mkdir</h4>
+
+<p><code class="language-plaintext highlighter-rouge">mkdir</code> (make directory) is a shell command that allows you to create a new directory. This is useful to create a folder on your local where you can store files. You can name your directory anything that relates to the content within the directory.</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># This example will create a directory named github on your local machine:</span>
+<span class="nb">mkdir </span>github
+
+<span class="c"># Make sure you are in the desired location when you create a new directory.</span>
+<span class="c"># To check where you are currently at (seeing the contents of your current directory), use:</span>
+<span class="nb">ls</span>
+
+<span class="c"># To navigate to your root (on Mac), use:</span>
+<span class="nb">cd</span> ~
+</code></pre></div></div>
+
+<h2 id="additional-resources">Additional Resources</h2>
+
+<p>Here are several Linux cheat sheets with useful commands. Not all of these commands will work on Windows and macOS, but most of the core commands are the same with Linux and will therefore work.</p>
+
+<p><a href="https://www.guru99.com/linux-commands-cheat-sheet.html">Linux Commands</a><br />
+<a href="https://ryanstutorials.net/linuxtutorial/cheatsheet.php">Linux Tutorials</a></p>
+:ET

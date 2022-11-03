@@ -1,0 +1,107 @@
+I"�<h1 id="docker-usage">Docker Usage</h1>
+
+<p>How to use <code class="language-plaintext highlighter-rouge">docker</code> to run scripts from Matlab, Python, and R-base using GUI and terminal options.</p>
+
+<p>The steps are:</p>
+
+<ul>
+  <li>Build an image,</li>
+  <li>create a container,</li>
+  <li>execute a script or program in the container.</li>
+</ul>
+
+<h2 id="docker-cli">Docker CLI</h2>
+
+<p>Main commands for Docker are run, build, pull.</p>
+
+<p><code class="language-plaintext highlighter-rouge">docker run</code> is used to run a new container instance of an image. If the image does not exist docker
+will attempt to download it from <a href="https://hub.docker.com">Docker Hub</a>. With run there are some
+common options that you can use with it:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-i</code> or <code class="language-plaintext highlighter-rouge">--interactive</code> keeps the standard input open</li>
+  <li><code class="language-plaintext highlighter-rouge">-t</code> or <code class="language-plaintext highlighter-rouge">--tty</code> creates a pseudo terminal or TTY</li>
+  <li><code class="language-plaintext highlighter-rouge">--rm</code> removes the container when it exits; depending on how the container is configured this can
+  mean onces you <code class="language-plaintext highlighter-rouge">exit</code> the terminal.</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Usage</span>
+<span class="c"># Will launch an Ubuntu container</span>
+<span class="c"># 	if it does not have the image it will download it from hub.docker.com</span>
+<span class="c">#		will attempt to open a tty with the bash shell</span>
+<span class="c"># 	and once you exit the terminal will remove (delete) the container</span>
+docker run <span class="nt">-it</span> <span class="nt">--rm</span> ubuntu /bin/bash
+<span class="c"># After the container is created, you will be "dropped" into a bash terminal and you can</span>
+<span class="c"># 	run scripts with the installed interpreter.</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">docker pull</code> will “pull” or download an image and all the layers required to run that image to your
+computer. A normal use case for <code class="language-plaintext highlighter-rouge">docker pull</code> is to download an image you do not have by specifying
+the image name; <code class="language-plaintext highlighter-rouge">NAME[:TAG|@DIGEST]</code>. <code class="language-plaintext highlighter-rouge">NAME</code> is the name of the image, for example <code class="language-plaintext highlighter-rouge">ubuntu</code>. A tag
+normally refers to some form of versioning for that image, for example <code class="language-plaintext highlighter-rouge">ubuntu:latest</code>. And
+<code class="language-plaintext highlighter-rouge">@DIGEST</code> refers to a specific version for that <code class="language-plaintext highlighter-rouge">TAG</code>, for example
+<code class="language-plaintext highlighter-rouge">ubuntu@sha256:1d7b639619bd...</code>. Generally you specify the <code class="language-plaintext highlighter-rouge">TAG</code> and not the <code class="language-plaintext highlighter-rouge">DIGEST</code> unless you
+have very specific requirements.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Usage</span>
+docker pull ubuntu:latest
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">docker build</code> will build a docker image using a <code class="language-plaintext highlighter-rouge">Dockerfile</code> or the “build instructions” for the
+image. Generally you do not need additional options for the build command since most of the work is
+done in the <code class="language-plaintext highlighter-rouge">Dockerfile</code>.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Usage</span>
+docker build Dockerfile
+</code></pre></div></div>
+
+<p>Below is an example is a simple <code class="language-plaintext highlighter-rouge">Dockerfile</code> for a Python container:</p>
+
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> python:3.8</span>
+
+<span class="c"># Create the working dir</span>
+<span class="k">WORKDIR</span><span class="s"> /python_wdir</span>
+
+<span class="c"># Install dependencies</span>
+<span class="k">COPY</span><span class="s"> requirements.txt .</span>
+<span class="k">RUN </span>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+
+<span class="c"># Copy python source files into the image</span>
+<span class="k">COPY</span><span class="s"> src/ .</span>
+</code></pre></div></div>
+
+<h3 id="additional-resources">Additional Resources</h3>
+
+<p>If you are using the CLI, the best resource available as reference is the help text, you can access
+it by doing <code class="language-plaintext highlighter-rouge">docker --help</code> or <code class="language-plaintext highlighter-rouge">docker command --help</code>. Alternatively for a more in-depth
+explanations for commands and options access the manual pages via <code class="language-plaintext highlighter-rouge">man docker</code> or
+<a href="http://manpages.org/docker">online</a></p>
+
+<p><a href="https://wiki.archlinux.org/index.php/Docker">Wiki article</a></p>
+
+<h2 id="docker-compose">Docker Compose</h2>
+
+<p>Docker Compose is a way to simplify the build and deploy step for docker containers. It will handle
+most things like creating and removing a container, mounting and unmounting directories (folders),
+and creating and deleting networks. Its usage is very simple in most cases; you either run
+<code class="language-plaintext highlighter-rouge">docker-compose up -d</code> to start the docker container in a detached state or <code class="language-plaintext highlighter-rouge">docker-compose down</code> to
+stop the container and clean up any resources that were left dangling.</p>
+
+<p>The more time consuming step is creating the configuration file to define the container stack, this
+stack can have one or many container definitions. Here is a simple example for python:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="m">3</span>
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">app</span><span class="pi">:</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="s">.</span>
+      <span class="s">volumes</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s2">"</span><span class="s">./data/:/data_in_container"</span>
+</code></pre></div></div>
+
+<h3 id="additional-resources-1">Additional Resources</h3>
+
+<p>For a full overview of options reference the <a href="https://docs.docker.com/compose/compose-file/">Compose file
+specification</a>. There are 15 versions of the format,
+as a rule of thumb use version 3.0 and only bump the minor version, 3.x, when you need specific
+functionality or something seems to not work as intended.</p>
+:ET

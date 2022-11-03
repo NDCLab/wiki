@@ -1,0 +1,90 @@
+I"<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/cluster.png" alt="cluster visualization" />
+<em>Visualization by Yale Center for Research Computing</em></p>
+
+<h3 id="contents">Contents</h3>
+<ol>
+  <li><a href="#Connecting">Connecting</a>
+    <ol>
+      <li><a href="#Login-Node">Login Node</a></li>
+      <li><a href="#Visual-Node">Visual Node</a></li>
+    </ol>
+  </li>
+  <li><a href="#Structure">Structure</a></li>
+</ol>
+
+<h2 id="connecting">Connecting</h2>
+<p>To use the HPC, a lab member must either use on-campus WiFi or utilize a VPN to access the <a href="https://en.wikipedia.org/wiki/Intranet">FIU intranet</a>.</p>
+
+<p>Once a secure connection is established, both the login node and visual nodes can be accessed for job submission and file manipulation.</p>
+
+<h3 id="vpn-off-campus-only">VPN (Off-Campus Only!)</h3>
+<p>If a lab member is using on-campus WiFi, this step can be skipped.</p>
+
+<p>However, if a lab member is accessing the HPC off-campus, they must connect to the <a href="https://network.fiu.edu/vpn/">FIU VPN</a> to access the FIU intranet.</p>
+
+<h3 id="login-node">Login-Node</h3>
+<p>The login node, also known as the head node, is the primary HPC entry point for submitting jobs and transferring small amounts of data.</p>
+
+<p>Note: a user must login to the login-node <strong>before</strong> logging into the hpcgui to initialize their home directory.</p>
+
+<p>The preferred (and easiest) method for accessing the HPC login node is through secure shell (SSH). This comes installed on Windows 10 and MacOS. Previous windows versions can install <a href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse">OpenSSH</a>.</p>
+
+<p>Verify your ssh installation by typing in the command prompt/terminal.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -v localhost 
+</code></pre></div></div>
+
+<ol>
+  <li>Once verified, ssh into the login node, Where <code class="language-plaintext highlighter-rouge">userName</code> is the lab member’s FIU username:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh userName@hpclogin01
+</code></pre></div>    </div>
+  </li>
+  <li>Enter the password when prompted:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>userName@hpclogin01 password:
+</code></pre></div>    </div>
+  </li>
+  <li>A prompt will indicate a successful login:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#######################################################################
+Welcome to the FIU Instructional &amp; Research Computing Center (IRCC)
+#######################################################################
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="visual-node">Visual-Node</h3>
+<p>The visualization node is used for directly editing files on the cluster and for GUI manipulation. To access the visual node, simply click <a href="hpcgui.fiu.edu">hpcgui.fiu.edu</a>.</p>
+
+<p><img width="957" alt="fiuHPCgui" src="https://user-images.githubusercontent.com/26397102/119862076-c067a580-bedd-11eb-9481-b1d6ca42b554.png" /></p>
+
+<p>The red boxes detail the following:</p>
+
+<ul>
+  <li>Files: represent a graphical representation of the file structure on the cluster</li>
+  <li>Clusters: provide <a href="https://ndclab.github.io/wiki/docs/shell">shell</a> access to the cluster</li>
+  <li>Interactive Apps: GUI applications available for HPC account-holders</li>
+</ul>
+
+<h2 id="structure">Structure</h2>
+
+<p>The NDCLab follows the structure listed below.</p>
+
+<p><img src="https://user-images.githubusercontent.com/26397102/122823863-dfbfdb80-d2ad-11eb-94b8-daf9a585f890.png" alt="NDCLab Privilges" /></p>
+
+<p>The left and right diagrams represent the varying read &amp; execute privileges and the write privileges respectively. Each color corresponds to the following group:</p>
+
+<p><img src="https://user-images.githubusercontent.com/26397102/122824230-607ed780-d2ae-11eb-81bc-93011d4569c4.png" alt="colorcode" /></p>
+
+<p>All lab members are part of the NDCLab, but only a select few members are part of a specific project. This results in specific privileges given to select members to ensure data compliance. For example, a lab member has read and execute privileges for any public data on the cluster, but only “Project-A” lab members will be able to read and execute the private section of <code class="language-plaintext highlighter-rouge">data/project-A/</code>.</p>
+
+<p>The main directories – <code class="language-plaintext highlighter-rouge">datasets</code>, <code class="language-plaintext highlighter-rouge">tools</code>, and <code class="language-plaintext highlighter-rouge">analyses</code> – are described below.</p>
+
+<h3 id="datasets">datasets</h3>
+<p>Each project has a directory in this folder to house de-identified and encrypted data.</p>
+
+<p>Project leads, approved project members, and lab staff will have sole read and write access to the entire directory, while external lab members will be able to only view publicly-available data.</p>
+
+<h3 id="tools">tools</h3>
+<p>This folder contains various scripts and software utilized within the lab for organization, preprocessing, and compliance checking.</p>
+
+<h3 id="analyses">analyses</h3>
+<p>Finally, each ongoing project has a folder in the <code class="language-plaintext highlighter-rouge">analyses</code> directory, which contains cleaned datasets, plots, and various statistics.</p>
+:ET

@@ -2,7 +2,7 @@
 layout: default
 title: Matlab
 parent: HPC
-nav_order: 3
+nav_order: 4
 ---
 
 ### Contents

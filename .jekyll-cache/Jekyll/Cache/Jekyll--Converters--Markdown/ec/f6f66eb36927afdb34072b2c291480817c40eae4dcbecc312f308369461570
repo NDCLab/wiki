@@ -1,0 +1,42 @@
+I"Ù<h3 id="contents">Contents</h3>
+<ol>
+  <li><a href="#Running-R">Running R</a>
+    <ol>
+      <li><a href="#Loading-Packages">Packages</a></li>
+      <li><a href="#Modifying-Packages">Adding Packages</a></li>
+      <li><a href="#Running-Scripts">Running</a></li>
+    </ol>
+  </li>
+  <li><a href="#RStudio">RStudio</a></li>
+</ol>
+
+<h2 id="running-r">Running R</h2>
+
+<p>To run scripts in the R programming language using the login node, follow the steps listed below:</p>
+
+<h3 id="packages">Packages</h3>
+
+<p>Located in <code class="language-plaintext highlighter-rouge">/home/data/NDClab/tools/containers/R-4.1.2/</code> is a default container that contains all environment variables and packages requried to run any R script. Below we will explore how we can use this container to run your R script.</p>
+
+<h3 id="packages-1">Packages</h3>
+
+<p>To add a package to this R container, you can access the recipe file named <code class="language-plaintext highlighter-rouge">R.recipe</code>.</p>
+
+<p>On line 85 is a line instructing R to install a number of packages. If you do not see a package required for your code simply add your package name to this list and rebuild the container image in a Linux environment with root access.</p>
+
+<h3 id="running">Running</h3>
+
+<p>To run your R script, execute the following command in your terminal.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh /home/data/NDClab/tools/lab-devOps/scripts/R/rrun.sh &lt;file_name&gt;.R
+</code></pre></div></div>
+
+<p>This will generate an sbatch script, submit it, and return an output to your folder location.</p>
+
+<p>After you initially run <code class="language-plaintext highlighter-rouge">rrun.sh</code>, you should subsequently run the sbatch file generated in your folder via:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbatch &lt;file_name&gt;.sub
+</code></pre></div></div>
+
+<h2 id="rstudio">RStudio</h2>
+:ET

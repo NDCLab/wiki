@@ -1,0 +1,283 @@
+I"F<h3 id="contents">Contents</h3>
+<ol>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#installing-git">Installing Git</a></li>
+  <li><a href="#authenticating-to-github">Authenticating to GitHub</a></li>
+  <li><a href="#notifications">Notifications</a></li>
+  <li><a href="#basic-commands">Basic Commands</a></li>
+  <li><a href="#markdown">Markdown</a></li>
+  <li><a href="#scm-best-practices">SCM Best Practices</a></li>
+  <li><a href="#git-cheat-sheet">Git Cheat Sheet</a></li>
+  <li><a href="#additional-resources">Additional Resources</a></li>
+</ol>
+
+<h2 id="overview">Overview</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Git">Git</a> is an <a href="https://opensource.com/resources/what-open-source">open source</a> version control system. A version control system is a piece of software that allows you to track changes in text files over the development lifetime. <a href="https://en.wikipedia.org/wiki/GitHub">GitHub</a> is an online platform that allows people to host Git repositories (that is, version controlled projects) online so that other team members and community members have easy access to those repositories. GitHub also offers several additional services like issue tracking, actions, and project boards which we use to manage lab projects. Since the lab is dedicated to <a href="https://opensource.com/resources/open-science">open science</a> and all projects are open source, GitHub provides these services for free.</p>
+
+<p>Git is used as the main way to version control projects within our lab. Projects have <a href="https://www.hostinger.com/tutorials/how-to-use-git-branches/">branches</a>, which are similar to sandboxes where a contributor to a project can safely make changes before requesting that their changes be reviewed by a colleague and ultimately added to the main project. Git also provides utilities to display the changes that have been made to a specific branch, show how files have been edited, and output a log of all changes. All changes are tagged with the author and time to help contributors understand how and when a feature (beneficial change) or a fix (change that corrects a problem) was added.</p>
+
+<p>GitHub is where we will store these repositories. There are several alternatives that provide similar features or features that GitHub does not have. The reason that we picked GitHub over its alternatives (like <a href="https://about.gitlab.com/">GitLab</a> or <a href="https://bitbucket.org/">BitBucket</a>) was due to GitHub’s particular feature set, industry and community usage, and available resources, primarily: usage of Git, issues workflow, and first- and third-party project management utilities.</p>
+
+<p>This Git tutorial focuses on using the <a href="https://en.wikipedia.org/wiki/Command-line_interface">command-line
+interface</a> (CLI) tool. We will not be covering any <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI</a> clients because these clients can differ in looks and navigation across operating systems and may be frequently updated whereas the CLI tool has the same interface across operating systems and rarely changes in appearance. (Plus, it’s very handy to know how to use the command line!)</p>
+
+<h2 id="installing-git">Installing Git</h2>
+
+<p><strong>Mac</strong></p>
+
+<ol>
+  <li>Open Terminal, which is your built-in shell. If you haven’t don’t this before, start <a href="https://ndclab.github.io/wiki/docs/technical-docs/shell.html">here</a>.</li>
+  <li>Install Homebrew by following the <a href="https://brew.sh/">instructions on the Homebrew homepage</a> to paste a specific command into your Terminal. (When it asks for your sudo password, input the login password for your Mac and hit <code class="language-plaintext highlighter-rouge">Enter</code>. It won’t look like you are typing anything on the screen, but you are!)</li>
+  <li>Still inside your Terminal, type: <code class="language-plaintext highlighter-rouge">brew install git</code></li>
+  <li>If you encounter issues, check out the <a href="https://git-scm.com/download/mac">main download page</a>, direct from Git.</li>
+</ol>
+
+<p><strong>Windows</strong></p>
+
+<ol>
+  <li>Determine whether your computer is 32-bit or 64-bit. This information is available in your system settings under “About.” If you don’t know where to find this, do some quick googling.</li>
+  <li><a href="https://git-scm.com/download/win">Download</a> the appropriate version for your computer’s system type.</li>
+  <li>Install as you would any other application.</li>
+</ol>
+
+<p><strong>Linux</strong></p>
+
+<p>Use the package manager that comes with your distribution and install <code class="language-plaintext highlighter-rouge">git</code>. See specific instructions <a href="https://git-scm.com/download/linux">here</a>.</p>
+
+<h2 id="authenticating-to-github">Authenticating to GitHub</h2>
+
+<p>When working in the shell and pushing your work to GitHub, GitHub needs to know who you are. This means you must “authenticate” yourself to the platform. You can do this one of three ways:</p>
+<ul>
+  <li>inputting your username and password every time (very onerous and therefore not recommended!)</li>
+  <li>using SSH keys (preferred for the <a href="https://ndclab.github.io/wiki/docs/technical-docs/hpc-doc.html">hpc</a>)</li>
+  <li>creating a personal access token (easiest option for GitHub)</li>
+</ul>
+
+<p>For simplicity, the personal access token is recommended.  Authenticate by following <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">these simple instructions</a>, directly from GitHub.</p>
+
+<p>For details on other authentication options, check out <a href="https://docs.github.com/en/github/authenticating-to-github">this resource page</a>.</p>
+
+<h2 id="notifications">Notifications</h2>
+
+<p>You can control whether GitHub sends you web notifications, e-mail notifications, or both when you are @mentioned inside GitHub. In this way, when someone tags you on GitHub, you will receive an e-mail, and you will also be able to access the message from the 🔔 icon in the top-right corner of the GitHub webpage.</p>
+
+<p>To ensure that you see these messages (especially when you are first learning GitHub), it is recommended that you select both “Email” and “Web and Mobile” under the Notifications tab of your Account Settings.</p>
+
+<h2 id="basic-commands">Basic Commands</h2>
+
+<p>Git has several common commands that will be necessary to properly work with the the lab’s repositories. These are <code class="language-plaintext highlighter-rouge">status</code>, <code class="language-plaintext highlighter-rouge">add</code>, <code class="language-plaintext highlighter-rouge">commit</code>, <code class="language-plaintext highlighter-rouge">push</code>, <code class="language-plaintext highlighter-rouge">pull</code>, and <code class="language-plaintext highlighter-rouge">checkout</code>.</p>
+
+<h3 id="status"><code class="language-plaintext highlighter-rouge">status</code></h3>
+
+<p>This command is your best friend. It will list files and their state within git. Use it often!</p>
+
+<p>Files can either be ignored, untracked, unstaged, or staged. <em>Ignored</em> means that the file satisfies a rule in the <code class="language-plaintext highlighter-rouge">.gitignore</code> file and Git pretends it isn’t there.  <em>Untracked</em> refers to files that Git is not ignoring but have never been committed; this is normal for newly created files. <em>Unstaged</em> files are tracked files that currently have changes but haven’t been placed in the staging area for the next commit. <em>Staged</em> files are ready for the next commit.</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
+
+<h3 id="add"><code class="language-plaintext highlighter-rouge">add</code></h3>
+
+<p>This command will add any file (tracked or untracked) to the staging area for the next commit.</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add some_file.txt
+</code></pre></div></div>
+
+<h3 id="clone"><code class="language-plaintext highlighter-rouge">clone</code></h3>
+
+<p>This command creates a clone of the remote repository on your local machine so that you can make changes (which you will ultimately upload back to the remote repository to share with collaborators).</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># in local folder into which you want the copy the GitHub contents</span>
+git clone &lt;<span class="nb">link </span>to remote repository to be cloned&gt;
+<span class="c"># new folder is added to your local folder</span>
+</code></pre></div></div>
+
+<h3 id="checkout"><code class="language-plaintext highlighter-rouge">checkout</code></h3>
+
+<p>This command changes the contents of the local repository to match the branch that you “checkout”. It will leave changed files untouched so that you can commit them to the branch you are checking out. This is useful when you accidentally made changes to “branch_b” thinking you were on “branch_a”.</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># on branch_b</span>
+git checkout branch_a
+<span class="c"># on branch_a</span>
+<span class="c"># changes were brought over</span>
+</code></pre></div></div>
+
+<h3 id="commit"><code class="language-plaintext highlighter-rouge">commit</code></h3>
+
+<p>This command will commit your changes to the repository. There are two important options for commit <code class="language-plaintext highlighter-rouge">-m</code> (required) and <code class="language-plaintext highlighter-rouge">-a</code> (optional).</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-m</code> is for adding the commit message, which you should always do</li>
+  <li><code class="language-plaintext highlighter-rouge">-a</code> means that git will automatically add any tracked files to the staging are and include in your commit (even if you forgot to add them to the staging area yourself). If you don’t always check <code class="language-plaintext highlighter-rouge">git status</code> before you commit, you may want to use <code class="language-plaintext highlighter-rouge">-a</code> to ensure you don’t leave changes behind.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Staged files: s.txt</span>
+<span class="c"># Unstaged files: u.txt</span>
+<span class="c"># Untracked and unstaged files: uu.txt</span>
+
+<span class="c"># first example</span>
+git commit <span class="nt">-m</span> <span class="s2">"Update s file"</span>
+<span class="c"># Commits only changes for s.txt</span>
+
+<span class="c"># Reset</span>
+<span class="c"># Second example</span>
+git commit <span class="nt">-am</span> <span class="s2">"Update s and u file"</span>
+<span class="c"># Adds u.txt to staging area</span>
+<span class="c"># Commits changes for s.txt and u.txt</span>
+</code></pre></div></div>
+
+<h3 id="push"><code class="language-plaintext highlighter-rouge">push</code></h3>
+
+<p>This command will push all committed changes from your local computer to the remote repository.</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Your working branch is feature-joe</span>
+git push origin feature-joe
+<span class="c"># Changes are uploaded from your local to the remote</span>
+</code></pre></div></div>
+
+<h3 id="pull"><code class="language-plaintext highlighter-rouge">pull</code></h3>
+
+<p>This command will “pull” changes from the remote repository to your local. Pull will try to fetch any new changes and merge them. Generally, as long as you have not diverged from the remote repository this will work fine.</p>
+
+<p>Example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Local repository is behind remote repository but has not diverged</span>
+git pull
+<span class="c"># Git will download new changes and merge them automatically</span>
+</code></pre></div></div>
+
+<h2 id="markdown">Markdown</h2>
+
+<p>GitHub supports <a href="https://en.wikipedia.org/wiki/Markdown">markdown</a>, which allows you format text in text-based .md files so that GitHub renders them beautifully online. The <a href="https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html">Get with Git training</a> includes a module on markdown. Here are some other helpful guides:
+<a href="https://guides.github.com/features/mastering-markdown/">GitHub Guide to Mastering Markdown</a>
+<a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf">GitHub Markdown Cheatsheet</a></p>
+
+<h2 id="scm-best-practices">SCM Best Practices</h2>
+
+<p>When working with Git and GitHub for the lab, remember these best practices for source code management (SCM):</p>
+
+<h3 id="commit-often">Commit often.</h3>
+<p>Don’t make too many changes without commits, since it can be destructive if one change within the commit is bad. Commit often and leave a detailed comment about what part of the code was changed.</p>
+
+<h3 id="check-your-version">Check your version.</h3>
+<p>Make sure you are working on the latest version. Use the latest version to avoid accidentally changing an old version and causing confusion.</p>
+
+<h3 id="be-obsessive-about-note-taking">Be obsessive about note-taking.</h3>
+<p>Make detailed notes/comments about everything you do. This should be 2-3 sentences that thoroughly describe the changes made (what was changed, why it was changed, etc.).</p>
+<blockquote>
+  <p>Example:
+Added indentation on Line 13 for readability.
+Corrected error, changed dog.jpg to dog.jpg on Line 27.</p>
+</blockquote>
+
+<h3 id="review-changes-before-committing">Review changes before committing.</h3>
+<p>Be 100% sure you want to commit the changes made before doing so!</p>
+
+<h3 id="use-branches">Use branches.</h3>
+<p>Work independently but communicate what you are working on by creating a new branch and naming it according to the lab’s nomenclature.</p>
+
+<h3 id="agree-on-a-team-workflow">Agree on a team workflow.</h3>
+<p>Decide with your team who is editing code, what they are editing, and why they are editing. Communicate frequently to stay on track.</p>
+
+<h2 id="git-cheat-sheet">Git Cheat Sheet</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ls</code></td>
+      <td>Checks your current path</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cd</code></td>
+      <td>Change your directory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git branch [BRANCH NAME]</code></td>
+      <td>Creates a new branch</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git checkout [BRANCH NAME]</code></td>
+      <td>To actually enter a branch</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git status</code></td>
+      <td>Checks what branch you’re on. Also tells you if any changes were made to a file (i.e any unstaged changes, new commits)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git add [PATH OF FILE(S) LOCATION]</code></td>
+      <td>Adds contents to the staging area</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git commit -m "[MESSAGE]"</code></td>
+      <td>Commits a change (check out the lab’s conventions for commit messages <a href="https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#github">here</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">git push origin [BRANCH NAME]</code></td>
+      <td>Pushes branch to the remote</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>General steps to make edits and push to GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1. Clone the repository you wish to work on, and place it in a good location</td>
+    </tr>
+    <tr>
+      <td>2. Change your directory to where you wish to work</td>
+    </tr>
+    <tr>
+      <td>3. <code class="language-plaintext highlighter-rouge">git branch [BRANCH NAME]</code></td>
+    </tr>
+    <tr>
+      <td>4. <code class="language-plaintext highlighter-rouge">git checkout [BRANCH NAME]</code></td>
+    </tr>
+    <tr>
+      <td>5. Start working on files you wish to edit</td>
+    </tr>
+    <tr>
+      <td>6. Use <code class="language-plaintext highlighter-rouge">git status</code> to check that the edits are being documented</td>
+    </tr>
+    <tr>
+      <td>7. <code class="language-plaintext highlighter-rouge">git add [PATH OF FILE(S) LOCATION]</code> in order to stage the changes</td>
+    </tr>
+    <tr>
+      <td>8. <code class="language-plaintext highlighter-rouge">git commit -m "[MESSAGE ABOUT CHANGES]"</code></td>
+    </tr>
+    <tr>
+      <td>9. <code class="language-plaintext highlighter-rouge">git push origin [BRANCH NAME]</code></td>
+    </tr>
+    <tr>
+      <td>10. Submit a pull request physically in GitHub</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For a downloadable version of this cheat sheet, navigate to this <a href="https://gist.github.com/emach039/832589670796828c230d2fd0f477ca4f">link</a>.</p>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<p>There are hundreds of Git resources available online. If you get stuck, do some targeted Googling. If you still can’t find what you’re looking for, ask your labmates in #tech.</p>
+:ET

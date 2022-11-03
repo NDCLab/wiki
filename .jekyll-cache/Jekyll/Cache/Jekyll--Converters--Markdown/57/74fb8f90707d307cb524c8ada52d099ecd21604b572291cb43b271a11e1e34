@@ -1,0 +1,990 @@
+I";Z<h3 id="lab-director">Lab Director</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/buzzell.jpg" alt="buzzell" /></th>
+      <th>Dr. George Buzzell</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>he/him/his</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>georgebuzzell</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>gbuzzell@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>George is interested in cognitive control, particularly as it relates to social anxiety. His work focuses on EEG methods.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>eating avocados</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="lab-manager">Lab Manager</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/alexander.jpg" alt="alexander" /></th>
+      <th>Jess Alexander</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Austin, TX</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>jessb0t</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>jalexand@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Jess is interested in the neural, cognitive, and behavioral underpinnings of emotion and language.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>I’m an avid runner, I love to travel, and I play the piano.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="lab-technician">Lab Technician</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/saidmuratov.jpg" alt="saidmuratov" /></th>
+      <th>Farukh Saidmuratov</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>he/him/his</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Troy, NY</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>F-said</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Farukh is interested in computational models of cognition.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>baking, eating what I bake, <a href="https://github.com/F-said/march-madness-predict">amateur data science</a>, and gardening</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="graduate-students">Graduate Students</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hosseini.jpg" alt="hosseini" /></th>
+      <th>Kianoosh Hosseini</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>he/him/his</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>Kianooshhosseini</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>khoss005@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Kianoosh is interested in studying the underlying neural and cognitive processes involved in cognitive control and their development, using neuroimaging techniques (fMRI, EEG) with various computational and behavioral methods.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>Playing strategic video games and bike-riding</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/stibolt.jpg" alt="stibolt" /></th>
+      <th>Olivia Stibolt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>ostibolt</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>ostib001@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Olivia is interested in using EEG to investigate the neural mechanisms of cognitive control and the influence of anxiety on post-error behavior.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>Painting nails, DnD, and riding horses</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/winters.jpg" alt="winters" /></th>
+      <th>Alycia Winters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>AlyciaWinters</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>awint016@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Alycia is interested in the role of stress and trauma in shaping trajectories of cognitive control development and social behavior.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>Drawing, DnD, video games, and learning about history</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="graduate-student-affiliates">Graduate Student Affiliates</h3>
+
+<h3 id="senior-research-assistants">Senior Research Assistants</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/machado.jpg" alt="machado" /></th>
+      <th>Emily Machado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>emach039</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>emach039@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Emily is interested in understanding the effect mental health has on cognitive performance.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>sleeping, drawing, skincare, fashion, video games</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/malykke.jpg" alt="malykke" /></th>
+      <th>Sarah Malykke</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>SarahMalykke</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>smaly002@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Sarah is interested in research on the phenomenon of choking under pressure and aims to understand what brain systems support excellent performance.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>taekwondo, traveling, and of course napping</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/polyanskaya.jpg" alt="polyanskaya" /></th>
+      <th>Arina Polyanskaya</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>apoly1</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>apoly003@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Investigating the possible link between social anxiety and cognitive control performance.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>Traveling, hiking, camping, dancing, cooking/eating food, and anything else I would be introduced to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg" alt="lopez-nunez" /></th>
+      <th>Ana Lopez-Nunez</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>anaNDClab</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>painting, drawing, and watching crime documentaries.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="senior-research-technicians">Senior Research Technicians</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/niu.jpg" alt="niu" /></th>
+      <th>Yanbin Niu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Xi’an, CHN</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>yanbin-niu</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>yn2352@tc.columbia.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Yanbin is interested in social and emotional development, as well as the underlying neurocognitive mechanisms.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>LEGO and coffee</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="junior-research-assistants">Junior Research Assistants</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/bailey.jpg" alt="bailey" /></th>
+      <th>Nicole Bailey</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>nbail021</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>nbail021@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Nicole is interested in examining the relationship between cognitive function and social behavior using EEG methods.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>Working out, traveling, playing with my dog.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/charest.jpg" alt="charest" /></th>
+      <th>Sophia Charest</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>sophiacharest</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>schar107@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>Clay sculpting, listening to music, watching basketball, nails/fashion</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/chow.jpg" alt="chow" /></th>
+      <th>Ada Chow-Franjul</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Cutler Bay, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>achow027</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>achow027@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Ada is interested in the cognitive and psychological relationship with social anxiety in adolescence.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>roller skating at the park, traveling, working out and watching the sunrise/sunset</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/dickinson.jpg" alt="dickinson" /></th>
+      <th>Renata Dickinson</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>renatadickinson</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>rdick014@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Renata’s research interests are in developmental and behavioral psychology.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>Snorkeling, learning new recipes, watching movies, dancing, fashion</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/duncombe.jpeg" alt="duncombe" /></th>
+      <th>Anfernee Duncombe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Freeport, The Bahamas</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>adunc018</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>Writing, rewatching the same 5 shows, baking</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/fischer.jpg" alt="fischer" /></th>
+      <th>Aitana Fischer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>AitanaFischer</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>afisc020@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Aitana is interested in the relationship between cognition and behavior, and its interrelation with mental illness.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>reading, singing, playing guitar</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gallardo.JPG" alt="gallardo" /></th>
+      <th>Laura Gallardo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>laurag049</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>lgall049@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Laura is interested in the effects of social anxiety on cognition.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>Trying new foods, boxing, watching movies</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/garciamorazzani.jpg" alt="garciamorazzani" /></th>
+      <th>Ana Garcia Morazzani</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>Ana Garcia Morazzani</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>agarc884@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Ana is interested in psychopharmacology, sleep, and metacognition.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>playing the guitar, dj mixing, drawing, being outdoors.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/guerra.jpg" alt="guerra" /></th>
+      <th>Karen Guerra</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>1karenguerra</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>kguer039@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Karen is interested in how our lifestyles affect our genetic expression (epigenetics) and and how they influence our neural circuits</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>(attempting to) lift heavy things in the gym, traveling, reading, tiktok aficionado, baking and learning new languages.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/khouly.jpg" alt="khouly" /></th>
+      <th>Isabel Khouly</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>isabelkhouly</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>ikhou001@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Isabel is interested in the effects of exercise on human cognition and behavior</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>running, journaling, and cleaning</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/paduajimenez.jpg" alt="padua-jimenez" /></th>
+      <th>William Padua Jimenez</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>he/him/his</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>Wpadua</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>wpadu001@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>William is intrested in Performance control within athletes, and stem cell research</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>working out, investing, learning, playing video games</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/roch-hernandez.jpg" alt="roch-hernandez" /></th>
+      <th>Sebastian Roch-Hernandez</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>he/him/his</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>SebaRoch-H1</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>sroch015@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Sebastian is interested in the physiological effects music has on human cognition and behavior.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>Playing guitar, reading, trying to learn random things.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguez.jpg" alt="rodriguez" /></th>
+      <th>Brittney Rodriguez</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Huntsville, AL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>brod0512</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>britrodr@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Brittney is interested in the effects of substances in child and adolescent cognition.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>drinking coffee, traveling and working out</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguezdelgado.jpg" alt="rodriguez-delgado" /></th>
+      <th>Carlos Rodriguez Delgado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>he/him</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>carlosndc</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>crodr644@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Carlos is interested in the use of psilocybin in clinical contexts to treat depression and anxiety as well as the dopamine pathways and how they contribute to discipline development.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>weightlifting, cooking, fishing, and hiking.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/mrodriguez.jpg" alt="mrodriguez" /></th>
+      <th>Maria Rodriguez</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>mrodr1326</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>mrodr1326@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Maria is interested in examining the cognitive functions of mental illness.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>working out, reading, and binging TV shows</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/weber.jpg" alt="weber" /></th>
+      <th>Lauren Weber</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>she/her/hers</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Miami, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>laurenweberr</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>lwebe013@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>water sports, working out, traveling, tennis, and watching documentaries</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="junior-research-technicians">Junior Research Technicians</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez.jpg" alt="lopez" /></th>
+      <th>Brandon Lopez</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pronouns</td>
+      <td>he/him/his</td>
+    </tr>
+    <tr>
+      <td>location</td>
+      <td>Homestead, FL</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td>blope118</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>blope118@fiu.edu</td>
+    </tr>
+    <tr>
+      <td>research interests</td>
+      <td>Brandon is interested in developing computational tools to assist researchers.</td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>playing video games, playing basketball, and drawing</td>
+    </tr>
+  </tbody>
+</table>
+:ET

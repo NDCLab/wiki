@@ -1,0 +1,86 @@
+I"f<h1 id="joining-slack">Joining Slack</h1>
+<p>The NDCLab Slack workspace is the primary communication platform in the lab.  Here is what you need to know to get set up and use the platform effectively.  This wiki page covers how to:</p>
+
+<ol>
+  <li>Join the workspace.</li>
+  <li>Decide if you’ll use the app or the browser.</li>
+  <li>Customize your profile.</li>
+  <li>Learn the etiquette.</li>
+  <li>Introduce yourself to the team!</li>
+</ol>
+
+<h2 id="invitation">Invitation</h2>
+<p>As an incoming lab member, you will receive an invitation to join the Slack workspace.  You will need to manage your own login and password.</p>
+
+<h2 id="browser-v-app">Browser v. App</h2>
+<p>You can either connect to the workspace in a browser, like Chrome, or download the application (to your desktop, laptop, or mobile device).  For lab purposes, there is no preference: just pick the option you like best.</p>
+
+<h2 id="your-user-profile">Your User Profile</h2>
+<p>You can edit your profile by following the instructions <a href="https://slack.com/help/articles/204092246-Edit-your-profile">here</a>.  Please include all of the following:<br />
+    <strong>Profile Photo:</strong> Please include either a picture or an avatar of your fabulous face!<br />
+    <strong>Full Name:</strong> This is your first and last name(s).<br />
+    <strong>Display Name:</strong> Please use the name you prefer people call you, plus your last name.<br />
+    <strong>What I Do:</strong> Share your role (Junior Research Assistant, Senior Research Tech, etc.)<br />
+    <strong>Phone Number:</strong> Include your number.  We don’t make a lot of phone calls, but just in case we ever need to get in touch in a hurry.  Know that only active lab members have access to this information.<br />
+    <strong>Time Zone:</strong> Not everyone is in Miami, so input your time zone to let the team know where you are.</p>
+
+<h2 id="channels">Channels</h2>
+<p>You have been automatically added to the following Slack channels:<br />
+<strong>#general</strong>: this is our main “meeting place” for the lab at large<br />
+<strong>#from-george</strong>: this is where George communicates important messages to the whole lab<br />
+<strong>#tech</strong>: this is where tech solutions happen, post your problems and help your labmates with theirs</p>
+
+<p>In addition, if you will be assigned to an active project, the lab manager will add you to the appropriate project channel.</p>
+
+<p>The NDCLab is an open lab, so you have access to all channels that you wish to join.</p>
+
+<h2 id="etiquette">Etiquette</h2>
+<ul>
+  <li><strong>DON’T</strong> use e-mail. All lab communication happens on Slack; we don’t use e-mail for lab-internal communications.</li>
+  <li><strong>DO</strong> feel free to <a href="https://slack.com/help/articles/205239967-Join-a-channel">join other channels</a> if you want to see what is going on elsewhere in the lab. This is an open lab, after all! But be careful that you don’t create too much “noise” for yourself; you don’t want to miss any important communications about your project or that every lab member needs to know. We suggest that you <a href="https://slack.com/help/articles/204411433-Mute-channels-and-direct-messages">mute channels</a> that you aren’t involved in.</li>
+  <li><strong>DO</strong> check that you get notifications for @mentions. You have several options on Slack, so <a href="https://slack.com/help/articles/360025446073-Guide-to-Slack-notifications">do your homework</a> and set it up in a way that works for you.</li>
+  <li><strong>DON’T</strong> worry about sending messages at weird hours. There is no “right” or “wrong” time to send a message on Slack. Our team spans the globe. So send whenever you want to. But never feel obligated to respond to Slack message during evening/weekend hours just because someone else was burning the midnight oil.</li>
+  <li><strong>DON’T</strong> jump on your phone to respond to a Slack message at midnight, but <strong>DO</strong> check Slack regularly and respond within one weekday to any incoming message.</li>
+  <li><strong>DO</strong> be intentional about which channel you choose to post a given message within and/or whether to use a DM. For example, project-related conversations (even if only between two people!) should always be posted within the relevant project channel.</li>
+  <li><strong>DO</strong> feel free to update your <a href="https://slack.com/help/articles/201864558-Set-your-Slack-status-and-availability">Slack status</a> to let your labmates know when you’re available. For instance, you can update your status to “out sick” if you are feeling unwell and won’t be responsive to messages. This lets your team know when you will be unavailable to respond.</li>
+</ul>
+
+<h2 id="say-hi">Say Hi!</h2>
+<p>Now that you’re all set up, say “Hi!” to the team on #general! We can’t wait to meet you!</p>
+
+<h2 id="learn-the-lingo">Learn the Lingo</h2>
+<p>We love emojis and reacjis here at the lab. But some of them are really special. Here is a helpful guide!</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">emoji</th>
+      <th style="text-align: left">shortcode</th>
+      <th style="text-align: left">origin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-comp.png" alt="ham-comp" /></td>
+      <td style="text-align: left">ham-comp</td>
+      <td style="text-align: left">The lab’s first in-person training included an overview of the HPC. Farukh, the lab tech, used this image of a hamster at a computer to denote interactive activities during the training.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-cage.jpg" alt="ham-cage" /></td>
+      <td style="text-align: left">ham-cage</td>
+      <td style="text-align: left">As part of that same training, the caged hamster was used to denote restricted access on the HPC.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/ham-wild.png" alt="ham-wild" /></td>
+      <td style="text-align: left">ham-wild</td>
+      <td style="text-align: left">Likewise, the wild hamster was used to denote full access on the HPC.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/slack-emojis/amblyrhynchus.jpg" alt="amblyrhynchus" /></td>
+      <td style="text-align: left">amblyrhynchus</td>
+      <td style="text-align: left">The Real World Errors project involves reading aloud passage from Darwin’s <em>Voyage of the Beagle</em>. One of the passages talks about the amblyrhynchus, which is a marine iguana from the Galapagos. Participants quite naturally have a hard time with that one…</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

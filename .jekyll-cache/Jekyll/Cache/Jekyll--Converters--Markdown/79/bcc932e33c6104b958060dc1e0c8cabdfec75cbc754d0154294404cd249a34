@@ -1,0 +1,17 @@
+I"§<h2 id="antivirus">Antivirus</h2>
+<p>Data security is of utmost importance. All members of the NDCLab are expected to install, and maintain up-to-date, an appropriate antivirus program on their computer prior to connecting the the FIU HPC.</p>
+
+<p>If you are unsure of which antivirus program to install, visit <a href="https://www.cnet.com/">CNET</a>, which has reviews for various options. Select an antivirus program that has received favorable reviews from CNET. Free programs are encouraged, provided that the reviews are favorable. Note that FIU recommend AVG for Mac.</p>
+
+<h2 id="gaining-access">Gaining Access</h2>
+<p>All members of the NDCLab receive access to the lab folder on the FIU HPC. The lab manager, who is responsible for coordinating your access request, will need your FIU e-mail and Panther ID.</p>
+
+<p>At any time during the onboarding process, you may attend the HPC Onboarding training:<br />
+<strong>When:</strong> every Tuesday, 11 am - 12 noon EST<br />
+<strong>Where:</strong> http://fiu.zoom.us/my/cassian</p>
+
+<p>You must attend the training session before you begin using the HPC.</p>
+
+<h2 id="hpc-structure">HPC Structure</h2>
+<p>Once access is granted to the HPC, you will only be able to read and modify contents within folders that correspond to your role within the lab. For more information on the HPC, see <a href="https://ndclab.github.io/wiki/docs/technical-docs/hpc-doc.html">this in-depth page</a>.</p>
+:ET

@@ -1,0 +1,23 @@
+I"Q
+<h2 id="overview">Overview</h2>
+<p>Following a successful interview, a new lab member will be invited to join the internal lab team. The various onboarding steps are outlined below. Some must be completed by the incoming lab member while others are completed by the lab manager or PI. The incoming lab member should, however, be proactive wherever possible and should not hesitate to follow up with the lab manager if they have questions about their onboarding status.</p>
+
+<h2 id="lab-access">Lab Access</h2>
+<p>All lab members are given access to the following:</p>
+<ol>
+  <li><strong>Slack:</strong> The lab manager will send the incoming member an invite to join the <a href="https://ndclab.github.io/wiki/docs/Onboarding/slack-setup.html">NDCLab Slack workspace</a> and ensure that they are invited to the appropriate channels.</li>
+  <li><strong>Lab meeting:</strong> The lab manager will send the incoming member an invite to join the weekly lab meeting, held on Zoom.</li>
+  <li><strong>Lab calendar:</strong> The lab manager will grant the incoming member access to view the <a href="https://ndclab.github.io/wiki/docs/around-the-lab/lab-meeting.html">lab calendar</a>.</li>
+  <li><strong>Google Drive:</strong> The lab manager will send the incoming member an invite to access the lab’s Google Drive folder.</li>
+  <li><strong>GitHub:</strong> New lab members should work through the <a href="https://ndclab.github.io/wiki/docs/Onboarding/accessing-hpc.html">“Get with Git” mini-training program</a> so that they are comfortable working with the lab’s GitHub repositories. This is self-paced and can be started at any time.</li>
+</ol>
+
+<h2 id="hpc-access">HPC Access</h2>
+<p>The lab manager will request HPC access for the incoming lab member. The incoming lab member should schedule a time to attend the <a href="https://ndclab.github.io/wiki/docs/Onboarding/accessing-hpc.html">HPC Onboarding training</a>, currently held every Tuesday from 11 am - 12 noon EST.</p>
+
+<h2 id="ccf-access">CCF Access</h2>
+<p>Not all lab members are onboarded to the CCF; onboarding depends on the individual’s role within the lab and the resources to which they will need access. The lab manager will inform the incoming lab member if access is required and will initiate the <a href="https://ndclab.github.io/wiki/docs/Onboarding/ccf-access.html">CCF onboarding process</a>.</p>
+
+<h2 id="project-access">Project Access</h2>
+<p>Once the incoming lab member has been onboarded to the lab (and the CCF, as required), the lab manager will introduce the newest member to their assigned project lead, who will onboard them to the project.</p>
+:ET

@@ -1,0 +1,23 @@
+I"<h2 id="lab-calendar">Lab Calendar</h2>
+
+<p>The lab maintains a shared Google calendar, to which lab members are granted access during <a href="https://ndclab.github.io/wiki/docs/Onboarding/overview.html">formal onboarding</a>. This calendar provide a broad view into ongoing lab activities.</p>
+
+<h2 id="weekly-lab-meeting">Weekly Lab Meeting</h2>
+
+<p>A one-hour lab meeting is held weekly. All lab members are encouraged to attend, but attendance is not mandatory for junior members. All lab meetings are recorded so that they can be attended asynchronously.</p>
+
+<ul>
+  <li>Agendas are posted the week prior on GitHub.</li>
+  <li>The lab manager messages on the Slack #general channel, starting with: <code class="language-plaintext highlighter-rouge">Lab Meeting | yyyy-mm-dd</code>; this post includes a link to the GitHub agenda.</li>
+  <li>Following the meeting, the lab manager adds meeting notes and a link to the meeting recording on the same thread.</li>
+  <li>The lab manager’s posts for the most recent lab meeting and the next upcoming meeting are always pinned to the #general channel in Slack.</li>
+  <li>Older posts can be found by searching within Slack:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lab meeting in:#general
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="other-meetings">Other Meetings</h2>
+
+<p>The lab director, lab manager, lab technician, and project leads may schedule activities on the lab calendar. Only required attendees should receive individual invites to such meetings, so that they also appear on the individual’s personal calendar. However, since all lab members have access to the calendar, they can see the existence of any upcoming meeting and request to join in, if so desired.</p>
+:ET

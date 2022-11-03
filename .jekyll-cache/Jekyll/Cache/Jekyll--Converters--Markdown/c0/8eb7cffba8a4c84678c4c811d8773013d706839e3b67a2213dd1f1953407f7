@@ -1,0 +1,397 @@
+I"4U<h3 id="contents">Contents</h3>
+<ol>
+  <li><a href="#overarching-philosophy">Overarching Philosophy</a></li>
+  <li><a href="#general-naming-guidance">General Naming Guidance</a></li>
+  <li><a href="#code">Code</a></li>
+  <li><a href="#github">GitHub</a></li>
+  <li><a href="#redcap">REDCap</a></li>
+  <li><a href="#psychopy-and-pavlovia">PsychoPy and Pavlovia</a></li>
+  <li><a href="#helpful-resources">Helpful Resources</a></li>
+</ol>
+
+<h2 id="overarching-philosophy">Overarching Philosophy</h2>
+
+<p>All naming conventions for the NDCLab are designed to be:</p>
+<ul>
+  <li>human-friendly (that is, they are descriptive and help us navigate all our projects)</li>
+  <li>machine-friendly (that is, they make it easy for us to use automated search methods to find what we want in the shortest time possible)</li>
+  <li>philosophically aligned with current conventions in the open science community</li>
+</ul>
+
+<h3 id="human-friendly">Human-friendly</h3>
+<p>We spend a lot of time looking at a computer screen. So we should use conventions that make things easier on our eyes. Here are some top guidelines to assist:<br /></p>
+<ul>
+  <li>Get used to using lowercase letters for naming things (with a teensy exception for the occasional camelCase)–this means you never have to wonder what to capitalize because you never capitalize anything!</li>
+  <li>Build names out of “chunks,” which are separated by an underscore (see below for examples).</li>
+  <li>Within a chunk, separate words with a hyphen for easy reading (again, teensy exception for camelCase when space is at a premium).</li>
+  <li>Use deliberate repetition to enable efficient searching across projects and over time.</li>
+</ul>
+
+<h3 id="machine-friendly">Machine-friendly</h3>
+<p>Don’t confuse the machines. Recognize how computers order things by default (numerically and alphabetically) and avoid feeding them filename cryptonite. Never use:<br />
+:x: spaces<br />
+:x: accented characters (ñöé, etc.)<br />
+:x: special characters (?!:*+, etc.)<br /></p>
+
+<h3 id="open-science-conventions">Open Science Conventions</h3>
+<p>Our basic conventions are largely based on established standards in psychology and neuroscience, including <a href="https://bids.neuroimaging.io/">BIDS</a> and <a href="https://www.go-fair.org/fair-principles/">FAIR</a> principles. See the helpful resources at the bottom of this page for other useful links.</p>
+
+<h2 id="general-naming-guidance">General Naming Guidance</h2>
+
+<h3 id="project-names">Project Names</h3>
+
+<p>Project names should be informative but concise. Words are separated by hyphens. All project names begin with a lowercase letter. Examples:</p>
+
+<blockquote>
+  <p>social-flanker-eeg-dataset<br />
+social-flanker-eeg-alpha</p>
+</blockquote>
+
+<p>In some situations, space may be limited. In such cases, hyphens may be replaced with camelCase. Examples:</p>
+
+<blockquote>
+  <p>brainBox<br />
+baseEEG</p>
+</blockquote>
+
+<p>Dataset projects <strong>always</strong> end with “-dataset”:</p>
+<blockquote>
+  <p>social-flanker-eeg-dataset<br />
+readAloud-valence-dataset
+putt-putt-dataset</p>
+</blockquote>
+
+<p>Analysis projects associated with a given dataset share the first portion of their project name.  The very first analysis (that is, the main analysis planned at the time of data collection) is typically denoted “-alpha.”  (Rare exceptions are made for the sake of playful language.)</p>
+<blockquote>
+  <p>social-flanker-eeg-alpha<br />
+readAloud-valence-alpha&gt;br/&gt;
+putt-putt-miss</p>
+</blockquote>
+
+<p>Spin-off analyses retain the first portion of the project name, but utilize an informative suffix:</p>
+<blockquote>
+  <p>social-flanker-eeg-multicultural<br />
+readAloud-valence-ddm&gt;br/&gt;</p>
+</blockquote>
+
+<p>Given that future data collection spin-offs of a project are common, yet hard to predict, there is no particular effort made to associate data collection efforts in their nomenclature. For example, readAloud-valence-dataset is, philosophically, a spin-off of rwe-dataset, but this is not reflected in the nomenclature.</p>
+
+<p>Project names are used as top-level folder names on GitHub, REDCap, the HPC, and Google Drive.</p>
+
+<h3 id="folder-names">Folder Names</h3>
+
+<p>The re-use of top-level folder names across projects and platforms is encouraged to simplify navigation. For instance, on the HPC, all active projects have a “sourcedata/raw” folder used for the storage of incoming data from study participants.</p>
+
+<p>Three main paradigms are employed in establishing folder naming conventions for a particular context; the choice depends upon the particular context and use case:</p>
+
+<p><strong>simple name</strong></p>
+<blockquote>
+  <p>sourcedata/<br />
+code/</p>
+</blockquote>
+
+<p><strong>chronological ordering</strong></p>
+<blockquote>
+  <p>2021-08-13_nsf_buzzell_theta-development/<br />
+2021-10-05_nimh_buzzell_theta-dev-anxiety/</p>
+</blockquote>
+
+<p><strong>logical ordering</strong></p>
+<blockquote>
+  <p>01_design/<br />
+02_protocols/<br />
+03_recruitment/<br /></p>
+</blockquote>
+
+<p>If using logical ordering, left pad your numbers with zeros, as in the examples above. Since many computer programs order items starting with the first character, this left-padding ensures that “10” actually comes after “09.”</p>
+
+<h3 id="file-names">File Names</h3>
+
+<p>No two files should share an identical name. Ever.</p>
+
+<p>File names should be built in “chunks.”  Examples of potential chunks:</p>
+
+<ul>
+  <li>date</li>
+  <li>project name</li>
+  <li>a reflection on the document’s unique content (e.g. a particular analysis or write-up)</li>
+</ul>
+
+<p>For example, here are some good file names:</p>
+<blockquote>
+  <p>2021-06-01_social-context-alpha_prelim-analysis_anxiety<br />
+2021-06-30_social-context-alpha_prelim-analysis_exec-function</p>
+</blockquote>
+
+<p>Alternately, if all files are stored within a space specific to the social-context-alpha project and you don’t need to track chronology, you could use:</p>
+<blockquote>
+  <p>01_anxiety_methods<br />
+02_anxiety_analysis<br />
+03_anxiety_results</p>
+</blockquote>
+
+<h3 id="dates-yyyy-mm-dd">Dates (YYYY-MM-DD)</h3>
+
+<p>Whenever dates are used, the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> convention is used to avoid any ambiguity.  Examples:</p>
+
+<blockquote>
+  <p>1905-09-27 (<a href="https://www.astro.puc.cl/~rparra/tools/PAPERS/e_mc2.pdf">This paper</a> was published on this date.)<br />
+2020-03-11 (The WHO made an <a href="https://www.who.int/director-general/speeches/detail/who-director-general-s-opening-remarks-at-the-media-briefing-on-covid-19---11-march-2020">important statement</a> on this date.)</p>
+</blockquote>
+
+<h2 id="code">Code</h2>
+
+<p>In general, all lab code should align with the conventions used in <a href="https://www.python.org/dev/peps/pep-0008/#naming-conventions">PEP 8</a> and <a href="https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#file-name-structure">BIDS</a>. Always use descriptive names that will help others understand your code. Additional information on programming standards is available on the <a href="https://ndclab.github.io/wiki/docs/etiquette/programming-standards.html">associated wiki page</a>.</p>
+
+<h3 id="function-and-method-names">Function and Method Names</h3>
+
+<p>Wherever possible, functions and methods should be re-used across programs when referring to the same thing. For naming them, <code class="language-plaintext highlighter-rouge">lowercase_with_underscores</code> is used. Example:</p>
+<blockquote>
+  <p>def round_sum (num_1, num_2):<br />
+    return math.round(num_1+num_2)</p>
+</blockquote>
+
+<p>In special circumstances where names are too long, <code class="language-plaintext highlighter-rouge">camelCase</code> can be used.</p>
+
+<h3 id="class-names">Class Names</h3>
+
+<p><code class="language-plaintext highlighter-rouge">UpperCamelCase</code> is used for class names. Example:</p>
+<blockquote>
+  <p>class ImageSprite</p>
+</blockquote>
+
+<h3 id="constants">Constants</h3>
+
+<p><code class="language-plaintext highlighter-rouge">CAPITALIZED_WITH_UNDERSCORES</code> is used for constants. Example:</p>
+<blockquote>
+  <p>MAX_PARTICIPANTS = 10</p>
+</blockquote>
+
+<h3 id="variable-names">Variable Names</h3>
+
+<p>For naming variables, <code class="language-plaintext highlighter-rouge">lowercase_with_underscores</code> is also used. Example:</p>
+<blockquote>
+  <p>subject_name = “bob”</p>
+</blockquote>
+
+<h2 id="github">GitHub</h2>
+
+<h3 id="repository-names">Repository Names</h3>
+<p>Tool repositories should be named identically to the associated project. For example:</p>
+
+<blockquote>
+  <p>pepper-pipeline</p>
+</blockquote>
+
+<p>Dataset repositories should include the project name and a “-dataset” marker. For example:</p>
+
+<blockquote>
+  <p>social-context-dataset<br />
+putt-putt-dataset</p>
+</blockquote>
+
+<p>Analysis repositories that rely upon an NDCLab dataset should reference the name of the associated dataset. For example:</p>
+
+<blockquote>
+  <p>social-context-alpha<br />
+putt-putt-miss</p>
+</blockquote>
+
+<p>Analysis repositories that rely upon an external dataset can use a descriptive name. For example:</p>
+
+<blockquote>
+  <p>adult-pre-post-theta</p>
+</blockquote>
+
+<p>See detailed <a href="#general-naming-guidance">notes above</a> about regarding project names.</p>
+
+<h3 id="branch-names">Branch Names</h3>
+<p>By default, repositories have a <code class="language-plaintext highlighter-rouge">main</code> branch and a <code class="language-plaintext highlighter-rouge">dev</code> branch. New branches are created from the <code class="language-plaintext highlighter-rouge">dev</code> branch and are named:</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">dev-[feature]</code></p>
+</blockquote>
+
+<p>For example, if Bob creates a new branch to create stimuli for an experiment, he would call it:</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">dev-stimuli</code></p>
+</blockquote>
+
+<p>If only a single individual is working on development of a given feature, then a single feature branch, as named above, will suffice. However, if multiple individuals are working on the same feature branch, then each individual’s work should occur within sub-branches that are created from the <code class="language-plaintext highlighter-rouge">dev-[feature]</code> branch. For example, if Alice wants to help Bob with the <code class="language-plaintext highlighter-rouge">dev-stimuli</code> branch, she would create a new branch from <code class="language-plaintext highlighter-rouge">dev-stimuli</code> and call it:</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">dev-stimuli-alice</code></p>
+</blockquote>
+
+<p>Additionally, when Alice creates her new branch off <code class="language-plaintext highlighter-rouge">dev-stimuli</code>, Bob should also create a branch off <code class="language-plaintext highlighter-rouge">dev-stimuli</code> and call it:</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">dev-stimuli-bob</code></p>
+</blockquote>
+
+<p>(Note there are two exceptions to the above branch naming rules. The first is the wiki, which does not have a <code class="language-plaintext highlighter-rouge">dev</code> branch, and new branches are created directly off <code class="language-plaintext highlighter-rouge">main</code> according to the convention <code class="language-plaintext highlighter-rouge">[feature]-[yourname]</code>. The second exception applies to external collaborators, who do not have push access to a given NDCLab repo and therefore must make all contributions following a “fork and pull” model. For such external collaborators, branch naming rules still apply, with the exception that it is not necessary to append the external collaborator’s name to the branch that lives, by definition, on the personal repository of the external collaborator.)</p>
+
+<h3 id="commit-messages">Commit Messages</h3>
+<p>Git commit messages (specifically, the commit subject line) should be concise, informative, and in the imperative tense. There is no final period.<br /></p>
+
+<p>:white_check_mark: Correct typo<br />
+:white_check_mark: Add counterbalancing content<br />
+:white_check_mark: Optimize function X<br />
+:x: Fix<br />
+:x: Re-wrote the entire script so now it works right<br />
+:x: added a feature.</p>
+
+<p>When useful, a full explanation should be added after the subject line. Example:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">git commit -m "Add full commit message details" -m "Expanded guidance on commit messages to include full commit messages beyond the commit subject line."</span>
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_full-commit.png" alt="gh_full-commit" /></p>
+
+<p>The seven great rules of commit messages make for easy reading <a href="https://chris.beams.io/posts/git-commit/">here</a>.</p>
+
+<h2 id="redcap">REDCap</h2>
+
+<h3 id="project-names-1">Project Names</h3>
+<p>REDCap houses participant questionnaires for a given study. Due to limitations on modifying REDCap projects once data has been collected, changes to the set of questionnaires (including corrections to any existing questionnaire, addition of a new questionnaire, or deletion of a questionnaire) are handled by creating a new REDCap project. Each REDCap project utilizes the NDCLab project name, but is front-ended by the version information. For example:</p>
+
+<blockquote>
+  <p>202201v0_readAloud-valence-dataset<br />
+202203v0_social-flanker-dataset</p>
+</blockquote>
+
+<p>The first six digits indicate the year and month when the REDCap project was setup. The number after the letter “v” indicates the specific release within that month. In most cases, projects with by “v0.” However, in the event that a revision to REDCap is made twice within the same month, the first release is “v0” and the second is “v1.”</p>
+
+<h3 id="instrument-names">Instrument Names</h3>
+<p>Each element within REDCap is an “instrument.” These should be named:</p>
+<blockquote>
+  <p>instrument_sX_rX_eX</p>
+</blockquote>
+
+<p>Where:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">instrument</code> is the name of the instrument/survey/questionnaire, limited to 10 characters.</li>
+  <li><code class="language-plaintext highlighter-rouge">sX</code> is the <strong>session</strong> number to distinguish across different time points of a longitudinal study. Sessions typically occur several weeks to years apart.</li>
+  <li><code class="language-plaintext highlighter-rouge">rX</code> is the <strong>run</strong> number to distinguish logical groupings of data collection within a particular session. Runs can occur on the same day or can occur several days apart.</li>
+  <li><code class="language-plaintext highlighter-rouge">eX</code> is the <strong>event</strong> number to distinguish repeated use of the instrument before and after an experimental manipulation within a given run.</li>
+</ul>
+
+<p>In the above, “X” is replaced by a numerical value (1, 2, 3) to indicate the ordering of data collection.  For instance, in a longitudinal study, a pre-task questionnaire to establish the “initial state” of a participant is employed. Each instrument employed is numbered distinctly:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>instrument</th>
+      <th style="text-align: left">collection point</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>initState_s1_r1_e1</td>
+      <td style="text-align: left">gathered during the initial 2021 session with the participant and as part of the first part of the study</td>
+    </tr>
+    <tr>
+      <td>initState_s1_r2_e1</td>
+      <td style="text-align: left">gathered during the initial 2021 session with the participant and as part of the second part of the study, but <strong>before</strong> the experimental manipulation</td>
+    </tr>
+    <tr>
+      <td>initState_s1_r2_e2</td>
+      <td style="text-align: left">gathered during the initial 2021 session with the participant and as part of the second part of the study, and <strong>after</strong> the experimental manipulation</td>
+    </tr>
+    <tr>
+      <td>initState_s2_r1_e1</td>
+      <td style="text-align: left">gathered during a follow-up session in 2023 with the participant and as part of the first part of that follow-up study</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Note</em>: When using a zip file to import an existing instrument to REDCap, the instrument name is displayed as:</p>
+<blockquote>
+  <p>Instrument SX RX EX</p>
+</blockquote>
+
+<p>This is also an acceptable format as data exported from REDCap automatically converts this to <code class="language-plaintext highlighter-rouge">instrument_sX_rX_eX</code>.</p>
+
+<h3 id="variable-names-1">Variable Names</h3>
+
+<h4 id="scored-instruments">Scored Instruments</h4>
+
+<p>Variable names are used in REDCap to identify the responses to specific questions asked of study participants. They are <strong>identical to their associated instrument name</strong>, except that <code class="language-plaintext highlighter-rouge">iX</code> is added to specify the item number. For example, the first three questions of the <code class="language-plaintext highlighter-rouge">initState</code> instrument would be named:<br /></p>
+<blockquote>
+  <p>initState_i1_s1_r1_e1<br />
+initState_i2_s1_r1_e1<br />
+initState_i3_s1_r1_e1</p>
+</blockquote>
+
+<p>By default, if a question within an instrument will require the output of subvariables, REDCap automatically appends <code class="language-plaintext highlighter-rouge">___X</code> to the end of the base variable name. For instance:<br /></p>
+<blockquote>
+  <p>initState_i1_s1_r1_e1___1<br />
+initState_i1_s1_r1_e1___2<br />
+initState_i1_s1_r1_e1___3</p>
+</blockquote>
+
+<p>In other cases, however, an instrument may contain sub-items that REDCap cannot automate. For these questions, the sub-item must be built into the variable name manually:</p>
+<blockquote>
+  <p>initState_i1-sub1_s1_r1_e1<br />
+initState_i1-sub2_s1_r1_e1<br />
+initState_i1-sub3_s1_r1_e1</p>
+</blockquote>
+
+<h4 id="unscored-instruments">Unscored Instruments</h4>
+
+<p>In relatively rare but important cases, such as instruments that gather demographic data, the use of <code class="language-plaintext highlighter-rouge">i1</code>, <code class="language-plaintext highlighter-rouge">i2</code>, <code class="language-plaintext highlighter-rouge">i3</code> for item numbers will be an impediment to data analysis. For surveys that do not get scored or factored for analysis, a more informative convention should be used:<br /></p>
+<blockquote>
+  <p>demo_sleep_s1_r1_e1<br />
+demo_exercise_s1_r1_e1<br />
+demo_caffeine_s1_r1_e1</p>
+</blockquote>
+
+<h3 id="updating-instruments">Updating Instruments</h3>
+
+<p>Whenever an instrument is modified (including correction of errors and re-working of questionnaires based on the natural evolution of the lab’s research program), a new instrument is created. This enables the lab to track exactly which version of a questionnaire was given to a specific participant.</p>
+
+<h4 id="scored-instruments-1">Scored Instruments</h4>
+
+<p>Scored instruments are revised by appending “_b” (or “_c”, “_d”, etc.) to the instrument name and to all variables. This must be done very precisely to ensure that the automatic scoring script continues to function as expected. Example:</p>
+
+<blockquote>
+  <p>instrument name: adexi_s1_r1_e1 :point_right: adexi_b_s1_r1_e1
+question 1: adexi_i1_s1_r1_e1 :point_right: adexi_b_i1_s1_r1_e1</p>
+</blockquote>
+
+<h4 id="unscored-instruments-1">Unscored Instruments</h4>
+
+<p>Unscored instrument may either use the revisioning system described above for scored instruments (i.e., “_b”). In some cases, such as the initState and postTask questionnaires, it was envisaged that the lab would build up a repertoire of different versions over time. For these instruments, the letter versioning is built directly into the name:</p>
+
+<blockquote>
+  <p>instrument name: postTaskA_s1_r1_e1 :point_right: postTaskB_s1_r1_e1
+question 1: postTaskA_i1_s1_r1_e1 :point_right: postTaskB_i1_s1_r1_e1</p>
+</blockquote>
+
+<h2 id="psychopy-and-pavlovia">PsychoPy and Pavlovia</h2>
+
+<h3 id="folder-and-experiment-names">Folder and Experiment Names</h3>
+
+<p>The folder and the name of the .psyexp file should be identical:</p>
+<blockquote>
+  <p>ft-flanker-o_s1_r1_e1
+read-aloud-val-o_s1_r1_e1
+multi-ef_s1_r1_e1</p>
+</blockquote>
+
+<p>The sX, rX, and eX information follows the logic indicated in the REDCap section above.</p>
+
+<p>The -o flag indicates that the experiment has been designed for online use, via Pavlovia.</p>
+
+<p>The ft- prefix is a special prefix for the three “FIU Toolbox” tasks (flanker, DCCS, and n-back).</p>
+
+<h2 id="helpful-resources">Helpful Resources</h2>
+<ul>
+  <li>Awesome <a href="https://speakerdeck.com/jennybc/how-to-name-files">slidedeck</a> from <a href="https://jennybryan.org/">Jenny Bryan</a>.<br /></li>
+  <li>Another awesome <a href="https://slides.djnavarro.net/project-structure/#1">slidedeck</a> from <a href="https://djnavarro.net/">Danielle Navarro</a>.</li>
+  <li><a href="https://bids.neuroimaging.io/">Brain Imaging Data Structure (BIDS)</a> for organizing neuroimaging and behavioral data</li>
+  <li><a href="https://www.go-fair.org/fair-principles/">FAIR Guiding Principles</a> for scientific data management and stewardship</li>
+  <li>Psych-DS <a href="https://docs.google.com/document/d/1u8o5jnWk0Iqp_J06PTu5NjBfVsdoPbBhstht6W0fFp0/edit#">technical specification</a> for psychological datasets (useful even though the project is not very active)</li>
+</ul>
+:ET

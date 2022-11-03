@@ -1,0 +1,32 @@
+I"<h3 id="contents">Contents</h3>
+<ol>
+  <li><a href="#Running-Matlab">Running Matlab</a>
+    <ol>
+      <li><a href="#Running-Scripts">Running</a></li>
+    </ol>
+  </li>
+  <li><a href="#Matlab-GUI">Matlab GUI</a></li>
+</ol>
+
+<h2 id="running-matlab">Running Matlab</h2>
+
+<p>To run scripts in the Matlab programming language using the login node, follow the steps listed below:</p>
+
+<h3 id="running">Running</h3>
+
+<p>To run your matlab script, execute the following command in your terminal.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh /home/data/NDClab/tools/lab-devOps/scripts/matlab/rmat.sh [--parallel] &lt;file_name&gt;
+</code></pre></div></div>
+
+<p>Optionally, you can attach the <em>–parallel</em> flag to specify that this job requires parallel processing.</p>
+
+<p>This will generate an sbatch script, submit it, and return an output to your folder location.</p>
+
+<p>After you initially run <code class="language-plaintext highlighter-rouge">rmat.sh</code>, you should subsequently run the sbatch file generated in your folder via:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbatch &lt;file_name&gt;.sub
+</code></pre></div></div>
+
+<h2 id="matlab-gui">Matlab-GUI</h2>
+:ET

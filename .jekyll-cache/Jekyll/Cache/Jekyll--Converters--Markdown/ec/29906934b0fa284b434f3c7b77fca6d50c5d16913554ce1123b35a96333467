@@ -1,0 +1,10 @@
+I"�<p><img src="https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/server_image.jpg" alt="dt2-racks-from-front" /><br />
+<em>Not the FIU cluster</em></p>
+
+<h2 id="overview">Overview</h2>
+<p>The <a href="http://ircc.fiu.edu/">FIU High-performance computing (HPC) cluster</a> is a group of interconnected computers designed to perform computationally expensive tasks. This includes processing and storing large quantities of data, executing programs in parallel, and running automated actions that assist in the research process.</p>
+
+<p>Listed below are contents that detail how to access and properly utilize this resource, <strong>assuming an HPC account is granted</strong>. Lab members must be <a href="https://ndclab.github.io/wiki/docs/Onboarding/accessing-hpc.html">onboarded to the HPC</a> by the lab manager.</p>
+
+<p>To get started on logging in, click on “Accessing” below.</p>
+:ET

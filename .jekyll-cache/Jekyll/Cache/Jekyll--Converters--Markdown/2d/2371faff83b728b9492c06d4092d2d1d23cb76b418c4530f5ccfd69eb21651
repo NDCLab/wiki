@@ -1,0 +1,17 @@
+I"Ç<p>For anything that goes beyond running basic lines of code, a job must be submitted to the compute nodes so that the compute nodes can properly handle tasks. Note, this is a <strong>requirement</strong> on the HPC, as login nodes are not the intended resource for computation.</p>
+
+<p>To create a job, a <a href="https://slurm.schedmd.com/documentation.html">slurm</a> file must be created. The file below represents a sample Slurm script where a conda base environment is being activated:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=myjob         # create a short name for your job</span>
+<span class="c1">#SBATCH --nodes=1                # node count</span>
+<span class="c1">#SBATCH --ntasks=1               # total number of tasks across all nodes</span>
+<span class="c1">#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)</span>
+<span class="c1">#SBATCH --mail-type=end          # send email when job ends</span>
+
+<span class="s">module load miniconda3-4.5.11-gcc-8.2.0-oqs2mbg</span>
+
+<span class="s">conda exec -b base python sample.py</span>
+</code></pre></div></div>
+:ET
