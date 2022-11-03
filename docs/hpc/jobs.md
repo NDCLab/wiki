@@ -55,7 +55,7 @@ Here is a guide to what these details in the .sub file mean and how they should 
 | time  | limits the amount of time the HPC should devote to running the script  | Ballpark the time your script will need to run and give yourself some buffer. For parallel processes, this will need to be set very high. But be careful not to burn through lab time on the HPC.  |
 | mail-type  | tells the HPC to send you an e-mail when the job is done  | If the job is very small and will run quickly, you can delete this line to avoid an unnecessary e-mail in your inbox. Otherwise, leave it unchanged.  |
 | singularity exec --bind /home/data/NDClab  | binds data within the NDCLab folder to the singularity image  | Do not modify.  |
-| /home/data/NDClab/tools/containers/python-3.8/container.simg  | identity of the selected container  | Use the example for Python. For R, use `/home/data/NDClab/tools/containers/R-4.1.2/R-con.simg`  |
+| /home/data/NDClab/tools/containers /python-3.8/container.simg  | identity of the selected container  | Use the example for Python. For R, use `/home/data/NDClab/tools/containers/R-4.1.2/R-con.simg`  |
 | python3 filename.py  | the actual command to run the script specified  | Specify python3 for .py or Rscript for .R.  |
 
 MATLAB is a little special. To create a Slurm script for a .m file, replace the `singularity` line in the sample above with:
