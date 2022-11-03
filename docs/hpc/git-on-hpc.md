@@ -26,17 +26,14 @@ git config --global user.email "mlisa001@fiu.edu"
         **NOTE**: If you see this error (`cat: ~/.ssh/id_rsa.pub: No such file or directory`), that means that you don't have an RSA key set up yet. Follow the instructions [here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate one. When it asks for the file to save the key to, just hit `Enter`. When it asks for a passphrase, just hit `Enter` (so there will be no passphrase).
     2. Copy the key to your Clipboard, then paste it to your GitHub account settings (on the website: Settings > SSH and GPG Keys > New SSH key).  Name it "fiuhpc".
 5. Modify your SSH configuration file
-    1. `nano ~/.ssh/config`
-        - **NOTE**: If you do not have a config file (or if it is empty), then copy [the example one from this repository](https://github.com/FIU-Neuro/Onboarding/blob/master/templates/.ssh/config) into your .ssh folder.
+    1. Input `nano ~/.ssh/config`. **NOTE**: If you do not have a config file (or if it is empty), then copy [the example one from this repository](https://github.com/FIU-Neuro/Onboarding/blob/master/templates/.ssh/config) into your .ssh folder.
     2. Add the following lines:  
-        - > UserKnownHostsFile ~/.ssh/known_hosts   
+          > UserKnownHostsFile ~/.ssh/known_hosts   
           > Host github.com  
           > Hostname ssh.github.com  
           > Port 443<br/>
 
-    3. You may see the following line somewhere in the file:
-        `UserKnownHostsFile /dev/null`
-        - If you see it, remove that line. We are replacing it with the first line that you pasted into the file.
+    3. You may see the following line somewhere in the file: `UserKnownHostsFile /dev/null`. If you see it, remove that line. We are replacing it with the first line that you pasted into the file.
     4. To save the file and exit nano, do the following:
         1. ctrl+x (this is control on both Mac and PC)
         2. y
