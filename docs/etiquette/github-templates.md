@@ -2,7 +2,7 @@
 layout: default
 title: GitHub Templates
 parent: Etiquette
-nav_order: 4
+nav_order: 5
 ---
 
 ### Contents
@@ -41,25 +41,6 @@ Be sure to tell the lab manager:
 * a pithy description of the project that will appear on the main lab GitHub page
 * who will be leading the project and who will be part of the initial project team (so that everyone gets the correct access level on the new repository)
 
-#### Prepare your new repo for use.
-
-Before you begin using your new repository, there are several settings that need to be implemented:
-
-##### 1. Create `dev` branch.
-Create a new branch named `dev` off the basis of the `main` branch. This is identical to how you created your own branch for updating the wiki who's-who page with your own information when you were [onboarded to GitHub](https://ndclab.github.io/wiki/docs/Onboarding/get-with-git.html).
-
-##### 2. Add branch protection rules to `main` and `dev` branches.
-
-Inside your repository on GitHub, click the 'Settings' button and select 'Branches' from the left-hand menu. You will need to "Add rule" twice, once for `dev` and once for `main`. In both cases, select "Require pull request reviews before merging" and set the number of required approving reviews at "1." Once complete, your branch protection rules should look like this:
-
-![gh_branch-protection](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/gh_branch-protection.png)
-
-These branch protection rules ensure that content must undergo a review before any branch is merged into `dev` or `main`.
-
-##### 3. Automatically delete head branches
-
-You will want to [check this option in your repository settings](https://docs.github.com/en/github/administering-a-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches) so that, when you review and merge the work of team members into `dev`, GitHub automatically deletes the branch they were working on (which has now been merged). This keeps your branch tree tidy. Don't worry: the branch protection rules you set up above prevent `dev` from being automatically deleted when it gets merged to `main`.
-
 #### Draft the `readme` file.
 
 Within the `dev` branch, draft the `readme.md` file that guides the development of your project.
@@ -72,7 +53,7 @@ Every repository should have a succinct `readme.md` file that serves as a roadma
 
 The template repository used to create your new project repo contains a template `readme.md` file that will guide you through the initial process of drafting the readme.
 
-As the project progresses, the readme must be updated to include information for any content included on the `main` branch, such as pre-registrations, conference posters, or working software releases.
+As the project progresses, the readme should be updated to include information for any content releases, such as pre-registrations, conference posters, or working software releases.
 
 #### Draft the `contributing` file.
 
@@ -82,9 +63,7 @@ At this initial setup stage, the `main` branch will be empty (except for the fil
 
 #### Request the launch review.
 
-Once you are satisfied with the `readme` and `contributing` files, initiate a pull request. Tag both the lab director and the lab manager.
-* The lab director will perform a [level 2 review](https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html#terminology) (or delegate such a review to another appropriate lab member) to approve your planned roadmap and merge `readme.md` and `contributing.md` to `main`.
-* The lab manager will confirm that your repository is set up with all the correct settings to ensure a smooth project launch.
+Once you are satisfied with the `readme` and `contributing` files, initiate a pull request. Tag the lab manager, who will confirm that your repository is in good order and ready for the lab director's review.  Once you have the green-light from the lab manager, assign teh pull request to the lab director, who will perform a [level 2 review](https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html#terminology) (or delegate such a review to another appropriate lab member) to approve your planned roadmap and merge `readme.md` and `contributing.md` to `main`.
 
 ### ZenHub
 

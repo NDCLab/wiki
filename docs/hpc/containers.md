@@ -1,12 +1,14 @@
 ---
 layout: default
-title: Matlab
+title: Containers
 parent: HPC
 nav_order: 6
 ---
 
 ### Contents
-1. [Building Your Own Container](#Building-Your-Own-Container)
+1. [Installation](#Setting-Up)
+2. [Building Your Own Container](#Building-Your-Own-Container)
+3. [Transferring](#Transferring)
 
 ## Setting Up
 
@@ -17,7 +19,7 @@ To build your own singularity container for use in the shared HPC, you will need
 
 To load this OS onto your VM box, follow along with the [guided tutorial](https://www.youtube.com/watch?v=hE2eOLx0gNU).
 
-## Building
+## Building Your Own Container
 
 Once you have your RedHat OS successfully installed, you will utilize the following "recipe" file template to build an R or Python container.
 
@@ -107,3 +109,5 @@ This will create a new singularity container with all your required Python packa
 ## Transferring
 
 Lastly, you will transfer this container by uploading it via [hpcgui.fiu.edu](hpcgui.fiu.edu). 
+
+

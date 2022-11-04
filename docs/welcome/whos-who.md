@@ -1,4 +1,4 @@
----
+--- 
 layout: default
 title: Who's Who
 parent: Welcome
@@ -18,6 +18,7 @@ nav_order: 2
 
 
 ### Lab Manager
+
 
 | ![alexander](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/alexander.jpg) | Jess Alexander |
 | ---  | ---  |
@@ -51,17 +52,25 @@ nav_order: 2
 | research interests | Olivia is interested in using EEG to investigate the neural mechanisms of cognitive control and the influence of anxiety on post-error behavior. |
 | hobbies | Painting nails, DnD, and riding horses |
 
-| ![winters](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/winters.jpg) | Alycia Winters |
+### Graduate Student Affiliates
+
+| ![martin](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/martin.jpg) | Emily Martin |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Miami, FL |
-| GitHub | AlyciaWinters |
-| Email  | awint016@fiu.edu |
-| research interests | Alycia is interested in the role of stress and trauma in shaping trajectories of cognitive control development and social behavior. |
-| hobbies | Drawing, DnD, video games, and learning about history |
+| GitHub | ylimerm3 |
+| Email  | emart459@fiu.edu |
+| research interests | Emily is interested in studying visual processing with computational modeling, specifically with face perception, and how factors like emotional expression and social anxiety influence perception (and errors) through EEG. |
+| hobbies | music/concerts, cooking, video games, playing with my leopard gecko Sigma |
 
-### Graduate Student Affiliates
-
+| ![sahar](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/sahar.jpg) | Luc Sahar |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | l-acs |
+| Email  | lsaha003@fiu.edu |
+| research interests | Syntax-prosody interface, mental representations of linguistic knowledge, language acquisition, sentence processing, computational linguistics, voice interfaces |
+| hobbies | Biking, being obsessed with my dog, programming, hiking, drinking coffee |
 
 ### Senior Research Assistants
 
@@ -83,6 +92,15 @@ nav_order: 2
 | research interests | Sarah is interested in research on the phenomenon of choking under pressure and aims to understand what brain systems support excellent performance. |
 | hobbies | taekwondo, traveling, and of course napping |
 
+| ![pena](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/pena.jpg) | Andy Pena |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | apena106 |
+| Email  | apena106@fiu.edu |
+| research interests | Andy is interested in cognitive functions, particularly as it relates to anxiety and legal psych. |
+| hobbies | gaming, outdoor activities, gym |
+
 | ![polyanskaya](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/polyanskaya.jpg) | Arina Polyanskaya |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -91,14 +109,6 @@ nav_order: 2
 | Email  | apoly003@fiu.edu |
 | research interests | Investigating the possible link between social anxiety and cognitive control performance. |
 | hobbies | Traveling, hiking, camping, dancing, cooking/eating food, and anything else I would be introduced to. |
-
-|![lopez-nunez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez-nunez.jpg) | Ana Lopez-Nunez |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | anaNDClab |
-| research interests | Ana is interested in the relationship between the neural, behavioral, and cognitive aspects of mental illness and substance use disorder.|
-| hobbies | painting, drawing, and watching crime documentaries. |
 
 
 ### Senior Research Technicians
@@ -123,6 +133,15 @@ nav_order: 2
 | research interests | Nicole is interested in examining the relationship between cognitive function and social behavior using EEG methods. |
 | hobbies |Working out, traveling, playing with my dog. |
 
+| ![beadleson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/beadleson.jpg) | Brandon Beadleson |
+| ---  | ---  |
+| pronouns | he/him |
+| location | Miami, FL |
+| GitHub | beadleson |
+| Email  | bbead001@fiu.edu |
+| research interests | Neuropsychological factors in behavior, illness, and personality |
+| hobbies |Traveling & Reading . |
+
 | ![charest](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/charest.jpg) | Sophia Charest |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -131,15 +150,6 @@ nav_order: 2
 | Email  | schar107@fiu.edu |
 | research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior. |
 | hobbies | Clay sculpting, listening to music, watching basketball, nails/fashion |
-
-| ![chow](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/chow.jpg) | Ada Chow-Franjul |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Cutler Bay, FL |
-| GitHub | achow027 |
-| Email  | achow027@fiu.edu |
-| research interests | Ada is interested in the cognitive and psychological relationship with social anxiety in adolescence. |
-| hobbies | roller skating at the park, traveling, working out and watching the sunrise/sunset |
 
 | ![dickinson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/dickinson.jpg) | Renata Dickinson |
 | ---  | ---  |
@@ -167,6 +177,15 @@ nav_order: 2
 | research interests | Aitana is interested in the relationship between cognition and behavior, and its interrelation with mental illness.
 | hobbies | reading, singing, playing guitar |
 
+| ![gagnon](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gagnon.JPEG) | Bergan Gagnon |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | bergang |
+| Email  | bgagn008@fiu.edu |
+| research interests | Bergan is interested in how neural imaging can be used to diagnose psychopathology and assess comorbidity. |
+| hobbies | watching horror movies, reading about true crime, working out, and playing guitar |
+
 | ![gallardo](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gallardo.JPG) | Laura Gallardo |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -185,41 +204,14 @@ nav_order: 2
 | research interests | Ana is interested in psychopharmacology, sleep, and metacognition.|
 | hobbies | playing the guitar, dj mixing, drawing, being outdoors. |
 
-| ![guerra](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/guerra.jpg) | Karen Guerra |
+| ![hung](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hung.jpg) | Shirley Hung |
 | ---  | ---  |
 | pronouns | she/her/hers |
 | location | Miami, FL |
-| GitHub | 1karenguerra |
-| Email  | kguer039@fiu.edu |
-| research interests | Karen is interested in how our lifestyles affect our genetic expression (epigenetics) and and how they influence our neural circuits |
-| hobbies | (attempting to) lift heavy things in the gym, traveling, reading, tiktok aficionado, baking and learning new languages. |
-
-|![khouly](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/khouly.jpg)| Isabel Khouly |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | isabelkhouly |
-| Email  | ikhou001@fiu.edu |
-| research interests | Isabel is interested in the effects of exercise on human cognition and behavior |
-| hobbies | running, journaling, and cleaning |
-
-| ![padua-jimenez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/paduajimenez.jpg) | William Padua Jimenez |
-| ---  | ---  |
-| pronouns | he/him/his |
-| location | Miami, FL |
-| GitHub | Wpadua |
-| Email  | wpadu001@fiu.edu |
-| research interests | William is intrested in Performance control within athletes, and stem cell research |
-| hobbies | working out, investing, learning, playing video games  |
-
-| ![roch-hernandez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/roch-hernandez.jpg) | Sebastian Roch-Hernandez |
-| ---  | ---  |
-| pronouns | he/him/his |
-| location | Miami, FL |
-| GitHub | SebaRoch-H1 |
-| Email  | sroch015@fiu.edu |
-| research interests | Sebastian is interested in the physiological effects music has on human cognition and behavior. |
-| hobbies | Playing guitar, reading, trying to learn random things. |
+| GitHub | sjhung010 |
+| Email  | shung@fiu.edu |
+| research interests | Shirley is interested in child clinical psychology, cognition, and behavior. |
+| hobbies | cosmetology, art, reading books, meditation, and traveling |
 
 | ![rodriguez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguez.jpg) | Brittney Rodriguez |
 | ---  | ---  |

@@ -6,11 +6,11 @@ nav_order: 2
 ---
 
 # Certifications
-All members of the NDCLab who will be involved in collecting or analyzing participant data are required to complete specific training courses as part of their onboarding to the FIU Center for Children and Families (CCF).  These required courses include two CITI training courses and the FIU course on HIPAA.
+All members of the NDCLab who will be involved in collecting participant data are required to complete specific training courses as part of their onboarding to the FIU Center for Children and Families (CCF).  These required courses include two CITI training courses and the FIU course on HIPAA.
 
-In addition, members of the lab who will be actively involved in handling participants as part of a study protocol are required to complete an additional CITI training course.
+Members of the lab who will be actively involved in handling participant data (including its collection) are required to complete an additional CITI training course for approval by the FIU IRB.
 
-## Required for Members Handling Participant Data
+## Required for Study Personnel Interacting with Participants
 ### CITI
 1. CITI Health Information Privacy and Security (HIPS) for Clinical Investigators (Stage 1 - HIPS)
 ![hips](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/hips.png)
@@ -22,7 +22,7 @@ In addition, members of the lab who will be actively involved in handling partic
 This course is on develop.fiu.edu. A [link is provided by the CCF](https://ndclab.github.io/wiki/docs/Onboarding/ccf-emails.html) during the onboarding process to fulfill the HIPAA Requirement.
 
 
-## Required for Study Personnel Interacting with Participants
+## Required for Study Personnel Handling Participant Data
 ### CITI
 4. Social/Behavioral Human Research Course (Stage 1 - Basic Course)
 ![basic-course](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/basic-course.png)

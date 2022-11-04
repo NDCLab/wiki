@@ -1,35 +1,48 @@
 ---
 layout: default
-title: Matlab
+title: MATLAB
 parent: HPC
-nav_order: 4
+nav_order: 6
 ---
 
 ### Contents
-1. [Running Matlab](#Running-Matlab)
-    1. [Running](#Running-Scripts)
-2. [Matlab GUI](#Matlab-GUI)
+1. [Packages](#packages)
+2. [Running a MATLAB Script](#running-a-matlab-script)
+3. [MATLAB GUI](#matlab-gui)
 
-## Running Matlab
 
-To run scripts in the Matlab programming language using the login node, follow the steps listed below:
+## Packages
+Installing MATLAB packages on the HPC does not involve the lab's [default containers](https://ndclab.github.io/wiki/docs/hpc/containers.html). Instead, you must manually copy all desired, supplemental scripts into your own local directory on the HPC. The steps below use installation of the MADE pipeline scripts as an example.
 
-### Running
+1. Download the [EEGLAB scripts](https://sccn.ucsd.edu/eeglab/downloadtoolbox.php) to your local machine.
 
-To run your matlab script, execute the following command in your terminal.
+2. [Log in](https://ndclab.github.io/wiki/docs/hpc/accessing.html) to the HPC and access the file navigator.
+
+3. In your local directory, create a folder named "MATLAB" under your "Documents" folder, then click into it.
+
+4. Use the "Upload" button to upload the entire EEGLAB folder to this new "MATLAB" folder.
+
+5. Once upload is complete, navigate into the "plugins" folder: `~/Documents/MATLAB/eeglab/plugins`.
+
+5. Download the following plugins using their respective links, and upload each of them to this directory:
+
+    * [ADJUST1.1.1](https://www.nitrc.org/projects/adjust/)
+    * [bids-matlab-tools](https://github.com/sccn/bids-matlab-tools)
+    * [FASTER1.2.4](https://sccn.ucsd.edu/eeglab/plugin_uploader/plugin_list_all.php)
+
+
+## Running a MATLAB Script
+To run a script in the MATLAB programming language using the login node, log in to the [Panther Shell Access](https://ndclab.github.io/wiki/docs/hpc/accessing.html#login-node). Use `cd` to navigate to the folder that contains your script. From that location, run the following command:
 
 ```
-sh /home/data/NDClab/tools/lab-devOps/scripts/matlab/rmat.sh [--parallel] <file_name>
+sh /home/data/NDClab/tools/lab-devOps/scripts/matlab/rmat.sh [--parallel] <your-script-name>
 ```
 
-Optionally, you can attach the *--parallel* flag to specify that this job requires parallel processing.
+Notes:
+- `<your-script-name>` is the name of your ".m" file, but without the file extension
+- you can optionally attached the `--parallel` flag to specify that this job requires parallel processing
 
-This will generate an sbatch script, submit it, and return an output to your folder location.
+This will generate an Slurm script named after your script: `your-script-name.sub`. Run this file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
 
-After you initially run `rmat.sh`, you should subsequently run the sbatch file generated in your folder via:
-
-```
-sbatch <file_name>.sub
-```
-
-## Matlab-GUI
+## MATLAB GUI
+TBD

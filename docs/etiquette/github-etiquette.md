@@ -2,7 +2,7 @@
 layout: default
 title: GitHub Etiquette
 parent: Etiquette
-nav_order: 3
+nav_order: 4
 ---
 
 ### Contents
@@ -72,7 +72,6 @@ Almost all projects will involve more than one epic/release. This is to provide 
 
 At the start of a project, all planned epic/release goals for a project should be explicitly stated in the `readme` file on the project's GitHub repository. Each planned epic/release should be established as a time-blocked "Epic" within ZenHub.
 
-An epic/release is considered complete when the improvement (be that a new version of a tool or a publication of some type) is pushed to the `main` branch of the project repository on GitHub.
 
 ### Issues (1-3 weeks)
 
@@ -146,26 +145,33 @@ Pending the venue, project status, and other particulars, this may be a very inf
 
 ## Opening a New Project
 
-New projects should be based on the NDCLab templates. Visit [this page](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html) for details.
+New projects should be based on the NDCLab templates. Visit [this page](https://ndclab.github.io/wiki/docs/etiquette/github-templates.html) for details.  Once a project is opened, its `main` branch is consistently mirrored to the HPC. (Note: the `sourcedata/` and `derivatives/` folders are excluded from this mirroring for data security purposes.)
 
-The `main` branch is reserved for "published" information, such as pre-registrations, posters, publications, and official releases of validated software tools.
 
-The `dev` branch reflects the most up-to-date version of the current release.
+## Managing a Project
 
-Since all work will eventually be merged onto `dev` (before an ultimate merge onto `main`), all new branches should be created by branching off `dev`. More information is available on the [naming conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#github).
+All projects have both a `main` and a `dev` branch. The `main` branch should always be updated via a pull request from the `dev` branch. The project lead(s), lab director, lab manager, and lab technician have merge authority on any given project.
+
+Since all work will eventually be merged onto `dev` (before an ultimate merge onto `main`), all new branches should be created by branching off `dev`. More information is available on the [naming conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#github).  The project lead has the authority to make changes directly on the `dev` branch, but thoughtful branching is recommended when multiple team members are invovled in updating GitHub content for a project.
+
+It will be necessary to update the `main` branch regularly to ensure that working files are available on the HPC and to promote a positive public image of the project for any visitors to the lab's GitHub space. Project leads should use their discretion on when they can push updates to `main` themselves and when they should request a review (via a pull request) from another lab member, the lab manager, or the lab director. The consistent use of pull requests is strongly encouraged whenever feasible.
+
+For projects that involve building a lab tool, the standard git workflow is required: team members must submit changes to `dev` via a pull request from their own feature branch.
 
 
 ## Publishing a Release
 
-At certain stages of each project, information will be ready for public consumption. Since the NDCLab is an open lab, all of our work-in-progress is publicly available. However, we make a clear distinction to show visitors from outside our lab what we consider "done" by pushing this content to the `main` branch.
+At certain stages of each project, information will be ready for public consumption. Since the NDCLab is an open lab, all of our work-in-progress is publicly available. Therefore, a release is more of a symbolic gesture in the GitHub workflow and serves as an opportunity to make sure that the repository is looking sharp.
 
 To "publish" a release on GitHub:
 
-1. The project lead(s) should ensure that the `dev` branch is fully ready to deploy. This means that all content that is being "published" is well-organized and independently verified. (It is ok that some parts of future releases may still be in-progress.)
+1. Make sure that all content in `main` and `dev` are tidy. (It is ok that some parts of future releases may still be in-progress.)
 
-2. The project lead(s) initiate a pull request, tagging the lab director for a level 2 review. He may review personally or delegate the review.
+2. Make sure that the lab director has approved the release. This can be accomplished via a final pull request to `main`, but it can also be accomplished via direct communication.
 
-Once `dev` is merged to `main`, this completes the current epic/release. The ZenHub *Release Backlog*, *Sprint Backlog*, *In Progress*, *Review/QA*, and *Done* pipelines should all be empty and all the issues that were tackled during the epic/release should be closed. The next epic/release is initiated by moving the Epic tile for the next planned epic/release and its associated issues into the Release Backlog.
+3. Notify the lab and celebrate the achievement!
+
+The publication of a release should match the completion of an epic/release. The ZenHub *Release Backlog*, *Sprint Backlog*, *In Progress*, *Review/QA*, and *Done* pipelines should all be empty and all the issues that were tackled during the epic/release should be closed. The next epic/release is initiated by moving the Epic tile for the next planned epic/release and its associated issues into the Release Backlog.
 
 
 ## Correcting Data
@@ -180,6 +186,7 @@ If your analysis is potentially impacted by the error:
 ## Communication
 
 * Watch your notifications so that you respond in a timely manner when someone @mentions you or asks you to review a pull request.
+* If you have been tagged in a pull request comment, assigned as a "reviewer," or simply assigned to the pull request directly: you are responsible for reviewing and responding to the requestor.
 * When assigning someone to an issue, include an explanatory comment (with @mention) to explain why you think the person is a good fit for the task -- don't just randomly assign people issues without dialogue.
 * Use the "question" and "help wanted" labels to communicate to the broader team that you are stuck and need assistance.
 
