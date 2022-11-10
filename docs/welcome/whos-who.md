@@ -29,19 +29,6 @@ nav_order: 2
 | research interests | Jess is interested in the neural, cognitive, and behavioral underpinnings of emotion and language. |
 | hobbies | I'm an avid runner, I love to travel, and I play the piano. |
 
-
-
-### Lab Technician
-
-| ![saidmuratov](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/saidmuratov.jpg) | Farukh Saidmuratov |
-| ---  | ---  |
-| pronouns | he/him/his |
-| location | Troy, NY |
-| GitHub | F-said |
-| Email  | |
-| research interests | Farukh is interested in computational models of cognition. |
-| hobbies | baking, eating what I bake, [amateur data science](https://github.com/F-said/march-madness-predict), and gardening |
-
 ### Graduate Students
 
 | ![hosseini](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hosseini.jpg) | Kianoosh Hosseini |
