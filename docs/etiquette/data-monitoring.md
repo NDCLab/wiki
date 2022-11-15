@@ -7,6 +7,7 @@ nav_order: 3
 
 ### Contents
 1. [Overview](#overview)
+2. [Sourcedata Structure]
 2. [Central Tracker](#central-tracker)
 3. [Protocol](#protocol)
 4. [Setting Up](#setting-up)
@@ -22,6 +23,27 @@ Data monitoring is an ongoing process during data collection and preprocessing. 
 3. Maintain an up-to-date **central tracker** with all relevant data points per participant.
 
 At this time, these steps are handled manually by study leads for data collection projects. The long-term goal of the NDCLab, however, is to automate these functions.
+
+
+## Sourcedata Structure
+Within `sourcedata/raw`, folders should be organized as follows (and as appropriate for the data being collected—not all folders will be required for all projects):<br/>
+/raw/<br/>
+├── redcap/<br/>
+├── psychopy/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+├── audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+├── video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+├── eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+├── digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
 
 
 ## Central Tracker
