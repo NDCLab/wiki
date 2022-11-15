@@ -19,7 +19,6 @@ nav_order: 2
 
 ### Lab Manager
 
-
 | ![alexander](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/alexander.jpg) | Jess Alexander |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -30,17 +29,8 @@ nav_order: 2
 | hobbies | I'm an avid runner, I love to travel, and I play the piano. |
 
 
-
 ### Lab Technician
 
-| ![saidmuratov](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/saidmuratov.jpg) | Farukh Saidmuratov |
-| ---  | ---  |
-| pronouns | he/him/his |
-| location | Troy, NY |
-| GitHub | F-said |
-| Email  | |
-| research interests | Farukh is interested in computational models of cognition. |
-| hobbies | baking, eating what I bake, [amateur data science](https://github.com/F-said/march-madness-predict), and gardening |
 
 ### Graduate Students
 
