@@ -19,7 +19,7 @@ nav_order: 2
 ## Connecting
 To use the HPC, a lab member must either use:
 - on-campus WiFi
-- the [FIU VPN]((https://network.fiu.edu/vpn/) to access the [FIU intranet](https://en.wikipedia.org/wiki/Intranet). Instructions are available [here](https://fiu.service-now.com/sp?id=kb_article&sys_id=6c3c789ddb899780b16af969af96193d).
+- the [FIU VPN](https://network.fiu.edu/vpn/) to access the [FIU intranet](https://en.wikipedia.org/wiki/Intranet). Instructions are available [here](https://fiu.service-now.com/sp?id=kb_article&sys_id=6c3c789ddb899780b16af969af96193d).
 
 Once connected to either on-campus WiFi or the VPN, use Google Chrome to access the site [hpcgui.fiu.edu](hpcgui.fiu.edu).
 
@@ -41,6 +41,13 @@ Welcome to the FIU Instructional & Research Computing Center (IRCC)
 ```
 
 From here, you can manipulate files as you would using any [shell](https://ndclab.github.io/wiki/docs/shell). You can also submit batch jobs to the compute-node.
+
+If you are feeling fancy, you can access this directly without logging in via the browser.  Simply open your shell and type:
+```
+ssh YOURLOGIN#hpclogin01
+```
+
+You will be prompted to input your password, and then you can navigate the HPC as you would on the browser. To return to using your shell to access files on your local computer, simply execute an `exit` command.
 
 ### Visual Node
 The visualization node is used for directly editing files on the cluster and for GUI manipulation. There are two options:
