@@ -8,7 +8,6 @@ nav_order: 6
 ### Contents
 1. [Packages](#packages)
 2. [Running a MATLAB Script](#running-a-matlab-script)
-3. [MATLAB GUI](#matlab-gui)
 
 
 ## Packages
@@ -43,6 +42,3 @@ Notes:
 - you can optionally attached the `--parallel` flag to specify that this job requires parallel processing
 
 This will generate an Slurm script named after your script: `your-script-name.sub`. Run this file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
-
-## MATLAB GUI
-TBD
