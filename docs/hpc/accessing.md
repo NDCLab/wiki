@@ -47,7 +47,7 @@ If you are feeling fancy, you can access this directly without logging in via th
 ssh YOURLOGIN#hpclogin01
 ```
 
-You will be prompted to input your password, and then you can navigate the HPC as you would on the browser. To return to using your shell to access files on your local computer, simply execute an `exit` command.
+You will be prompted to input your password, and then you can navigate the HPC as you would on the browser. To return to using your shell to access files on your local computer, simply execute an `exit` command.  (Note: this method is called "secure shell (SSH), which comes pre-installed on Windows10 and MacOS. Older Windows versions are available for install [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).)
 
 ### Visual Node
 The visualization node is used for directly editing files on the cluster and for GUI manipulation. There are two options:
