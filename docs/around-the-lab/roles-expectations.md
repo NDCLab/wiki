@@ -5,6 +5,16 @@ parent: Around the Lab
 nav_order: 2
 ---
 
+### Contents
+1. [Overview](#overview)
+2. [General Expectations](#what-is-expected-from-all-lab-members)
+3. [What is Expected from Research Assistants](#what-is-expected-from-research-assistants)
+4. [What is Expected from Research Technicians](#what-is-expected-from-research-technicians)
+5. [What is Expected from Other Associates](#what-is-expected-from-other-associates)
+6. [What to Expect from the Lab Director](#what-to-expect-from-the-lab-director)
+7. [What to Expect from the Lab Manager and Lab Tech](#what-to-expect-from-the-lab-manager-and-lab-tech)
+
+
 ## Overview
 The NDCLab community relies upon each member to be open, accountable, and respectful. This means that there are certain expectations incumbent upon each member. In addition, the roles of lab director, lab manager, and lab technician have special, ancillary responsibilities to fulfill so that all lab members may count on them to serve the best interests of the lab.
 
@@ -28,7 +38,26 @@ Therefore, membership in the NDCLab is a team effort and all members are expecte
 * Being unafraid to make suggestions and question things we don't understand.
 
 **Dress Code**<br/>
-Members of the NDCLab interact not only with one another, but also with members of the greater FIU community and with the adolescents and families supported by the Center for Children and Families. Business casual attire is expected when representing the lab, whether in-person or via remote teleconferencing. In practice, this means dressing as you would to a job interview, avoiding the exposure of too much bare skin, offensive logos, etc. If you are uncertain as to what constitutes appropriate attire, reach out to the lab manager for additional guidance.
+Members of the NDCLab interact not only with one another, but also with members of the greater FIU community and with the adolescents and families supported by the Center for Children and Families. In all lab-related activities, lab members are expected to wear professional clothing that would be appropriate for interacting with children and families. Clothing should be modest, clean, free of holes, devoid of sayings/phrases or large logos, and should not contain material that could be considered offensive or obscene. If you are uncertain as to what constitutes appropriate attire, reach out to the lab manager for additional guidance.
+
+
+## What is Expected from Research Assistants
+Research assistants play a pivotal role in the lab's research. They assist with many aspects of data collection and analysis, such as helping recruit study participants, set-up and run experiments, and code data. All research assistants are expected to be actively interested in the theory behind the lab's research and therefore to treat their time with the lab as an opportunity to learn about the research process. In addition to project-specific and general lab-related duties, all Miami-based RAs are expected to volunteer at two recruitment events per semester in order to assist in the lab's ongoing efforts to recruit participant families for future research studies. Senior RAs serve as knowledgeable members of the lab community and often take on the role of project lead for specific research initiatives; this role entails an expectation of leadership and a deeper commitment from the lab director in terms of long-term career support.
+
+**Quick List of RA Expectations**
+1. Devote an average of 9 hours weekly to data collection, data coding, data analysis, and/or participant recruitment tasks.
+2. Anticipate a three-semester committment, at a minimum.
+3. Volunteer for two participant recruitment events each semester.
+4. Adhere to the lab's dress code for all data collection and participant recruitment activities.
+5. Enroll in PSY 4940 for 0 or 3 credits (waived for RAs who are not currently enrolled at FIU).
+6. Establish a specific schedule for the semester when you will be working on lab activities.
+7. Maintain an active presence on Slack to engage with the lab community.
+
+## What is Expected from Research Technicians
+Research technicians play a vital role in the lab's research by developing the tools that enable the collection and analysis of high-quality data. All research technicians are expected to be actively interested in the methods used by the lab and to contribute their technical knowledge to the accomplishment of the lab's objectives for 9 hours weekly.
+
+## What is Expected from Other Associates
+Other associates, such as graduate student affiliates or high school interns, are expected to contribute to the lab in either an assistantship or technician capacity for 9 hours weekly.
 
 ## What to Expect from the Lab Director
 **Lab Level**<br/>
@@ -51,12 +80,3 @@ For members who remain committed to the lab, you can expect the lab director to 
 
 ## What to Expect from the Lab Manager and Lab Tech
 As support staff for the lab, the lab manager and lab technician are expected, in addition to fulfilling the expectations established for all lab members, to ensure that the lab is well-organized, operating smoothly, and a positive place to do science.
-
-## What is Expected from Research Assistants
-Research assistants play a pivotal role in the lab's research. They assist with many aspects of data collection and analysis, such as helping recruit study participants, set-up and run experiments, and code data. All research assistants are expected to be actively interested in the theory behind the lab's research and therefore to treat their time with the lab as an opportunity to learn about the research process. Senior RAs serve as knowledgeable members of the lab community and often take on the role of project lead for specific research initiatives; this role entails an expectation of leadership and a deeper commitment from the lab director in terms of long-term career support.
-
-## What is Expected from Research Technicians
-Research technicians play a vital role in the lab's research by developing the tools that enable the collection and analysis of high-quality data. All research technicians are expected to be actively interested in the methods used by the lab and to contribute their technical knowledge to the accomplishment of the lab's objectives.
-
-## What is Expected from Other Associates
-Other associates, such as graduate student affiliates or high school interns, are expected to contribute to the lab in either an assistantship or technician capacity.
