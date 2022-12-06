@@ -124,15 +124,6 @@ nav_order: 2
 
 ### Junior Research Assistants
 
-| ![bailey](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/bailey.jpg) | Nicole Bailey |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | nbail021 |
-| Email  | nbail021@fiu.edu |
-| research interests | Nicole is interested in examining the relationship between cognitive function and social behavior using EEG methods. |
-| hobbies |Working out, traveling, playing with my dog. |
-
 | ![beadleson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/beadleson.jpg) | Brandon Beadleson |
 | ---  | ---  |
 | pronouns | he/him |
@@ -167,15 +158,6 @@ nav_order: 2
 | GitHub | adunc018 |
 | research interests | Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning  |
 | hobbies | Writing, rewatching the same 5 shows, baking |
-
-| ![fischer](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/fischer.jpg) | Aitana Fischer |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | AitanaFischer |
-| Email  | afisc020@fiu.edu |
-| research interests | Aitana is interested in the relationship between cognition and behavior, and its interrelation with mental illness.
-| hobbies | reading, singing, playing guitar |
 
 | ![gagnon](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gagnon.JPEG) | Bergan Gagnon |
 | ---  | ---  |
@@ -230,15 +212,6 @@ nav_order: 2
 | Email  | crodr644@fiu.edu |
 | research interests | Carlos is interested in the use of psilocybin in clinical contexts to treat depression and anxiety as well as the dopamine pathways and how they contribute to discipline development. |
 | hobbies | weightlifting, cooking, fishing, and hiking. |
-
-| ![mrodriguez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/mrodriguez.jpg) | Maria Rodriguez |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | mrodr1326 |
-| Email  | mrodr1326@fiu.edu |
-| research interests | Maria is interested in examining the cognitive functions of mental illness. |
-| hobbies | working out, reading, and binging TV shows |
 
 | ![weber](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/weber.jpg) | Lauren Weber |
 | ---  | ---  |
