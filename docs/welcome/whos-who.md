@@ -74,6 +74,15 @@ nav_order: 2
 
 ### Senior Research Assistants
 
+| ![dickinson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/dickinson.jpg) | Renata Dickinson |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | renatadickinson |
+| Email  | rdick014@fiu.edu |
+| research interests | Renata's research interests are in developmental and behavioral psychology. |
+| hobbies | Snorkeling, learning new recipes, watching movies, dancing, fashion |
+
 | ![machado](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/machado.jpg) | Emily Machado |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -150,15 +159,6 @@ nav_order: 2
 | Email  | schar107@fiu.edu |
 | research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior. |
 | hobbies | Clay sculpting, listening to music, watching basketball, nails/fashion |
-
-| ![dickinson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/dickinson.jpg) | Renata Dickinson |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | renatadickinson |
-| Email  | rdick014@fiu.edu |
-| research interests | Renata's research interests are in developmental and behavioral psychology. |
-| hobbies | Snorkeling, learning new recipes, watching movies, dancing, fashion |
 
 | ![duncombe](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/duncombe.jpeg) | Anfernee Duncombe |
 | ---  | ---  |
