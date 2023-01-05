@@ -113,6 +113,15 @@ nav_order: 2
 
 ### Senior Research Technicians
 
+| ![lopez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez.jpg) | Brandon Lopez |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Homestead, FL |
+| GitHub | blope118 |
+| Email  | blope118@fiu.edu |
+| research interests | Brandon is interested in developing computational tools to assist researchers. |
+| hobbies | playing video games, playing basketball, and drawing |
+
 | ![niu](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/niu.jpg) | Yanbin Niu |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -225,11 +234,4 @@ nav_order: 2
 
 ### Junior Research Technicians
 
-| ![lopez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/lopez.jpg) | Brandon Lopez |
-| ---  | ---  |
-| pronouns | he/him/his |
-| location | Homestead, FL |
-| GitHub | blope118 |
-| Email  | blope118@fiu.edu |
-| research interests | Brandon is interested in developing computational tools to assist researchers. |
-| hobbies | playing video games, playing basketball, and drawing |
+
