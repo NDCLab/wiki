@@ -113,13 +113,13 @@ Your `requirements.txt` file will contain all the [necessary packages](https://l
 
 To add a package to the existing R container, you can access the recipe file named `R.recipe`. On line 85 is a line instructing R to install a number of packages. If you do not see a package required for your code simply add your package name to this list and rebuild the container image in a Linux environment with root access.)
 
-Once you've created this file, execute the following command:
+Once you've created this file, load singularity and execute the following command:
 
 ```
-sudo singularity build container.recipe container.simg
+singularity build --remote container.simg container.recipe 
 ```
 
-This will create a new singularity container with all your required Python packages.
+This will create a new singularity container "container.simg" with all your required Python packages.
 
 ### Transfer
 
