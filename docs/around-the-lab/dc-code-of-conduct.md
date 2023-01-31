@@ -21,6 +21,11 @@ When we interact with participants, we are representing the lab, CCF, and the un
 * When interacting with participants and their families, wear clothes that adhere to the [lab's dress code](https://ndclab.github.io/wiki/docs/around-the-lab/roles-expectations.html).
 * Participant comfort is paramount: make sure the participant is not experiencing any discomfort and remember that the participant can leave at any time (be careful not to use coercive language to get them to stay).
 
+### Reporting
+* Be vigilant for any deviations from the study protocol.
+* In the event of a deviation, follow the guidance in the [handling-emergencies-and-deviations protocol](https://docs.google.com/document/d/1cLr4dFWlJuoRXLuJhs6nUnOJ5NZLx80I/edit?usp=sharing&ouid=111423182084086415442&rtpof=true&sd=true).
+* Log all deviations in the relevant study tracker and notify the PI.
+
 ### General Expectations
 * Arrive on time to meetings and participant sessions: arrive 30 minutes before the participant arrives to set up equipment and expect to stay 20-40 minutes after participant to help with cleanup (for synchronous, online sessions via Zoom, log on at least 5 minutes before the scheduled meeting start and stay ~15 minutes after the session ends to organize data).
 * Check Slack regularly.
