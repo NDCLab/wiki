@@ -39,6 +39,7 @@ The file below represents a sample Slurm script where a conda base environment i
 #SBATCH --nodes=1                	# node count
 #SBATCH --ntasks=1               	# total number of tasks across all nodes
 #SBATCH --time=00:10:00          	# total run time limit (HH:MM:SS)
+#SBATCH --account=iacc_gbuzzell		# SLURM account name
 #SBATCH --mail-type=end          	# send email when job ends
 
 singularity exec --bind /home/data/NDClab /home/data/NDClab/tools/containers/python-3.8/container.simg python3 filename.py

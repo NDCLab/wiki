@@ -119,8 +119,12 @@ Once you've created this file, load singularity and execute the following comman
 singularity build --remote container.simg container.recipe 
 ```
 
-This will create a new singularity container "container.simg" with all your required Python packages.
+You may need to create a singularity account to execute this command. Sign up at [Sylabs](sylabs.cloud.io). If you see that you need a token or your token is expired, you can generate a new one [here](sylabs.cloud.io/auth/tokens). Then you should be able to login:
+```
+singularity remote login
+```
+...with your token and execute the build command above to create a new singularity container "container.simg" with all your required Python packages.
 
 ### Transfer
 
-Lastly, transfer this container by uploading it via [hpcgui.fiu.edu](hpcgui.fiu.edu). 
+Lastly, upload this container to the lab's "containers" (tools/containers) directory via [hpcgui.fiu.edu](hpcgui.fiu.edu). 
