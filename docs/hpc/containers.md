@@ -119,7 +119,7 @@ Once you've created this file, load singularity and execute the following comman
 singularity build --remote container.simg container.recipe 
 ```
 
-You may need to create a singularity account to execute this command. Sign up at [Sylabs](sylabs.cloud.io). If you see that you need a token or your token is expired, you can generate a new one [here](sylabs.cloud.io/auth/tokens). Then you should be able to login:
+You may need to create a singularity account to execute this command. Sign up at [Sylabs](cloud.sylabs.io). If you see that you need a token or your token is expired, you can generate a new one [here](clous.sylabs.io/auth/tokens). Then you should be able to login:
 ```
 singularity remote login
 ```
