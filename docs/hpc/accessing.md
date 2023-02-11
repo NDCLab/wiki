@@ -66,7 +66,7 @@ The NDCLab follows the structure listed below.
 
 The left and right diagrams represent the varying read & execute privileges and the write privileges respectively. Each color corresponds to the following group:
 
-![colorcode](https://user-images.githubusercontent.com/26397102/122824230-607ed780-d2ae-11eb-81bc-93011d4569c4.png)
+![Privileges_legend drawio](https://user-images.githubusercontent.com/24297229/218226308-39124b2e-1581-465d-86ca-c5511dae525d.png)
 
 All lab members are part of the NDCLab, but only a select few members are part of a specific project. This results in specific privileges given to select members to ensure data compliance. For example, a lab member has read and execute privileges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of `data/project-A/`. 
 
