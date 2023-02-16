@@ -49,16 +49,30 @@ have very specific requirements.
 ```sh
 # Usage
 docker pull ubuntu:latest
+# or
+docker pull google/cloud-sdk:417.0.0
 ```
 
-`docker build` will build a docker image using a `Dockerfile` or the "build instructions" for the
+`docker build` will build a docker image using a `Dockerfile` (named "Dockerfile") or the "build instructions" for the
 image. Generally you do not need additional options for the build command since most of the work is
 done in the `Dockerfile`.
 
 ```sh
-# Usage
-docker build Dockerfile
+# With the Dockerfile and build context set to the current directory
+docker build .
 ```
+
+Or
+
+```sh
+docker build -t dockerimage:latest .
+```
+
+Then you can [save](https://docs.docker.com/storage/bind-mounts/) the image for future use
+```sh
+docker save dockerimage:latest | gzip > dockerimage_latest.tar.gz
+```
+...or [push](https://docs.docker.com/storage/bind-mounts/) to a registry like [DockerHub](hub.docker.com)
 
 Below is an example is a simple `Dockerfile` for a Python container:
 
