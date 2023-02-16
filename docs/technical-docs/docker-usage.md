@@ -95,9 +95,11 @@ COPY src/ .
 If you are using the CLI, the best resource available as reference is the help text, you can access
 it by doing `docker --help` or `docker command --help`. Alternatively for a more in-depth
 explanations for commands and options access the manual pages via `man docker` or
-[online](http://manpages.org/docker)
+[online](http://manpages.org/docker) or [here](https://docs.docker.com/engine/reference/commandline/cli/)
 
 [Wiki article](https://wiki.archlinux.org/index.php/Docker)
+
+For more info on [composing Dockerfile](https://docs.docker.com/engine/reference/builder/)
 
 ## Docker Compose
 
