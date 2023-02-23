@@ -119,6 +119,14 @@ nav_order: 2
 | research interests | Investigating the possible link between social anxiety and cognitive control performance. |
 | hobbies | Traveling, hiking, camping, dancing, cooking/eating food, and anything else I would be introduced to. |
 
+| ![guevara](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/guevara.jpg) | Vanessa Guevara |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | vanessaaag |
+| Email  | vguev015@fiu.edu |
+| research interests | Vanessa is interested in neuropsychology, speech disorders, biopsychology, and swallowing disorders  |
+| hobbies | Training like an athlete, embroidery, and playing Chinese checkers |
 
 ### Senior Research Technicians
 
