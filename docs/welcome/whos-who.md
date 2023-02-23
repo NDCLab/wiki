@@ -32,6 +32,18 @@ nav_order: 2
 ### Lab Technician
 
 
+### EEG Research Assistant (THRIVE project)
+
+| ![garciamorazzani](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/garciamorazzani.jpg) | Ana Garcia Morazzani |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | Ana Garcia Morazzani |
+| Email  | agarc884@fiu.edu |
+| research interests | Ana is interested in psychopharmacology, sleep, and metacognition.|
+| hobbies | playing the guitar, dj mixing, drawing, being outdoors. |
+
+
 ### Graduate Students
 
 | ![hosseini](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hosseini.jpg) | Kianoosh Hosseini |
@@ -184,15 +196,6 @@ nav_order: 2
 | Email  | lgall049@fiu.edu|
 | research interests | Laura is interested in the effects of social anxiety on cognition. |
 | hobbies | Trying new foods, boxing, watching movies |
-
-| ![garciamorazzani](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/garciamorazzani.jpg) | Ana Garcia Morazzani |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | Ana Garcia Morazzani |
-| Email  | agarc884@fiu.edu |
-| research interests | Ana is interested in psychopharmacology, sleep, and metacognition.|
-| hobbies | playing the guitar, dj mixing, drawing, being outdoors. |
 
 | ![guevara](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/guevara.jpg) | Vanessa Guevara |
 | ---  | ---  |
