@@ -38,7 +38,7 @@ This course is on develop.fiu.edu. A [link is provided by the CCF](https://ndcla
 6. Send copies of your completion certificates (PDF format) for each course to **ndclab@fiu.edu**.
 
 ### HIPAA Course
-Follow the link in the [e-mail sent by the CCF](https://ndclab.github.io/wiki/docs/onboarding/ccc-emails.html).
+Follow the link in the [e-mail sent by the CCF](https://ndclab.github.io/wiki/docs/onboarding/ccf-access.html).
 
 
 
