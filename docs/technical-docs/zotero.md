@@ -89,6 +89,16 @@ Certain tags might be utilized for multiple projects. In order to make sure tags
 Papers in a subcollection or in the main NDC_Lab group library can be filtered by clicking tags on and off in the lower left-hand corner of the Zotero app. Clicking multiple tags will narrow your search further. Clicking on an already selected tag will remove it as a search parameter. 
 
 
+## Checking for Duplicates
+
+
+If you have added several new papers to the lab's Zotero account, you should check to be certain that you didn't accidentally create any duplicates.
+
+1. Click "Duplicate Items" at the bottom of the Group Library.
+2. Select any duplicates.  The window pane on the right shows you the data for each item.
+3. Highlight the most complete item, then click Merge.  This will merge the two records.
+4. Navigate to that record in the main collection and make sure it only has one PDF.
+
 
 
 ## Quick Tips
