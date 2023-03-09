@@ -60,13 +60,14 @@ The first two columns in every NDCLab central tracker are the same:
 Additionally, the central tracker must have one column for each data type collected. These are synonymous with the subfolders in `sourcedata/raw`:
 - audioData
 - videoData
+- zoomData
 - bvData (EEG data collected with the Brain Vision system)
 - egiData (EEG data collected with the EGI system)
 - digiData
 
 For task data from PsychoPy/Pavlovia, create one row for each individual task, named exactly as the task is (including any session/run/event suffix).
 
-For questionnaire data from REDCap, create one row for each individual questionnaire, named exactly as the questionnaire is ((ncluding any session/run/event suffix).
+For questionnaire data from REDCap, create one row for each individual questionnaire, named exactly as the questionnaire is (including any session/run/event suffix).
 
 For scored data from REDCap questionnaires, create one row for each individual subscore, named exactly as the subscore is (including any session/run/event suffix).
 
