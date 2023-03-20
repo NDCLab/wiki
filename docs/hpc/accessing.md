@@ -40,7 +40,7 @@ Welcome to the FIU Instructional & Research Computing Center (IRCC)
 #######################################################################
 ```
 
-From here, you can use the command line as you would use any [shell](https://linuxcommand.org/lc3_lts0010.php). You can also submit batch jobs to the compute-node with the ["sbatch" command](https://ndclab.github.io/wiki/docs/hpc/jobs.html).
+From here, you can use the command line as you would use any [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html). You can also submit batch jobs to the compute-node with the ["sbatch" command](https://ndclab.github.io/wiki/docs/hpc/jobs.html).
 
 If you are feeling fancy, you can access this directly without logging in via the browser.  Simply open your local shell and type:
 ```
