@@ -14,7 +14,7 @@ nav_order: 4
 ## Overview
 [Containers](https://www.ibm.com/topics/containerization) are used to ensure reproducibility of results and utilize software and packages that may not be installed directly on the HPC. In essence, they are a miniature "world" that contains specific versions of the software and packages you are using. If anyone runs your code within the same container as you used, they should get the same results.
 
-Popular containerization technologies include [Docker](https://docs.docker.com/get-started/overview/) and [Singularity](https://docs.sylabs.io/guides/latest/user-guide/). Although you can install Docker on your local machine Docker is not suitable for HPC applications for security reasons and so we use Singularity (with `module load singularity-3.8.2`), which can import Docker images as well as Singularity images (.simg, .sif) and run without root access.
+Popular containerization technologies include [Docker](https://docs.docker.com/get-started/overview/) and [Singularity](https://docs.sylabs.io/guides/latest/user-guide/). Although you can install Docker on your local machine, Docker is not suitable for HPC applications for security reasons and so we use Singularity (with `module load singularity-3.8.2`), which can import Docker images as well as Singularity images (.simg, .sif) and run without root access.
 
 ## Default Lab Container
 Before calling a container, check that the lab default in "tools/containers" contains all packages that you need. If your script uses a package that isn't included in the container, you may want to simply swap out for a similar package that is already in the container. If you cannot swap, you will need a new container.
@@ -31,7 +31,7 @@ To build your own singularity container for use in the shared HPC, you will need
 
 To load this OS onto your VM box, follow along with this [guided tutorial](https://www.youtube.com/watch?v=hE2eOLx0gNU).
 
-If you are logged in to the HPC these should be installed already.
+If you are logged in to the HPC, these should be installed already.
 
 ### Build
 
@@ -116,7 +116,7 @@ Your `requirements.txt` file will contain all the [necessary packages](https://l
 
 (To add a package to the existing Python container, you can access the recipe file named `python.recipe`. On line 61 is a line instructing the container to install a number of Python modules from the `requirements.txt` file. If you do not see a package required for your code simply add your package name to this file and rebuild the container image in a Linux environment.
 
-To add a package to the existing R container, you can access the recipe file named `R.recipe`. On line 85 is a line instructing R to install a number of packages `apt-get install --y --no-install-recommends`. If you do not see a package required for your code simply add your package name to this list and rebuild the container image in a Linux environment.
+To add a package to the existing R container, you can access the recipe file named `R.recipe`. On line 85 is a line instructing R to install a number of packages: `apt-get install --y --no-install-recommends`. If you do not see a package required for your code simply add your package name to this list and rebuild the container image in a Linux environment.
 
 Once you've created this file, load singularity and execute the following command:
 
