@@ -62,11 +62,11 @@ If more interactive access is required, for instance downloading Pavlovia data a
 ## Structure
 
 The NDCLab follows the structure listed below.
-![NDCLab_privileges drawio](https://user-images.githubusercontent.com/24297229/218225663-7c7d3d1b-6db5-4259-916c-308633fbd74e.png)
+![NDCLab_privileges drawio](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/NDCLab_privileges.drawio.png)
 
 The left and right diagrams represent the varying read & execute privileges and the write privileges respectively. Each color corresponds to the following group:
 
-![colorcode](https://user-images.githubusercontent.com/24297229/218226521-193547d6-a69e-4dc2-9675-14f5804844fb.png)
+![colorcode](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/Privileges_legend_transparent.drawio.png)
 
 All lab members are part of the NDCLab, but only a select few members are part of a specific project. This results in specific privileges given to select members to ensure data compliance. For example, a lab member has read and execute privileges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of `data/project-A/`. 
 

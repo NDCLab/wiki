@@ -37,6 +37,8 @@ If you are logged in to the HPC these should be installed already.
 
 Once you have your RedHat OS successfully installed, you will utilize the following "recipe" file template to build a Python container.
 
+The [name of the container](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#container-names) <container-name> should contain the name of the container ("python" or "R") with a unique three-part version control number to distinguish it from other builds (i.e. "python-3.1.1").
+
 Copy and paste the text below into a file called `<container-name>.recipe`.
 
 ```sass
@@ -126,11 +128,11 @@ You may need to create a singularity account to execute this command. Sign up at
 ```
 singularity remote login
 ```
-...with your token and execute the build command above to create a new singularity container "container.simg" with all your required Python packages.
+...with your token and execute the build command above to create a new singularity container "<container-name>.simg" with all your required Python packages.
 
 ### Transfer
 
-Lastly, upload this container to the lab's "containers" (tools/containers) directory via [hpcgui.fiu.edu](hpcgui.fiu.edu).
+Lastly, notify the lab tech that you've built a new container so he/she can upload it to the lab's "containers" (tools/containers) directory via [hpcgui.fiu.edu](hpcgui.fiu.edu).
 
 ### Run
 

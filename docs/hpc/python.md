@@ -42,6 +42,8 @@ To run a python script using the login node, log in to the [Panther Shell Access
 bash /home/data/NDClab/tools/lab-devOps/scripts/python/prun.sh <your-script-name>.py [# nodes] [hours of walltime requested]
 ```
 
+By default the script will call for 1 hour of walltime (time required to execute the script) and 1 node. If walltime needed or nodes desired exceeds 1 hourand 1 node the arguments [# nodes] [hours of walltime requested] should be included (i.e. <your-script-name>.py 1 24 calls for 1 node and 24hrs walltime).
+
 This will generate and run a Slurm script named after your script: `your-script-name.sub`. Run this file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
 
 

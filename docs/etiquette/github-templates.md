@@ -73,9 +73,9 @@ While you wait for approval of your planned roadmap, you can set up ZenHub.
 
 ![zh_new-workspace](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_new-workspace.png)
 
-2. Unfortunately, ZenHub does not automatically use the NDCLab's default pipelines when creating a new workspace, so you will need to customize your new workspace immediately. Adjust pipeline names and descriptors to match the table [here](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#tour-of-the-pipelines). You can change the names and descriptors by clicking the three vertical dots at the top of each pipeline. This same menu lets you delete any unnecessary pipelines. Additional pipelines can be added at the far right of the screen, then dragged-and-dropped into the appropriate position.
+2. Unfortunately, ZenHub does not automatically use the NDCLab's default pipelines when creating a new workspace, so you will need to customize your new workspace immediately. Adjust pipeline names and descriptors to match the table [here](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html#tour-of-the-pipelines). You can change the names and descriptors by clicking the three vertical dots at the top of each pipeline. This same menu lets you delete any unnecessary pipelines. Additional pipelines can be added at the far right of the screen, then dragged-and-dropped into the appropriate position.
 
-3. Create a [ZenHub Epic](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#defining-epics) for each planned project release, as outlined in your readme roadmap.
+3. Create a [ZenHub Epic](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html#defining-epics) for each planned project release, as outlined in your readme roadmap.
 
 4. Plan project issues (which may be large and abstract at this stage) and assign them to the appropriate Epic.
 
@@ -96,5 +96,5 @@ When you request the new repo from the lab manager, a project-specific folder wi
 When you request the new repo from the lab manager, a project-specific folder will also be created on the lab's Zotero group.
 
 ### Off to the Races
-Once the lab director has approved your planned roadmap and merged it into `main`, you have set up the project's ZenHub workspace, and your project has been added to the HPC, Google Drive, and Slack, you are ready to launch. Set up your [sprints inside ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.md#planning-sprints) and plan your first sprint meeting with your team! 
+Once the lab director has approved your planned roadmap and merged it into `main`, you have set up the project's ZenHub workspace, and your project has been added to the HPC, Google Drive, and Slack, you are ready to launch. Set up your [sprints inside ZenHub](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html#planning-sprints) and plan your first sprint meeting with your team! 
 
