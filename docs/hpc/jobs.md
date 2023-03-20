@@ -42,7 +42,7 @@ The file below represents a sample Slurm script where a conda base environment i
 #SBATCH --account=iacc_gbuzzell		# SLURM account name # this line needed only for highmem jobs
 #SBATCH --mail-type=end          	# send email when job ends
 
-singularity exec --bind /home/data/NDClab /home/data/NDClab/tools/containers/python-3.8/container.simg python3 filename.py
+singularity exec --bind /home/data/NDClab /home/data/NDClab/tools/containers/python-3.8/python-3.8.simg python3 filename.py
 ```
 
 Here is a guide to what these details in the .sub file mean and how they should be customized:
