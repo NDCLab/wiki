@@ -18,7 +18,7 @@ Every active study should have an icon on the home screen on the Survey iPad tha
 
 1. Open the Shortcuts app by tapping the Shortcuts icon.
 
-![shortcutsapp](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/shortcutsicon.png
+![shortcutsapp](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/shortcutsicon.png)
 
 2. Tap the '+' symbol on the top of the screen to create a new shortcut.
 
