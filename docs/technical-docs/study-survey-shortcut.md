@@ -16,21 +16,21 @@ Every active study should have an icon on the home screen on the Survey iPad tha
 
 ## Adding an Icon
 
-Open the Shortcuts app by tapping the Shortcuts icon.
+1. Open the Shortcuts app by tapping the Shortcuts icon.
 
-![shortcutsapp](https://github.com/AnaGabrielaGM/wiki/blob/main/docs/_assets/technical/shortcutsicon.png)
+![shortcutsapp](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/shortcutsicon.png
 
-Tap the '+' symbol on the top of the screen to create a new shortcut.
+2. Tap the '+' symbol on the top of the screen to create a new shortcut.
 
-On the 'Categories' tab on the right of the screen, select 'Web' and then 'Open URLs'.
+3. On the 'Categories' tab on the right of the screen, select 'Web' and then 'Open URLs.'
 
-Paste in the URL that links to the REDCap survey.
+4. Paste in the URL that links to the REDCap survey.
 
-Tap the  icon on the top left corner of the screen and change the color and glyph. Make sure that it can be easily distinguished from the icons for other active studies.
+5. Tap the icon on the top left corner of the screen and change the color and glyph. Make sure that it can be easily distinguished from the icons for other active studies.
 
-Rename the shortcut by tapping "Open..." and then setting the shortcut to the study acronym.
+6. Rename the shortcut by tapping "Open..." and then setting the shortcut to the study acronym.
 
-Tap the 'Share' icon and then 'Add to Home Screen'.
+7. Tap the 'Share' icon and then 'Add to Home Screen.'
 
 All done! This icon can now be used for easy access to the REDCap survey from the iPad.
 
