@@ -28,13 +28,15 @@ Now that you have installed FileZilla, you can use it to connect to an FTP serve
 2. Click on the "File" menu and select "Site Manager".
 3. In the Site Manager window, click on the "New Site" button.
 4. Enter the following information:
-Host: The hostname or IP address of the FTP server you want to connect to. In our case (as we want to connect to the HPC), use 'hpclogin01'.
-Port: The port number of the FTP server. Use '22' for HPC. 
-Protocol: Choose "FTP - File Transfer Protocol".
-Encryption: Choose "Use explicit FTP over TLS if available".
-Logon Type: Choose "Normal".
-User: Your FTP username. If you are using your FIU student email to login to the HPC, use your fiu email name without @fiu.edu (e.g., khoss005).
-Password: Use your FIU password.
+
+-- Host: The hostname or IP address of the FTP server you want to connect to. In our case (as we want to connect to the HPC), use 'hpclogin01'.
+-- Port: The port number of the FTP server. Use '22' for HPC. 
+-- Protocol: Choose "FTP - File Transfer Protocol".
+-- Encryption: Choose "Use explicit FTP over TLS if available".
+-- Logon Type: Choose "Normal".
+-- User: Your FTP username. If you are using your FIU student email to login to the HPC, use your fiu email name without @fiu.edu (e.g., khoss005).
+-- Password: Use your FIU password.
+
 5. Click on the "Connect" button.
 
 If everything is entered correctly, FileZilla should connect to the FTP server (HPC) and display a list of files and folders on the server. You can now transfer files between your computer and the server by dragging and dropping them between the local and remote panes in FileZilla.
