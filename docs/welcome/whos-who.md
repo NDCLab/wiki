@@ -31,6 +31,14 @@ nav_order: 2
 
 ### Lab Technician
 
+| ![hunt](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hunt.jpg) | David Hunt |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Bloomington, IN |
+| GitHub | davhunt |
+| Email  | dhunt@fiu.edu |
+| research interests | David is interested in fMRI and connectomics, computer models of cognition, visual neuroscience, EEG, white matter tractography. |
+| hobbies | Trying to cook new recipes, on and off Pacers fan, coffee and tea. |
 
 ### Graduate Students
 
