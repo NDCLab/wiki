@@ -111,6 +111,14 @@ Alternately, if all files are stored within a space specific to the social-conte
 > 02_anxiety_analysis<br/>
 > 03_anxiety_results
 
+### Container Names
+
+One advantage to using [containers](https://ndclab.github.io/wiki/docs/hpc/containers.html) is that you use a preset, deterministic environment to run your code, so that you can expect the same results from running the same code in the container at different times, but this advantage is moot if you can't keep track of what container you used to run your code.
+
+When building a [container](https://ndclab.github.io/wiki/docs/hpc/containers.html), it's important to give it (and its recipe file) a name that provides information about how it differs from prior or future builds. For this we use a three-part [semantic versioning](https://en.wikipedia.org/wiki/Software_versioning#Semantic_versioning) number Major.Minor.Patch appended to the name of the container (e.g. "python-2.1.0"). When you update an existing container with a new feature or updated environment, you should give the new container a version number that encapsulates its relationship to the previous build.
+
+A "minor" change might be updating the included libraries in the container or removing conflicting libraries for example; while a "major" change might be updating the Python version from Python-3.4 to Python-3.7, for example. Commenting inside the recipe file to explain the changes made to new eyes or to your future self is never a bad idea!
+
 ### Dates (YYYY-MM-DD)
 
 Whenever dates are used, the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) convention is used to avoid any ambiguity.  Examples:

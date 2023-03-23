@@ -12,11 +12,12 @@ nav_order: 4
 
 
 ## Overview
-Containers are used to ensure reproducibility of results. In essence, they are a miniature "world" that contains specific versions of the software and packages you are using. If anyone runs your code within the same container as you used, they should get the same results.
+[Containers](https://www.ibm.com/topics/containerization) are used to ensure reproducibility of results and utilize software and packages that may not be installed directly on the HPC. In essence, they are a miniature "world" that contains specific versions of the software and packages you are using. If anyone runs your code within the same container as you used, they should get the same results.
 
+Popular containerization technologies include [Docker](https://docs.docker.com/get-started/overview/) and [Singularity](https://docs.sylabs.io/guides/latest/user-guide/). Although you can install Docker on your local machine, Docker is not suitable for HPC applications for security reasons and so we use Singularity (with `module load singularity-3.8.2`), which can import Docker images as well as Singularity images (.simg, .sif) and run without root access.
 
 ## Default Lab Container
-Before calling a container, check that the lab default contains all packages that you need. If your script uses a package that isn't included in the container, you may want to simply swap out for a similar package that is already in the container. If you cannot swap, you will need a new container.
+Before calling a container, check that the lab default in "tools/containers" contains all packages that you need. If your script uses a package that isn't included in the container, you may want to simply swap out for a similar package that is already in the container. If you cannot swap, you will need a new container.
 
 ## Building a New Container
 To build a brand new container, follow the instructions below.
@@ -30,11 +31,15 @@ To build your own singularity container for use in the shared HPC, you will need
 
 To load this OS onto your VM box, follow along with this [guided tutorial](https://www.youtube.com/watch?v=hE2eOLx0gNU).
 
+If you are logged in to the HPC, these should be installed already.
+
 ### Build
 
-Once you have your RedHat OS successfully installed, you will utilize the following "recipe" file template to build an R or Python container.
+Once you have your RedHat OS successfully installed, you will utilize the lab's existing "recipe" file to build an updated container in a file called `<container-name>.recipe`.
 
-Copy and paste the text below into a file called `container.recipe`.
+The [name of the container](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#container-names) <container-name> should contain the name of the container ("python" or "R") with a unique three-part version control number to distinguish it from other builds (i.e. "python-3.1.1.recipe" and "python-3.1.1.simg").
+
+Here is an example of an NDCLab container recipe file for Python:
 
 ```sass
 Bootstrap: docker
@@ -109,18 +114,36 @@ From: ubuntu:20.04
 
 Your `requirements.txt` file will contain all the [necessary packages](https://learnpython.com/blog/python-requirements-file/) for your Python container.
 
-(To add a package to the existing Python container, you can access the recipe file named `python.recipe`. On line 61 is a line instructing the container to install a number of Python modules from the `requirements.txt` file. If you do not see a package required for your code simply add your package name to this file and rebuild the container image in a Linux environment with root access.
+(To add a package to the existing Python container, you can access the recipe file named `python.recipe`. On line 61 is a line instructing the container to install a number of Python modules from the `requirements.txt` file. If you do not see a package required for your code simply add your package name to this file and rebuild the container image in a Linux environment.
 
-To add a package to the existing R container, you can access the recipe file named `R.recipe`. On line 85 is a line instructing R to install a number of packages. If you do not see a package required for your code simply add your package name to this list and rebuild the container image in a Linux environment with root access.)
+To add a package to the existing R container, you can access the recipe file named `R.recipe`. On line 85 is a line instructing R to install a number of packages: `apt-get install --y --no-install-recommends`. If you do not see a package required for your code simply add your package name to this list and rebuild the container image in a Linux environment.
 
-Once you've created this file, execute the following command:
+Once you've created this file, load singularity and execute the following command:
 
 ```
-sudo singularity build container.recipe container.simg
+singularity build --remote <container-name>.simg <container-name>.recipe 
 ```
 
-This will create a new singularity container with all your required Python packages.
+You may need to create a singularity account to execute this command. Sign up at [Sylabs](https://cloud.sylabs.io). If you see that you need a token or your token is expired, you can generate a new one [here](https://cloud.sylabs.io/auth/tokens). Then you should be able to login:
+```
+singularity remote login
+```
+...with your token and execute the build command above to create a new singularity container "<container-name>.simg" with all your required Python packages.
 
 ### Transfer
 
-Lastly, transfer this container by uploading it via [hpcgui.fiu.edu](hpcgui.fiu.edu). 
+Lastly, notify the lab tech that you've built a new container so he/she can upload it to the lab's "containers" (tools/containers) directory via [hpcgui.fiu.edu](hpcgui.fiu.edu).
+
+### Run
+
+Now we can use the container to run our script, with
+
+`singularity exec -e [options] <container-name>.simg bash <script-name>.sh`
+
+Or if we want to execute the entrypoint command
+
+`singularity run [options] <container-name>.simg`
+
+If we want to navigate within the container freely, rather than execute a specific command and leave, we can shell inside with
+
+`singularity shell <container-name>.simg`

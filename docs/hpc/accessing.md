@@ -40,11 +40,11 @@ Welcome to the FIU Instructional & Research Computing Center (IRCC)
 #######################################################################
 ```
 
-From here, you can manipulate files as you would using any [shell](https://ndclab.github.io/wiki/docs/shell). You can also submit batch jobs to the compute-node.
+From here, you can use the command line as you would use any [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html). You can also submit batch jobs to the compute-node with the ["sbatch" command](https://ndclab.github.io/wiki/docs/hpc/jobs.html).
 
-If you are feeling fancy, you can access this directly without logging in via the browser.  Simply open your shell and type:
+If you are feeling fancy, you can access this directly without logging in via the browser.  Simply open your local shell and type:
 ```
-ssh YOURLOGIN#hpclogin01
+ssh YOURLOGIN@hpclogin01
 ```
 
 You will be prompted to input your password, and then you can navigate the HPC as you would on the browser. To return to using your shell to access files on your local computer, simply execute an `exit` command.  (Note: this method is called "secure shell (SSH), which comes pre-installed on Windows10 and MacOS. Older Windows versions are available for install [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).)
@@ -62,14 +62,13 @@ If more interactive access is required, for instance downloading Pavlovia data a
 ## Structure
 
 The NDCLab follows the structure listed below.
+![NDCLab_privileges drawio](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/NDCLab_privileges_all_lab_members.drawio.png)
 
-![NDCLab Privilges](https://user-images.githubusercontent.com/26397102/122823863-dfbfdb80-d2ad-11eb-94b8-daf9a585f890.png)
+The left and right diagrams represent the read, write, and execute permissions for a general lab member and a lab member attached to a given project, respectively. Each color corresponds to the following group:
 
-The left and right diagrams represent the varying read & execute privileges and the write privileges respectively. Each color corresponds to the following group:
+![colorcode](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/Privileges_legend_transparent.drawio.png)
 
-![colorcode](https://user-images.githubusercontent.com/26397102/122824230-607ed780-d2ae-11eb-81bc-93011d4569c4.png)
-
-All lab members are part of the NDCLab, but only a select few members are part of a specific project. This results in specific privileges given to select members to ensure data compliance. For example, a lab member has read and execute privileges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of `data/project-A/`. 
+All lab members are part of the NDCLab and have read access to the labs' projects, including datasets, analyses, and tools, but only a select few members are part of a specific project. This results in specific privileges given to select members to ensure data compliance. For example, a lab member has read and execute privileges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of `data/project-A/` as well as write files and code to the project repository. Write permissions to a project's private data and data derivatives are handled on a case-by-case basis depending on the lab member's role in the project.
 
 The main directories -- `datasets`, `tools`, and `analyses` -- are described below.
 

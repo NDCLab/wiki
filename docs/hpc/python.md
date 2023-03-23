@@ -12,12 +12,12 @@ nav_order: 7
 
 
 ## Packages
-Located in `/home/data/NDClab/tools/containers` is the lab's current default singularity image for Python; it contains all environment variables and packages required to run any Python script.
+Located in `/home/data/NDClab/tools/containers` is the lab's current default singularity image for Python; it contains all environment variables and packages required to run a Python script.
 
 You can identify which packages are already included in this singularity image by [logging into the hpc](https://ndclab.github.io/wiki/docs/hpc/accessing.html#login-node) and using `cd` to navigate into the folder with the Python container. Activate singularity:
 
 ```
-module load singularity-3.5.3
+module load singularity-3.8.2
 ```
 
 Then activate the interactive shell:
@@ -36,13 +36,15 @@ If your script requires a package that is not listed here, a [new container](htt
 
 
 ## Running a Python Script
-To run a script in the R programming language using the login node, log in to the [Panther Shell Access](https://ndclab.github.io/wiki/docs/hpc/accessing.html#login-node). Use `cd` to navigate to the folder that contains your script. From that location, run the following command:
+To run a python script using the login node, log in to the [Panther Shell Access](https://ndclab.github.io/wiki/docs/hpc/accessing.html#login-node). Use `cd` to navigate to the folder that contains your script. From that location, run the following command:
 
 ```
-sh /home/data/NDClab/tools/lab-devOps/scripts/python/prun.sh <your-script-name>.py
+bash /home/data/NDClab/tools/lab-devOps/scripts/python/prun.sh <your-script-name>.py [# nodes] [hours of walltime requested]
 ```
 
-This will generate an Slurm script named after your script: `your-script-name.sub`. Run this file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
+By default the script will call for 1 hour of walltime (time required to execute the script) and 1 node. If walltime needed or nodes desired exceeds these defaults, then the arguments [# nodes] [hours of walltime requested] should be included (i.e. `<your-script-name>.py 1 24` calls for 1 node and 24hrs walltime).
+
+This will generate and run a Slurm script named after your script: `your-script-name.sub`. If you want to re-run the script, you can re-run the .sub file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
 
 
 ## Parallelization

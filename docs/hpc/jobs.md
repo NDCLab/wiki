@@ -39,9 +39,10 @@ The file below represents a sample Slurm script where a conda base environment i
 #SBATCH --nodes=1                	# node count
 #SBATCH --ntasks=1               	# total number of tasks across all nodes
 #SBATCH --time=00:10:00          	# total run time limit (HH:MM:SS)
+#SBATCH --account=iacc_gbuzzell		# SLURM account name # this line needed only for highmem jobs
 #SBATCH --mail-type=end          	# send email when job ends
 
-singularity exec --bind /home/data/NDClab /home/data/NDClab/tools/containers/python-3.8/container.simg python3 filename.py
+singularity exec --bind /home/data/NDClab /home/data/NDClab/tools/containers/python-3.8/python-3.8.simg python3 filename.py
 ```
 
 Here is a guide to what these details in the .sub file mean and how they should be customized:
@@ -53,9 +54,10 @@ Here is a guide to what these details in the .sub file mean and how they should 
 | nodes  | tells the HPC how many nodes should be utilized (nodes are individual computers in the cluster)  | Keep at "1" unless you are doing parallel processing.  |
 | tasks  | tells the HPC how many tasks (that is, CPUs) should be utilized across the number of nodes selected | Keep at "1" unless you are doing parallel processing.  |
 | time  | limits the amount of time the HPC should devote to running the script  | Ballpark the time your script will need to run and give yourself some buffer. For parallel processes, this will need to be set very high. But be careful not to burn through lab time on the HPC.  |
+| account | The HPC account used to run the script | By default this will be "acc_gbuzzell" and this line can be omitted. For high memory jobs, "iacc_gbuzzell" should be used. |
 | mail-type  | tells the HPC to send you an e-mail when the job is done  | If the job is very small and will run quickly, you can delete this line to avoid an unnecessary e-mail in your inbox. Otherwise, leave it unchanged.  |
 | singularity exec --bind /home/data/NDClab  | binds data within the NDCLab folder to the singularity image  | Do not modify.  |
-| /home/data/NDClab/tools/containers /python-3.8/container.simg  | identity of the selected container  | Use the example for Python. For R, use `/home/data/NDClab/tools/containers/R-4.1.2/R-con.simg`  |
+| /home/data/NDClab/tools/containers/python-3.8/python-3.8.simg  | identity of the selected container  | Use the example for Python. For R, use `/home/data/NDClab/tools/containers/R/R-4.2.2A/R-4.2.2A.simg`  |
 | python3 filename.py  | the actual command to run the script specified  | Specify python3 for .py or Rscript for .R.  |
 
 MATLAB is a little special. To create a Slurm script for a .m file, replace the `singularity` line in the sample above with:
