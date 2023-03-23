@@ -314,6 +314,9 @@ If digitization has also been performed, append "digi-image" and "digi-model" af
 > sub-210001_rwe-eeg_digi-image_s1_r1_e1<br/>
 > sub-170044_memory-for-error_digi-model_s1_r1_e1
 
+Or, if the digitization resources have been downloaded as a single zip file:
+> sub-160051_social-flanker-eeg_digi_s1_r1_e1
+
 ## Audio and Video
 
 When audio, video, or photo data is collected (including Zoom, Audacity, etc.), files should be named: `subject`_`task`_`datatype`_`session/run/event`.  The two acceptable data types are: audio, video. For example:
