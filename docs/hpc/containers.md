@@ -35,11 +35,11 @@ If you are logged in to the HPC, these should be installed already.
 
 ### Build
 
-Once you have your RedHat OS successfully installed, you will utilize the following "recipe" file template to build a Python container.
+Once you have your RedHat OS successfully installed, you will utilize the lab's existing "recipe" file to build an updated container in a file called `<container-name>.recipe`.
 
-The [name of the container](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#container-names) <container-name> should contain the name of the container ("python" or "R") with a unique three-part version control number to distinguish it from other builds (i.e. "python-3.1.1").
+The [name of the container](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#container-names) <container-name> should contain the name of the container ("python" or "R") with a unique three-part version control number to distinguish it from other builds (i.e. "python-3.1.1.recipe" and "python-3.1.1.simg").
 
-Copy and paste the text below into a file called `<container-name>.recipe`.
+Here is an example of an NDCLab container recipe file for Python:
 
 ```sass
 Bootstrap: docker
