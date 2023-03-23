@@ -55,19 +55,19 @@ It is generally preferable to encrypt files locally and then upload to the HPC. 
 
 1. On the HPC virtual desktop, go to the directory that the file you need to encrypt exist. Right click inside the folder (right click on white space, not on a specific file) and then select “Open Terminal Here.”
 
-![how_encrypt](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/hpc_enc1.png)
+![hpc_enc1](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/hpc_enc1.png)
 
 2. This will open a black terminal window which will allow you to encrypt the files by typing commands into it.
 
 3. First, copy the name of the file in the folder by right clicking on the file and selecting “Copy.”
 
-![how_encrypt](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/hpc_enc2.png)
+![hpc_enc2](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/hpc_enc2.png)
 
 4. Now go to the terminal window and type `gpg -c`, then click the spacebar once, and then right click and select paste. Press Enter.
 
 5. You will be prompted to enter the encryption password. Type the password for this study. You will be asked to re-enter the password a second time to ensure it is entered correctly. Be very careful to enter the password correctly; if you encrypt the file with the wrong password, then we will be unable to open the file later for data coding and analysis.
 
-![how_encrypt](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/hpc_enc3.png)
+![hpc_enc3](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/hpc_enc3.png)
 
 6. After entering the password twice, an encrypted copy of the file will appear inside the downloads folder. The encrypted copy ends with “.gpg”.
 
