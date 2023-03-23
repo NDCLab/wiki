@@ -53,17 +53,17 @@ To download GPG on Windows, visit [this link](https://www.gpg4win.org/get-gpg4wi
 
 It is generally preferable to encrypt files locally and then upload to the HPC. However, if you must encrypt on the HPC directly, follow the instructions below:
 
-1. On the HPC virtual desktop, go to the directory that the file you need to encrypt exist. Right click inside the folder (right click on white space, not on a specific file) and then select “Open Terminal Here.”
+1. On the HPC virtual desktop, go to the directory where the file you want to encrypt exists. Right click inside the folder (right-click on white space, not on a specific file) and then select “Open Terminal Here.”
 
 ![hpc_enc1](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/hpc_enc1.png)
 
-2. This will open a black terminal window which will allow you to encrypt the files by typing commands into it.
+2. This will open a black terminal window which will allow you to encrypt the file by inputting commands.
 
-3. First, copy the name of the file in the folder by right clicking on the file and selecting “Copy.”
+3. Copy the name of the file in the folder by right clicking on the file and selecting “Copy.”
 
 ![hpc_enc2](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/hpc_enc2.png)
 
-4. Now go to the terminal window and type `gpg -c`, then click the spacebar once, and then right click and select paste. Press Enter.
+4. In the terminal window, type `gpg -c`, click the spacebar once, and then right-click and select paste. Press Enter.
 
 5. You will be prompted to enter the encryption password. Type the password for this study. You will be asked to re-enter the password a second time to ensure it is entered correctly. Be very careful to enter the password correctly; if you encrypt the file with the wrong password, then we will be unable to open the file later for data coding and analysis.
 
@@ -78,7 +78,7 @@ It is generally preferable to encrypt files locally and then upload to the HPC. 
 
 ### MacOS
 
-To decrypt a file, right-click it, navigate to the “Services” sub-menu and click “OpenPGP: Decrypt File”. Enter the password. If it does not work, it means that you are either trying to decrypt with the wrong password or you have used the wrong password to encrypt the file in the first place. You need to make sure that you are using the correct study password to encrypt/decrypt your files.
+To decrypt a file, right-click it, navigate to the “Services” sub-menu and click “OpenPGP: Decrypt File”. Enter the password. If decryption is successful, you will have both an encrypted and unencrypted copy of the file in the same folder. If decryption is unsuccessful, it means that you are either trying to decrypt with the wrong password or you have used the wrong password to encrypt the file in the first place. You need to make sure that you are using the correct study password to encrypt/decrypt your files.
 
 ### Windows
 
@@ -86,4 +86,14 @@ To decrypt a file, right-click it, navigate to the “Services” sub-menu and c
 
 ### Linux (HPC)
 
-To decrypt a file on the HPC, simply double-click it. The decryption dialogue box will appear. Enter the password. If the decryption is successful, be careful to immediately remove the unencrypted file from the HPC (by right-clicking and selecting "Delete").  If decryption is unsuccessful, it means that you are either trying to decrypt with the wrong password or you have used the wrong password to encrypt the file in the first place. You need to make sure that you are using the correct study password to encrypt/decrypt your files.
+1. On the HPC virtual desktop, go to the directory where your encrypted file exists. Right click inside the folder (right-click on white space, not on a specific file) and then select “Open Terminal Here.”
+
+2. This will open a black terminal window which will allow you to decrypt the file by inputting commands.
+
+3. Copy the name of the file in the folder by right clicking on the file and selecting “Copy.”
+
+4. In the terminal window, type `gpg`, click the spacebar once, and then right-click and select paste. Press Enter.
+
+5. You will be prompted to enter the password. Type the password for this study. 
+
+If the decryption is successful, be careful to immediately remove the unencrypted file from the HPC (by right-clicking and selecting "Delete").  If decryption is unsuccessful, it means that you are either trying to decrypt with the wrong password or you have used the wrong password to encrypt the file in the first place. You need to make sure that you are using the correct study password to encrypt/decrypt your files.
