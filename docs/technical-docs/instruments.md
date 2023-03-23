@@ -2,7 +2,7 @@
 layout: default
 title: Instruments
 parent: Technical Documentation
-nav_order: 4
+nav_order: 5
 ---
 
 ![robots in a factory](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/inst_automation-header.jpg)  

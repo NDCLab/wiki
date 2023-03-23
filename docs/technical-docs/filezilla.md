@@ -2,7 +2,7 @@
 layout: default
 title: FileZilla
 parent: Technical Documentation
-nav_order: 10
+nav_order: 3
 ---
 
 ### Contents

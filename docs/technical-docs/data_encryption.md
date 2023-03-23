@@ -2,7 +2,7 @@
 layout: default
 title: Data Encryption
 parent: Technical Documentation
-nav_order: 10
+nav_order: 1
 ---
 
 ### Contents
