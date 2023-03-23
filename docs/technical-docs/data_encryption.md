@@ -17,10 +17,10 @@ Data encryption is an essential aspect of data security. It is the process of co
 ## Download GPG 
 
 ### MacOS
-To download GPG on MacOS, visit [this link.](https://gpgtools.org/). After downloading, install it on your mac. The install procedure is a standard Mac pkg install.
+To download GPG on MacOS, visit [this link](https://gpgtools.org/). After downloading, install it on your mac. The install procedure is a standard Mac pkg install.
 
 ### Windows
-To download GPG on Windows, visit [this link.](https://www.gpg4win.org/get-gpg4win.html). You can 0$ for Paypal donation and then start downloading. After downloading, install it on your Windows machine. The installation process is similar to other regular Windows software. After installing, the software name is "Kleopatra"!
+To download GPG on Windows, visit [this link](https://www.gpg4win.org/get-gpg4win.html). You can 0$ for Paypal donation and then start downloading. After downloading, install it on your Windows machine. The installation process is similar to other regular Windows software. After installing, the software name is "Kleopatra"!
 
 ## How to encrypt and decrypt files
 
