@@ -7,7 +7,7 @@ nav_order: 8
 
 ### Contents
 1. [Setting Up](#setting-up)
-2. [Guidance](#guidance)
+2. [How to Use](#how-to-use)
 
 
 ## Setting Up
@@ -51,8 +51,9 @@ Port 443
 ```
 
 
-## Guidance
-You will want to treat the HPC as if it were simply another computer where your folder lives. Imagine the GitHub remote as the lynchpin and each of your computers (including your personal computer and the HPC) as residing on the end of a different spoke.  Whenever you interact with your files on any computer:
-1. First use `git pull` to make sure you have the latest copy from the remote.
-2. After you make changes, use `git push` to update the remote.
+## How to Use
+You will want to treat the HPC as if it were simply another computer where your folder lives. Imagine the GitHub remote as the lynchpin and each of your computers (including your personal computer and the HPC) as residing on the end of a different spoke. Your goal is to make sure you always keep that lynchpin up-to-date, so that you can "refresh" your working copy before you make any changes each time you log in.
+
+1. Before you do anything that adds, modifies, or deletes a file within the repository (either on the HPC or on your personal computer), do `git pull` to ensure you have the latest copy from the remote. (The only exception to this rule is the uploading of data to sourcedata/raw on the HPC, which is explicitly untracked by GitHub, and therefore does not care about any `git pull` procedure.)
+2. After you make changes (for example, tweaks to a preprocessing or analysis script), use `git push` to update the GitHub remote. Again, this is true whether you are making those changes on your personal computer or directly to the copy on the HPC.
 3. If you create branches other than `main` within your repo, ensure that you always leave the HPC on main (`git checkout main`) before you log off.  Checking out a branch on the HPC actually checks it out for all users, so by consistently returning to `main`, everybody has a shared baseline expectations for all project folders.
