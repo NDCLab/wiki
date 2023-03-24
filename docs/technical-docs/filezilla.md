@@ -31,7 +31,7 @@ Now that you have installed FileZilla, you can use it to connect to an FTP serve
 
     * Host: The hostname or IP address of the FTP server you want to connect to. In our case (as we want to connect to the HPC), use `hpclogin01.fiu.edu`.
     * Port: The port number of the FTP server. Use `22` for HPC. 
-    * Protocol: Choose "FTP - File Transfer Protocol".
+    * Protocol: Choose "SFTP - SSH File Transfer Protocol".
     * Encryption: Choose "Use explicit FTP over TLS if available".
     * Logon Type: Choose "Normal".
     * User: Your FTP username. (If you use your FIU student email to login to the HPC, this is your fiu email name without @fiu.edu; e.g., "khoss005").
