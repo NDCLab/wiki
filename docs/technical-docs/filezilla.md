@@ -46,4 +46,4 @@ If everything is entered correctly, FileZilla should connect to the FTP server (
 
 =======
 If you have any questions or run into any problems, don't hesitate to seek help from the 'tech' channel on the Slack.
->>>>>>> 91448771b968b372ce7295e14fa49ce95160878d
+
