@@ -41,6 +41,8 @@ Now that you have installed FileZilla, you can use it to connect to an FTP serve
 
 If everything is entered correctly, FileZilla should connect to the FTP server (HPC) and display a list of files and folders on the server. You can now transfer files between your computer and the server by dragging and dropping them between the local and remote panes in FileZilla.
 
+![shortcutsapp](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/filezilla.png)
+
 If you have any questions or run into any problems, don't hesitate to seek help from the 'tech' channel on the Slack.
 
 
