@@ -68,7 +68,7 @@ The left and right diagrams represent the read, write, and execute permissions f
 
 ![colorcode](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/Privileges_legend_transparent.drawio.png)
 
-All lab members are part of the NDCLab and have read access to the labs' projects, including datasets, analyses, and tools, but only a select few members are part of a specific project. This results in specific privileges given to select members to ensure data compliance. For example, a lab member has read and execute privileges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of `data/project-A/` as well as write files and code to the project repository. Write permissions to a project's private data and data derivatives are handled on a case-by-case basis depending on the lab member's role in the project.
+All lab members have general read access to the labs' projects, including datasets, analyses, and tools, but only a select few members are granted read access to specific data folders or granted write access on specific project. This results in specific privileges given to select members to ensure data compliance. For example, all lab members have read and execute privileges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of `project-A/`. Write permissions to a project is handled on a case-by-case basis depending on the lab member's role in the project.
 
 The main directories -- `datasets`, `tools`, and `analyses` -- are described below.
 
