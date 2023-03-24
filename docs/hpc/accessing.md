@@ -56,7 +56,7 @@ The visualization node is used for directly editing files on the cluster and for
 
 The file navigator is similar to a Windows Explorer or Mac Finder type interface. It is useful for viewing folder structure and contents from a high level.
 
-If more interactive access is required, for instance downloading Pavlovia data and uploading to the HPC, this can be accomplished on the interactive desktop. The desktop is resource intensive, so it is best reserved for the kinds of operations that cannot be accomplished via the shell or file navigator.
+If more interactive access is required, for instance downloading Pavlovia data and uploading to the HPC, this can be accomplished on the interactive desktop. The desktop is resource intensive, so it is best reserved for the kinds of operations that cannot be accomplished via the shell or file navigator. And, because of the relationship with GitHub (see below), it is imperative that files (excluding those in sourcedata/) are never added, deleted, or modified via the interactive desktop.
 
 
 ## Structure
@@ -90,3 +90,5 @@ Wherever possible, the NDCLab endeavors to operate as a fully open lab, providin
 Information that is pushed to the `main` branch of the GitHub repository is mirrored to the associated HPC folder at 1 am EST nightly. This connection is **one-way**: that is, for the purposes of data security, data on the HPC is **not** mirrored back to GitHub. In addition, the `sourcedata` and `derivatives` folders of dataset directories/repositories are explicitly ignored by Git.
 
 If an immediate sync of an HPC directory to the GitHub remote is required, this can be achieved with a `git pull` from the HPC shell.
+
+Any changes made to files directly on the HPC (excluding the uploading of data in sourcedata/), will prevent this sync from occurring unless the change is immediately pushed back to the GitHub remote with a `git push` from the HPC shell.
