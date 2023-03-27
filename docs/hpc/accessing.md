@@ -62,7 +62,7 @@ If more interactive access is required, for instance downloading Pavlovia data a
 ## Structure
 
 The NDCLab follows the structure listed below.
-![NDCLab_privileges drawio](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/NDCLab_privileges_all_lab_members.drawio.png)
+![NDCLab_privileges drawio](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/NDCLab_privileges_read.drawio.png)
 
 The left and right diagrams represent the read, write, and execute permissions for a general lab member and a lab member attached to a given project, respectively. Each color corresponds to the following group:
 
