@@ -57,7 +57,7 @@ The first two columns in every NDCLab central tracker are the same:
 - id (this is the subject ID), be careful to update the allowedValues information
 - consent (this connects to the "y/n" of the REDCap consent instrument)
 
-Additionally, the central tracker must have one column for each data type collected. These are synonymous with the subfolders in `sourcedata/raw`:
+Additionally, the central tracker must have one column for each data type collected. These basically align with the subfolders in `sourcedata/raw` (but note that, here, we specify which system was used to collect the data that is stored in the `eeg/` folder):
 - audioData
 - videoData
 - zoomData
@@ -65,11 +65,11 @@ Additionally, the central tracker must have one column for each data type collec
 - egiData (EEG data collected with the EGI system)
 - digiData
 
-For task data from PsychoPy/Pavlovia, create one row for each individual task, named exactly as the task is (including any session/run/event suffix).
+For task data from PsychoPy/Pavlovia, create one row for each individual task, named exactly as the task is (including any session/run/event suffix).  The associated "description" cell(s) should begin with "psychopy:".
 
-For questionnaire data from REDCap, create one row for each individual questionnaire, named exactly as the questionnaire is (including any session/run/event suffix).
+For questionnaire data from REDCap, create one row for each individual questionnaire, named exactly as the questionnaire is (including any session/run/event suffix). The associated "description" cells should begin with "redcap_data:".
 
-For scored data from REDCap questionnaires, create one row for each individual subscore, named exactly as the subscore is (including any session/run/event suffix).
+For scored data from REDCap questionnaires, create one row for each individual subscore, named exactly as the subscore is (including any session/run/event suffix). The associated "description" cells should begin with "redcap_scrd:".
 
 For custom variables, you will control these in your preprocessing scripts.  Be sure to specify how each is operating and include the name of the script in the provenance column.
 
@@ -101,7 +101,7 @@ bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET
 ```
 * **-t flag:** include this flag so that a tracker is generated on the basis of your central tracker data dictionary
 * **YOUR-DATASET:** this is the name of your dataset
-* **DATA-TYPES:** include each data type you have in your `sourcedata/raw` folder, separated by a comma (no space); these must follow the conventions outlined in the datadict_definitions file
+* **DATA-TYPES:** include each data type you have in your `sourcedata/raw/` folder, separated by a comma (no space); these must follow the conventions outlined in the datadict_definitions file (be sure to use either 'bv' or 'egi', rather than using 'eeg', so that the script knows which system was used to collect the data in the `sourcedata/raw/eeg/` folder)
 * **SUBJECT-NUMBERING:** include the first subject number to be used
 
 Here is an example of the setup line for rwe-eeg-dataset. It includes five data types: audio, digi, eeg (bv), psychopy, and redcap. Subject numbering for the central tracker will begin at 210000.
