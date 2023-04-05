@@ -99,6 +99,7 @@ You will input a single command that indicates which dataset should be set up, w
 ```
 bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET/ DATA-TYPES SUBJECT-NUMBERING
 ```
+* **-t flag:** include this flag so that a tracker is generated on the basis of your central tracker data dictionary
 * **YOUR-DATASET:** this is the name of your dataset
 * **DATA-TYPES:** include each data type you have in your `sourcedata/raw` folder, separated by a comma (no space); these must follow the conventions outlined in the datadict_definitions file
 * **SUBJECT-NUMBERING:** include the first subject number to be used
