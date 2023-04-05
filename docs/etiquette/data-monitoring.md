@@ -97,7 +97,7 @@ cd /home/data/NDClab/datasets
 You will input a single command that indicates which dataset should be set up, which data types are involved, and which EEG system (if any) is used. Here is the core structure of the command:
 
 ```
-sh /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup-moniprep.sh -t YOUR-DATASET/ DATA-TYPES SUBJECT-NUMBERING
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET/ DATA-TYPES SUBJECT-NUMBERING
 ```
 * **YOUR-DATASET:** this is the name of your dataset
 * **DATA-TYPES:** include each data type you have in your `sourcedata/raw` folder, separated by a comma (no space); these must follow the conventions outlined in the datadict_definitions file
@@ -105,7 +105,7 @@ sh /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup-moniprep.sh -t YOUR-
 
 Here is an example of the setup line for rwe-eeg-dataset. It includes five data types: audio, digi, eeg (bv), psychopy, and redcap. Subject numbering for the central tracker will begin at 210000.
 ```
-sh /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t rwe-eeg-dataset/ audio,digi,bv,psychopy,redcap 210000
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t rwe-eeg-dataset/ audio,digi,bv,psychopy,redcap 210000
 ```
 
 After executing this command, the following new files (in addition to the blank central tracker) will be added to your dataset's data-monitoring folder:
