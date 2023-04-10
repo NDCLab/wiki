@@ -28,6 +28,14 @@ nav_order: 2
 | research interests | Jess is interested in the neural, cognitive, and behavioral underpinnings of emotion and language. |
 | hobbies | I'm an avid runner, I love to travel, and I play the piano. |
 
+| ![laplace](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/laplace.jpg) | Lilly LaPlace |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Baton Rouge, LA |
+| GitHub | lillylaplace |
+| Email  | llaplace@fiu.edu |
+| research interests | Lilly is interested in developmental and clinical psychology, specifically the development and treatment of anxiety and mood disorders. |
+| hobbies | reading, hanging out with my cats, cooking & eating yummy stuff |
 
 ### Lab Technician
 
