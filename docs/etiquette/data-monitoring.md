@@ -75,7 +75,7 @@ For custom variables, you will control these in your preprocessing scripts.  Be 
 
 
 #### File Name
-Scripts in the data monitoring ecosystem access a study's central tracker based on its filename. For this reason, the nomenclature is standardized: `central-tracker_dataset-name`. For example, the `memory-for-error-dataset` project has a central tracker named `central-tracker_memory-for-error-dataset`.
+Scripts in the data monitoring ecosystem access a study's central tracker based on its filename. For this reason, the nomenclature is standardized: `central-tracker_dataset-name`. For example, the `memory-for-error-dataset` project has a central tracker named `central-tracker_memory-for-error-dataset`. You do not need to name this file yourself, but you do need to ensure that the data dictionary you create for your central tracker is named `central-tracker_datadict.csv` and that it lives in `data-monitoring/data-dictionary/` within your dataset repository.
 
 
 #### Subject IDs
@@ -97,16 +97,22 @@ cd /home/data/NDClab/datasets
 You will input a single command that indicates which dataset should be set up, which data types are involved, and which EEG system (if any) is used. Here is the core structure of the command:
 
 ```
-bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET/ DATA-TYPES SUBJECT-NUMBERING
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET/ DATA-TYPES SUBJECT-NUMBERING (-n)
 ```
-* **-t FLAG:** include this flag so that a tracker is generated on the basis of your central tracker data dictionary
+* **-t FLAG:** always include this flag so that a tracker is generated on the basis of your central tracker data dictionary
 * **YOUR-DATASET:** this is the name of your dataset
 * **DATA-TYPES:** include each data type you have in your `sourcedata/raw/` folder, separated by a comma (no space); these must follow the conventions outlined in the datadict_definitions file (be sure to use either 'bv' or 'egi', rather than using 'eeg', so that the script knows which system was used to collect the data in the `sourcedata/raw/eeg/` folder)
 * **SUBJECT-NUMBERING:** include the first subject number to be used
+* **-n FLAG:** this optional flag allows you to specify if you only collected a single running EEG per participant, as opposed to one EEG file per PsychoPy task
 
-Here is an example of the setup line for rwe-eeg-dataset. It includes five data types: audio, digi, eeg (for which we specify 'bv'), psychopy, and redcap. Subject numbering for the central tracker will begin at 210000.
+Here is an example of the setup line for rwe-eeg-dataset. It includes five data types: audio, digi, eeg (for which we specify 'bv'), psychopy, and redcap. Subject numbering for the central tracker will begin at 210000. There was one EEG file per PsychoPy task, so the '-n' flag was not used.
 ```
 bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t rwe-eeg-dataset/ audio,digi,bv,psychopy,redcap 210000
+```
+
+Here is an second example of the setup line, this time for oops-faces-dataset. It includes four data types: digi, eeg (for which we specify 'bv'), psychopy, and redcap. Subject numbering for the central tracker will begin at 240001. There was only one running EEG file per participant (although there are two PsychoPy tasks), so the '-n' flag was used.
+```
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t oops-faces-dataset/ digi,bv,psychopy,redcap 240001 -n
 ```
 
 After executing this command, the following new files (in addition to the blank central tracker) will be added to your dataset's data-monitoring folder:
@@ -165,8 +171,8 @@ Within `sourcedata/checked`, folders should be organized as:<br/>
 1. Checks for the existence of any new subject folders in `sourcedata/raw/eeg` and, if they are found, verifies the correct subject folder nomenclature (i.e., sub-XXXXXX).
 2. For correctly-named folders in `sourcedata/raw/eeg`:
     1. Verifies that file names within the folder match the subject ID of the folder itself.
-    2. Verifies that there is only one of each file type, depending on the system used for data collection: BV (.eeg, .vhdr, .vmrk) or EGI (.mff).
-    3. Verifies that file names follow the appropriate conventions for study subjects and tasks.
+    2. If the '-n' flag is used: verifies that there is only one of each file type, depending on the system used for data collection (BV (.eeg, .vhdr, .vmrk) or EGI (.mff)); any naming convention is acceptable. If the '-n' flag is not present: verifies that there is one of each expected file type for each PsychoPy task, with matching nomenclature.
+    3. Verifies that file names follow the appropriate conventions for study subjects.
 
 Any new folders, as well as new files within previously existing folders, that pass the above checks are copied to the existing subject folder in `sourcedata/checked/bidsish/sub-XXXXXX/eeg`.  The bvData or egiData row in the central tracker is updated accordingly (via update-tracker.py).
 
@@ -197,7 +203,7 @@ The hallMonitor script should be run weekly by the project lead. It is recommend
 
 To run the script, ensure that you are on the `main` branch of the repository on the HPC. Use `git pull` to update the HPC with any changes available on the GitHub remote.  Then follow the instructions [here](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
 
-Review the output for errors requiring correction. After making any necessary corrections, re-run the script until no errors are received, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out`).
+Review the output for errors requiring correction (by using `cat` to print the messages to the console). After making any necessary corrections, re-run the script until no errors are received, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out`).
 
 The hallMonitor script automatically updates the data-monitoring-log.md file in the dataset's data-monitoring folder.
 
@@ -210,7 +216,7 @@ Once you have completed the hallMonitor process and everything is tidy, push you
 Pre-processing scripts transform the data collected from participants (questionnaires, behavioral tasks) into aggregate numbers that can be used for data analysis. These should draw upon data in the `sourcedata/checked` folder and output to `derivatives/preprocessed`. The preprocess slurm script is a handy shortcut that binds together the automated scoring of REDCap data (via the instruments script) along with any other custom scripts that you tell it to run.
 
 ### Instruments
-The preprocess slurm script calls the instruments scoring mechanism, which will identify the most recent REDCap file in `sourcedata/checked/redcap`, score it automatically, and output it to `derivatives/preprocessed`, having renamed the "DATA" in the original filename to "SCRD."  It also updates any rows in the central tracker whose description begins with "redcap_scrd:".
+The preprocess slurm script calls the instruments scoring mechanism, which will identify the most recent REDCap file in `sourcedata/checked/redcap`, score it automatically, and output it to `derivatives/preprocessed`, having renamed the "DATA" in the original filename to "SCRD."  It also updates any rows in the central tracker whose description in the central tracker data dictionary begins with "redcap_scrd:".
 
 ### R/MATLAB/Python Scripts
 You need to create and test these scripts first on local and individually on the HPC before binding them into preprocess.sub. This is very important because if you accidentally create an infinite loop on the HPC, you could burn through all of the lab's monthly time allottment on the HPC and you would be forced to do all your calculations by hand until the end of the month! :cold_sweat:
