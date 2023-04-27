@@ -223,7 +223,7 @@ REDCap houses participant questionnaires for a given study. Due to limitations o
 > 202201v0_readAloud-valence-dataset<br/>
 > 202203v0_social-flanker-dataset
 
-The first six digits indicate the year and month when the REDCap project was setup. The number after the letter "v" indicates the specific release within that month. In most cases, projects with by "v0." However, in the event that a revision to REDCap is made twice within the same month, the first release is "v0" and the second is "v1."
+The first six digits indicate the year and month when the REDCap data collection project was launched. The number after the letter "v" indicates the specific release within that month. In most cases, projects with by "v0." However, in the event that a revision to REDCap is made twice within the same month, the first release is "v0" and the second is "v1."
 
 ### Instrument Names
 Each element within REDCap is an "instrument." These should be named:
@@ -251,14 +251,30 @@ This is also an acceptable format as data exported from REDCap automatically con
 
 ### Variable Names
 
-#### Scored Instruments
+##### Scored Instruments
 
 Variable names are used in REDCap to identify the responses to specific questions asked of study participants. They are **identical to their associated instrument name**, except that `iX` is added to specify the item number. For example, the first three questions of the `initState` instrument would be named:<br/>
 > initState_i1\_s1_r1_e1<br/>
 > initState_i2_s1_r1_e1<br/>
 > initState_i3_s1_r1_e1
 
-By default, if a question within an instrument will require the output of subvariables, REDCap automatically appends `___X` to the end of the base variable name. For instance:<br/>
+#### Unscored Instruments
+
+In relatively rare but important cases, such as instruments that gather demographic data, the use of `i1`, `i2`, `i3` for item numbers will be an impediment to data analysis. For surveys that do not get scored or factored for analysis, a more informative convention should be used:<br/>
+> demo_sleep_s1_r1_e1<br/>
+> demo_exercise_s1_r1_e1<br/>
+> demo_caffeine_s1_r1_e1
+
+#### Other Considerations in Naming REDCap Variables
+
+###### Formatting/Descriptive Variables
+Some variables may not collect any data. These include descriptive elements (e.g., formatted instructions) and fields created to serve as a scaffold for embedded fields. When a REDCap variable does not collect any data, it does not output to the data export. Therefore, there is no need to maintain the session/run/event information in the variable name.
+> demo_instruct {an instruction field}
+> demo_contact_embed {a field containing other embedded fields relating to contact info}
+> selfnowA_i6disp_embed {a field that specifically displays the i6 question}
+
+###### Sub-Items
+By default, if a question within an instrument will require the output of subvariables (this is typically checkboxes where a respondent can check all that apply), REDCap automatically appends `___X` to the end of the base variable name. For instance:<br/>
 > initState_i1\_s1\_r1\_e1\___1<br/>
 > initState_i1\_s1\_r1\_e1\___2<br/>
 > initState_i1\_s1\_r1\_e1\___3
@@ -268,12 +284,14 @@ In other cases, however, an instrument may contain sub-items that REDCap cannot 
 > initState_i1-sub2_s1_r1_e1<br/>
 > initState_i1-sub3_s1_r1_e1
 
-#### Unscored Instruments
+###### Overrides
+The clinician version of the LSAS includes a quality assurance measure to track when the clinician is "overriding" the standard scoring mechanism particular to this clinical questionnaire. In order to ensure a clear mapping between each scored item (e.g., `i1`) and any override, the override question is numbered `i1ov`:
+> lsascl_i8ov_s1_r1_e1
 
-In relatively rare but important cases, such as instruments that gather demographic data, the use of `i1`, `i2`, `i3` for item numbers will be an impediment to data analysis. For surveys that do not get scored or factored for analysis, a more informative convention should be used:<br/>
-> demo_sleep_s1_r1_e1<br/>
-> demo_exercise_s1_r1_e1<br/>
-> demo_caffeine_s1_r1_e1
+The "ov" immediately after the item number blocks the instruments scoring script from treating this question as a scorable item. Therefore similar logic should be used in other scenarios that require such a solution.
+
+###### Overrides
+The clinician version of the LSAS includes a quality assurance measure to track when the clinician is "overriding" th
 
 ### Updating Instruments
 
