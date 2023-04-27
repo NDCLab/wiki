@@ -251,7 +251,7 @@ This is also an acceptable format as data exported from REDCap automatically con
 
 ### Variable Names
 
-##### Scored Instruments
+#### **Scored Instruments**
 
 Variable names are used in REDCap to identify the responses to specific questions asked of study participants. They are **identical to their associated instrument name**, except that `iX` is added to specify the item number. For example, the first three questions of the `initState` instrument would be named:<br/>
 > initState_i1\_s1_r1_e1<br/>
@@ -269,9 +269,12 @@ In relatively rare but important cases, such as instruments that gather demograp
 
 ###### Formatting/Descriptive Variables
 Some variables may not collect any data. These include descriptive elements (e.g., formatted instructions) and fields created to serve as a scaffold for embedded fields. When a REDCap variable does not collect any data, it does not output to the data export. Therefore, there is no need to maintain the session/run/event information in the variable name.
-> demo_instruct {an instruction field}
-> demo_contact_embed {a field containing other embedded fields relating to contact info}
+> demo_instruct {an instruction field}<br/>
+> demo_contact_embed {a field containing other embedded fields relating to contact info}<br/>
 > selfnowA_i6disp_embed {a field that specifically displays the i6 question}
+
+When a survey with such fields will be used twice within a given run (that is, the survey is _e2), add a "2" immediately at the end:
+> demo_contact_embed2
 
 ###### Sub-Items
 By default, if a question within an instrument will require the output of subvariables (this is typically checkboxes where a respondent can check all that apply), REDCap automatically appends `___X` to the end of the base variable name. For instance:<br/>
