@@ -258,16 +258,16 @@ Variable names are used in REDCap to identify the responses to specific question
 > initState_i2_s1_r1_e1<br/>
 > initState_i3_s1_r1_e1
 
-#### Unscored Instruments
+#### **Unscored Instruments**
 
 In relatively rare but important cases, such as instruments that gather demographic data, the use of `i1`, `i2`, `i3` for item numbers will be an impediment to data analysis. For surveys that do not get scored or factored for analysis, a more informative convention should be used:<br/>
 > demo_sleep_s1_r1_e1<br/>
 > demo_exercise_s1_r1_e1<br/>
 > demo_caffeine_s1_r1_e1
 
-#### Other Considerations in Naming REDCap Variables
+#### **Other Considerations in Naming REDCap Variables**
 
-###### Formatting/Descriptive Variables
+##### Formatting/Descriptive Variables
 Some variables may not collect any data. These include descriptive elements (e.g., formatted instructions) and fields created to serve as a scaffold for embedded fields. When a REDCap variable does not collect any data, it does not output to the data export. Therefore, there is no need to maintain the session/run/event information in the variable name.
 > demo_instruct {an instruction field}<br/>
 > demo_contact_embed {a field containing other embedded fields relating to contact info}<br/>
@@ -276,7 +276,7 @@ Some variables may not collect any data. These include descriptive elements (e.g
 When a survey with such fields will be used twice within a given run (that is, the survey is _e2), add a "2" immediately at the end:
 > demo_contact_embed2
 
-###### Sub-Items
+##### Sub-Items
 By default, if a question within an instrument will require the output of subvariables (this is typically checkboxes where a respondent can check all that apply), REDCap automatically appends `___X` to the end of the base variable name. For instance:<br/>
 > initState_i1\_s1\_r1\_e1\___1<br/>
 > initState_i1\_s1\_r1\_e1\___2<br/>
@@ -287,27 +287,25 @@ In other cases, however, an instrument may contain sub-items that REDCap cannot 
 > initState_i1-sub2_s1_r1_e1<br/>
 > initState_i1-sub3_s1_r1_e1
 
-###### Overrides
+##### Overrides
 The clinician version of the LSAS includes a quality assurance measure to track when the clinician is "overriding" the standard scoring mechanism particular to this clinical questionnaire. In order to ensure a clear mapping between each scored item (e.g., `i1`) and any override, the override question is numbered `i1ov`:
 > lsascl_i8ov_s1_r1_e1
 
 The "ov" immediately after the item number blocks the instruments scoring script from treating this question as a scorable item. Therefore similar logic should be used in other scenarios that require such a solution.
 
-###### Overrides
-The clinician version of the LSAS includes a quality assurance measure to track when the clinician is "overriding" th
 
 ### Updating Instruments
 
 Whenever an instrument is modified (including correction of errors and re-working of questionnaires based on the natural evolution of the lab's research program), a new instrument is created. This enables the lab to track exactly which version of a questionnaire was given to a specific participant.
 
-#### Scored Instruments
+#### **Scored Instruments**
 
 Scored instruments are revised by appending "_b" (or "_c", "_d", etc.) to the instrument name and to all variables. This must be done very precisely to ensure that the automatic scoring script continues to function as expected. Example:
 
 > instrument name: adexi_s1_r1_e1 :point_right: adexi_b_s1_r1_e1<br/>
 > question 1: adexi_i1_s1_r1_e1 :point_right: adexi_b_i1_s1_r1_e1
 
-#### Unscored Instruments
+#### **Unscored Instruments**
 
 Unscored instrument may either use the revisioning system described above for scored instruments (i.e., "_b"). In some cases, such as the initState and postTask questionnaires, it was envisaged that the lab would build up a repertoire of different versions over time. For these instruments, the letter versioning is built directly into the name:
 
