@@ -9,7 +9,7 @@ nav_order: 3
 1. [Overview](#overview)
 2. [Creating a Slurm File](#creating-a-slurm-file)
 3. [Running a Slurm File](#running-a-slurm-file)
-
+4. [Why is my job taking forever?](#why-is-my-job-taking-forever)
 
 ## Overview
 For anything that goes beyond running basic lines of code, a job must be submitted to the compute nodes so that the compute nodes can properly handle tasks. Note, this is a **requirement** on the HPC, as login nodes are not the intended resource for computation.
@@ -79,7 +79,14 @@ To run an existing slurm file, you will log into the HPC and utilize the [shell]
 6. Run the script by typing the following into the shell: `sbatch <filename.sub>`. For instance, to execute a hallMonitor.sub file, you would type `sbatch hallMonitor.sub`.
 7. The shell will output a message to indicate that the batch was submitted and its associated job number:
 ![sbatch-submit](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/sbatch-submit.png)
-8. Use `ls` to see if the process is complete. When it is complete, you will see an output file in the same folder whose name is "slurm-NUMBER.out":
+8. Check status and runtime of currently running scripts with the squeue command: `squeue -u <username>`.
+9. Use `ls` to see if the process is complete. When it is complete, you will see an output file in the same folder whose name is "slurm-NUMBER.out":
 ![sbatch-output](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/sbatch-output.png)
-9. Use `cat slurm-NUMBERS.out` to print all messages to the console.
-10. If you script is designed to output any new files (for example, a CSV), and assuming you don't get any error messages, that file should now exist in the appropriate folder.
+10. Use `cat slurm-NUMBERS.out` to print all messages to the console.
+11. If you script is designed to output any new files (for example, a CSV), and assuming you don't get any error messages, that file should now exist in the appropriate folder.
+
+## Why is my job taking forever?
+
+The batch scheduler submits jobs to the HPC based on the order in which they're received as well as the requested memory allocated, requested walltime, and how many other jobs are currently running. To check on the status of your jobs you can use squeue, `squeue -u <username>`, where you will see your submitted jobs along with how long they've been running and their status (PD, pending or R, running).
+
+If your jobs are sitting in the queue for longer than you would like you can check on how busy the HPC is with the `sar` command. A %idle of ~60 or less indicates that the HPC is very busy and may not get to your jobs for a while, especially if they're large memory or long walltime jobs. If you think your job can afford to be submitted with less memory or walltime you can try cancelling `scancel NUMBERS` and resubmitting the job with less resources requested.
