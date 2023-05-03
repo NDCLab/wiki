@@ -83,7 +83,7 @@ To run an existing slurm file, you will log into the HPC and utilize the [shell]
 9. Use `ls` to see if the process is complete. When it is complete, you will see an output file in the same folder whose name is "slurm-NUMBER.out":
 ![sbatch-output](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/sbatch-output.png)
 10. Use `cat slurm-NUMBERS.out` to print all messages to the console.
-11. If you script is designed to output any new files (for example, a CSV), and assuming you don't get any error messages, that file should now exist in the appropriate folder.
+11. If your script is designed to output any new files (for example, a CSV), and assuming you don't get any error messages, that file should now exist in the appropriate folder.
 
 ## Why is my job taking forever?
 
