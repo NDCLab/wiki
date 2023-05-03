@@ -42,9 +42,14 @@ Welcome to the FIU Instructional & Research Computing Center (IRCC)
 
 From here, you can use the command line as you would use any [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html). You can also submit batch jobs to the compute-node with the ["sbatch" command](https://ndclab.github.io/wiki/docs/hpc/jobs.html).
 
-If you are feeling fancy, you can access this directly without logging in via the browser.  Simply open your local shell and type:
+If you are feeling fancy, you can access this directly without logging in via the browser.  Simply open your shell and type:
 ```
 ssh YOURLOGIN@hpclogin01
+```
+
+Or, if accessing from outside FIU HPC:
+```
+ssh YOURLOGIN@hpclogin01.fiu.edu
 ```
 
 You will be prompted to input your password, and then you can navigate the HPC as you would on the browser. To return to using your shell to access files on your local computer, simply execute an `exit` command.  (Note: this method is called "secure shell (SSH), which comes pre-installed on Windows10 and MacOS. Older Windows versions are available for install [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).)
