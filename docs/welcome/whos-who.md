@@ -195,15 +195,6 @@ nav_order: 2
 | research interests | Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning  |
 | hobbies | Writing, rewatching the same 5 shows, baking |
 
-| ![gagnon](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gagnon.JPEG) | Bergan Gagnon |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | bergang |
-| Email  | bgagn008@fiu.edu |
-| research interests | Bergan is interested in how neural imaging can be used to diagnose psychopathology and assess comorbidity. |
-| hobbies | watching horror movies, reading about true crime, working out, and playing guitar |
-
 | ![gallardo](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gallardo.JPG) | Laura Gallardo |
 | ---  | ---  |
 | pronouns | she/her/hers |
