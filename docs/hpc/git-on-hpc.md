@@ -59,3 +59,5 @@ You will want to treat the HPC as if it were simply another computer where your 
 3. If you create branches other than `main` within your repo, ensure that you always leave the HPC on main (`git checkout main`) before you log off.  Checking out a branch on the HPC actually checks it out for all users, so by consistently returning to `main`, everybody has a shared baseline expectations for all project folders.
 
 Because of the HPC's [relationship with GitHub](https://ndclab.github.io/wiki/docs/hpc/accessing.html#relationship-with-github), it is imperative that files (excluding those in sourcedata/) are never added, deleted, or modified via the interactive desktop without a separate `git push` from the shell to push those changes back to the GitHub remote.
+
+By using this "pull-and-push" strategy, you can work more effectively across your local computer and the HPC.
