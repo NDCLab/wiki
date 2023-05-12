@@ -312,6 +312,22 @@ Unscored instrument may either use the revisioning system described above for sc
 > instrument name: postTaskA_s1_r1_e1 :point_right: postTaskB_s1_r1_e1<br/>
 > question 1: postTaskA_i1_s1_r1_e1 :point_right: postTaskB_i1_s1_r1_e1
 
+
+### Instrument Scores
+
+Each score that is calculated from an instrument receives two variables: the actual score (`scrd`) and the percentage of associated questions that have been answered (`perc`). For clear (and/or single) total scores:
+
+> adexi_b_scrdTotal>br/>
+> adexi_b_percTotal
+
+For scores associated with a particular factor, select a few distinguishing letters:
+
+> adexi_b_scrdInh (inhibition score for the adexi) <br/>
+> adexi_b_percInh (percentage complete for the adexi inhibition score)<br/>
+> adexi_b_scrdWm (working memory score of the adexi)<br/>
+> adexi_b_percWm (percentage complete for the adexi working memore score)
+
+
 ## PsychoPy and Pavlovia
 
 ### Folder and Experimental Task Names
