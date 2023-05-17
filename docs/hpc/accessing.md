@@ -21,7 +21,7 @@ To use the HPC, a lab member must either use:
 - on-campus WiFi
 - the [FIU VPN](https://network.fiu.edu/vpn/) to access the [FIU intranet](https://en.wikipedia.org/wiki/Intranet). Instructions are available [here](https://fiu.service-now.com/sp?id=kb_article&sys_id=6c3c789ddb899780b16af969af96193d).
 
-Once connected to either on-campus WiFi or the VPN, use Google Chrome to access the site [hpcgui.fiu.edu](hpcgui.fiu.edu).
+Once connected to either on-campus WiFi or the VPN, use Google Chrome to access the site [hpcgui.fiu.edu](https://hpcgui.fiu.edu/).
 
 
 ## Access Methods
@@ -72,6 +72,8 @@ The NDCLab follows the structure listed below.
 The left and right diagrams represent the read, write, and execute permissions for a general lab member and a lab member attached to a given project, respectively. Each color corresponds to the following group:
 
 ![colorcode](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/Privileges_legend_transparent.drawio.png)
+
+The default path to the labs' folder on the HPC is `/home/data/NDClab/`
 
 All lab members have general read access to the labs' projects, including datasets, analyses, and tools, but only a select few members are granted read access to specific data folders or granted write access on specific project. This results in specific privileges given to select members to ensure data compliance. For example, all lab members have read and execute privileges for any public data on the cluster, but only "Project-A" lab members will be able to read and execute the private section of `project-A/`. Write permissions to a project is handled on a case-by-case basis depending on the lab member's role in the project.
 
