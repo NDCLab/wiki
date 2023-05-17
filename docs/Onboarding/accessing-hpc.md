@@ -20,4 +20,4 @@ At any time during the onboarding process, you may attend the HPC Onboarding tra
 You must attend the training session before you begin using the HPC.
 
 ## HPC Structure
-Once access is granted to the HPC, you will only be able to read and modify contents within folders that correspond to your role within the lab. For more information on the HPC, see [this in-depth page](https://ndclab.github.io/wiki/docs/technical-docs/hpc-doc.html).
+Once access is granted to the HPC, you will only be able to read and modify contents within folders that correspond to your role within the lab. For more information on the HPC, see [this section](https://ndclab.github.io/wiki/docs/hpc).
