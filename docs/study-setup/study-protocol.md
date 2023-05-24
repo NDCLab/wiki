@@ -14,7 +14,7 @@ nav_order: 4
 
 
 ## Overview
-The experimental protocol serves as both an indispensable tool to ensure consistency of the participant experiment from one participant to the next, as well as a formal record of the study procedures. It cannot be too detailed!
+The experimental protocol serves as both an indispensable tool to ensure consistency of the study experience from one participant to the next, as well as a formal record of the study procedures. It cannot be too detailed!
 
 
 ## Creating the Draft Protocol
@@ -26,11 +26,11 @@ Various considerations:
 
 
 ## Piloting
-Protocol variations used during piloting should be carefully logged in the study notebook. This will help you track ideas and their outcomes.
+Protocol variations used during piloting should be carefully logged in the [study notebook](https://ndclab.github.io/wiki/docs/study-setup/gdrive.html#notebook). This will help you track ideas and their outcomes.
 
 
 ## Debriefing Participants
-Each protocol should include a debrief for the study. To begin a debrief, always tell participants "the study session is complete." It is important to communicate clearly to the participant that the study session has come to a definitive end and they are aware that they are no longer being tested.
+Each protocol should include a debrief for the study. To begin a debrief, always tell participants "the study session is complete." It is important to communicate clearly to the participant that the study session has come to a definitive end and they are no longer being tested.
 
 1. Ask participants "Did you have questions or concerns that I can answer for you?" If a participant is not satisfied with the RA's answers or if they have further concerns, they should be given George's e-mail so they can reach out to him as the PI.
 2. Tell participants about the purpose of the study, using language from the IRB.

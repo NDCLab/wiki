@@ -11,17 +11,15 @@ nav_order: 5
 3. [Creating a Project](#creating-a-project)
 4. [Participant IDs](#participant-ids)
 5. [Adding an Instrument](#adding-an-instrument)
-6. [Adding a Screener](#adding-a-screener)
-7. [Adding a Consent](#adding-a-consent)
-8. [Data Dictionary Maneuvers](#data-dictionary-maneuevers)
-9. [Identifiers](#identifiers)
-10. [Surveys and the Survey Queue](#surveys-and-the-survey-queue)
-11. [Alerts and Automated Invitations](#alerts-and-automated-invitations)
-12. [Production Mode](#production-mode)
-13. [Making Changes After Launch](#making-changes-after-launch)
-14. [Adjusting User Rights](#adjusting-user-rights)
-15. [Connecting to Pavlovia](#connecting-to-pavlovia)
-16. [File Repository](#file-repository)
+6. [Data Dictionary Maneuvers](#data-dictionary-maneuvers)
+7. [Identifiers](#identifiers)
+8. [Surveys and the Survey Queue](#surveys-and-the-survey-queue)
+9. [Alerts and Automated Invitations](#alerts-and-automated-invitations)
+10. [Production Mode](#production-mode)
+11. [Making Changes After Launch](#making-changes-after-launch)
+12. [Adjusting User Rights](#adjusting-user-rights)
+13. [Connecting to Pavlovia](#connecting-to-pavlovia)
+14. [File Repository](#file-repository)
 
 
 
@@ -73,7 +71,7 @@ To upload an existing questionnaire into a new REDCap project:
 7. In most cases, the copied instrument should already be enabled as a survey (see the section below). You can verify that the Survey Settings contain the correct text by comparing the "Survey Title" and "Survey Instructions" to the PDF in the instruments repository that includes "redcap-survey" in its name. You want to use this exact title and these exact instructions so that future lab members can be secure in the knowledge that your deployment of a given questionnaire is identical to what is in the `instruments` repository. In some cases, this might also contain additional information required by the FIU IRB (e.g., THQ). If the Survey Settings inside REDCap do not contain all the correct text, you will need to copy them in; pasting from a PDF doesn’t always make for pretty formatting, so it is suggested that you first paste into a text editor (like TextEdit on Mac), then copy this unformatted text and paste it into the REDCap interface.
 8. Even for instruments that imported with the proper survey settings, you may need to update the logo (see the Surveys section below) to ensure visual consistency across your project.
 
-#### Using Only Part of an Instrument
+### Using Only Part of an Instrument
 Several questionnaires used by the lab are two-in-one, such as AMBIRMBI and STAI5. On occasion, you may only want to present participants with half of the dual questionnaire. Likewise, you may want to only ask questions that relate to a specific subscore/subfactor for a questionnaire that has multiple subscores.
 
 1. Load the full questionnaire as if you were using all the questions. This ensures consistency across projects.
@@ -82,13 +80,13 @@ Several questionnaires used by the lab are two-in-one, such as AMBIRMBI and STAI
 Note: You can also accomplish the same thing by deleting questions; both "hidden" questions and deleted questions will be handled in the same manner by the instruments scoring script. Hiding is generally preferred because it is easier to correct errors and/or make modifications in the future; however, hiding does not always play nicely with matrices, and you may need to delete questions to ensure that the survey displays to your participant as desired.
 
 
-#### Adding a Screener
+### Adding a Screener
 A screener enables you to confirm participant eligibility prior to consent. Create it as the first instrument in your REDCap project (so its first field will be your `record_id` field). The questions should all be required and must be drawn explicitly from the IRB-approved eligibility information. In addition, given that these questions are being asked prior to participant consent, mark all fields as "Identifiers" (see below) so that they will not output in any data export.
 
 For asynchronous studies, it is recommended that you create an alert (see below) for eligible participants and an alert for ineligible participants that notifies you, by e-mail, whenever anyone completes the screener.
 
 
-#### Adding a Consent
+### Adding a Consent
 The lab manager will provide you with a REDCap zip of the consent that matches the IRB-approved version. Upload this directly to REDCap just as you would any other instrument.
 
 Then set up the e-Consent Framework for traceability on consents. Inside the Survey Settings, simply turn on "Auto-Archiver + e-Consent Framework." Specify the e-Consent version indicated by the lab manager:
@@ -107,7 +105,7 @@ For this to function properly, it it is necessary to tell REDCap which field is 
 
 
 ## Data Dictionary Maneuvers
-#### Adding the Same Instrument Twice
+### Adding the Same Instrument Twice
 REDCap has a "Data Dictionary" feature that can be used to modify project details in a safer, more convenient way than manual changes to individual instruments and their questions. A key use case is when you want to use the same instrument twice, for example before two different conditions of a behavioral task. In such a case, you need to have an "e1" version and an "e2" version of the instrument to adhere to the lab's [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap). Below are details on how to use the Data Dictionary feature to create the "e2" version:
 1. First, upload that "e1" version as you normally would any instrument.
 2. Confirm that you have no other drafted changes pending in the project.
@@ -124,7 +122,7 @@ REDCap has a "Data Dictionary" feature that can be used to modify project detail
 
 (Note: you will need to modify the details of the Find/Replace command if your questions use any branching or display logic that extracts variables from a different instrument. The instructions above assume that any branching or display logic within the instrument is self-contained.)
 
-#### Taking a Snapshot of the Project
+### Taking a Snapshot of the Project
 You should also use the Data Dictionary export feature to take a snapshot of your project at launch (and at any future date when you roll out changes to the REDCap project). After downloading the CSV, simply add it to your GitHub repo, under `materials/questionnaires/` as a record of all questions in the project at the time of launch.
 
 
@@ -167,7 +165,7 @@ If you want a questionnaire to begin automatically when the prior questionnaire 
 
 ## Alerts and Automated Invitations
 
-#### Automated Invitations
+### Automated Invitations
 In some cases, for example asynchronous studies, you may want to automatically send a survey (say, an online consent form) in cases where one survey is submitted with certain conditions met (such as an eligibility screener where the prospective participant meets all eligibility criteria). This is accomplished with an "Automated Invitation," accessible in the Designer:
 1. Click the "Automated Invitations" button associated with the instrument that you want to send the participant by e-mail after they meet criteria on the prior instrument. (Note that the instrument must be enabled as a survey first.)
 2. In the new window, you will complete the following:
@@ -179,7 +177,7 @@ In some cases, for example asynchronous studies, you may want to automatically s
 
 [!automated-invitation](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/automated-invitation.png)
 
-#### Alerts
+### Alerts
 For asynchronous studies, there are a number of e-mail alerts that you may want to send, either to participants or to the study lead. These include:
 * notifying a participant of their ineligibility
 * notifying the study lead of the eligibility/ineligibility of each individual who completes the screener
@@ -232,7 +230,7 @@ When a new REDCap project is released to the lab, it is important to check which
 
 As you can see, you have very granular control of user rights. You can create new user roles and specify permissions. (In all cases, the "Data Export Rights" should match those described above in order to protect the confidentiality of participant information.) Think carefully and critically about how to set up roles in order to reduce the likelihood and impact of any errors by members of the project team.
 
-#### Adding New Users
+### Adding New Users
 At any given time, only project members who have already been approved by the FIU IRB may have access to the REDCap project.
 In order to grant access to a newly-approved team member:
 1. Navigate to the "User Rights" section.
