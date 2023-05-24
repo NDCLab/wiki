@@ -26,6 +26,7 @@ The instruments repository is a collection of structured questionnaires and codi
 * a .pdf that can be submitted to the IRB
 * a .csv data dictionary
 * code to convert raw data into scored data
+* a readme with useful information and citation information
 
 The coding scripts interpret a .json file and construct a unique survey object, which is then used to automatically score any input, as provided by the command line. _For the less comp sci savvy_: the instruments script will automatically code the questionnaires that you have participants complete into the standard total scores and subscores.
 
@@ -72,29 +73,63 @@ The coding scripts interpret a .json file and construct a unique survey object, 
 7. The .csv file that is output is a replica of the input file (that is, all the original data points are still there), **plus** new columns that provide all (sub)scores for each questionnaire. Details on subscores are available in the data dictionary for each input questionnaire. Happy analyzing! 
 
 ## Adding New Instruments
+Before building a new instrument, be certain that you have familiarized yourself with several other instruments commonly used by the lab before you build a new one, so that your newly created instrument will have a similar look and feel to existing questionnaires. Likewise, familiarize yourself with the structure of the `instruments` repository, in particular the readme files associated with each questionnaire.
 
-1. Follow the lab's [GitHub etiquette](https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html) to create a new branch off dev (`dev-NewInstrumentName`).
-2. Create a new directory with the instrument's short name.
-3. Add all of the following to the new directory:
-    * the published PDF
-    * the REDCap PDF (shows exactly what participants see)
-    * a REDCap import .zip that follows the lab's [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap) – all REDCap import .zip files in the instruments repository should use `_s1_r1_e1` and should have Survey Settings enabled with the appropriate Survey Title and Survey Instructions added
-    * a data dictionary CSV
-4. Add the (sub)score(s) for the instrument to the .json file with the appropriate parameters as described in subscore.py for subscale scoring.
+### Building a New Instrument
+In general, it is best to build new instruments in a "sandbox" project on REDCap, as opposed to a project that is intended for data collection. If you do not have access to a sandbox, talk to the lab manager for help.
+
+1. In the Designer section on REDCap, under “Add new instrument,” select “Create a new instrument from scratch.”  REDCap will prompt you to select where the new instrument should be added to the current list of instruments in your project (but it doesn't make much difference as you can move it later).
+2. Use the lab’s [standard naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap) to name the instrument.
+3. Once the empty instrument is created, click to navigate into it and begin building out the questions. See below for some handy guidelines.
+4. Most instruments should be [surveys](https://ndclab.github.io/wiki/docs/study-setup/redcap.html#surveys-and-the-survey-queue), which makes it possible to string them together into a survey queue for participants, and lets you add a pretty header.  Enable your new instrument as a survey and modify the survey settings to include the Survey Title and Survey Instructions (do not modify any of the other fields in the Survey Settings when creating a new default instrument for the lab).
+5. Test your new instrument as a participant.  Make sure it looks professional. Give it both reasonable and unreasonable answers. Try leaving things blank. Once you’re certain it’s working perfectly, send a test to the lab manager, too, for a second pair of eyes.
+6. When the new instrument is ready, click on “Choose Action” next to the instrument in the Designer view. Select “Download ZIP Instrument” and save the output file to your local computer and rename it “acronym_s1_r1_e1.zip”.
+7. Output the PDF from REDCap, which shows the survey title and survey instructions, by clicking the PDF icon under “View PDF.”  Save the output file to your local computer and reename it “acronym_redcap-survey.pdf”.
+8. Create the data dictionary for the instrument by following the examples available in other lab instruments. This will include one row for every question (exclude from the data dictionary any descriptive fields that do not house participant-collected data, since these fields do not output in data files).
+9. If your new questionnaire will require scoring, identify the scoring mechanism (sum, average, etc.) and any (sub)scores that should be calculated. Add both the `scrd` (the score or subscore) and `perc` (the percentage complete for the score or subscore) variables to the data dictionary following [established lab conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap). Note that scoring mechanisms are often not totally evident from the questionnaire and/or paper, so it is imperative that you work carefully and then have someone (perhaps the lab manager) independently check your work. When in doubt, require all questions to be answered in order to output scores that are calculated by summing and require 80% of questions to be answered in order to output socres that are calculated by averaging.
+10. Build out the readme file. In order to maintain consistency across lab instruments, find an instrument with similar specifications (e.g., similarity in versions or translation history) and use the readme for that instrument as your base to create the readme for your new instrument.
+
+Please follow these guidelines when creating a new instrument for the lab:
+* Be certain to follow the lab’s [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap) for variable names.  For initial creation, use “s1_r1_e1” because you will export this for other lab members to use.
+* Use the same numerical values for choices as the source instrument.  This ensures that the output CSV for your new instrument is easy to score and aligns with other published uses of the questionnaire.
+* Force all questions to be required unless there is a good reason not to (for example, for potentially sensitive questions where the IRB protocol indicates that participants will have the choice on whether or not to answer).
+* Be careful which questions are marked as “Identifiers.”  In general (although there are exceptions), such questions should only appear in an “interest form” type instrument.
+* Enable Survey Settings and include the appropriate Survey Title and Survey Instructions (you do not need to include the lab logo).
+* Whenever appropriate, use a “Matrix of Fields” as these have a cleaner display for the participant.
+* Take careful notes about the origin of questions, instructions, scoring criteria, and any translations. Include these in the readme (while making an effort to match the readme format of existing instruments).
+* Where appropriate, use field embedding for a more professional appearance.
+* Test your instrument thoroughly.
+* Be aware that there is a multitude of online resources available for how to do cool things in REDCap, such as field embeddings, branching logic, data validation, and calculated fields, so go hunting for creative solutions to formatting hurdles!
+
+
+### Adding to the Lab's "Instruments" Repository
+
+1. Follow the lab's [GitHub etiquette](https://ndclab.github.io/wiki/docs/etiquette/github-etiquette.html) to create a new branch off dev (`dev-NewInstrumentName`) and checkout this branch.
+2. Create a new folder with the instrument's acronym.
+3. Add all of the following to the new folder:
+    * the published PDF (if available)
+    * the PDF that you exported from REDCap ("acronym_redcap-survey.pdf")
+    * the REDCap import .zip ("acronym_s1_r1_e1.zip")
+    * the data dictionary CSV
+    * the readme
+4. Add the score(s) for the instrument to the .json file with the appropriate parameters as described in subscore.py for subscale scoring.
 5. Add the instrument, alphabeticaly, into the list-of-instruments.md with a link to the appropriate citation.
-6. Push your branch to the remote, then open a PR and assign to the lab manager.
+6. Commit your changes and push your branch to the remote, then initiate a pull request and assign to the lab manager for review.
+
 
 ## Updating Instruments
 
 Instruments should be updated when a new version of a questionnaire is created or when the discovery of an error means that a questionnaire must be corrected.
 
-### When the New Questionnaire Will Supersede the Old
 1. Create a new instrument based on the instructions above.  In so doing, use "_b" (or whichever is the next letter in the alphabet) within the instrument name and all variables.
-2. Separate the old questionnaire and the new one inside this repository into two subfolders (instrument_a and instrument_b).
+2. Separate the old questionnaire and the new one inside this repository into two subfolders (instrument_a and instrument_b). Note that we do not name the initial version with the "_a" marker by default, but we do add it to the folder name and readme once a "_b" version is released.
 3. Make sure that your changes will not impact automatic scoring.  If you think they might (or you are not sure), ping the lab manager before proceeding.
 4. Update the readme for the instrument to indicate the changes made and that the prior version is now deprecated.
 
-### When the Lab Will Use Multiple Variations on a Questionnaire
+## Multiple Variations on a Questionnaire
+
+Some instruments are designed within the lab and may need to exist in multiple variations. An example is the "initState" surveys, which ask pretask questions. The first of such instruments should have the "A" designation in its name (e.g., "initStateA"). To create subsequent versions:
+
 1. Create a new instrument based on the instructions above.  The original instrument should already have an "A" in its name (e.g., postTaskA).  Replace this with "B" (or whichever is the next letter in the alphabet) within the instrument name and all variables.
 2. Separate the two questionnaires inside this repository into two subfolders.
 3. Update the readme for the instrument to indicate what is special about this version.

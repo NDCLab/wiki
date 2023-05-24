@@ -343,6 +343,10 @@ The -o flag indicates that the experiment has been designed for online use, via 
 
 The ft- prefix is a special prefix for the three "FIU Toolbox" tasks (flanker, DCCS, and n-back).
 
+Also, use the same experiment name within the PsychoPy settings (the little gear icon):
+
+[!psychopy-exp-name](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/psychopy-exp-name.png)
+
 ## EEG
 
 When EEG data is collected, files should be named: `subject`_`task`_`session/run/event`. For example:

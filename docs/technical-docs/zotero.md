@@ -2,7 +2,7 @@
 layout: default
 title: Zotero
 parent: Technical Documentation
-nav_order: 12
+nav_order: 11
 ---
 
 ### Contents

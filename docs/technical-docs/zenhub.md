@@ -2,7 +2,7 @@
 layout: default
 title: ZenHub
 parent: Technical Documentation
-nav_order: 11
+nav_order: 10
 ---
 
 ### Contents
