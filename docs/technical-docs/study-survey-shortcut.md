@@ -2,7 +2,7 @@
 layout: default
 title: Study Survey Shortcut
 parent: Technical Documentation
-nav_order: 10
+nav_order: 9
 ---
 
 ### Contents
