@@ -24,14 +24,14 @@ nav_order: 5
 
 
 ## Overview
-REDCap serves as the primary mechanism for questionnaire data collection, master key management, and even experimental protocol access for the NDCLab. The sections below provide useful details to help you quickly learn how to navigate this important tool. This page is not in any way exhaustive, and, once you have digested it, you should actively search the web for how-to resources for additional features that may be useful to your project. Of course, be very careful in the implementation of any REDCap feature, especially one that hasn't been thoroughly vetted by the lab before, to make sure that it does not create new risks to either data security or participant confidentiality. And always (always!) test your project thoroughly, both yourself and with the assistance of another lab member to provide a fresh set of eyes. 
+REDCap serves as the primary mechanism for questionnaire data collection, master key management, and even experimental protocol access for the NDCLab. The sections below provide useful details to help you quickly learn how to navigate this important tool. The information on this page is in no way exhaustive, and, once you have digested it, you should actively search the web for how-to resources for additional features that may be useful to your project. Of course, be very careful in the implementation of any REDCap feature, especially one that hasn't been thoroughly vetted by the lab before, to make sure that it does not create new risks to either data security or participant confidentiality. And always (always!) test your project thoroughly, both yourself and with the assistance of another lab member to provide a fresh set of eyes. 
 
 
 ## Basic Navigation
 **Designer**: This is where you build out and modify all the questionnaires that participants will complete.<br/>
 **Survey Distribution Tools**: This is where you can manage e-mails that invite participants to complete specific surveys.<br/>
 **Records Status Dashboard**: This is where you can see an overview of all participants who have answered any of the questionnaires in your project.<br/>
-**Alerts & Notifications**: This is where you create custom e-mail messages for either participants or researchers that are triggered when participants complete surveys or provide specific answers to an individual question.<br/>
+**Alerts & Notifications**: This is where you create custom e-mail messages for either participants or researchers, which are triggered when participants complete surveys or provide a specific response to a particular question.<br/>
 **Data Exports, Reports, and Stats**: This is where you can export all participant data as a CSV file.<br/>
 **File Repository**: This is where you can upload helpful documents that can be accessed by study RAs.<br/>
 **User Rights**: This is where you can control who has access to the REDCap project and what actions they can do within the project.
@@ -68,7 +68,7 @@ To upload an existing questionnaire into a new REDCap project:
 4. The instrument will appear at the bottom of your list of instruments, but you can drag it to appear anywhere in the list.
 5. In the dashboard, REDCap automatically changes the lab convention ("name_s1_r1_e1") to "Name S1 R1 E1". Just leave this as is: all exports will use the appropriate name (and you don’t want to run the risk of inserting a typo by renaming everything). However, you may need to modify the numbers if your study has multiple sessions ("S2"), multiple runs ("R2"), or uses the same questionnaire more than once within the same run ("E2"), in order to adhere to [lab convention](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap).
 6. If you have modified s1_r1_e1 to use a different number, all variables within the instrument must be updated to match. Use the "data dictionary maneuver" technique described below.
-7. In most cases, the copied instrument should already be enabled as a survey (see the section below). You can verify that the Survey Settings contain the correct text by comparing the "Survey Title" and "Survey Instructions" to the PDF in the instruments repository that includes "redcap-survey" in its name. You want to use this exact title and these exact instructions so that future lab members can be secure in the knowledge that your deployment of a given questionnaire is identical to what is in the `instruments` repository. In some cases, this might also contain additional information required by the FIU IRB (e.g., THQ). If the Survey Settings inside REDCap do not contain all the correct text, you will need to copy them in; pasting from a PDF doesn’t always make for pretty formatting, so it is suggested that you first paste into a text editor (like TextEdit on Mac), then copy this unformatted text and paste it into the REDCap interface.
+7. In most cases, the copied instrument should already be enabled as a survey (see the section below). You can verify that the Survey Settings contain the correct text by comparing the "Survey Title" and "Survey Instructions" to the PDF in the instruments repository that includes "redcap-survey" in its name. You want to use this exact title and these exact instructions so that future lab members can be secure in the knowledge that your deployment of a given questionnaire is identical to what is in the `instruments` repository. In some cases, this might also contain additional information required by the FIU IRB (e.g., THQ). If the Survey Settings inside REDCap do not contain all the correct text, you will need to copy them in; pasting from a PDF doesn’t always make for pretty formatting, so it is suggested that you first paste into a text editor (like TextEdit on Mac), then copy this unformatted text and paste it into the REDCap interface. (Note: recent upgrades to the FIU REDCap deploy make it more likely for survey settings to be properly retained. If you upload a survey and find that survey settings are not retained, please notify the lab manager so that they may update the instruments repository accordingly.)
 8. Even for instruments that imported with the proper survey settings, you may need to update the logo (see the Surveys section below) to ensure visual consistency across your project.
 
 ### Using Only Part of an Instrument
@@ -91,17 +91,17 @@ The lab manager will provide you with a REDCap zip of the consent that matches t
 
 Then set up the e-Consent Framework for traceability on consents. Inside the Survey Settings, simply turn on "Auto-Archiver + e-Consent Framework." Specify the e-Consent version indicated by the lab manager:
 
-[!econsent](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/econsent.png)
+![econsent](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/econsent.png)
 
 With the Auto-Archiver and e-Consent Framework activated, all your consents will be logged in the File Repository, sorted by record ID.
 
 Additionally, you may want or need to send participants a copy of the consent. You can set this in the Survey Settings for the consent instrument:
 
-[!send-consent-copy](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/send-consent-copy.png)
+![send-consent-copy](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/send-consent-copy.png)
 
 For this to function properly, it it is necessary to tell REDCap which field is the e-mail address for the participant. You do this on Project Setup by enabling the "Designate an email field…" option:
 
-[!designate-email](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/designate-email.png)
+![designate-email](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/designate-email.png)
 
 
 ## Data Dictionary Maneuvers
@@ -129,7 +129,7 @@ You should also use the Data Dictionary export feature to take a snapshot of you
 ## Identifiers
 It is imperative that any variable that will contain identifiable data be marked as an "identifier" in the associated REDCap instrument. This includes things like the participant's name, date of birth, and contact information. If in doubt, mark it! This only affects data exports, and works to ensure confidentiality of participant information.
 
-[!identifier](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/identifier.png)
+![identifier](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/identifier.png)
 
 
 ## Surveys and the Survey Queue
@@ -141,11 +141,11 @@ Survey settings allow you to control how questionnaires appear to participants. 
 
 Survey functionality must first be enabled globally on the project in order to enable any individual instrument as a survey. Under Project Setup, in the “Main project settings,” ensure that “Use surveys in this project?” is enabled:
 
-[!enable-surveys](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/enable-surveys.png)
+![enable-surveys](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/enable-surveys.png)
 
 To enable a specific instrument as a survey, navigate to the Designer and click the “Enable” button next to the instrument in question:
 
-[!enable-a-survey](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/enable-a-survey.png)
+![enable-a-survey](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/enable-a-survey.png)
 
 To adjust the survey settings for a particular instrument:
 1. Click the “Survey settings” button.
@@ -156,11 +156,11 @@ To adjust the survey settings for a particular instrument:
 
 Once you have a set of surveys enabled on your project, you can string them together into a "survey queue," so that the completion of one questionnaire immediately launches the next questionnaire. You can control which questionnaires automatically start and the conditional logic required for auto-start. To create a survey queue, start by clicking the "Survey Queue" button on the Designer:
 
-[!survey-queue](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/survey-queue.png)
+![survey-queue](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/survey-queue.png)
 
 If you want a questionnaire to begin automatically when the prior questionnaire is completed, click the “Auto start?” checkbox for that survey and specify the preceding survey to link it to. In some cases, you may want to include conditional logic. In the example below, the Demographics questionnaire only auto-starts in cases where the participant has indicated their consent to proceed with the study:
 
-[!survey-queue-example](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/survey-queue-example.png)
+![survey-queue-example](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/survey-queue-example.png)
 
 
 ## Alerts and Automated Invitations
@@ -175,7 +175,7 @@ In some cases, for example asynchronous studies, you may want to automatically s
     4. _Optional Step 4_: Enable follow-up reminder e-mails (frequency and how many times a reminder will go out) that the participant will receive if they do not respond.
     5. Click Save.
 
-[!automated-invitation](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/automated-invitation.png)
+![automated-invitation](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/automated-invitation.png)
 
 ### Alerts
 For asynchronous studies, there are a number of e-mail alerts that you may want to send, either to participants or to the study lead. These include:
@@ -226,7 +226,7 @@ When a new REDCap project is released to the lab, it is important to check which
 3. On the right-hand side, under "Data Export Rights," ensure that "Remove All Identifier Fields" is the option selected for all surveys, without exception.
 4. Make sure to repeat this for all roles in the project.
 
-[!user-rights](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/user-rights.png)
+![user-rights](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/user-rights.png)
 
 As you can see, you have very granular control of user rights. You can create new user roles and specify permissions. (In all cases, the "Data Export Rights" should match those described above in order to protect the confidentiality of participant information.) Think carefully and critically about how to set up roles in order to reduce the likelihood and impact of any errors by members of the project team.
 
@@ -236,12 +236,12 @@ In order to grant access to a newly-approved team member:
 1. Navigate to the "User Rights" section.
 2. Next to the “Assign to role” button, begin typing the AD account (FIU e-mail without numbers) of the user. It will autopopulate from the list of all FIU individuals with REDCap access. Once the username is populated, the "Assign to role" flydown lets you select to which existing role in the project the new user should be assigned.
 
-[!new-user](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/new-user.png)
+![new-user](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/new-user.png)
 
 ## Connecting to Pavlovia
 If you will redirect users from a REDCap survey queue to a PsychoPy task running on Pavlovia, you will need to create a special instrument that contains a link to the Pavlovia task. Note that you cannot simply use the main link to the Pavlovia experiment as this would require participants to manually input their own Participant ID (which they do not know). The [Vespr tool](https://moryscarter.com/vespr/pavlovia.php) allows you to pass the REDCap-created Participant ID directly into Pavlovia. Here is an example:
 
-[!vespr-example](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/vespr-example.png)
+![vespr-example](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/vespr-example.png)
 
 
 ## File Repository
