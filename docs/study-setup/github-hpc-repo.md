@@ -1,6 +1,6 @@
 ---
 layout: default
-title: github-hpc-repo
+title: GitHub+HPC
 parent: study-setup
 nav_order: 3
 ---

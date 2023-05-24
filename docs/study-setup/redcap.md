@@ -1,6 +1,6 @@
 ---
 layout: default
-title: redcap
+title: REDCap
 parent: study-setup
 nav_order: 5
 ---

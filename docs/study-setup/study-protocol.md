@@ -1,6 +1,6 @@
 ---
 layout: default
-title: study-protocol
+title: Study Protocol
 parent: study-setup
 nav_order: 4
 ---

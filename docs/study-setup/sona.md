@@ -1,6 +1,6 @@
 ---
 layout: default
-title: sona
+title: SONA
 parent: study-setup
 nav_order: 7
 ---

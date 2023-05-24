@@ -1,6 +1,6 @@
 ---
 layout: default
-title: study-setup
+title: Study Setup
 nav_order: 8
 has_children: true
 permalink: /docs/study-setup
