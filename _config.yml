@@ -18,7 +18,7 @@ heading_anchors: true
 logo: "http://www.ndclab.com/wp-content/uploads/2020/05/NDCLabWebLogo.png"
 
 # Footer content
-footer_content: "Copyright &copy; 2022 Neural Dynamics of Control Laboratory"
+footer_content: "Copyright &copy; 2023 Neural Dynamics of Control Laboratory"
 git_edit_repository: "https://github.com/NDCLab/wiki"
 
 # Emoji
