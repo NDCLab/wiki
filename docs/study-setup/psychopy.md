@@ -26,10 +26,10 @@ Also set the nomenclature for the data output file with care so that it integrat
 ## Creating an Experiment
 There are numerous online resource for learning how to build an experiment. In addition, all experiments previously used by NDCLab are available on either GitHub or GitLab. All PsychoPy experiments should first be created on a local machine and thoroughly tested. For in-person studies, the experiment will be run on an experimental computer and should therefore be loaded and tested on that computer, as well. For online studies, the experiment will be hosted on Pavlovia (see below), where additional testing will be required.
 
-#### Voice Files
+### Voice Files
 If you need to run any text-to-speech for task instructions, use the "US English/Joana" voice available [here](https://ttsmp3.com/).
 
-#### JavaScript Output for Pavlovia
+### JavaScript Output for Pavlovia
 In order to run a PsychoPy experiment on Pavlovia, the .psyexp must be transformed into a .js file.  This function is built into PsychoPy itself.
 1. Open the .psyexp file with PsychoPy on your local computer.
 2. Under the File menu, select “Export HTML…”. This outputs three files into the same folder as the .psyexp file:
@@ -38,13 +38,13 @@ In order to run a PsychoPy experiment on Pavlovia, the .psyexp must be transform
     * a .js file that indicates “legacy-browsers”
 
 ## Pavlovia
-#### Accessing Pavlovia
+### Accessing Pavlovia
 Ask the lab manager for the [Pavlovia](https://pavlovia.org/) credentials to use for your study. Do not set up your own account.
 
-#### Uploading to Pavlovia/GitLab
+### Uploading to Pavlovia/GitLab
 There are two ways to upload an experiment to Pavlovia: via the built-in PsychoPy sync or with a manual commit to GitLab.  Select the method with which you are most comfortable.
 
-##### PsychoPy Sync
+#### PsychoPy Sync
 1. Open the .psyexp in PsychoPy.  You should already have exported the .js/.html files as described above.
 2. Click on the "Log in to Pavlovia.org" icon (see below) and log into your study’s Pavlovia account.
 3. Return to the PsychoPy Builder window, then click on the "Sync with web project" icon (see below) to sync with Pavlovia. Be aware that it might take some time to respond.
@@ -62,7 +62,7 @@ Log in to Pavlovia through your browser. Click on “Dashboard,” then “Exper
 
 Click "View code" to view the associated GitLab repository and ensure that the repository is set to "private."
 
-##### Manual Commit to GitLab
+#### Manual Commit to GitLab
 In order to do a manual commit to GitLab, you will need to set up a personal GitLab account and set up [SSH authentication](https://docs.gitlab.com/ee/ssh/index.html) for your computer. Note that Pavlovia is hosting an independent GitLab, meaning that you need to sign up at [gitlab.pavlovia.org/](http://gitlab.pavlovia.org/), not standalone GitLab. Then you can set up SSH authentication (from gitlab.pavlovia.org not gitlab.com) for your computer. (If you are comfortable using GitHub desktop client to work with Git, you can use it with GitLab, too. To do this, please see this [link](https://itnext.io/how-to-use-github-desktop-with-gitlab-cd4d2de3d104). But you can also just use your [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html) like you do with GitHub.)
 
 | Instruction  | Screenshot  |
@@ -77,7 +77,7 @@ You can now use [standard Git commands](https://ndclab.github.io/wiki/docs/techn
 
 Log in to Pavlovia through your browser. Click on “Dashboard,” then “Experiments.”  If your experiment was uploaded properly, you will see it in the list of all experiments in this lab account.
 
-#### Updating GitHub
+### Updating GitHub
 When a PsychoPy experiment is hosted on Pavlovia/GitLab, we do not need to keep a separate copy of it on GitHub. (Having two versions can create discrepancies over time.) Instead, use the readme file in the `materials/` folder on GitHub to link to GitLab.
 
 While the GitLab repository is set to "private" during data collection, the GitHub readme can say something like:
@@ -87,7 +87,7 @@ The PsychoPy script is currently running on Pavlovia.  If you would like to see 
 
 Once data collection is complete, notify the lab manager so they can clear all data history on GitLab and make the repo public. After this is complete, you can update the readme on your GitHub repository to link directly to the GitLab repository where the .psyexp and resource files permanently live.
 
-#### Piloting on Pavlovia
+### Piloting on Pavlovia
 Piloting an online experiment allows you to test it online without consuming any Pavlovia credits. When you run a pilot test, the PsychoPy .csv output will download directly to your local machine (rather than saving automatically to the “data” folder).
 
 To begin piloting, change the status of the experiment from “Inactive” to “Piloting” on the Pavlovia Experiments page:
@@ -108,12 +108,12 @@ Immediately close the browser tab so that it doesn't count you as the one-time p
 
 Don't forget to switch this back before you start real data collection (or else your participants will not be able to access the Pavlovia experiment at all!).
 
-#### Activating an Experiment
+### Activating an Experiment
 To begin collecting data, the experiment needs to be in “Running” mode.
 1. On the Pavlovia Dashboard, select the Experiment that you want to activate.
 2. On the experiment page, select the “Running” button to activate the study. Make sure to assign credits (see below).
 
-#### Managing Credits
+### Managing Credits
 To begin data collection, contact lab manager to add credits to the Pavlovia account that your study is using. Be sure to have the PI's approval for the number of credits you intend to run because each credit costs the lab money. Provide the lab manager with precise information on the number of credits needed.
 
 After credits have been added to the Pavlovia account, assign them to your Experiment:

@@ -106,8 +106,8 @@ For this to function properly, it it is necessary to tell REDCap which field is 
 
 ## Data Dictionary Maneuvers
 ### Adding the Same Instrument Twice
-REDCap has a "Data Dictionary" feature that can be used to modify project details in a safer, more convenient way than manual changes to individual instruments and their questions. A key use case is when you want to use the same instrument twice, for example before two different conditions of a behavioral task. In such a case, you need to have an "e1" version and an "e2" version of the instrument to adhere to the lab's [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap). Below are details on how to use the Data Dictionary feature to create the "e2" version:
-1. First, upload that "e1" version as you normally would any instrument.
+REDCap has a "Data Dictionary" feature that can be used to modify project details in a safer, more convenient way than manual changes to individual instruments and their questions. A key use case is when you want to use the same instrument twice, for example before two different conditions of a behavioral task. In such a case, you need to have an "e1" version and an "e2" version of the instrument to adhere to the lab's [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap). Below are details on how to use the Data Dictionary feature inside REDCap to create the "e2" version:
+1. First, upload the "e1" version as you [normally would any instrument](https://ndclab.github.io/wiki/docs/study-setup/redcap.html#adding-an-instrument).
 2. Confirm that you have no other drafted changes pending in the project.
 3. Navigate to "Dictionary" from the left-hand navigation pane.
 4. Download the current Data Dictionary by clicking the hyperlinked text ("Download the current Data Dictionary").
@@ -127,7 +127,7 @@ You should also use the Data Dictionary export feature to take a snapshot of you
 
 
 ## Identifiers
-It is imperative that any variable that will contain identifiable data be marked as an "identifier" in the associated REDCap instrument. This includes things like the participant's name, date of birth, and contact information. If in doubt, mark it! This only affects data exports, and works to ensure confidentiality of participant information.
+It is imperative that any variable that will contain identifiable data be marked as an "identifier" in the associated REDCap instrument. This includes things like the participant's name, date of birth, and contact information. If in doubt, mark it! This only affects data exports, and works to ensure the confidentiality of participant information.
 
 ![identifier](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/identifier.png)
 
@@ -171,14 +171,14 @@ In some cases, for example asynchronous studies, you may want to automatically s
 2. In the new window, you will complete the following:
     1. _Step 1_: Add the display name (optional) and e-mail from which the invitation to the participant will be sent. Include a Subject line and the body of the message. Make sure that the message contains the `[survey-link]` and `[survey-url]` tags.
     2. _Step 2_: Specify which survey triggers the automated invitation upon completion, and which of its variables must meet which specific criteria.
-    3. _Step 3_: Indicate whether you want the e-mail with the link to be sent immediately or after some delay. (In general, immedate is preferable for the typical use cases in the lab.)
+    3. _Step 3_: Indicate whether you want the e-mail with the link to be sent immediately or after some delay. (In general, immediate is preferable for the typical use cases in the lab.)
     4. _Optional Step 4_: Enable follow-up reminder e-mails (frequency and how many times a reminder will go out) that the participant will receive if they do not respond.
     5. Click Save.
 
 ![automated-invitation](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/automated-invitation.png)
 
 ### Alerts
-For asynchronous studies, there are a number of e-mail alerts that you may want to send, either to participants or to the study lead. These include:
+For asynchronous studies, there are a number of e-mail alerts that you may want to send, either to participants or to a member of the study team. These include:
 * notifying a participant of their ineligibility
 * notifying the study lead of the eligibility/ineligibility of each individual who completes the screener
 * notifying the study lead when certain milestones are completed in the study (task completed, full study completed, etc.)

@@ -49,7 +49,7 @@ To create a new study on SONA, you will set it up on the SONA platform, then req
 
 
 ## Running Participants
-#### Creating Time Slots
+### Creating Time Slots
 Once your study is set up and approved, you can create time slots for participant sign-ups. If you are running a synchronous study, you will want specific timeslots for each participant; if you are running an asynchronous study, you can create a mega timeslot for the entire semester and use a high "max number of participants" to run all your participants for the semester under the same timeslow.
 
 1. Within your study on SONA, scroll down adn click "View/Administer Time Slots."
@@ -61,7 +61,7 @@ Once your study is set up and approved, you can create time slots for participan
 7. Click the "Add This Timeslot" button.
 8. Navigate back out to the main study page, then to "Change Study Information." Check to ensure that the "Active Study?" section is marked as "Yes." If not, change it to "Yes," and save your changes to make the study visible to participants.
 
-#### Participant Cancellation
+### Participant Cancellation
 For synchronous studies, manage participant cancellation based on your dialogue with the potential participant.  For asynchronous studies:
 * cancel when a participant completes the interest form but is NOT eligible for the study.
 * do not cancel when a participant signs up on SONA, even if they do not complete the interest form.
@@ -73,8 +73,7 @@ To cancel a participant:
 4. Click “Cancel” below the participant’s name.
 5. On the confirmation page, include a message to the participant, For example, for asynchronous studies, you might use: _We are canceling your SONA sign-up as you did not meet our eligibility requirements.  Thank you again for your interest in our research!_
 
-
-#### Granting Credit
+### Granting Credit
 Credit is managed within a given timeslot.
 
 1. Under the “Study menu”, click on “View/Administer Time Slots.”
@@ -82,8 +81,7 @@ Credit is managed within a given timeslot.
 3. Go to the “Uncredited Sign-Ups”, and scroll down to the participant you wish to give credit to.
 4. Click “Participated” for that participant, and click “Update Sign-ups”. They have now received credit, and will automatically receive an e-mail from SONA.
 
-
-#### End of Data Collection Period
+### End of Data Collection Period
 When data collection ends for a particular term, mark all participants who did not receive partial or full credit as “Excused Absence.”  This allows the SONA administrator to clean up things on their side but removes the risk that you cancel a participant who should be receiving credit. (This is primarily relevant for asynchronous studies.)
 
 
