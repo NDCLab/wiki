@@ -1,7 +1,7 @@
 ---
 layout: default
 title: GitHub+HPC
-parent: study-setup
+parent: Study Setup
 nav_order: 3
 ---
 

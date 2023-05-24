@@ -1,7 +1,7 @@
 ---
 layout: default
-title: launch-checklist
-parent: launch-checklist
+title: Launch Checklist
+parent: Study Setup
 nav_order: 9
 ---
 

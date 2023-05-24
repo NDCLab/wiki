@@ -1,7 +1,7 @@
 ---
 layout: default
 title: gDrive
-parent: study-setup
+parent: Study Setup
 nav_order: 2
 ---
 

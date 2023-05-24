@@ -1,7 +1,7 @@
 ---
 layout: default
 title: PsychoPy+Pavlovia
-parent: study-setup
+parent: Study Setup
 nav_order: 6
 ---
 
