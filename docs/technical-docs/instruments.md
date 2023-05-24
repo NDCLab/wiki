@@ -17,6 +17,7 @@ A solution would be to collect data via the internet and then apply code to auto
 2. [Using Existing Instruments](#using-existing-instruments)
 3. [Adding New Instruments](#adding-new-instruments)
 3. [Updating Instruments](#updating-instruments)
+4. [Multiple Variations on a Questionnaire](#multiple-variations-on-a-questionnaire)
 
 
 ## Overview
@@ -125,6 +126,7 @@ Instruments should be updated when a new version of a questionnaire is created o
 2. Separate the old questionnaire and the new one inside this repository into two subfolders (instrument_a and instrument_b). Note that we do not name the initial version with the "_a" marker by default, but we do add it to the folder name and readme once a "_b" version is released.
 3. Make sure that your changes will not impact automatic scoring.  If you think they might (or you are not sure), ping the lab manager before proceeding.
 4. Update the readme for the instrument to indicate the changes made and that the prior version is now deprecated.
+
 
 ## Multiple Variations on a Questionnaire
 
