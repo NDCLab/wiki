@@ -11,8 +11,8 @@ nav_order: 3
 3. [Central Tracker](#central-tracker)
 4. [Protocol](#protocol)
 5. [Setting Up](#setting-up)
-6. [hallMonitor.sub](#hallmonitor.sub)
-7. [preprocess.sub](#preprocess.sub)
+6. [hallMonitor.sub](#hallmonitorsub)
+7. [preprocess.sub](#`preprocess.sub`)
 8. [Final Considerations](#final-considerations)
 
 
@@ -210,7 +210,7 @@ The hallMonitor script automatically updates the data-monitoring-log.md file in 
 Once you have completed the hallMonitor process and everything is tidy, push your changes back to the GitHub remote ([`git add`, `git commit`, `git push`](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html)).  This merely updates the data monitoring scripts, log, and central tracker on GitHub; it does not transfer any data from `sourcedata` nor `derivatives` (those only live on the HPC).
 
 
-## preprocess.sub
+## `preprocess.sub`
 
 ### Purpose
 Pre-processing scripts transform the data collected from participants (questionnaires, behavioral tasks) into aggregate numbers that can be used for data analysis. These should draw upon data in the `sourcedata/checked` folder and output to `derivatives/preprocessed`. The preprocess slurm script is a handy shortcut that binds together the automated scoring of REDCap data (via the instruments script) along with any other custom scripts that you tell it to run.
