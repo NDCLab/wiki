@@ -62,7 +62,7 @@ This dummy record will ensure that the next participant ID automatically assigne
 New or revised questionnaires should be built for the labwide `instruments` repo (available on GitHub), then added to a specific project. This ensures consistency across all lab projects. For clarity, this means: never create a new questionnaire within an actual data collection project; instead, discuss with the lab manager and collaborate to [update the instruments repository](https://ndclab.github.io/wiki/docs/technical-docs/instruments.html#adding-new-instruments), then add the final product to your data collection project.
 
 To upload an existing questionnaire into a new REDCap project:
-1. Clone the `instruments` repository on GitHub to your local machine.
+1. Clone the `instruments` repository on GitHub to your local machine. Stay on the `main` branch.
 2. On REDCap, in the Designer section, under the "Add new instrument" header, click "Upload."
 3. On the popup dialogue, select the .zip file in the instruments repository for the instrument that you want to add to your REDCap project. Click "Upload instrument ZIP".
 4. The instrument will appear at the bottom of your list of instruments, but you can drag it to appear anywhere in the list.

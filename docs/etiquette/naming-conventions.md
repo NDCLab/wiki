@@ -244,6 +244,11 @@ In the above, "X" is replaced by a numerical value (1, 2, 3) to indicate the ord
 | initState_s1_r2_e2 | gathered during the initial 2021 session with the participant and as part of the second part of the study, and **after** the experimental manipulation |
 | initState_s2_r1_e1 | gathered during a follow-up session in 2023 with the participant and as part of the first part of that follow-up study |
 
+The characters that comprise the `instrument` part of the instrument name should be a reasonable match to the typical acronym used. The following letters can be appended, without any separator, to classify "sister" versions of the instrument:
+* `c` or `ca`: the child (and/or adolescent) variation
+* `p`: the parent variation
+* `es`: the Spanish version
+
 _Note_: When using a zip file to import an existing instrument to REDCap, the instrument name is displayed as:
 >Instrument SX RX EX
 
