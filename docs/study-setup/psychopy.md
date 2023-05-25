@@ -44,9 +44,25 @@ Ask the lab manager for the [Pavlovia](https://pavlovia.org/) credentials to use
 ### Uploading to Pavlovia/GitLab
 There are two ways to upload an experiment to Pavlovia: via the built-in PsychoPy sync or with a manual commit to GitLab.  Select the method with which you are most comfortable.
 
+**Manual Commit to GitLab**<br/>
+In order to do a manual commit to GitLab, you will need to set up a personal GitLab account and set up [SSH authentication](https://docs.gitlab.com/ee/ssh/index.html) for your computer. Note that Pavlovia is hosting an independent GitLab, meaning that you need to sign up at [gitlab.pavlovia.org/](http://gitlab.pavlovia.org/), not standalone GitLab. Then you can set up SSH authentication (from gitlab.pavlovia.org not gitlab.com) for your computer. (If you are comfortable using GitHub desktop client to work with Git, you can use it with GitLab, too. To do this, please see this [link](https://itnext.io/how-to-use-github-desktop-with-gitlab-cd4d2de3d104). But you can also just use your [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html) like you do with GitHub.)
+
+| Instruction  | Screenshot  |
+| :--  | :--  |
+| 1. Log in to Pavlovia with your assigned lab account. From the Experiments list, click on any experiment. On the new page that loads, click “View code”: | ![pavlovia-view-code](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/pavlovia-view-code.png) |
+| 2. This opens the experiment in the associated GitLab account. Click the “+” at the top of the screen and select “New project” under the GitLab header:  | ![gitlab-new-proj](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/gitlab-new-proj.png)  |
+| 3. Input the “Project name” and “Project slug,” both of which should be identical to the name of your .psyexp file. Leave the “Visibility Level” as “Private.” Click “Create project:”  | ![gitlab-proj-setup](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/gitlab-proj-setup.png)  |
+| 4. This has created an empty repository for you on GitLab. Since the created repository is private by default, you must grant permission to your personal GitLab account to access the repository. On the left GitLab toolbar, hover over “Settings” and click “Members:”  | ![gitlab-proj-members](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/gitlab-proj-members.png)  |
+| 5.	Type your personal GitLab account username under “Select members to invite.” For “Choose a role permission”, select “Maintainer.” Leave the “Access expiration date” blank. Click “Add to project” to grant access to your personal account:  | ![gitlab-invite-member](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/gitlab-invite-member.png)  |
+
+You can now use [standard Git commands](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html#basic-commands) to clone this repository to your local machine, which is authenticated via your personal Pavlovia GitLab user name. Drag and drop all contents of your PsychoPy experiment (that is, the .psyexp file, the two .js files, the .html file, and the full resources folder) into the cloned repository. It is also recommended that you drag over the “data” folder, but empty all of its contents before you commit the changes to GitLab (since these would all be outputs of testing and there is no need to track them on GitLab). Once all your experimental files are happily in the git-initialized folder you just created, use [standard Git commands](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html#basic-commands) to add these changes to your staging area, commit them, and push them to the GitLab remote (`git push origin master`).
+
+Log in to Pavlovia through your browser using the lab account. Click on “Dashboard,” then “Experiments.”  If your experiment was uploaded properly, you will see it in the list of all experiments in this lab account.
+
+
 **PsychoPy Sync**<br/>
 1. Open the .psyexp in PsychoPy.  You should already have exported the .js/.html files as described above.
-2. Click on the "Log in to Pavlovia.org" icon (see below) and log into your study’s Pavlovia account.
+2. Click on the "Log in to Pavlovia.org" icon (see below) and log in to your study’s Pavlovia account.
 3. Return to the PsychoPy Builder window, then click on the "Sync with web project" icon (see below) to sync with Pavlovia. Be aware that it might take some time to respond.
 4. A new window will appear; select the option to “(Re)create project” and click “Ok”.
 5. On the next window, input the experiment name (identical to the name of the .psyexp) in the “Name” field. Confirm that the “Group/owner” is showing the correct lab account name. Leave the “Public” checkbox unchecked.  Click on “Create project on Pavlovia.” Another window will pop up asking to confirm the changes you are making; click “Ok.” It may take some time for the experiment to sync with Pavlovia.
@@ -62,20 +78,6 @@ Log in to Pavlovia through your browser. Click on “Dashboard,” then “Exper
 
 Click "View code" to view the associated GitLab repository and ensure that the repository is set to "private."
 
-**Manual Commit to GitLab**<br/>
-In order to do a manual commit to GitLab, you will need to set up a personal GitLab account and set up [SSH authentication](https://docs.gitlab.com/ee/ssh/index.html) for your computer. Note that Pavlovia is hosting an independent GitLab, meaning that you need to sign up at [gitlab.pavlovia.org/](http://gitlab.pavlovia.org/), not standalone GitLab. Then you can set up SSH authentication (from gitlab.pavlovia.org not gitlab.com) for your computer. (If you are comfortable using GitHub desktop client to work with Git, you can use it with GitLab, too. To do this, please see this [link](https://itnext.io/how-to-use-github-desktop-with-gitlab-cd4d2de3d104). But you can also just use your [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html) like you do with GitHub.)
-
-| Instruction  | Screenshot  |
-| :--  | :--  |
-| 1. Log in to Pavlovia with your assigned lab account. From the Experiments list, click on any experiment. On the new page that loads, click “View code”: | ![pavlovia-view-code](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/pavlovia-view-code.png) |
-| 2. This opens the experiment in the associated GitLab account. Click the “+” at the top of the screen and select “New project” under the GitLab header:  | ![gitlab-new-proj](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/gitlab-new-proj.png)  |
-| 3. Input the “Project name” and “Project slug,” both of which should be identical to the name of your .psyexp file. Leave the “Visibility Level” as “Private.” Click “Create project:”  | ![gitlab-proj-setup](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/gitlab-proj-setup.png)  |
-| 4. This has created an empty repository for you on GitLab. Since the created repository is private by default, you must grant permission to your personal GitLab account to access the repository. On the left GitLab toolbar, hover over “Settings” and click “Members:”  | ![gitlab-proj-members](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/gitlab-proj-members.png)  |
-| 5.	Type your personal GitLab account username under “Select members to invite.” For “Choose a role permission”, select “Maintainer.” Leave the “Access expiration date” blank. Click “Add to project” to grant access to your personal account:  | ![gitlab-invite-member](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/gitlab-invite-member.png)  |
-
-You can now use [standard Git commands](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html#basic-commands) to clone this repository to your local machine, which is authenticated via your personal Pavlovia GitLab user name. Drag and drop all contents of your PsychoPy experiment (that is, the .psyexp file, the two .js files, the .html file, and the full resources folder) into the cloned repository. It is also recommended that you drag over the “data” folder, but empty all of its contents before you commit the changes to GitLab (since these would all be outputs of testing and there is no need to track them on GitLab). Once all your experimental files are happily in the git-initialized folder you just created, use [standard Git commands](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html#basic-commands) to add these changes to your staging area, commit them, and push them to the GitLab remote (`git push origin master`).
-
-Log in to Pavlovia through your browser. Click on “Dashboard,” then “Experiments.”  If your experiment was uploaded properly, you will see it in the list of all experiments in this lab account.
 
 ### Updating GitHub
 When a PsychoPy experiment is hosted on Pavlovia/GitLab, we do not need to keep a separate copy of it on GitHub. (Having two versions can create discrepancies over time.) Instead, use the readme file in the `materials/` folder on GitHub to link to GitLab.
@@ -84,6 +86,8 @@ While the GitLab repository is set to "private" during data collection, the GitH
 ```
 The PsychoPy script is currently running on Pavlovia.  If you would like to see or fork it, please contact us.  Once data collection has ended, this page will include an open access link to the GitLab repository for the .psyexp experiment and its associated resources.
 ```
+
+> The PsychoPy script is currently running on Pavlovia.  If you would like to see or fork it, please contact us.  Once data collection has ended, this page will include an open access link to the GitLab repository for the .psyexp experiment and its associated resources.
 
 Once data collection is complete, notify the lab manager so they can clear all data history on GitLab and make the repo public. After this is complete, you can update the readme on your GitHub repository to link directly to the GitLab repository where the .psyexp and resource files permanently live.
 
