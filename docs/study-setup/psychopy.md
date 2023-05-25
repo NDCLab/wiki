@@ -106,7 +106,7 @@ Separately, you will also need to pilot the REDCap project and how that connects
 run.pavlovia.org/NdcLabB/read-aloud-val-o_S1_r1_e1/?__pilotToken=6f4922blahblah&__oauthToken=15988e625blahblah
 ```
 
-Immediately close the browser tab so that it doesn't count you as the one-time pilot participant for that link. Over on REDCap, temporarily adjust the link inside your "link to Pavlovia" instrument(https://ndclab.github.io/wiki/docs/study-setup/redcap.html#connecting-to-pavlovia) to include these two variables, which will need to be unique for each person who tests for you and which are only valid for one hour:
+Immediately close the browser tab so that it doesn't count you as the one-time pilot participant for that link. Over on REDCap, temporarily adjust the link inside your ["link to Pavlovia" instrument](https://ndclab.github.io/wiki/docs/study-setup/redcap.html#connecting-to-pavlovia) to include these two variables, which will need to be unique for each person who tests for you and which are only valid for one hour:
 
 ![pavlovia-pilot-in-redcap](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/study-setup/pavlovia-pilot-in-redcap.png)
 
