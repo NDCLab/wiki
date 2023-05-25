@@ -118,16 +118,32 @@ Please follow these guidelines when creating a new instrument for the lab:
     * the REDCap import .zip ("acronym_s1_r1_e1.zip")
     * the data dictionary CSV
     * the readme
-5. Add the score(s) for the instrument to the .json file, in alphabetical order, with the appropriate parameters as described in subscore.py for subscale scoring. (Note that variations on an instrument, for example the 'parent' version or Spanish-language version, appear immediately after the 'main' version.)
+5. Add the score(s) for the instrument to the .json file, in alphabetical order, with the appropriate parameters as described below. (Note that variations on an instrument, for example the 'parent' version or Spanish-language version, appear immediately after the 'main' version.)
 6. Add the instrument, alphabeticaly, into the list-of-instruments.md with a link to the appropriate citation.
 7. Commit your changes and push your branch to the remote, then initiate a pull request and assign to the lab manager for review.
+
+### Scoring Instructions
+The basic structure for each score is self-evident from the structure of surveys.json. The following three parameters are required:
+* `questions`: item number of each question that should be used to calculate the score
+* `score_type`: typically "sum" or "avg" (check subscore.py for other options)
+* `threshold`: minimum percentage of response to calculate a score (typically 1.0 for "sum" and 0.8 for "avg")
+
+Other common parameters include:
+* `rev_questions`: item numbers for any questions that are included in the `questions` parameter and need to be reversed for scoring
+* `answers`: (required if `rev_questions` is used) the possible response values
+
+More rarely, you might need:
+* `products`: useful if a score is calculated by combining some other set of scores (examples: ambirmbi, aq10); note that you can combine a set of questions with a set of products (example: spai)
+* `hide`: (required if `products` is used) specification of whether the set of scores used to calculate `products` should also be independently output to the scored file (`"hide": false`) or should not be output (`"hide": true`)
+
+Finally, it is possible to create a custom scoring for complex surveys, such as the bpsqi.
 
 
 ### Including Sister Versions
 In many cases, the lab has multiple "versions" of the same questionnaire for a different audience. Example include:
-* child versions of an adult questionnaire
-* parent versions of a child self report questionnaire
-* Spanish-language versions of an English questionnaire
+* child version of an adult questionnaire
+* parent version of a child self report questionnaire
+* Spanish-language version of an English questionnaire
 
 All of these should be stored in the same folder of the instruments repository. In surveys.json, however, separate entries must be created for each. That is, `ders`, `dersp`, and `derspes` all live in the "ders" folder, but have three separate entries in surveys.json due to limitations in the ability of the script to parse instrument names.
 
@@ -153,6 +169,6 @@ An existing instrument should be updated when a new version is created (for exam
 ## Some Technical Notes
 The scoring script identifies an instrument name by the initial letter-string in the REDCap variable names. For example, the "ambirmbi" in `ambirmbi_s1_r1_e1`. It separately identifies the intersection of session/run/event in the REDCap variable names; in this case: 1/1/1. If you include the same survey twice in REDCap, such as `ambirmbi_s1_r1_e1` and `ambirmbi_s1_r1_e2`, the scoring script will output two sets of scores for you: one for the "e1" data and one for the "e2" data.
 
-The script can also disambiguate between versions of a scorable instrument. If your survey includes `ambirmbi_b_s1_r1_e1`, the script will use the same scoring instructions as for any other set of "ambirmbi" variables. This means that new versions of the same survey ("ambirmbi," "ambirmbi_b," "ambirmbi_c") are all managed by a single "ambirmbi" section in surveys.json. Additionally, the script will keep these separate, so if you start data collection with "ambirmbi_s1_r1_e1" and subsequently add "ambirmbi_b_s1_r1_e1" to REDCap, you will get separate scores for each.
+The script can also disambiguate between versions of a scorable instrument. If your survey includes `ambirmbi_b_s1_r1_e1`, the script will use the same scoring instructions as for any other set of "ambirmbi" variables. This means that new versions of the same survey ("ambirmbi," "ambirmbi_b," "ambirmbi_c") are all managed by a single "ambirmbi" section in surveys.json. Additionally, the script will keep these separate, so if you start data collection with `ambirmbi_s1_r1_e1` and subsequently add `ambirmbi_b_s1_r1_e1` to REDCap, you will get separate scores for each.
 
-As part of the scoring process, the script calculates the percentage complete for each score. It does this by calculating how many responses (for a given participant, of course) exist in the set of questions needed to compute a particular score. If that percentage is below the scoring threshold defined in surveys.json for the score, it does not calculate the score. One side effect of this behavior is that you can hide or delete questions that you don't want participants to see without impacting the scoring behavior for the questions that remain.
+As part of the scoring process, the script calculates the percentage complete for each score. It does this by calculating how many responses (for a given participant, of course) exist in the set of questions needed to compute a particular score. If that percentage is below the scoring threshold defined in surveys.json for the score, it does not calculate the score. One happy side effect of this behavior is that you can hide or delete questions that you don't want participants to see without impacting the scoring behavior for the questions that remain.
