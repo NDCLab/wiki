@@ -22,7 +22,7 @@ To request a SONA "Researcher" account, e-mail the current SONA administrator (f
 
 
 ## Project Setup
-To create a new study on SONA, you will set it up on the SONA platform, then request approval from the SONA administrator to make it visible to potential participants. The administrator will request a copy of the IRB approval letter.
+To create a new study on SONA, you will set it up on the SONA platform, then request approval from the SONA administrator to make it visible to potential participants. The administrator will need a copy of the IRB approval letter.
 
 1. Inform the lab manager that you are setting up a new study on SONA, and request the associated [IRB approval letter and eligibility requirements](https://ndclab.github.io/wiki/docs/study-setup/irb.html).
 2. Go to the [SONA site](https://fiu.sona-systems.com/) and log in to your Researcher account.
@@ -41,7 +41,7 @@ To create a new study on SONA, you will set it up on the SONA platform, then req
 | Eligibility Requirements | Must be between ages 18-24, fluent in English, have normal or corrected vision, no prior head injury, have a webcam to be willing to use for Part 2, must be willing to record self via webcam for part of study, must complete Part 1 for Part 2. | The requirements for being able to participate. Cannot be greater than 255 characters. This should be wholly consistent with the IRB-approved recruitment documentation. |
 | Duration/Credits | Part 1: 90 minutes, 1.5 credits; Part 2: 90 minutes, 1.5 credits | The length of time per study and how many credits may be granted, which must be evenly divisible by 0.25. (Note that the option for variable credit within SONA exists, however it is not contained within the study settings.) |
 | Preparation | For Part 1, you should be prepared to have a stable internet connection to complete a series of questionnaires and behavioral tasks remotely. For Part 2, additionally you need a working microphone and webcam. | Any preparation a participant needs before starting each part of the study. This should be wholly consistent with the IRB-approved recruitment documentation. |
-| Researcher | (names) | Your name will auto-population. Always include the lab manager and the PI as additional researchers. |
+| Researcher | (names) | Your name will auto-populate. Always include the lab manager and the PI as additional researchers. |
 | IRB Approval Code/Expiration | (code, date) | All studies must be IRB-approved. These details appear on the IRB approval letter. |
 | Active Study? | No | For the initial stages of planning, keep the study inactive. You can switch it to active once you have approval and are ready to start running participants. |
 | Study URL | (link to REDCap screener) | Potential participants will be able to access this link, so it can be used to direct them to the eligibility screener directly, which would be an instrument in your study's [REDCap project](https://ndclab.github.io/wiki/docs/study-setup/redcap.html). |
@@ -50,9 +50,9 @@ To create a new study on SONA, you will set it up on the SONA platform, then req
 
 ## Running Participants
 ### Creating Time Slots
-Once your study is set up and approved, you can create time slots for participant sign-ups. If you are running a synchronous study, you will want specific timeslots for each participant; if you are running an asynchronous study, you can create a mega timeslot for the entire semester and use a high "max number of participants" to run all your participants for the semester under the same timeslow.
+Once your study is set up and approved, you can create time slots for participant sign-ups. If you are running a synchronous study, you will want specific timeslots for each participant; if you are running an asynchronous study, you can create a mega timeslot for the entire semester and use a high "max number of participants" to run all your participants for the semester under the same timeslot.
 
-1. Within your study on SONA, scroll down adn click "View/Administer Time Slots."
+1. Within your study on SONA, scroll down and click "View/Administer Time Slots."
 2. Click "Add a Timeslot."
 3. Establish the Final Participation Date and Final Participation Time. Though the start date of the study is variable (ideally close to the beginning of the semester), the end date of a SONA study should generally be the Friday one week before the academic semester at FIU ends. To find out when the semester ends (i.e, the last week of class before finals week), visit [this link](https://onestop.fiu.edu/academic-calendar/).  Note that participants see this deadline when they sign up, so it cannot be changed after the time slot is created.  (Technically it can be changed, but this leads to participant confusion for asynchronous studies. The extra week buffer is also to give asynchronous studies adequate time to crosscheck participation data and assign credits.)
 4. Ensure that the “Max. Number of Participants” you have input is logical for your data collection plan and study team resources.
@@ -79,10 +79,11 @@ Credit is managed within a given timeslot.
 1. Under the “Study menu”, click on “View/Administer Time Slots.”
 2. On the timeslot listed, click “Modify.”
 3. Go to the “Uncredited Sign-Ups”, and scroll down to the participant you wish to give credit to.
-4. Click “Participated” for that participant, and click “Update Sign-ups”. They have now received credit, and will automatically receive an e-mail from SONA.
+4. Click the "Credit Granted" radiobutton for that participant, and click “Update Sign-ups”. They have now received credit, and will automatically receive an e-mail from SONA.
+5. If you need to assign partial credit, you can adjust the number of credits manually during this process.
 
 ### End of Data Collection Period
-When data collection ends for a particular term, mark all participants who did not receive partial or full credit as “Excused Absence.”  This allows the SONA administrator to clean up things on their side but removes the risk that you cancel a participant who should be receiving credit. (This is primarily relevant for asynchronous studies.)
+When data collection ends for a particular term, mark all remaining participants who did not cancel but also did not receive partial or full credit as “Excused Absence.”  This allows the SONA administrator to clean up things on their side but removes the risk that you cancel a participant who should be receiving credit. (This is primarily relevant for asynchronous studies.)
 
 
 ## Project Closeout

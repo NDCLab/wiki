@@ -83,9 +83,6 @@ Click "View code" to view the associated GitLab repository and ensure that the r
 When a PsychoPy experiment is hosted on Pavlovia/GitLab, we do not need to keep a separate copy of it on GitHub. (Having two versions can create discrepancies over time.) Instead, use the readme file in the `materials/` folder on GitHub to link to GitLab.
 
 While the GitLab repository is set to "private" during data collection, the GitHub readme can say something like:
-```
-The PsychoPy script is currently running on Pavlovia.  If you would like to see or fork it, please contact us.  Once data collection has ended, this page will include an open access link to the GitLab repository for the .psyexp experiment and its associated resources.
-```
 
 > The PsychoPy script is currently running on Pavlovia.  If you would like to see or fork it, please contact us.  Once data collection has ended, this page will include an open access link to the GitLab repository for the .psyexp experiment and its associated resources.
 
@@ -118,7 +115,7 @@ To begin collecting data, the experiment needs to be in “Running” mode.
 2. On the experiment page, select the “Running” button to activate the study. Make sure to assign credits (see below).
 
 ### Managing Credits
-To begin data collection, contact lab manager to add credits to the Pavlovia account that your study is using. Be sure to have the PI's approval for the number of credits you intend to run because each credit costs the lab money. Provide the lab manager with precise information on the number of credits needed.
+To begin data collection, contact the lab manager to add credits to the Pavlovia account that your study is using. Be sure to have the PI's approval for the number of credits you intend to run because each credit costs the lab money. Provide the lab manager with precise information on the number of credits needed.
 
 After credits have been added to the Pavlovia account, assign them to your Experiment:
 
