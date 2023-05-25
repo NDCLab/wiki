@@ -44,7 +44,7 @@ Ask the lab manager for the [Pavlovia](https://pavlovia.org/) credentials to use
 ### Uploading to Pavlovia/GitLab
 There are two ways to upload an experiment to Pavlovia: via the built-in PsychoPy sync or with a manual commit to GitLab.  Select the method with which you are most comfortable.
 
-#### PsychoPy Sync
+### PsychoPy Sync
 1. Open the .psyexp in PsychoPy.  You should already have exported the .js/.html files as described above.
 2. Click on the "Log in to Pavlovia.org" icon (see below) and log into your study’s Pavlovia account.
 3. Return to the PsychoPy Builder window, then click on the "Sync with web project" icon (see below) to sync with Pavlovia. Be aware that it might take some time to respond.
@@ -62,7 +62,7 @@ Log in to Pavlovia through your browser. Click on “Dashboard,” then “Exper
 
 Click "View code" to view the associated GitLab repository and ensure that the repository is set to "private."
 
-#### Manual Commit to GitLab
+### Manual Commit to GitLab
 In order to do a manual commit to GitLab, you will need to set up a personal GitLab account and set up [SSH authentication](https://docs.gitlab.com/ee/ssh/index.html) for your computer. Note that Pavlovia is hosting an independent GitLab, meaning that you need to sign up at [gitlab.pavlovia.org/](http://gitlab.pavlovia.org/), not standalone GitLab. Then you can set up SSH authentication (from gitlab.pavlovia.org not gitlab.com) for your computer. (If you are comfortable using GitHub desktop client to work with Git, you can use it with GitLab, too. To do this, please see this [link](https://itnext.io/how-to-use-github-desktop-with-gitlab-cd4d2de3d104). But you can also just use your [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html) like you do with GitHub.)
 
 | Instruction  | Screenshot  |
