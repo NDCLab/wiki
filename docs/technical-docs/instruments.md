@@ -124,7 +124,7 @@ Please follow these guidelines when creating a new instrument for the lab:
 
 ### Scoring Instructions
 The basic structure for each score is self-evident from the structure of surveys.json. The following three parameters are required:
-* `questions`: item number of each question that should be used to calculate the score
+* `questions`: item number of each question that should be used to calculate the score (if all questions should be included, use `null`)
 * `score_type`: typically "sum" or "avg" (check subscore.py for other options)
 * `threshold`: minimum percentage of response to calculate a score (typically 1.0 for "sum" and 0.8 for "avg")
 
@@ -133,7 +133,7 @@ Other common parameters include:
 * `answers`: (required if `rev_questions` is used) the possible response values
 
 More rarely, you might need:
-* `products`: useful if a score is calculated by combining some other set of scores (examples: ambirmbi, aq10); note that you can combine a set of questions with a set of products (example: spai)
+* `products`: useful if a score is calculated by combining some other set of scores (examples: ambirmbi, aq10); note that you can combine a set of questions with a set of products (example: spai) -- if you are using `products`, you must still include the `questions` parameter; include any questions that should be summed/averaged with the products, otherwise use `[]` to indicate that only the products should be manipulated
 * `hide`: (required if `products` is used) specification of whether the set of scores used to calculate `products` should also be independently output to the scored file (`"hide": false`) or should not be output (`"hide": true`)
 
 Finally, it is possible to create a custom scoring for complex surveys, such as the bpsqi.
