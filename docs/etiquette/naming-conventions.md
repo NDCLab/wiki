@@ -249,6 +249,8 @@ The characters that comprise the `instrument` part of the instrument name should
 * `p`: the parent variation
 * `es`: the Spanish version
 
+Because `es` is appended directly to an instrument acronym for the Spanish version, and in order to ensure that responses can be counted across English and Spanish surveys for data monitoring purposes, it is imperative that no English instrument be named in such a way that the name ends in "es."
+
 _Note_: When using a zip file to import an existing instrument to REDCap, the instrument name is displayed as:
 >Instrument SX RX EX
 
@@ -305,7 +307,7 @@ Whenever an instrument is modified (including correction of errors and re-workin
 
 #### **Scored Instruments**
 
-Scored instruments are revised by appending "_b" (or "_c", "_d", etc.) to the instrument name and to all variables. This must be done very precisely to ensure that the automatic scoring script continues to function as expected. Example:
+Scored instruments are revised by appending "_b" (or "_c", "_d", "_z", "_aa", etc.) to the instrument name and to all variables. This must be done very precisely to ensure that the automatic scoring script continues to function as expected. Example:
 
 > instrument name: adexi_s1_r1_e1 :point_right: adexi_b_s1_r1_e1<br/>
 > question 1: adexi_i1_s1_r1_e1 :point_right: adexi_b_i1_s1_r1_e1

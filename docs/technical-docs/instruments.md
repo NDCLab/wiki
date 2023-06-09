@@ -95,9 +95,11 @@ In general, it is best to build new instruments in a "sandbox" project on REDCap
 10. Build out the readme file. In order to maintain consistency across lab instruments, find an instrument with similar specifications (e.g., similarity in versions or translation history) and use the readme for that instrument as your base to create the readme for your new instrument.
 
 Please follow these guidelines when creating a new instrument for the lab:
-* Be certain to follow the lab’s [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap) for variable names.  For initial creation, use “s1_r1_e1” because you will export this for other lab members to use.
+* Be careful to follow the lab's [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap) for instrument names. This includes not using a name for an English instrument that ends in "es," appending the proper letters to classify "sister" instruments, and properly naming instruments with multiple versions.
+* Likewise, be certain to follow the lab’s [naming conventions](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html#redcap) for variable names.  For initial creation, use “s1_r1_e1” because you will export this for other lab members to use.
 * Use the same numerical values for choices as the source instrument.  This ensures that the output CSV for your new instrument is easy to score and aligns with other published uses of the questionnaire.
 * Force all questions to be required unless there is a very good reason not to. In this way, all users know that the default is for all questions to be required, and they can adjust this as required by the IRB for their own study.
+* Do not hard code any question numbers into the field label. Question numbering is handled project-wide in REDCap, and, in some cases, is dependent upon other settings.
 * Be careful which questions are marked as “Identifiers.”  In general (although there are exceptions), such questions should only appear in an “interest form” or "demographics" type instrument.
 * Enable Survey Settings and include the appropriate Survey Title and Survey Instructions (you do not need to include the lab logo).
 * Whenever appropriate, use a “Matrix of Fields” as these have a cleaner display for the participant.
