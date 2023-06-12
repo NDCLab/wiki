@@ -80,6 +80,15 @@ nav_order: 2
 | research interests | Olivia is interested in using EEG to investigate the neural mechanisms of cognitive control and the influence of anxiety on post-error behavior. |
 | hobbies | Painting nails, DnD, and riding horses |
 
+| ![zakirov](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/zakirov.jpg) | Felix Zakirov |
+| ---  | ---  |
+| pronouns | he/him/his |
+| location | Miami, FL |
+| GitHub | fzakirov |
+| Email  | fzaki001@fiu.edu |
+| research interests | Felix is interested in investigating neural correlates of cognitive control and decision-making through EEG. |
+| hobbies | Music, cats, video games |
+
 ### Graduate Student Affiliates
 
 | ![martin](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/martin.jpg) | Emily Martin |
