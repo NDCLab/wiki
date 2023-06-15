@@ -97,22 +97,24 @@ cd /home/data/NDClab/datasets
 You will input a single command that indicates which dataset should be set up, which data types are involved, and which EEG system (if any) is used. Here is the core structure of the command:
 
 ```
-bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET/ DATA-TYPES SUBJECT-NUMBERING (-n)
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t (-n) (-c) (-p) YOUR-DATASET DATA-TYPES SUBJECT-NUMBERING
 ```
 * **-t FLAG:** always include this flag so that a tracker is generated on the basis of your central tracker data dictionary
+* **-n FLAG:** this optional flag allows you to specify if you only collected a single running EEG per participant, as opposed to one EEG file per PsychoPy task
+* **-c FLAG:** this optional flag allows you to specify that both child self-report and parental report responses within REDCap should be collapsed into a single row for each child participant
+* **-p FLAG:** this optional flag allows you to specify that both child participants and their parents answered the same self-report questionnaires (the '-c' flag is required if you will use the '-p' flag)
 * **YOUR-DATASET:** this is the name of your dataset
 * **DATA-TYPES:** include each data type you have in your `sourcedata/raw/` folder, separated by a comma (no space); these must follow the conventions outlined in the datadict_definitions file (be sure to use either 'bv' or 'egi', rather than using 'eeg', so that the script knows which system was used to collect the data in the `sourcedata/raw/eeg/` folder)
 * **SUBJECT-NUMBERING:** include the first subject number to be used
-* **-n FLAG:** this optional flag allows you to specify if you only collected a single running EEG per participant, as opposed to one EEG file per PsychoPy task
 
 Here is an example of the setup line for rwe-eeg-dataset. It includes five data types: audio, digi, eeg (for which we specify 'bv'), psychopy, and redcap. Subject numbering for the central tracker will begin at 210000. There was one EEG file per PsychoPy task, so the '-n' flag was not used.
 ```
-bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t rwe-eeg-dataset/ audio,digi,bv,psychopy,redcap 210000
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t rwe-eeg-dataset audio,digi,bv,psychopy,redcap 210000
 ```
 
 Here is an second example of the setup line, this time for oops-faces-dataset. It includes four data types: digi, eeg (for which we specify 'bv'), psychopy, and redcap. Subject numbering for the central tracker will begin at 240001. There was only one running EEG file per participant (although there are two PsychoPy tasks), so the '-n' flag was used.
 ```
-bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t oops-faces-dataset/ digi,bv,psychopy,redcap 240001 -n
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t -n oops-faces-dataset digi,bv,psychopy,redcap 240001
 ```
 
 After executing this command, the following new files (in addition to the blank central tracker) will be added to your dataset's data-monitoring folder:
