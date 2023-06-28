@@ -67,21 +67,22 @@ Once you are satisfied with the `readme` and `contributing` files, initiate a pu
 
 ### ZenHub
 
-While you wait for approval of your planned roadmap, you can set up ZenHub.
+While you wait for approval of your planned roadmap, you can start to set up ZenHub. The lab manager will have created a ZenHub space for you during project setup.
 
-1. Click the ZenHub tab within your new repository. This automatically opens a page so that you can set up a new ZenHub workspace. Input your project name as the workspace name and the short descriptor. ZenHub automatically connects to the GitHub repository where you started. Click "Create Workspace."
+1. Create [ZenHub Epics](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html#defining-epics) to match the lab's default examples for either a dataset or analysis repo:
 
-![zh_new-workspace](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh_new-workspace.png)
+**Dataset:** lit review + study design; setup + piloting; data collection + data monitoring; preprocessing
+**Analysis:** lit review + analysis plan; analysis + interpretation; manuscript writing; peer review + publication
 
-2. Unfortunately, ZenHub does not automatically use the NDCLab's default pipelines when creating a new workspace, so you will need to customize your new workspace immediately. Adjust pipeline names and descriptors to match the table [here](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html#tour-of-the-pipelines). You can change the names and descriptors by clicking the three vertical dots at the top of each pipeline. This same menu lets you delete any unnecessary pipelines. Additional pipelines can be added at the far right of the screen, then dragged-and-dropped into the appropriate position.
+You can see examples of each kind of ZenHub board by searching by workspace name:
 
-3. Create a [ZenHub Epic](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html#defining-epics) for each planned project release, as outlined in your readme roadmap.
+![zh_lab-defaults](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh-lab-defaults.png)
 
-4. Plan project issues (which may be large and abstract at this stage) and assign them to the appropriate Epic.
+2. Plan project issues (which may be large and abstract at this stage) and assign them to the appropriate Epic.
 
-5. Organize the Project Backlog pipeline in ZenHub by putting the earliest Epic at the top, followed by its associated issues in priority order. This is followed by the next earliest Epic with its issues, and so on.
+3. Organize the Project Backlog pipeline in ZenHub by putting the earliest Epic at the top, followed by its associated issues in priority order. This is followed by the next earliest Epic with its issues, and so on.
 
-6. Launch the first Epic by moving the "Epic" issue and its associated issues to the *Release Backlog* in ZenHub.
+4. Launch the first Epic by moving the "Epic" issue and its associated issues to the *Release Backlog* in ZenHub.
 
 ### Slack
 When you request the new repo from the lab manager, a new Slack channel will be created. Appropriate permissions will be granted to the project lead(s) and other project team members.
