@@ -67,11 +67,11 @@ Once you are satisfied with the `readme` and `contributing` files, initiate a pu
 
 ### ZenHub
 
-While you wait for approval of your planned roadmap, you can start to set up ZenHub. The lab manager will have created a ZenHub space for you during project setup.
-
-1. Create [ZenHub Epics](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html#defining-epics) to match the lab's default examples. For a dataset repo, these are: lit review + study design; setup + piloting; data collection + data monitoring; preprocessing. For an analysis repo, these are: lit review + analysis plan; analysis + interpretation; manuscript writing; peer review + publication. You can see examples of each kind of ZenHub board by searching by workspace name:
+While you wait for approval of your planned roadmap, you can start to set up ZenHub. The lab manager will have created a ZenHub space for you during project setup. You can see examples of each kind of ZenHub board by searching by workspace name:
 
 ![zh_lab-defaults](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/zh-lab-defaults.png)
+
+1. Create [ZenHub Epics](https://ndclab.github.io/wiki/docs/technical-docs/zenhub.html#defining-epics) to match the lab's default examples. For a dataset repo, these are: lit review + study design; setup + piloting; data collection + data monitoring; preprocessing. For an analysis repo, these are: lit review + analysis plan; analysis + interpretation; manuscript writing; peer review + publication. 
 
 2. Plan project issues (which may be large and abstract at this stage) and assign them to the appropriate Epic.
 
