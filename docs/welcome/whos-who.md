@@ -19,15 +19,6 @@ nav_order: 2
 
 ### Lab Manager
 
-| ![alexander](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/alexander.jpg) | Jess Alexander |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Austin, TX |
-| GitHub | jessb0t |
-| Email  | jalexand@fiu.edu |
-| research interests | Jess is interested in the neural, cognitive, and behavioral underpinnings of emotion and language. |
-| hobbies | I'm an avid runner, I love to travel, and I play the piano. |
-
 | ![laplace](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/laplace.jpg) | Lilly LaPlace |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -230,15 +221,6 @@ nav_order: 2
 | Email  | shung@fiu.edu |
 | research interests | Shirley is interested in child clinical psychology, cognition, and behavior. |
 | hobbies | cosmetology, art, reading books, meditation, and traveling |
-
-| ![rodriguez](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguez.jpg) | Brittney Rodriguez |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Huntsville, AL |
-| GitHub | brod0512 |
-| Email  | britrodr@fiu.edu |
-| research interests | Brittney is interested in the effects of substances in child and adolescent cognition. |
-| hobbies | drinking coffee, traveling and working out |
 
 | ![rodriguez-delgado](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguezdelgado.jpg) | Carlos Rodriguez Delgado |
 | ---  | ---  |
