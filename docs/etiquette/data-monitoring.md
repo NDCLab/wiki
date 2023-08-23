@@ -153,19 +153,23 @@ Audio, video, and photo (such as EEG digitization, "digi") files are managed man
 
 Within `sourcedata/checked`, folders should be organized as:<br/>
 /checked/<br/>
-├── audio/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-├── video/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+├── redcap/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──s1_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──s2_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├──s3_r1/<br/>
 ├── bidsish/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──eeg/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──psychopy/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──eeg/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──psychopy/<br/>
 
 #### EEG
 1. Checks for the existence of any new subject folders in `sourcedata/raw/eeg` and, if they are found, verifies the correct subject folder nomenclature (i.e., sub-XXXXXX).
