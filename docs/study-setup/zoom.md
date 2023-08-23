@@ -14,7 +14,7 @@ nav_order: 8
 
 
 ## Overview
-The lab has six study-specific Zoom/Outlook accounts that can be used for data collection purposes. If your study will involve Zoom, reach out to the lab manager to be assigned a shared lab account.
+The lab has five study-specific Zoom/Outlook accounts that can be used for data collection purposes. If your study will involve Zoom, reach out to the lab manager to be assigned a shared lab account.
 
 
 ## Logging In
