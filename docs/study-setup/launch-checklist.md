@@ -2,7 +2,7 @@
 layout: default
 title: Launch Checklist
 parent: Study Setup
-nav_order: 9
+nav_order: 10
 ---
 
 Before going live, make sure that you have completed everything on this list.
