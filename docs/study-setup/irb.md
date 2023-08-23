@@ -13,7 +13,7 @@ nav_order: 1
 
 
 ## Overview
-All data collection activities must be approved by the FIU IRB. There are two key components of the approval process: preparing the informed consent/assent form(s) and drafting the protocol for IRB approval.  Any subsequent changes to the study, such as modifying questionnaires, onboarding new study staff, or adopting new technological tools (data collection, data storage) must be explicitly approved by the FIU IRB in an amendment to the original protocol. The NDCLab Manager tracks all lab IRBs and must be involved in any IRB-related procedures.
+All data collection activities must be approved by the FIU IRB. There are two key components of the approval process: preparing the informed consent/assent form(s) and drafting the protocol for IRB approval.  Any subsequent changes to the study, such as modifying questionnaires, onboarding new study staff, or adopting new technological tools (data collection, data storage) **must be explicitly approved by the FIU IRB** in an amendment to the original protocol. Before any protocol change can be made to a study, the researcher must confirm that the change has been approved by the IRB. They should do so by checking the most up-to-date IRB-approved protocol and subsequently confirming with the NDCLab Manager. The NDCLab Manager tracks all lab IRBs and must be involved in any IRB-related procedures.
 
 
 ## Informed Consent/Assent

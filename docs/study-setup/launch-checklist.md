@@ -57,7 +57,7 @@ If participants will complete an online behavioral task:
 
 ## Protocol
 
-* Protocol is finalized and PI has sat through as a mock participant under this final version of the protocol.
+* Protocol is finalized, approved by the IRB, and the PI has sat through as a mock participant under this final version of the protocol.
 
 ## SONA
 

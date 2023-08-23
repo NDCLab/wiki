@@ -14,7 +14,7 @@ nav_order: 4
 
 
 ## Overview
-The experimental protocol serves as both an indispensable tool to ensure consistency of the study experience from one participant to the next, as well as a formal record of the study procedures. It cannot be too detailed!
+The experimental protocol serves as both an indispensable tool to ensure consistency of the study experience from one participant to the next, as well as a formal record of the study procedures. It cannot be too detailed! **Reminder that any change to the study protocol must be approved by the FIU IRB before it is implemented.** Check with the NDCLab Manager before implementing any study protocol change. 
 
 
 ## Creating the Draft Protocol
