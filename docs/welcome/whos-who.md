@@ -39,7 +39,7 @@ nav_order: 2
 | research interests | David is interested in fMRI and connectomics, computer models of cognition, visual neuroscience, EEG, white matter tractography. |
 | hobbies | Trying to cook new recipes, on and off Pacers fan, coffee and tea. |
 
-### EEG Research Assistant (THRIVE project)
+### EEG Research Assistant
 
 | ![garciamorazzani](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/garciamorazzani.jpg) | Ana Garcia Morazzani |
 | ---  | ---  |
@@ -212,15 +212,6 @@ nav_order: 2
 | Email  | vguev015@fiu.edu |
 | research interests | Vanessa is interested in neuropsychology, speech disorders, biopsychology, and swallowing disorders  |
 | hobbies | Training like an athlete, embroidery, and playing Chinese checkers |
-
-| ![hung](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hung.jpg) | Shirley Hung |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | sjhung010 |
-| Email  | shung@fiu.edu |
-| research interests | Shirley is interested in child clinical psychology, cognition, and behavior. |
-| hobbies | cosmetology, art, reading books, meditation, and traveling |
 
 | ![rodriguez-delgado](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/rodriguezdelgado.jpg) | Carlos Rodriguez Delgado |
 | ---  | ---  |
