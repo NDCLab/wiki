@@ -16,4 +16,4 @@ It is required that all study leads have a personal Google Voice account that th
 
 
 ## Logging In
-You can log in to Google Voice by visiting [www.voice.google.com](https://voice.google.com), or you can access the Google Voice app on your phone. Be sure that you are logged into your personal account, not a shared lab account.}
+You can log in to Google Voice by visiting [www.voice.google.com](https://voice.google.com), or you can access the Google Voice app on your phone. Be sure that you are logged into your personal account, not a shared lab account.
