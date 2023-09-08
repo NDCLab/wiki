@@ -14,7 +14,8 @@ nav_order: 1
 6. [PsychoPy and Pavlovia](#psychopy-and-pavlovia)
 7. [EEG](#eeg)
 8. [Audio and Video](#audio-and-video)
-9. [Helpful Resources](#helpful-resources)
+9. [Intentional Deviations](#intentional-deviations)
+10. [Helpful Resources](#helpful-resources)
 
 ## Overarching Philosophy
 
@@ -381,6 +382,14 @@ When audio, video, or photo data is collected (including Zoom, Audacity, etc.), 
 The sX, rX, and eX information follows the logic indicated in the REDCap section above.
 
 The experimental task name should match exactly the associated PsychoPy (or other) task.
+
+## Intentional Deviations
+There will be some cases in which a file name must deviate from naming conventions in order to contain additional pertinent information about that particular file. For example: a participant completes the practice for the PsychoPy task, but decides to discontinue participation before completing the actual PsychoPy task. That participant's practice file will be saved with additional information at the end of the file name:
+> sub-311001_arrow-alert-v1-1_psy_s1_r1_e1_practice-only
+
+In cases where an additional string of text must be appended to the end of a file name to convey pertinent information about that file, the file name leading up to the additional string must follow naming conventions and the additional string must be separated by an underscore (as shown in the example above).
+
+For data monitoring purposes, there are additional steps that must be taken when a file name intentionally deviates from convention in order to ensure the file can still be properly handled by data monitoring scripts. Refer to the section titled "File Name Corrections" on the [Data Monitoring page](https://ndclab.github.io/wiki/docs/etiquette/data-monitoring.html) for instructions.
 
 ## Helpful Resources
 * Awesome [slidedeck](https://speakerdeck.com/jennybc/how-to-name-files) from [Jenny Bryan](https://jennybryan.org/).<br/>
