@@ -13,7 +13,8 @@ nav_order: 3
 5. [Setting Up](#setting-up)
 6. [hallMonitor.sub](#hallmonitorsub)
 7. [preprocess.sub](#preprocesssub)
-8. [Final Considerations](#final-considerations)
+8. [File Name Corrections](#file-name-corrections)
+9. [Final Considerations](#final-considerations)
 
 
 ## Overview
@@ -261,6 +262,18 @@ The preprocess slurm script automatically updates the data-monitoring-log.md fil
 
 Once you have completed each run of preprocessing and everything is tidy, push your changes back to the GitHub remote ([`git add`, `git commit`, `git push`](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html)). This merely updates the data monitoring scripts, log, and central tracker on GitHub; it does not transfer any data from `sourcedata` nor `derivatives` (those only live on the HPC).
 
+## File Name Corrections
+If a file in `sourcedata/raw` is named incorrectly, you will get an error message after running data monitoring scripts and the incorrectly named file will not be moved to `sourcedata/checked`. There are cases in which a file name will be incorrect by accident, and thus requires correction, and there are cases in which a file name intentionally deviates from convention, and thus does not require correction (refer to the "Intentional Deviations" section on the [Naming Conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html) for more information). Instructions for each case are given below.
+
+Case A: File name is incorrect by accident and requires correction:
+1. Manually correct the file name by renaming the file to meet naming conventions
+2. Add a blank text file named "corrected.txt" to the folder containing the corrected file
+3. Manually move both the corrected file and the "corrected.txt" file to `sourcedata/checked`
+
+Case B: File name intentionally deviates from convention and does not require correction:
+1. Ensure that the first portion of the file name leading up to the additional string of text added at the end matches file naming conventions and that the additional string is separated from session/run/event information by an underscore
+2. Add a text file named "corrected.txt" to the folder containing the uncorrected file. The "corrected.txt" file should contain an explanation for the file's intentional deviation from naming convention.
+3. Manually move both the uncorrected file and the "corrected.txt" file to `sourcedata/checked`
 
 ## Final Considerations
 - If you switch to a new REDCap project during data collection (for instance, because you added a new instrument or corrected an old one), be sure to check any header mapping/replacements you added to `hallMonitor.sub` as these may need to be modified or deleted.
