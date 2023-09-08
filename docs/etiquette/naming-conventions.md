@@ -373,9 +373,10 @@ Or, if the digitization resources have been downloaded as a single zip file:
 
 ## Audio and Video
 
-When audio, video, or photo data is collected (including Zoom, Audacity, etc.), files should be named: `subject`_`task`_`datatype`_`session/run/event`.  The two acceptable data types are: audio, video. For example:
+When audio, video, or photo data is collected (including Zoom, Audacity, etc.), files should be named: `subject`_`task`_`datatype`_`session/run/event`.  The two acceptable data types are: audio (or audacity), video (or zoom). For example:
 > sub-210001_rwe-eeg_audio_s1_r1_e1<br/>
 > sub-150004_putt-putt_video_s1_r1_e1
+> sub-310033_all_audacity_s1_r1_e1
 
 The sX, rX, and eX information follows the logic indicated in the REDCap section above.
 
