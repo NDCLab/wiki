@@ -11,6 +11,7 @@ nav_order: 1
 3. [Download GPG](#download-gpg)
 4. [Encryption](#encryption)
 5. [Decryption](#decryption)
+6. [Batch Encryption and Decryption](#batch-encryption-and-decryption)
 
 ## Overview
 
@@ -51,7 +52,7 @@ To download GPG on Windows, visit [this link](https://www.gpg4win.org/get-gpg4wi
 
 ### Linux (HPC)
 
-It is generally preferable to encrypt files locally and then upload to the HPC. However, if you must encrypt on the HPC directly, follow the instructions below:
+It is generally preferable to encrypt files locally and then upload to the HPC. However, if you must encrypt on the HPC directly, follow the instructions below. By default the version of GPG installed on the HPC uses an obsolete algorithm (CAST-5) for encryption/decryption, so we will use a newer one "AES256."
 
 1. On the HPC virtual desktop, go to the directory where the file you want to encrypt exists. Right click inside the folder (right-click on white space, not on a specific file) and then select “Open Terminal Here.”
 
@@ -63,7 +64,7 @@ It is generally preferable to encrypt files locally and then upload to the HPC. 
 
 ![hpc_enc2](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/technical/hpc_enc2.png)
 
-4. In the terminal window, type `gpg -c`, click the spacebar once, and then right-click and select paste. Press Enter.
+4. In the terminal window, type `gpg -c --cipher-algo AES256`, click the spacebar once, and then right-click and select paste. Press Enter.
 
 5. You will be prompted to enter the encryption password. Type the password for this study. You will be asked to re-enter the password a second time to ensure it is entered correctly. Be very careful to enter the password correctly; if you encrypt the file with the wrong password, then we will be unable to open the file later for data coding and analysis.
 
@@ -97,3 +98,25 @@ To decrypt a file, right-click it, navigate to the “Services” sub-menu and c
 5. You will be prompted to enter the password. Type the password for this study. 
 
 If the decryption is successful, be careful to immediately remove the unencrypted file from the HPC (by right-clicking and selecting "Delete").  If decryption is unsuccessful, it means that you are either trying to decrypt with the wrong password or you have used the wrong password to encrypt the file in the first place. You need to make sure that you are using the correct study password to encrypt/decrypt your files.
+
+## Batch Encryption and Decryption
+
+Sometimes you may want or need to encrypt or decrypt many files at once, without the hassle of entering in your passphrase for each file individually, in which case you'll need to use the batch encryption/decryption features of the gpg command.
+
+### Linux (HPC)
+
+To batch encrypt:
+
+1. Store your password in a variable "P" using the following command: `stty -echo; read -r P; stty echo;`, press enter, enter your encryption password, and press enter again. This command ensures that your password is written to the variable without being stored or displayed anywhere on the HPC after you logout. Double check you entered it correctly with `echo $P`.
+
+2. Write all files you wish to encrypt into a bash array so that you can loop through the files with a for loop. For example, to capture all files within the current directory, use: `files=($(ls))` or to capture all files ending in ".txt" within a directory, use: `files=($(find /path/to/directory -name "*.txt"))`. Alternatively, build the array file by file with `files=(file1 file2 file3 file4)`.
+
+3. You can now encrypt a file using the stored password P, with: `echo "$P" | gpg --batch --yes --cipher-algo AES256 --symmetric --passphrase-fd 0 <NAMEOFFILE>`.
+
+So, using a for loop with the stored files in the array "files" you can use: `for file in ${files[@]}; do echo "$P" | gpg --batch --yes --cipher-algo AES256 --symmetric --passphrase-fd 0 "$file"; done`
+
+To batch decrypt:
+
+With your password stored in variable "P" following step 1 above, the following command will decrypt a file to OUTPUTFILE: `gpg -o <OUTPUTFILE> -d --batch --passphrase "$P" <NAMEOFFILE.gpg>`
+
+Decrypting multiple files using a for loop: `for file in ${files[@]}; do gpg -o ${file%.*} -d --batch --passphrase "$P" $file; done`
