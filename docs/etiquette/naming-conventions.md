@@ -55,17 +55,17 @@ In some situations, space may be limited. In such cases, hyphens may be replaced
 
 Dataset projects **always** end with "-dataset":
 >social-flanker-eeg-dataset<br/>
->readAloud-valence-dataset
+>readAloud-valence-dataset<br/>
 >putt-putt-dataset
 
 Analysis projects associated with a given dataset share the first portion of their project name.  The very first analysis (that is, the main analysis planned at the time of data collection) is typically denoted "-alpha."  (Rare exceptions are made for the sake of playful language.)
 >social-flanker-eeg-alpha<br/>
->readAloud-valence-alpha>br/>
+>readAloud-valence-alpha<br/>
 >putt-putt-miss
 
 Spin-off analyses retain the first portion of the project name, but utilize an informative suffix:
 >social-flanker-eeg-multicultural<br/>
->readAloud-valence-ddm>br/>
+>readAloud-valence-ddm
 
 Given that future data collection spin-offs of a project are common, yet hard to predict, there is no particular effort made to associate data collection efforts in their nomenclature. For example, readAloud-valence-dataset is, philosophically, a spin-off of rwe-dataset, but this is not reflected in the nomenclature.
 
@@ -375,7 +375,7 @@ Or, if the digitization resources have been downloaded as a single zip file:
 
 When audio, video, or photo data is collected (including Zoom, Audacity, etc.), files should be named: `subject`_`task`_`datatype`_`session/run/event`.  The two acceptable data types are: audio (or audacity), video (or zoom). For example:
 > sub-210001_rwe-eeg_audio_s1_r1_e1<br/>
-> sub-150004_putt-putt_video_s1_r1_e1
+> sub-150004_putt-putt_video_s1_r1_e1<br/>
 > sub-310033_all_audacity_s1_r1_e1
 
 The sX, rX, and eX information follows the logic indicated in the REDCap section above.
