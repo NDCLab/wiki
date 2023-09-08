@@ -356,7 +356,7 @@ Also, use the same experiment name within the PsychoPy settings (the little gear
 
 ## EEG
 
-When EEG data is collected, files should be named: `subject`_`task`_`session/run/event`. For example:
+When EEG data is collected, files should be named: `subject` _ `task` _ `session/run/event`. For example:
 > sub-210001_flanker-v5_s1_r1_e1<br/>
 > sub-170044_memory-for-error_s1_r1_e1
 
@@ -373,7 +373,7 @@ Or, if the digitization resources have been downloaded as a single zip file:
 
 ## Audio and Video
 
-When audio, video, or photo data is collected (including Zoom, Audacity, etc.), files should be named: `subject`_`task`_`datatype`_`session/run/event`.  The two acceptable data types are: audio (or audacity), video (or zoom). For example:
+When audio, video, or photo data is collected (including Zoom, Audacity, etc.), files should be named: `subject` _ `task` _ `datatype` _ `session/run/event`.  The two acceptable data types are: audio (or audacity), video (or zoom). For example:
 > sub-210001_rwe-eeg_audio_s1_r1_e1<br/>
 > sub-150004_putt-putt_video_s1_r1_e1<br/>
 > sub-310033_all_audacity_s1_r1_e1
