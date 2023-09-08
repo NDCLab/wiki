@@ -271,7 +271,7 @@ Case A: File name is incorrect by accident and requires correction:
 3. Manually move both the corrected file and the "corrected.txt" file to `sourcedata/checked`
 
 Case B: File name intentionally deviates from convention and does not require correction:
-1. Ensure that the first portion of the file name leading up to the additional string of text added at the end matches file naming conventions and that the additional string is separated from session/run/event information by an underscore
+1. Ensure that the first portion of the file name leading up to the deviation matches file naming conventions and that the deviation is separated from session/run/event information by an underscore (again, refer to the "Intentional Deviations" section on the [Naming Conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html) for more details)
 2. Add a text file named "corrected.txt" to the folder containing the uncorrected file. The "corrected.txt" file should contain an explanation for the file's intentional deviation from naming convention.
 3. Manually move both the uncorrected file and the "corrected.txt" file to `sourcedata/checked`
 
