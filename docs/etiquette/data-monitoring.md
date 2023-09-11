@@ -29,23 +29,23 @@ At this time, these steps are handled manually by study leads for data collectio
 ## Sourcedata Structure
 Within `sourcedata/raw`, folders should be organized as follows (and as appropriate for the data being collected\u2014not all folders will be required for all projects):<br/>
 /raw/<br/>
-\u251c\u2500\u2500 s1_r1/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 redcap/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 psychopy/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 audio/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 video/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 eeg/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 digi/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+├── s1_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── redcap/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── psychopy/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
 
 ...and the same for `raw/s2_r1`, etc.
 
@@ -155,35 +155,35 @@ Specifically, hallMonitor performs the following checks:
 #### Checked Data Structure
 Within `sourcedata/checked`, folders should be organized by subject, session, and datatype:<br/>
 /checked/<br/>
-\u251c\u2500\u2500 redcap/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 sub-XXXXXX/<br/>
-\u251c\u2500\u2500 sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 s1_r1/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 eeg/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 digi/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 audio/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 video/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 psychopy/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 s2_r1/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 eeg/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 digi/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 audio/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 video/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 psychopy/<br/>
-\u251c\u2500\u2500 sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 s1_r1/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 eeg/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 digi/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 audio/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 video/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 psychopy/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 s2_r1/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 eeg/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 digi/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 audio/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 video/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 psychopy/<br/>
+├── redcap/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── sub-XXXXXX/<br/>
+├── sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── s1_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── psychopy/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── s2_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── psychopy/<br/>
+├── sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── s1_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── psychopy/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── s2_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── psychopy/<br/>
 
 ### Customize
 Most customization required for the hallMonitor script is handled by the central tracker datadict. However, if REDCap column names need to be re-mapped to match the expectations of the instruments script, this can be built directly into hallMonitor. There are two options available:
