@@ -385,7 +385,7 @@ The experimental task name should match exactly the associated PsychoPy (or othe
 
 ## Intentional Deviations
 There will be some cases in which a file name must deviate from naming conventions in order to contain additional pertinent information about that particular file. For example: a participant completes the practice for the PsychoPy task, but decides to discontinue participation before completing the actual PsychoPy task. That participant's practice file will be saved with additional information at the end of the file name:
-> sub-311001_arrow-alert-v1-1_psy_s1_r1_e1_practice-only
+> sub-311001_arrow-alert-v1-1_psy_s1_r1_e1_practice-only.<ext>
 
 In cases where an additional string of text must be appended to the end of a file name to convey pertinent information about that file, the file name leading up to the additional string must follow naming conventions and the additional string must be separated by an underscore (as shown in the example above).
 

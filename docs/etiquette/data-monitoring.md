@@ -27,50 +27,59 @@ At this time, these steps are handled manually by study leads for data collectio
 
 
 ## Sourcedata Structure
-Within `sourcedata/raw`, folders should be organized as follows (and as appropriate for the data being collected—not all folders will be required for all projects):<br/>
+Within `sourcedata/raw`, folders should be organized as follows (and as appropriate for the data being collected\u2014not all folders will be required for all projects):<br/>
 /raw/<br/>
-├── redcap/<br/>
-├── psychopy/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-├── audio/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-├── video/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-├── eeg/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-├── digi/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
+\u251c\u2500\u2500 s1_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 redcap/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 psychopy/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500sub-XXXXXX/<br/>
+
+...and the same for `raw/s2_r1`, etc.
 
 
 ## Central Tracker
 Each data collection project has a central tracker that provides a real-time overview of what data is available for each participant.
 
 #### Data Dictionary
-The central tracker will be built directly from the contents of the `central-tracker_datadict.csv` file that you create.  The sample template includes instructions within {brackets}.  Consult also the "datadict_definitions.csv" file for details.
+The rows and columns of the central tracker will be built directly from the contents of the `central-tracker_datadict.csv` file that you create.  The sample template includes instructions within {brackets}.  Consult also the "datadict_definitions.csv" file for details.
+
+The "dataType" column contains the name of the data type, for example "psychopy" for Pavlovia/Psychopy data or "audio" for Audacity data, or "redcap_data" or "redcap_scrd" for Redcap data.
+
+The "allowedSuffix" column should contain all allowed session/run/event suffixes expected/allowed for that datatype (e.g. "s1_r1_e1, s2_r1_e1, s3_r1_e1" for data that's collected in each of three sessions).
+
+The "expectedFileExt" column should contain the extension names expected in the folder for that datatype (e.g. ".eeg, .vmrk, .vhdr" for EEG data). If multiple extensions are allowed separate the options with a "|". (".zip.gpg|.tar.gz.gpg")
 
 #### Required Variables
 The first two columns in every NDCLab central tracker are the same:
-- id (this is the subject ID), be careful to update the allowedValues information
+- id (this is the subject ID), be careful to update the allowedValues information (for example, "XXXX, XXXXX" for any 4-digit or 5-digit IDs, or "1XXX" for any 4-digit ID starting with 1).
 - consent (this connects to the "y/n" of the REDCap consent instrument)
 
-Additionally, the central tracker must have one column for each data type collected. These basically align with the subfolders in `sourcedata/raw/` (but note that, here, we specify which system was used to collect the data that is stored in the `sourcedata/raw/eeg/` folder):
-- audioData
-- videoData
-- zoomData
-- bvData (EEG data collected with the Brain Vision system)
-- egiData (EEG data collected with the EGI system)
-- digiData
+Additionally, the central tracker must have one column for each data type collected. These basically align with the subfolders in `sourcedata/raw/` and may include, among others:
+- audio
+- video
+- zoom
+- eeg (EEG data collected with either the Brain Vision system typically, or the EGI system)
+- psychopy
+- digi
 
-For task data from PsychoPy/Pavlovia, create one row for each individual task, named exactly as the task is (including any session/run/event suffix).  The associated Description cell(s) should begin with "psychopy:".
+For task data from PsychoPy/Pavlovia, create one row for each individual task, named exactly as the task is.
 
-For questionnaire data from REDCap, create one row for each individual questionnaire, named exactly as the questionnaire is (including any session/run/event suffix). The associated Description cells should begin with "redcap_data:".
+For questionnaire data from REDCap, create one row for each individual questionnaire, named exactly as the questionnaire is.
 
-For scored data from REDCap questionnaires, create one row for each individual subscore, named exactly as the subscore is (including any session/run/event suffix). The associated Description cells should begin with "redcap_scrd:".
+For scored data from REDCap questionnaires, create one row for each individual subscore, named exactly as the subscore is.
 
 For custom variables, you will control these in your preprocessing scripts.  Be sure to specify how each is operating and include the name of the script in the provenance column.
 
@@ -80,7 +89,7 @@ Scripts in the data monitoring ecosystem access a study's central tracker based 
 
 
 #### Subject IDs
-The setup script for data monitoring will prepopulate 1000 IDs based on the numbering convention you specify.  You may delete any that are unnecessary, or add in others at a later date.
+The setup script for data monitoring will populate the IDs based on the IDs found in a particular Redcap file and column name specified in the "description" column in the "id" row in the datadict (e.g. "Participant ID (file: "thriveconsent"; variable: "record_id")")
 
 
 ## Protocol
@@ -95,25 +104,17 @@ From the [HPC shell](https://ndclab.github.io/wiki/docs/hpc/accessing.html), nav
 cd /home/data/NDClab/datasets
 ```
 
-You will input a single command that indicates which dataset should be set up, which data types are involved, and which EEG system (if any) is used. Here is the core structure of the command:
+You will input a single command that indicates which dataset should be set up, and the datatypes and other relevant information is read from the central tracker datadict.
 
 ```
-bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET/ DATA-TYPES SUBJECT-NUMBERING (-n)
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET
 ```
-* **-t FLAG:** always include this flag so that a tracker is generated on the basis of your central tracker data dictionary
+* **-t FLAG:** always include this flag so that a tracker is generated on the basis of your central tracker data dictionary, unless you have a preciously generated tracker.
 * **YOUR-DATASET:** this is the name of your dataset
-* **DATA-TYPES:** include each data type you have in your `sourcedata/raw/` folder, separated by a comma (no space); these must follow the conventions outlined in the datadict_definitions file (be sure to use either 'bv' or 'egi', rather than using 'eeg', so that the script knows which system was used to collect the data in the `sourcedata/raw/eeg/` folder)
-* **SUBJECT-NUMBERING:** include the first subject number to be used
-* **-n FLAG:** this optional flag allows you to specify if you only collected a single running EEG per participant, as opposed to one EEG file per PsychoPy task
 
-Here is an example of the setup line for rwe-eeg-dataset. It includes five data types: audio, digi, eeg (for which we specify 'bv'), psychopy, and redcap. Subject numbering for the central tracker will begin at 210000. There was one EEG file per PsychoPy task, so the '-n' flag was not used.
+Here is an example of the setup line for rwe-eeg-dataset.
 ```
-bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t rwe-eeg-dataset/ audio,digi,bv,psychopy,redcap 210000
-```
-
-Here is an second example of the setup line, this time for oops-faces-dataset. It includes four data types: digi, eeg (for which we specify 'bv'), psychopy, and redcap. Subject numbering for the central tracker will begin at 240001. There was only one running EEG file per participant (although there are two PsychoPy tasks), so the '-n' flag was used.
-```
-bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t oops-faces-dataset/ digi,bv,psychopy,redcap 240001 -n
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t rwe-eeg-dataset
 ```
 
 After executing this command, the following new files (in addition to the blank central tracker) will be added to your dataset's data-monitoring folder:
@@ -123,6 +124,7 @@ After executing this command, the following new files (in addition to the blank 
 - rename-cols.py
 - check-id.py
 - update-tracker.py
+- verify-copy.py
 
 Details for each are available below.
 
@@ -130,59 +132,61 @@ Details for each are available below.
 ## hallMonitor.sub
 
 ### Purpose
-The hallMonitor script (hallMonitor.sh) is triggered by running the associated slurm file (hallMonitor.sub).  It checks that raw data (`sourcedata/raw`) is in good order and, once confirmed, places a copy of the data in `sourcedata/checked`. This serves two key purposes:
+The hallMonitor script (hallMonitor.sh) is triggered by running the associated slurm file (hallMonitor.sub) while in `data-monitoring` (`cd your-dataset/data-monitoring`).  It checks that raw data (`sourcedata/raw`) is in good order and, once confirmed, places a copy of the data in `sourcedata/checked`. Errors in the names and structure of the files under `raw` are noted in the slurm-XXXX.out and slurm-XXXX_errorlog.out files. This serves two key purposes:
 1. issues with the incoming data (e.g., improper file naming) are identified and corrected early.
-2. downstream processes interact with the "checked" data and safeguard the integrity of the original "raw" data.
+2. downstream processes (like updating the central tracker) interact with the "checked" data and safeguard the integrity of the original "raw" data.
 
 Specifically, hallMonitor performs the following checks:
 #### REDCap
-1. Identifies most recent REDCap CSV.
-2. Copies this file to `sourcedata/checked/redcap`.
-3. Updates all rows in the central tracker whose description begins "redcap_data:" by means of update-tracker.py.
+1. Identifies most recent uniquely named REDCap CSVs.
+2. Copies these files to `sourcedata/checked/redcap`.
+3. Updates all rows in the central tracker (data and redcap data) by means of update-tracker.py.
 
-#### Pavlovia/Psychopy
-1. Checks for the existence of any new subject folders in `sourcedata/raw/pavlovia` or `sourcedata/raw/psychopy` and, if they are found, verifies the correct subject folder nomenclature (i.e., sub-XXXXXX).
-2. For correctly-named, new subject folders, the folder is copied over to `sourcedata/checked/pavlovia` or `sourcedata/checked/psychopy`.
-3. Checks folders in `sourcedata/raw/pavlovia` or `sourcedata/raw/psychopy`; if any new .csv files are found and these files match the task name as indicated in the central tracker data dictionary, the script checks that the subject ID within these files match the folder name, using check-id.py.  If successful, these files are copied to the existing subject folder in `sourcedata/checked.`
-4. Verifies that there is only a single .csv file for each tracked task (that is, there are no duplicate records for a single participant). (If you have a situation where you do have two separate files, zipping one of them will prevent hallMonitor from throwing an error every time you run it.)
-5. Updates all rows in the central tracker whose description begins "psychopy:" by means of update-tracker.py.
+#### Nonencrypted Data (Pavlovia/Psychopy, EEG, others)
+1. Checks for the existence of new files in `sourcedata/raw/sX_rX/sub-XXXXXX/DATATYPE` and, if they are found, verifies the filenames are named correctly. Filenames follow the convention `sub-<NUMBER>_<taskname>_<session_suffix>.<extension>`, where NUMBER is the subject number, taskname is the name of the task as defined under "variable" in the datadict, session_suffix is the session, run, and event the data was collected in ("s1_r1_e1"), and extension is the file's extension (".eeg").
+2. For correctly-named files, files are copied over to `sourcedata/checked/sub-XXXXXX/sX_rX/DATATYPE`.
+3. If any duplicate files or improper file or folder names are identified, hallMonitor outputs a red error message.
 
-If any duplicate files or improper folder names are identified, hallMonitor outputs a red error message.
+#### Encrypted Data (Zoom/Audio/Video/Digi)
+1. Audio, video, and photo (such as EEG digitization, "digi") files containing identifiable information are managed manually by the study lead. Proper encryption should be verified (that is, decryption using the study password should be tested and confirmed, see [here](https://ndclab.github.io/wiki/docs/technical-docs/data_encryption.html)), after which the participant's audio/video/digi files should be manually copied to `sourcedata/checked`. Filenames again follow the convention `sub-<NUMBER>_<taskname>_<session_suffix>.<extension>`.
+2. The hallMonitor script simply verifies the existence and correct naming of the .gpg files in `sourcedata/checked` and updates the zoom, audio, video, and/or digi columns of the central tracker accordingly (using update-tracker.py).
+3. Incorrectly named files or folders are noted in the `slurm-NUMBER.out` file with a red error message.
 
-#### Zoom/Audio/Video/Digi
-Audio, video, and photo (such as EEG digitization, "digi") files are managed manually by the study lead. Proper encryption should be verified (that is, decryption using the study password should be tested and confirmed), after which the participant's audio/video/digi files should be manually copied to `sourcedata/checked`.  The hallMonitor script simply verifies the existence of a folder in `sourcedata/checked` and updates the zoomData, audioData, videoData, and/or digiData columns of the central tracker accordingly (using update-tracker.py).
-
-Within `sourcedata/checked`, folders should be organized as:<br/>
+#### Checked Data Structure
+Within `sourcedata/checked`, folders should be organized by subject, session, and datatype:<br/>
 /checked/<br/>
-├── redcap/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──s1_r1/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──s2_r1/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──s3_r1/<br/>
-├── bidsish/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──eeg/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──digi/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──audio/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──video/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──psychopy/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──eeg/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──digi/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──audio/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──video/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──psychopy/<br/>
-
-#### EEG
-1. Checks for the existence of any new subject folders in `sourcedata/raw/eeg` and, if they are found, verifies the correct subject folder nomenclature (i.e., sub-XXXXXX).
-2. For correctly-named folders in `sourcedata/raw/eeg`:
-    1. Verifies that file names within the folder match the subject ID of the folder itself.
-    2. If the '-n' flag is used: verifies that there is only one of each file type, depending on the system used for data collection (BV (.eeg, .vhdr, .vmrk) or EGI (.mff)); any naming convention is acceptable. If the '-n' flag is not present: verifies that there is one of each expected file type for each PsychoPy task, with matching nomenclature.
-    3. Verifies that file names follow the appropriate conventions for study subjects.
-
-Any new folders, as well as new files within previously existing folders, that pass the above checks are copied to the existing subject folder in `sourcedata/checked/bidsish/sub-XXXXXX/eeg`.  The bvData or egiData row in the central tracker is updated accordingly (via update-tracker.py).
+\u251c\u2500\u2500 redcap/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 sub-XXXXXX/<br/>
+\u251c\u2500\u2500 sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 s1_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 psychopy/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 s2_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 psychopy/<br/>
+\u251c\u2500\u2500 sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 s1_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 psychopy/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 s2_r1/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 eeg/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 digi/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 audio/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 video/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u251c\u2500\u2500 psychopy/<br/>
 
 ### Customize
-Most customization required for the hallMonitor script is handled by the setup command above. However, if REDCap column names need to be re-mapped to match the expectations of the instruments script, this can be built directly into hallMonitor. There are two options available:
+Most customization required for the hallMonitor script is handled by the central tracker datadict. However, if REDCap column names need to be re-mapped to match the expectations of the instruments script, this can be built directly into hallMonitor. There are two options available:
 
 #### one-to-one mapping
 If just the instrument name requires remapping, the `-m` flag allows you to specify this. Here is an example where the mistakenly named "sas" instrument is mapped to "sas2":
@@ -197,7 +201,7 @@ If both the instrument name and the item numbers require remapping, you will use
 To modify hallMonitor.sub:
 1. Navigate to the data-monitoring folder: `cd your-dataset/data-monitoring`.
 2. Open the .sub file: `nano hallMonitor.sub`.
-3. Arrow down to the last line, add a space after `./hallMonitor.sh`, then the flag (`-m` or `-r`) and the mapping or replacement details.
+3. Arrow down to the line calling hallMonitor, add a space after `./hallMonitor.sh`, then the flag (`-m` or `-r`) and the mapping or replacement details.
 4. Save your changes by holding down the ctrl key and pressing the letter 'o'. (Note: this is ctrl on both PC and Mac, not cmd.) You will be prompted to save the file, which you do by hitting enter/return.
 5. To exit the nano view, hold down the ctrl key again and press the letter 'x'.
 
@@ -208,9 +212,9 @@ The hallMonitor script should be run weekly by the project lead. It is recommend
 
 To run the script, ensure that you are on the `main` branch of the repository on the HPC. Use `git pull` to update the HPC with any changes available on the GitHub remote.  Then follow the instructions [here](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
 
-Review the output for errors requiring correction (by using `cat` to print the messages to the console). After making any necessary corrections, re-run the script until no errors are received, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out`).
+Review the output for errors requiring correction (by using `cat` to print the messages to the console, i.e. `cat slurm-NUMBER.out`). After making any necessary corrections, re-run the script until no errors are received, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out`).
 
-The hallMonitor script automatically updates the data-monitoring-log.md file in the dataset's data-monitoring folder.
+The hallMonitor script automatically updates the data-monitoring-log.md file in the dataset's data-monitoring folder with a description of the job's status and how many errors were encountered.
 
 Once you have completed the hallMonitor process and everything is tidy, push your changes back to the GitHub remote ([`git add`, `git commit`, `git push`](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html)).  This merely updates the data monitoring scripts, log, and central tracker on GitHub; it does not transfer any data from `sourcedata` nor `derivatives` (those only live on the HPC).
 
@@ -254,7 +258,7 @@ You must specify the container(s) and script(s) that you want included in the pr
 ![preprocess-example](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/preprocess-example.png)
 
 ### How to Run
-Pre-processing scripts should be created as early as possible in the data collection process (ideally to process even the first participant!), and then should be run by the project lead on a weekly basis to ensure that the incoming data appears to be in good order (for instance, we’re not seeing a trend of wild inaccuracy in simple computer tasks or strange numbers in questionnaire data). 
+Pre-processing scripts should be created as early as possible in the data collection process (ideally to process even the first participant!), and then should be run by the project lead on a weekly basis to ensure that the incoming data appears to be in good order (for instance, we\u2019re not seeing a trend of wild inaccuracy in simple computer tasks or strange numbers in questionnaire data). 
 
 To run the script, follow the instructions [here](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
 
@@ -272,7 +276,7 @@ Case A: File name is incorrect by accident and requires correction:
 
 Case B: File name intentionally deviates from convention and does not require correction:
 1. Ensure that the first portion of the file name leading up to the deviation matches file naming conventions and that the deviation is separated from session/run/event information by an underscore (again, refer to the "Intentional Deviations" section on the [Naming Conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html) for more details)
-2. Add a text file named "corrected.txt" to the folder containing the uncorrected file. The "corrected.txt" file should contain an explanation for the file's intentional deviation from naming convention.
+2. Add a text file named "corrected.txt" to the folder containing the uncorrected file (`touch corrected.txt`). The "corrected.txt" file should contain an explanation for the file's intentional deviation from naming convention.
 3. Manually move both the uncorrected file and the "corrected.txt" file to `sourcedata/checked`
 
 ## Final Considerations
