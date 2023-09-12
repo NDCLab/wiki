@@ -27,7 +27,7 @@ At this time, these steps are handled manually by study leads for data collectio
 
 
 ## Sourcedata Structure
-Within `sourcedata/raw`, folders should be organized as follows (and as appropriate for the data being collected\u2014not all folders will be required for all projects):<br/>
+Within `sourcedata/raw`, folders should be organized as follows (and as appropriate for the data being collected; not all folders will be required for all projects):<br/>
 /raw/<br/>
 ├── s1_r1/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;├── redcap/<br/>
@@ -47,30 +47,31 @@ Within `sourcedata/raw`, folders should be organized as follows (and as appropri
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──sub-XXXXXX/<br/>
 
-...and the same for `raw/s2_r1`, etc.
+...and the same for `raw/s2_r1`, etc. Note that "audio" and "video" may be replaced with "audacity" and "zoom", respectively.
 
 
 ## Central Tracker
 Each data collection project has a central tracker that provides a real-time overview of what data is available for each participant.
 
+
 #### Data Dictionary
 The rows and columns of the central tracker will be built directly from the contents of the `central-tracker_datadict.csv` file that you create.  The sample template includes instructions within {brackets}.  Consult also the "datadict_definitions.csv" file for details.
 
-The "dataType" column contains the name of the data type, for example "psychopy" for Pavlovia/Psychopy data or "audio" for Audacity data, or "redcap_data" or "redcap_scrd" for Redcap data.
+The "dataType" column contains the name of the data type (for example "psychopy" for Pavlovia/Psychopy data, "audacity" for audio data, or "redcap_data" or "redcap_scrd" for REDCap data).
 
-The "allowedSuffix" column should contain all allowed session/run/event suffixes expected/allowed for that datatype (e.g. "s1_r1_e1, s2_r1_e1, s3_r1_e1" for data that's collected in each of three sessions).
+The "allowedSuffix" column should contain all allowed session/run/event suffixes allowed for that datatype (e.g., "s1_r1_e1, s2_r1_e1, s3_r1_e1" for data that's collected across three sessions).
 
-The "expectedFileExt" column should contain the extension names expected in the folder for that datatype (e.g. ".eeg, .vmrk, .vhdr" for EEG data). If multiple extensions are allowed separate the options with a "|". (".zip.gpg|.tar.gz.gpg")
+The "expectedFileExt" column should contain the extension names expected in the folder for that datatype, separated by commas (e.g., ".eeg, .vmrk, .vhdr" for EEG data). If multiple extensions are allowed, but not all necessarily expected, separate the options with a "|" (e.g., ".zip.gpg|.tar.gz.gpg")
+
 
 #### Required Variables
 The first two columns in every NDCLab central tracker are the same:
-- id (this is the subject ID), be careful to update the allowedValues information (for example, "XXXX, XXXXX" for any 4-digit or 5-digit IDs, or "1XXX" for any 4-digit ID starting with 1).
+- id (this is the subject ID) - be careful to update the allowedValues information (for example, "XXXX, XXXXX" for any 4-digit or 5-digit IDs, or "1XXX" for any 4-digit ID starting with 1)
 - consent (this connects to the "y/n" of the REDCap consent instrument)
 
 Additionally, the central tracker must have one column for each data type collected. These basically align with the subfolders in `sourcedata/raw/` and may include, among others:
-- audio
-- video
-- zoom
+- audio/audacity
+- video/zoom
 - eeg (EEG data collected with either the Brain Vision system typically, or the EGI system)
 - psychopy
 - digi
@@ -89,7 +90,7 @@ Scripts in the data monitoring ecosystem access a study's central tracker based 
 
 
 #### Subject IDs
-The setup script for data monitoring will populate the IDs based on the IDs found in a particular Redcap file and column name specified in the "description" column in the "id" row in the datadict (e.g. "Participant ID (file: "thriveconsent"; variable: "record_id")")
+The setup script for data monitoring will populate the IDs based on the ID variable found in a particular REDCap file as specified in the "description" column in the "id" row in the data dictionary (for example, the description could read "Participant ID (file: "thriveconsent"; variable: "record_id")" where the file and variable name are within double quotation marks).
 
 
 ## Protocol
