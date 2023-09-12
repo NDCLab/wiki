@@ -61,7 +61,7 @@ The "dataType" column contains the name of the data type (for example "psychopy"
 
 The "allowedSuffix" column should contain all allowed session/run/event suffixes allowed for that datatype (e.g., "s1_r1_e1, s2_r1_e1, s3_r1_e1" for data that's collected across three sessions).
 
-The "expectedFileExt" column should contain the extension names expected in the folder for that datatype, separated by commas (e.g., ".eeg, .vmrk, .vhdr" for EEG data). If multiple extensions are allowed, but not all necessarily expected, separate the options with a "|" (e.g., ".zip.gpg|.tar.gz.gpg")
+The "expectedFileExt" column should contain the extension names expected in the folder for that datatype, separated by commas (e.g., ".eeg, .vmrk, .vhdr" for EEG data). If multiple extensions are allowed, but not all necessarily expected, separate the options with a "\|" (e.g., ".zip.gpg\|.tar.gz.gpg")
 
 
 #### Required Variables
