@@ -55,13 +55,7 @@ Each data collection project has a central tracker that provides a real-time ove
 
 
 #### Data Dictionary
-The rows and columns of the central tracker will be built directly from the contents of the `central-tracker_datadict.csv` file that you create.  The sample template includes instructions within {brackets}.  Consult also the "datadict_definitions.csv" file for details.
-
-The "dataType" column contains the name of the data type (for example "psychopy" for Pavlovia/Psychopy data, "audacity" for audio data, or "redcap_data" or "redcap_scrd" for REDCap data).
-
-The "allowedSuffix" column should contain all allowed session/run/event suffixes allowed for that datatype (e.g., "s1_r1_e1, s2_r1_e1, s3_r1_e1" for data that's collected across three sessions).
-
-The "expectedFileExt" column should contain the extension names expected in the folder for that datatype, separated by commas (e.g., ".eeg, .vmrk, .vhdr" for EEG data). If multiple extensions are allowed, but not all necessarily expected, separate the options with a "\|" (e.g., ".zip.gpg\|.tar.gz.gpg")
+The rows and columns of the central tracker will be built directly from the contents of the `central-tracker_datadict.csv` file that you create.  The sample template includes instructions within [brackets] and text to edit within {curly brackets}.  Consult the readme file in the datadictionary folder for details.
 
 
 #### Required Variables
@@ -75,13 +69,11 @@ The second column in every NDCLab central tracker is called "consent" and it spe
 If a study population includes participants under the age of 18, the third column in the central tracker will be called "assent" and it will specify whether the subject assented or not.
 - The value of the assent column is based on the value of the "assent_complete" variable within REDCap data. Note that the assent instrument in REDCap must be named "assent" in order for the "_complete" variable to be named properly.
 
-Next, the central tracker will have columns related to non-questionnaire data. Each task within a given data type will have a column. 
+Next, the central tracker will have columns related to non-questionnaire data (e.g., psychopy, audio/audacity, video/zoom, eeg, digi). Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named as `task`_`dataType`. Note: for instances in which a given data type's collection is not separated according to individual tasks (e.g., `flanker`_`eeg` or `social-interaction`_`eeg`) but rather is collected across all tasks, the task name will be "all" (e.g., `all`_`eeg`).
 
-For task data from PsychoPy/Pavlovia, create one row in the data dictionary for each individual task, named exactly as the task is.
+For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each equesionnaire, named exactly as the questionnaire is with the appropriate suffix appended.
 
-For questionnaire data from REDCap, create one row in the data dictionary for each individual questionnaire, named exactly as the questionnaire is.
-
-For scored data from REDCap questionnaires, create one row in the data dictionary for each individual subscore, named exactly as the subscore is.
+For scored data from REDCap questionnaires, there will be one row in the data dictionary for each individual subscore, named exactly as the subscore is. Thus, there will be one column in the central tracker for each subscore, named exactly as the subscore is with the appropriate suffix appended.
 
 For custom variables, you will control these in your preprocessing scripts. In the data dictionary, be sure to specify how each is operating and include the name of the script in the provenance column.
 
