@@ -66,14 +66,14 @@ The "expectedFileExt" column should contain the extension names expected in the 
 
 #### Required Variables
 The first column in every NDCLab central tracker is called "id" and it specifies the subject ID.
-- The "allowedValues" section of the "id" row in the data dictionary should specify the IDs that are allowed for that given study, separated by commas (for example, a study with 5-digit IDs that start with the number 4 would state the allowedValues as "4XXXX"; a study with 7-digit IDs that either start with 200 or 201 would state the allowedValues as "200XXXX, 201XXXX)
+- The "allowedValues" section of the "id" row in the data dictionary should specify the IDs that are allowed for that given study, separated by commas (for example, a study with 5-digit IDs that start with the number 4 would state the allowedValues as "4XXXX"; a study with 7-digit IDs that either start with 200 or 201 would state the allowedValues as "200XXXX, 201XXXX")
 - The setup script for data monitoring will populate the central tracker with IDs based on the ID variable found in a particular REDCap file. This is specified in the "description" section of the "id" row in the data dictionary (for example, the description could read "Participant ID (file: "thriveconsent"; variable: "record_id")" where the file and variable name are specified within double quotation marks). The only IDs that will populate in the central tracker are the IDs that exist in that REDCap file as the ID variable.
 
 The second column in every NDCLab central tracker is called "consent" and it specifies whether the subject consented or not.
 - The value of the consent column is based on the value of the "consent_complete" (or "consentes_complete") variable within REDCap data. Note that the consent instrument in REDCap must be named "consent" (or "consentes") in order for the "_complete" variable to be named properly.
 
 If a study population includes participants under the age of 18, the third column in the central tracker will be called "assent" and it will specify whether the subject assented or not.
-- The value of the assent column isbased on the value of the "assent_complete" variable within REDCap data. Note that the assent instrument in REDCap must be named "assent" in order for the "_complete" variable to be named properly.
+- The value of the assent column is based on the value of the "assent_complete" variable within REDCap data. Note that the assent instrument in REDCap must be named "assent" in order for the "_complete" variable to be named properly.
 
 Additionally, the central tracker must have at least one column for each data type collected. These basically align with the subfolders in `sourcedata/raw/` and may include, among others:
 - audio/audacity
@@ -82,13 +82,13 @@ Additionally, the central tracker must have at least one column for each data ty
 - psychopy
 - digi
 
-For task data from PsychoPy/Pavlovia, create one row for each individual task, named exactly as the task is.
+For task data from PsychoPy/Pavlovia, create one row in the data dictionary for each individual task, named exactly as the task is.
 
-For questionnaire data from REDCap, create one row for each individual questionnaire, named exactly as the questionnaire is.
+For questionnaire data from REDCap, create one row in the data dictionary for each individual questionnaire, named exactly as the questionnaire is.
 
-For scored data from REDCap questionnaires, create one row for each individual subscore, named exactly as the subscore is.
+For scored data from REDCap questionnaires, create one row in the data dictionary for each individual subscore, named exactly as the subscore is.
 
-For custom variables, you will control these in your preprocessing scripts.  Be sure to specify how each is operating and include the name of the script in the provenance column.
+For custom variables, you will control these in your preprocessing scripts. In the data dictionary, be sure to specify how each is operating and include the name of the script in the provenance column.
 
 
 #### File Name
