@@ -9,12 +9,12 @@ nav_order: 3
 1. [Overview](#overview)
 2. [Sourcedata Structure](#sourcedata-structure)
 3. [Central Tracker](#central-tracker)
-4. [Protocol](#protocol)
 5. [Setting Up](#setting-up)
 6. [hallMonitor.sub](#hallmonitorsub)
 7. [preprocess.sub](#preprocesssub)
-8. [File Name Corrections](#file-name-corrections)
-9. [Final Considerations](#final-considerations)
+8. [Protocol](#protocol)
+9. [File Name Corrections](#file-name-corrections)
+10. [Final Considerations](#final-considerations)
 
 
 ## Overview
@@ -69,7 +69,9 @@ The second column in every NDCLab central tracker is called "consent" and it spe
 If a study population includes participants under the age of 18, the third column in the central tracker will be called "assent" and it will specify whether the subject assented or not.
 - The value of the assent column is based on the value of the "assent_complete" variable within REDCap data. Note that the assent instrument in REDCap must be named "assent" in order for the "_complete" variable to be named properly.
 
-Next, the central tracker will have columns related to non-questionnaire data (e.g., psychopy, audio/audacity, video/zoom, eeg, digi). Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named as `task`_`dataType`. Note: for instances in which a given data type's collection is not separated according to individual tasks (e.g., `flanker`_`eeg` or `social-interaction`_`eeg`) but rather is collected across all tasks, the task name will be "all" (e.g., `all`_`eeg`).
+Next, the central tracker will have columns related to non-questionnaire data (e.g., psychopy, audio/audacity, video/zoom, eeg, digi). 
+- Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named as "`task` _ `dataType`".
+- Note: for instances in which a given data type's collection is not separated according to individual tasks (e.g., "`flanker` _ `eeg`" or "`social-interaction` _ `eeg`") but rather is collected across all tasks, the task name will be "all" (e.g., "`all` _ `eeg`").
 
 For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each equesionnaire, named exactly as the questionnaire is with the appropriate suffix appended.
 
@@ -80,10 +82,6 @@ For custom variables, you will control these in your preprocessing scripts. In t
 
 #### File Name
 Scripts in the data monitoring ecosystem access a study's central tracker based on its filename. For this reason, the nomenclature is standardized: `central-tracker_dataset-name`. For example, the `memory-for-error-dataset` project has a central tracker named `central-tracker_memory-for-error-dataset`. You do not need to name this file yourself, but you do need to ensure that the data dictionary you create for your central tracker is named `central-tracker_datadict.csv` and that it lives in `data-monitoring/data-dictionary/` within your dataset repository.
-
-
-## Protocol
-Although the broad strokes of data monitoring are identical across NDCLab studies, each data collection project should establish its own data monitoring protocol that connects these lab processes with study-specific details. This is also helpful to record the specific data monitoring actions performed because the lab-wide defaults might change over time.
 
 
 ## Setting Up
@@ -255,6 +253,11 @@ To run the script, follow the instructions [here](https://ndclab.github.io/wiki/
 The preprocess slurm script automatically updates the data-monitoring-log.md file in the dataset's data-monitoring folder.
 
 Once you have completed each run of preprocessing and everything is tidy, push your changes back to the GitHub remote ([`git add`, `git commit`, `git push`](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html)). This merely updates the data monitoring scripts, log, and central tracker on GitHub; it does not transfer any data from `sourcedata` nor `derivatives` (those only live on the HPC).
+
+
+## Protocol
+Although the broad strokes of data monitoring are identical across NDCLab studies, each data collection project should establish its own data monitoring protocol that connects these lab processes with study-specific details. This is also helpful to record the specific data monitoring actions performed because the lab-wide defaults might change over time.
+
 
 ## File Name Corrections
 If a file in `sourcedata/raw` is named incorrectly, you will get an error message after running data monitoring scripts and the incorrectly named file will not be moved to `sourcedata/checked`. There are cases in which a file name will be incorrect by accident, and thus requires correction, and there are cases in which a file name intentionally deviates from convention, and thus does not require correction (refer to the "Intentional Deviations" section on the [Naming Conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html) for more information). Instructions for each case are given below.
