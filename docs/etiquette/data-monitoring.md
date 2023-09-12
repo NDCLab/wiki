@@ -75,12 +75,7 @@ The second column in every NDCLab central tracker is called "consent" and it spe
 If a study population includes participants under the age of 18, the third column in the central tracker will be called "assent" and it will specify whether the subject assented or not.
 - The value of the assent column is based on the value of the "assent_complete" variable within REDCap data. Note that the assent instrument in REDCap must be named "assent" in order for the "_complete" variable to be named properly.
 
-Additionally, the central tracker must have at least one column for each data type collected. These basically align with the subfolders in `sourcedata/raw/` and may include, among others:
-- audio/audacity
-- video/zoom
-- eeg (EEG data collected with either the Brain Vision system typically, or the EGI system)
-- psychopy
-- digi
+Next, the central tracker will have columns related to non-questionnaire data. Each task within a given data type will have a column. 
 
 For task data from PsychoPy/Pavlovia, create one row in the data dictionary for each individual task, named exactly as the task is.
 
