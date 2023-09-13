@@ -55,12 +55,12 @@ Each data collection project has a central tracker that provides a real-time ove
 
 
 #### Data Dictionary
-The rows and columns of the central tracker will be built directly from the contents of the `central-tracker_datadict.csv` file that you create.  The sample template includes instructions within [brackets] and text to edit within {curly brackets}.  Consult the readme file in the datadictionary folder for details.
+The rows and columns of the central tracker will be built directly from the contents of the `central-tracker_datadict.csv` file that you create.  The sample template includes instructions within [brackets] and text to edit within {curly brackets}.  Consult the `readme.md` file in `data-monitoring/data-dictionary/` for details on how to build the data dictionary.
 
 
 #### Required Variables
 The first column in every NDCLab central tracker is called "id" and it specifies the subject ID.
-- The "allowedValues" section of the "id" row in the data dictionary should specify the IDs that are allowed for that given study, separated by commas (for example, a study with 5-digit IDs that start with the number 4 would state the allowedValues as "4XXXX"; a study with 7-digit IDs that either start with 200 or 201 would state the allowedValues as "200XXXX, 201XXXX")
+- The "allowedValues" section of the "id" row in the data dictionary should specify the IDs that are allowed for that given study, stated in integer notation with integer sets separated by commas (for example, a study with 5-digit IDs that start with the number 4 would state the allowedValues as "[40000,49999]"; a study with 7-digit IDs that either start with 200 or 201 would state the allowedValues as "[2000000,2009999],[2010000,2019999]")
 - The setup script for data monitoring will populate the central tracker with IDs based on the ID variable found in a particular REDCap file. This is specified in the "description" section of the "id" row in the data dictionary (for example, the description could read "Participant ID (file: "thriveconsent"; variable: "record_id")" where the file and variable name are specified within double quotation marks). The only IDs that will populate in the central tracker are the IDs that exist in that REDCap file as the ID variable.
 
 The second column in every NDCLab central tracker is called "consent" and it specifies whether the subject consented or not.
@@ -73,9 +73,9 @@ Next, the central tracker will have columns related to non-questionnaire data (e
 - Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named as "`task` _ `dataType`".
 - Note: for instances in which a given data type's collection is not separated according to individual tasks (e.g., "`flanker` _ `eeg`" or "`social-interaction` _ `eeg`") but rather is collected across all tasks, the task name will be "all" (e.g., "`all` _ `eeg`").
 
-For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each equesionnaire, named exactly as the questionnaire is with the appropriate suffix appended.
+For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each equesionnaire, named exactly as the questionnaire is, with the appropriate suffix appended.
 
-For scored data from REDCap questionnaires, there will be one row in the data dictionary for each individual subscore, named exactly as the subscore is. Thus, there will be one column in the central tracker for each subscore, named exactly as the subscore is with the appropriate suffix appended.
+For scored data from REDCap questionnaires, there will be one row in the data dictionary for each individual subscore, named exactly as the subscore is. Thus, there will be one column in the central tracker for each subscore, named exactly as the subscore is, with the appropriate suffix appended.
 
 For custom variables, you will control these in your preprocessing scripts. In the data dictionary, be sure to specify how each is operating and include the name of the script in the provenance column.
 
@@ -85,14 +85,14 @@ Scripts in the data monitoring ecosystem access a study's central tracker based 
 
 
 ## Setting Up
-Once the central tracker data dictionary and a draft of the data monitoring protocol are prepared, the study lead should begin data monitoring by copying a set of scripts to the dataset.
+Once the central tracker data dictionary is prepared, the study lead can begin data monitoring by copying a set of scripts to the dataset.
 
 From the [HPC shell](https://ndclab.github.io/wiki/docs/hpc/accessing.html), navigate to the datasets folder:
 ```
 cd /home/data/NDClab/datasets
 ```
 
-You will input a single command that indicates which dataset should be set up, and the datatypes and other relevant information is read from the central tracker datadict.
+You will input a single command that indicates which dataset should be set up, and the datatypes and other relevant information will be read from the central tracker data dictionary.
 
 ```
 bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET
@@ -120,7 +120,7 @@ Details for each are available below.
 ## hallMonitor.sub
 
 ### Purpose
-The hallMonitor script (hallMonitor.sh) is triggered by running the associated slurm file (hallMonitor.sub) while in `data-monitoring` (`cd your-dataset/data-monitoring`).  It checks that raw data (`sourcedata/raw`) is in good order and, once confirmed, places a copy of the data in `sourcedata/checked`. Errors in the names and structure of the files under `raw` are noted in the slurm-XXXX.out and slurm-XXXX_errorlog.out files. This serves two key purposes:
+The hallMonitor script (hallMonitor.sh) is triggered by running the associated slurm file (hallMonitor.sub) while in `data-monitoring` (`cd your-dataset/data-monitoring`).  It checks that raw data (`sourcedata/raw`) is in good order and, once confirmed, places a copy of the data in `sourcedata/checked`. Errors in the names and structure of the files in `sourcedata/raw` are noted in the slurm-XXXX.out and slurm-XXXX_errorlog.out files. This serves two key purposes:
 1. issues with the incoming data (e.g., improper file naming) are identified and corrected early.
 2. downstream processes (like updating the central tracker) interact with the "checked" data and safeguard the integrity of the original "raw" data.
 
@@ -128,17 +128,17 @@ Specifically, hallMonitor performs the following checks:
 #### REDCap
 1. Identifies most recent uniquely named REDCap CSVs.
 2. Copies these files to `sourcedata/checked/redcap`.
-3. Updates all rows in the central tracker (data and redcap data) by means of update-tracker.py.
+3. Updates all relevant rows in the central tracker by means of update-tracker.py.
 
 #### Nonencrypted Data (Pavlovia/Psychopy, EEG, others)
-1. Checks for the existence of new files in `sourcedata/raw/sX_rX/sub-XXXXXX/DATATYPE` and, if they are found, verifies the filenames are named correctly. Filenames follow the convention `sub-<NUMBER>_<taskname>_<session_suffix>.<extension>`, where NUMBER is the subject number, taskname is the name of the task as defined under "variable" in the datadict, session_suffix is the session, run, and event the data was collected in ("s1_r1_e1"), and extension is the file's extension (".eeg").
+1. Checks for the existence of new files in `sourcedata/raw/sX_rX/DATATYPE` and, if they are found, verifies the files are named correctly. Filenames follow the convention `sub-<NUMBER>_<taskname>_<dataType>_<session_suffix>.<extension>`, where NUMBER is the subject number, taskname is the name of the task, dataType is the type of data, session_suffix is the session, run, and event the data was collected in (e.g., "s1_r1_e1"), and extension is the file's extension (e.g., ".csv").
 2. For correctly-named files, files are copied over to `sourcedata/checked/sub-XXXXXX/sX_rX/DATATYPE`.
-3. If any duplicate files or improper file or folder names are identified, hallMonitor outputs a red error message.
+3. If any duplicate files or improper file or folder names are identified, hallMonitor outputs a red error message. This error message will be found in the slurm-XXXX.out and slurm-XXXX_errorlog.out files.
 
 #### Encrypted Data (Zoom/Audio/Video/Digi)
-1. Audio, video, and photo (such as EEG digitization, "digi") files containing identifiable information are managed manually by the study lead. Proper encryption should be verified (that is, decryption using the study password should be tested and confirmed, see [here](https://ndclab.github.io/wiki/docs/technical-docs/data_encryption.html)), after which the participant's audio/video/digi files should be manually copied to `sourcedata/checked`. Filenames again follow the convention `sub-<NUMBER>_<taskname>_<session_suffix>.<extension>`.
-2. The hallMonitor script simply verifies the existence and correct naming of the .gpg files in `sourcedata/checked` and updates the zoom, audio, video, and/or digi columns of the central tracker accordingly (using update-tracker.py).
-3. Incorrectly named files or folders are noted in the `slurm-NUMBER.out` file with a red error message.
+1. Audio, video, and photo (such as EEG digitization, "digi") files containing identifiable information are managed manually by the study lead. Proper encryption should be verified (that is, decryption using the study password should be tested and confirmed, see [here](https://ndclab.github.io/wiki/docs/technical-docs/data_encryption.html)), after which the participant's audio/video/digi files should be manually copied to `sourcedata/checked`. Filenames again follow the convention `sub-<NUMBER>_<taskname>_<dataType>_<session_suffix>.<extension>`.
+2. The hallMonitor script simply verifies the existence and correct naming of the encyrpted (.gpg) files in `sourcedata/checked` and updates the audio/audacity, video/zoom, and/or digi columns of the central tracker accordingly (using update-tracker.py).
+3. Incorrectly named files or folders are noted in an error message found in the slurm-XXXX.out and slurm-XXXX_errorlog.out files.
 
 #### Checked Data Structure
 Within `sourcedata/checked`, folders should be organized by subject, session, and datatype:<br/>
@@ -173,8 +173,10 @@ Within `sourcedata/checked`, folders should be organized by subject, session, an
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── video/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── psychopy/<br/>
 
+...and the same for `/s3_r1/`, etc. Note that "audio" and "video" may be replaced with "audacity" and "zoom", respectively.
+
 ### Customize
-Most customization required for the hallMonitor script is handled by the central tracker datadict. However, if REDCap column names need to be re-mapped to match the expectations of the instruments script, this can be built directly into hallMonitor. There are two options available:
+Most customization required for the hallMonitor script is handled by the central tracker data dictionary. However, if REDCap column names need to be re-mapped to match the expectations of the instruments script, this can be built directly into hallMonitor. There are two options available:
 
 #### one-to-one mapping
 If just the instrument name requires remapping, the `-m` flag allows you to specify this. Here is an example where the mistakenly named "sas" instrument is mapped to "sas2":
@@ -200,9 +202,9 @@ The hallMonitor script should be run weekly by the project lead. It is recommend
 
 To run the script, ensure that you are on the `main` branch of the repository on the HPC. Use `git pull` to update the HPC with any changes available on the GitHub remote.  Then follow the instructions [here](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
 
-Review the output for errors requiring correction (by using `cat` to print the messages to the console, i.e. `cat slurm-NUMBER.out`). After making any necessary corrections, re-run the script until no errors are received, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out`).
+Review the error log output file for errors requiring correction (by using `cat` to print the messages to the console, i.e. `cat slurm-NUMBER_errorlog.out`). After making any necessary corrections, re-run the script until no errors are received, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out`).
 
-The hallMonitor script automatically updates the data-monitoring-log.md file in the dataset's data-monitoring folder with a description of the job's status and how many errors were encountered.
+The hallMonitor script automatically updates the `data-monitoring-log.md` file in the dataset's data-monitoring folder with a description of the job's status and how many errors were encountered.
 
 Once you have completed the hallMonitor process and everything is tidy, push your changes back to the GitHub remote ([`git add`, `git commit`, `git push`](https://ndclab.github.io/wiki/docs/technical-docs/git_and_github.html)).  This merely updates the data monitoring scripts, log, and central tracker on GitHub; it does not transfer any data from `sourcedata` nor `derivatives` (those only live on the HPC).
 
@@ -213,7 +215,7 @@ Once you have completed the hallMonitor process and everything is tidy, push you
 Pre-processing scripts transform the data collected from participants (questionnaires, behavioral tasks) into aggregate numbers that can be used for data analysis. These should draw upon data in the `sourcedata/checked` folder and output to `derivatives/preprocessed`. The preprocess slurm script is a handy shortcut that binds together the automated scoring of REDCap data (via the instruments script) along with any other custom scripts that you tell it to run.
 
 ### Instruments
-The preprocess slurm script calls the instruments scoring mechanism, which will identify the most recent REDCap file in `sourcedata/checked/redcap`, score it automatically, and output it to `derivatives/preprocessed`, having renamed the "DATA" in the original filename to "SCRD."  It also updates any rows in the central tracker whose description in the central tracker data dictionary begins with "redcap_scrd:".
+The preprocess slurm script calls the instruments scoring mechanism, which will identify the most recent REDCap file in `sourcedata/checked/redcap`, score it automatically, and output it to `derivatives/preprocessed`, having renamed the "DATA" in the original filename to "SCRD."  It also updates any columns in the central tracker that are built from rows in the data dictionary that have the dataType "redcap_scrd".
 
 ### R/MATLAB/Python Scripts
 You need to create and test these scripts first on local and individually on the HPC before binding them into preprocess.sub. This is very important because if you accidentally create an infinite loop on the HPC, you could burn through all of the lab's monthly time allottment on the HPC and you would be forced to do all your calculations by hand until the end of the month! :cold_sweat:
@@ -246,7 +248,7 @@ You must specify the container(s) and script(s) that you want included in the pr
 ![preprocess-example](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/preprocess-example.png)
 
 ### How to Run
-Pre-processing scripts should be created as early as possible in the data collection process (ideally to process even the first participant!), and then should be run by the project lead on a weekly basis to ensure that the incoming data appears to be in good order (for instance, we\u2019re not seeing a trend of wild inaccuracy in simple computer tasks or strange numbers in questionnaire data). 
+Pre-processing scripts should be created as early as possible in the data collection process (ideally to process even the first participant!), and then should be run by the project lead on a weekly basis to ensure that the incoming data appears to be in good order (for instance, ensuring we are not seeing a trend of wild inaccuracy in simple computer tasks or strange numbers in questionnaire data). 
 
 To run the script, follow the instructions [here](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
 
