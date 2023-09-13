@@ -357,31 +357,31 @@ Also, use the same experiment name within the PsychoPy settings (the little gear
 
 ## EEG
 
-When EEG data is collected, files should be named: `subject` _ `task` _ `session/run/event`. For example:
-> sub-210001_flanker-v5_s1_r1_e1<br/>
-> sub-170044_memory-for-error_s1_r1_e1
+When EEG data is collected, files should be named: `subject` _ `task` _ `datatype` _ `session/run/event`. For example:
+> sub-210001_flanker-v5_eeg_s1_r1_e1<br/>
+> sub-170044_all_eeg_s1_r1_e1
+Note that "all" refers to cases in which EEG data is collected continuously for all tasks performed in a given study visit.
 
 The sX, rX, and eX information follows the logic indicated in the REDCap section above.
 
-The experiment name should match exactly the associated PsychoPy (or other) task.
+The task name should match exactly the associated PsychoPy (or other) task.
 
-If digitization has also been performed, append "digi-image" and "digi-model" after the task name:
-> sub-210001_rwe-eeg_digi-image_s1_r1_e1<br/>
-> sub-170044_memory-for-error_digi-model_s1_r1_e1
-
-Or, if the digitization resources have been downloaded as a single zip file:
-> sub-160051_social-flanker-eeg_digi_s1_r1_e1
+If digitization has also been performed, the digitization zip file should be named: `subject` _ `task` _ `datatype` _ `session/run/event`. For example:
+> sub-210001_flanker-v5_digi_s1_r1_e1<br/>
+> sub-170044_all_digi_s1_r1_e1
+Note that "all" refers to cases in which EEG data is collected continuously for all tasks performed in a given study visit.
 
 ## Audio and Video
 
 When audio, video, or photo data is collected (including Zoom, Audacity, etc.), files should be named: `subject` _ `task` _ `datatype` _ `session/run/event`.  The two acceptable data types are: audio (or audacity), video (or zoom). For example:
-> sub-210001_rwe-eeg_audio_s1_r1_e1<br/>
-> sub-150004_putt-putt_video_s1_r1_e1<br/>
+> sub-210001_arrow-alert-v1-1_audio_s1_r1_e1<br/>
+> sub-150004_social-interaction_video_s1_r1_e1<br/>
 > sub-310033_all_audacity_s1_r1_e1
+Note that 'all" refers to cases in which audio/video data is collected continuously for all tasks performed in a given study visit.
 
 The sX, rX, and eX information follows the logic indicated in the REDCap section above.
 
-The experimental task name should match exactly the associated PsychoPy (or other) task.
+The task name should match exactly the associated PsychoPy (or other) task.
 
 ## Intentional Deviations
 There will be some cases in which a file name must deviate from naming conventions in order to contain additional pertinent information about that particular file. For example: a participant completes the practice for the PsychoPy task, but decides to discontinue participation before completing the actual PsychoPy task. That participant's practice file will be saved with additional information at the end of the file name:
@@ -389,7 +389,7 @@ There will be some cases in which a file name must deviate from naming conventio
 
 In cases where an additional string of text must be appended to the end of a file name to convey pertinent information about that file, the file name leading up to the additional string must follow naming conventions and the additional string must be separated by an underscore (as shown in the example above).
 
-For data monitoring purposes, there are additional steps that must be taken when a file name intentionally deviates from convention in order to ensure the file can still be properly handled by data monitoring scripts. Refer to the section titled "File Name Corrections" on the [Data Monitoring page](https://ndclab.github.io/wiki/docs/etiquette/data-monitoring.html) for instructions.
+For data monitoring purposes, there are additional steps that must be taken when a file name intentionally deviates from convention in order to ensure the file can still be properly handled by data monitoring scripts. Refer to the section titled "Running Data Monitoring" on the [Data Monitoring page](https://ndclab.github.io/wiki/docs/etiquette/data-monitoring.html) for instructions.
 
 ## Helpful Resources
 * Awesome [slidedeck](https://speakerdeck.com/jennybc/how-to-name-files) from [Jenny Bryan](https://jennybryan.org/).<br/>
