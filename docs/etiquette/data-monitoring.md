@@ -70,12 +70,12 @@ If a study population includes participants under the age of 18, the third colum
 - The value of the assent column is based on the value of the "assent_complete" variable within REDCap data. Note that the assent instrument in REDCap must be named "assent" in order for the "_complete" variable to be named properly.
 
 Next, the central tracker will have columns related to non-questionnaire data (e.g., psychopy, audio/audacity, video/zoom, eeg, digi). 
-- Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named as "`task` _ `dataType`".
-- Note: for instances in which a given data type's collection is not separated according to individual tasks (e.g., "`flanker` _ `eeg`" or "`social-interaction` _ `eeg`") but rather is collected across all tasks, the task name will be "all" (e.g., "`all` _ `eeg`").
+- Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named based on the variable name listed in the data dictionary with the appropriate suffix appended. The variable name in the data dictionary for non-questionnaire data should follow the convention of "`task` _ `dataType`" where `task` is the name of the task and `dataType` is the type of data collected during that task.
+- Note: for instances in which a given data type's collection is not separated according to tasks (e.g., "`flanker` _ `eeg`" or "`social-interaction` _ `eeg`") but rather is collected across all tasks, the task name will be "all" (e.g., "`all` _ `eeg`").
 
-For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each equesionnaire, named exactly as the questionnaire is, with the appropriate suffix appended.
+For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, with the variable for that row named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each equesionnaire, named exactly as the questionnaire is, with the appropriate suffix appended.
 
-For scored data from REDCap questionnaires, there will be one row in the data dictionary for each individual subscore, named exactly as the subscore is. Thus, there will be one column in the central tracker for each subscore, named exactly as the subscore is, with the appropriate suffix appended.
+For scored data from REDCap questionnaires, there will be one row in the data dictionary for each individual subscore, with the variable for that row named exactly as the subscore is. Thus, there will be one column in the central tracker for each subscore, named exactly as the subscore is, with the appropriate suffix appended.
 
 For custom variables, you will control these in your preprocessing scripts. In the data dictionary, be sure to specify how each is operating and include the name of the script in the provenance column.
 
