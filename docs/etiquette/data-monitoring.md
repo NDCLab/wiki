@@ -63,10 +63,10 @@ The first column in every NDCLab central tracker is called "id" and it specifies
 - The "allowedValues" section of the "id" row in the data dictionary should specify the IDs that are allowed for that given study, stated in integer notation with integer sets separated by commas (for example, a study with 5-digit IDs that start with the number 4 would state the allowedValues as "[40000,49999]"; a study with 7-digit IDs that either start with 200 or 201 would state the allowedValues as "[2000000,2009999],[2010000,2019999]")
 - The setup script for data monitoring will populate the central tracker with IDs based on the ID variable found in a particular REDCap file. This is specified in the "description" section of the "id" row in the data dictionary (for example, the description could read "Participant ID (file: "thriveconsent"; variable: "record_id")" where the file and variable name are specified within double quotation marks). The only IDs that will populate in the central tracker are the IDs that exist in that REDCap file as the ID variable.
 
-The second column in every NDCLab central tracker is called "consent" and it specifies whether the subject consented or not.
+The second column in every NDCLab central tracker is called "consent" and it specifies whether the adult participant consented or not.
 - The value of the consent column is based on the value of the "consent_complete" (or "consentes_complete") variable within REDCap data. Note that the consent instrument in REDCap must be named "consent" (or "consentes") in order for the "_complete" variable to be named properly.
 
-If a study population includes participants under the age of 18, the third column in the central tracker will be called "assent" and it will specify whether the subject assented or not.
+If a study population includes participants under the age of 18, the third column in the central tracker will be called "assent" and it will specify whether the child participant assented or not.
 - The value of the assent column is based on the value of the "assent_complete" variable within REDCap data. Note that the assent instrument in REDCap must be named "assent" in order for the "_complete" variable to be named properly.
 
 Next, the central tracker will have columns related to non-questionnaire data (e.g., psychopy, audio/audacity, video/zoom, eeg, digi). 
