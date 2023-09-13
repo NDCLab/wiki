@@ -13,8 +13,7 @@ nav_order: 3
 6. [hallMonitor.sub](#hallmonitorsub)
 7. [preprocess.sub](#preprocesssub)
 8. [Protocol](#protocol)
-9. [File Name Corrections](#file-name-corrections)
-10. [Final Considerations](#final-considerations)
+9. [Final Considerations](#final-considerations)
 
 
 ## Overview
@@ -59,7 +58,7 @@ The rows and columns of the central tracker will be built directly from the cont
 
 
 #### Required Variables
-The first column in every NDCLab central tracker is called "id" and it specifies the subject ID.
+The first column in every NDCLab central tracker is called "id" and it specifies the participant ID.
 - The "allowedValues" section of the "id" row in the data dictionary should specify the IDs that are allowed for that given study, stated in integer notation with integer sets separated by commas (for example, a study with 5-digit IDs that start with the number 4 would state the allowedValues as "[40000,49999]"; a study with 7-digit IDs that either start with 200 or 201 would state the allowedValues as "[2000000,2009999],[2010000,2019999]")
 - The setup script for data monitoring will populate the central tracker with IDs based on the ID variable found in a particular REDCap file. This is specified in the "description" section of the "id" row in the data dictionary (for example, the description could read "Participant ID (file: "thriveconsent"; variable: "record_id")" where the file and variable name are specified within double quotation marks). The only IDs that will populate in the central tracker are the IDs that exist in that REDCap file as the ID variable.
 
@@ -73,7 +72,7 @@ Next, the central tracker will have columns related to non-questionnaire data (e
 - Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named based on the variable name listed in the data dictionary with the appropriate suffix appended. The variable name in the data dictionary for non-questionnaire data should follow the convention of "`task` _ `dataType`" where `task` is the name of the task and `dataType` is the type of data collected during that task.
 - Note: for instances in which a given data type's collection is not separated according to tasks (e.g., "`flanker` _ `eeg`" or "`social-interaction` _ `eeg`") but rather is collected across all tasks, the task name will be "all" (e.g., "`all` _ `eeg`").
 
-For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, with the variable for that row named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each equesionnaire, named exactly as the questionnaire is, with the appropriate suffix appended.
+For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, with the variable for that row named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each quesionnaire, named exactly as the questionnaire is, with the appropriate suffix appended.
 
 For scored data from REDCap questionnaires, there will be one row in the data dictionary for each individual subscore, with the variable for that row named exactly as the subscore is. Thus, there will be one column in the central tracker for each subscore, named exactly as the subscore is, with the appropriate suffix appended.
 
@@ -114,7 +113,7 @@ After executing this command, the following new files (in addition to the blank 
 - update-tracker.py
 - verify-copy.py
 
-Details for each are available below.
+Details for hallMonitor and preprocess are available below.
 
 
 ## hallMonitor.sub
@@ -131,12 +130,12 @@ Specifically, hallMonitor performs the following checks:
 3. Updates all relevant rows in the central tracker by means of update-tracker.py.
 
 #### Nonencrypted Data (Pavlovia/Psychopy, EEG, others)
-1. Checks for the existence of new files in `sourcedata/raw/sX_rX/DATATYPE` and, if they are found, verifies the files are named correctly. Filenames follow the convention `sub-<NUMBER>_<task>_<dataType>_<session_suffix>.<extension>`, where NUMBER is the subject number, task is the name of the task (or "all" if data is collected across all tasks), dataType is the type of data, session_suffix is the session, run, and event the data was collected in (e.g., "s1_r1_e1"), and extension is the file's extension (e.g., ".csv").
+1. Checks for the existence of new files in `sourcedata/raw/sX_rX/DATATYPE` and, if they are found, verifies the files are named correctly. Filenames follow the convention `sub-<NUMBER>_<task>_<dataType>_<suffix>.<extension>`, where NUMBER is the ID number, task is the name of the task (or "all" if data is collected across all tasks), dataType is the type of data, suffix is the session, run, and event the data was collected in (e.g., "s1_r1_e1"), and extension is the file's extension (e.g., ".csv").
 2. For correctly-named files, files are copied over to `sourcedata/checked/sub-XXXXXX/sX_rX/DATATYPE`.
 3. If any duplicate files or improper file or folder names are identified, hallMonitor outputs a red error message. This error message will be found in the slurm-XXXX.out and slurm-XXXX_errorlog.out files.
 
-#### Encrypted Data (Zoom/Audio/Video/Digi)
-1. Audio, video, and photo (such as EEG digitization, "digi") files containing identifiable information are managed manually by the study lead. Proper encryption should be verified (that is, decryption using the study password should be tested and confirmed, see [here](https://ndclab.github.io/wiki/docs/technical-docs/data_encryption.html)), after which the participant's audio/video/digi files should be manually copied to `sourcedata/checked`. Filenames again follow the convention `sub-<NUMBER>_<task>_<dataType>_<session_suffix>.<extension>`.
+#### Encrypted Data (Audio/Video/Digi)
+1. Audio, video, and photo (such as EEG digitization, "digi") files containing identifiable information are managed manually by the study lead. Proper encryption should be verified (that is, decryption using the study password should be tested and confirmed, see [here](https://ndclab.github.io/wiki/docs/technical-docs/data_encryption.html)), after which the participant's audio/video/digi files should be manually copied to `sourcedata/checked`. Filenames again follow the convention `sub-<NUMBER>_<task>_<dataType>_<suffix>.<extension>`.
 2. The hallMonitor script simply verifies the existence and correct naming of the encyrpted (.gpg) files in `sourcedata/checked` and updates the audio/audacity, video/zoom, and/or digi columns of the central tracker accordingly (using update-tracker.py).
 3. Incorrectly named files or folders are noted in an error message found in the slurm-XXXX.out and slurm-XXXX_errorlog.out files.
 
@@ -222,7 +221,7 @@ You need to create and test these scripts first on local and individually on the
 
 The wiki includes instructions for running standalone [R](https://ndclab.github.io/wiki/docs/hpc/r.html), [MATLAB](https://ndclab.github.io/wiki/docs/hpc/matlab.html), and [Python](https://ndclab.github.io/wiki/docs/hpc/python.html) scripts.
 
-In addition to preprocessing your data, your R, MATLAB, or Python scripts must include the necessary code to update your study's central tracker when they run. Here is an example in R that can be modified for your script.  This example specifically updates the `readAloudDisfluencies_s1_r1_e1` variable in the central tracker if the subject ID has been included in the "disfluencySummaryDat" dataframe:
+In addition to preprocessing your data, your R, MATLAB, or Python scripts must include the necessary code to update your study's central tracker when they run. Here is an example in R that can be modified for your script.  This example specifically updates the `readAloudDisfluencies_s1_r1_e1` variable in the central tracker if the participant ID has been included in the "disfluencySummaryDat" dataframe:
 ```
 #load central tracker
 track_path <- '/home/data/NDClab/datasets/readAloud-valence-dataset/data-monitoring/central-tracker_readAloud-valence-dataset.csv'
@@ -258,21 +257,35 @@ Once you have completed each run of preprocessing and everything is tidy, push y
 
 
 ## Protocol
-Although the broad strokes of data monitoring are identical across NDCLab studies, each data collection project should establish its own data monitoring protocol that connects these lab processes with study-specific details. This is also helpful to record the specific data monitoring actions performed because the lab-wide defaults might change over time.
+Although the broad strokes of data monitoring are identical across NDCLab studies, each data collection project should establish its own data monitoring protocol that connects these lab processes with study-specific details. Those study-specific details should be defined in the data collection project's dataset folder. The general template for the lab's data monitoring protocol is listed below.
 
+### Data Uploads to the HPC
+In order to run data monitoring scripts, data must first be uploaded to the HPC. The general guidelines for who uploads which data types and when is defined as:
+- REDCap data is uploaded to `sourcedata/raw/sX_rX/redcap` by the study lead/coordinator twice a week (for ex: on Mondays and Thursdays). It is recommended that you create a recurring reminder on your calendar or on Slack (`/remind me on mondays and thursdays 'upload REDCap data to HPC'`).
+- All other data that is collected during a study visit (psychopy, eeg, digi, etc.) is uploaded by the RA(s) that conducted the visit as soon as the visit has concluded. Specific instructions regarding post-visit data backups are included in the project's study protocol.
 
-## File Name Corrections
-If a file in `sourcedata/raw` is named incorrectly, you will get an error message after running data monitoring scripts and the incorrectly named file will not be moved to `sourcedata/checked`. There are cases in which a file name will be incorrect by accident, and thus requires correction, and there are cases in which a file name intentionally deviates from convention, and thus does not require correction (refer to the "Intentional Deviations" section on the [Naming Conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html) for more information). Instructions for each case are given below.
+### Decryption Checks
+All encrypted data (audio,video, digi) that is uploaded to the HPC following a study visit must be checked for proper encryption within 3 days of upload. These decryption checks will be performed by assigned RAs who did not upload the data to the HPC, to ensure that the study decryption password works to decrypt the files. After checking for proper encryption, the RA will manually move the checked audio, video, and digi files to `sourcedata/checked`. Finally, the RA must update the study's decryption check log to indicate that the files passed the decryption check and were moved to `sourcedata/checked`.
 
-Case A: File name is incorrect by accident and requires correction:
-1. Manually correct the file name by renaming the file to meet naming conventions
-2. Add a blank text file named "corrected.txt" to the folder containing the corrected file
-3. Manually move both the corrected file and the "corrected.txt" file to `sourcedata/checked`
+The study lead/coordinator should perform weekly reviews to ensure that all encrypted data in `sourcedata/raw` has been checked for proper encryption and manually moved to `sourcedata/checked`.
 
-Case B: File name intentionally deviates from convention and does not require correction:
-1. Ensure that the first portion of the file name leading up to the deviation matches file naming conventions and that the deviation is separated from session/run/event information by an underscore (again, refer to the "Intentional Deviations" section on the [Naming Conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html) for more details)
-2. Add a text file named "corrected.txt" to the folder containing the uncorrected file (`touch corrected.txt`). The "corrected.txt" file should contain an explanation for the file's intentional deviation from naming convention.
+### Running Data Monitoring
+Data monitoring scripts (hallMonitor.sub and preprocess.sub) should be run once a week by the study lead/coordinator. It is recommended that you create a recurring reminder on your calendar or on Slack (`/remind me on fridays 'run hallMonitor and preprocess'`).
+
+After running hallMonitor, review the error log output file for errors requiring correction (by using `cat` to print the messages to the console, i.e. `cat slurm-NUMBER_errorlog.out`). You will need to make the necessary corrections so that errors are no longer received. There are two cases in which an error cannot or should not be directly corrected, but a note should be logged in the participant's folder to explain the lack of correction.
+
+Case A: File name intentionally deviates from convention and does not require correction:
+1. Ensure that the first portion of the file name leading up to the deviation matches file naming conventions and that the deviation is separated from the suffix by an underscore (refer to the "Intentional Deviations" section on the [Naming Conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html) for more details)
+2. Add a text file named "corrected.txt" to the folder containing the uncorrected file. The "corrected.txt" file should contain an explanation for the file's intentional deviation from naming convention.
 3. Manually move both the uncorrected file and the "corrected.txt" file to `sourcedata/checked`
+
+Case B: Data was not collected for that participant:
+1. Upon uploading data to the HPC following a study visit, the RA will make note of any data that was not collected by uploading blank text files called "no_\<datatype\>" (e.g., "no_digi") to the participant's folder.
+2. Rename the "no_\<datatype\>" file to "corrected.txt", then edit the file to contain the text "This participant's data was not collected".
+3. Manually move the "corrected.txt" file to `sourcedata/checked`
+
+After making any necessary corrections, re-run the script until no errors are received. Ensure that `sourcedata/checked` and the central tracker have been updated to reflect the resolved errors, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out`).
+
 
 ## Final Considerations
 - If you switch to a new REDCap project during data collection (for instance, because you added a new instrument or corrected an old one), be sure to check any header mapping/replacements you added to `hallMonitor.sub` as these may need to be modified or deleted.
