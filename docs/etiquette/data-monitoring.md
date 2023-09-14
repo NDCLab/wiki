@@ -276,13 +276,13 @@ After running hallMonitor, review the error log output file for errors requiring
 
 Case A: File name intentionally deviates from convention and does not require correction:
 1. Ensure that the first portion of the file name leading up to the deviation matches file naming conventions and that the deviation is separated from the suffix by an underscore (refer to the "Intentional Deviations" section on the [Naming Conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html) for more details)
-2. Add a text file named "corrected.txt" to the folder containing the uncorrected file. The "corrected.txt" file should contain an explanation for the file's intentional deviation from naming convention.
-3. Manually move both the uncorrected file and the "corrected.txt" file to `sourcedata/checked`
+2. Add a text file named "deviation.txt" to the folder containing the uncorrected file. The "deviation.txt" file should contain an explanation for the file's intentional deviation from naming convention.
+3. Manually move both the uncorrected file and the "deviation.txt" file to `sourcedata/checked`
 
 Case B: Data was not collected for that participant:
 1. Upon uploading data to the HPC following a study visit, the RA will make note of any data that was not collected by uploading blank text files called "no_\<datatype\>" (e.g., "no_digi") to the participant's folder.
-2. Rename the "no_\<datatype\>" file to "corrected.txt", then edit the file to contain the text "This participant's data was not collected".
-3. Manually move the "corrected.txt" file to `sourcedata/checked`
+2. Rename the "no_\<datatype\>" file to "deviation.txt", then edit the file to contain the text "This participant's data was not collected".
+3. Manually move the "deviation.txt" file to `sourcedata/checked`
 
 After making any necessary corrections, re-run the script until no errors are received. Ensure that `sourcedata/checked` and the central tracker have been updated to reflect the resolved errors, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out`).
 
