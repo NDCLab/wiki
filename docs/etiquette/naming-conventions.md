@@ -359,7 +359,7 @@ Also, use the same experiment name within the PsychoPy settings (the little gear
 
 When EEG data is collected, files should be named: `subject` _ `task` _ `datatype` _ `session/run/event`. For example:
 > sub-210001_flanker-v5_eeg_s1_r1_e1<br/>
-> sub-170044_all_eeg_s1_r1_e1
+> sub-170044_all_eeg_s1_r1_e1<br/>
 
 Note that "all" refers to cases in which EEG data is collected continuously for all tasks performed in a given study visit.
 
@@ -369,7 +369,7 @@ The task name should match exactly the associated PsychoPy (or other) task.
 
 If digitization has also been performed, the digitization zip file should be named: `subject` _ `task` _ `datatype` _ `session/run/event`. For example:
 > sub-210001_flanker-v5_digi_s1_r1_e1<br/>
-> sub-170044_all_digi_s1_r1_e1
+> sub-170044_all_digi_s1_r1_e1<br/>
 
 Note that "all" refers to cases in which EEG data is collected continuously for all tasks performed in a given study visit.
 
@@ -378,7 +378,7 @@ Note that "all" refers to cases in which EEG data is collected continuously for 
 When audio, video, or photo data is collected (including Zoom, Audacity, etc.), files should be named: `subject` _ `task` _ `datatype` _ `session/run/event`.  The two acceptable data types are: audio (or audacity), video (or zoom). For example:
 > sub-210001_arrow-alert-v1-1_audio_s1_r1_e1<br/>
 > sub-150004_social-interaction_video_s1_r1_e1<br/>
-> sub-310033_all_audacity_s1_r1_e1
+> sub-310033_all_audacity_s1_r1_e1<br/>
 
 Note that 'all" refers to cases in which audio/video data is collected continuously for all tasks performed in a given study visit.
 
