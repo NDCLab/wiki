@@ -387,10 +387,10 @@ The sX, rX, and eX information follows the logic indicated in the REDCap section
 The task name should match exactly the associated PsychoPy (or other) task.
 
 ## Intentional Deviations
-There will be some cases in which a file name must deviate from naming conventions in order to contain additional pertinent information about that particular file. For example: a participant completes the practice for the PsychoPy task, but decides to discontinue participation before completing the actual PsychoPy task. That participant's practice file will be saved with additional information at the end of the file name:
+There will be some cases in which a file name must deviate from naming conventions in order to contain additional pertinent information about that particular file, or set of files. For example: a participant completes the practice for the PsychoPy task, but decides to discontinue participation before completing the actual PsychoPy task. That participant's practice file will be saved with additional information at the end of the file name:
 > sub-311001_arrow-alert-v1-1_psy_s1_r1_e1_practice-only
 
-In cases where an additional string of text must be appended to the end of a file name to convey pertinent information about that file, the file name leading up to the additional string must follow naming conventions and the additional string must be separated by an underscore (as shown in the example above).
+In cases where an additional string of text must be appended to the end of a file name to convey pertinent information about that file, the file name leading up to the additional string must follow naming conventions and the additional string must be separated from the session/run/event suffix by an underscore (as shown in the example above). If there are more than one file associated with that particular deviation (i.e., in the case of psychopy and eeg data types), all files should contain the additional string of text relevant to the deviation.
 
 For data monitoring purposes, there are additional steps that must be taken when a file name intentionally deviates from convention in order to ensure the file can still be properly handled by data monitoring scripts. Refer to the section titled "Running Data Monitoring" on the [Data Monitoring page](https://ndclab.github.io/wiki/docs/etiquette/data-monitoring.html) for instructions.
 
