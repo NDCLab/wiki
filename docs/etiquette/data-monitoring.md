@@ -69,10 +69,11 @@ If a study population includes participants under the age of 18, the third colum
 - The value of the assent column is based on the value of the "assent_complete" variable within REDCap data. Note that the assent instrument in REDCap must be named "assent" in order for the "_complete" variable to be named properly.
 
 Next, the central tracker will have columns related to non-questionnaire data (e.g., psychopy, audio/audacity, video/zoom, eeg, digi). 
-- Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named based on the variable name listed in the data dictionary with the appropriate suffix appended. The variable name in the data dictionary for non-questionnaire data should follow the convention of "`task` _ `dataType`" where `task` is the name of the task and `dataType` is the type of data collected during that task.
+- Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named based on the variable name listed in the data dictionary with the appropriate suffix appended.
 - Note: for instances in which a given data type's collection is not separated according to tasks (e.g., "`flanker` _ `eeg`" or "`social-interaction` _ `eeg`") but rather is collected across all tasks, the task name will be "all" (e.g., "`all` _ `eeg`").
+- For instances when we want to combine multiple columns into a single column for viewing purposes (see if we have data for at least one of multiple related Pyschopy tasks, for example) the dataType is "combination" and the desired columns to aggregate are noted in "provenance".
 
-For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, with the variable for that row named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each quesionnaire, named exactly as the questionnaire is, with the appropriate suffix appended.
+For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, with the variable for that row named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each questionnaire, named exactly as the questionnaire is, with the appropriate suffix appended.
 
 For scored data from REDCap questionnaires, there will be one row in the data dictionary for each individual subscore, with the variable for that row named exactly as the subscore is. Thus, there will be one column in the central tracker for each subscore, named exactly as the subscore is, with the appropriate suffix appended.
 
@@ -91,12 +92,13 @@ From the [HPC shell](https://ndclab.github.io/wiki/docs/hpc/accessing.html), nav
 cd /home/data/NDClab/datasets
 ```
 
-You will input a single command that indicates which dataset should be set up, and the datatypes and other relevant information will be read from the central tracker data dictionary.
+You will input a single command to set up the central tracker and data monitoring within the dataset, and the datatypes and other relevant information will be read from the central tracker data dictionary.
 
 ```
 bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET
 ```
 * **-t FLAG:** always include this flag so that a tracker is generated on the basis of your central tracker data dictionary, unless you have a preciously generated tracker.
+* **-c FLAG:** this flag indicates that the Redcaps include both child data and parent data. The parent IDs in the Redcaps, ending in 8XXXX (primary parent) or 9XXXX (secondary parent) will map to the child's ID ending in 0XXXX in the central tracker.
 * **YOUR-DATASET:** this is the name of your dataset
 
 Here is an example of the setup line for rwe-eeg-dataset.
@@ -112,6 +114,9 @@ After executing this command, the following new files (in addition to the blank 
 - check-id.py
 - update-tracker.py
 - verify-copy.py
+- check-datadict.py
+
+`setup.sh` should be re-run any time the data dictionary is modified so that the central tracker stays up to date. `hallMonitor` will give a warning when it sees that the data dictionary used in setup is not the most recent version.
 
 Details for hallMonitor and preprocess are available below.
 
