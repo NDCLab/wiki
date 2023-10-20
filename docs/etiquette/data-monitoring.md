@@ -77,6 +77,10 @@ For questionnaire data from REDCap, there will be one row in the data dictionary
 
 For scored data from REDCap questionnaires, there will be one row in the data dictionary for each individual subscore, with the variable for that row named exactly as the subscore is. Thus, there will be one column in the central tracker for each subscore, named exactly as the subscore is, with the appropriate suffix appended.
 
+If a study population includes primary and secondary parents, there will be a row in the data dictionary for parent identity status, with the variable name "pidentity" and the dataType "parent_identity". Thus, there will be columns in the central tracker for parent identity status with the appropriate suffix appended. If parent identity status needs to be tracked across multiple REDCap projects, there can be multiple parent identity rows in the data dictionary, with each variable name modified slightly to correspond to the appropriate REDCap project (i.e., "pidentityiqs" and "pidentitybbs"). See the example data dictionary in the template dataset on GitHub for further guidance.
+
+If a study population includes parents who speak both English and Spanish, there will be a row in the data dictionary for parent language status, with the variable name "plang" and the dataType "parent_lang". Thus, there will be columns in the central tracker for parent language status with the appropriate suffix appended. If parent language status needs to be tracked across multiple REDCap projects, there can be multiple parent language rows in the data dictionary, with each variable name modified slightly to correspond to the appropriate REDCap project (i.e., "plangiqs" and "plangbbs"). See the example data dictionary in the template dataset on GitHub for further guidance.
+
 For custom variables, you will control these in your preprocessing scripts. In the data dictionary, be sure to specify how each is operating and include the name of the script in the provenance column.
 
 
