@@ -69,9 +69,9 @@ If a study population includes participants under the age of 18, the third colum
 - The value of the assent column is based on the value of the "assent_complete" variable within REDCap data. Note that the assent instrument in REDCap must be named "assent" in order for the "_complete" variable to be named properly.
 
 Next, the central tracker will have columns related to non-questionnaire data (e.g., psychopy, audio/audacity, video/zoom, eeg, digi). 
-- Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named based on the variable name listed in the data dictionary with the appropriate suffix appended.
+- Each task within a given data type will have a column in the central tracker (based on the rows in the data dictionary for each task and data type intersection), and the columns will be named based on the variable name listed in the data dictionary with the appropriate suffix appended. The variable name in the data dictionary for non-questionnaire data should follow the convention of "`task` _ `dataType`" where `task` is the name of the task and `dataType` is the type of data collected during that task.
 - Note: for instances in which a given data type's collection is not separated according to tasks (e.g., "`flanker` _ `eeg`" or "`social-interaction` _ `eeg`") but rather is collected across all tasks, the task name will be "all" (e.g., "`all` _ `eeg`").
-- For instances when we want to combine multiple columns into a single column for viewing purposes (see if we have data for at least one of multiple related Pyschopy tasks, for example) the dataType is "combination" and the desired columns to aggregate are noted in "provenance".
+- For instances when we want to combine multiple columns into a single column for viewing purposes (for example, if we have data for multiple versions of a single Pyschopy task) the dataType is "combination" and the desired columns to aggregate are noted in "provenance" in the following format: variables: "{variable name}","{variable name}"
 
 For questionnaire data from REDCap, there will be one row in the data dictionary for each individual questionnaire, with the variable for that row named exactly as the questionnaire is. Thus, there will be one column in the central tracker for each questionnaire, named exactly as the questionnaire is, with the appropriate suffix appended.
 
@@ -98,7 +98,7 @@ You will input a single command to set up the central tracker and data monitorin
 bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET
 ```
 * **-t FLAG:** always include this flag so that a tracker is generated on the basis of your central tracker data dictionary, unless you have a preciously generated tracker.
-* **-c FLAG:** this flag indicates that the Redcaps include both child data and parent data. The parent IDs in the Redcaps, ending in 8XXXX (primary parent) or 9XXXX (secondary parent) will map to the child's ID ending in 0XXXX in the central tracker.
+* **-c FLAG:** this flag indicates that the REDCap files include both child data and parent data. The parent IDs in the REDCap files, ending in 8XXXX (primary parent) or 9XXXX (secondary parent) will map to the child's ID ending in 0XXXX in the central tracker.
 * **YOUR-DATASET:** this is the name of your dataset
 
 Here is an example of the setup line for rwe-eeg-dataset.
