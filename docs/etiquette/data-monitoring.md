@@ -99,15 +99,15 @@ cd /home/data/NDClab/datasets
 You will input a single command to set up the central tracker and data monitoring within the dataset, and the datatypes and other relevant information will be read from the central tracker data dictionary.
 
 ```
-bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t YOUR-DATASET
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t -c YOUR-DATASET
 ```
 * **-t FLAG:** always include this flag so that a tracker is generated on the basis of your central tracker data dictionary, unless you have a preciously generated tracker.
 * **-c FLAG:** this flag indicates that the REDCap files include both child data and parent data. The parent IDs in the REDCap files, ending in 8XXXX (primary parent) or 9XXXX (secondary parent) will map to the child's ID ending in 0XXXX in the central tracker.
 * **YOUR-DATASET:** this is the name of your dataset
 
-Here is an example of the setup line for rwe-eeg-dataset.
+Here is an example of the setup line for thrive-dataset.
 ```
-bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t rwe-eeg-dataset
+bash /home/data/NDClab/tools/lab-devOps/scripts/monitor/setup.sh -t -c thrive-dataset
 ```
 
 After executing this command, the following new files (in addition to the blank central tracker) will be added to your dataset's data-monitoring folder:
