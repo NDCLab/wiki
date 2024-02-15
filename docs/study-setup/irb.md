@@ -9,7 +9,7 @@ nav_order: 1
 1. [Overview](#overview)
 2. [Informed Consent/Assent](#informed-consent/assent)
 3. [Protocol Approval](#protocol-approval)
-4. [Onboarding New Staff](#onboarding-staff)
+4. [Onboarding New Staff](#onboarding-new-staff)
 
 
 
