@@ -9,6 +9,7 @@ nav_order: 1
 1. [Overview](#overview)
 2. [Informed Consent/Assent](#informed-consent/assent)
 3. [Protocol Approval](#protocol-approval)
+4. [Onboarding New Staff](#onboarding-staff)
 
 
 
@@ -35,3 +36,6 @@ The NDCLab Manager provides a REDCap .zip for all IRB-approved consent/assent fo
 
 ## Protocol Approval
 The NDCLab Manager assists with planning and submitting all original IRB protocols and any future amendments. Be aware that drafting a new protocol can take several weeks, and at least one month is usually required for IRB review, revision, and final approval.
+
+## Onboarding New Staff
+Before any new staff member can help with a project, they must be approved by the IRB for that project. If any new staff members are onboarded after the original IRB submission, they must be added to the IRB in an amendment and they must not begin helping with the project until that amendment is approved. To ensure that a staff member is approved by the IRB, please check the most recent approved IRB submission, [this Google sheet](https://docs.google.com/spreadsheets/d/1TQ6WtZbbm9vlFobMq_Nu88UXGpo-a3DvXzzELrG4Ir8/edit?usp=sharing), and the 'Secondary RA' Google Calendar. Finally, you must confirm with the lab manager that the staff member is IRB-approved before they begin helping with any projects.
