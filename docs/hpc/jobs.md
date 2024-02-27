@@ -39,8 +39,13 @@ The file below represents a sample Slurm script where a conda base environment i
 #SBATCH --nodes=1                	# node count
 #SBATCH --ntasks=1               	# total number of tasks across all nodes
 #SBATCH --time=00:10:00          	# total run time limit (HH:MM:SS)
-#SBATCH --account=iacc_gbuzzell		# SLURM account name (delete this line if not running a highmem job)
+#SBATCH --mem=10G                       # real memory per node (use G for gigabytes)
 #SBATCH --mail-type=end          	# send email when job ends
+#SBATCH --mail-user=email@fiu.edu       # email address
+(if running a highmem job:)
+#SBATCH --account=iacc_gbuzzell		# SLURM account name (delete these 3 lines if not running a highmem job)
+#SBATCH --partition=highmem1            # partition name (use high memory nodes)
+#SBATCH --qos=highmem1                  # QOS
 
 module load singularity-3.8.2
 
@@ -56,7 +61,8 @@ Here is a guide to what these details in the .sub file mean and how they should 
 | nodes  | tells the HPC how many nodes should be utilized (nodes are individual computers in the cluster)  | Keep at "1" unless you are doing parallel processing.  |
 | tasks  | tells the HPC how many tasks (that is, CPUs) should be utilized across the number of nodes selected | Keep at "1" unless you are doing parallel processing.  |
 | time  | limits the amount of time the HPC should devote to running the script  | Ballpark the time your script will need to run and give yourself some buffer. For parallel processes, this will need to be set very high. But be careful not to burn through lab time on the HPC.  |
-| account | The HPC account used to run the script | By default this will be "acc_gbuzzell" and this line can be omitted. For high memory jobs, "iacc_gbuzzell" should be used. |
+| mem | how much memory to allocate to the job (per node) | If your job errors due to not having enough memory, try raising this value and trying again. Maximum on default nodes is 30 GB. |
+| account | The HPC account used to run the script | By default this will be "acc_gbuzzell" and this line can be omitted. For high memory jobs, "iacc_gbuzzell" should be used (along with partition and qos lines specifying the "highmem1" partition). |
 | mail-type  | tells the HPC to send you an e-mail when the job is done  | If the job is very small and will run quickly, you can delete this line to avoid an unnecessary e-mail in your inbox. Otherwise, leave it unchanged.  |
 | module load singularity-3.8.2  | loads the IRCC-managed singularity image  | Do not modify. (However, if you become aware of a newer image, please PR a suggested wiki update to the lab technician!)  |
 | singularity exec --bind /home/data/NDClab  | binds data within the NDCLab folder to the singularity image  | Do not modify.  |
@@ -65,7 +71,7 @@ Here is a guide to what these details in the .sub file mean and how they should 
 
 MATLAB is a little special. To create a Slurm script for a .m file, replace the `singularity` line in the sample above with:
 ```yml
-module load matlab-2018b
+module load matlab-2023b
 matlab -nodisplay -nosplash -r filename
 ```
 ...where `filename` is the name of your MATLAB script, but without the final `.m`.
