@@ -169,15 +169,6 @@ nav_order: 2
 
 ### Junior Research Assistants
 
-| ![beadleson](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/beadleson.jpg) | Brandon Beadleson |
-| ---  | ---  |
-| pronouns | he/him |
-| location | Miami, FL |
-| GitHub | beadleson |
-| Email  | bbead001@fiu.edu |
-| research interests | Neuropsychological factors in behavior, illness, and personality |
-| hobbies |Traveling & Reading . |
-
 | ![charest](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/charest.jpg) | Sophia Charest |
 | ---  | ---  |
 | pronouns | she/her/hers |
@@ -186,14 +177,6 @@ nav_order: 2
 | Email  | schar107@fiu.edu |
 | research interests | Understanding the behaviors and motivations of others, specifically the relationship between the physical brain and behavior. |
 | hobbies | Clay sculpting, listening to music, watching basketball, nails/fashion |
-
-| ![duncombe](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/duncombe.jpeg) | Anfernee Duncombe |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Freeport, The Bahamas|
-| GitHub | adunc018 |
-| research interests | Anfernee is interested in the relationship between neurodevelopmental disorders and executive functioning  |
-| hobbies | Writing, rewatching the same 5 shows, baking |
 
 | ![gallardo](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/gallardo.JPG) | Laura Gallardo |
 | ---  | ---  |
