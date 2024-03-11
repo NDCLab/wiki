@@ -32,10 +32,9 @@ You can edit your profile by following the instructions [here](https://slack.com
 ## Channels
 You have been automatically added to the following Slack channels:<br/>
 **#general**: this is our main "meeting place" for the lab at large<br/>
-**#from-george**: this is where George communicates important messages to the whole lab<br/>
 **#tech**: this is where tech solutions happen, post your problems and help your labmates with theirs
 
-In addition, if you will be assigned to an active project, the lab manager will add you to the appropriate project channel.
+If you are a junior RA, you will be added to the **#junior-ra** channel so that you receive all messages relevant for junior RAs. In addition, if you will be assigned to an active project, the lab manager will add you to the appropriate project channel.
 
 The NDCLab is an open lab, so you have access to all channels that you wish to join.
 
