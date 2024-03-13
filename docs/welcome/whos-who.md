@@ -205,15 +205,6 @@ nav_order: 2
 | research interests | Carlos is interested in the use of psilocybin in clinical contexts to treat depression and anxiety as well as the dopamine pathways and how they contribute to discipline development. |
 | hobbies | weightlifting, cooking, fishing, and hiking. |
 
-| ![weber](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/weber.jpg) | Lauren Weber |
-| ---  | ---  |
-| pronouns | she/her/hers |
-| location | Miami, FL |
-| GitHub | laurenweberr |
-| Email  | lwebe013@fiu.edu |
-| research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
-| hobbies | water sports, working out, traveling, tennis, and watching documentaries |
-
 
 ### Junior Research Technicians
 
