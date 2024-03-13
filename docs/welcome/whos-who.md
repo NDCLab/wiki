@@ -214,6 +214,13 @@ nav_order: 2
 | research interests | Lauren is interested in behavioral and developmental psychology, specifically the emergence of anxiety within adolescence. |
 | hobbies | water sports, working out, traveling, tennis, and watching documentaries |
 
-
+| ![arias](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/Arias.jpg) | Dalia Arias |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | DaliaArias02 |
+| Email  | darias033@fiu.edu |
+| research interests | Dalia is interested in clinical, developmental, and neuropsychology, with a focus in the treatments of mood and anxiety disorders. |
+| hobbies | working out, traveling, and baking |
 ### Junior Research Technicians
 
