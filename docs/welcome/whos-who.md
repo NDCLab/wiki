@@ -205,6 +205,3 @@ nav_order: 2
 | research interests | Carlos is interested in the use of psilocybin in clinical contexts to treat depression and anxiety as well as the dopamine pathways and how they contribute to discipline development. |
 | hobbies | weightlifting, cooking, fishing, and hiking. |
 
-
-### Junior Research Technicians
-
