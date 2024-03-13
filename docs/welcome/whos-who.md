@@ -205,3 +205,11 @@ nav_order: 2
 | research interests | Carlos is interested in the use of psilocybin in clinical contexts to treat depression and anxiety as well as the dopamine pathways and how they contribute to discipline development. |
 | hobbies | weightlifting, cooking, fishing, and hiking. |
 
+| ![arias](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/Arias.jpg) | Dalia Arias |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | DaliaArias02 |
+| Email  | darias033@fiu.edu |
+| research interests | Dalia is interested in clinical, developmental, and neuropsychology, with a focus in the treatments of mood and anxiety disorders. |
+| hobbies | working out, traveling, and baking |
