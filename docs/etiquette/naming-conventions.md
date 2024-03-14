@@ -248,6 +248,7 @@ In the above, "X" is replaced by a numerical value (1, 2, 3) to indicate the ord
 The characters that comprise the `instrument` part of the instrument name should be a reasonable match to the typical acronym used. The following letters can be appended, without any separator, to classify "sister" versions of the instrument:
 * `c` or `ca`: the child (and/or adolescent) variation
 * `p`: the parent variation
+* `l` or `s`: the long or short versions, respectively
 * `es`: the Spanish version
 
 Because `es` is appended directly to an instrument acronym for the Spanish version, and in order to ensure that responses can be counted across English and Spanish surveys for data monitoring purposes, it is imperative that no English instrument be named in such a way that the name ends in "es."
@@ -313,9 +314,14 @@ Scored instruments are revised by appending "_b" (or "_c", "_d", "_z", "_aa", et
 > instrument name: adexi_s1_r1_e1 :point_right: adexi_b_s1_r1_e1<br/>
 > question 1: adexi_i1_s1_r1_e1 :point_right: adexi_b_i1_s1_r1_e1
 
+In certain cases, instruments can be revised by appending a letter and number (i.e., "b2", "c2", etc.) to the instrument name and to all variables. This typically applies when a survey that already has a version letter is used for a longitudinal study and the version used for the baseline session is modified only slightly to be used for subsequent sessions. Example:
+
+> instrument name: demo_d_s1_r1_e1 :point_right: demo_d2_s2_r1_e1<br/>
+> question 1: demo_d_i1_s1_r1_e1 :point_right: demo_d2_i1_s2_r1_e1
+
 #### **Unscored Instruments**
 
-Unscored instrument may either use the revisioning system described above for scored instruments (i.e., "_b"). In some cases, such as the initState and postTask questionnaires, it was envisaged that the lab would build up a repertoire of different versions over time. For these instruments, the letter versioning is built directly into the name:
+Unscored instrument may use the revisioning system described above for scored instruments (i.e., "_b"). In some cases, such as the initState and postTask questionnaires, it was envisaged that the lab would build up a repertoire of different versions over time. For these instruments, the letter versioning is built directly into the name:
 
 > instrument name: postTaskA_s1_r1_e1 :point_right: postTaskB_s1_r1_e1<br/>
 > question 1: postTaskA_i1_s1_r1_e1 :point_right: postTaskB_i1_s1_r1_e1
