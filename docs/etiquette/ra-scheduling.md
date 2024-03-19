@@ -11,7 +11,7 @@ nav_order: 6
 
 
 ## Overview
-In order to ensure junior RA scheduling is handled in a organized and efficient manner, all lab members who are in the position of scheduling junior RAs for tasks, trainings, study visits, etc. must follow the rules laid out in this section. For more information on accessing the Grant-Affiliated Junior RA calendar, visit the Lab Calendars page in the Around the Lab section of the wiki.
+In order to ensure junior RA scheduling is handled in a organized and efficient manner, all lab members who are in the position of scheduling junior RAs for tasks, trainings, study visits, etc. must follow the rules laid out in this section. For more information on accessing the Grant-Affiliated Junior RA calendar, visit the Calendaring page in this section of the wiki.
 
 Note that in the event that an exeption to any of the rules on this page needs to be requested, **the request should be sent to both the Schedule Coordinator and Lab Manager**, who will decide whether the exeption can be made.
 
