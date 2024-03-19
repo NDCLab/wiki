@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Data Monitoring
+title: RA Scheduling
 parent: Etiquette
 nav_order: 6
 ---
