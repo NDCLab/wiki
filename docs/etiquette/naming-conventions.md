@@ -305,7 +305,9 @@ The "ov" immediately after the item number blocks the instruments scoring script
 
 ### Updating Instruments
 
-Whenever an instrument is modified (including correction of errors and re-working of questionnaires based on the natural evolution of the lab's research program), a new instrument is created. This enables the lab to track exactly which version of a questionnaire was given to a specific participant.
+Whenever an instrument is modified (including correction of significant errors and re-working of questionnaires based on the natural evolution of the lab's research program), a new instrument is created. This enables the lab to track exactly which version of a questionnaire was given to a specific participant. 
+
+Note that, if an instrument requires a minor modification while data collection is ongoing, this does not necessitate the creation of a new instrument. Instead, the minor change should be made directly to the instrument, both within REDCap as well as within the instruments repository. If any data will be lost as a result of the change, the data must first be downloaded (including identifiable information if necessary), encrypted, and stored in our ndc_lab folder on the CCF Shared Drive. After the change is made, the lost data must be manually re-entered into the updated instrument. The exact change that was made to the instrument must be listed in the instrument's readme document in its folder in the instruments repository along with the date the change was made and any other relevant details.
 
 #### **Scored Instruments**
 
