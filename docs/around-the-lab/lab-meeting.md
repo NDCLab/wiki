@@ -22,10 +22,11 @@ The lab generally operates year-round.  However, no meetings are scheduled for d
 
 ## Lab Calendar
 
-The lab maintains a shared Google calendar, to which lab members are granted access during [formal onboarding](https://ndclab.github.io/wiki/docs/Onboarding/overview.html). This calendar provide a broad view into ongoing lab activities. During onboarding, you will receive a message granting you access; click "Add this calendar" to add the shared calendar to your own calendar so you can see all lab activities. You can then toggle the view on/off as you desire.
+The lab maintains a shared Google calendar called "NDCLab Shared", to which lab members are granted access during [formal onboarding](https://ndclab.github.io/wiki/docs/Onboarding/overview.html). This calendar provide a broad view into ongoing lab activities. During onboarding, you will receive a message granting you access; click "Add this calendar" to add the shared calendar to your own calendar so you can see all lab activities. You can then toggle the view on/off as you desire.
 
 ![ndclab-calendar](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/ndclab-calendar.png)
 
+Note that information about other lab calendars can be found on the Lab Calendars page in this section.
 
 ## Bi-Weekly Lab Meeting
 
