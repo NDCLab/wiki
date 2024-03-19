@@ -26,7 +26,7 @@ The lab maintains a shared Google calendar called "NDCLab Shared", to which lab 
 
 ![ndclab-calendar](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/onboarding/ndclab-calendar.png)
 
-Note that information about other lab calendars can be found on the Lab Calendars page in this section.
+Note that information about other lab calendars can be found on the Calendaring page in the Etiquette section.
 
 ## Bi-Weekly Lab Meeting
 
