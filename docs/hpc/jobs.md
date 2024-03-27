@@ -9,10 +9,11 @@ nav_order: 3
 1. [Overview](#overview)
 2. [Creating a Slurm File](#creating-a-slurm-file)
 3. [Running a Slurm File](#running-a-slurm-file)
-4. [Why is my job taking forever?](#why-is-my-job-taking-forever)
+4. [Using parallel processing](#using-parallel-processing)
+5. [Why is my job taking forever?](#why-is-my-job-taking-forever)
 
 ## Overview
-For anything that goes beyond running basic lines of code, a job must be submitted to the compute nodes so that the compute nodes can properly handle tasks. Note, this is a **requirement** on the HPC, as login nodes are not the intended resource for computation.
+For anything that goes beyond running basic lines of code, a job must be submitted to the compute nodes so that the compute nodes can properly handle tasks. Note, this is a **requirement** on the HPC, as login nodes are not the intended resource for computation. Job submission is handled by the Slurm batch scheduler which allocates compute resources to the job when they become available.
 
 ## Creating a Slurm File
 To create a job, a [slurm](https://slurm.schedmd.com/documentation.html) file must be created:
@@ -39,7 +40,7 @@ The file below represents a sample Slurm script where a conda base environment i
 #SBATCH --nodes=1                	# node count
 #SBATCH --ntasks=1               	# total number of tasks across all nodes
 #SBATCH --time=00:10:00          	# total run time limit (HH:MM:SS)
-#SBATCH --mem=10G                       # real memory per node (use G for gigabytes)
+#SBATCH --mem=10G                       # real memory per node (use G for gigabytes, M for megabytes)
 #SBATCH --mail-type=end          	# send email when job ends
 #SBATCH --mail-user=email@fiu.edu       # email address
 (if running a highmem job:)
@@ -51,6 +52,7 @@ module load singularity-3.8.2
 
 singularity exec --bind /home/data/NDClab /home/data/NDClab/tools/containers/python-3.8/python-3.8.simg python3 filename.py
 ```
+https://slurm.schedmd.com/sbatch.html
 
 Here is a guide to what these details in the .sub file mean and how they should be customized:
 
@@ -58,11 +60,13 @@ Here is a guide to what these details in the .sub file mean and how they should 
 | :--  | :--  | :--  |
 | #!/bin/bash  | tells the HPC to read what follows in the Bash language  | Do not modify.  |
 | job-name  | name for the job that displays in squeue  | Replace "myjob" with a short, informative name for the job you are running. You can then see this easily on the squeue.  |
-| nodes  | tells the HPC how many nodes should be utilized (nodes are individual computers in the cluster)  | Keep at "1" unless you are doing parallel processing.  |
+| nodes  | tells the HPC how many nodes (at minimum) should be utilized (nodes are collections of CPUs)  | Keep at "1" unless you are doing parallel processing.  |
 | tasks  | tells the HPC how many tasks (that is, CPUs) should be utilized across the number of nodes selected | Keep at "1" unless you are doing parallel processing.  |
-| time  | limits the amount of time the HPC should devote to running the script  | Ballpark the time your script will need to run and give yourself some buffer. For parallel processes, this will need to be set very high. But be careful not to burn through lab time on the HPC.  |
-| mem | how much memory to allocate to the job (per node) | If your job errors due to not having enough memory, try raising this value and trying again. Maximum on default nodes is 30 GB. |
-| account | The HPC account used to run the script | By default this will be "acc_gbuzzell" and this line can be omitted. For high memory jobs, "iacc_gbuzzell" should be used (along with partition and qos lines specifying the "highmem1" partition). |
+| time  | limits the amount of time the HPC should devote to running the script  | Ballpark the time your script will need to run and give yourself some buffer. Please don't go way overboard and burn through excessive lab time on the HPC. Jobs are killed once walltime is reached. |
+| mem | how much memory to allocate to the job (per node) | You don't want to request way more memory than you need, but you also don't want to run out of memory, so it may take a bit of trial and error to figure out how much to request here. No need to request 30 GB when you only need 1! If your job errors due to not having enough memory, try raising this value and trying again. Maximum on default nodes is 30 GB (highmem nodes is much higher ~500GB). |
+| account | The HPC account used to run the script | By default this will be "acc_gbuzzell" and this line can be omitted. For high memory jobs, the paid queue "iacc_gbuzzell" should be used (along with partition and qos lines specifying the "highmem1" partition). |
+| partition | The node partition desired | (see above) defaults are "default-partition" or "default-alternate", high memory nodes are in the "highmem1" partition  |
+| qos | quality-of-service | (see above) |
 | mail-type  | tells the HPC to send you an e-mail when the job is done  | If the job is very small and will run quickly, you can delete this line to avoid an unnecessary e-mail in your inbox. Otherwise, leave it unchanged.  |
 | module load singularity-3.8.2  | loads the IRCC-managed singularity image  | Do not modify. (However, if you become aware of a newer image, please PR a suggested wiki update to the lab technician!)  |
 | singularity exec --bind /home/data/NDClab  | binds data within the NDCLab folder to the singularity image  | Do not modify.  |
@@ -88,11 +92,44 @@ To run an existing slurm file, you will log into the HPC and utilize the [shell]
 6. Run the script by typing the following into the shell: `sbatch <filename.sub>`. For instance, to execute a hallMonitor.sub file, you would type `sbatch hallMonitor.sub`.
 7. The shell will output a message to indicate that the batch was submitted and its associated job number:
 ![sbatch-submit](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/sbatch-submit.png)
+    1. Alternatively, the parameters in the "#SBATCH" lines above can be specified on the command line and will override whatever is in the .sub file. `sbatch --mem=3G <filename.sub>` will request 3 GB memory for example.
 8. Check status and runtime of currently running scripts with the squeue command: `squeue -u <username>`.
 9. Use `ls` to see if the process is complete. When it is complete, you will see an output file in the same folder whose name is "slurm-NUMBER.out":
 ![sbatch-output](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/sbatch-output.png)
 10. Use `cat slurm-NUMBERS.out` to print all messages to the console.
 11. If your script is designed to output any new files (for example, a CSV), and assuming you don't get any error messages, that file should now exist in the appropriate folder.
+
+## Using parallel processing
+One advantage to submitting jobs to the batch scheduler, instead of just running a script in a HPC terminal or on your local machine, is that you can request multiple cores from Slurm and utilize parallel processing in your job. Running parts of your script in parallel can save time and computing power and minimize the number of jobs you need to request. For example, if you need to process 20 files, rather than submitting 20 separate jobs to the batch scheduler, or running them all sequentially and requesting a large walltime, you can run them in parallel by requesting multiple CPUs and processing multiple subjects at once.
+
+Change the "ntasks" line from 1 to the number of cores you want to request, and make sure your "mem" requested is large enough to handle these multiple processes running concurrently.
+
+Instead of "--mem" you can use "--mem-per-cpu" if you want to specify the memory needed for each worker (mem-per-cpu * # cores = total mem).
+
+### In Matlab
+You can modify your matlab script to run processes in parallel by adding the lines below:
+
+```
+cluster = parcluster('local');
+
+numCores = maxNumCompThreads; % this should be the maximum cores available to you, same as ntasks * cpus-per-task
+
+parpool(cluster, numCores)
+
+%% And then replace a for loop with a parfor loop
+parfor data = 1:length(dataList)
+  % process data in parallel
+end
+```
+
+Keep in mind using parpool in Matlab, that workers must be on the same node. So running on a medium memory node can use at maximum 16 cores (though high memory nodes have from ~40-88 CPUs).
+
+(If you really want to utilize workers across different nodes the "cpus-per-task" option can be used instead of/in conjuction with "ntasks" https://www.mathworks.com/matlabcentral/answers/747522-hpc-slurm-ntasks-and-matlab-parcluster-numworkers-question but aside from this use case ntasks and cpus-per-task should behave the same.)
+
+### In Python
+You can utilize parallel processing in Python with the "multiprocessing" module.
+
+https://www.sitepoint.com/python-multiprocessing-parallel-programming/
 
 ## Why is my job taking forever?
 
