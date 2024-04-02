@@ -213,3 +213,12 @@ nav_order: 2
 | Email  | darias033@fiu.edu |
 | research interests | Dalia is interested in clinical, developmental, and neuropsychology, with a focus in the treatments of mood and anxiety disorders. |
 | hobbies | working out, traveling, and baking |
+
+| ![sagastume](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/sagastume.jpg) | Ivingz Sagastume |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | ivingzsagastume |
+| Email  | isaga004@fiu.edu |
+| research interests | Ivingz is interested in neuropsychology and developmental psychology with an emphasis on treatment of mental health disorders. |
+| hobbies | riding horses, reading, running, and dancing |
