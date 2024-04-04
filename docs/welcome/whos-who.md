@@ -222,3 +222,13 @@ nav_order: 2
 | Email  | isaga004@fiu.edu |
 | research interests | Ivingz is interested in neuropsychology and developmental psychology with an emphasis on treatment of mental health disorders. |
 | hobbies | riding horses, reading, running, and dancing |
+
+| ![cruz](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/cruz.jpg) | Lucia Cruz |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | luciaxcruz |
+| Email  | lcruz142@fiu.edu |
+| research interests | Lucia is interested in behavioral and cognitive neuroscience, as well as psychiatry. |
+| hobbies | Traveling, nails, outdoor activities, and watching motorsports|
+
