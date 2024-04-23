@@ -274,24 +274,29 @@ In order to run data monitoring scripts, data must first be uploaded to the HPC.
 - All other data that is collected during a study visit (psychopy, eeg, digi, etc.) is uploaded by the RA(s) that conducted the visit as soon as the visit has concluded. Specific instructions regarding post-visit data backups are included in the project's study protocol.
 
 ### Decryption Checks
-All encrypted data (audio,video, digi) that is uploaded to the HPC following a study visit must be checked for proper encryption within 3 days of upload. These decryption checks will be performed by assigned RAs who did not upload the data to the HPC, to ensure that the study decryption password works to decrypt the files. After checking for proper encryption, the RA will manually move the checked audio, video, and digi files to `sourcedata/checked`. Finally, the RA must update the study's decryption check log to indicate that the files passed the decryption check and were moved to `sourcedata/checked`.
+All encrypted data (audio, video, digi) that is uploaded to the HPC following a study visit must be checked for proper encryption within 3 days of upload. These decryption checks will be performed by assigned RAs or staff who did not upload the data to the HPC, to ensure that the study decryption password works to decrypt the files. After checking for proper encryption, the RA will manually move the checked audio, video, and digi files to `sourcedata/checked`. Finally, the RA must update the study's decryption check log to indicate that the files passed the decryption check and were moved to `sourcedata/checked`.
 
 The study lead/coordinator should perform weekly reviews to ensure that all encrypted data in `sourcedata/raw` has been checked for proper encryption and manually moved to `sourcedata/checked`.
 
 ### Running Data Monitoring
 Data monitoring scripts (hallMonitor.sub and preprocess.sub) should be run once a week by the study lead/coordinator. It is recommended that you create a recurring reminder on your calendar or on Slack (`/remind me on fridays 'run hallMonitor and preprocess'`).
 
-After running hallMonitor, review the error log output file for errors requiring correction (by using `cat` to print the messages to the console, i.e. `cat slurm-NUMBER_errorlog.out`). You will need to make the necessary corrections so that errors are no longer received. There are two cases in which an error cannot or should not be directly corrected, but a note should be logged in the participant's folder to explain the lack of correction.
+After running hallMonitor, review the error log output file for errors requiring correction (by using `cat` to print the messages to the console, i.e. `cat slurm-NUMBER_errorlog.out`). You will need to make the necessary corrections so that errors are no longer received. Please note the following two cases in which corrections must be made in multiple places:
+- If the ID was enterred incorrectly for a psychopy file, the ID must be corrected both in the file's name and in the .CSV file's ID column
+- If a Brain Vision EEG file was named incorrectly, the name must be corrected in all EEG files' names as well as in the DataFile and MarkerFile lines at the top of the .vhdr file
+
+There are two cases in which an error cannot or should not be directly corrected, but a note should be logged in the participant's folder to explain the lack of correction.
 
 Case A: One or more file name(s) intentionally deviates from convention and does not require correction:
 1. Ensure that the first portion of the file name leading up to the deviation matches file naming conventions (i.e., `subject` _ `task` _ `dataType` _ `session/run/event suffix`) and that the deviation comes at the end of the name and is separated from the suffix by an underscore (for an example, see the "Intentional Deviations" section on the [Naming Conventions page](https://ndclab.github.io/wiki/docs/etiquette/naming-conventions.html)).
-2. Add a text file named "deviation.txt" to the folder containing the file(s) with deviations. The "deviation.txt" file should contain an explanation for all of the files' intentional deviations from naming convention.
-3. Manually copy both the file(s) with the naming deviation and the "deviation.txt" file to `sourcedata/checked`
+2. There should be a text file in the folder named "issue.txt" which contains an explanation for the the files' intentional deviations from naming convention (if there isn't, alert the RA(s) who uploaded the data and ask them to add the text file). After ensuring the files in the folder are named properly, rename the "issue.txt" file to "deviation.txt".
+- Note: if the "deviation.txt" file is in an EEG folder, then the first line of the text file must specify which files in that folder should be processed by the EEG preprocessing pipeline. To do so, add a line to the top of the text file that states: "Files to process: `file-name`.eeg, `file-name.vmrk`, `file-name`.vhdr". However, if the EEG recording for a single task had to be split into two sets of files, then you should not add the "Files to process" line to the "deviation.txt" file, because the EEG preprocessing pipeline cannot process the participant's EEG data in such a case.
+4. Manually copy both the file(s) with the naming deviation and the "deviation.txt" file to `sourcedata/checked`
 
 Case B: Data was not collected for that participant:
-1. Upon uploading data to the HPC following a study visit, the RA will make note of any data that was not collected by uploading blank text files called "no_\<datatype\>" (e.g., "no_digi") to the participant's folder.
-2. Rename the "no_\<datatype\>" file to "deviation.txt", then edit the file to contain the text "This participant's data was not collected".
-3. Manually copy the "deviation.txt" file to `sourcedata/checked`
+1. Upon uploading data to the HPC following a study visit, the RA will make note of any data that was not collected by uploading blank "issue.txt" text files to the participant's folder.
+2. Rename the "issue.txt" file to "no-data.txt", then edit the file to add the following line: "This participant's data was not collected."
+3. Manually copy the "no-data.txt" file to `sourcedata/checked`
 
 After making any necessary corrections, re-run the script until no errors are received. Ensure that `sourcedata/checked` and the central tracker have been updated to reflect the resolved errors, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out`).
 
