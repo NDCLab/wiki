@@ -281,7 +281,7 @@ The study lead/coordinator should perform weekly reviews to ensure that all encr
 ### Running Data Monitoring
 Data monitoring scripts (hallMonitor.sub and preprocess.sub) should be run once a week by the study lead/coordinator. It is recommended that you create a recurring reminder on your calendar or on Slack (`/remind me on fridays 'run hallMonitor and preprocess'`).
 
-After running hallMonitor, review the error log output file for errors requiring correction (by using `cat` to print the messages to the console, i.e. `cat slurm-NUMBER_errorlog.out`). You will need to make the necessary corrections so that errors are no longer received. Please note the following two cases in which corrections must be made in multiple places:
+After running hallMonitor, review the error log output file for errors requiring correction (by using `cat` to print the messages to the console, i.e. `cat slurm-NUMBER_errorlog.out`). You will need to make the necessary corrections so that errors are no longer received. Each time you make a change, you must make note of that change in the study's data-monitoring-log tracker spreadsheet (which should be created by the study lead when data monitoring begins running). Please note the following two cases in which corrections must be made in multiple places:
 - If the ID was enterred incorrectly for a psychopy file, the ID must be corrected both in the file's name and in the .csv file's ID column
 - If a Brain Vision EEG file was named incorrectly, the name must be corrected in all EEG files' names as well as in the DataFile and MarkerFile lines at the top of the .vhdr file
 
