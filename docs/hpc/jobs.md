@@ -85,7 +85,7 @@ To run an existing slurm file, you will log into the HPC and utilize the [shell]
 ![shell-access](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/shell-access.png)
 4. When prompted, input your password. (It will no look like you are typing anything, but persevere and hit Enter!)
 5. Navigate to the folder containing the slurm file (file extension `.sub`) that you want to execute using `cd` commands.
-6. Run the script by typing the following into the shell: `sbatch <filename.sub>`. For instance, to execute a hallMonitor.sub file, you would type `sbatch hallMonitor.sub`.
+6. Run the script by typing the following into the shell: `sbatch <filename.sub>`. For instance, to execute a hallMonitor.sub file, you would type `sbatch hallMonitor.sub`. If you want to call your script with different or additional parameters than what is specified in the script with the #SBATCH lines, here is where you need to add those flags and arguments (e.g. `sbatch --mem=1000 <filename.sub>`, check out `sbatch --help` for info on how to use sbatch effectively).
 7. The shell will output a message to indicate that the batch was submitted and its associated job number:
 ![sbatch-submit](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/hpc/sbatch-submit.png)
 8. Check status and runtime of currently running scripts with the squeue command: `squeue -u <username>`.

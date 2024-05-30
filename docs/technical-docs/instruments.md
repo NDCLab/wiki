@@ -41,41 +41,31 @@ The coding scripts interpret a .json file and construct a unique survey object, 
 4. Save collected REDCap data in .csv format to the HPC in accordance with your data collection protocol.
 
 ### Preprocessing Collected Data
-If you have already set up [data monitoring](https://ndclab.github.io/wiki/docs/etiquette/data-monitoring.html) for your study, the call for [`preprocess.sub`](https://ndclab.github.io/wiki/docs/etiquette/data-monitoring.html#preprocesssub) will actually call the instruments script automatically. If you have not yet completed setup of data monitoring for your study, you may also run a single REDCap .csv file through the script manually:
+If you have already set up [data monitoring](https://ndclab.github.io/wiki/docs/etiquette/data-monitoring.html) for your study, the call for [`preprocess.sub`](https://ndclab.github.io/wiki/docs/etiquette/data-monitoring.html#preprocesssub) will actually call the instruments script automatically. In addition to scoring Redcap data `preprocess.sub` will preprocess any raw EEG files it sees in sourcedata/checked. Because the EEG preprocessing pipeline takes many hours you may need to use the `preprocess_wrapper.sh` script, which requests the proper amount of walltime based on how many unprocessed EEG files you have in sourcedata. Or if you have not yet completed setup of data monitoring for your study, you may also run REDCap .csv files through the script without doing EEG preprocessing:
 
-1. Notify the lab at large that you are working with the instruments repo by sending a message on the #tech channel on Slack. Only one person can run the script manually at a given time.
+1. Copy the `preprocess_wrapper.sh` and `preprocess.sub` scripts from lab-devOps (/home/data/NDClab/tools/lab-devOps/scripts/monitor/template) to your dataset's `data-monitoring` folder (if not done automatically during setup of data monitoring).
 
-2. Log in to the [HPC](https://ndclab.github.io/wiki/docs/hpc/accessing.html) via the [shell](https://ndclab.github.io/wiki/docs/technical-docs/shell.html). You can do this via an `ssh` command on your local terminal or by accessing "Pather Shell Access" on the HPC webpage. 
+2. To
+- process every as-yet unprocessed EEG file, call without any arguments:
+		`bash preprocess_wrapper.sh`
 
-3. Navigate to the instruments repo located on the HPC by entering the following command:
-    ```
-    cd /home/data/NDClab/tools/instruments
-    ```
+- process only certain subjects in certain session folders, use the "-s" flag:
+		`bash preprocess_wrapper.sh -s "s1_r1:0001/0002/0003/0011/00023,s2_r1:0001/0002/0003"`
 
-4. We can use the script `process.sub` located in the `hpc/` folder to analyze data. First, we need to swap the string paths located below the comment that says "edit variables here to change inputs and outputs." You can edit files directly from the terminal by executing `nano hpc/process.sub`.  This opens the .sub file within your shell so that you can modify its contents.
+- process everybody *but* certain subjects in certain session folders, use "-n" flag:
+		`bash preprocess_wrapper.sh -n "s1_r1:0001/0002/0003"`
 
-    Example paths are in-place already. You will overwrite portions of each of the three lines:
+- To only score Redcap data (in `sourcedata/checked/redcap`), ignoring any unprocessed EEG files for now, use "-r" or "-d":
+		`bash preprocess_wrapper.sh -r`
 
-    1. Replace "this-is-some-dataset" in the `project` variable to specify which project folder the data resides in. Examples of project folders are "rwe-dataset" or "memory-for-error-dataset."
-    2. Replace "DATA" in the `input_file` variable to specify exactly which file should be processed.
-    3. Check the output_file path. This should typically remain unchanged ("../derivatives/preprocessed/").
+where "-r" will update the central tracker with scored columns, whereas "-d" can be used if data monitoring hasn't been set up yet and there is no central tracker or data dictionary yet.
 
-        ```
-        # edit variables here to change inputs and check output path
-        project="this-is-some-dataset"
-        input_file="/home/data/NDClab/datasets/$project/sourcedata/raw/DATA.csv"
-        output_file="/home/data/NDClab/datasets/$project/derivatives/preprocessed/"
-        ```
+If you want to call `preprocess.sub` by itself you can use a single command. Say you know you have 8 unprocessed EEG files, wanting to process 4 at a time, try:
+		`sbatch --mem=40G --cpus-per-task=4 --time=24:00:00 --account=iacc_gbuzzell --partition=highmem1 --qos=highmem1  preprocess.sub`
 
-5. To save your changes to the .sub file, hold down the ctrl key and press the letter ‘o’. (Note: this is ctrl on both PC and Mac, not cmd.) You will be prompted to save the file, which you do by hitting enter/return. Then, to exit the nano view, hold down the ctrl key again and press the letter ‘x’.
+3. In order to keep the folder tidy, delete the .out file that is created.
 
-6. Lastly you can run this script by executing the command `sbatch hpc/process.sub`. This will output data to the `output_file` path that you've specified.
-
-7. In order to keep the folder tidy, delete the .out file that is created.
-
-8. Notify the lab on the #tech channel that you done with instruments so that someone else may use it.
-
-9. The .csv file that is output is a replica of the input file (that is, all the original data points are still there), **plus** new columns that provide all (sub)scores for each questionnaire. Details on subscores are available in the data dictionary for each input questionnaire. Happy analyzing! 
+4. The .csv file that is output is a replica of the input file (that is, all the original data points are still there), **plus** new columns that provide all (sub)scores for each questionnaire. Details on subscores are available in the data dictionary for each input questionnaire. Happy analyzing! 
 
 ## Adding New Instruments
 Before building a new instrument, be certain that you have familiarized yourself with several other instruments commonly used by the lab before you build a new one, so that your newly created instrument will have a similar look and feel to existing questionnaires. Likewise, familiarize yourself with the structure of the `instruments` repository, in particular the readme files associated with each questionnaire.
@@ -125,7 +115,7 @@ Please follow these guidelines when creating a new instrument for the lab:
 7. Commit your changes and push your branch to the remote, then initiate a pull request and assign to the lab manager for review.
 
 ### Scoring Instructions
-The basic structure for each score is self-evident from the structure of surveys.json. The following three parameters are required:
+The basic structure for each score is self-evident from the structure of surveys.json (in `scripts`). The following three parameters are required:
 * `questions`: item number of each question that should be used to calculate the score (if all questions should be included, use `null`)
 * `score_type`: typically "sum" or "avg" (check subscore.py for other options)
 * `threshold`: minimum percentage of response to calculate a score (typically 1.0 for "sum" and 0.8 for "avg")
