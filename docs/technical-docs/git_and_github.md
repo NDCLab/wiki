@@ -89,7 +89,7 @@ Example:
 ```sh
 git add some_file.txt
 ```
-
+Note: you can also use `git add .` to add all unstaged files to the staging area for the next commit.
 
 ### `clone`
 
