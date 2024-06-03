@@ -114,11 +114,16 @@ After executing this command, the following new files (in addition to the blank 
 - hallMonitor.sh
 - hallMonitor.sub
 - preprocess.sub
+- preprocess_wrapper.sub
 - rename-cols.py
 - check-id.py
 - update-tracker.py
 - verify-copy.py
 - check-datadict.py
+- data-monitoring-log.md
+- check_existence_datatype_folders.py
+- subjects_yet_to_process.py
+- update-tracker-postMADE.py
 
 `setup.sh` should be re-run any time the data dictionary is modified so that the central tracker stays up to date. `hallMonitor` will give a warning when it sees that the data dictionary used in setup is not the most recent version.
 
@@ -128,7 +133,7 @@ Details for hallMonitor and preprocess are available below.
 ## hallMonitor.sub
 
 ### Purpose
-The hallMonitor script (hallMonitor.sh) is triggered by running the associated slurm file (hallMonitor.sub) while in `data-monitoring` (`cd your-dataset/data-monitoring`).  It checks that raw data (`sourcedata/raw`) is in good order and, once confirmed, places a copy of the data in `sourcedata/checked`. Errors in the names and structure of the files in `sourcedata/raw` are noted in the slurm-XXXX.out and slurm-XXXX_errorlog.out files. This serves two key purposes:
+The hallMonitor script (hallMonitor.sh) is triggered by running the associated slurm file (hallMonitor.sub) while in `data-monitoring` (`cd your-dataset/data-monitoring` and then `sbatch hallMonitor.sub`).  It checks that raw data (`sourcedata/raw`) is in good order and, once confirmed, places a copy of the data in `sourcedata/checked`. Errors in the names and structure of the files in `sourcedata/raw` are noted in the slurm-XXXX.out and slurm-XXXX_errorlog.out files. This serves two key purposes:
 1. issues with the incoming data (e.g., improper file naming) are identified and corrected early.
 2. downstream processes (like updating the central tracker) interact with the "checked" data and safeguard the integrity of the original "raw" data.
 
@@ -152,8 +157,8 @@ Specifically, hallMonitor performs the following checks:
 Within `sourcedata/checked`, folders should be organized by subject, session, and datatype:<br/>
 /checked/<br/>
 ├── redcap/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├── sub-XXXXXX/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;├── sub-XXXXXX/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── Redcap1_DATA_YYYY_MM_DD_HHMM.csv<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;├── Redcap2_DATA_YYYY_MM_DD_HHMM.csv<br/>
 ├── sub-XXXXXX/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;├── s1_r1/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── eeg/<br/>
@@ -220,7 +225,10 @@ Once you have completed the hallMonitor process and everything is tidy, push you
 ## preprocess.sub
 
 ### Purpose
-Pre-processing scripts transform the data collected from participants (questionnaires, behavioral tasks) into aggregate numbers that can be used for data analysis. These should draw upon data in the `sourcedata/checked` folder and output to `derivatives/preprocessed`. The preprocess slurm script is a handy shortcut that binds together the automated scoring of REDCap data (via the instruments script) along with any other custom scripts that you tell it to run.
+Pre-processing scripts transform the data collected from participants (questionnaires, behavioral tasks) into aggregate numbers that can be used for data analysis. These should draw upon data in the `sourcedata/checked` folder and output to `derivatives/preprocessed`. The preprocess slurm script is a handy shortcut that binds together the automated scoring of REDCap data (via the instruments script), the preprocessing of your EEG data, and any other custom scripts that you tell it to run. Raw EEG files should be preprocessed with the Maryland Analysis of Developmental EEG (MADE) pipeline, which is a preprocessing pipeline specially tailored for pediatric EEG data. This pipeline can take 6-10 hours to process one EEG file, and so the amount of walltime you need depends on how many subjects you need to process. You can ask for more walltime from the command line (i.e. `sbatch --time=24:00:00 preprocess.sub`) or you can use `preprocess_wrapper.sh` which helps with this. Outputs from preprocess.sub are saved in `derivatives/preprocessed`.
+
+#### preprocess_wrapper.sh
+In cases where you want to preprocess only certain subjects, or if you want to quickly score REDCap data without processing all your EEG files which can take many hours, the `preprocess_wrapper.sh` script can be useful. By default `preprocess.sub` requests just 30 minutes, and so if there are any unprocessed EEG files in `sourcedata/checked` you may need to use this wrapper script. See [here](https://ndclab.github.io/wiki/docs/technical-docs/instruments.html#preprocessing-collected-data) for more info on using this.
 
 ### Instruments
 The preprocess slurm script calls the instruments scoring mechanism, which will identify the most recent REDCap file in `sourcedata/checked/redcap`, score it automatically, and output it to `derivatives/preprocessed`, having renamed the "DATA" in the original filename to "SCRD."  It also updates any columns in the central tracker that are built from rows in the data dictionary that have the dataType "redcap_scrd".
@@ -299,7 +307,7 @@ Case B: Data was not collected for that participant:
 2. Rename the "issue.txt" file to "no-data.txt", then edit the file to add the following line: "This participant's data was not collected."
 3. Manually copy the "no-data.txt" file to `sourcedata/checked`
 
-After making any necessary corrections, re-run the script until no errors are received. Ensure that `sourcedata/checked` and the central tracker have been updated to reflect the resolved errors, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out`).
+After making any necessary corrections, re-run the script until no errors are received. Ensure that `sourcedata/checked` and the central tracker have been updated to reflect the resolved errors, then remove all .out files to keep a tidy folder (`rm slurm-NUMBER.out` or `rm slurm-*.out` to delete them all).
 
 
 ## Final Considerations
