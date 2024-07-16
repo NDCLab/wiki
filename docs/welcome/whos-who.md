@@ -39,6 +39,15 @@ nav_order: 2
 | research interests | David is interested in fMRI and connectomics, computer models of cognition, visual neuroscience, EEG, white matter tractography. |
 | hobbies | Trying to cook new recipes, on and off Pacers fan, coffee and tea. |
 
+| ![welch](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/welch.jpg) | Nolan Welch |
+| --- | --- |
+| pronouns | he/him/his |
+| location | Apex, NC |
+| GitHub | nolanwelch |
+| Email | nwelch@fiu.edu |
+| research interests | Nolan is interested in computational and cognitive linguistics. |
+| hobbies | Baking, cooking, learning about odd etymologies, and reading. Prone to falling down Wikipedia rabbit holes. |
+
 ### EEG Research Assistant
 
 | ![garciamorazzani](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/garciamorazzani.jpg) | Ana Garcia Morazzani |
