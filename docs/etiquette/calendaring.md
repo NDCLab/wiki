@@ -19,7 +19,7 @@ This page provides information about acessing and modifiying the various Google 
 All grant-affiliated junior RA activities are managed on the Grant-Affiliated Junior RA calendar. Non-grant-affiliated junior RA activities are managed on separate calendars that are owned and maintained by the study lead coordinating the project to which those non-grant-affiliated junior RAs are assigned.
 
 #### Grant-Affiliated Junior RA Calendar
-The Lab Manager is responsible for creating a schedule for grant-affiliated junior RAs at the start of each semester. This schedule will consist of two 4-hour shifts for each junior RA, during which time that junior RA must be available every week. The standard shift times are as follows:
+The Lab Manager is responsible for creating a schedule for grant-affiliated junior RAs at the start of each semester. The schedule for each semester extends from the first day of classes for that semester until the day before the first day of classes for the following semester. This schedule will consist of two 4-hour shifts for each junior RA, during which time that junior RA must be available every week. The standard shift times are as follows:
 
 * Weekday mornings (M-F) from 9am-1:30pm EST
 * Weekday evenings (M-F) from 4:30-9pm EST
