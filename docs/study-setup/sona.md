@@ -52,10 +52,12 @@ To create a new study on SONA, you will set it up on the SONA platform, then req
 ### Creating Time Slots
 Once your study is set up and approved, you can create time slots for participant sign-ups. If you are running a synchronous study, you will want specific timeslots for each participant; if you are running an asynchronous study, you can create a mega timeslot for the entire semester and use a high "max number of participants" to run all your participants for the semester under the same timeslot.
 
+You should set up all timeslots so that participants must sign up at least 24 hours in advance.
+
 1. Within your study on SONA, scroll down and click "View/Administer Time Slots."
 2. Click "Add a Timeslot."
 3. Establish the Final Participation Date and Final Participation Time. Though the start date of the study is variable (ideally close to the beginning of the semester), the end date of a SONA study should generally be the Friday one week before the academic semester at FIU ends. To find out when the semester ends (i.e, the last week of class before finals week), visit [this link](https://onestop.fiu.edu/academic-calendar/).  Note that participants see this deadline when they sign up, so it cannot be changed after the time slot is created.  (Technically it can be changed, but this leads to participant confusion for asynchronous studies. The extra week buffer is also to give asynchronous studies adequate time to crosscheck participation data and assign credits.)
-4. Ensure that the “Max. Number of Participants” you have input is logical for your data collection plan and study team resources.
+4. Ensure that the “Max Number of Participants” you have input is logical for your data collection plan and study team resources.
 5. Specify the location.
 6. Select the main researcher e-mail from the dropdown, which, in conjunction with the "Researchers at Timeslot-Level" choice you made in the study settings, ensures that only this e-mail receives notifications about signups and cancellations.
 7. Click the "Add This Timeslot" button.
