@@ -7,8 +7,8 @@ nav_order: 6
 
 ### Contents
 1. [Taking Time Away](#taking-time-away)
-2. [Handling Unplanned Absences - For Staff Members](#unplanned-absences-staff)
-3. [Handling Unplanned Absences - For Volunteer Members](#unplanned-absences-volunteer)
+2. [Unplanned Absences for Staff](#unplanned-absences-for-staff)
+3. [Unplanned Absences for Volunteers](#unplanned-absences-for-volunteers)
 
 ## Taking Time Away
 
@@ -22,7 +22,7 @@ Therefore, lab members are encouraged to regularly take time off for themselves,
 
 In addition, part-time and full-time staff members must comply with FIU policies regarding time off.
 
-## Handling Unplanned Absences - For Staff Members
+## Unplanned Absences for Staff
 
 In the event of an unplanned absence (e.g., personal emergency, illness, etc.) that prevents you from attending a commitment that you had been previously scheduled for, you must inform the PI and the Lab Manager as soon as possible, and make sure to provide all necessary contextual details, such as the time of the meeting, who the expected attendees are, and any other relevant information.
 
@@ -32,7 +32,7 @@ However, if you are unable to handle the situation at the time, you must clearly
 
 Adherence to this policy ensures smooth operation of the lab and minimizes disruption to scheduled activities.
 
-## Handling Unplanned Absences - For Volunteer Members
+## Unplanned Absences for Volunteers
 
 In the event of an unplanned absence that prevents you from attending a commitment that you had been previously scheduled for, you must inform the **both Lab Manager and the senior staff member who scheduled you for the commitment** as soon as possible, and make sure to provide all necessary contextual details.
 
