@@ -5,6 +5,10 @@ parent: Around the Lab
 nav_order: 6
 ---
 
+### Contents
+1. [Taking Time Away](#taking-time-away)
+2. [Handling Unplanned Absences - For Staff Members](#unplanned-absences-staff)
+3. [Handling Unplanned Absences - For Volunteer Members](#unplanned-absences-volunteer)
 
 ## Taking Time Away
 
