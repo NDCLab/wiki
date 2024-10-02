@@ -30,17 +30,30 @@ Note that information about other lab calendars can be found on the Calendaring 
 
 ## Bi-Weekly Lab Meeting
 
-A 1-1.5 hour lab meeting is held every two weeks. All lab members are encouraged to attend, but attendance is not mandatory for junior members.
+A 1-1.5 hour lab meeting is held every two weeks. All lab members are encouraged to attend, but attendance is not mandatory for junior members (aka anyone who is not paid staff or a grad student).
 
 * Agendas are posted the week prior on GitHub.
 * The lab manager messages on the Slack #general channel, starting with: `Lab Meeting | yyyy-mm-dd`; this post includes a link to the GitHub agenda.
-* Following the meeting, the lab manager adds meeting notes (and, if the meeting was recorded, a link to the recording) on the same thread.
 * The lab manager's posts for the most recent lab meeting and the next upcoming meeting are always pinned to the #general channel in Slack.
 * Older posts can be found by searching within Slack:
 ```
 lab meeting in:#general
 ```
 
+## Monthly EEG 101 Meeting
+
+A 1 hour EEG 101 meeting is held once a month. All lab members actively involved in EEG data collection, including junior RAs, are required to attend. Anyone not involved in EEG data collection is welcome to attend, but not required.
+
+Once new lab members have been fully trained to help with EEG data collection, they will be added to the recurring EEG 101 invites on Google Calendar and expected to begin attending the meetings.
+
+If you are actively involved in EEG data collection but cannot attend EEG 101 meetings due to a conflict, you must let Olivia Stibolt (the meeting leader) know ahead of time.
+
+## Monthly Journal Club Meeting
+
+A 1 hour Journal Club meeting is held once a month. All lab members are highly encouraged to attend, but attendance is only mandatory for the lab's grad students.
+
 ## Other Meetings
 
 The lab director, lab manager, lab technician, and project leads may schedule activities on the lab calendar. Only required attendees should receive individual invites to such meetings, so that they also appear on the individual's personal calendar. However, since all lab members have access to the calendar, they can see the existence of any upcoming meeting and request to join in, if so desired.
+
+If you are not included as an invitee on a meeting, you can assume you are not expected to attend. If you are included as an invitee, you may or may not be required to attend, depending on the meeting. If you have any questions about this, please ask the Lab Manager.
