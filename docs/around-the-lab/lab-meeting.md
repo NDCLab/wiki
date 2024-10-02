@@ -42,15 +42,20 @@ lab meeting in:#general
 
 ## Monthly EEG 101 Meeting
 
-A 1 hour EEG 101 meeting is held once a month. All lab members actively involved in EEG data collection, including junior RAs, are required to attend. Anyone not involved in EEG data collection is welcome to attend, but not required.
+A 1 hour EEG 101 meeting is held once a month. All lab members actively involved in EEG data collection, including junior RAs, are required to attend. Anyone not involved in EEG data collection is welcome to attend, but not required. If you are actively involved in EEG data collection but cannot attend EEG 101 meetings due to a conflict, you must let Olivia Stibolt (the meeting leader) know ahead of time.
 
 Once new lab members have been fully trained to help with EEG data collection, they will be added to the recurring EEG 101 invites on Google Calendar and expected to begin attending the meetings.
 
-If you are actively involved in EEG data collection but cannot attend EEG 101 meetings due to a conflict, you must let Olivia Stibolt (the meeting leader) know ahead of time.
+The agenda for each meeting will be attached to the meeting's Google Calendar invite. All EEG 101 attendees are highly encouraged to contribute to each month's agenda ahead of time.
 
 ## Monthly Journal Club Meeting
 
-A 1 hour Journal Club meeting is held once a month. All lab members are highly encouraged to attend, but attendance is only mandatory for the lab's grad students.
+A 1 hour Journal Club meeting is held once a month. All lab members are highly encouraged to attend, but attendance is only mandatory for the lab's grad students. If you plan to attend, you should read the assigned paper beforehand and be prepared to ask questions and discuss main ideas during the meeting.
+
+The paper for each meeting will be attached to the meeting's Google Calendar invite and it will be sent on the Slack #general channel at least 1 week before the meeting. The Lab Manager's post for the most recent journal club meeting and the next upcoming meeting are always pinned to the #general channel in Slack. Older posts can be found by searching within Slack:
+```
+journal club in:#general
+```
 
 ## Other Meetings
 
