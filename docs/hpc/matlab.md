@@ -40,5 +40,6 @@ sh /home/data/NDClab/tools/lab-devOps/scripts/matlab/rmat.sh [--parallel] <your-
 Notes:
 - `<your-script-name>` is the name of your ".m" file, but without the file extension
 - you can optionally attached the `--parallel` flag to specify that this job requires parallel processing
+- the Slurm script requests 1 hour walltime, 1 node, and 1 CPU (4 if --parallel is specified) but these can be edited in the header of the .sub script
 
-This will generate an Slurm script named after your script: `your-script-name.sub`. Run this file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
+This will generate and run a Slurm script named after your script: `your-script-name.sub`. Run this file [as you would any Slurm script](https://ndclab.github.io/wiki/docs/hpc/jobs.html#running-a-slurm-file).
