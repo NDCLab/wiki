@@ -28,25 +28,8 @@ nav_order: 2
 | research interests | Lilly is interested in developmental and clinical psychology, specifically the development and treatment of anxiety and mood disorders. |
 | hobbies | reading, hanging out with my cats, cooking & eating yummy stuff |
 
-| ![assumpcao](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/assumpcao.jpg) | Igor Busch Assumpção |
-| ---  | ---  |
-| pronouns | he/them/theirs |
-| location | Miami, FL |
-| GitHub | igorbusch |
-| Email  | iassumpc@fiu.edu |
-| research interests | Igor is passionate about sensation and perception, encoding, and development of non-invasive neural imaging technology. |
-| hobbies | writing, music, theatre, and martial arts |
 
 ### Lab Technician
-
-| ![hunt](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/hunt.jpg) | David Hunt |
-| ---  | ---  |
-| pronouns | he/him/his |
-| location | Bloomington, IN |
-| GitHub | davhunt |
-| Email  | dhunt@fiu.edu |
-| research interests | David is interested in fMRI and connectomics, computer models of cognition, visual neuroscience, EEG, white matter tractography. |
-| hobbies | Trying to cook new recipes, on and off Pacers fan, coffee and tea. |
 
 | ![welch](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/welch.jpg) | Nolan Welch |
 | --- | --- |
