@@ -49,7 +49,7 @@ Research assistants play a pivotal role in the lab's research. They assist with 
 2. Anticipate a three-semester commitment, at a minimum.
 3. Volunteer for two participant recruitment events each semester.
 4. Adhere to the lab's dress code for all data collection and participant recruitment activities.
-5. [Enroll in PSY 4940 for 0 or 3 credits](https://www.coursicle.com/fiu/courses/PSY/4940/) (waived for RAs who are not currently enrolled at FIU).
+5. [Enroll in PSY 4940 for 0 or 3 credits during your first semester in the lab](https://www.coursicle.com/fiu/courses/PSY/4940/) (waived for RAs who are not currently enrolled at FIU).
 6. Establish a specific schedule for the semester when you will be working on lab activities.
 7. Maintain an active presence on Slack to engage with the lab community.
 
