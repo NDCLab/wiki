@@ -48,17 +48,8 @@ Once new lab members have been fully trained to help with EEG data collection, t
 
 The agenda for each meeting will be attached to the meeting's Google Calendar invite. All EEG 101 attendees are highly encouraged to contribute to each month's agenda ahead of time.
 
-## Monthly Journal Club Meeting
-
-A 1 hour Journal Club meeting is held once a month. All lab members are highly encouraged to attend, but attendance is only mandatory for the lab's grad students. If you plan to attend, you should read the assigned paper beforehand and be prepared to ask questions and discuss main ideas during the meeting.
-
-The paper for each meeting will be attached to the meeting's Google Calendar invite and it will be sent on the Slack #general channel at least 1 week before the meeting. The Lab Manager's post for the most recent journal club meeting and the next upcoming meeting are always pinned to the #general channel in Slack. Older posts can be found by searching within Slack:
-```
-journal club in:#general
-```
-
 ## Other Meetings
 
 The lab director, lab manager, lab technician, and project leads may schedule activities on the lab calendar. Only required attendees should receive individual invites to such meetings, so that they also appear on the individual's personal calendar. However, since all lab members have access to the calendar, they can see the existence of any upcoming meeting and request to join in, if so desired.
 
-If you are not included as an invitee on a meeting, you can assume you are not expected to attend. If you are included as an invitee, you may or may not be required to attend, depending on the meeting. If you have any questions about this, please ask the Lab Manager.
+**If you are not included as an invitee on a meeting, you can assume you are not expected to attend.** If you are included as an invitee, you may or may not be required to attend, depending on the meeting. If you have any questions about this, please ask the Lab Manager.
