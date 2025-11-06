@@ -28,6 +28,16 @@ nav_order: 2
 | research interests | Lilly is interested in developmental and clinical psychology, specifically the development and treatment of anxiety and mood disorders. |
 | hobbies | reading, hanging out with my cats, cooking & eating yummy stuff |
 
+### Lab Manager
+
+| ![davis](https://raw.githubusercontent.com/NDCLab/wiki/main/docs/_assets/whos-who/davis.jpg) | Taylor Davis |
+| ---  | ---  |
+| pronouns | she/her/hers |
+| location | Miami, FL |
+| GitHub | tcdavis115 |
+| Email  | tadavis@fiu.edu |
+| research interests | Taylor is interested in investigating suicide risk and protective factors among youth and adolescent. |
+| hobbies | playing soccer, f1, traveling & going to the beach |
 
 ### Lab Technician
 
